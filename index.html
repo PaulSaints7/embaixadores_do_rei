@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="SHOW DOS ER — O Grande Desafio dos Embaixadores do Rei">
+
+    <title>SHOW DOS ER | O Grande Desafio</title>
+
+    <link rel="stylesheet" href="estilo.css">
+
+    <script src="perguntas.js" defer></script>
+    <script src="jogo.js" defer></script>
+</head>
+
+<body>
+
+    <!-- =========================================
+         TELA DE ABERTURA
+    ========================================== -->
+
+    <main id="telaAbertura" class="tela-abertura">
+
+        <!-- CENÁRIO DO PALCO -->
+
+        <div class="cenario">
+
+            <img
+                src="imagens/palco.jpeg"
+                alt="Palco do Show dos ER"
+                class="imagem-palco"
+            >
+
+            <div class="sobreposicao-palco"></div>
+
+        </div>
+
+
+        <!-- IDENTIDADE DO PROGRAMA -->
+
+        <header class="cabecalho">
+
+            <div class="identidade-programa">
+
+                <img
+                    src="imagens/logo_er.png"
+                    alt="Logomarca dos Embaixadores do Rei"
+                    class="logo-er"
+                >
+
+                <div class="titulo-programa">
+
+                    <h1>SHOW DOS <span>ER</span></h1>
+
+                    <p>O GRANDE DESAFIO DOS EMBAIXADORES DO REI</p>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTEÚDO PRINCIPAL -->
+
+        <section class="conteudo-abertura">
+
+            <!-- APRESENTADOR -->
+
+            <div class="area-apresentador">
+
+                <img
+                    src="imagens/apresentador.png"
+                    alt="Apresentador virtual do Show dos ER"
+                    class="apresentador"
+                >
+
+            </div>
+
+
+            <!-- MENSAGEM DE BOAS-VINDAS -->
+
+            <div class="painel-inicial">
+
+                <div class="selo-programa">
+                    ✦ DESAFIO DO CONHECIMENTO ✦
+                </div>
+
+                <h2>
+                    VOCÊ ESTÁ<br>
+                    PREPARADO?
+                </h2>
+
+                <p class="mensagem-inicial">
+                    Conhecimento, coragem e sabedoria!
+                    Mostre que você é um verdadeiro
+                    Embaixador do Rei!
+                </p>
+
+
+                <!-- IDENTIFICAÇÃO DO PARTICIPANTE -->
+
+                <form id="formularioParticipante">
+
+                    <label for="nomeParticipante">
+                        IDENTIFIQUE-SE, EMBAIXADOR!
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nomeParticipante"
+                        name="nomeParticipante"
+                        placeholder="Digite seu nome..."
+                        maxlength="30"
+                        autocomplete="off"
+                        required
+                    >
+
+                    <button
+                        type="submit"
+                        id="botaoIniciar"
+                    >
+                        INICIAR DESAFIO
+                        <span class="seta">➜</span>
+                    </button>
+
+                </form>
+
+                <p class="aviso-inicial">
+                    Prepare-se para o grande desafio!
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ELEMENTOS DECORATIVOS -->
+
+        <div class="decoracao-palco">
+
+            <img
+                src="imagens/trofeu.png"
+                alt=""
+                class="elemento-trofeu"
+            >
+
+            <img
+                src="imagens/medalha.png"
+                alt=""
+                class="elemento-medalha"
+            >
+
+            <img
+                src="imagens/coroa.png"
+                alt=""
+                class="elemento-coroa"
+            >
+
+        </div>
+
+
+        <!-- RODAPÉ -->
+
+        <footer class="rodape">
+
+            <p>
+                EMBAIXADORES DO REI
+                <span> | </span>
+                APRENDER • CONHECER • SERVIR
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <!-- =========================================
+         ÁREA RESERVADA PARA O JOGO
+         Será desenvolvida nas próximas etapas.
+    ========================================== -->
+
+    <section
+        id="telaJogo"
+        class="tela-jogo"
+        hidden
+    >
+
+        <div class="cabecalho-jogo">
+
+            <h2>SHOW DOS ER</h2>
+
+            <p>
+                Bem-vindo ao desafio,
+                <strong id="nomeJogador"></strong>!
+            </p>
+
+        </div>
+
+        <div id="areaPerguntas">
+
+            <!--
+                Aqui serão exibidas futuramente:
+
+                1. Perguntas.
+                2. Quatro alternativas.
+                3. Cronômetro.
+                4. Pontuação.
+                5. Ajudas.
+                6. Etapas do conhecimento.
+            -->
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
