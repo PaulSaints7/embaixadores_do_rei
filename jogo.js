@@ -344,23 +344,24 @@ function prepararTelaJogo() {
     avisoTempo.textContent =
         `Atenção: você terá ${CONFIG_JOGO.tempoPorPergunta} segundos para responder cada pergunta!`;
 
-    mensagem.appendChild(avisoParticipacoes);
+    // CONSULTA DAS PARTICIPAÇÕES DIÁRIAS
 
     const partidasRealizadas = obterPartidasDeHoje(
         CONFIG_JOGO.participante
     );
 
     const partidasRestantes =
-         LIMITE_PARTIDAS_DIARIAS - partidasRealizadas;
+        LIMITE_PARTIDAS_DIARIAS - partidasRealizadas;
 
     const avisoParticipacoes = document.createElement("p");
 
     avisoParticipacoes.textContent =
-           `Você ainda pode iniciar ${partidasRestantes} partida(s) hoje. Limite diário: 5.`;
+        `Você ainda pode iniciar ${partidasRestantes} partida(s) hoje. Limite diário: ${LIMITE_PARTIDAS_DIARIAS}.`;
 
-    
+    // BOTÃO PARA COMEÇAR
 
     const botaoJogar = document.createElement("button");
+
     botaoJogar.type = "button";
     botaoJogar.id = "botaoComecarJogo";
     botaoJogar.className = "botao-principal";
@@ -368,15 +369,17 @@ function prepararTelaJogo() {
 
     botaoJogar.addEventListener("click", iniciarPartida);
 
+    // MONTAGEM DA MENSAGEM
+
     mensagem.appendChild(titulo);
     mensagem.appendChild(saudacao);
     mensagem.appendChild(explicacao);
     mensagem.appendChild(avisoTempo);
+    mensagem.appendChild(avisoParticipacoes);
     mensagem.appendChild(botaoJogar);
 
     areaPerguntas.appendChild(mensagem);
 }
-
 // ======================================================
 // 6. INÍCIO DO DESAFIO
 // ======================================================
