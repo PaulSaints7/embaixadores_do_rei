@@ -1,0 +1,617 @@
+# RELATÓRIO DE CONTINUIDADE DO PROJETO
+
+## EMBAIXADORES DO REI
+
+### Plataforma Digital de Aprendizagem e Formação Cristã
+
+**Finalidade deste documento:** transferir o contexto, as decisões e o estágio atual do projeto para um novo chat, permitindo que o trabalho continue sem precisar reconstruir todo o histórico das conversas anteriores.
+
+---
+
+# 1. APRESENTAÇÃO DO PROJETO
+
+Estamos desenvolvendo uma aplicação web chamada **EMBAIXADORES_DO_REI**, utilizando:
+
+* HTML5;
+* CSS3;
+* JavaScript;
+* Visual Studio Code;
+* Live Server para execução no navegador.
+
+O projeto é uma ferramenta educacional complementar destinada aos meninos e adolescentes da organização Batista Embaixadores do Rei.
+
+O público compreende, aproximadamente, a faixa etária dos 6 aos 16 anos.
+
+A proposta é desenvolver um ambiente digital que ajude os Embaixadores do Rei a estudar, compreender, memorizar, praticar e demonstrar os conhecimentos exigidos nos respectivos postos de progressão.
+
+Não estamos construindo um portal institucional nacional ou estadual. A organização já possui seus próprios canais institucionais.
+
+Nosso objetivo é desenvolver uma ferramenta de aprendizagem.
+
+## 1.1. Princípio fundamental
+
+O projeto não deve ser apenas um repositório de textos bíblicos, históricos e doutrinários.
+
+Queremos construir um ambiente de aprendizagem que permita ao menino:
+
+1. Conhecer o conteúdo de seu posto.
+2. Estudar de maneira orientada.
+3. Compreender o significado do que está aprendendo.
+4. Realizar exercícios de fixação.
+5. Enfrentar desafios de aprendizagem.
+6. Verificar seu próprio desenvolvimento.
+7. Preparar-se para demonstrar o conhecimento adquirido ao conselheiro.
+
+A tecnologia deve servir à formação cristã, e não substituir o relacionamento entre o Embaixador do Rei e seu conselheiro.
+
+---
+
+# 2. IDENTIDADE E DIRECIONAMENTO DO PROJETO
+
+O projeto deve preservar a identidade tradicional dos Embaixadores do Rei.
+
+Devemos considerar:
+
+* A insígnia oficial.
+* As cores institucionais.
+* A história da organização.
+* Sua identidade Batista.
+* Sua dimensão missionária.
+* A formação bíblica e cristã dos meninos.
+* O caráter educativo e formativo da organização.
+
+A abordagem visual deve transmitir seriedade, tradição, organização e acolhimento.
+
+Não devemos transformar a plataforma em um jogo eletrônico genérico ou em um ambiente infantilizado.
+
+A interatividade será utilizada como recurso pedagógico.
+
+Também não queremos dar ênfase excessiva ao entretenimento. O centro da aplicação será o conhecimento e a formação.
+
+A Ordem Unida terá espaço próprio, com uma abordagem didática, respeitando sua importância na organização, mas sem uma ênfase militarista.
+
+---
+
+# 3. ESTRUTURA TÉCNICA JÁ CRIADA
+
+A estrutura inicial de diretórios foi criada no Visual Studio Code:
+
+```text
+EMBAIXADORES_DO_REI/
+│
+├── index.html
+│
+├── css/
+│   └── estilo.css
+│
+├── js/
+│   ├── principal.js
+│   ├── biblico.js
+│   ├── ordem_unida.js
+│   ├── questoes.js
+│   └── progresso.js
+│
+├── imagens/
+│   ├── insignia/
+│   ├── simbolos/
+│   └── postos/
+│
+└── conteudos/
+    ├── biblico/
+    └── ordem_unida/
+```
+
+Os arquivos e diretórios iniciais já foram criados.
+
+A página inicial foi desenvolvida e executada com sucesso por meio do Live Server.
+
+O usuário aprovou o resultado visual.
+
+## 3.1. Página inicial
+
+A página contém:
+
+* Cabeçalho com o nome EMBAIXADORES DO REI.
+* Subtítulo institucional provisório.
+* Navegação principal.
+* Apresentação do projeto.
+* Seção de aprendizagem.
+* Cartão de Conhecimento Bíblico.
+* Cartão de Ordem Unida.
+* Apresentação da metodologia.
+* Rodapé.
+
+A apresentação principal utiliza a chamada:
+
+**Conhecimento, Fé e Formação Missionária.**
+
+A metodologia apresentada está organizada em três ideias:
+
+* Estudar.
+* Praticar.
+* Demonstrar conhecimento.
+
+Os cartões dos ambientes de aprendizagem ainda são essencialmente visuais. Sua navegação e funcionamento serão implementados posteriormente.
+
+## 3.2. Identidade visual inicial
+
+Foi proposta a seguinte paleta:
+
+```css
+Azul-marinho:    #102B49
+Azul secundário: #183D61
+Azul claro:      #294F70
+Dourado:         #C5A15B
+Dourado claro:   #E0C98F
+Branco:          #FFFFFF
+Creme:           #F5F3EE
+```
+
+Foram utilizadas as fontes:
+
+* Cinzel;
+* Open Sans.
+
+A identidade visual ainda poderá ser ajustada conforme os materiais institucionais oficiais.
+
+---
+
+# 4. INSÍGNIAS E IMAGENS INSTITUCIONAIS
+
+Foram identificadas duas imagens na pasta:
+
+```text
+imagens/
+└── insignia/
+    ├── emb_rei_01.jpg
+    └── insignia_er.jpg
+```
+
+A intenção é utilizar:
+
+* `insignia_er.jpg` no cabeçalho;
+* `emb_rei_01.jpg` na apresentação principal.
+
+O símbolo circular provisório utilizado inicialmente deverá ser substituído pelas imagens institucionais.
+
+As imagens devem manter suas proporções, sem deformação.
+
+Ainda é necessário confirmar se as alterações sugeridas no HTML e CSS foram efetivamente aplicadas.
+
+---
+
+# 5. ESTRUTURA ATUAL DOS POSTOS
+
+Uma das decisões mais importantes do projeto foi estabelecer a estrutura atual de quatro postos.
+
+A sequência correta é:
+
+1. Embaixador Escudeiro.
+2. Embaixador Arauto.
+3. Embaixador Sênior.
+4. Embaixador Emérito.
+
+Essa sequência deverá orientar toda a navegação da plataforma.
+
+Não devemos reproduzir estruturas antigas que apresentem sete postos ou outras classificações anteriores.
+
+---
+
+# 6. DOCUMENTO CURRICULAR ANALISADO
+
+Foi enviado e analisado um documento de aproximadamente 21 páginas contendo os sumários dos quatro manuais dos postos.
+
+Esse documento permitiu identificar os 40 temas de estudo.
+
+## 6.1. Embaixador Escudeiro
+
+1. Os postos da organização.
+2. A insígnia dos Embaixadores do Rei.
+3. As cores da organização.
+4. As quatro regras dos ER nos esportes.
+5. História da organização nos Estados Unidos.
+6. História dos Batistas: nossa origem.
+7. O plano de salvação.
+8. Movimento Moderno de Missões.
+9. Serviço Real.
+10. Solenidades dos ER.
+
+## 6.2. Embaixador Arauto
+
+1. A faixa e a mensagem do evangelho para o mundo perdido.
+2. História da organização: o pioneiro.
+3. História dos Batistas no Brasil.
+4. Tradutores da Bíblia.
+5. Heróis da fé.
+6. O ministério de Jesus.
+7. As viagens missionárias de Paulo.
+8. Biografias missionárias.
+9. O Embaixador do Rei e o cuidado com a criação.
+10. Uma embaixada padrão.
+
+## 6.3. Embaixador Sênior
+
+1. A coroa e os cinco ideais dos ER.
+2. História da organização: o início no Brasil.
+3. Principais doutrinas bíblicas seguidas pelos Batistas.
+4. Princípios Batistas.
+5. Batistas brasileiros: comunhão e cooperação.
+6. Oração.
+7. Estudo da Bíblia.
+8. Missões no Brasil.
+9. Princípios bíblicos da mordomia.
+10. Laboratório de Serviço Real.
+
+## 6.4. Embaixador Emérito
+
+1. O ramo de louro.
+2. História da organização: jubileus e congressos.
+3. História dos Batistas: eles fizeram a diferença.
+4. As marcas de um discípulo de Cristo.
+5. Liderança discipuladora.
+6. Vivendo uma vida íntegra: bullying e vícios.
+7. Os Batistas pelo mundo: UBLA e ABM.
+8. Um só Deus e muitas religiões.
+9. Vocação e chamado.
+10. Serviço Real: vida na Igreja.
+
+**Importante:** esse documento apresenta os sumários dos manuais. Ele não contém necessariamente o desenvolvimento integral de cada estudo.
+
+Portanto, não devemos inventar conteúdos e apresentá-los como se fossem transcrições ou orientações oficiais dos manuais.
+
+---
+
+# 7. GUIA DE FORMAÇÃO ANTIGO
+
+Também foi enviado um documento denominado Guia dos Embaixadores do Rei, com aproximadamente 41 páginas.
+
+Antes de seu envio, foi esclarecido que:
+
+* O guia possui aproximadamente 15 anos.
+* A organização passou por pequenas mudanças.
+* O guia ainda considera a estrutura antiga de postos.
+* Atualmente, a organização trabalha com quatro postos.
+* Apesar da estrutura antiga, o documento contém conteúdos de formação que podem ser aproveitados.
+
+Essa informação é fundamental para interpretar corretamente o material.
+
+## 7.1. Como devemos utilizar o guia
+
+O documento não deve ser descartado simplesmente por ser antigo.
+
+Entretanto, também não devemos considerar automaticamente atuais todos os seus procedimentos.
+
+A decisão estabelecida foi:
+
+**A estrutura atual de quatro postos determina a arquitetura da plataforma. O guia antigo será utilizado como fonte de conteúdo histórico, pedagógico e metodológico, com verificação dos procedimentos que possam ter mudado.**
+
+## 7.2. Conteúdos encontrados
+
+O guia possui oito capítulos:
+
+1. Como é bom ser Embaixador!
+2. A Embaixada em Ação.
+3. O Segredo para Boas Reuniões.
+4. Os Postos dos Embaixadores do Rei.
+5. Vamos Acampar!
+6. Um Trimestre Modelo.
+7. Atividades Especiais.
+8. Avaliação.
+
+### Capítulo IV — Os Postos dos Embaixadores do Rei
+
+Apresenta a antiga organização dos postos, incluindo postos que não fazem parte da estrutura atual.
+
+O capítulo descreve:
+
+* Progressão nos postos.
+* Requisitos.
+* Memorização de versículos.
+* Tarefas práticas.
+* Estudo individual.
+* Verificação de aprendizagem.
+* Avaliação.
+* Reuniões de reconhecimento.
+
+Essas informações são úteis para compreender a metodologia tradicional de formação.
+
+Entretanto, não devemos reproduzir os antigos procedimentos como se fossem necessariamente os atuais.
+
+### Capítulos VI e VII — Planejamento e atividades
+
+O guia apresenta uma proposta de planejamento trimestral.
+
+Entre os elementos encontrados:
+
+* Planejamento antecipado.
+* Participação dos membros.
+* Estudos dos postos.
+* Serviço Real.
+* Atividades especiais.
+* Recreação.
+* Estudos missionários.
+* Avaliação das reuniões.
+
+Também apresenta sugestões de atividades para desenvolvimento da comunhão, do caráter cristão e da participação missionária.
+
+Essas orientações podem inspirar recursos complementares da plataforma.
+
+### Capítulo VIII — Avaliação
+
+O guia trata a avaliação como parte do processo de planejamento e aperfeiçoamento.
+
+Apresenta instrumentos para acompanhar:
+
+* Reuniões.
+* Trabalho nos postos.
+* Serviço Real.
+* Recrutamento.
+* Atividades missionárias.
+* Acampamentos.
+* Recreação.
+* Estudos.
+* Relatórios.
+* Oração.
+
+Alguns parâmetros quantitativos e procedimentos administrativos são antigos e não devem ser incorporados sem confirmação.
+
+A ideia mais importante que podemos aproveitar é a avaliação como instrumento de aperfeiçoamento, e não como finalidade em si mesma.
+
+---
+
+# 8. PRINCÍPIOS PEDAGÓGICOS DEFINIDOS
+
+A plataforma deve respeitar a natureza da formação dos Embaixadores do Rei.
+
+Não queremos simplesmente disponibilizar perguntas e respostas para memorização.
+
+O processo de aprendizagem deverá envolver:
+
+1. Compreensão.
+2. Investigação.
+3. Reflexão.
+4. Partilha.
+5. Aplicação à vida cristã.
+
+Devemos considerar que os usuários possuem idades, experiências e ritmos de aprendizagem diferentes.
+
+Um menino de 6 anos não aprende necessariamente da mesma maneira que um adolescente de 16.
+
+Por isso, o conteúdo deverá ser apresentado de forma progressiva e adequada à faixa etária.
+
+## 8.1. Proposta para cada estudo
+
+A estrutura pedagógica que estamos considerando para cada tema é:
+
+**A. Apresentação do tema**
+
+Introdução ao assunto, explicando sua importância.
+
+**B. Estudo orientado**
+
+Conteúdo organizado em partes, com explicações claras e linguagem adequada.
+
+**C. Fixação**
+
+Exercícios para ajudar o aluno a recordar e compreender o conteúdo.
+
+**D. Desafios**
+
+Atividades que exijam interpretação, raciocínio e aplicação do conhecimento.
+
+**E. Verificação da aprendizagem**
+
+Questões ou atividades que permitam ao aluno verificar seu domínio do assunto.
+
+**F. Acompanhamento**
+
+Registro do desenvolvimento individual.
+
+Essa é uma proposta de arquitetura pedagógica. Os requisitos oficiais de cada posto deverão continuar sendo respeitados.
+
+---
+
+# 9. AVALIAÇÃO DIGITAL E PAPEL DO CONSELHEIRO
+
+Uma decisão importante: a plataforma não substituirá o conselheiro.
+
+O sistema poderá:
+
+* Apresentar conteúdos.
+* Propor exercícios.
+* Registrar atividades realizadas.
+* Acompanhar o progresso.
+* Indicar assuntos que precisam ser revistos.
+* Ajudar o menino a se preparar para demonstrar seu conhecimento.
+
+Entretanto, a avaliação institucional e o reconhecimento do cumprimento dos requisitos continuam vinculados aos procedimentos da organização e ao acompanhamento do conselheiro.
+
+A aplicação deverá funcionar como instrumento auxiliar.
+
+---
+
+# 10. ARQUITETURA FUTURA DA PLATAFORMA
+
+Ainda não implementamos a estrutura completa de navegação dos postos.
+
+Uma possibilidade considerada foi criar uma página dinâmica para cada posto, alimentada por seus respectivos conteúdos, evitando a necessidade de produzir dezenas de páginas HTML independentes.
+
+Entretanto, essa decisão técnica ainda precisa ser amadurecida.
+
+A proposta geral de navegação poderá seguir esta lógica:
+
+```text
+PÁGINA INICIAL
+     |
+     |
+AMBIENTE DE APRENDIZAGEM
+     |
+     |-------------------------
+     |                        |
+CONHECIMENTO BÍBLICO       ORDEM UNIDA
+     |
+     |
+SELEÇÃO DO POSTO
+     |
+     |--------------------------
+     |            |             |
+ ESCUDEIRO      ARAUTO        SÊNIOR       EMÉRITO
+     |
+     |
+SELEÇÃO DO TEMA
+     |
+     |
+ESTUDO ORIENTADO
+     |
+     |
+EXERCÍCIOS
+     |
+     |
+DESAFIOS
+     |
+     |
+VERIFICAÇÃO DA APRENDIZAGEM
+     |
+     |
+ACOMPANHAMENTO DO PROGRESSO
+```
+
+O desenho acima é conceitual. Não significa que todas essas páginas já estejam programadas.
+
+---
+
+# 11. ESTÁGIO ATUAL DO DESENVOLVIMENTO
+
+Até o momento:
+
+**Concluído:**
+
+* Criação da pasta principal.
+* Criação dos diretórios e arquivos iniciais.
+* Desenvolvimento da primeira versão de `index.html`.
+* Desenvolvimento da primeira versão de `css/estilo.css`.
+* Execução pelo Live Server.
+* Aprovação da apresentação visual inicial.
+* Identificação dos quatro postos atuais.
+* Leitura dos sumários dos quatro manuais.
+* Leitura e análise de partes relevantes do Guia de Formação antigo.
+
+**Ainda não implementado:**
+
+* Navegação funcional entre os ambientes.
+* Página de seleção dos postos.
+* Páginas de estudo.
+* Sistema de exercícios.
+* Banco de questões.
+* Sistema de progresso.
+* Recursos interativos de Ordem Unida.
+* Armazenamento de resultados.
+* Sistema de identificação dos usuários.
+
+Não devemos confundir planejamento com implementação já realizada.
+
+---
+
+# 12. PRÓXIMA ETAPA RECOMENDADA
+
+A próxima etapa deverá ser predominantemente documental e pedagógica, antes de avançarmos para a programação.
+
+Minha recomendação é construir um **Mapa Curricular dos Quatro Postos**.
+
+Esse documento deverá cruzar:
+
+* Os 40 temas dos sumários dos quatro manuais.
+* Os conteúdos encontrados no Guia de Formação.
+* As orientações pedagógicas do guia.
+* Os conteúdos que ainda precisam de fontes oficiais.
+
+Para cada tema, devemos identificar:
+
+1. Qual é o assunto?
+2. O que já encontramos sobre ele nos documentos?
+3. O que pode ser aproveitado do guia antigo?
+4. O que precisa de confirmação?
+5. Quais materiais oficiais ainda precisamos consultar?
+6. Quais recursos de aprendizagem poderão ser desenvolvidos?
+
+O resultado será uma espécie de mapa de desenvolvimento curricular.
+
+Isso evitará que comecemos a programar páginas sem conhecer suficientemente o conteúdo que elas deverão apresentar.
+
+---
+
+# 13. CUIDADOS IMPORTANTES PARA A CONTINUIDADE
+
+O novo chat deverá observar rigorosamente os seguintes princípios:
+
+**1. Não alterar a estrutura atual dos postos.**
+
+São quatro: Escudeiro, Arauto, Sênior e Emérito.
+
+**2. Não reproduzir automaticamente os antigos sete postos.**
+
+O guia antigo é uma fonte histórica e pedagógica, não a referência para a estrutura atual.
+
+**3. Não inventar conteúdo oficial.**
+
+Quando não houver informação suficiente nos documentos, identificar a lacuna.
+
+**4. Separar informação documental de interpretação.**
+
+Distinguir claramente o que está escrito nas fontes, o que é uma proposta pedagógica e o que é uma decisão de programação.
+
+**5. Preservar a identidade institucional.**
+
+Não descaracterizar a organização visual ou conceitualmente.
+
+**6. Desenvolver progressivamente.**
+
+Não tentar construir toda a plataforma de uma só vez.
+
+**7. Testar cada etapa.**
+
+A aplicação deve ser executada no navegador depois de cada alteração importante.
+
+**8. Preservar o que já funciona.**
+
+Não substituir ou reescrever arquivos inteiros sem necessidade.
+
+**9. Evitar código apressado.**
+
+Antes de fornecer código, verificar sintaxe, nomes de arquivos, caminhos, funções e integração com os demais módulos.
+
+**10. Respeitar o ritmo de desenvolvimento.**
+
+Se ocorrerem erros repetidos, interromper, analisar e retomar com calma. Não acumular alterações sem verificar o funcionamento.
+
+---
+
+# 14. ORIENTAÇÃO PARA O NOVO CHAT
+
+O novo chat deverá assumir a continuidade do projeto a partir deste relatório.
+
+Não deverá começar criando novos códigos ou modificando a página inicial imediatamente.
+
+Primeiro, deverá compreender as decisões já tomadas e conversar sobre a próxima etapa.
+
+A prioridade recomendada é elaborar o Mapa Curricular dos Quatro Postos, utilizando os sumários dos manuais e o Guia de Formação já analisados nesta trajetória.
+
+Se os documentos não estiverem disponíveis no novo chat, não se deve presumir que o novo ambiente tenha acesso aos seus conteúdos completos. Este relatório preserva os principais dados extraídos, mas não substitui os documentos originais.
+
+A programação das páginas de estudo deverá acontecer depois que tivermos uma visão confiável do conteúdo curricular.
+
+---
+
+# 15. VISÃO FINAL DO PROJETO
+
+O EMBAIXADORES_DO_REI pretende ser mais do que uma página na internet.
+
+Queremos construir um ambiente digital de formação, no qual o menino possa conhecer melhor a Palavra de Deus, compreender a história da organização, aprender sobre missões, desenvolver sua identidade cristã e preparar-se para servir.
+
+A plataforma deverá unir conhecimento, prática, acompanhamento e formação.
+
+A tecnologia será o instrumento.
+
+A formação cristã será o propósito.
+
+**EMBAIXADORES DO REI — Conhecimento, Fé e Formação Missionária.**
