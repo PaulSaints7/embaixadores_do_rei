@@ -175,6 +175,149 @@ function identificarParticipante() {
 }
 
 // ======================================================
+// 5. CONTROLE DE PARTICIPAÇÕES DIÁRIAS
+// LIMITE: 3 PARTIDAS POR PARTICIPANTE
+// ======================================================
+
+const CHAVE_PARTICIPACOES = "showDosER_participacoes_diarias_v1";
+const LIMITE_PARTIDAS_DIARIAS = 3;
+
+// DATA LOCAL DO COMPUTADOR
+
+function obterDataLocal() {
+    const agora = new Date();
+
+    const ano = agora.getFullYear();
+    const mes = String(agora.getMonth() + 1).padStart(2, "0");
+    const dia = String(agora.getDate()).padStart(2, "0");
+
+    return `${ano}-${mes}-${dia}`;
+}
+
+// NORMALIZAR NOME DO PARTICIPANTE
+
+function normalizarNomeParticipante(nome) {
+    return nome
+        .trim()
+        .toLocaleLowerCase("pt-BR")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/\s+/g, " ");
+}
+
+// LER REGISTRO DIÁRIO
+
+function lerRegistroDiario() {
+    const hoje = obterDataLocal();
+
+    try {
+        const salvo = localStorage.getItem(CHAVE_PARTICIPACOES);
+
+        if (!salvo) {
+            return {
+                data: hoje,
+                participantes: {}
+            };
+        }
+
+        const registro = JSON.parse(salvo);
+
+        if (!registro || registro.data !== hoje) {
+            return {
+                data: hoje,
+                participantes: {}
+            };
+        }
+
+        if (!registro.participantes) {
+            registro.participantes = {};
+        }
+
+        return registro;
+
+    } catch (erro) {
+        console.error("Erro ao ler participações:", erro);
+
+        return {
+            data: hoje,
+            participantes: {}
+        };
+    }
+}
+
+// CONSULTAR PARTIDAS REALIZADAS
+
+function obterPartidasDeHoje(nome) {
+    const registro = lerRegistroDiario();
+
+    const chaveNome = normalizarNomeParticipante(nome);
+
+    const participante = registro.participantes[chaveNome];
+
+    return participante ? participante.partidas : 0;
+}
+
+// REGISTRAR NOVA PARTICIPAÇÃO
+
+function registrarParticipacaoDiaria() {
+    const registro = lerRegistroDiario();
+
+    const chaveNome = normalizarNomeParticipante(
+        CONFIG_JOGO.participante
+    );
+
+    const participante = registro.participantes[chaveNome] || {
+        nome: CONFIG_JOGO.participante.trim(),
+        partidas: 0
+    };
+
+    if (participante.partidas >= LIMITE_PARTIDAS_DIARIAS) {
+        return false;
+    }
+
+    participante.partidas++;
+
+    participante.nome = CONFIG_JOGO.participante.trim();
+
+    registro.participantes[chaveNome] = participante;
+
+    try {
+        localStorage.setItem(
+            CHAVE_PARTICIPACOES,
+            JSON.stringify(registro)
+        );
+
+        return true;
+
+    } catch (erro) {
+        console.error("Erro ao salvar participação:", erro);
+
+        alert(
+            "Não foi possível registrar sua participação. Verifique o armazenamento do navegador."
+        );
+
+        return false;
+    }
+}
+
+// AVISAR QUE O LIMITE FOI ATINGIDO
+
+function mostrarLimiteDiario() {
+    const nome = CONFIG_JOGO.participante;
+
+    alert(
+        `${nome}, você já realizou as 3 partidas permitidas para hoje.\n\n` +
+        "Volte amanhã para participar novamente do SHOW DOS ER!"
+    );
+
+    telaJogo.hidden = true;
+    telaAbertura.hidden = false;
+
+    campoNome.value = "";
+    campoNome.focus();
+}
+
+// ======================================================
 // 5. PREPARAÇÃO DA TELA DE BOAS-VINDAS
 // ======================================================
 
@@ -200,6 +343,22 @@ function prepararTelaJogo() {
     const avisoTempo = document.createElement("p");
     avisoTempo.textContent =
         `Atenção: você terá ${CONFIG_JOGO.tempoPorPergunta} segundos para responder cada pergunta!`;
+
+    mensagem.appendChild(avisoParticipacoes);
+
+    const partidasRealizadas = obterPartidasDeHoje(
+        CONFIG_JOGO.participante
+    );
+
+    const partidasRestantes =
+         LIMITE_PARTIDAS_DIARIAS - partidasRealizadas;
+
+    const avisoParticipacoes = document.createElement("p");
+
+    avisoParticipacoes.textContent =
+           `Você ainda pode iniciar ${partidasRestantes} partida(s) hoje. Limite diário: 5.`;
+
+    
 
     const botaoJogar = document.createElement("button");
     botaoJogar.type = "button";
@@ -306,7 +465,15 @@ function carregarPerguntas() {
 // ======================================================
 
 function iniciarPartida() {
+
     pararCronometro();
+
+    // Verifica e registra a participação diária.
+
+    if (!registrarParticipacaoDiaria()) {
+        mostrarLimiteDiario();
+        return;
+    }
 
     alertaSuspenseExecutado = false;
     alertaRelogioExecutado = false;
@@ -318,10 +485,12 @@ function iniciarPartida() {
     CONFIG_JOGO.perguntaAtual = 0;
     CONFIG_JOGO.respostaSelecionada = false;
     CONFIG_JOGO.jogoFinalizado = false;
+
     CONFIG_JOGO.ajuda5050Usada = false;
     CONFIG_JOGO.ajudaAmigosUsada = false;
 
     if (!carregarPerguntas()) {
+
         areaPerguntas.innerHTML =
             "<h2>Não foi possível carregar as perguntas.</h2>";
 
@@ -330,7 +499,6 @@ function iniciarPartida() {
 
     exibirPergunta();
 }
-
 // ======================================================
 // 9. IDENTIFICAÇÃO DA ETAPA
 // ======================================================
