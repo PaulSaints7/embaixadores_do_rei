@@ -14,7 +14,7 @@ const CONFIG_JOGO = {
     nomePrograma: "SHOW DOS ER",
     pontuacaoInicial: 0,
     pontosPorAcerto: 100,
-    tempoPorPergunta: 30,
+    tempoPorPergunta: 40,
     ajuda5050Usada: false,
     ajudaAmigosUsada: false,
     participante: "",
