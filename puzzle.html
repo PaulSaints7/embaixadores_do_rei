@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Puzzle educativo dos Embaixadores do Rei">
+
+    <title>Puzzle dos ER | Desafio dos Embaixadores do Rei</title>
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Open+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/puzzle.css">
+
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+
+    <header class="cabecalho">
+
+        <div class="identidade">
+
+            <div class="logo">
+                ER
+            </div>
+
+            <div class="titulo">
+
+                <h1>PUZZLE DOS ER</h1>
+
+                <p>DESAFIO DOS EMBAIXADORES DO REI</p>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+
+    <main class="container">
+
+        <!-- APRESENTAÇÃO -->
+
+        <section class="apresentacao">
+
+            <h2>DESAFIE SUA MEMÓRIA!</h2>
+
+            <p>
+                Observe a imagem, organize as peças
+                e descubra se você consegue completar
+                o desafio!
+            </p>
+
+        </section>
+
+
+        <!-- CONFIGURAÇÃO DO JOGO -->
+
+        <section class="configuracao">
+
+            <h3>PREPARE SEU DESAFIO</h3>
+
+
+            <!-- ESCOLHA DA IMAGEM -->
+
+            <div class="campo">
+
+                <label for="imagemEscolhida">
+                    Escolha uma imagem:
+                </label>
+
+                <select id="imagemEscolhida">
+
+                    <option value="01.jpg">Imagem 01</option>
+                    <option value="02.jpg">Imagem 02</option>
+                    <option value="03.jpg">Imagem 03</option>
+                    <option value="04.jpg">Imagem 04</option>
+                    <option value="05.jpg">Imagem 05</option>
+                    <option value="06.jpg">Imagem 06</option>
+                    <option value="07.jpg">Imagem 07</option>
+                    <option value="08.jpg">Imagem 08</option>
+                    <option value="09.jpg">Imagem 09</option>
+                    <option value="10.jpg">Imagem 10</option>
+                    <option value="11.jpg">Imagem 11</option>
+                    <option value="12.jpg">Imagem 12</option>
+                    <option value="13.jpg">Imagem 13</option>
+                    <option value="14.jpg">Imagem 14</option>
+                    <option value="15.jpg">Imagem 15</option>
+                    <option value="16.jpg">Imagem 16</option>
+                    <option value="17.jpg">Imagem 17</option>
+                    <option value="18.jpg">Imagem 18</option>
+                    <option value="19.jpg">Imagem 19</option>
+                    <option value="20.jpg">Imagem 20</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- DIFICULDADE -->
+
+            <div class="campo">
+
+                <label for="dificuldade">
+                    Nível de dificuldade:
+                </label>
+
+                <select id="dificuldade">
+
+                    <option value="3">
+                        Fácil - 9 peças
+                    </option>
+
+                    <option value="4">
+                        Médio - 16 peças
+                    </option>
+
+                    <option value="5">
+                        Difícil - 25 peças
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- BOTÃO INICIAR -->
+
+            <button id="btnIniciar" class="botao-principal">
+
+                INICIAR DESAFIO
+
+            </button>
+
+        </section>
+
+
+        <!-- VISUALIZAÇÃO DA IMAGEM -->
+
+        <section class="previsualizacao" id="previsualizacao">
+
+            <h3>OBSERVE A IMAGEM</h3>
+
+            <p id="instrucao">
+                Prepare-se para montar o quebra-cabeça!
+            </p>
+
+            <img
+                id="imagemReferencia"
+                src=""
+                alt="Imagem de referência do puzzle"
+            >
+
+            <div id="contagemRegressiva"></div>
+
+        </section>
+
+
+        <!-- PAINEL DE INFORMAÇÕES -->
+
+        <section class="painel-jogo">
+
+            <div class="indicador">
+
+                <strong id="movimentos">0</strong>
+
+                <span>Movimentos</span>
+
+            </div>
+
+
+            <div class="indicador">
+
+                <strong id="pecasCorretas">0</strong>
+
+                <span>Peças corretas</span>
+
+            </div>
+
+
+            <div class="indicador">
+
+                <strong id="tempo">00:00</strong>
+
+                <span>Tempo</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- TABULEIRO -->
+
+        <section class="area-puzzle">
+
+            <div id="tabuleiro" class="tabuleiro">
+
+                <div class="mensagem-inicial">
+
+                    <h3>SEU DESAFIO COMEÇA AQUI!</h3>
+
+                    <p>
+                        Escolha uma imagem e clique em
+                        INICIAR DESAFIO.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTROLES -->
+
+        <section class="controles">
+
+            <button id="btnVerImagem" class="botao-secundario">
+
+                VER IMAGEM
+
+            </button>
+
+            <button id="btnReiniciar" class="botao-secundario">
+
+                REINICIAR
+
+            </button>
+
+        </section>
+
+
+        <!-- MENSAGEM DE VITÓRIA -->
+
+        <section id="mensagemVitoria" class="vitoria">
+
+            <h2>PARABÉNS, EMBAIXADOR!</h2>
+
+            <p>
+                VOCÊ COMPLETOU O DESAFIO!
+            </p>
+
+            <div id="resultadoFinal"></div>
+
+            <button id="btnNovoDesafio" class="botao-principal">
+
+                NOVO DESAFIO
+
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+
+    <footer class="rodape">
+
+        <p>
+            EMBAIXADORES DO REI
+        </p>
+
+        <p>
+            Conhecimento, dedicação e serviço a Cristo.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/puzzle.js"></script>
+
+</body>
+
+</html>
