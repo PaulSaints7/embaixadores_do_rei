@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Trilha Missionária — uma jornada de conhecimento bíblico, missões e serviço real para os Embaixadores do Rei.">
+
+    <title>Trilha Missionária | Embaixadores do Rei</title>
+
+    <link rel="stylesheet" href="css/trilha.css">
+</head>
+
+<body>
+
+    <!-- ========================================= -->
+    <!-- CABEÇALHO -->
+    <!-- ========================================= -->
+
+    <header class="cabecalho">
+
+        <div class="identidade">
+            <div class="simbolo">✦</div>
+
+            <div>
+                <h1>TRILHA MISSIONÁRIA</h1>
+                <p>O Grande Desafio dos Embaixadores do Rei</p>
+            </div>
+        </div>
+
+    </header>
+
+
+    <!-- ========================================= -->
+    <!-- TELA INICIAL -->
+    <!-- ========================================= -->
+
+    <main class="container">
+
+        <section id="telaInicial" class="painel inicial">
+
+            <div class="icone-jogo">🌎</div>
+
+            <h2>Uma grande jornada começa aqui!</h2>
+
+            <p class="introducao">
+                Prepare-se para uma aventura de conhecimento,
+                fé e descobertas. Percorra a trilha, enfrente
+                desafios e descubra o maravilhoso mundo das missões.
+            </p>
+
+            <div class="formulario">
+
+                <label for="nomeJogador">
+                    Nome do Embaixador
+                </label>
+
+                <input
+                    type="text"
+                    id="nomeJogador"
+                    placeholder="Digite seu nome"
+                    maxlength="25"
+                >
+
+                <label for="faixaEtaria">
+                    Escolha sua jornada
+                </label>
+
+                <select id="faixaEtaria">
+
+                    <option value="pequenos">
+                        Pequenos Embaixadores — 6 a 9 anos
+                    </option>
+
+                    <option value="formacao" selected>
+                        Embaixadores em Formação — 10 a 13 anos
+                    </option>
+
+                    <option value="grandes">
+                        Grandes Desafios — 14 a 17 anos
+                    </option>
+
+                </select>
+
+                <button id="btnComecar" class="botao principal">
+                    COMEÇAR A JORNADA
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================= -->
+        <!-- ÁREA PRINCIPAL DO JOGO -->
+        <!-- ========================================= -->
+
+        <section id="telaJogo" class="painel jogo escondido">
+
+            <div class="informacoes-jogador">
+
+                <div>
+                    <span class="rotulo">EMBAIXADOR</span>
+                    <strong id="nomeExibido">Jogador</strong>
+                </div>
+
+                <div>
+                    <span class="rotulo">POSIÇÃO</span>
+                    <strong id="posicaoAtual">Casa 1</strong>
+                </div>
+
+                <div>
+                    <span class="rotulo">PONTUAÇÃO</span>
+                    <strong id="pontuacao">0</strong>
+                </div>
+
+            </div>
+
+
+            <!-- MENSAGEM DA JORNADA -->
+
+            <div class="mensagem-jornada">
+
+                <h2 id="tituloJornada">
+                    Sua jornada missionária começou!
+                </h2>
+
+                <p id="mensagemJornada">
+                    Lance o dado e avance pela trilha.
+                    Grandes descobertas esperam por você!
+                </p>
+
+            </div>
+
+
+            <!-- TABULEIRO -->
+
+            <div class="area-tabuleiro">
+
+                <div class="titulo-tabuleiro">
+                    <h2>CAMINHO MISSIONÁRIO</h2>
+                    <span>Do primeiro passo ao destino final!</span>
+                </div>
+
+                <div id="tabuleiro" class="tabuleiro">
+
+                    <!-- As casas serão criadas pelo JavaScript -->
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTROLE DO DADO -->
+
+            <div class="painel-dado">
+
+                <div class="dado" id="dado">
+                    ?
+                </div>
+
+                <p id="mensagemDado">
+                    Lance o dado para descobrir quantas casas avançar!
+                </p>
+
+                <button id="btnLancarDado" class="botao principal">
+                    🎲 LANÇAR DADO
+                </button>
+
+            </div>
+
+
+            <!-- PAINEL DE DESAFIOS -->
+
+            <div id="painelDesafio" class="painel-desafio escondido">
+
+                <div class="cabecalho-desafio">
+                    <span id="categoriaDesafio">DESAFIO</span>
+                    <h2 id="tituloDesafio">Prepare-se!</h2>
+                </div>
+
+                <p id="perguntaDesafio">
+                    Aqui aparecerá a pergunta do desafio.
+                </p>
+
+                <div id="alternativas" class="alternativas">
+
+                    <!-- Alternativas criadas pelo JavaScript -->
+
+                </div>
+
+                <p id="resultadoDesafio"></p>
+
+                <button id="btnContinuar" class="botao secundario escondido">
+                    CONTINUAR JORNADA
+                </button>
+
+            </div>
+
+
+            <!-- LEGENDA -->
+
+            <div class="legenda">
+
+                <h3>TIPOS DE CASAS</h3>
+
+                <div class="itens-legenda">
+
+                    <span>📖 Bíblia</span>
+                    <span>🌍 Missões</span>
+                    <span>🏛️ História ER</span>
+                    <span>🧭 Geografia</span>
+                    <span>🤝 Serviço Real</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================= -->
+        <!-- TELA DE VITÓRIA -->
+        <!-- ========================================= -->
+
+        <section id="telaVitoria" class="painel vitoria escondido">
+
+            <div class="icone-vitoria">🏆</div>
+
+            <h2>JORNADA CONCLUÍDA!</h2>
+
+            <p>
+                Parabéns, Embaixador! Você percorreu toda a
+                Trilha Missionária e venceu os desafios!
+            </p>
+
+            <div class="resultado-final">
+
+                <p>Participante:</p>
+                <strong id="vencedorNome">Embaixador</strong>
+
+                <p>Pontuação final:</p>
+                <strong id="pontuacaoFinal">0</strong>
+
+            </div>
+
+            <button id="btnJogarNovamente" class="botao principal">
+                JOGAR NOVAMENTE
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- ========================================= -->
+    <!-- RODAPÉ -->
+    <!-- ========================================= -->
+
+    <footer class="rodape">
+
+        <p>
+            EMBAIXADORES DO REI
+        </p>
+
+        <span>
+            Conhecimento, fé, missões e Serviço Real.
+        </span>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/trilha.js"></script>
+
+</body>
+
+</html>
