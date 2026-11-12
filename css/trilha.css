@@ -1,0 +1,739 @@
+
+/* =====================================================
+   TRILHA MISSIONÁRIA
+   EMBAIXADORES DO REI
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --azul-escuro: #102B49;
+    --azul-medio: #183D61;
+    --azul-claro: #294F70;
+
+    --dourado: #C5A15B;
+    --dourado-claro: #E0C98F;
+
+    --creme: #F5F3EE;
+    --branco: #FFFFFF;
+
+    --verde: #39734D;
+    --verde-claro: #DDEBDD;
+
+    --vermelho: #B83A3A;
+    --cinza: #667085;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #102B49, #294F70);
+    color: var(--azul-escuro);
+    min-height: 100vh;
+}
+
+
+/* =====================================================
+   CABEÇALHO
+===================================================== */
+
+.cabecalho {
+    background: var(--azul-escuro);
+    border-bottom: 4px solid var(--dourado);
+    padding: 22px 5%;
+    color: var(--branco);
+}
+
+.identidade {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    text-align: left;
+}
+
+.simbolo {
+    font-size: 48px;
+    color: var(--dourado);
+}
+
+.identidade h1 {
+    font-family: Georgia, serif;
+    font-size: 27px;
+    letter-spacing: 2px;
+}
+
+.identidade p {
+    color: var(--dourado-claro);
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   CONTAINER GERAL
+===================================================== */
+
+.container {
+    width: 95%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+.painel {
+    background: var(--creme);
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+.escondido {
+    display: none !important;
+}
+
+
+/* =====================================================
+   TELA INICIAL
+===================================================== */
+
+.inicial {
+    max-width: 650px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 45px 35px;
+}
+
+.icone-jogo {
+    font-size: 75px;
+    margin-bottom: 15px;
+}
+
+.inicial h2 {
+    color: var(--azul-escuro);
+    font-family: Georgia, serif;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.introducao {
+    color: #505968;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 12px;
+}
+
+.formulario label {
+    font-weight: bold;
+    color: var(--azul-escuro);
+    margin-top: 8px;
+}
+
+.formulario input,
+.formulario select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #CCD2D9;
+    border-radius: 8px;
+    font-size: 16px;
+    background: white;
+    color: var(--azul-escuro);
+}
+
+.formulario input:focus,
+.formulario select:focus {
+    outline: 2px solid var(--dourado);
+}
+
+
+/* =====================================================
+   BOTÕES
+===================================================== */
+
+.botao {
+    border: none;
+    border-radius: 9px;
+    padding: 15px 25px;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.botao:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.08);
+}
+
+.principal {
+    background: var(--azul-escuro);
+    color: var(--branco);
+    border-bottom: 4px solid var(--dourado);
+}
+
+.secundario {
+    background: var(--verde);
+    color: var(--branco);
+}
+
+
+/* =====================================================
+   INFORMAÇÕES DO JOGADOR
+===================================================== */
+
+.informacoes-jogador {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.informacoes-jogador div {
+    background: var(--azul-escuro);
+    color: var(--branco);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.rotulo {
+    display: block;
+    color: var(--dourado-claro);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 7px;
+}
+
+.informacoes-jogador strong {
+    font-size: 17px;
+}
+
+
+/* =====================================================
+   MENSAGEM DA JORNADA
+===================================================== */
+
+.mensagem-jornada {
+    text-align: center;
+    background: var(--verde-claro);
+    border-left: 5px solid var(--verde);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.mensagem-jornada h2 {
+    color: var(--verde);
+    font-family: Georgia, serif;
+    margin-bottom: 8px;
+}
+
+.mensagem-jornada p {
+    color: #455A49;
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   TABULEIRO
+===================================================== */
+
+.area-tabuleiro {
+    background: #E9E3D5;
+    border: 2px solid var(--dourado);
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.titulo-tabuleiro {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.titulo-tabuleiro h2 {
+    color: var(--azul-escuro);
+    font-family: Georgia, serif;
+    letter-spacing: 1px;
+}
+
+.titulo-tabuleiro span {
+    display: block;
+    color: var(--cinza);
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.tabuleiro {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 10px;
+    padding: 10px;
+    background: #D8D0BD;
+    border-radius: 12px;
+}
+
+
+/* =====================================================
+   CASAS DO TABULEIRO
+===================================================== */
+
+.casa {
+    min-height: 85px;
+    background: var(--branco);
+    border: 2px solid #C5BDAE;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    position: relative;
+    text-align: center;
+    padding: 6px;
+    transition: 0.3s;
+}
+
+.numero-casa {
+    position: absolute;
+    top: 5px;
+    left: 7px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #777;
+}
+
+.icone-casa {
+    font-size: 25px;
+}
+
+.nome-casa {
+    font-size: 10px;
+    font-weight: bold;
+    color: var(--azul-escuro);
+}
+
+.casa.atual {
+    border: 4px solid var(--dourado);
+    background: #FFF1C9;
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(197, 161, 91, 0.7);
+    z-index: 2;
+}
+
+.casa.concluida {
+    background: #DDEBDD;
+    border-color: var(--verde);
+}
+
+.casa.inicio {
+    background: #DCE8F5;
+    border-color: var(--azul-medio);
+}
+
+.casa.final {
+    background: #F7E6B9;
+    border-color: var(--dourado);
+}
+
+
+/* =====================================================
+   PAINEL DO DADO
+===================================================== */
+
+.painel-dado {
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 20px;
+    background: #E7EDF3;
+    border-radius: 12px;
+}
+
+.dado {
+    width: 75px;
+    height: 75px;
+    background: var(--branco);
+    border: 3px solid var(--azul-escuro);
+    border-radius: 14px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    font-weight: bold;
+    color: var(--azul-escuro);
+    box-shadow: 0 5px 0 #B8C2CC;
+}
+
+.painel-dado p {
+    margin-bottom: 15px;
+    color: #505968;
+}
+
+.painel-dado button {
+    min-width: 230px;
+}
+
+
+/* =====================================================
+   ANIMAÇÃO DO DADO
+===================================================== */
+
+@keyframes girarDado {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    25% {
+        transform: rotate(90deg) scale(1.1);
+    }
+
+    50% {
+        transform: rotate(180deg) scale(0.9);
+    }
+
+    75% {
+        transform: rotate(270deg) scale(1.1);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+.dado.animando {
+    animation: girarDado 0.6s ease;
+}
+
+
+/* =====================================================
+   PAINEL DE DESAFIOS
+===================================================== */
+
+.painel-desafio {
+    background: var(--branco);
+    border: 2px solid var(--dourado);
+    border-radius: 14px;
+    padding: 25px;
+    margin-top: 25px;
+}
+
+.cabecalho-desafio {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cabecalho-desafio span {
+    display: inline-block;
+    background: var(--azul-escuro);
+    color: var(--dourado-claro);
+    border-radius: 20px;
+    padding: 7px 18px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.cabecalho-desafio h2 {
+    margin-top: 12px;
+    color: var(--azul-escuro);
+    font-family: Georgia, serif;
+}
+
+#perguntaDesafio {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.alternativas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.alternativa {
+    padding: 15px;
+    background: #E9EEF3;
+    border: 2px solid #CDD5DE;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.alternativa:hover:not(:disabled) {
+    background: #D9E6F1;
+    border-color: var(--azul-medio);
+}
+
+.alternativa:disabled {
+    cursor: default;
+}
+
+.alternativa.correta {
+    background: #DDEBDD;
+    border-color: var(--verde);
+    color: #245A35;
+}
+
+.alternativa.errada {
+    background: #F7DEDE;
+    border-color: var(--vermelho);
+    color: var(--vermelho);
+}
+
+#resultadoDesafio {
+    text-align: center;
+    font-weight: bold;
+    margin: 20px 0;
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   LEGENDA
+===================================================== */
+
+.legenda {
+    margin-top: 25px;
+    padding: 18px;
+    background: #F0EDE5;
+    border-radius: 10px;
+}
+
+.legenda h3 {
+    color: var(--azul-escuro);
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.itens-legenda {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.itens-legenda span {
+    background: var(--branco);
+    padding: 9px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   TELA DE VITÓRIA
+===================================================== */
+
+.vitoria {
+    max-width: 650px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 45px 30px;
+}
+
+.icone-vitoria {
+    font-size: 85px;
+    margin-bottom: 15px;
+}
+
+.vitoria h2 {
+    font-family: Georgia, serif;
+    color: var(--azul-escuro);
+    font-size: 29px;
+    margin-bottom: 15px;
+}
+
+.vitoria > p {
+    color: #505968;
+    line-height: 1.7;
+}
+
+.resultado-final {
+    background: #E7EDF3;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 25px 0;
+}
+
+.resultado-final p {
+    color: var(--cinza);
+    margin: 8px 0;
+}
+
+.resultado-final strong {
+    display: block;
+    font-size: 23px;
+    color: var(--azul-escuro);
+}
+
+.vitoria button {
+    min-width: 230px;
+}
+
+
+/* =====================================================
+   RODAPÉ
+===================================================== */
+
+.rodape {
+    background: var(--azul-escuro);
+    border-top: 3px solid var(--dourado);
+    color: var(--branco);
+    text-align: center;
+    padding: 22px 10px;
+    margin-top: 50px;
+}
+
+.rodape p {
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+}
+
+.rodape span {
+    color: var(--dourado-claro);
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE — TABLETS
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 96%;
+        margin: 20px auto;
+    }
+
+    .painel {
+        padding: 20px;
+    }
+
+    .tabuleiro {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 7px;
+        padding: 7px;
+    }
+
+    .casa {
+        min-height: 75px;
+    }
+
+    .nome-casa {
+        font-size: 9px;
+    }
+
+    .icone-casa {
+        font-size: 22px;
+    }
+
+    .alternativas {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE — CELULARES
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .cabecalho {
+        padding: 18px 10px;
+    }
+
+    .identidade {
+        gap: 10px;
+    }
+
+    .simbolo {
+        font-size: 35px;
+    }
+
+    .identidade h1 {
+        font-size: 19px;
+    }
+
+    .identidade p {
+        font-size: 11px;
+    }
+
+    .inicial {
+        padding: 30px 20px;
+        margin: 20px auto;
+    }
+
+    .inicial h2 {
+        font-size: 23px;
+    }
+
+    .icone-jogo {
+        font-size: 60px;
+    }
+
+    .informacoes-jogador {
+        grid-template-columns: 1fr;
+    }
+
+    .informacoes-jogador div {
+        padding: 11px;
+    }
+
+    .tabuleiro {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 6px;
+    }
+
+    .casa {
+        min-height: 68px;
+        padding: 4px;
+    }
+
+    .icone-casa {
+        font-size: 19px;
+    }
+
+    .nome-casa {
+        font-size: 8px;
+    }
+
+    .numero-casa {
+        font-size: 9px;
+    }
+
+    .painel-dado button {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .itens-legenda {
+        gap: 8px;
+    }
+
+    .itens-legenda span {
+        font-size: 10px;
+    }
+
+}
