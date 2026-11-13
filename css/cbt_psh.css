@@ -1,0 +1,815 @@
+
+/* =====================================================
+   CENTRAL BATISTA DE TREINAMENTO - PSH
+   IDENTIDADE VISUAL
+===================================================== */
+
+:root {
+
+    --azul-marinho: #102B49;
+    --azul-secundario: #183D61;
+    --azul-claro: #294F70;
+
+    --branco: #FFFFFF;
+    --branco-gelo: #F5F7F8;
+
+    --verde-lima: #C5E86C;
+    --verde-destaque: #A9D83F;
+
+    --cinza: #64748B;
+    --cinza-claro: #E2E8F0;
+
+    --sombra: 0 10px 35px rgba(16, 43, 73, 0.09);
+
+}
+
+
+/* =====================================================
+   CONFIGURAÇÕES GERAIS
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: 'Montserrat', sans-serif;
+
+    background: var(--branco-gelo);
+
+    color: var(--azul-marinho);
+
+    line-height: 1.6;
+
+}
+
+.container {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+}
+
+
+/* =====================================================
+   CABEÇALHO
+===================================================== */
+
+.cabecalho {
+
+    background: var(--azul-marinho);
+
+    color: var(--branco);
+
+    padding: 18px 0;
+
+    border-bottom: 4px solid var(--verde-lima);
+
+}
+
+.cabecalho-conteudo {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+}
+
+.identidade {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+.logo-container {
+
+    width: 76px;
+
+    height: 76px;
+
+    background: var(--branco);
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    flex-shrink: 0;
+
+}
+
+.logo {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    padding: 5px;
+
+}
+
+.logo-fallback {
+
+    display: none;
+
+    width: 100%;
+
+    height: 100%;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 23px;
+
+    font-weight: 800;
+
+    color: var(--azul-marinho);
+
+}
+
+.identidade-texto h1 {
+
+    font-size: 19px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+}
+
+.identidade-texto span {
+
+    display: block;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    font-weight: 600;
+
+    color: var(--verde-lima);
+
+}
+
+.identidade-texto small {
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+.cabecalho-status {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    font-size: 12px;
+
+    color: #D9E3EC;
+
+}
+
+.status-indicador {
+
+    width: 9px;
+
+    height: 9px;
+
+    background: var(--verde-lima);
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 10px rgba(197, 232, 108, 0.7);
+
+}
+
+
+/* =====================================================
+   APRESENTAÇÃO
+===================================================== */
+
+.apresentacao {
+
+    background: linear-gradient(
+        120deg,
+        var(--azul-marinho),
+        var(--azul-secundario)
+    );
+
+    color: var(--branco);
+
+    padding: 85px 0 100px;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.apresentacao::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+
+    height: 350px;
+
+    border: 1px solid rgba(197, 232, 108, 0.15);
+
+    border-radius: 50%;
+
+    right: -100px;
+
+    top: -130px;
+
+}
+
+.etiqueta {
+
+    display: inline-block;
+
+    padding: 8px 15px;
+
+    border: 1px solid rgba(197, 232, 108, 0.5);
+
+    border-radius: 30px;
+
+    color: var(--verde-lima);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+
+}
+
+.apresentacao h2 {
+
+    font-size: clamp(30px, 5vw, 49px);
+
+    line-height: 1.2;
+
+    max-width: 750px;
+
+    font-weight: 800;
+
+    margin-bottom: 20px;
+
+}
+
+.apresentacao h2 span {
+
+    color: var(--verde-lima);
+
+    display: block;
+
+}
+
+.apresentacao p {
+
+    color: #D9E3EC;
+
+    font-size: 15px;
+
+    max-width: 620px;
+
+    line-height: 1.9;
+
+}
+
+
+/* =====================================================
+   AMBIENTES
+===================================================== */
+
+.ambientes {
+
+    padding: 85px 0;
+
+}
+
+.secao-titulo {
+
+    text-align: center;
+
+    margin-bottom: 50px;
+
+}
+
+.subtitulo {
+
+    color: #739B24;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+.secao-titulo h2 {
+
+    font-size: 32px;
+
+    margin: 10px 0;
+
+    color: var(--azul-marinho);
+
+}
+
+.secao-titulo p {
+
+    font-size: 14px;
+
+    color: var(--cinza);
+
+}
+
+.ambientes-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+
+    max-width: 950px;
+
+    margin: auto;
+
+}
+
+
+/* =====================================================
+   CARTÕES
+===================================================== */
+
+.card-ambiente {
+
+    background: var(--branco);
+
+    padding: 35px;
+
+    border-radius: 16px;
+
+    box-shadow: var(--sombra);
+
+    border: 1px solid var(--cinza-claro);
+
+    position: relative;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+
+}
+
+.card-ambiente:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow: 0 18px 40px rgba(16, 43, 73, 0.14);
+
+}
+
+.card-numero {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 25px;
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    color: #EDF1F4;
+
+}
+
+.card-icone {
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 13px;
+
+    background: #EEF5DE;
+
+    color: #638A20;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+
+    margin-bottom: 25px;
+
+}
+
+.card-ambiente h3 {
+
+    font-size: 21px;
+
+    line-height: 1.4;
+
+    margin-bottom: 12px;
+
+    color: var(--azul-marinho);
+
+}
+
+.card-descricao {
+
+    font-size: 13px;
+
+    color: var(--cinza);
+
+    min-height: 45px;
+
+    margin-bottom: 22px;
+
+}
+
+.card-ambiente ul {
+
+    list-style: none;
+
+    margin-bottom: 30px;
+
+}
+
+.card-ambiente li {
+
+    font-size: 12px;
+
+    color: #475569;
+
+    padding: 9px 0;
+
+    border-bottom: 1px solid #EDF1F4;
+
+}
+
+.card-ambiente li::before {
+
+    content: "✓";
+
+    color: #78A72B;
+
+    font-weight: 800;
+
+    margin-right: 10px;
+
+}
+
+
+/* =====================================================
+   CARTÃO EM DESTAQUE
+===================================================== */
+
+.card-destaque {
+
+    border-top: 4px solid var(--verde-lima);
+
+}
+
+.card-destaque .card-icone {
+
+    background: var(--azul-marinho);
+
+    color: var(--verde-lima);
+
+}
+
+
+/* =====================================================
+   BOTÕES
+===================================================== */
+
+.botao {
+
+    width: 100%;
+
+    padding: 15px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    transition: all 0.25s ease;
+
+}
+
+.botao span {
+
+    font-size: 19px;
+
+}
+
+.botao-principal {
+
+    background: var(--azul-marinho);
+
+    color: var(--branco);
+
+}
+
+.botao-principal:hover {
+
+    background: var(--azul-secundario);
+
+    transform: translateY(-2px);
+
+}
+
+.botao-secundario {
+
+    background: var(--verde-lima);
+
+    color: var(--azul-marinho);
+
+}
+
+.botao-secundario:hover {
+
+    background: var(--verde-destaque);
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =====================================================
+   PROPÓSITO
+===================================================== */
+
+.proposito {
+
+    background: var(--branco);
+
+    padding: 75px 0;
+
+}
+
+.proposito-conteudo {
+
+    display: flex;
+
+    align-items: stretch;
+
+    gap: 30px;
+
+    max-width: 850px;
+
+    margin: auto;
+
+}
+
+.proposito-linha {
+
+    width: 6px;
+
+    flex-shrink: 0;
+
+    background: var(--verde-lima);
+
+    border-radius: 10px;
+
+}
+
+.proposito h2 {
+
+    font-size: 27px;
+
+    margin: 12px 0;
+
+    color: var(--azul-marinho);
+
+}
+
+.proposito p {
+
+    color: var(--cinza);
+
+    font-size: 14px;
+
+    max-width: 650px;
+
+    line-height: 1.9;
+
+}
+
+
+/* =====================================================
+   RODAPÉ
+===================================================== */
+
+.rodape {
+
+    background: var(--azul-marinho);
+
+    color: var(--branco);
+
+    padding: 35px 0;
+
+    border-top: 4px solid var(--verde-lima);
+
+}
+
+.rodape-conteudo {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+}
+
+.rodape strong {
+
+    display: block;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+}
+
+.rodape-conteudo div span {
+
+    color: var(--verde-lima);
+
+    font-size: 11px;
+
+}
+
+.rodape p {
+
+    font-size: 11px;
+
+    color: #CBD5E1;
+
+}
+
+.rodape small {
+
+    font-size: 10px;
+
+    color: #94A3B8;
+
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .cabecalho-conteudo {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+    .cabecalho-status {
+
+        margin-left: 90px;
+
+    }
+
+    .apresentacao {
+
+        padding: 65px 0 75px;
+
+    }
+
+    .ambientes-grid {
+
+        grid-template-columns: 1fr;
+
+        max-width: 500px;
+
+    }
+
+    .secao-titulo h2 {
+
+        font-size: 26px;
+
+    }
+
+    .card-ambiente {
+
+        padding: 28px;
+
+    }
+
+    .rodape-conteudo {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .identidade-texto h1 {
+
+        font-size: 15px;
+
+    }
+
+    .identidade-texto span {
+
+        font-size: 10px;
+
+    }
+
+    .logo-container {
+
+        width: 65px;
+
+        height: 65px;
+
+    }
+
+    .apresentacao h2 {
+
+        font-size: 29px;
+
+    }
+
+    .card-ambiente h3 {
+
+        font-size: 19px;
+
+    }
+
+}

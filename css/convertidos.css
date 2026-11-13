@@ -1,0 +1,398 @@
+
+/* ======================================================
+   CENTRAL BATISTA DE TREINAMENTO - PSH
+   AMBIENTE DE NOVOS CONVERTIDOS
+   Arquivo: convertidos.css
+   ====================================================== */
+
+/* ------------------------------------------------------
+   CONFIGURAÇÕES GERAIS
+   ------------------------------------------------------ */
+
+.banner-convertidos,
+.identificacao-aluno,
+.modulos-convertidos,
+.orientacao {
+    width: 100%;
+}
+
+.link-voltar {
+    display: inline-block;
+    margin-bottom: 25px;
+    color: var(--azul-marinho);
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link-voltar:hover {
+    color: var(--verde-destaque);
+}
+
+/* ------------------------------------------------------
+   BANNER PRINCIPAL
+   ------------------------------------------------------ */
+
+.banner-convertidos {
+    background: linear-gradient(
+        135deg,
+        var(--azul-marinho),
+        var(--azul-secundario)
+    );
+
+    color: var(--branco);
+    padding: 45px 35px;
+    border-radius: 16px;
+    margin-bottom: 35px;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-convertidos::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    right: -45px;
+    bottom: -75px;
+    border: 25px solid rgba(197, 232, 108, 0.12);
+    border-radius: 50%;
+}
+
+.banner-convertidos h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.banner-convertidos p {
+    max-width: 750px;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+    position: relative;
+    z-index: 1;
+}
+
+/* ------------------------------------------------------
+   IDENTIFICAÇÃO DO ALUNO
+   ------------------------------------------------------ */
+
+.identificacao-aluno {
+    margin-bottom: 45px;
+}
+
+.identificacao-card {
+    background: var(--branco);
+    border: 1px solid #e1e7ec;
+    border-left: 5px solid var(--verde-destaque);
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 5px 18px rgba(16, 43, 73, 0.06);
+}
+
+.identificacao-titulo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    color: var(--azul-marinho);
+    font-size: 1.25rem;
+}
+
+.icone-identificacao {
+    font-size: 1.7rem;
+}
+
+.identificacao-card p {
+    color: #5c6873;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.campo-aluno {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.campo-aluno input {
+    flex: 1;
+    min-width: 220px;
+    padding: 14px 16px;
+    border: 1px solid #cbd5df;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.campo-aluno input:focus {
+    border-color: var(--azul-secundario);
+    box-shadow: 0 0 0 3px rgba(41, 79, 112, 0.12);
+}
+
+.campo-aluno button {
+    border: none;
+    cursor: pointer;
+}
+
+.mensagem-aluno {
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.mensagem-aluno.sucesso {
+    color: #347b24;
+}
+
+.mensagem-aluno.erro {
+    color: #b42318;
+}
+
+/* ------------------------------------------------------
+   SEÇÃO DE MÓDULOS
+   ------------------------------------------------------ */
+
+.modulos-convertidos {
+    margin-bottom: 45px;
+}
+
+.modulos-convertidos .secao-titulo {
+    color: var(--azul-marinho);
+    margin-bottom: 10px;
+}
+
+.modulos-introducao {
+    color: #64717c;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.modulos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+/* ------------------------------------------------------
+   CARTÕES DOS MÓDULOS
+   ------------------------------------------------------ */
+
+.modulo-card {
+    background: var(--branco);
+    border: 1px solid #e1e7ec;
+    border-radius: 13px;
+    padding: 23px;
+    display: flex;
+    flex-direction: column;
+    min-height: 245px;
+    box-shadow: 0 4px 14px rgba(16, 43, 73, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modulo-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 9px 22px rgba(16, 43, 73, 0.1);
+}
+
+.modulo-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.modulo-numero {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: var(--azul-marinho);
+    color: var(--branco);
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.modulo-status {
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    padding: 7px 10px;
+    border-radius: 20px;
+}
+
+.status-disponivel {
+    background: #e8f5d1;
+    color: #416b17;
+}
+
+.status-bloqueado {
+    background: #edf0f2;
+    color: #78838d;
+}
+
+.modulo-icone {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.modulo-informacoes h3 {
+    color: var(--azul-marinho);
+    font-size: 1.1rem;
+    margin-bottom: 9px;
+}
+
+.modulo-informacoes p {
+    color: #687580;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* ------------------------------------------------------
+   BOTÕES DOS MÓDULOS
+   ------------------------------------------------------ */
+
+.botao-modulo {
+    width: 100%;
+    margin-top: auto;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    background: var(--azul-marinho);
+    color: var(--branco);
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.botao-modulo:hover:not(:disabled) {
+    background: var(--azul-secundario);
+    transform: translateY(-2px);
+}
+
+.botao-modulo:disabled,
+.botao-bloqueado {
+    background: #e5e9ed;
+    color: #8a949d;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ------------------------------------------------------
+   ORIENTAÇÕES AO ALUNO
+   ------------------------------------------------------ */
+
+.orientacao {
+    background: #f1f7e7;
+    border: 1px solid #dcebbd;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 40px;
+}
+
+.orientacao-conteudo {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.orientacao-icone {
+    font-size: 1.8rem;
+}
+
+.orientacao h3 {
+    color: var(--azul-marinho);
+    margin-bottom: 8px;
+}
+
+.orientacao p {
+    color: #536247;
+    line-height: 1.7;
+}
+
+/* ------------------------------------------------------
+   RESPONSIVIDADE
+   ------------------------------------------------------ */
+
+@media (max-width: 900px) {
+
+    .modulos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .banner-convertidos {
+        padding: 30px 22px;
+    }
+
+    .banner-convertidos h1 {
+        font-size: 1.55rem;
+    }
+
+    .identificacao-card {
+        padding: 22px;
+    }
+
+    .campo-aluno {
+        flex-direction: column;
+    }
+
+    .campo-aluno input,
+    .campo-aluno button {
+        width: 100%;
+    }
+
+    .modulos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modulo-card {
+        min-height: auto;
+    }
+
+    .orientacao-conteudo {
+        flex-direction: column;
+    }
+
+}
+
+/* Elementos ocultos pelo controle de acesso */
+
+[hidden] {
+    display: none !important;
+}
+
+/* Botão para encerrar a sessão */
+
+.botao-sair {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 11px 20px;
+    border: 1px solid #cbd5df;
+    border-radius: 8px;
+    background: #ffffff;
+    color: var(--azul-marinho);
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.botao-sair:hover {
+    background: var(--azul-marinho);
+    color: #ffffff;
+}
