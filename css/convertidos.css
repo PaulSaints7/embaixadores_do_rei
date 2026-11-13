@@ -214,8 +214,8 @@
     justify-content: center;
     width: 42px;
     height: 42px;
-    background: var(--azul-marinho);
-    color: var(--branco);
+    background: var(--branco);
+    color: var(--preto);
     border-radius: 10px;
     font-weight: 700;
     font-size: 1rem;
