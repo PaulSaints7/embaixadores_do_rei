@@ -16,7 +16,7 @@ const ALUNOS_AUTORIZADOS = [
     "visitante",
     "Annes Paulo",
     "Paulo Leão",
-    "Paulo Roberto"
+    "Paulo Roberto",
     "Paulinha"
 ];
 
