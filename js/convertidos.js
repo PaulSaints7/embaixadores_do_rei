@@ -28,7 +28,7 @@ const ALUNOS_AUTORIZADOS = [
 const CHAVE_ALUNO = "cbt_psh_aluno_convertido";
 
 // Módulos que já estão disponíveis.
-const MODULOS_DISPONIVEIS = ["01", "02", "03"];
+const MODULOS_DISPONIVEIS = ["01", "02", "03", "04", "05", "06"];
 
 let formularioAluno;
 let campoNomeAluno;
