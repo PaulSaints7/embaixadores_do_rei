@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Central Batista de Treinamento PSH - Ambiente de treinamento e avaliação de conhecimentos bíblicos e doutrinários.">
+
+    <meta name="theme-color" content="#102B49">
+
+    <title>Central Batista de Treinamento | PSH</title>
+
+    <link rel="stylesheet" href="css/cbt_psh.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ======================================
+         CABEÇALHO
+    ======================================= -->
+
+    <header class="cabecalho">
+
+        <div class="container cabecalho-conteudo">
+
+            <div class="identidade">
+
+                <div class="logo-container">
+
+                    <!-- INSERIR LOGOMARCA DA PSH -->
+
+                    <img src="imagens/logo_psh.png"
+                        alt="Logomarca da congregação PSH"
+                        class="logo"
+                        onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='flex';">
+
+                    <div id="logo-fallback" class="logo-fallback">
+                        PSH
+                    </div>
+
+                </div>
+
+                <div class="identidade-texto">
+
+                    <h1>CENTRAL BATISTA</h1>
+
+                    <span>DE TREINAMENTO</span>
+
+                    <small>PSH</small>
+
+                </div>
+
+            </div>
+
+            <div class="cabecalho-status">
+
+                <span class="status-indicador"></span>
+
+                <span>Ambiente de aprendizagem</span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ======================================
+         APRESENTAÇÃO
+    ======================================= -->
+
+    <main>
+
+        <section class="apresentacao">
+
+            <div class="container apresentacao-conteudo">
+
+                <div class="etiqueta">
+                    FORMAÇÃO • CONHECIMENTO • FÉ
+                </div>
+
+                <h2>
+                    Conhecimento que fortalece
+                    <span>a caminhada cristã.</span>
+                </h2>
+
+                <p>
+                    Um ambiente dedicado ao treinamento,
+                    à aprendizagem bíblica e à formação
+                    doutrinária batista.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================
+             AMBIENTES DE TREINAMENTO
+        ======================================= -->
+
+        <section class="ambientes">
+
+            <div class="container">
+
+                <div class="secao-titulo">
+
+                    <span class="subtitulo">ESCOLHA SEU AMBIENTE</span>
+
+                    <h2>Central de Treinamento</h2>
+
+                    <p>
+                        Selecione o ambiente correspondente
+                        à sua etapa de formação.
+                    </p>
+
+                </div>
+
+
+                <div class="ambientes-grid">
+
+
+                    <!-- NOVOS CONVERTIDOS -->
+
+                    <article class="card-ambiente">
+
+                        <div class="card-numero">
+                            01
+                        </div>
+
+                        <div class="card-icone">
+                            ✦
+                        </div>
+
+                        <h3>Novos Convertidos</h3>
+
+                        <p class="card-descricao">
+                            Fundamentos da fé cristã e preparação
+                            para o batismo.
+                        </p>
+
+                        <ul>
+                            <li>Fundamentos bíblicos</li>
+                            <li>Doutrinas fundamentais</li>
+                            <li>Simulados por assunto</li>
+                            <li>Avaliação de conhecimentos</li>
+                        </ul>
+
+                        <button
+                            class="botao botao-principal"
+                            onclick="abrirAmbiente('convertidos')">
+
+                            Acessar ambiente
+
+                            <span>→</span>
+
+                        </button>
+
+                    </article>
+
+
+                    <!-- FORMAÇÃO DOUTRINÁRIA -->
+
+                    <article class="card-ambiente card-destaque">
+
+                        <div class="card-numero">
+                            02
+                        </div>
+
+                        <div class="card-icone">
+                            ◆
+                        </div>
+
+                        <h3>Formação Doutrinária Batista</h3>
+
+                        <p class="card-descricao">
+                            Preparação e aprofundamento no
+                            conhecimento da doutrina batista.
+                        </p>
+
+                        <ul>
+                            <li>Declaração Doutrinária da CBB</li>
+                            <li>Princípios Batistas</li>
+                            <li>Eclesiologia</li>
+                            <li>Simulados gerais</li>
+                        </ul>
+
+                        <button
+                            class="botao botao-secundario"
+                            onclick="abrirAmbiente('doutrinario')">
+
+                            Acessar ambiente
+
+                            <span>→</span>
+
+                        </button>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================
+             OBJETIVO DA PLATAFORMA
+        ======================================= -->
+
+        <section class="proposito">
+
+            <div class="container proposito-conteudo">
+
+                <div class="proposito-linha"></div>
+
+                <div>
+
+                    <span class="subtitulo">
+                        NOSSO PROPÓSITO
+                    </span>
+
+                    <h2>
+                        Aprender, compreender
+                        e fortalecer a fé.
+                    </h2>
+
+                    <p>
+                        A Central Batista de Treinamento
+                        oferece recursos de aprendizagem
+                        e avaliação para contribuir com
+                        a formação cristã e doutrinária.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ======================================
+         RODAPÉ
+    ======================================= -->
+
+    <footer class="rodape">
+
+        <div class="container rodape-conteudo">
+
+            <div>
+                <strong>CENTRAL BATISTA DE TREINAMENTO</strong>
+                <span>PSH</span>
+            </div>
+
+            <p>
+                Formação cristã e conhecimento doutrinário.
+            </p>
+
+            <small>
+                © <span id="ano-atual"></span> PSH.
+                Todos os direitos reservados.
+            </small>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/cbt_psh.js"></script>
+
+</body>
+
+</html>
