@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Ambiente de formação bíblica e doutrinária para novos convertidos da PSH.">
+
+    <meta name="theme-color" content="#102B49">
+
+    <title>Novos Convertidos | CBT-PSH</title>
+
+    <link rel="stylesheet" href="../css/cbt_psh.css">
+    <link rel="stylesheet" href="../css/convertidos.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- =========================================
+         CABEÇALHO
+    ========================================== -->
+
+    <header class="cabecalho">
+
+        <div class="container cabecalho-conteudo">
+
+            <div class="identidade">
+
+                <div class="logo-container">
+
+                    <img
+                        src="../imagens/logo_psh.png"
+                        alt="Logomarca PSH"
+                        class="logo"
+                        onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='flex';">
+
+                    <div id="logo-fallback" class="logo-fallback">
+                        PSH
+                    </div>
+
+                </div>
+
+                <div class="identidade-texto">
+
+                    <h1>CENTRAL BATISTA</h1>
+
+                    <span>DE TREINAMENTO</span>
+
+                    <small>PSH</small>
+
+                </div>
+
+            </div>
+
+            <a href="../cbt_psh.html" class="link-voltar">
+                ← Página inicial
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         APRESENTAÇÃO
+    ========================================== -->
+
+    <main>
+
+        <section class="banner-convertidos">
+
+            <div class="container">
+
+                <span class="etiqueta">
+                    AMBIENTE DE FORMAÇÃO CRISTÃ
+                </span>
+
+                <h2>
+                    Novos Convertidos
+                </h2>
+
+                <p>
+                    Conhecendo a Palavra de Deus,
+                    compreendendo a fé cristã e
+                    preparando-se para o batismo.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             IDENTIFICAÇÃO DO ALUNO
+        ========================================== -->
+
+        <section class="identificacao-aluno">
+
+            <div class="container">
+
+                <div class="identificacao-card">
+
+                    <div class="identificacao-titulo">
+
+                        <span class="icone-identificacao">
+                            ♙
+                        </span>
+
+                        <div>
+
+                            <h3>Identificação do aluno</h3>
+
+                            <p>
+                                Informe seu nome para iniciar
+                                sua jornada de aprendizagem.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <form id="form-aluno">
+
+                        <div class="campo-aluno">
+
+                            <label for="nome-aluno">
+                                Nome completo
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nome-aluno"
+                                placeholder="Digite seu nome completo"
+                                autocomplete="name"
+                                required>
+
+                        </div>
+
+                        <button type="submit" class="botao botao-principal">
+
+                            Identificar aluno
+
+                            <span>→</span>
+
+                        </button>
+
+                    </form>
+
+                    <div id="mensagem-aluno" class="mensagem-aluno" aria-live="polite"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             MÓDULOS DE FORMAÇÃO
+        ========================================== -->
+
+        <section class="modulos-convertidos">
+
+            <div class="container">
+
+                <div class="secao-titulo">
+
+                    <span class="subtitulo">
+                        PROGRAMA DE FORMAÇÃO
+                    </span>
+
+                    <h2>Fundamentos da Fé Cristã</h2>
+
+                    <p>
+                        Estude os fundamentos da doutrina cristã
+                        e teste seus conhecimentos.
+                    </p>
+
+                </div>
+
+
+                <div class="modulos-grid">
+
+
+                    <!-- MÓDULO 01 -->
+
+                    <article class="modulo-card modulo-disponivel">
+
+                        <div class="modulo-topo">
+
+                            <span class="modulo-numero">
+                                MÓDULO 01
+                            </span>
+
+                            <span class="modulo-status">
+                                DISPONÍVEL
+                            </span>
+
+                        </div>
+
+                        <div class="modulo-icone">
+                            📖
+                        </div>
+
+                        <h3>As Escrituras Sagradas</h3>
+
+                        <p>
+                            A Bíblia como Palavra de Deus,
+                            sua inspiração, autoridade,
+                            verdade e suficiência.
+                        </p>
+
+                        <div class="modulo-informacoes">
+
+                            <span>10 questões</span>
+
+                            <span>Fundamental</span>
+
+                        </div>
+
+                       <button
+                            class="botao botao-principal botao-modulo"
+                            data-modulo="01">
+                            Iniciar estudo
+                            <span>→</span>
+                       </button>
+
+                    </article>
+
+
+                    <!-- MÓDULO 02 -->
+
+                    <article class="modulo-card">
+
+                        <div class="modulo-topo">
+
+                            <span class="modulo-numero">
+                                MÓDULO 02
+                            </span>
+
+                            <span class="modulo-status status-bloqueado">
+                                EM BREVE
+                            </span>
+
+                        </div>
+
+                        <div class="modulo-icone">
+                            ✨
+                        </div>
+
+                        <h3>Deus</h3>
+
+                        <p>
+                            Conhecendo a natureza de Deus,
+                            seus atributos e a doutrina
+                            da Santíssima Trindade.
+                        </p>
+
+                        <div class="modulo-informacoes">
+
+                            <span>Em preparação</span>
+
+                        </div>
+
+                        <button
+                             class="botao botao-principal botao-modulo"
+                             data-modulo="02">
+                             Iniciar estudo
+                             <span>→</span>
+                        </button>
+
+                    </article>
+
+
+                    <!-- MÓDULO 03 -->
+
+                    <article class="modulo-card">
+
+                        <div class="modulo-topo">
+
+                            <span class="modulo-numero">
+                                MÓDULO 03
+                            </span>
+
+                            <span class="modulo-status status-bloqueado">
+                                Disponível
+                            </span>
+
+                        </div>
+
+                        <div class="modulo-icone">
+                            ✝
+                        </div>
+
+                        <h3>Deus Filho</h3>
+
+                        <p>
+                            A pessoa de Jesus Cristo,
+                            sua encarnação, ministério,
+                            morte e ressurreição.
+                        </p>
+
+                        <div class="modulo-informacoes">
+
+                            <span>Em preparação</span>
+
+                        </div>
+
+                        <button
+                             class="botao botao-principal botao-modulo"
+                             data-modulo="03">
+                             Iniciar estudo
+                             <span>→</span>
+                        </button>
+                    </article>
+
+
+                    <!-- MÓDULO 04 -->
+
+                    <article class="modulo-card">
+
+                        <div class="modulo-topo">
+
+                            <span class="modulo-numero">
+                                MÓDULO 04
+                            </span>
+
+                            <span class="modulo-status status-bloqueado">
+                                EM BREVE
+                            </span>
+
+                        </div>
+
+                        <div class="modulo-icone">
+                            🕊
+                        </div>
+
+                        <h3>Deus Espírito Santo</h3>
+
+                        <p>
+                            A pessoa e a obra do Espírito Santo
+                            na vida do cristão e na Igreja.
+                        </p>
+
+                        <div class="modulo-informacoes">
+
+                            <span>Em preparação</span>
+
+                        </div>
+
+                        <button
+                             class="botao botao-principal botao-modulo"
+                             data-modulo="04">
+                             Iniciar estudo
+                             <span>→</span>
+                        </button>
+                    </article>
+
+
+                    <!-- MÓDULO 05 -->
+
+                    <article class="modulo-card">
+
+                        <div class="modulo-topo">
+
+                            <span class="modulo-numero">
+                                MÓDULO 05
+                            </span>
+
+                            <span class="modulo-status status-bloqueado">
+                                EM BREVE
+                            </span>
+
+                        </div>
+
+                        <div class="modulo-icone">
+                            👤
+                        </div>
+
+                        <h3>O Homem</h3>
+
+                        <p>
+                            A criação do ser humano,
+                            sua natureza e sua relação
+                            com Deus.
+                        </p>
+
+                        <div class="modulo-informacoes">
+
+                            <span>Em preparação</span>
+
+                        </div>
+
+                        <button
+                             class="botao botao-principal botao-modulo"
+                             data-modulo="05">
+                             Iniciar estudo
+                             <span>→</span>
+                        </button>
+
+                    </article>
+
+
+                    <!-- MÓDULO 06 -->
+
+                    <article class="modulo-card">
+
+                        <div class="modulo-topo">
+
+                            <span class="modulo-numero">
+                                MÓDULO 06
+                            </span>
+
+                            <span class="modulo-status status-bloqueado">
+                                EM BREVE
+                            </span>
+
+                        </div>
+
+                        <div class="modulo-icone">
+                            ⚖
+                        </div>
+
+                        <h3>O Pecado</h3>
+
+                        <p>
+                            A origem, a natureza e as
+                            consequências do pecado.
+                        </p>
+
+                        <div class="modulo-informacoes">
+
+                            <span>Em preparação</span>
+
+                        </div>
+
+                        <button
+                             class="botao botao-principal botao-modulo"
+                             data-modulo="06">
+                             Iniciar estudo
+                             <span>→</span>
+                        </button>
+
+                    </article>
+
+                    <!-- MÓDULO 07 -->
+
+                    <article class="modulo-card">
+
+                        <div class="modulo-topo">
+
+                            <span class="modulo-numero">
+                                MÓDULO 07
+                            </span>
+
+                            <span class="modulo-status">
+                                DISPONÍVEL
+                            </span>
+
+                        </div>
+
+                        <div class="modulo-icone">
+                            ❤️
+                        </div>
+
+                        <h3>A Salvação</h3>
+
+                        <p>
+                            A salvação pela graça de Deus,
+                            mediante a fé em Jesus Cristo,
+                            e a nova vida no Salvador.
+                        </p>
+
+                        <div class="modulo-informacoes">
+
+                            <span>10 questões</span>
+
+                            <span>Fundamental</span>
+
+                        </div>
+
+                        <button
+                            class="botao botao-principal botao-modulo"
+                            data-modulo="07">
+                            Iniciar estudo
+                            <span>→</span>
+                        </button>
+
+                    </article>
+
+
+                    <!-- MÓDULO 08 -->
+
+                    <article class="modulo-card">
+
+                        <div class="modulo-topo">
+
+                            <span class="modulo-numero">
+                                MÓDULO 08
+                            </span>
+
+                            <span class="modulo-status">
+                                DISPONÍVEL
+                            </span>
+
+                        </div>
+
+                        <div class="modulo-icone">
+                            📜
+                        </div>
+
+                        <h3>A Eleição</h3>
+
+                        <p>
+                            O ensino bíblico sobre a eleição,
+                            a graça e o propósito de Deus.
+                        </p>
+
+                        <div class="modulo-informacoes">
+
+                            <span>Conteúdo em preparação</span>
+
+                        </div>
+
+                        <button
+                            class="botao botao-principal botao-modulo"
+                            data-modulo="08">
+                            Iniciar estudo
+                            <span>→</span>
+                        </button>
+
+                    </article>
+
+
+                    <!-- MÓDULO 09 -->
+
+                    <article class="modulo-card">
+
+                        <div class="modulo-topo">
+
+                            <span class="modulo-numero">
+                                MÓDULO 09
+                            </span>
+
+                            <span class="modulo-status">
+                                DISPONÍVEL
+                            </span>
+
+                        </div>
+
+                        <div class="modulo-icone">
+                            👑
+                        </div>
+
+                        <h3>O Reino de Deus</h3>
+
+                        <p>
+                            O Reino de Deus anunciado por Jesus
+                            e seus princípios para a vida cristã.
+                        </p>
+
+                        <div class="modulo-informacoes">
+
+                            <span>Conteúdo em preparação</span>
+
+                        </div>
+
+                        <button
+                            class="botao botao-principal botao-modulo"
+                            data-modulo="09">
+                            Iniciar estudo
+                            <span>→</span>
+                        </button>
+
+                    </article>
+
+
+                    <!-- MÓDULO 10 -->
+
+                    <article class="modulo-card">
+
+                        <div class="modulo-topo">
+
+                            <span class="modulo-numero">
+                                MÓDULO 10
+                            </span>
+
+                            <span class="modulo-status">
+                                DISPONÍVEL
+                            </span>
+
+                        </div>
+
+                        <div class="modulo-icone">
+                            ⛪
+                        </div>
+
+                        <h3>A Igreja</h3>
+
+                        <p>
+                            A natureza, a missão, as ordenanças
+                            e a organização da Igreja de Cristo.
+                        </p>
+
+                        <div class="modulo-informacoes">
+
+                            <span>Conteúdo em preparação</span>
+
+                        </div>
+
+                        <button
+                            class="botao botao-principal botao-modulo"
+                            data-modulo="10">
+                            Iniciar estudo
+                            <span>→</span>
+                        </button>
+
+                    </article>
+
+
+                    <!-- MÓDULO 11 -->
+
+                    <article class="modulo-card">
+
+                        <div class="modulo-topo">
+
+                            <span class="modulo-numero">
+                                MÓDULO 11
+                            </span>
+
+                            <span class="modulo-status">
+                                DISPONÍVEL
+                            </span>
+
+                        </div>
+
+                        <div class="modulo-icone">
+                            💧
+                        </div>
+
+                        <h3>O Batismo e a Ceia do Senhor</h3>
+
+                        <p>
+                            As duas ordenanças instituídas
+                            por Jesus Cristo para sua Igreja.
+                        </p>
+
+                        <div class="modulo-informacoes">
+
+                            <span>Conteúdo em preparação</span>
+
+                        </div>
+
+                        <button
+                            class="botao botao-principal botao-modulo"
+                            data-modulo="11">
+                            Iniciar estudo
+                            <span>→</span>
+                        </button>
+
+                    </article>
+
+
+                    <!-- MÓDULO 12 -->
+
+                    <article class="modulo-card">
+
+                        <div class="modulo-topo">
+
+                            <span class="modulo-numero">
+                                MÓDULO 12
+                            </span>
+
+                            <span class="modulo-status">
+                                DISPONÍVEL
+                            </span>
+
+                        </div>
+
+                        <div class="modulo-icone">
+                            ☀️
+                        </div>
+
+                        <h3>O Dia do Senhor</h3>
+
+                        <p>
+                            A importância do Dia do Senhor
+                            na adoração e na vida da Igreja.
+                        </p>
+
+                        <div class="modulo-informacoes">
+
+                            <span>Conteúdo em preparação</span>
+
+                        </div>
+
+                        <button
+                            class="botao botao-principal botao-modulo"
+                            data-modulo="12">
+                            Iniciar estudo
+                            <span>→</span>
+                        </button>
+
+                    </article>
+
+
+                    <!-- MÓDULO 13 -->
+
+                    <article class="modulo-card">
+
+                        <div class="modulo-topo">
+
+                            <span class="modulo-numero">
+                                MÓDULO 13
+                            </span>
+
+                            <span class="modulo-status">
+                                DISPONÍVEL
+                            </span>
+
+                        </div>
+
+                        <div class="modulo-icone">
+                            🤝
+                        </div>
+
+                        <h3>O Ministério da Igreja</h3>
+
+                        <p>
+                            O serviço cristão, os ministérios
+                            e a responsabilidade dos membros
+                            na obra de Deus.
+                        </p>
+
+                        <div class="modulo-informacoes">
+
+                            <span>Conteúdo em preparação</span>
+
+                        </div>
+
+                        <button
+                            class="botao botao-principal botao-modulo"
+                            data-modulo="13">
+                            Iniciar estudo
+                            <span>→</span>
+                        </button>
+
+                    </article>
+
+
+                    <!-- MÓDULO 14 -->
+
+                    <article class="modulo-card">
+
+                        <div class="modulo-topo">
+
+                            <span class="modulo-numero">
+                                MÓDULO 14
+                            </span>
+
+                            <span class="modulo-status">
+                                DISPONÍVEL
+                            </span>
+
+                        </div>
+
+                        <div class="modulo-icone">
+                            🌍
+                        </div>
+
+                        <h3>Evangelização e Missões</h3>
+
+                        <p>
+                            A missão de anunciar o Evangelho
+                            e fazer discípulos de Jesus Cristo.
+                        </p>
+
+                        <div class="modulo-informacoes">
+
+                            <span>Conteúdo em preparação</span>
+
+                        </div>
+
+                        <button
+                            class="botao botao-principal botao-modulo"
+                            data-modulo="14">
+                            Iniciar estudo
+                            <span>→</span>
+                        </button>
+
+                    </article>
+
+
+                    <!-- MÓDULO 15 -->
+
+                    <article class="modulo-card">
+
+                        <div class="modulo-topo">
+
+                            <span class="modulo-numero">
+                                MÓDULO 15
+                            </span>
+
+                            <span class="modulo-status">
+                                DISPONÍVEL
+                            </span>
+
+                        </div>
+
+                        <div class="modulo-icone">
+                            🕊️
+                        </div>
+
+                        <h3>Liberdade Religiosa</h3>
+
+                        <p>
+                            A liberdade de consciência,
+                            de crença e de expressão religiosa.
+                        </p>
+
+                        <div class="modulo-informacoes">
+
+                            <span>Conteúdo em preparação</span>
+
+                        </div>
+
+                        <button
+                            class="botao botao-principal botao-modulo"
+                            data-modulo="15">
+                            Iniciar estudo
+                            <span>→</span>
+                        </button>
+
+                    </article>
+
+
+                    <!-- MÓDULO 16 -->
+
+                    <article class="modulo-card">
+
+                        <div class="modulo-topo">
+
+                            <span class="modulo-numero">
+                                MÓDULO 16
+                            </span>
+
+                            <span class="modulo-status">
+                                DISPONÍVEL
+                            </span>
+
+                        </div>
+
+                        <div class="modulo-icone">
+                            🌅
+                        </div>
+
+                        <h3>Morte e Destino Eterno</h3>
+
+                        <p>
+                            O ensino bíblico sobre a morte,
+                            a ressurreição e o destino eterno.
+                        </p>
+
+                        <div class="modulo-informacoes">
+
+                            <span>Conteúdo em preparação</span>
+
+                        </div>
+
+                        <button
+                            class="botao botao-principal botao-modulo"
+                            data-modulo="16">
+                            Iniciar estudo
+                            <span>→</span>
+                        </button>
+
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             ORIENTAÇÃO
+        ========================================== -->
+
+        <section class="orientacao">
+
+            <div class="container">
+
+                <div class="orientacao-conteudo">
+
+                    <h3>Uma jornada de conhecimento e fé</h3>
+
+                    <p>
+                        Cada etapa desta formação foi planejada
+                        para ajudar você a compreender os
+                        fundamentos da fé cristã, conhecer
+                        melhor as Escrituras e crescer
+                        espiritualmente.
+                    </p>
+
+                    <strong>
+                        Estude a Palavra. Compreenda a fé.
+                        Prepare-se para servir.
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         RODAPÉ
+    ========================================== -->
+
+    <footer class="rodape">
+
+        <div class="container rodape-conteudo">
+
+            <div>
+
+                <strong>CENTRAL BATISTA DE TREINAMENTO</strong>
+
+                <span>PSH</span>
+
+            </div>
+
+            <p>
+                Formação cristã e conhecimento doutrinário.
+            </p>
+
+            <small>
+                © <span id="ano-atual"></span> PSH.
+                Todos os direitos reservados.
+            </small>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="../js/questoes_convertidos.js"></script>
+    <script src="../js/convertidos.js"></script>
+
+</body>
+
+</html>
