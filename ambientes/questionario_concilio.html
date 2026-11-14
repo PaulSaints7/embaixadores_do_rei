@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Questionário de avaliação da Central Batista de Treinamento - Preparação para o Concílio.">
+
+    <title>Questionário | Preparação para o Concílio</title>
+
+    <link rel="stylesheet" href="../css/concilio.css">
+
+    <style>
+
+        /* ==================================================
+           QUESTIONÁRIO - PREPARAÇÃO PARA O CONCÍLIO
+        ================================================== */
+
+        .questionario-container {
+            max-width: 1000px;
+            margin: 45px auto;
+            padding: 25px;
+        }
+
+        .questionario-cabecalho {
+            background: #102B49;
+            color: #FFFFFF;
+            padding: 35px;
+            border-radius: 14px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .questionario-cabecalho h1 {
+            font-family: 'Cinzel', serif;
+            margin-bottom: 12px;
+        }
+
+        .questionario-cabecalho p {
+            line-height: 1.7;
+        }
+
+        .identificacao-questionario {
+            color: #C7E59B;
+            font-weight: bold;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+
+        .painel-progresso {
+            background: #FFFFFF;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .informacoes-progresso {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            color: #102B49;
+            font-weight: bold;
+        }
+
+        .barra-fundo {
+            width: 100%;
+            height: 12px;
+            background: #E5E5E5;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .barra-preenchimento {
+            width: 0%;
+            height: 100%;
+            background: #A51F35;
+            transition: width 0.4s ease;
+        }
+
+        .cartao-pergunta {
+            background: #FFFFFF;
+            padding: 35px;
+            border-radius: 14px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            margin-bottom: 25px;
+        }
+
+        .numero-pergunta {
+            color: #A51F35;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .texto-pergunta {
+            color: #102B49;
+            font-size: 1.2rem;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .alternativas {
+            display: grid;
+            gap: 14px;
+        }
+
+        .alternativa {
+            width: 100%;
+            padding: 17px;
+            border: 2px solid #D9DDE2;
+            border-radius: 9px;
+            background: #FFFFFF;
+            color: #102B49;
+            text-align: left;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .alternativa:hover {
+            border-color: #A51F35;
+            background: #F8E9EC;
+        }
+
+        .alternativa:disabled {
+            cursor: default;
+        }
+
+        .alternativa.correta {
+            background: #EDF5E4;
+            border-color: #54852B;
+            color: #31551B;
+        }
+
+        .alternativa.incorreta {
+            background: #F8E9EC;
+            border-color: #A51F35;
+            color: #781629;
+        }
+
+        .feedback {
+            display: none;
+            padding: 22px;
+            border-radius: 10px;
+            margin-top: 25px;
+            line-height: 1.7;
+        }
+
+        .feedback.correto {
+            display: block;
+            background: #EDF5E4;
+            border-left: 5px solid #54852B;
+        }
+
+        .feedback.incorreto {
+            display: block;
+            background: #F8E9EC;
+            border-left: 5px solid #A51F35;
+        }
+
+        .feedback h3 {
+            margin-bottom: 10px;
+        }
+
+        .feedback-referencia {
+            font-weight: bold;
+            margin-top: 12px;
+        }
+
+        .botoes-questionario {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .botao-questionario {
+            border: none;
+            border-radius: 8px;
+            padding: 14px 24px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .botao-avancar {
+            background: #A51F35;
+            color: #FFFFFF;
+        }
+
+        .botao-avancar:hover {
+            background: #781629;
+        }
+
+        .botao-sair {
+            background: #102B49;
+            color: #FFFFFF;
+        }
+
+        .resultado-final {
+            display: none;
+            background: #FFFFFF;
+            padding: 40px;
+            border-radius: 14px;
+            text-align: center;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+        }
+
+        .resultado-final h2 {
+            color: #102B49;
+            font-family: 'Cinzel', serif;
+            margin-bottom: 20px;
+        }
+
+        .pontuacao-final {
+            font-size: 2.5rem;
+            color: #A51F35;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .mensagem-resultado {
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .erro-carregamento {
+            display: none;
+            background: #F8E9EC;
+            color: #781629;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 650px) {
+
+            .questionario-container {
+                padding: 12px;
+                margin: 20px auto;
+            }
+
+            .questionario-cabecalho {
+                padding: 25px 18px;
+            }
+
+            .cartao-pergunta {
+                padding: 22px;
+            }
+
+            .informacoes-progresso {
+                flex-direction: column;
+            }
+
+            .botoes-questionario {
+                flex-direction: column;
+            }
+
+            .botao-questionario {
+                width: 100%;
+                text-align: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <main class="questionario-container">
+
+        <!-- CABEÇALHO -->
+
+        <header class="questionario-cabecalho">
+
+            <div class="identificacao-questionario">
+                CENTRAL BATISTA DE TREINAMENTO - PSH
+            </div>
+
+            <h1>AVALIAÇÃO DOUTRINÁRIA</h1>
+
+            <p>
+                Preparação para o Concílio
+            </p>
+
+            <p id="descricao-modulo">
+                Questionário de avaliação do conteúdo estudado.
+            </p>
+
+        </header>
+
+
+        <!-- ERRO DE CARREGAMENTO -->
+
+        <div id="erro-carregamento" class="erro-carregamento">
+
+            Não foi possível carregar as questões deste módulo.
+
+            Verifique se o conteúdo está cadastrado corretamente.
+
+        </div>
+
+
+        <!-- PAINEL DE PROGRESSO -->
+
+        <section id="painel-progresso" class="painel-progresso">
+
+            <div class="informacoes-progresso">
+
+                <span id="contador-pergunta">
+                    Pergunta 0 de 0
+                </span>
+
+                <span id="contador-pontos">
+                    Pontuação: 0
+                </span>
+
+            </div>
+
+            <div class="barra-fundo">
+
+                <div
+                    id="barra-progresso"
+                    class="barra-preenchimento">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CARTÃO DA PERGUNTA -->
+
+        <section id="cartao-pergunta" class="cartao-pergunta">
+
+            <div id="numero-pergunta" class="numero-pergunta">
+                QUESTÃO
+            </div>
+
+            <h2 id="texto-pergunta" class="texto-pergunta">
+                Preparando questionário...
+            </h2>
+
+            <div id="alternativas" class="alternativas">
+
+                <!-- ALTERNATIVAS INSERIDAS PELO JAVASCRIPT -->
+
+            </div>
+
+
+            <!-- FEEDBACK -->
+
+            <div id="feedback" class="feedback">
+
+                <h3 id="feedback-titulo"></h3>
+
+                <p id="feedback-explicacao"></p>
+
+                <p
+                    id="feedback-referencia"
+                    class="feedback-referencia">
+                </p>
+
+            </div>
+
+
+            <!-- BOTÕES -->
+
+            <div class="botoes-questionario">
+
+                <a
+                    href="modulo_concilio.html"
+                    id="botao-sair"
+                    class="botao-questionario botao-sair">
+
+                    SAIR DO QUESTIONÁRIO
+
+                </a>
+
+                <button
+                    id="botao-avancar"
+                    class="botao-questionario botao-avancar"
+                    disabled>
+
+                    PRÓXIMA QUESTÃO
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULTADO FINAL -->
+
+        <section id="resultado-final" class="resultado-final">
+
+            <h2>AVALIAÇÃO CONCLUÍDA</h2>
+
+            <p>
+                Você concluiu o questionário desta etapa
+                da Preparação para o Concílio.
+            </p>
+
+            <div
+                id="pontuacao-final"
+                class="pontuacao-final">
+
+                0%
+
+            </div>
+
+            <p
+                id="mensagem-resultado"
+                class="mensagem-resultado">
+            </p>
+
+            <a
+                href="modulo_concilio.html"
+                id="botao-retornar"
+                class="botao-questionario botao-sair">
+
+                RETORNAR À ÁREA DE FORMAÇÃO
+
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+
+    <footer class="rodape">
+
+        <p>
+            CENTRAL BATISTA DE TREINAMENTO - PSH
+        </p>
+
+        <p>
+            Formação bíblica, doutrinária e ministerial.
+        </p>
+
+        <p>
+            © <span id="ano-atual"></span> - Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+
+    <!-- SCRIPTS DO QUESTIONÁRIO -->
+
+    <script>
+        document.getElementById("ano-atual").textContent =
+            new Date().getFullYear();
+    </script>
+
+    <!-- MOTOR E BANCO DE QUESTÕES -->
+
+          <!-- BANCO DE QUESTÕES -->
+
+            <script src="../js/questoes_concilio.js"></script>
+
+           <!-- MOTOR DO QUESTIONÁRIO -->
+
+             <script src="../js/questionario_concilio.js"></script>
+
+</body>
+
+</html>
