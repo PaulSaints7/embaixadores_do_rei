@@ -1,0 +1,786 @@
+/* =========================================================
+   CRISTÃOZINHOS DO CÉU
+   Aprendendo a Palavra de Deus com alegria!
+   Folha de estilos principal
+   ========================================================= */
+
+/* =========================================================
+   1. CONFIGURAÇÕES GERAIS
+   ========================================================= */
+
+:root {
+    --azul-ceu: #78BCE8;
+    --azul-profundo: #315B83;
+    --azul-claro: #EAF6FD;
+
+    --amarelo: #F5C85B;
+    --amarelo-claro: #FFF5D9;
+
+    --creme: #FFF9ED;
+    --branco: #FFFFFF;
+
+    --verde: #91C99A;
+    --verde-claro: #EDF8EF;
+
+    --rosa: #F2A9B6;
+    --rosa-claro: #FFF0F3;
+
+    --texto: #38536B;
+    --texto-suave: #718397;
+
+    --sombra: 0 8px 25px rgba(49, 91, 131, 0.10);
+
+    --raio: 20px;
+}
+
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--creme);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   2. CABEÇALHO
+   ========================================================= */
+
+.cabecalho {
+    width: 100%;
+    background-color: var(--branco);
+    padding: 12px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 3px 15px rgba(49, 91, 131, 0.07);
+}
+
+.logo-cabecalho {
+    display: flex;
+    align-items: center;
+}
+
+.logo-cabecalho img {
+    width: 170px;
+    max-height: 75px;
+    object-fit: contain;
+}
+
+.menu-principal {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu-principal a {
+    color: var(--azul-profundo);
+    font-size: 15px;
+    font-weight: 800;
+    transition: 0.3s;
+}
+
+.menu-principal a:hover {
+    color: var(--azul-ceu);
+}
+
+
+/* =========================================================
+   3. ABERTURA / HERO
+   ========================================================= */
+
+.abertura {
+    min-height: 530px;
+    padding: 65px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+
+    background:
+        radial-gradient(circle at 85% 15%, #FFF1C9 0%, transparent 25%),
+        linear-gradient(135deg, #EAF6FD, #D8EFFC);
+
+    overflow: hidden;
+}
+
+.abertura-conteudo {
+    max-width: 600px;
+}
+
+.etiqueta {
+    display: inline-block;
+    background-color: var(--amarelo);
+    color: var(--azul-profundo);
+
+    padding: 8px 18px;
+    border-radius: 30px;
+
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 1px;
+
+    margin-bottom: 22px;
+}
+
+.abertura h1 {
+    color: var(--azul-profundo);
+    font-size: clamp(34px, 5vw, 55px);
+    line-height: 1.15;
+    font-weight: 900;
+    margin-bottom: 22px;
+}
+
+.abertura p {
+    color: var(--texto);
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 540px;
+    margin-bottom: 30px;
+}
+
+.abertura-imagem {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.abertura-imagem img {
+    width: 100%;
+    max-width: 430px;
+    max-height: 400px;
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   4. BOTÕES
+   ========================================================= */
+
+.botao-principal {
+    display: inline-block;
+
+    background-color: var(--azul-profundo);
+    color: var(--branco);
+
+    padding: 15px 30px;
+    border-radius: 35px;
+
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+
+    box-shadow: 0 6px 15px rgba(49, 91, 131, 0.20);
+
+    transition: 0.3s;
+}
+
+.botao-principal:hover {
+    background-color: var(--azul-ceu);
+    color: var(--azul-profundo);
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   5. BIBLIOTECA DE MATERIAIS
+   ========================================================= */
+
+.biblioteca {
+    padding: 75px 6%;
+    background-color: var(--creme);
+}
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.titulo-secao h2 {
+    color: var(--azul-profundo);
+    font-size: clamp(28px, 4vw, 38px);
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.titulo-secao p {
+    color: var(--texto-suave);
+    font-size: 16px;
+}
+
+.grupo-modulos {
+    max-width: 1250px;
+    margin: 0 auto 55px;
+}
+
+.titulo-grupo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: var(--azul-profundo);
+    font-size: 23px;
+    font-weight: 900;
+
+    margin-bottom: 22px;
+    padding-bottom: 12px;
+
+    border-bottom: 3px solid rgba(120, 188, 232, 0.35);
+}
+
+.grade-modulos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+
+/* =========================================================
+   6. CARDS DOS MÓDULOS
+   ========================================================= */
+
+.card-modulo {
+    position: relative;
+
+    min-height: 230px;
+    padding: 25px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    text-align: center;
+
+    border-radius: var(--raio);
+
+    box-shadow: var(--sombra);
+
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    overflow: hidden;
+}
+
+.card-modulo:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 14px 30px rgba(49, 91, 131, 0.15);
+}
+
+.card-modulo h3 {
+    color: var(--azul-profundo);
+    font-size: 17px;
+    font-weight: 900;
+    line-height: 1.4;
+
+    min-height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.numero-modulo {
+    position: absolute;
+    top: 12px;
+    left: 15px;
+
+    font-size: 13px;
+    font-weight: 900;
+
+    color: rgba(49, 91, 131, 0.65);
+}
+
+.icone-modulo {
+    font-size: 43px;
+    margin: 12px 0;
+}
+
+.botao-card {
+    display: inline-block;
+
+    background-color: var(--branco);
+    color: var(--azul-profundo);
+
+    padding: 9px 23px;
+    border-radius: 25px;
+
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.7px;
+
+    transition: 0.3s;
+}
+
+.botao-card:hover {
+    background-color: var(--azul-profundo);
+    color: var(--branco);
+}
+
+
+/* Cores dos módulos */
+
+.card-azul {
+    background-color: #DCEFFC;
+}
+
+.card-amarelo {
+    background-color: #FFF0C5;
+}
+
+.card-rosa {
+    background-color: #FCE2E8;
+}
+
+.card-verde {
+    background-color: #E1F2E3;
+}
+
+
+/* =========================================================
+   7. MATERIAIS PARA IMPRESSÃO
+   ========================================================= */
+
+.materiais {
+    padding: 75px 6%;
+    background-color: #EAF6FD;
+}
+
+.grade-materiais {
+    max-width: 1150px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.card-material {
+    background-color: var(--branco);
+
+    padding: 30px 20px;
+    border-radius: var(--raio);
+
+    text-align: center;
+
+    box-shadow: var(--sombra);
+
+    transition: 0.3s;
+}
+
+.card-material:hover {
+    transform: translateY(-6px);
+}
+
+.card-material h3 {
+    color: var(--azul-profundo);
+    font-size: 17px;
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+.card-material p {
+    color: var(--texto-suave);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.icone-material {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   8. ESPAÇO DA PROFESSORA
+   ========================================================= */
+
+.area-professora {
+    padding: 75px 7%;
+
+    background:
+        linear-gradient(135deg, #FFF5D9, #FFF9ED);
+
+    text-align: center;
+}
+
+.area-professora h2 {
+    color: var(--azul-profundo);
+    font-size: clamp(27px, 4vw, 36px);
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.area-professora p {
+    max-width: 650px;
+    margin: 0 auto 28px;
+
+    color: var(--texto);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   9. RODAPÉ
+   ========================================================= */
+
+.rodape {
+    background-color: var(--azul-profundo);
+    color: var(--branco);
+
+    padding: 45px 6% 25px;
+
+    text-align: center;
+}
+
+.logo-rodape {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.logo-rodape img {
+    width: 150px;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+.rodape p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.rodape .copyright {
+    margin-top: 25px;
+    font-size: 12px;
+    opacity: 0.75;
+}
+
+
+/* =========================================================
+   10. ACESSIBILIDADE
+   ========================================================= */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--amarelo);
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   11. RESPONSIVIDADE - TABLETS
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .grade-modulos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grade-materiais {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .abertura {
+        padding: 55px 5%;
+        gap: 25px;
+    }
+
+    .abertura-imagem img {
+        max-width: 330px;
+    }
+
+}
+
+
+/* =========================================================
+   12. RESPONSIVIDADE - CELULARES
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .cabecalho {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .logo-cabecalho img {
+        width: 145px;
+    }
+
+    .menu-principal {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 20px;
+    }
+
+    .menu-principal a {
+        font-size: 13px;
+    }
+
+    .abertura {
+        flex-direction: column;
+        text-align: center;
+        padding: 55px 7%;
+    }
+
+    .abertura-conteudo {
+        width: 100%;
+    }
+
+    .abertura p {
+        font-size: 16px;
+    }
+
+    .abertura-imagem img {
+        max-width: 280px;
+        max-height: 280px;
+    }
+
+    .biblioteca,
+    .materiais {
+        padding: 55px 6%;
+    }
+
+    .grade-modulos {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .grade-materiais {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .card-modulo {
+        min-height: 210px;
+    }
+
+    .titulo-grupo {
+        font-size: 19px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 27px;
+    }
+
+    .area-professora {
+        padding: 55px 7%;
+    }
+
+}
+
+
+/* =========================================================
+   13. REDUÇÃO DE MOVIMENTO
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+
+}
+
+/* =========================================================
+   CORREÇÃO DE CENTRALIZAÇÃO E ALINHAMENTO
+   CRISTÃOZINHOS DO CÉU
+   ========================================================= */
+
+/* Container geral */
+
+.container {
+    width: min(1200px, calc(100% - 40px));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Cabeçalho */
+
+.cabecalho-conteudo {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+
+/* Identidade visual */
+
+.marca {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-pequeno {
+    max-width: 170px;
+    max-height: 75px;
+    object-fit: contain;
+}
+
+
+/* Abertura */
+
+.abertura-conteudo {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+}
+
+.abertura-texto {
+    width: 100%;
+    max-width: 560px;
+}
+
+.abertura-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.abertura-logo img {
+    width: 100%;
+    max-width: 430px;
+    max-height: 400px;
+    object-fit: contain;
+}
+
+
+/* Materiais */
+
+.material-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.material-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Espaço da professora */
+
+.professora-conteudo {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+
+.professora-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-professora {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Rodapé */
+
+.rodape-conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+/* Adaptação para telas menores */
+
+@media (max-width: 768px) {
+
+    .cabecalho-conteudo {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .abertura-conteudo {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .abertura-texto {
+        margin: 0 auto;
+    }
+
+    .professora-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
