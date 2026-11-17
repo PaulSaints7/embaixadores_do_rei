@@ -1,0 +1,1786 @@
+/* ==========================================================
+   HOMENS SEGUNDO O CORAÇÃO DE DEUS
+   PLATAFORMA DE FORMAÇÃO CRISTÃ MASCULINA
+   Folha de estilos principal
+========================================================== */
+
+
+/* ==========================================================
+   01. CONFIGURAÇÕES GERAIS
+========================================================== */
+
+:root {
+
+    --madeira: #593B2B;
+    --madeira-escura: #38271F;
+    --madeira-media: #76523C;
+
+    --azul: #18334D;
+    --azul-claro: #294B65;
+
+    --dourado: #B08A48;
+    --dourado-claro: #D1B477;
+
+    --pergaminho: #E9DFC9;
+    --creme: #F7F4EC;
+    --branco: #FFFFFF;
+
+    --texto: #40372F;
+    --texto-suave: #756B60;
+
+    --sombra: 0 12px 35px rgba(56, 39, 31, 0.12);
+
+    --transicao: all 0.3s ease;
+
+    --fonte-titulo: 'Cinzel', serif;
+    --fonte-texto: 'Open Sans', sans-serif;
+    --fonte-classica: 'Libre Baskerville', serif;
+
+}
+
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+
+}
+
+
+body {
+
+    font-family: var(--fonte-texto);
+
+    background-color: var(--creme);
+
+    color: var(--texto);
+
+    line-height: 1.7;
+
+}
+
+
+a {
+
+    text-decoration: none;
+    color: inherit;
+
+}
+
+
+button {
+
+    font-family: inherit;
+
+}
+
+
+::selection {
+
+    background: var(--dourado);
+    color: var(--branco);
+
+}
+
+
+/* ==========================================================
+   02. CABEÇALHO
+========================================================== */
+
+.cabecalho {
+
+    width: 100%;
+
+    min-height: 92px;
+
+    background: var(--madeira-escura);
+
+    border-bottom: 3px solid var(--dourado);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+}
+
+
+.cabecalho-container {
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding: 14px 5%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+}
+
+
+/* MARCA */
+
+.marca {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-shrink: 0;
+
+}
+
+
+.marca-simbolo {
+
+    width: 55px;
+    height: 55px;
+
+    border: 2px solid var(--dourado);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: var(--dourado-claro);
+
+    font-family: var(--fonte-titulo);
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+}
+
+
+.marca-texto {
+
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1.3;
+
+}
+
+
+.marca-titulo {
+
+    color: var(--creme);
+
+    font-family: var(--fonte-titulo);
+
+    font-size: 15px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.marca-subtitulo {
+
+    color: var(--dourado-claro);
+
+    font-family: var(--fonte-titulo);
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.marca-identificacao {
+
+    color: #C6B9A4;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    margin-top: 4px;
+
+}
+
+
+/* MENU */
+
+.menu-principal {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+
+.menu-principal a {
+
+    color: var(--creme);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.7px;
+
+    transition: var(--transicao);
+
+    padding: 10px 0;
+
+    position: relative;
+
+}
+
+
+.menu-principal a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 2px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--dourado);
+
+    transition: var(--transicao);
+
+}
+
+
+.menu-principal a:hover {
+
+    color: var(--dourado-claro);
+
+}
+
+
+.menu-principal a:hover::after {
+
+    width: 100%;
+
+}
+
+
+/* BOTÃO MOBILE */
+
+.menu-toggle {
+
+    display: none;
+
+    background: none;
+
+    border: none;
+
+    cursor: pointer;
+
+    padding: 8px;
+
+}
+
+
+.menu-toggle span {
+
+    display: block;
+
+    width: 27px;
+    height: 2px;
+
+    background: var(--dourado-claro);
+
+    margin: 6px 0;
+
+    transition: var(--transicao);
+
+}
+
+
+/* ==========================================================
+   03. APRESENTAÇÃO PRINCIPAL — HERO
+========================================================== */
+
+.hero {
+
+    min-height: 610px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(38, 25, 18, 0.96) 0%,
+            rgba(56, 39, 31, 0.88) 48%,
+            rgba(24, 51, 77, 0.72) 100%
+        ),
+
+        url("../imagens/ambientes/biblioteca.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 90px 8% 120px;
+
+}
+
+
+.hero-conteudo {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+
+    color: var(--creme);
+
+}
+
+
+.hero-etiqueta {
+
+    display: inline-block;
+
+    color: var(--dourado-claro);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.hero h1 {
+
+    font-family: var(--fonte-titulo);
+
+    font-size: clamp(32px, 5vw, 59px);
+
+    font-weight: 600;
+
+    line-height: 1.25;
+
+    letter-spacing: 1px;
+
+}
+
+
+.hero h1 span {
+
+    display: block;
+
+    color: var(--dourado-claro);
+
+}
+
+
+.hero-divisor {
+
+    width: 100px;
+
+    height: 3px;
+
+    background: var(--dourado);
+
+    margin: 28px 0;
+
+}
+
+
+.hero-lema {
+
+    font-family: var(--fonte-classica);
+
+    font-size: 19px;
+
+    color: var(--pergaminho);
+
+    margin-bottom: 20px;
+
+    max-width: 650px;
+
+}
+
+
+.hero-descricao {
+
+    max-width: 620px;
+
+    color: #DDD2C3;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* BOTÃO PRINCIPAL */
+
+.botao-principal {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 15px 25px;
+
+    background: var(--dourado);
+
+    color: var(--madeira-escura);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    border: 1px solid var(--dourado-claro);
+
+    transition: var(--transicao);
+
+}
+
+
+.botao-principal:hover {
+
+    background: var(--dourado-claro);
+
+    transform: translateY(-3px);
+
+    box-shadow: var(--sombra);
+
+}
+
+
+.botao-principal span {
+
+    font-size: 20px;
+
+}
+
+
+/* REFERÊNCIA BÍBLICA */
+
+.hero-referencia {
+
+    position: absolute;
+
+    right: 7%;
+    bottom: 28px;
+
+    max-width: 370px;
+
+    color: var(--pergaminho);
+
+    font-family: var(--fonte-classica);
+
+    font-size: 11px;
+
+    line-height: 1.8;
+
+    text-align: right;
+
+    z-index: 2;
+
+}
+
+
+.hero-referencia strong {
+
+    display: block;
+
+    color: var(--dourado-claro);
+
+    margin-top: 5px;
+
+}
+
+
+/* ==========================================================
+   04. INTRODUÇÃO INSTITUCIONAL
+========================================================== */
+
+.introducao {
+
+    padding: 100px 8%;
+
+    background: var(--pergaminho);
+
+}
+
+
+.introducao-container {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    text-align: center;
+
+}
+
+
+.secao-etiqueta {
+
+    display: block;
+
+    color: var(--madeira-media);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.introducao h2 {
+
+    font-family: var(--fonte-titulo);
+
+    color: var(--madeira-escura);
+
+    font-size: clamp(25px, 3.5vw, 37px);
+
+    line-height: 1.5;
+
+    margin-bottom: 25px;
+
+}
+
+
+.introducao-container > p {
+
+    color: var(--texto-suave);
+
+    font-size: 15px;
+
+    line-height: 2;
+
+}
+
+
+.introducao-destaque {
+
+    margin-top: 45px;
+
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.55);
+
+    border-left: 4px solid var(--dourado);
+
+    box-shadow: var(--sombra);
+
+}
+
+
+.aspas {
+
+    display: block;
+
+    font-family: Georgia, serif;
+
+    font-size: 55px;
+
+    color: var(--dourado);
+
+    line-height: 1;
+
+}
+
+
+.introducao-destaque p {
+
+    font-family: var(--fonte-classica);
+
+    color: var(--madeira);
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+}
+
+
+/* ==========================================================
+   05. AMBIENTES DE FORMAÇÃO
+========================================================== */
+
+.formacao {
+
+    padding: 100px 7%;
+
+    background: var(--creme);
+
+}
+
+
+.secao-cabecalho {
+
+    text-align: center;
+
+    max-width: 750px;
+
+    margin: 0 auto 55px;
+
+}
+
+
+.secao-cabecalho h2 {
+
+    font-family: var(--fonte-titulo);
+
+    color: var(--madeira-escura);
+
+    font-size: clamp(27px, 4vw, 38px);
+
+    margin-bottom: 15px;
+
+}
+
+
+.secao-cabecalho p {
+
+    color: var(--texto-suave);
+
+    font-size: 14px;
+
+}
+
+
+.formacao-grid {
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.card-formacao {
+
+    position: relative;
+
+    background: var(--branco);
+
+    padding: 35px 28px;
+
+    border: 1px solid #E3D8C6;
+
+    border-bottom: 4px solid var(--madeira);
+
+    box-shadow: 0 6px 20px rgba(56, 39, 31, 0.06);
+
+    transition: var(--transicao);
+
+}
+
+
+.card-formacao:hover {
+
+    transform: translateY(-7px);
+
+    border-bottom-color: var(--dourado);
+
+    box-shadow: var(--sombra);
+
+}
+
+
+.card-numero {
+
+    position: absolute;
+
+    top: 18px;
+    right: 22px;
+
+    font-family: var(--fonte-titulo);
+
+    font-size: 27px;
+
+    color: #E8E0D3;
+
+}
+
+
+.card-icone {
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: var(--madeira-escura);
+
+    color: var(--dourado-claro);
+
+    font-size: 25px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.card-formacao h3 {
+
+    font-family: var(--fonte-titulo);
+
+    color: var(--madeira-escura);
+
+    font-size: 17px;
+
+    line-height: 1.5;
+
+    margin-bottom: 15px;
+
+}
+
+
+.card-formacao p {
+
+    color: var(--texto-suave);
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    min-height: 75px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.card-formacao a {
+
+    display: inline-block;
+
+    color: var(--madeira-media);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    border-bottom: 1px solid var(--dourado);
+
+    padding-bottom: 5px;
+
+    transition: var(--transicao);
+
+}
+
+
+.card-formacao a:hover {
+
+    color: var(--dourado);
+
+    letter-spacing: 1.5px;
+
+}
+
+
+/* ==========================================================
+   06. DESAFIO DO CONHECIMENTO
+========================================================== */
+
+.desafio {
+
+    padding: 100px 7%;
+
+    background: var(--azul);
+
+    color: var(--creme);
+
+}
+
+
+.desafio-container {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.8fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+}
+
+
+.desafio .secao-etiqueta {
+
+    color: var(--dourado-claro);
+
+}
+
+
+.desafio-conteudo h2 {
+
+    font-family: var(--fonte-titulo);
+
+    font-size: clamp(30px, 4vw, 44px);
+
+    line-height: 1.4;
+
+    margin-bottom: 25px;
+
+}
+
+
+.desafio-conteudo h2 span {
+
+    display: block;
+
+    color: var(--dourado-claro);
+
+}
+
+
+.desafio-conteudo > p {
+
+    color: #D4DCE2;
+
+    font-size: 14px;
+
+    line-height: 2;
+
+    margin-bottom: 25px;
+
+}
+
+
+.desafio-recursos {
+
+    list-style: none;
+
+    margin-bottom: 35px;
+
+}
+
+
+.desafio-recursos li {
+
+    font-size: 13px;
+
+    color: var(--pergaminho);
+
+    margin-bottom: 12px;
+
+}
+
+
+.desafio-recursos li::first-letter {
+
+    color: var(--dourado-claro);
+
+}
+
+
+.botao-dourado {
+
+    display: inline-block;
+
+    padding: 15px 25px;
+
+    background: var(--dourado);
+
+    color: var(--madeira-escura);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    transition: var(--transicao);
+
+}
+
+
+.botao-dourado:hover {
+
+    background: var(--dourado-claro);
+
+    transform: translateY(-3px);
+
+}
+
+
+/* PAINEL DO DESAFIO */
+
+.desafio-painel {
+
+    padding: 45px 35px;
+
+    background: var(--madeira-escura);
+
+    border: 1px solid var(--dourado);
+
+    text-align: center;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+
+}
+
+
+.painel-simbolo {
+
+    width: 85px;
+    height: 85px;
+
+    margin: 0 auto 25px;
+
+    border: 2px solid var(--dourado);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: var(--dourado-claro);
+
+    font-family: var(--fonte-titulo);
+
+    font-size: 48px;
+
+}
+
+
+.painel-legenda {
+
+    color: var(--dourado-claro);
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.desafio-painel h3 {
+
+    font-family: var(--fonte-classica);
+
+    font-size: 23px;
+
+    color: var(--creme);
+
+    line-height: 1.6;
+
+    margin: 20px 0;
+
+}
+
+
+.desafio-painel > p {
+
+    font-size: 13px;
+
+    color: #D5C9B9;
+
+}
+
+
+.painel-versiculo {
+
+    margin-top: 30px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(176, 138, 72, 0.5);
+
+    font-family: var(--fonte-classica);
+
+    font-size: 12px;
+
+    color: var(--pergaminho);
+
+    line-height: 1.9;
+
+}
+
+
+.painel-versiculo strong {
+
+    display: block;
+
+    color: var(--dourado-claro);
+
+    margin-top: 10px;
+
+}
+
+
+/* ==========================================================
+   07. BIBLIOTECA
+========================================================== */
+
+.biblioteca {
+
+    padding: 100px 7%;
+
+    background: var(--pergaminho);
+
+}
+
+
+.biblioteca-container {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+}
+
+
+.biblioteca-cabecalho {
+
+    text-align: center;
+
+    max-width: 750px;
+
+    margin: 0 auto 55px;
+
+}
+
+
+.biblioteca-cabecalho h2 {
+
+    font-family: var(--fonte-titulo);
+
+    color: var(--madeira-escura);
+
+    font-size: clamp(27px, 4vw, 38px);
+
+    margin-bottom: 15px;
+
+}
+
+
+.biblioteca-cabecalho p {
+
+    color: var(--texto-suave);
+
+    font-size: 14px;
+
+}
+
+
+.biblioteca-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.biblioteca-item {
+
+    padding: 35px 25px;
+
+    background: var(--creme);
+
+    border: 1px solid #D7C9B3;
+
+    text-align: center;
+
+    transition: var(--transicao);
+
+}
+
+
+.biblioteca-item:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: var(--sombra);
+
+    border-color: var(--dourado);
+
+}
+
+
+.biblioteca-icone {
+
+    display: block;
+
+    font-size: 38px;
+
+    color: var(--madeira);
+
+    margin-bottom: 20px;
+
+}
+
+
+.biblioteca-item h3 {
+
+    font-family: var(--fonte-titulo);
+
+    font-size: 17px;
+
+    color: var(--madeira-escura);
+
+    margin-bottom: 12px;
+
+}
+
+
+.biblioteca-item p {
+
+    color: var(--texto-suave);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+}
+
+
+/* ==========================================================
+   08. PRINCÍPIOS INSTITUCIONAIS
+========================================================== */
+
+.principios {
+
+    padding: 100px 7%;
+
+    background: var(--madeira-escura);
+
+    text-align: center;
+
+}
+
+
+.principios-container {
+
+    max-width: 900px;
+
+    margin: auto;
+
+}
+
+
+.principios .secao-etiqueta {
+
+    color: var(--dourado-claro);
+
+}
+
+
+.principios h2 {
+
+    font-family: var(--fonte-titulo);
+
+    font-size: clamp(27px, 4vw, 39px);
+
+    color: var(--creme);
+
+    margin-bottom: 25px;
+
+}
+
+
+.principios-container > p {
+
+    color: #D4C8B8;
+
+    font-size: 14px;
+
+    line-height: 2;
+
+}
+
+
+.principios-lista {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-top: 40px;
+
+}
+
+
+.principios-lista span {
+
+    padding: 12px 20px;
+
+    border: 1px solid var(--dourado);
+
+    color: var(--dourado-claro);
+
+    font-family: var(--fonte-titulo);
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* ==========================================================
+   09. RODAPÉ
+========================================================== */
+
+.rodape {
+
+    background: #251A14;
+
+    color: var(--pergaminho);
+
+    padding: 55px 7% 0;
+
+}
+
+
+.rodape-container {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+    padding-bottom: 40px;
+
+}
+
+
+.rodape-marca span {
+
+    font-family: var(--fonte-titulo);
+
+    font-size: 15px;
+
+    color: var(--dourado-claro);
+
+}
+
+
+.rodape-marca p {
+
+    max-width: 400px;
+
+    font-size: 12px;
+
+    color: #BFB2A1;
+
+    margin-top: 12px;
+
+}
+
+
+.rodape-referencia {
+
+    max-width: 400px;
+
+    text-align: right;
+
+    font-family: var(--fonte-classica);
+
+    font-size: 12px;
+
+    line-height: 1.9;
+
+}
+
+
+.rodape-referencia strong {
+
+    display: block;
+
+    color: var(--dourado-claro);
+
+    margin-top: 8px;
+
+}
+
+
+.rodape-final {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 22px 0;
+
+    border-top: 1px solid rgba(176, 138, 72, 0.3);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.rodape-final p {
+
+    color: #AFA393;
+
+    font-size: 11px;
+
+}
+
+
+.rodape-final span {
+
+    color: var(--dourado-claro);
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* ==========================================================
+   10. RESPONSIVIDADE — TABLETS
+========================================================== */
+
+@media (max-width: 1000px) {
+
+    .menu-principal {
+
+        gap: 17px;
+
+    }
+
+
+    .menu-principal a {
+
+        font-size: 10px;
+
+    }
+
+
+    .formacao-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .desafio-container {
+
+        gap: 35px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   11. RESPONSIVIDADE — CELULARES
+========================================================== */
+
+@media (max-width: 768px) {
+
+
+    .cabecalho-container {
+
+        padding: 12px 5%;
+
+    }
+
+
+    .marca-simbolo {
+
+        width: 47px;
+        height: 47px;
+
+        font-size: 17px;
+
+    }
+
+
+    .marca-titulo {
+
+        font-size: 12px;
+
+    }
+
+
+    .marca-subtitulo {
+
+        font-size: 11px;
+
+    }
+
+
+    .marca-identificacao {
+
+        font-size: 8px;
+
+    }
+
+
+    .menu-toggle {
+
+        display: block;
+
+    }
+
+
+    .menu-principal {
+
+        display: none;
+
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        padding: 20px 6% 25px;
+
+        background: var(--madeira-escura);
+
+        border-top: 1px solid var(--dourado);
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+
+    }
+
+
+    .menu-principal.ativo {
+
+        display: flex;
+
+    }
+
+
+    .menu-principal a {
+
+        width: 100%;
+
+        font-size: 12px;
+
+        padding: 10px 0;
+
+    }
+
+
+    .hero {
+
+        min-height: 620px;
+
+        padding: 75px 7% 120px;
+
+        background-position: center;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: clamp(29px, 8vw, 43px);
+
+    }
+
+
+    .hero-lema {
+
+        font-size: 16px;
+
+    }
+
+
+    .hero-descricao {
+
+        font-size: 13px;
+
+    }
+
+
+    .hero-referencia {
+
+        left: 7%;
+        right: 7%;
+
+        max-width: none;
+
+        font-size: 10px;
+
+    }
+
+
+    .introducao,
+    .formacao,
+    .desafio,
+    .biblioteca,
+    .principios {
+
+        padding: 75px 6%;
+
+    }
+
+
+    .formacao-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+    }
+
+
+    .card-formacao p {
+
+        min-height: auto;
+
+    }
+
+
+    .desafio-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+    }
+
+
+    .biblioteca-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .rodape-container {
+
+        flex-direction: column;
+
+        gap: 30px;
+
+    }
+
+
+    .rodape-referencia {
+
+        text-align: left;
+
+    }
+
+
+    .rodape-final {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+}
+
+
+/* ==========================================================
+   12. CELULARES PEQUENOS
+========================================================== */
+
+@media (max-width: 420px) {
+
+
+    .marca {
+
+        gap: 9px;
+
+    }
+
+
+    .marca-simbolo {
+
+        width: 40px;
+        height: 40px;
+
+        font-size: 14px;
+
+    }
+
+
+    .marca-titulo {
+
+        font-size: 10px;
+
+    }
+
+
+    .marca-subtitulo {
+
+        font-size: 9px;
+
+        letter-spacing: 1px;
+
+    }
+
+
+    .hero-etiqueta {
+
+        font-size: 9px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 29px;
+
+    }
+
+
+    .botao-principal {
+
+        padding: 13px 17px;
+
+        font-size: 10px;
+
+    }
+
+
+    .card-formacao {
+
+        padding: 30px 22px;
+
+    }
+
+
+    .desafio-painel {
+
+        padding: 35px 22px;
+
+    }
+
+
+}
+
+
+/* ==========================================================
+   13. ACESSIBILIDADE E MOVIMENTO
+========================================================== */
+
+:focus-visible {
+
+    outline: 3px solid var(--dourado);
+
+    outline-offset: 4px;
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+
+        scroll-behavior: auto;
+
+    }
+
+
+    *,
+    *::before,
+    *::after {
+
+        transition-duration: 0.01ms !important;
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+    }
+
+}
+
+
+/* ==========================================================
+   FIM DA FOLHA DE ESTILOS
+   HOMENS SEGUNDO O CORAÇÃO DE DEUS
+========================================================== */
