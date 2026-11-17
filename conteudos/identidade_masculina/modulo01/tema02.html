@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Tema 02 - A Imagem e Semelhança de Deus. Módulo de Identidade Masculina Cristã.">
+
+    <title>Tema 02 | A Imagem e Semelhança de Deus</title>
+
+    <!-- FONTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS PRINCIPAL -->
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <style>
+
+        /* ==================================================
+           TEMA 02 - A IMAGEM E SEMELHANÇA DE DEUS
+        ================================================== */
+
+        .pagina-tema {
+            background: #F7F4EC;
+            min-height: 100vh;
+            padding-bottom: 70px;
+        }
+
+        .tema-cabecalho {
+            background:
+                linear-gradient(
+                    rgba(56, 39, 31, 0.94),
+                    rgba(24, 51, 77, 0.94)
+                );
+
+            color: #F7F4EC;
+            padding: 85px 20px;
+            text-align: center;
+        }
+
+        .tema-cabecalho-conteudo {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .tema-etiqueta {
+            display: inline-block;
+            color: #D1B477;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .tema-cabecalho h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            line-height: 1.3;
+            margin-bottom: 20px;
+        }
+
+        .tema-cabecalho h1 span {
+            display: block;
+            color: #D1B477;
+        }
+
+        .tema-cabecalho p {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .tema-identificacao {
+            margin-top: 30px;
+            color: #E9DFC9;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        .tema-container {
+            width: min(1000px, 90%);
+            margin: 55px auto;
+        }
+
+        .tema-navegacao {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 35px;
+        }
+
+        .tema-navegacao a {
+            color: #593B2B;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .tema-navegacao a:hover {
+            color: #B08A48;
+        }
+
+        .tema-conteudo {
+            background: #FFFFFF;
+            padding: 45px;
+            border-radius: 8px;
+            box-shadow: 0 5px 25px rgba(56, 39, 31, 0.08);
+            margin-bottom: 30px;
+        }
+
+        .tema-conteudo h2 {
+            font-family: 'Cinzel', serif;
+            color: #38271F;
+            font-size: 1.65rem;
+            margin-bottom: 22px;
+            line-height: 1.4;
+        }
+
+        .tema-conteudo h3 {
+            font-family: 'Libre Baskerville', serif;
+            color: #593B2B;
+            font-size: 1.2rem;
+            margin: 30px 0 15px;
+        }
+
+        .tema-conteudo p {
+            font-family: 'Open Sans', sans-serif;
+            color: #444444;
+            font-size: 1rem;
+            line-height: 1.9;
+            margin-bottom: 18px;
+        }
+
+        .tema-conteudo ul {
+            padding-left: 25px;
+            margin: 15px 0 25px;
+        }
+
+        .tema-conteudo li {
+            font-family: 'Open Sans', sans-serif;
+            color: #444444;
+            line-height: 1.9;
+            margin-bottom: 10px;
+        }
+
+        .tema-versiculo {
+            background: #F3EBDD;
+            border-left: 5px solid #B08A48;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+
+        .tema-versiculo p {
+            font-family: 'Libre Baskerville', serif;
+            color: #38271F;
+            font-size: 1.05rem;
+            font-style: italic;
+            margin-bottom: 12px;
+        }
+
+        .tema-versiculo strong {
+            color: #76523C;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .tema-destaque {
+            background: #18334D;
+            color: #F7F4EC;
+            padding: 30px;
+            border-radius: 6px;
+            margin: 30px 0;
+        }
+
+        .tema-destaque h3 {
+            color: #D1B477;
+            margin-top: 0;
+        }
+
+        .tema-destaque p {
+            color: #F7F4EC;
+            margin-bottom: 0;
+        }
+
+        .tema-aplicacao {
+            background: #F7F4EC;
+            border: 1px solid #E9DFC9;
+            padding: 28px;
+            border-radius: 6px;
+            margin-top: 25px;
+        }
+
+        .tema-referencias {
+            background: #E9DFC9;
+            padding: 30px;
+            border-radius: 6px;
+            margin-top: 30px;
+        }
+
+        .tema-referencias h3 {
+            margin-top: 0;
+        }
+
+        .tema-referencias p {
+            margin-bottom: 8px;
+        }
+
+        .tema-final {
+            text-align: center;
+            padding: 45px 25px;
+            background: #38271F;
+            color: #F7F4EC;
+            border-radius: 8px;
+            margin-top: 35px;
+        }
+
+        .tema-final h2 {
+            font-family: 'Cinzel', serif;
+            color: #D1B477;
+            margin-bottom: 15px;
+        }
+
+        .tema-final p {
+            color: #E9DFC9;
+            line-height: 1.8;
+        }
+
+        .tema-botoes {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .tema-botoes a {
+            display: inline-block;
+            padding: 14px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .botao-voltar {
+            background: transparent;
+            border: 1px solid #D1B477;
+            color: #D1B477;
+        }
+
+        .botao-proximo {
+            background: #B08A48;
+            color: #FFFFFF;
+        }
+
+        .tema-botoes a:hover {
+            opacity: 0.85;
+            transform: translateY(-2px);
+        }
+
+        .rodape-tema {
+            text-align: center;
+            padding: 25px;
+            background: #38271F;
+            color: #E9DFC9;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 700px) {
+
+            .tema-conteudo {
+                padding: 25px;
+            }
+
+            .tema-cabecalho {
+                padding: 65px 20px;
+            }
+
+            .tema-navegacao {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+        }
+
+        @media print {
+
+            .tema-navegacao,
+            .tema-botoes,
+            .rodape-tema {
+                display: none;
+            }
+
+            .tema-cabecalho {
+                background: #FFFFFF;
+                color: #000000;
+                padding: 30px;
+            }
+
+            .tema-cabecalho h1 span,
+            .tema-etiqueta,
+            .tema-identificacao {
+                color: #000000;
+            }
+
+            .tema-container {
+                width: 100%;
+                margin: 20px auto;
+            }
+
+            .tema-conteudo {
+                box-shadow: none;
+                border: 1px solid #DDDDDD;
+                padding: 25px;
+            }
+
+            .tema-destaque,
+            .tema-final {
+                background: #FFFFFF;
+                color: #000000;
+                border: 1px solid #999999;
+            }
+
+            .tema-destaque p,
+            .tema-final p,
+            .tema-final h2 {
+                color: #000000;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body class="pagina-tema">
+
+
+    <!-- ==================================================
+         CABEÇALHO DO TEMA
+    ================================================== -->
+
+    <header class="tema-cabecalho">
+
+        <div class="tema-cabecalho-conteudo">
+
+            <span class="tema-etiqueta">
+                AMBIENTE 01 — IDENTIDADE MASCULINA CRISTÃ
+            </span>
+
+            <h1>
+                A IMAGEM E
+                <span>SEMELHANÇA DE DEUS</span>
+            </h1>
+
+            <p>
+                Compreendendo a dignidade humana,
+                a identidade do ser humano e sua
+                relação com o Criador.
+            </p>
+
+            <div class="tema-identificacao">
+                MÓDULO 01 · TEMA 02
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main class="tema-container">
+
+
+        <!-- NAVEGAÇÃO -->
+
+        <nav class="tema-navegacao">
+
+            <a href="tema01.html">
+                ← TEMA ANTERIOR
+            </a>
+
+            <a href="apresentacao.html">
+                APRESENTAÇÃO DO MÓDULO
+            </a>
+
+            <a href="../../../uhbb_psh.html">
+                PÁGINA PRINCIPAL
+            </a>
+
+        </nav>
+
+
+        <!-- INTRODUÇÃO -->
+
+        <section class="tema-conteudo">
+
+            <h2>1. Introdução</h2>
+
+            <p>
+                No tema anterior, estudamos que Deus é o Criador
+                do ser humano. Agora avançaremos na compreensão
+                de uma das declarações mais importantes
+                das Escrituras sobre a humanidade:
+                o homem e a mulher foram criados à imagem
+                e semelhança de Deus.
+            </p>
+
+            <p>
+                Essa verdade está no fundamento da compreensão
+                cristã sobre a identidade humana. Ela revela
+                que a existência humana possui dignidade,
+                propósito e responsabilidade diante do Criador.
+            </p>
+
+            <div class="tema-versiculo">
+
+                <p>
+                    "E criou Deus o homem à sua imagem;
+                    à imagem de Deus o criou;
+                    macho e fêmea os criou."
+                </p>
+
+                <strong>Gênesis 1:27</strong>
+
+            </div>
+
+            <p>
+                A imagem de Deus não deve ser entendida como
+                uma semelhança física entre Deus e o ser humano.
+                A Bíblia ensina que Deus é espírito
+                (João 4:24). Trata-se de uma realidade
+                relacionada à condição e ao propósito
+                do ser humano diante de seu Criador.
+            </p>
+
+        </section>
+
+
+        <!-- O SIGNIFICADO DA IMAGEM DE DEUS -->
+
+        <section class="tema-conteudo">
+
+            <h2>2. O significado da imagem de Deus</h2>
+
+            <p>
+                A expressão imagem e semelhança de Deus
+                aparece em Gênesis 1:26. Ao longo da história
+                cristã, diferentes explicações teológicas
+                foram desenvolvidas para compreender
+                essa declaração.
+            </p>
+
+            <p>
+                O texto bíblico não apresenta uma definição
+                filosófica detalhada da expressão. Entretanto,
+                o conjunto das Escrituras permite reconhecer
+                dimensões importantes dessa realidade.
+            </p>
+
+            <h3>2.1. Uma condição concedida pelo Criador</h3>
+
+            <p>
+                Ser imagem de Deus não é uma conquista humana,
+                nem resultado de mérito, conhecimento
+                ou posição social. É uma condição recebida
+                de Deus na criação.
+            </p>
+
+            <h3>2.2. Capacidade de relacionamento</h3>
+
+            <p>
+                O ser humano foi criado para viver em
+                relacionamento com Deus e também com
+                outras pessoas. A narrativa de Gênesis
+                apresenta essa dimensão relacional
+                da existência humana.
+            </p>
+
+            <h3>2.3. Responsabilidade moral</h3>
+
+            <p>
+                O homem é apresentado nas Escrituras
+                como responsável por suas escolhas
+                e ações diante de Deus. Sua vida deve
+                ser orientada pelos princípios divinos.
+            </p>
+
+            <h3>2.4. Responsabilidade sobre a criação</h3>
+
+            <p>
+                Gênesis 1:26-28 associa a criação humana
+                à responsabilidade de exercer domínio
+                sobre os demais seres vivos e sobre a terra.
+            </p>
+
+            <p>
+                Essa responsabilidade deve ser exercida
+                como administração daquilo que pertence
+                ao Criador.
+            </p>
+
+        </section>
+
+
+        <!-- HOMEM E MULHER -->
+
+        <section class="tema-conteudo">
+
+            <h2>3. Homem e mulher: igualmente criados à imagem de Deus</h2>
+
+            <p>
+                Gênesis 1:27 apresenta uma declaração
+                fundamental: tanto o homem quanto a mulher
+                foram criados à imagem de Deus.
+            </p>
+
+            <p>
+                A dignidade humana não é exclusiva
+                do sexo masculino. Homens e mulheres
+                possuem igual valor diante do Criador
+                por compartilharem essa condição.
+            </p>
+
+            <div class="tema-versiculo">
+
+                <p>
+                    "Macho e fêmea os criou."
+                </p>
+
+                <strong>Gênesis 1:27</strong>
+
+            </div>
+
+            <p>
+                Essa verdade deve orientar a maneira
+                como o homem cristão compreende suas
+                relações familiares, sociais e comunitárias.
+            </p>
+
+            <p>
+                A masculinidade bíblica não pode ser construída
+                sobre desprezo, humilhação ou sentimento
+                de superioridade em relação às mulheres.
+            </p>
+
+            <div class="tema-destaque">
+
+                <h3>Princípio bíblico</h3>
+
+                <p>
+                    A imagem de Deus é atribuída tanto
+                    ao homem quanto à mulher. Portanto,
+                    ambos devem ser tratados com dignidade,
+                    respeito e consideração.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- A IMAGEM DE DEUS E O PECADO -->
+
+        <section class="tema-conteudo">
+
+            <h2>4. A imagem de Deus e a realidade do pecado</h2>
+
+            <p>
+                A entrada do pecado no mundo afetou
+                profundamente a condição humana e seu
+                relacionamento com Deus.
+            </p>
+
+            <p>
+                Gênesis 3 apresenta a desobediência
+                do primeiro casal e suas consequências
+                para a humanidade.
+            </p>
+
+            <p>
+                Entretanto, as Escrituras continuam
+                reconhecendo a dignidade do ser humano
+                mesmo depois da queda.
+            </p>
+
+            <div class="tema-versiculo">
+
+                <p>
+                    "Quem derramar o sangue do homem,
+                    pelo homem o seu sangue será derramado;
+                    porque Deus fez o homem conforme
+                    a sua imagem."
+                </p>
+
+                <strong>Gênesis 9:6</strong>
+
+            </div>
+
+            <p>
+                Também em Tiago 3:9 encontramos referência
+                aos seres humanos como feitos à semelhança
+                de Deus.
+            </p>
+
+            <p>
+                Esses textos demonstram que a dignidade
+                humana não desapareceu com a entrada
+                do pecado, embora a humanidade tenha
+                sido profundamente afetada por ele.
+            </p>
+
+            <h3>4.1. A necessidade de restauração</h3>
+
+            <p>
+                O Novo Testamento apresenta Jesus Cristo
+                como aquele que revela perfeitamente
+                o caráter de Deus e oferece redenção
+                ao ser humano.
+            </p>
+
+            <div class="tema-versiculo">
+
+                <p>
+                    "O qual é imagem do Deus invisível,
+                    o primogênito de toda a criação."
+                </p>
+
+                <strong>Colossenses 1:15</strong>
+
+            </div>
+
+            <p>
+                Em Cristo, o ser humano encontra o caminho
+                da reconciliação com Deus e da transformação
+                de sua vida.
+            </p>
+
+        </section>
+
+
+        <!-- CRISTO E A NOVA VIDA -->
+
+        <section class="tema-conteudo">
+
+            <h2>5. Cristo e a transformação do caráter humano</h2>
+
+            <p>
+                A vida cristã envolve um processo contínuo
+                de transformação. O discípulo de Jesus
+                é chamado a abandonar práticas pecaminosas
+                e desenvolver uma vida orientada
+                pela vontade de Deus.
+            </p>
+
+            <div class="tema-versiculo">
+
+                <p>
+                    "E vos revistais do novo homem,
+                    que segundo Deus é criado em verdadeira
+                    justiça e santidade."
+                </p>
+
+                <strong>Efésios 4:24</strong>
+
+            </div>
+
+            <p>
+                A transformação cristã não significa
+                que o homem se torna divino ou deixa
+                de ser criatura. Significa que sua vida
+                passa a ser moldada pela ação de Deus
+                e pelos ensinamentos de Cristo.
+            </p>
+
+            <h3>5.1. O desenvolvimento do caráter</h3>
+
+            <p>
+                O homem cristão deve buscar desenvolver
+                atitudes coerentes com sua fé:
+            </p>
+
+            <ul>
+
+                <li>Justiça nas decisões.</li>
+
+                <li>Verdade nas palavras.</li>
+
+                <li>Amor no relacionamento com as pessoas.</li>
+
+                <li>Humildade diante de Deus e do próximo.</li>
+
+                <li>Domínio próprio diante das dificuldades.</li>
+
+                <li>Fidelidade aos princípios das Escrituras.</li>
+
+            </ul>
+
+            <p>
+                Essas atitudes expressam uma vida que busca
+                refletir os ensinamentos de Cristo.
+            </p>
+
+        </section>
+
+
+        <!-- APLICAÇÃO À MASCULINIDADE -->
+
+        <section class="tema-conteudo">
+
+            <h2>6. A imagem de Deus e a masculinidade cristã</h2>
+
+            <p>
+                O homem cristão precisa compreender
+                que sua identidade não pode ser construída
+                sobre modelos de comportamento que contradizem
+                os princípios bíblicos.
+            </p>
+
+            <p>
+                A verdadeira maturidade não está na
+                capacidade de dominar outras pessoas,
+                mas na disposição de viver com responsabilidade
+                diante de Deus.
+            </p>
+
+            <p>
+                Reconhecer a imagem de Deus no próximo
+                também significa rejeitar a violência,
+                a injustiça, a discriminação e a humilhação.
+            </p>
+
+            <div class="tema-destaque">
+
+                <h3>O homem cristão deve compreender que:</h3>
+
+                <p>
+                    Sua dignidade vem de Deus, assim como
+                    a dignidade das outras pessoas.
+                    Sua força deve ser acompanhada
+                    de responsabilidade, seu conhecimento
+                    de humildade e sua liderança de disposição
+                    para servir.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- APLICAÇÃO PRÁTICA -->
+
+        <section class="tema-conteudo">
+
+            <h2>7. Aplicações para a vida cotidiana</h2>
+
+            <p>
+                O conhecimento da imagem de Deus deve
+                influenciar diretamente nossas atitudes.
+            </p>
+
+            <div class="tema-aplicacao">
+
+                <h3>Princípios para colocar em prática</h3>
+
+                <ul>
+
+                    <li>
+                        Reconhecer o próprio valor diante
+                        de Deus sem desenvolver orgulho
+                        ou sentimento de superioridade.
+                    </li>
+
+                    <li>
+                        Respeitar a dignidade de todas
+                        as pessoas.
+                    </li>
+
+                    <li>
+                        Tratar as mulheres com respeito,
+                        consideração e justiça.
+                    </li>
+
+                    <li>
+                        Assumir responsabilidade pelas
+                        próprias escolhas.
+                    </li>
+
+                    <li>
+                        Buscar o desenvolvimento de um
+                        caráter coerente com os ensinamentos
+                        de Jesus Cristo.
+                    </li>
+
+                    <li>
+                        Utilizar capacidades e conhecimentos
+                        para servir a Deus e ao próximo.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONCLUSÃO -->
+
+        <section class="tema-conteudo">
+
+            <h2>8. Conclusão</h2>
+
+            <p>
+                A doutrina bíblica da imagem e semelhança
+                de Deus é essencial para compreender
+                a identidade e a dignidade humanas.
+            </p>
+
+            <p>
+                O homem não é dono absoluto de sua existência.
+                Ele é criatura de Deus, possui responsabilidades
+                e deve viver reconhecendo a autoridade
+                do Criador.
+            </p>
+
+            <p>
+                Homem e mulher compartilham a dignidade
+                de terem sido criados à imagem de Deus.
+                Essa verdade deve orientar nossas relações
+                e atitudes.
+            </p>
+
+            <p>
+                Em Cristo, somos chamados a uma vida
+                de transformação, justiça, santidade
+                e amor ao próximo.
+            </p>
+
+            <div class="tema-versiculo">
+
+                <p>
+                    "E todos nós, com rosto descoberto,
+                    refletindo como um espelho a glória
+                    do Senhor, somos transformados
+                    de glória em glória na mesma imagem,
+                    como pelo Espírito do Senhor."
+                </p>
+
+                <strong>2 Coríntios 3:18</strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- LEITURAS COMPLEMENTARES -->
+
+        <section class="tema-conteudo">
+
+            <h2>9. Leituras bíblicas complementares</h2>
+
+            <div class="tema-referencias">
+
+                <h3>Textos para aprofundamento</h3>
+
+                <p>
+                    <strong>Gênesis 1:26-27</strong> —
+                    A criação à imagem de Deus.
+                </p>
+
+                <p>
+                    <strong>Gênesis 5:1-2</strong> —
+                    A humanidade criada à semelhança de Deus.
+                </p>
+
+                <p>
+                    <strong>Gênesis 9:6</strong> —
+                    A dignidade humana após a queda.
+                </p>
+
+                <p>
+                    <strong>Salmos 8:3-8</strong> —
+                    A posição do ser humano na criação.
+                </p>
+
+                <p>
+                    <strong>Colossenses 1:15</strong> —
+                    Cristo, imagem do Deus invisível.
+                </p>
+
+                <p>
+                    <strong>Efésios 4:22-24</strong> —
+                    O revestimento do novo homem.
+                </p>
+
+                <p>
+                    <strong>Tiago 3:9-10</strong> —
+                    O respeito devido aos seres humanos.
+                </p>
+
+                <p>
+                    <strong>2 Coríntios 3:18</strong> —
+                    A transformação em Cristo.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ENCERRAMENTO -->
+
+        <section class="tema-final">
+
+            <h2>Continue sua jornada de formação</h2>
+
+            <p>
+                Compreender que fomos criados à imagem
+                de Deus é reconhecer nossa dignidade,
+                nossa responsabilidade e nosso chamado
+                para viver segundo os princípios do Criador.
+            </p>
+
+            <div class="tema-botoes">
+
+                <a href="tema01.html" class="botao-voltar">
+                    ← TEMA ANTERIOR
+                </a>
+
+                <a href="tema03.html" class="botao-proximo">
+                    PRÓXIMO TEMA →
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+
+    <footer class="rodape-tema">
+
+        <p>
+            HOMENS SEGUNDO O CORAÇÃO DE DEUS
+        </p>
+
+        <p>
+            Formando homens, fortalecendo famílias
+            e servindo à Igreja de Cristo.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

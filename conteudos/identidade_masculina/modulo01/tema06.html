@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Estudo bíblico sobre a identidade humana e a vida em sociedade.">
+
+    <title>Tema 06 | A Identidade Humana e a Vida em Sociedade</title>
+
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* =====================================================
+           TEMA 06 - IDENTIDADE MASCULINA CRISTÃ
+           A IDENTIDADE HUMANA E A VIDA EM SOCIEDADE
+        ===================================================== */
+
+        .pagina-tema {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 45px 25px 70px;
+        }
+
+        .cabecalho-tema {
+            background: linear-gradient(135deg, #38271F, #18334D);
+            color: #F7F4EC;
+            padding: 55px 35px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 5px solid #B08A48;
+        }
+
+        .cabecalho-tema .identificacao {
+            color: #D1B477;
+            font-size: 0.85rem;
+            letter-spacing: 3px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .cabecalho-tema h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.7rem, 4vw, 2.7rem);
+            line-height: 1.4;
+            margin-bottom: 20px;
+        }
+
+        .cabecalho-tema .subtitulo {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.05rem;
+            color: #E9DFC9;
+            line-height: 1.8;
+        }
+
+        .navegacao-tema {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .navegacao-tema a {
+            color: #76523C;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .navegacao-tema a:hover {
+            color: #B08A48;
+        }
+
+        .conteudo-tema {
+            background: #F7F4EC;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 22px rgba(56, 39, 31, 0.08);
+        }
+
+        .conteudo-tema h2 {
+            font-family: 'Cinzel', serif;
+            color: #593B2B;
+            font-size: 1.45rem;
+            margin: 38px 0 18px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #D1B477;
+        }
+
+        .conteudo-tema h3 {
+            color: #18334D;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.1rem;
+            margin: 25px 0 12px;
+        }
+
+        .conteudo-tema p {
+            color: #38271F;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            line-height: 1.9;
+            margin-bottom: 17px;
+            text-align: justify;
+        }
+
+        .referencia-biblica {
+            background: #E9DFC9;
+            border-left: 5px solid #B08A48;
+            padding: 22px 25px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+
+        .referencia-biblica strong {
+            color: #18334D;
+            display: block;
+            margin-bottom: 10px;
+            font-family: 'Libre Baskerville', serif;
+        }
+
+        .referencia-biblica p {
+            margin-bottom: 0;
+            font-style: italic;
+        }
+
+        .destaque {
+            background: #18334D;
+            color: #F7F4EC;
+            padding: 28px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .destaque p {
+            color: #F7F4EC;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.1rem;
+            text-align: center;
+            margin: 0;
+            line-height: 1.9;
+        }
+
+        .lista-estudo {
+            padding-left: 25px;
+            margin: 20px 0;
+        }
+
+        .lista-estudo li {
+            color: #38271F;
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.9;
+            margin-bottom: 12px;
+        }
+
+        .aplicacao-pratica {
+            background: #E9DFC9;
+            border-radius: 8px;
+            padding: 25px 30px;
+            margin: 25px 0;
+        }
+
+        .aplicacao-pratica h3 {
+            margin-top: 0;
+        }
+
+        .navegacao-final {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .botao-tema {
+            display: inline-block;
+            background: #593B2B;
+            color: #F7F4EC;
+            padding: 14px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .botao-tema:hover {
+            background: #B08A48;
+            color: #38271F;
+        }
+
+        .botao-secundario {
+            background: #18334D;
+        }
+
+        .botao-secundario:hover {
+            background: #294B65;
+            color: #F7F4EC;
+        }
+
+        .rodape-tema {
+            text-align: center;
+            margin-top: 45px;
+            color: #76523C;
+            font-size: 0.85rem;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 700px) {
+
+            .pagina-tema {
+                padding: 25px 15px 45px;
+            }
+
+            .cabecalho-tema {
+                padding: 40px 20px;
+            }
+
+            .conteudo-tema {
+                padding: 25px 20px;
+            }
+
+            .conteudo-tema p {
+                text-align: left;
+            }
+
+            .navegacao-final {
+                flex-direction: column;
+            }
+
+            .botao-tema {
+                text-align: center;
+            }
+        }
+
+        @media print {
+
+            body {
+                background: white !important;
+            }
+
+            .pagina-tema {
+                max-width: 100%;
+                padding: 0;
+            }
+
+            .cabecalho-tema {
+                background: white !important;
+                color: black !important;
+                border: 2px solid #593B2B;
+                padding: 25px;
+            }
+
+            .cabecalho-tema h1,
+            .cabecalho-tema .subtitulo,
+            .cabecalho-tema .identificacao {
+                color: black !important;
+            }
+
+            .conteudo-tema {
+                box-shadow: none;
+                padding: 10px;
+            }
+
+            .navegacao-tema,
+            .navegacao-final,
+            .rodape-tema {
+                display: none !important;
+            }
+
+            .destaque {
+                background: white !important;
+                border: 1px solid #593B2B;
+            }
+
+            .destaque p {
+                color: black !important;
+            }
+
+            .referencia-biblica,
+            .aplicacao-pratica {
+                background: white !important;
+                border: 1px solid #B08A48;
+            }
+
+            h2,
+            h3 {
+                break-after: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="pagina-tema">
+
+        <!-- NAVEGAÇÃO SUPERIOR -->
+
+        <nav class="navegacao-tema" aria-label="Navegação do estudo">
+
+            <a href="tema05.html">← TEMA ANTERIOR</a>
+
+            <a href="apresentacao.html">APRESENTAÇÃO DO MÓDULO</a>
+
+            <a href="../../../uhbb_psh.html">PÁGINA PRINCIPAL</a>
+
+        </nav>
+
+
+        <!-- CABEÇALHO -->
+
+        <header class="cabecalho-tema">
+
+            <div class="identificacao">
+                AMBIENTE 01 — IDENTIDADE MASCULINA CRISTÃ
+            </div>
+
+            <h1>
+                A Identidade Humana e a Vida em Sociedade
+            </h1>
+
+            <p class="subtitulo">
+                Tema 06 — O ser humano, seus relacionamentos e sua responsabilidade
+                na construção de uma sociedade orientada pelos princípios de Deus.
+            </p>
+
+        </header>
+
+
+        <!-- CONTEÚDO -->
+
+        <article class="conteudo-tema">
+
+            <h2>1. Introdução</h2>
+
+            <p>
+                O ser humano não foi criado para viver isolado. Desde o princípio,
+                a narrativa bíblica apresenta a existência humana dentro de uma
+                realidade de relacionamentos: com Deus, com outras pessoas e com
+                o mundo criado.
+            </p>
+
+            <p>
+                Nossa identidade não pode ser compreendida apenas a partir de
+                características individuais. Também precisamos considerar nossas
+                relações familiares, comunitárias e sociais.
+            </p>
+
+            <p>
+                A vida em sociedade envolve convivência, cooperação, respeito,
+                responsabilidades e decisões que afetam outras pessoas.
+                Por isso, a fé cristã não deve ficar restrita à esfera particular:
+                ela precisa influenciar nossa maneira de viver no mundo.
+            </p>
+
+            <p>
+                Neste estudo, examinaremos como os ensinamentos bíblicos orientam
+                a convivência humana e ajudam a compreender a responsabilidade
+                do homem cristão diante da família, da Igreja e da sociedade.
+            </p>
+
+
+            <h2>2. O ser humano foi criado para viver em relacionamento</h2>
+
+            <div class="referencia-biblica">
+
+                <strong>Leitura bíblica: Gênesis 2:18</strong>
+
+                <p>
+                    Deus declara que não era bom que o homem estivesse só e
+                    apresenta a criação da mulher como sua companheira.
+                </p>
+
+            </div>
+
+            <p>
+                A narrativa da criação demonstra que a vida humana possui uma
+                dimensão relacional. O próprio Deus declara que não era bom
+                que o homem estivesse só.
+            </p>
+
+            <p>
+                A criação da mulher estabelece uma relação de companheirismo
+                e complementaridade. Homem e mulher compartilham a dignidade
+                de terem sido criados à imagem de Deus.
+            </p>
+
+            <p>
+                Essa verdade nos ensina que a convivência humana não deve ser
+                construída sobre exploração, desprezo ou superioridade, mas
+                sobre respeito, consideração e responsabilidade.
+            </p>
+
+            <p>
+                A necessidade de relacionamentos também aparece na formação
+                das famílias, na organização das comunidades e na vida coletiva.
+                Somos seres sociais e precisamos aprender a conviver de maneira
+                responsável.
+            </p>
+
+
+            <h2>3. A dignidade humana e o respeito ao próximo</h2>
+
+            <div class="referencia-biblica">
+
+                <strong>Leitura bíblica: Gênesis 1:26-27</strong>
+
+                <p>
+                    Homem e mulher são criados à imagem e semelhança de Deus.
+                </p>
+
+            </div>
+
+            <p>
+                A dignidade humana encontra seu fundamento na criação.
+                Cada pessoa possui valor porque foi criada por Deus.
+            </p>
+
+            <p>
+                Essa dignidade não depende de riqueza, posição social,
+                escolaridade, aparência física, nacionalidade ou capacidade
+                profissional.
+            </p>
+
+            <p>
+                O reconhecimento do valor humano deve orientar nossas relações.
+                Não podemos tratar alguém como inferior por causa de sua condição
+                econômica, origem ou posição na sociedade.
+            </p>
+
+            <div class="referencia-biblica">
+
+                <strong>Leitura complementar: Tiago 3:9-10</strong>
+
+                <p>
+                    Tiago chama a atenção para a incoerência de utilizar a língua
+                    para louvar a Deus e, ao mesmo tempo, amaldiçoar pessoas
+                    feitas à semelhança divina.
+                </p>
+
+            </div>
+
+            <p>
+                A passagem nos lembra que o respeito ao próximo também precisa
+                aparecer em nossas palavras. Não é coerente professar fé em Deus
+                enquanto cultivamos desprezo, humilhação ou hostilidade contra
+                outras pessoas.
+            </p>
+
+
+            <h2>4. A família como espaço fundamental de convivência</h2>
+
+            <div class="referencia-biblica">
+
+                <strong>Leitura bíblica: Efésios 5:21-33</strong>
+
+                <p>
+                    Paulo apresenta princípios cristãos para a convivência
+                    conjugal, destacando o amor, o respeito e a responsabilidade.
+                </p>
+
+            </div>
+
+            <p>
+                A família é um dos primeiros ambientes em que aprendemos
+                a conviver, compartilhar responsabilidades e desenvolver
+                relacionamentos.
+            </p>
+
+            <p>
+                É no ambiente familiar que muitas pessoas experimentam
+                inicialmente o cuidado, a proteção, a educação, a disciplina
+                e o aprendizado de valores.
+            </p>
+
+            <p>
+                A Bíblia apresenta orientações para a vida familiar,
+                ensinando que os relacionamentos devem ser conduzidos
+                com amor, respeito, fidelidade e responsabilidade.
+            </p>
+
+            <h3>O homem como membro da família</h3>
+
+            <p>
+                O homem cristão deve compreender suas responsabilidades
+                familiares sem confundir liderança com autoritarismo.
+                O modelo de Cristo é marcado pelo amor sacrificial,
+                pelo serviço e pela disposição de cuidar.
+            </p>
+
+            <p>
+                No casamento, deve cultivar fidelidade, diálogo e respeito
+                mútuo. Na paternidade, deve participar da educação e do
+                cuidado dos filhos. Como filho, deve honrar e respeitar
+                seus pais, conforme os princípios das Escrituras.
+            </p>
+
+            <p>
+                A responsabilidade familiar não se resume ao sustento
+                financeiro. Envolve presença, cuidado, orientação,
+                participação e compromisso.
+            </p>
+
+
+            <h2>5. O amor ao próximo como fundamento da convivência</h2>
+
+            <div class="referencia-biblica">
+
+                <strong>Leitura bíblica: Mateus 22:37-40</strong>
+
+                <p>
+                    Jesus apresenta o amor a Deus e o amor ao próximo
+                    como os dois grandes mandamentos.
+                </p>
+
+            </div>
+
+            <p>
+                O amor ao próximo ocupa posição central no ensino de Jesus.
+                Ele não deve ser entendido apenas como sentimento, mas
+                também como disposição de agir em benefício de outras pessoas.
+            </p>
+
+            <p>
+                Amar o próximo significa reconhecer sua dignidade,
+                respeitar seus direitos, evitar injustiças e procurar
+                contribuir para seu bem.
+            </p>
+
+            <div class="referencia-biblica">
+
+                <strong>Leitura complementar: Lucas 10:25-37</strong>
+
+                <p>
+                    Na parábola do bom samaritano, Jesus ensina sobre
+                    misericórdia e responsabilidade diante da necessidade
+                    de outra pessoa.
+                </p>
+
+            </div>
+
+            <p>
+                A parábola demonstra que o amor verdadeiro não deve
+                permanecer apenas no discurso. Ele se manifesta em
+                atitudes concretas de compaixão, cuidado e serviço.
+            </p>
+
+
+            <h2>6. A vida em sociedade e a responsabilidade cristã</h2>
+
+            <div class="referencia-biblica">
+
+                <strong>Leitura bíblica: Romanos 13:1-7</strong>
+
+                <p>
+                    Paulo aborda a relação dos cristãos com as autoridades
+                    e suas responsabilidades na organização da sociedade.
+                </p>
+
+            </div>
+
+            <p>
+                A vida em sociedade exige organização, normas de convivência,
+                responsabilidades e respeito às autoridades legítimas.
+            </p>
+
+            <p>
+                O cristão deve compreender que sua fé também possui
+                consequências para sua conduta como cidadão.
+            </p>
+
+            <p>
+                Isso inclui respeitar as leis justas, cumprir compromissos,
+                agir com honestidade, contribuir para o bem comum e
+                não prejudicar deliberadamente outras pessoas.
+            </p>
+
+            <p>
+                A obediência às autoridades, entretanto, não significa
+                que o Estado ou qualquer autoridade humana esteja acima
+                de Deus. Quando existe conflito entre uma exigência
+                humana e a obediência ao Senhor, a Escritura apresenta
+                a prioridade da fidelidade a Deus, como vemos em
+                Atos 5:29.
+            </p>
+
+            <p>
+                Portanto, a participação social do cristão deve ser
+                responsável, consciente e orientada por princípios
+                bíblicos.
+            </p>
+
+
+            <h2>7. Justiça, misericórdia e solidariedade</h2>
+
+            <div class="referencia-biblica">
+
+                <strong>Leitura bíblica: Miqueias 6:8</strong>
+
+                <p>
+                    O profeta apresenta o dever de praticar a justiça,
+                    amar a misericórdia e andar humildemente com Deus.
+                </p>
+
+            </div>
+
+            <p>
+                A vida em sociedade frequentemente apresenta situações
+                de desigualdade, sofrimento, conflitos e necessidades.
+                A Bíblia não nos ensina a permanecer indiferentes diante
+                dessas realidades.
+            </p>
+
+            <p>
+                A prática da justiça envolve agir corretamente,
+                respeitar o próximo e não utilizar nossa posição
+                para prejudicar outras pessoas.
+            </p>
+
+            <p>
+                A misericórdia nos leva a considerar o sofrimento
+                alheio e a agir com compaixão.
+            </p>
+
+            <p>
+                A solidariedade se manifesta quando compartilhamos
+                recursos, tempo, conhecimento e esforços para
+                auxiliar aqueles que precisam.
+            </p>
+
+            <p>
+                Essas atitudes não substituem a mensagem do evangelho,
+                mas expressam concretamente os valores que devem
+                caracterizar a vida cristã.
+            </p>
+
+
+            <h2>8. A Igreja e a convivência comunitária</h2>
+
+            <div class="referencia-biblica">
+
+                <strong>Leitura bíblica: Atos 2:42-47</strong>
+
+                <p>
+                    O texto descreve aspectos da vida comunitária
+                    da igreja primitiva, incluindo ensino, comunhão,
+                    oração e compartilhamento.
+                </p>
+
+            </div>
+
+            <p>
+                A Igreja é uma comunidade formada por pessoas que
+                compartilham a fé em Jesus Cristo. Nela, os cristãos
+                são chamados a desenvolver relacionamentos de comunhão,
+                serviço e cooperação.
+            </p>
+
+            <p>
+                A vida comunitária exige disposição para ouvir,
+                ensinar, aprender, perdoar, ajudar e trabalhar
+                em conjunto.
+            </p>
+
+            <p>
+                O homem cristão deve participar da vida da Igreja
+                não apenas como espectador, mas como membro comprometido
+                com a edificação do corpo de Cristo.
+            </p>
+
+            <div class="referencia-biblica">
+
+                <strong>Leitura complementar: 1 Coríntios 12:12-27</strong>
+
+                <p>
+                    Paulo utiliza a figura do corpo para explicar
+                    a unidade e a diversidade dos membros da Igreja.
+                </p>
+
+            </div>
+
+            <p>
+                Cada membro possui sua importância e contribui
+                para o funcionamento do corpo. Essa realidade
+                nos ensina que a cooperação é indispensável
+                à vida comunitária.
+            </p>
+
+
+            <h2>9. O trabalho e a contribuição para a sociedade</h2>
+
+            <div class="referencia-biblica">
+
+                <strong>Leitura bíblica: Colossenses 3:23-24</strong>
+
+                <p>
+                    Paulo orienta os cristãos a realizarem suas atividades
+                    de coração, como para o Senhor.
+                </p>
+
+            </div>
+
+            <p>
+                O trabalho possui importante dimensão social.
+                Por meio dele, as pessoas desenvolvem habilidades,
+                produzem bens, prestam serviços e contribuem
+                para o sustento de suas famílias e para a sociedade.
+            </p>
+
+            <p>
+                A perspectiva cristã ensina que o trabalho deve
+                ser realizado com honestidade, dedicação e
+                responsabilidade.
+            </p>
+
+            <p>
+                O valor de uma pessoa não deve ser medido exclusivamente
+                por sua profissão, renda ou posição econômica.
+                Entretanto, qualquer atividade profissional legítima
+                pode ser exercida como expressão de responsabilidade
+                e serviço.
+            </p>
+
+            <p>
+                O homem cristão deve rejeitar a desonestidade,
+                a exploração, a corrupção e qualquer prática
+                que prejudique injustamente outras pessoas.
+            </p>
+
+
+            <h2>10. O testemunho cristão diante do mundo</h2>
+
+            <div class="referencia-biblica">
+
+                <strong>Leitura bíblica: Mateus 5:13-16</strong>
+
+                <p>
+                    Jesus ensina que seus discípulos são o sal da terra
+                    e a luz do mundo.
+                </p>
+
+            </div>
+
+            <p>
+                O testemunho cristão não se limita às palavras
+                utilizadas para anunciar o evangelho. Ele também
+                é percebido na maneira como vivemos.
+            </p>
+
+            <p>
+                A honestidade, a justiça, a humildade, o respeito,
+                a misericórdia e a disposição para servir são
+                atitudes que podem tornar visíveis os valores
+                do Reino de Deus.
+            </p>
+
+            <p>
+                O cristão não deve procurar reconhecimento pessoal
+                por suas boas obras. Seu propósito é glorificar
+                a Deus por meio de uma vida coerente com os
+                ensinamentos de Jesus.
+            </p>
+
+
+            <h2>11. Aplicações práticas para a vida do homem cristão</h2>
+
+            <p>
+                A identidade humana e a vida em sociedade estão
+                relacionadas às nossas decisões diárias.
+                A fé precisa orientar a maneira como convivemos
+                com as pessoas.
+            </p>
+
+            <div class="aplicacao-pratica">
+
+                <h3>No ambiente familiar</h3>
+
+                <p>
+                    Valorizar os relacionamentos, participar
+                    das responsabilidades domésticas e cultivar
+                    um ambiente de respeito, amor e diálogo.
+                </p>
+
+                <h3>No ambiente profissional</h3>
+
+                <p>
+                    Trabalhar com honestidade, cumprir compromissos,
+                    respeitar colegas e evitar práticas desonestas.
+                </p>
+
+                <h3>Na comunidade</h3>
+
+                <p>
+                    Respeitar as pessoas, colaborar com iniciativas
+                    que promovam o bem comum e demonstrar solidariedade.
+                </p>
+
+                <h3>Na Igreja</h3>
+
+                <p>
+                    Participar dos trabalhos, cooperar com os irmãos,
+                    servir com humildade e contribuir para a unidade
+                    da comunidade cristã.
+                </p>
+
+                <h3>Na sociedade</h3>
+
+                <p>
+                    Exercer a cidadania com responsabilidade,
+                    respeitar as leis justas e defender a dignidade
+                    das pessoas.
+                </p>
+
+                <h3>Na vida espiritual</h3>
+
+                <p>
+                    Procurar viver de maneira coerente com o evangelho,
+                    permitindo que os ensinamentos de Cristo orientem
+                    suas decisões e relacionamentos.
+                </p>
+
+            </div>
+
+
+            <h2>12. Conclusão</h2>
+
+            <p>
+                O ser humano foi criado à imagem de Deus e chamado
+                a viver em relacionamento com o Criador e com
+                outras pessoas.
+            </p>
+
+            <p>
+                A vida em sociedade exige respeito, responsabilidade,
+                cooperação, justiça e disposição para servir.
+                Esses princípios encontram fundamento nos
+                ensinamentos das Escrituras.
+            </p>
+
+            <p>
+                O homem cristão deve compreender que sua identidade
+                não está fundamentada em poder, posição social
+                ou reconhecimento humano, mas em sua relação
+                com Deus e em sua condição de criatura formada
+                à imagem do Criador.
+            </p>
+
+            <p>
+                Sua fé deve alcançar a família, a Igreja,
+                o trabalho e a sociedade, produzindo atitudes
+                que expressem amor ao próximo e fidelidade
+                a Jesus Cristo.
+            </p>
+
+            <div class="destaque">
+
+                <p>
+                    "Assim resplandeça a vossa luz diante dos homens,
+                    para que vejam as vossas boas obras e glorifiquem
+                    a vosso Pai, que está nos céus."
+                    <br><br>
+                    Mateus 5:16
+                </p>
+
+            </div>
+
+
+            <h2>13. Leituras bíblicas para aprofundamento</h2>
+
+            <ul class="lista-estudo">
+
+                <li>Gênesis 1:26-27 — A dignidade da pessoa humana.</li>
+
+                <li>Gênesis 2:18 — O ser humano e os relacionamentos.</li>
+
+                <li>Mateus 5:13-16 — O testemunho cristão no mundo.</li>
+
+                <li>Mateus 22:37-40 — O amor a Deus e ao próximo.</li>
+
+                <li>Lucas 10:25-37 — A parábola do bom samaritano.</li>
+
+                <li>Atos 2:42-47 — A comunhão da igreja primitiva.</li>
+
+                <li>Romanos 12:9-18 — Os princípios da convivência cristã.</li>
+
+                <li>Romanos 13:1-7 — Responsabilidades diante das autoridades.</li>
+
+                <li>1 Coríntios 12:12-27 — A unidade e a diversidade na Igreja.</li>
+
+                <li>Efésios 5:21-33 — Relacionamentos e responsabilidades familiares.</li>
+
+                <li>Colossenses 3:23-24 — O trabalho realizado para o Senhor.</li>
+
+                <li>Tiago 3:9-10 — O respeito à dignidade humana.</li>
+
+            </ul>
+
+
+            <h2>14. Reflexão pessoal</h2>
+
+            <div class="aplicacao-pratica">
+
+                <p>
+                    Reserve alguns minutos para refletir sobre
+                    as seguintes questões:
+                </p>
+
+                <ol class="lista-estudo">
+
+                    <li>
+                        Por que a Bíblia apresenta o ser humano
+                        como uma criatura que precisa viver
+                        em relacionamento?
+                    </li>
+
+                    <li>
+                        Como o reconhecimento da dignidade humana
+                        deve influenciar nossas relações?
+                    </li>
+
+                    <li>
+                        Qual é a importância da família na formação
+                        dos valores e da convivência social?
+                    </li>
+
+                    <li>
+                        Como o homem cristão pode contribuir
+                        para o bem de sua comunidade?
+                    </li>
+
+                    <li>
+                        De que maneira suas atitudes demonstram
+                        o testemunho de Cristo diante da sociedade?
+                    </li>
+
+                </ol>
+
+            </div>
+
+        </article>
+
+
+        <!-- NAVEGAÇÃO FINAL -->
+
+        <nav class="navegacao-final" aria-label="Navegação do módulo">
+
+            <a href="tema05.html" class="botao-tema botao-secundario">
+                ← Tema 05
+            </a>
+
+            <a href="apresentacao.html" class="botao-tema botao-secundario">
+                Apresentação do Módulo
+            </a>
+
+            <a href="../../../uhbb_psh.html" class="botao-tema">
+                Voltar à Plataforma →
+            </a>
+
+        </nav>
+
+
+        <!-- RODAPÉ -->
+
+        <footer class="rodape-tema">
+
+            <p>
+                HOMENS SEGUNDO O CORAÇÃO DE DEUS
+            </p>
+
+            <p>
+                Formando homens, fortalecendo famílias e servindo à Igreja de Cristo.
+            </p>
+
+            <p>
+                Módulo 01 — Identidade Masculina Cristã
+            </p>
+
+        </footer>
+
+    </main>
+
+</body>
+
+</html>

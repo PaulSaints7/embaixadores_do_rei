@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Tema 01 - A Criação do Ser Humano. Módulo de Identidade Masculina Cristã.">
+
+    <title>Tema 01 | A Criação do Ser Humano</title>
+
+    <!-- FONTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS PRINCIPAL -->
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <style>
+
+        /* ==================================================
+           TEMA 01 - A CRIAÇÃO DO SER HUMANO
+        ================================================== */
+
+        .pagina-tema {
+            background: #F7F4EC;
+            min-height: 100vh;
+            padding-bottom: 70px;
+        }
+
+        .tema-cabecalho {
+            background:
+                linear-gradient(
+                    rgba(56, 39, 31, 0.94),
+                    rgba(24, 51, 77, 0.94)
+                );
+
+            color: #F7F4EC;
+            padding: 85px 20px;
+            text-align: center;
+        }
+
+        .tema-cabecalho-conteudo {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .tema-etiqueta {
+            display: inline-block;
+            color: #D1B477;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .tema-cabecalho h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            line-height: 1.3;
+            margin-bottom: 20px;
+        }
+
+        .tema-cabecalho h1 span {
+            display: block;
+            color: #D1B477;
+        }
+
+        .tema-cabecalho p {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .tema-identificacao {
+            margin-top: 30px;
+            color: #E9DFC9;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        .tema-container {
+            width: min(1000px, 90%);
+            margin: 55px auto;
+        }
+
+        .tema-navegacao {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 35px;
+        }
+
+        .tema-navegacao a {
+            color: #593B2B;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .tema-navegacao a:hover {
+            color: #B08A48;
+        }
+
+        .tema-conteudo {
+            background: #FFFFFF;
+            padding: 45px;
+            border-radius: 8px;
+            box-shadow: 0 5px 25px rgba(56, 39, 31, 0.08);
+            margin-bottom: 30px;
+        }
+
+        .tema-conteudo h2 {
+            font-family: 'Cinzel', serif;
+            color: #38271F;
+            font-size: 1.65rem;
+            margin-bottom: 22px;
+            line-height: 1.4;
+        }
+
+        .tema-conteudo h3 {
+            font-family: 'Libre Baskerville', serif;
+            color: #593B2B;
+            font-size: 1.2rem;
+            margin: 30px 0 15px;
+        }
+
+        .tema-conteudo p {
+            font-family: 'Open Sans', sans-serif;
+            color: #444444;
+            font-size: 1rem;
+            line-height: 1.9;
+            margin-bottom: 18px;
+        }
+
+        .tema-conteudo ul {
+            padding-left: 25px;
+            margin: 15px 0 25px;
+        }
+
+        .tema-conteudo li {
+            font-family: 'Open Sans', sans-serif;
+            color: #444444;
+            line-height: 1.9;
+            margin-bottom: 10px;
+        }
+
+        .tema-versiculo {
+            background: #F3EBDD;
+            border-left: 5px solid #B08A48;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+
+        .tema-versiculo p {
+            font-family: 'Libre Baskerville', serif;
+            color: #38271F;
+            font-size: 1.05rem;
+            font-style: italic;
+            margin-bottom: 12px;
+        }
+
+        .tema-versiculo strong {
+            color: #76523C;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .tema-destaque {
+            background: #18334D;
+            color: #F7F4EC;
+            padding: 30px;
+            border-radius: 6px;
+            margin: 30px 0;
+        }
+
+        .tema-destaque h3 {
+            color: #D1B477;
+            margin-top: 0;
+        }
+
+        .tema-destaque p {
+            color: #F7F4EC;
+            margin-bottom: 0;
+        }
+
+        .tema-aplicacao {
+            background: #F7F4EC;
+            border: 1px solid #E9DFC9;
+            padding: 28px;
+            border-radius: 6px;
+            margin-top: 25px;
+        }
+
+        .tema-referencias {
+            background: #E9DFC9;
+            padding: 30px;
+            border-radius: 6px;
+            margin-top: 30px;
+        }
+
+        .tema-referencias h3 {
+            margin-top: 0;
+        }
+
+        .tema-referencias p {
+            margin-bottom: 8px;
+        }
+
+        .tema-final {
+            text-align: center;
+            padding: 45px 25px;
+            background: #38271F;
+            color: #F7F4EC;
+            border-radius: 8px;
+            margin-top: 35px;
+        }
+
+        .tema-final h2 {
+            font-family: 'Cinzel', serif;
+            color: #D1B477;
+            margin-bottom: 15px;
+        }
+
+        .tema-final p {
+            color: #E9DFC9;
+            line-height: 1.8;
+        }
+
+        .tema-botoes {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .tema-botoes a {
+            display: inline-block;
+            padding: 14px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .botao-voltar {
+            background: transparent;
+            border: 1px solid #D1B477;
+            color: #D1B477;
+        }
+
+        .botao-proximo {
+            background: #B08A48;
+            color: #FFFFFF;
+        }
+
+        .tema-botoes a:hover {
+            opacity: 0.85;
+            transform: translateY(-2px);
+        }
+
+        .rodape-tema {
+            text-align: center;
+            padding: 25px;
+            background: #38271F;
+            color: #E9DFC9;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 700px) {
+
+            .tema-conteudo {
+                padding: 25px;
+            }
+
+            .tema-cabecalho {
+                padding: 65px 20px;
+            }
+
+            .tema-navegacao {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+        }
+
+        @media print {
+
+            .tema-navegacao,
+            .tema-botoes,
+            .rodape-tema {
+                display: none;
+            }
+
+            .tema-cabecalho {
+                background: #FFFFFF;
+                color: #000000;
+                padding: 30px;
+            }
+
+            .tema-cabecalho h1 span,
+            .tema-etiqueta,
+            .tema-identificacao {
+                color: #000000;
+            }
+
+            .tema-container {
+                width: 100%;
+                margin: 20px auto;
+            }
+
+            .tema-conteudo {
+                box-shadow: none;
+                border: 1px solid #DDDDDD;
+                padding: 25px;
+            }
+
+            .tema-destaque,
+            .tema-final {
+                background: #FFFFFF;
+                color: #000000;
+                border: 1px solid #999999;
+            }
+
+            .tema-destaque p,
+            .tema-final p,
+            .tema-final h2 {
+                color: #000000;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body class="pagina-tema">
+
+
+    <!-- ==================================================
+         CABEÇALHO DO TEMA
+    ================================================== -->
+
+    <header class="tema-cabecalho">
+
+        <div class="tema-cabecalho-conteudo">
+
+            <span class="tema-etiqueta">
+                AMBIENTE 01 — IDENTIDADE MASCULINA CRISTÃ
+            </span>
+
+            <h1>
+                A CRIAÇÃO
+                <span>DO SER HUMANO</span>
+            </h1>
+
+            <p>
+                Compreendendo a origem da humanidade,
+                sua dignidade e sua responsabilidade
+                diante do Criador.
+            </p>
+
+            <div class="tema-identificacao">
+                MÓDULO 01 · TEMA 01
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main class="tema-container">
+
+
+        <!-- NAVEGAÇÃO -->
+
+        <nav class="tema-navegacao">
+
+            <a href="apresentacao.html">
+                ← VOLTAR À APRESENTAÇÃO DO MÓDULO
+            </a>
+
+            <a href="../../../uhbb_psh.html">
+                PÁGINA PRINCIPAL
+            </a>
+
+        </nav>
+
+
+        <!-- APRESENTAÇÃO -->
+
+        <section class="tema-conteudo">
+
+            <h2>1. Introdução</h2>
+
+            <p>
+                Uma compreensão correta da identidade humana
+                começa pelo reconhecimento de sua origem.
+                Antes de falar sobre masculinidade, família,
+                trabalho, liderança ou sociedade, precisamos
+                compreender o que a Bíblia ensina sobre
+                a criação do ser humano.
+            </p>
+
+            <p>
+                As Escrituras apresentam Deus como o Criador
+                de todas as coisas. O ser humano não é fruto
+                do acaso nem possui existência independente
+                de seu Criador. Sua vida tem origem em Deus,
+                seu valor está relacionado à sua criação
+                e sua existência possui propósito.
+            </p>
+
+            <div class="tema-versiculo">
+
+                <p>
+                    "E criou Deus o homem à sua imagem;
+                    à imagem de Deus o criou;
+                    macho e fêmea os criou."
+                </p>
+
+                <strong>Gênesis 1:27</strong>
+
+            </div>
+
+            <p>
+                Esse ensinamento estabelece o fundamento
+                para compreender a dignidade humana e as
+                responsabilidades que acompanham a existência.
+            </p>
+
+        </section>
+
+
+        <!-- FUNDAMENTO BÍBLICO -->
+
+        <section class="tema-conteudo">
+
+            <h2>2. Deus é o Criador do ser humano</h2>
+
+            <p>
+                O primeiro capítulo de Gênesis apresenta
+                Deus como aquele que criou os céus, a terra
+                e tudo o que neles existe.
+            </p>
+
+            <p>
+                No sexto dia da criação, o texto bíblico
+                apresenta a criação do ser humano como parte
+                especial da obra criadora de Deus.
+            </p>
+
+            <div class="tema-versiculo">
+
+                <p>
+                    "E disse Deus: Façamos o homem à nossa
+                    imagem, conforme a nossa semelhança;
+                    e domine sobre os peixes do mar,
+                    e sobre as aves dos céus, e sobre o gado,
+                    e sobre toda a terra..."
+                </p>
+
+                <strong>Gênesis 1:26</strong>
+
+            </div>
+
+            <p>
+                O texto revela que a existência humana está
+                fundamentada na vontade e na ação criadora
+                de Deus.
+            </p>
+
+            <p>
+                O segundo capítulo de Gênesis apresenta
+                outro aspecto importante desse acontecimento:
+                Deus formou o homem do pó da terra e lhe deu
+                o fôlego de vida.
+            </p>
+
+            <div class="tema-versiculo">
+
+                <p>
+                    "E formou o Senhor Deus o homem do pó
+                    da terra e soprou em suas narinas
+                    o fôlego da vida; e o homem foi feito
+                    alma vivente."
+                </p>
+
+                <strong>Gênesis 2:7</strong>
+
+            </div>
+
+            <p>
+                A narrativa destaca a dependência humana
+                em relação ao Criador. A vida é recebida
+                de Deus e deve ser vivida diante dele.
+            </p>
+
+        </section>
+
+
+        <!-- A DIGNIDADE HUMANA -->
+
+        <section class="tema-conteudo">
+
+            <h2>3. A dignidade da vida humana</h2>
+
+            <p>
+                A criação do ser humano à imagem e semelhança
+                de Deus estabelece uma verdade fundamental:
+                toda pessoa possui dignidade e valor.
+            </p>
+
+            <p>
+                Essa dignidade não depende de riqueza,
+                posição social, capacidade física,
+                escolaridade, aparência ou reconhecimento
+                público.
+            </p>
+
+            <p>
+                Homens e mulheres compartilham essa dignidade
+                diante de Deus. Ambos são apresentados
+                nas Escrituras como participantes da criação
+                à imagem divina.
+            </p>
+
+            <div class="tema-destaque">
+
+                <h3>Uma verdade fundamental</h3>
+
+                <p>
+                    O valor de uma pessoa não é determinado
+                    pelo que ela possui, pelo cargo que ocupa
+                    ou pelo poder que exerce. A dignidade
+                    humana está relacionada ao fato de que
+                    o ser humano foi criado por Deus.
+                </p>
+
+            </div>
+
+            <p>
+                Por isso, o homem cristão deve reconhecer
+                o valor de todas as pessoas e tratá-las
+                com respeito, justiça, responsabilidade
+                e amor ao próximo.
+            </p>
+
+        </section>
+
+
+        <!-- O PROPÓSITO DA CRIAÇÃO -->
+
+        <section class="tema-conteudo">
+
+            <h2>4. O propósito da existência humana</h2>
+
+            <p>
+                A Bíblia não apresenta a vida humana como
+                uma existência sem direção. Deus concedeu
+                ao ser humano responsabilidades relacionadas
+                à sua criação.
+            </p>
+
+            <h3>4.1. Relacionamento com Deus</h3>
+
+            <p>
+                O ser humano foi criado para viver em
+                relacionamento com seu Criador. Sua vida
+                deve reconhecer a autoridade de Deus
+                e buscar comunhão com ele.
+            </p>
+
+            <h3>4.2. Responsabilidade sobre a criação</h3>
+
+            <p>
+                Em Gênesis 1:28, Deus apresenta ao homem
+                e à mulher a responsabilidade de exercer
+                domínio sobre a criação.
+            </p>
+
+            <p>
+                Esse domínio deve ser compreendido como
+                uma responsabilidade recebida de Deus,
+                não como autorização para exploração
+                irresponsável ou destruição da natureza.
+            </p>
+
+            <h3>4.3. Trabalho e cuidado</h3>
+
+            <p>
+                Gênesis 2:15 apresenta o homem colocado
+                no jardim do Éden para o cultivar
+                e o guardar.
+            </p>
+
+            <p>
+                O trabalho aparece na narrativa bíblica
+                antes da entrada do pecado no mundo.
+                Portanto, o trabalho e o cuidado fazem
+                parte da responsabilidade humana.
+            </p>
+
+        </section>
+
+
+        <!-- IDENTIDADE MASCULINA -->
+
+        <section class="tema-conteudo">
+
+            <h2>5. A criação e a identidade masculina cristã</h2>
+
+            <p>
+                A compreensão bíblica da masculinidade
+                começa pelo reconhecimento de que o homem
+                é criatura de Deus e responsável diante dele.
+            </p>
+
+            <p>
+                Ser homem não significa possuir
+                superioridade sobre outras pessoas,
+                exercer autoridade de maneira autoritária
+                ou demonstrar força por meio da agressividade.
+            </p>
+
+            <p>
+                A identidade masculina cristã deve ser
+                compreendida à luz das Escrituras e dos
+                princípios que orientam uma vida de fé,
+                responsabilidade, respeito e serviço.
+            </p>
+
+            <p>
+                O homem cristão reconhece que sua vida
+                pertence a Deus e que suas capacidades
+                devem ser empregadas de maneira responsável,
+                para o bem da família, da Igreja
+                e da sociedade.
+            </p>
+
+            <div class="tema-destaque">
+
+                <h3>Reflexão para a vida</h3>
+
+                <p>
+                    O homem não encontra sua verdadeira
+                    identidade na busca pelo poder,
+                    na imposição de sua vontade ou
+                    na superioridade sobre os outros.
+                    Sua existência deve ser orientada
+                    pelo reconhecimento de Deus como Criador
+                    e Senhor de sua vida.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- APLICAÇÃO PRÁTICA -->
+
+        <section class="tema-conteudo">
+
+            <h2>6. Aplicações para a vida cotidiana</h2>
+
+            <p>
+                O conhecimento da criação humana deve
+                produzir mudanças na maneira como
+                compreendemos a vida e nos relacionamos
+                com as pessoas.
+            </p>
+
+            <div class="tema-aplicacao">
+
+                <h3>O que esse ensinamento nos desafia a praticar?</h3>
+
+                <ul>
+
+                    <li>
+                        Reconhecer Deus como Criador
+                        e Senhor da vida.
+                    </li>
+
+                    <li>
+                        Valorizar a própria existência
+                        e a dignidade de outras pessoas.
+                    </li>
+
+                    <li>
+                        Tratar homens e mulheres com respeito,
+                        justiça e consideração.
+                    </li>
+
+                    <li>
+                        Assumir responsabilidades
+                        com maturidade e honestidade.
+                    </li>
+
+                    <li>
+                        Valorizar o trabalho e cuidar
+                        adequadamente da criação.
+                    </li>
+
+                    <li>
+                        Desenvolver uma vida orientada
+                        pelos princípios das Escrituras.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONCLUSÃO -->
+
+        <section class="tema-conteudo">
+
+            <h2>7. Conclusão</h2>
+
+            <p>
+                A narrativa bíblica da criação estabelece
+                o fundamento para compreender quem somos
+                e diante de quem devemos viver.
+            </p>
+
+            <p>
+                O ser humano foi criado por Deus,
+                recebeu dignidade e possui responsabilidades
+                diante do Criador.
+            </p>
+
+            <p>
+                Compreender essa verdade é o primeiro passo
+                para desenvolver uma identidade cristã
+                fundamentada nas Escrituras.
+            </p>
+
+            <p>
+                O homem que reconhece Deus como Criador
+                compreende que sua vida não deve ser
+                conduzida apenas por interesses pessoais,
+                mas pelos princípios e propósitos
+                estabelecidos pelo Senhor.
+            </p>
+
+            <div class="tema-versiculo">
+
+                <p>
+                    "Porque dele, e por ele, e para ele
+                    são todas as coisas; glória, pois,
+                    a ele eternamente. Amém."
+                </p>
+
+                <strong>Romanos 11:36</strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- LEITURAS BÍBLICAS -->
+
+        <section class="tema-conteudo">
+
+            <h2>8. Leituras bíblicas complementares</h2>
+
+            <div class="tema-referencias">
+
+                <h3>Textos para aprofundamento</h3>
+
+                <p><strong>Gênesis 1:26-28</strong> — A criação do ser humano.</p>
+
+                <p><strong>Gênesis 2:7</strong> — A formação do homem.</p>
+
+                <p><strong>Gênesis 2:15-17</strong> — Responsabilidade e cuidado.</p>
+
+                <p><strong>Salmos 8:3-8</strong> — A dignidade humana diante da criação.</p>
+
+                <p><strong>Salmos 139:13-16</strong> — A vida sob o cuidado de Deus.</p>
+
+                <p><strong>Romanos 11:36</strong> — Deus como origem e propósito de todas as coisas.</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ENCERRAMENTO E NAVEGAÇÃO -->
+
+        <section class="tema-final">
+
+            <h2>Continue sua jornada de formação</h2>
+
+            <p>
+                O estudo da criação humana estabelece
+                o fundamento para compreender a identidade,
+                a dignidade e as responsabilidades do homem
+                diante de Deus.
+            </p>
+
+            <div class="tema-botoes">
+
+                <a href="apresentacao.html" class="botao-voltar">
+                    VOLTAR AO MÓDULO
+                </a>
+
+                <a href="tema02.html" class="botao-proximo">
+                    PRÓXIMO TEMA →
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+
+    <footer class="rodape-tema">
+
+        <p>
+            HOMENS SEGUNDO O CORAÇÃO DE DEUS
+        </p>
+
+        <p>
+            Formando homens, fortalecendo famílias
+            e servindo à Igreja de Cristo.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

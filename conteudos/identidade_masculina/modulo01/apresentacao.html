@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Apresentação do Módulo 01 - O Homem na Perspectiva das Escrituras.">
+
+    <title>Módulo 01 | Identidade Masculina Cristã</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <style>
+
+        .pagina-modulo {
+            min-height: 100vh;
+            background: #F7F4EC;
+            color: #38271F;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .modulo-topo {
+            background: #38271F;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .modulo-topo a {
+            color: #E9DFC9;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .modulo-topo a:hover {
+            color: #D1B477;
+        }
+
+        .modulo-banner {
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(56, 39, 31, 0.97),
+                    rgba(56, 39, 31, 0.87)
+                );
+
+            padding: 85px 8%;
+            color: #F7F4EC;
+            border-bottom: 5px solid #B08A48;
+        }
+
+        .modulo-banner-conteudo {
+            max-width: 950px;
+            margin: auto;
+        }
+
+        .modulo-etiqueta {
+            color: #D1B477;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+
+        .modulo-banner h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(30px, 5vw, 48px);
+            line-height: 1.3;
+            margin: 22px 0;
+            color: #F7F4EC;
+        }
+
+        .modulo-banner p {
+            max-width: 750px;
+            font-size: 17px;
+            line-height: 1.9;
+            color: #E9DFC9;
+        }
+
+        .modulo-numero {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 10px 20px;
+            border: 1px solid #B08A48;
+            color: #D1B477;
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+        .modulo-conteudo {
+            max-width: 1100px;
+            margin: auto;
+            padding: 65px 25px;
+        }
+
+        .bloco-conteudo {
+            margin-bottom: 55px;
+        }
+
+        .bloco-conteudo h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 25px;
+            color: #593B2B;
+            margin-bottom: 20px;
+        }
+
+        .bloco-conteudo p {
+            font-size: 15px;
+            line-height: 1.9;
+            color: #51443B;
+            margin-bottom: 16px;
+        }
+
+        .objetivos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 18px;
+            margin-top: 25px;
+        }
+
+        .objetivo-card {
+            background: #FFFFFF;
+            padding: 25px;
+            border-left: 4px solid #B08A48;
+            box-shadow: 0 5px 18px rgba(56, 39, 31, 0.07);
+        }
+
+        .objetivo-card h3 {
+            color: #593B2B;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .objetivo-card p {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .versiculo-destaque {
+            background: #18334D;
+            color: #F7F4EC;
+            padding: 35px;
+            margin: 35px 0;
+            border-left: 5px solid #B08A48;
+        }
+
+        .versiculo-destaque p {
+            color: #F7F4EC;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 19px;
+            font-style: italic;
+        }
+
+        .versiculo-destaque strong {
+            display: block;
+            margin-top: 15px;
+            color: #D1B477;
+            font-size: 13px;
+        }
+
+        .temas-lista {
+            background: #FFFFFF;
+            padding: 30px;
+            box-shadow: 0 5px 18px rgba(56, 39, 31, 0.06);
+        }
+
+        .tema-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            padding: 17px 0;
+            border-bottom: 1px solid #E9DFC9;
+        }
+
+        .tema-item:last-child {
+            border-bottom: none;
+        }
+
+        .tema-numero {
+            min-width: 35px;
+            height: 35px;
+            background: #593B2B;
+            color: #D1B477;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+        .tema-item h3 {
+            font-size: 15px;
+            color: #38271F;
+            margin: 5px 0;
+        }
+
+        .metodologia {
+            background: #E9DFC9;
+            padding: 30px;
+            border-radius: 3px;
+        }
+
+        .modulo-final {
+            text-align: center;
+            padding: 40px 20px;
+            background: #38271F;
+            color: #F7F4EC;
+        }
+
+        .modulo-final h2 {
+            font-family: 'Cinzel', serif;
+            color: #D1B477;
+            margin-bottom: 15px;
+        }
+
+        .modulo-final p {
+            max-width: 650px;
+            margin: 0 auto 25px;
+            line-height: 1.8;
+            color: #E9DFC9;
+        }
+
+        .botao-modulo {
+            display: inline-block;
+            padding: 14px 28px;
+            background: #B08A48;
+            color: #38271F;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .botao-modulo:hover {
+            background: #D1B477;
+            transform: translateY(-2px);
+        }
+
+        .rodape-modulo {
+            background: #261A15;
+            color: #BFAF9B;
+            text-align: center;
+            padding: 22px;
+            font-size: 12px;
+        }
+
+        @media (max-width: 600px) {
+
+            .modulo-banner {
+                padding: 55px 7%;
+            }
+
+            .modulo-conteudo {
+                padding: 45px 20px;
+            }
+
+            .versiculo-destaque {
+                padding: 25px;
+            }
+
+            .tema-item {
+                gap: 12px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="pagina-modulo">
+
+    <!-- CABEÇALHO -->
+
+    <header class="modulo-topo">
+
+        <a href="../../../uhbb_psh.html">
+            ← VOLTAR À PÁGINA PRINCIPAL
+        </a>
+
+        <a href="../../../uhbb_psh.html#formacao">
+            AMBIENTES DE FORMAÇÃO
+        </a>
+
+    </header>
+
+
+    <!-- APRESENTAÇÃO DO MÓDULO -->
+
+    <section class="modulo-banner">
+
+        <div class="modulo-banner-conteudo">
+
+            <span class="modulo-etiqueta">
+                AMBIENTE 01 — IDENTIDADE MASCULINA CRISTÃ
+            </span>
+
+            <h1>
+                O Homem na Perspectiva das Escrituras
+            </h1>
+
+            <p>
+                Compreender o ser humano à luz da Palavra de Deus
+                é o primeiro passo para desenvolver uma identidade
+                fundamentada na verdade bíblica, no caráter cristão
+                e na responsabilidade diante do Criador.
+            </p>
+
+            <span class="modulo-numero">
+                MÓDULO 01
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+
+    <main class="modulo-conteudo">
+
+
+        <!-- APRESENTAÇÃO -->
+
+        <section class="bloco-conteudo">
+
+            <h2>Apresentação</h2>
+
+            <p>
+                O que significa ser homem segundo a perspectiva
+                das Escrituras? Qual é a origem da identidade
+                humana? Que responsabilidades acompanham a
+                existência do homem diante de Deus, da família
+                e da sociedade?
+            </p>
+
+            <p>
+                Essas perguntas nos conduzem ao fundamento
+                da formação masculina cristã: a compreensão
+                de que o ser humano foi criado por Deus,
+                possui dignidade diante do Criador e recebeu
+                responsabilidades que devem ser exercidas
+                de acordo com a vontade divina.
+            </p>
+
+            <p>
+                Neste módulo, estudaremos os fundamentos bíblicos
+                da identidade humana e as responsabilidades
+                relacionadas à vida masculina. Nosso propósito
+                não é construir uma imagem cultural ou idealizada
+                de masculinidade, mas compreender o que a Palavra
+                de Deus ensina e como seus princípios devem
+                orientar nossa maneira de viver.
+            </p>
+
+        </section>
+
+
+        <!-- FUNDAMENTO BÍBLICO -->
+
+        <section class="bloco-conteudo">
+
+            <h2>Fundamento Bíblico</h2>
+
+            <div class="versiculo-destaque">
+
+                <p>
+                    "Criou Deus, pois, o homem à sua imagem,
+                    à imagem de Deus o criou; homem e mulher
+                    os criou."
+                </p>
+
+                <strong>Gênesis 1:27</strong>
+
+            </div>
+
+            <p>
+                A identidade humana começa na ação criadora
+                de Deus. Homem e mulher possuem dignidade
+                por terem sido criados à imagem divina.
+                Essa verdade constitui o fundamento para
+                compreendermos a existência humana,
+                os relacionamentos e as responsabilidades
+                diante de Deus.
+            </p>
+
+        </section>
+
+
+        <!-- OBJETIVOS -->
+
+        <section class="bloco-conteudo">
+
+            <h2>Objetivos de Aprendizagem</h2>
+
+            <p>
+                Ao concluir este módulo, o participante deverá
+                ser capaz de:
+            </p>
+
+            <div class="objetivos">
+
+                <article class="objetivo-card">
+
+                    <h3>Compreender</h3>
+
+                    <p>
+                        A origem e a dignidade do ser humano
+                        segundo o ensino bíblico.
+                    </p>
+
+                </article>
+
+
+                <article class="objetivo-card">
+
+                    <h3>Reconhecer</h3>
+
+                    <p>
+                        As responsabilidades humanas
+                        diante de Deus e da criação.
+                    </p>
+
+                </article>
+
+
+                <article class="objetivo-card">
+
+                    <h3>Refletir</h3>
+
+                    <p>
+                        Sobre caráter, responsabilidade,
+                        relacionamentos e comportamento cristão.
+                    </p>
+
+                </article>
+
+
+                <article class="objetivo-card">
+
+                    <h3>Aplicar</h3>
+
+                    <p>
+                        Os princípios bíblicos nas decisões
+                        e nas atitudes da vida cotidiana.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ORGANIZAÇÃO DOS TEMAS -->
+
+        <section class="bloco-conteudo">
+
+            <h2>Conteúdo Programático</h2>
+
+            <p>
+                O módulo será desenvolvido por meio dos
+                seguintes estudos:
+            </p>
+
+            <div class="temas-lista">
+
+                <div class="tema-item">
+
+                    <span class="tema-numero">01</span>
+
+                    <div>
+                        <h3>A criação do ser humano</h3>
+                    </div>
+
+                </div>
+
+
+                <div class="tema-item">
+
+                    <span class="tema-numero">02</span>
+
+                    <div>
+                        <h3>A imagem e semelhança de Deus</h3>
+                    </div>
+
+                </div>
+
+
+                <div class="tema-item">
+
+                    <span class="tema-numero">03</span>
+
+                    <div>
+                        <h3>A dignidade e o valor da vida humana</h3>
+                    </div>
+
+                </div>
+
+
+                <div class="tema-item">
+
+                    <span class="tema-numero">04</span>
+
+                    <div>
+                        <h3>O homem e suas responsabilidades diante da criação</h3>
+                    </div>
+
+                </div>
+
+
+                <div class="tema-item">
+
+                    <span class="tema-numero">05</span>
+
+                    <div>
+                        <h3>A responsabilidade moral e espiritual</h3>
+                    </div>
+
+                </div>
+
+
+                <div class="tema-item">
+
+                    <span class="tema-numero">06</span>
+
+                    <div>
+                        <h3>A identidade humana e a vida em sociedade</h3>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- METODOLOGIA -->
+
+        <section class="bloco-conteudo">
+
+            <h2>Metodologia de Estudo</h2>
+
+            <div class="metodologia">
+
+                <p>
+                    O desenvolvimento do módulo será realizado
+                    por meio de estudos bíblicos, leitura orientada,
+                    reflexão teológica e aplicação prática.
+                </p>
+
+                <p>
+                    Cada tema apresentará seu conteúdo,
+                    referências bíblicas, questões para reflexão
+                    e atividades de fixação.
+                </p>
+
+                <p>
+                    Ao final dos estudos, o participante poderá
+                    realizar um questionário de avaliação para
+                    verificar a compreensão dos assuntos abordados.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- REFERÊNCIAS -->
+
+        <section class="bloco-conteudo">
+
+            <h2>Leituras Bíblicas Fundamentais</h2>
+
+            <p>
+                Gênesis 1:26-28 — A criação do ser humano.
+            </p>
+
+            <p>
+                Gênesis 2:15-17 — Responsabilidade e obediência.
+            </p>
+
+            <p>
+                Miqueias 6:8 — Justiça, misericórdia e humildade.
+            </p>
+
+            <p>
+                Marcos 10:42-45 — O exemplo de serviço de Jesus.
+            </p>
+
+            <p>
+                Gálatas 5:22-23 — O fruto do Espírito.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- ENCERRAMENTO -->
+
+    <section class="modulo-final">
+
+        <h2>Uma jornada de formação começa aqui.</h2>
+
+        <p>
+            Conhecer a vontade de Deus é fundamental
+            para desenvolver uma vida orientada pelas
+            Escrituras. Prepare-se para estudar, refletir
+            e aplicar os princípios bíblicos.
+        </p>
+
+        <a href="tema01.html" class="botao-modulo">
+            INICIAR PRIMEIRO ESTUDO →
+        </a>
+        <a href="../../../questionarios/identidade_masculina/avaliacao_modulo01.html"
+          class="botao-principal">
+            REALIZAR AVALIAÇÃO →
+        </a>
+
+    </section>
+
+
+    <!-- RODAPÉ -->
+
+    <footer class="rodape-modulo">
+
+        HOMENS SEGUNDO O CORAÇÃO DE DEUS
+
+        <br><br>
+
+        Formando homens, fortalecendo famílias
+        e servindo à Igreja de Cristo.
+
+    </footer>
+
+</div>
+
+</body>
+</html>
