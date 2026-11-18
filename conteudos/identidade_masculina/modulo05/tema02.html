@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Coragem diante do Medo e das Adversidades | Módulo 05</title>
+
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --marrom: #593B2B;
+            --marrom-escuro: #38271F;
+            --marrom-medio: #76523C;
+            --azul: #18334D;
+            --azul-claro: #294B65;
+            --dourado: #B08A48;
+            --dourado-claro: #D1B477;
+            --bege: #E9DFC9;
+            --creme: #F7F4EC;
+            --texto: #333333;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--creme);
+            color: var(--texto);
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.8;
+        }
+
+        .topo-tema {
+            background: linear-gradient(135deg, var(--marrom-escuro), var(--azul));
+            color: white;
+            padding: 65px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--dourado);
+        }
+
+        .topo-tema .identificacao {
+            color: var(--dourado-claro);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .topo-tema h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            margin: 18px auto;
+            max-width: 900px;
+            line-height: 1.3;
+        }
+
+        .topo-tema p {
+            max-width: 750px;
+            margin: 15px auto 0;
+            color: #eee5d5;
+            font-size: 1.05rem;
+        }
+
+        .conteudo-tema {
+            max-width: 1050px;
+            margin: 45px auto;
+            padding: 0 22px;
+        }
+
+        .secao {
+            background: white;
+            padding: 32px;
+            margin-bottom: 28px;
+            border-radius: 10px;
+            border-left: 5px solid var(--dourado);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+        }
+
+        .secao h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--azul);
+            font-size: 1.45rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .secao h3 {
+            color: var(--marrom);
+            font-size: 1.12rem;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        .secao p {
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .versiculo {
+            background: var(--azul);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .versiculo p {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.2rem;
+            font-style: italic;
+            line-height: 1.9;
+            text-align: center;
+        }
+
+        .versiculo strong {
+            display: block;
+            color: var(--dourado-claro);
+            margin-top: 15px;
+            font-size: 0.95rem;
+        }
+
+        .destaque {
+            background: var(--bege);
+            padding: 22px 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+            border-left: 4px solid var(--dourado);
+        }
+
+        .destaque strong {
+            color: var(--marrom-escuro);
+        }
+
+        .lista {
+            padding-left: 25px;
+        }
+
+        .lista li {
+            margin-bottom: 12px;
+        }
+
+        .referencias {
+            background: #f0f3f5;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid var(--azul);
+        }
+
+        .referencias h3 {
+            margin-top: 0;
+        }
+
+        .reflexao {
+            background: linear-gradient(135deg, var(--marrom-escuro), var(--marrom));
+            color: white;
+            padding: 32px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .reflexao h2 {
+            color: var(--dourado-claro);
+            font-family: 'Cinzel', serif;
+            margin-top: 0;
+        }
+
+        .reflexao p {
+            text-align: justify;
+        }
+
+        .principio {
+            background: white;
+            border: 2px solid var(--dourado);
+            padding: 28px;
+            text-align: center;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+
+        .principio h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--marrom);
+            margin-top: 0;
+        }
+
+        .principio p {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.08rem;
+            font-style: italic;
+        }
+
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .botao {
+            display: inline-block;
+            padding: 13px 23px;
+            background: var(--azul);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            background: var(--dourado);
+            color: var(--marrom-escuro);
+            transform: translateY(-2px);
+        }
+
+        .rodape-tema {
+            background: var(--marrom-escuro);
+            color: #e8dfd0;
+            text-align: center;
+            padding: 28px 20px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 650px) {
+
+            .secao {
+                padding: 23px;
+            }
+
+            .topo-tema {
+                padding: 45px 18px;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+            }
+
+            .botao {
+                text-align: center;
+                width: 100%;
+            }
+        }
+
+        @media print {
+
+            body {
+                background: white;
+                color: black;
+            }
+
+            .topo-tema {
+                background: white;
+                color: black;
+                border-bottom: 2px solid black;
+                padding: 25px;
+            }
+
+            .topo-tema .identificacao,
+            .topo-tema p {
+                color: black;
+            }
+
+            .secao {
+                box-shadow: none;
+                border: 1px solid #ccc;
+                break-inside: avoid;
+            }
+
+            .versiculo,
+            .reflexao {
+                background: #eee;
+                color: black;
+            }
+
+            .versiculo strong,
+            .reflexao h2 {
+                color: black;
+            }
+
+            .navegacao-temas,
+            .rodape-tema {
+                display: none;
+            }
+
+            .conteudo-tema {
+                margin: 20px auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="topo-tema">
+
+        <div class="identificacao">
+            Homens Segundo o Coração de Deus
+        </div>
+
+        <h1>A Coragem diante do Medo e das Adversidades</h1>
+
+        <p>
+            Módulo 05 — Coragem, Disciplina e Domínio Próprio
+            <br>
+            Tema 02
+        </p>
+
+    </header>
+
+
+    <main class="conteudo-tema">
+
+        <!-- INTRODUÇÃO -->
+
+        <section class="secao">
+
+            <h2>1. Introdução</h2>
+
+            <p>
+                A vida humana é marcada por desafios, incertezas e
+                situações que podem provocar medo. Problemas familiares,
+                dificuldades financeiras, enfermidades, perdas,
+                responsabilidades profissionais e conflitos pessoais
+                fazem parte da experiência de muitas pessoas.
+            </p>
+
+            <p>
+                O homem cristão não está livre dessas circunstâncias.
+                Seguir a Cristo não significa viver em um mundo sem
+                dificuldades, mas aprender a enfrentar a realidade
+                com fé, esperança e confiança em Deus.
+            </p>
+
+            <p>
+                A coragem torna-se especialmente importante quando
+                as circunstâncias parecem maiores do que nossas
+                capacidades. Nessas situações, somos chamados a
+                lembrar que nossa segurança não depende exclusivamente
+                de nossos recursos, mas da fidelidade do Senhor.
+            </p>
+
+            <div class="destaque">
+                <strong>Ideia central:</strong>
+                O homem cristão enfrenta o medo e as adversidades
+                confiando em Deus, buscando sabedoria nas Escrituras
+                e perseverando no cumprimento de suas responsabilidades.
+            </div>
+
+        </section>
+
+
+        <!-- MEDO -->
+
+        <section class="secao">
+
+            <h2>2. Compreendendo o medo na experiência humana</h2>
+
+            <p>
+                O medo é uma reação humana diante de situações
+                percebidas como ameaçadoras ou perigosas. Ele pode
+                surgir diante de uma ameaça real, de uma situação
+                desconhecida ou da possibilidade de uma perda.
+            </p>
+
+            <p>
+                Em determinadas circunstâncias, o medo exerce uma
+                função de proteção, alertando-nos sobre perigos
+                e incentivando atitudes prudentes.
+            </p>
+
+            <p>
+                Entretanto, quando o medo passa a dominar nossas
+                decisões, pode dificultar o cumprimento de
+                responsabilidades e impedir atitudes necessárias.
+            </p>
+
+            <h3>O medo não significa ausência de fé</h3>
+
+            <p>
+                É importante compreender que sentir medo não significa,
+                automaticamente, falta de fé. As Escrituras apresentam
+                servos de Deus que experimentaram angústia, insegurança
+                e sofrimento.
+            </p>
+
+            <p>
+                O próprio salmista reconheceu a existência do medo,
+                mas declarou sua confiança no Senhor.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Em qualquer tempo em que eu temer,
+                    confiarei em ti."
+                </p>
+
+                <strong>Salmo 56:3</strong>
+
+            </div>
+
+            <p>
+                Observe a sequência apresentada pelo salmista:
+                ele reconhece que pode sentir medo, mas escolhe
+                confiar em Deus.
+            </p>
+
+            <p>
+                A fé não exige que o ser humano negue suas emoções.
+                Ela o conduz a colocar suas preocupações diante
+                do Senhor e buscar nele a orientação necessária.
+            </p>
+
+            <h3>Quando o medo precisa ser enfrentado</h3>
+
+            <p>
+                Existem situações em que o medo pode levar alguém
+                a fugir de responsabilidades, evitar decisões
+                importantes ou abandonar compromissos assumidos.
+            </p>
+
+            <p>
+                Nesses momentos, o cristão precisa avaliar suas
+                atitudes à luz da Palavra de Deus e buscar forças
+                para fazer o que é correto.
+            </p>
+
+        </section>
+
+
+        <!-- ADVERSIDADES -->
+
+        <section class="secao">
+
+            <h2>3. As adversidades fazem parte da caminhada cristã</h2>
+
+            <p>
+                A Bíblia nunca prometeu que a vida do cristão seria
+                livre de dificuldades. Pelo contrário, Jesus ensinou
+                seus discípulos a compreenderem que enfrentariam
+                aflições neste mundo.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Tenho-vos dito isso, para que em mim tenhais paz;
+                    no mundo tereis aflições, mas tende bom ânimo;
+                    eu venci o mundo."
+                </p>
+
+                <strong>João 16:33</strong>
+
+            </div>
+
+            <p>
+                Jesus não escondeu a realidade das dificuldades.
+                Ele ensinou que a paz verdadeira está nele e que
+                seus discípulos poderiam encontrar ânimo mesmo
+                diante das aflições.
+            </p>
+
+            <h3>O que são adversidades?</h3>
+
+            <p>
+                Adversidades são circunstâncias difíceis que
+                apresentam obstáculos, exigem decisões ou provocam
+                sofrimento.
+            </p>
+
+            <p>
+                Elas podem surgir em diferentes áreas da existência:
+            </p>
+
+            <ul class="lista">
+
+                <li>
+                    Problemas familiares e dificuldades nos relacionamentos.
+                </li>
+
+                <li>
+                    Desemprego, dificuldades financeiras e desafios profissionais.
+                </li>
+
+                <li>
+                    Enfermidades, limitações físicas e sofrimento.
+                </li>
+
+                <li>
+                    Perdas, luto e mudanças inesperadas.
+                </li>
+
+                <li>
+                    Perseguição, oposição e dificuldades relacionadas
+                    ao testemunho cristão.
+                </li>
+
+                <li>
+                    Frustrações pessoais e situações que exigem
+                    perseverança.
+                </li>
+
+            </ul>
+
+            <p>
+                O homem cristão precisa compreender que enfrentar
+                adversidades não significa necessariamente estar
+                fora da vontade de Deus.
+            </p>
+
+            <p>
+                A fidelidade ao Senhor não é medida pela ausência
+                de problemas, mas pela maneira como procuramos
+                permanecer fiéis a ele em todas as circunstâncias.
+            </p>
+
+        </section>
+
+
+        <!-- JOSÉ -->
+
+        <section class="secao">
+
+            <h2>4. José do Egito: fidelidade em meio às adversidades</h2>
+
+            <p>
+                A história de José, registrada em Gênesis, apresenta
+                um exemplo significativo de alguém que enfrentou
+                circunstâncias profundamente difíceis.
+            </p>
+
+            <p>
+                José foi rejeitado por seus próprios irmãos,
+                vendido como escravo e levado para o Egito.
+                Posteriormente, enfrentou uma acusação injusta
+                e foi lançado na prisão.
+            </p>
+
+            <p>
+                Sua trajetória foi marcada por sofrimento,
+                injustiça e longos períodos de espera.
+                Entretanto, mesmo diante dessas circunstâncias,
+                José continuou demonstrando fidelidade.
+            </p>
+
+            <h3>José não permitiu que a injustiça determinasse seu caráter</h3>
+
+            <p>
+                Mesmo quando foi colocado em situações que não
+                merecia, José não abandonou seus princípios.
+                Sua história demonstra a importância de manter
+                uma conduta íntegra mesmo quando as circunstâncias
+                parecem desfavoráveis.
+            </p>
+
+            <h3>Deus permaneceu presente</h3>
+
+            <p>
+                O relato bíblico destaca repetidamente que o Senhor
+                estava com José, inclusive durante o período em que
+                ele esteve na prisão.
+            </p>
+
+            <p>
+                Isso não significa que José não sofreu ou que
+                compreendeu imediatamente tudo o que estava
+                acontecendo. Significa que sua história não estava
+                fora do alcance da providência de Deus.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Vós bem intentastes mal contra mim,
+                    porém Deus o tornou em bem."
+                </p>
+
+                <strong>Gênesis 50:20</strong>
+
+            </div>
+
+            <p>
+                Ao reencontrar seus irmãos, José reconheceu que
+                Deus havia conduzido os acontecimentos de maneira
+                que sua família fosse preservada durante a fome.
+            </p>
+
+            <div class="destaque">
+
+                <strong>Lição para nossa vida:</strong>
+
+                As adversidades podem colocar nossa fé e nosso
+                caráter à prova, mas não precisam determinar
+                nossa conduta. Podemos enfrentar injustiças
+                e dificuldades sem abandonar os princípios
+                que aprendemos na Palavra de Deus.
+
+            </div>
+
+        </section>
+
+
+        <!-- PAULO -->
+
+        <section class="secao">
+
+            <h2>5. O exemplo do apóstolo Paulo diante das dificuldades</h2>
+
+            <p>
+                O ministério do apóstolo Paulo foi marcado por
+                grandes desafios. Em sua missão de anunciar o
+                Evangelho, ele enfrentou perseguições, prisões,
+                perigos, rejeições e sofrimentos.
+            </p>
+
+            <p>
+                Em 2 Coríntios 11:23-28, Paulo apresenta uma relação
+                de algumas das dificuldades que enfrentou durante
+                seu serviço cristão.
+            </p>
+
+            <p>
+                Sua trajetória demonstra que a fidelidade a Deus
+                não significa ausência de sofrimento. Mesmo diante
+                das adversidades, Paulo continuou comprometido
+                com a missão que havia recebido.
+            </p>
+
+            <h3>A força que vem de Cristo</h3>
+
+            <p>
+                Paulo compreendeu que sua capacidade de perseverar
+                não estava fundamentada exclusivamente em suas
+                próprias forças.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Posso todas as coisas naquele que me fortalece."
+                </p>
+
+                <strong>Filipenses 4:13</strong>
+
+            </div>
+
+            <p>
+                Esse versículo precisa ser compreendido dentro
+                de seu contexto. Paulo estava falando sobre
+                aprender a viver contente em diferentes
+                circunstâncias, tanto na abundância quanto
+                na necessidade.
+            </p>
+
+            <p>
+                Portanto, o texto não significa que o cristão
+                conseguirá realizar qualquer desejo ou alcançar
+                todos os resultados que pretende.
+            </p>
+
+            <p>
+                A mensagem é que Cristo fortalece o servo de Deus
+                para permanecer fiel e enfrentar as diferentes
+                situações da vida.
+            </p>
+
+        </section>
+
+
+        <!-- ENFRENTAMENTO -->
+
+        <section class="secao">
+
+            <h2>6. Como enfrentar o medo e as adversidades</h2>
+
+            <p>
+                A Palavra de Deus apresenta princípios que podem
+                orientar o homem cristão quando ele enfrenta
+                dificuldades.
+            </p>
+
+            <h3>1. Reconhecer a realidade da situação</h3>
+
+            <p>
+                O primeiro passo é compreender o problema sem
+                negá-lo ou fingir que ele não existe.
+                A fé cristã não exige que ignoremos a realidade.
+                Ela nos ensina a enfrentá-la com esperança.
+            </p>
+
+            <h3>2. Buscar a direção de Deus</h3>
+
+            <p>
+                A oração e o estudo das Escrituras ajudam o cristão
+                a buscar sabedoria e discernimento.
+            </p>
+
+            <p>
+                Em vez de tomar decisões precipitadas, devemos
+                procurar compreender os princípios bíblicos
+                envolvidos em cada situação.
+            </p>
+
+            <h3>3. Agir com prudência e responsabilidade</h3>
+
+            <p>
+                Confiar em Deus não significa abandonar os meios
+                responsáveis para resolver os problemas.
+                É necessário planejar, procurar orientação,
+                pedir ajuda quando necessário e agir com sabedoria.
+            </p>
+
+            <h3>4. Não enfrentar tudo sozinho</h3>
+
+            <p>
+                Deus também utiliza a família, a Igreja e pessoas
+                maduras na fé para oferecer apoio, orientação
+                e encorajamento.
+            </p>
+
+            <p>
+                Reconhecer a necessidade de ajuda não representa
+                fraqueza. É uma atitude de humildade e sabedoria.
+            </p>
+
+            <h3>5. Perseverar sem abandonar a fé</h3>
+
+            <p>
+                Algumas dificuldades são resolvidas rapidamente;
+                outras exigem tempo, paciência e perseverança.
+                O cristão precisa permanecer comprometido com
+                Deus mesmo quando ainda não consegue enxergar
+                a solução.
+            </p>
+
+            <h3>6. Aprender com as experiências</h3>
+
+            <p>
+                As experiências difíceis podem contribuir para
+                o amadurecimento espiritual e pessoal.
+                Isso não significa que todo sofrimento seja
+                bom em si mesmo, mas que Deus pode nos ensinar
+                e fortalecer mesmo em circunstâncias dolorosas.
+            </p>
+
+        </section>
+
+
+        <!-- FAMÍLIA E RESPONSABILIDADES -->
+
+        <section class="secao">
+
+            <h2>7. Coragem para enfrentar os desafios cotidianos</h2>
+
+            <p>
+                Muitas vezes, imaginamos a coragem como algo
+                relacionado a grandes acontecimentos.
+                Entretanto, ela também se manifesta nas situações
+                comuns da vida.
+            </p>
+
+            <h3>Na família</h3>
+
+            <p>
+                O homem precisa ter coragem para reconhecer
+                seus erros, dialogar, pedir perdão, enfrentar
+                problemas familiares e assumir suas
+                responsabilidades.
+            </p>
+
+            <p>
+                Também precisa demonstrar disposição para
+                proteger, cuidar e permanecer presente nos
+                momentos difíceis.
+            </p>
+
+            <h3>No trabalho</h3>
+
+            <p>
+                Existem situações profissionais que exigem
+                paciência, perseverança e responsabilidade.
+                O homem cristão deve procurar agir com
+                honestidade mesmo quando enfrenta pressões,
+                injustiças ou dificuldades.
+            </p>
+
+            <h3>Na Igreja</h3>
+
+            <p>
+                Servir ao Senhor também exige disposição
+                para enfrentar desafios, cooperar com os
+                irmãos e continuar comprometido com a obra
+                cristã.
+            </p>
+
+            <h3>Na vida pessoal</h3>
+
+            <p>
+                É necessário ter coragem para reconhecer
+                limitações, buscar ajuda, abandonar hábitos
+                prejudiciais e procurar amadurecimento.
+            </p>
+
+            <div class="destaque">
+
+                <strong>Uma reflexão importante:</strong>
+
+                Algumas das maiores demonstrações de coragem
+                acontecem quando um homem decide fazer o que
+                é correto, mesmo sabendo que essa decisão
+                poderá exigir sacrifício, paciência ou mudança
+                de comportamento.
+
+            </div>
+
+        </section>
+
+
+        <!-- ESPERANÇA -->
+
+        <section class="secao">
+
+            <h2>8. A esperança cristã diante das dificuldades</h2>
+
+            <p>
+                A coragem cristã não está fundamentada na certeza
+                de que todas as situações terão uma solução
+                exatamente como desejamos.
+            </p>
+
+            <p>
+                Nossa esperança está fundamentada no caráter
+                de Deus, em suas promessas e na certeza de que
+                nada pode separar os que estão em Cristo
+                do amor de Deus.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Porque estou certo de que nem a morte,
+                    nem a vida, nem os anjos, nem os principados,
+                    nem as potestades, nem o presente, nem o porvir,
+                    nem a altura, nem a profundidade, nem alguma
+                    outra criatura nos poderá separar do amor
+                    de Deus, que está em Cristo Jesus, nosso Senhor."
+                </p>
+
+                <strong>Romanos 8:38-39</strong>
+
+            </div>
+
+            <p>
+                Essa esperança não elimina todas as dificuldades
+                da existência humana, mas oferece uma perspectiva
+                espiritual para enfrentá-las.
+            </p>
+
+            <p>
+                O cristão sabe que sua vida está nas mãos de Deus
+                e que sua esperança definitiva não depende das
+                circunstâncias passageiras deste mundo.
+            </p>
+
+        </section>
+
+
+        <!-- CONCLUSÃO -->
+
+        <section class="secao">
+
+            <h2>9. Conclusão</h2>
+
+            <p>
+                O medo e as adversidades fazem parte da experiência
+                humana. Nenhum homem está completamente livre
+                de situações que provocam insegurança, angústia
+                ou sofrimento.
+            </p>
+
+            <p>
+                Entretanto, as Escrituras ensinam que o homem
+                cristão pode enfrentar essas circunstâncias
+                confiando no Senhor.
+            </p>
+
+            <p>
+                O exemplo de José demonstra a importância
+                de preservar o caráter mesmo diante da injustiça.
+                A trajetória de Paulo revela que Cristo fortalece
+                seus servos para permanecerem fiéis em diferentes
+                circunstâncias.
+            </p>
+
+            <p>
+                A coragem cristã não consiste em negar os problemas,
+                esconder sentimentos ou enfrentar tudo sozinho.
+                Ela consiste em confiar em Deus, buscar sabedoria,
+                agir com responsabilidade e permanecer firme
+                na fé.
+            </p>
+
+        </section>
+
+
+        <!-- PRINCÍPIO FORMATIVO -->
+
+        <div class="principio">
+
+            <h2>Princípio Formativo</h2>
+
+            <p>
+                O homem segundo o coração de Deus não permite
+                que o medo determine sua fidelidade. Ele enfrenta
+                as adversidades com confiança no Senhor,
+                prudência nas decisões e perseverança na caminhada
+                cristã.
+            </p>
+
+        </div>
+
+
+        <!-- MEMORIZAÇÃO -->
+
+        <section class="secao">
+
+            <h2>10. Versículo para memorizar</h2>
+
+            <div class="versiculo">
+
+                <p>
+                    "Em qualquer tempo em que eu temer,
+                    confiarei em ti."
+                </p>
+
+                <strong>Salmo 56:3</strong>
+
+            </div>
+
+            <p>
+                Memorize esse versículo e reflita sobre sua
+                mensagem. O salmista não afirma que nunca
+                enfrentaria o medo. Ele declara que, mesmo
+                diante dele, escolheria confiar em Deus.
+            </p>
+
+        </section>
+
+
+        <!-- REFERÊNCIAS -->
+
+        <section class="secao">
+
+            <h2>11. Referências bíblicas para estudo</h2>
+
+            <div class="referencias">
+
+                <h3>Leitura principal</h3>
+
+                <ul class="lista">
+
+                    <li>Salmo 56:1-4 — A confiança em Deus diante do medo.</li>
+
+                    <li>João 16:33 — As aflições do mundo e a vitória de Cristo.</li>
+
+                    <li>Gênesis 37–50 — A história de José e sua fidelidade diante das adversidades.</li>
+
+                    <li>Filipenses 4:10-13 — O contentamento e a força que vem de Cristo.</li>
+
+                </ul>
+
+                <h3>Leituras complementares</h3>
+
+                <ul class="lista">
+
+                    <li>Salmo 23 — O cuidado e a presença do Senhor.</li>
+
+                    <li>Isaías 41:10 — O encorajamento e o auxílio de Deus.</li>
+
+                    <li>Romanos 8:31-39 — A segurança do cristão no amor de Deus.</li>
+
+                    <li>2 Coríntios 4:7-18 — O sofrimento presente e a esperança eterna.</li>
+
+                    <li>Tiago 1:2-4 — A perseverança produzida nas provações.</li>
+
+                    <li>1 Pedro 5:6-10 — Humildade, confiança e firmeza na fé.</li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- REFLEXÃO -->
+
+        <section class="reflexao">
+
+            <h2>Para Refletir</h2>
+
+            <p>
+                Em algum momento, todos nós enfrentaremos situações
+                que não poderemos controlar. Haverá momentos de
+                incerteza, dificuldades inesperadas e desafios
+                que exigirão mais do que nossas capacidades pessoais.
+            </p>
+
+            <p>
+                A Palavra de Deus nos ensina que não precisamos
+                enfrentar essas circunstâncias sem esperança.
+                Podemos buscar a direção do Senhor, receber
+                apoio de nossos irmãos e continuar caminhando
+                com fé.
+            </p>
+
+            <p>
+                Um homem segundo o coração de Deus não é aquele
+                que nunca enfrenta dificuldades, mas aquele que
+                procura permanecer fiel ao Senhor mesmo quando
+                a caminhada se torna difícil.
+            </p>
+
+        </section>
+
+
+        <!-- NAVEGAÇÃO -->
+
+        <nav class="navegacao-temas">
+
+            <a href="tema01.html" class="botao">
+                ← TEMA ANTERIOR
+            </a>
+
+            <a href="apresentacao.html" class="botao">
+                VOLTAR AO MÓDULO
+            </a>
+
+            <a href="tema03.html" class="botao">
+                PRÓXIMO TEMA →
+            </a>
+
+            <a href="../../../uhbb_psh.html" class="botao">
+                PÁGINA PRINCIPAL
+            </a>
+
+        </nav>
+
+        <div style="text-align: center; margin-bottom: 40px;">
+
+            <button onclick="window.print()" class="botao"
+                style="border: none; cursor: pointer; font-family: 'Open Sans', sans-serif;">
+                IMPRIMIR ESTUDO
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <footer class="rodape-tema">
+
+        <p>
+            HOMENS SEGUNDO O CORAÇÃO DE DEUS
+        </p>
+
+        <p>
+            Formando homens, fortalecendo famílias e servindo à Igreja de Cristo.
+        </p>
+
+        <p>
+            Módulo 05 — Coragem, Disciplina e Domínio Próprio
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

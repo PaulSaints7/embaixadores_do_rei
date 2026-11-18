@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Disciplina na Vida Cristã | Módulo 05</title>
+
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --marrom: #593B2B;
+            --marrom-escuro: #38271F;
+            --marrom-medio: #76523C;
+            --azul: #18334D;
+            --azul-claro: #294B65;
+            --dourado: #B08A48;
+            --dourado-claro: #D1B477;
+            --bege: #E9DFC9;
+            --creme: #F7F4EC;
+            --texto: #333333;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--creme);
+            color: var(--texto);
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.8;
+        }
+
+        .topo-tema {
+            background: linear-gradient(135deg, var(--marrom-escuro), var(--azul));
+            color: white;
+            padding: 65px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--dourado);
+        }
+
+        .topo-tema .identificacao {
+            color: var(--dourado-claro);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .topo-tema h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            margin: 18px auto;
+            max-width: 900px;
+            line-height: 1.3;
+        }
+
+        .topo-tema p {
+            max-width: 750px;
+            margin: 15px auto 0;
+            color: #eee5d5;
+            font-size: 1.05rem;
+        }
+
+        .conteudo-tema {
+            max-width: 1050px;
+            margin: 45px auto;
+            padding: 0 22px;
+        }
+
+        .secao {
+            background: white;
+            padding: 32px;
+            margin-bottom: 28px;
+            border-radius: 10px;
+            border-left: 5px solid var(--dourado);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+        }
+
+        .secao h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--azul);
+            font-size: 1.45rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .secao h3 {
+            color: var(--marrom);
+            font-size: 1.12rem;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        .secao p {
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .versiculo {
+            background: var(--azul);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .versiculo p {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.2rem;
+            font-style: italic;
+            line-height: 1.9;
+            text-align: center;
+        }
+
+        .versiculo strong {
+            display: block;
+            color: var(--dourado-claro);
+            margin-top: 15px;
+            font-size: 0.95rem;
+        }
+
+        .destaque {
+            background: var(--bege);
+            padding: 22px 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+            border-left: 4px solid var(--dourado);
+        }
+
+        .destaque strong {
+            color: var(--marrom-escuro);
+        }
+
+        .lista {
+            padding-left: 25px;
+        }
+
+        .lista li {
+            margin-bottom: 12px;
+        }
+
+        .referencias {
+            background: #f0f3f5;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid var(--azul);
+        }
+
+        .referencias h3 {
+            margin-top: 0;
+        }
+
+        .reflexao {
+            background: linear-gradient(135deg, var(--marrom-escuro), var(--marrom));
+            color: white;
+            padding: 32px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .reflexao h2 {
+            color: var(--dourado-claro);
+            font-family: 'Cinzel', serif;
+            margin-top: 0;
+        }
+
+        .reflexao p {
+            text-align: justify;
+        }
+
+        .principio {
+            background: white;
+            border: 2px solid var(--dourado);
+            padding: 28px;
+            text-align: center;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+
+        .principio h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--marrom);
+            margin-top: 0;
+        }
+
+        .principio p {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.08rem;
+            font-style: italic;
+        }
+
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .botao {
+            display: inline-block;
+            padding: 13px 23px;
+            background: var(--azul);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            background: var(--dourado);
+            color: var(--marrom-escuro);
+            transform: translateY(-2px);
+        }
+
+        .rodape-tema {
+            background: var(--marrom-escuro);
+            color: #e8dfd0;
+            text-align: center;
+            padding: 28px 20px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 650px) {
+
+            .secao {
+                padding: 23px;
+            }
+
+            .topo-tema {
+                padding: 45px 18px;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+            }
+
+            .botao {
+                text-align: center;
+                width: 100%;
+            }
+        }
+
+        @media print {
+
+            body {
+                background: white;
+                color: black;
+            }
+
+            .topo-tema {
+                background: white;
+                color: black;
+                border-bottom: 2px solid black;
+                padding: 25px;
+            }
+
+            .topo-tema .identificacao,
+            .topo-tema p {
+                color: black;
+            }
+
+            .secao {
+                box-shadow: none;
+                border: 1px solid #ccc;
+                break-inside: avoid;
+            }
+
+            .versiculo,
+            .reflexao {
+                background: #eee;
+                color: black;
+            }
+
+            .versiculo strong,
+            .reflexao h2 {
+                color: black;
+            }
+
+            .navegacao-temas,
+            .rodape-tema {
+                display: none;
+            }
+
+            .conteudo-tema {
+                margin: 20px auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="topo-tema">
+
+        <div class="identificacao">
+            Homens Segundo o Coração de Deus
+        </div>
+
+        <h1>A Disciplina na Vida Cristã</h1>
+
+        <p>
+            Módulo 05 — Coragem, Disciplina e Domínio Próprio
+            <br>
+            Tema 04
+        </p>
+
+    </header>
+
+
+    <main class="conteudo-tema">
+
+        <!-- INTRODUÇÃO -->
+
+        <section class="secao">
+
+            <h2>1. Introdução</h2>
+
+            <p>
+                Uma vida cristã madura não é construída apenas
+                por meio de boas intenções ou decisões tomadas
+                em momentos de entusiasmo. Ela exige compromisso,
+                constância e disposição para colocar em prática
+                os ensinamentos da Palavra de Deus.
+            </p>
+
+            <p>
+                Muitas pessoas desejam crescer espiritualmente,
+                melhorar seus relacionamentos e desenvolver
+                um caráter mais maduro. Entretanto, o crescimento
+                não acontece automaticamente. É necessário
+                cultivar hábitos, organizar prioridades e
+                perseverar naquilo que é correto.
+            </p>
+
+            <p>
+                Nesse contexto, a disciplina assume um papel
+                fundamental. Ela está relacionada à capacidade
+                de orientar a própria vida por princípios,
+                compromissos e objetivos que estejam de acordo
+                com a vontade de Deus.
+            </p>
+
+            <p>
+                Para o homem cristão, disciplina não significa
+                viver de maneira rígida ou transformar a fé
+                em um conjunto de obrigações vazias. Significa
+                desenvolver uma vida organizada, responsável
+                e comprometida com o Senhor.
+            </p>
+
+            <div class="destaque">
+
+                <strong>Ideia central:</strong>
+
+                A disciplina cristã é a disposição de organizar
+                a vida e perseverar na prática dos princípios
+                bíblicos, desenvolvendo hábitos que contribuam
+                para o crescimento espiritual e a responsabilidade
+                pessoal.
+
+            </div>
+
+        </section>
+
+
+        <!-- CONCEITO -->
+
+        <section class="secao">
+
+            <h2>2. O significado da disciplina na vida cristã</h2>
+
+            <p>
+                Disciplina é a capacidade de orientar pensamentos,
+                atitudes e comportamentos de acordo com princípios
+                e objetivos estabelecidos.
+            </p>
+
+            <p>
+                Ela envolve organização, compromisso, constância
+                e responsabilidade. Uma pessoa disciplinada
+                procura cumprir seus deveres mesmo quando não
+                está motivada ou quando surgem dificuldades.
+            </p>
+
+            <p>
+                Na perspectiva cristã, a disciplina precisa
+                estar fundamentada nos ensinamentos das Escrituras
+                e orientada pelo propósito de viver de maneira
+                agradável a Deus.
+            </p>
+
+            <h3>Disciplina não é simplesmente rigidez</h3>
+
+            <p>
+                Ser disciplinado não significa viver sem
+                flexibilidade, ignorar as necessidades pessoais
+                ou exigir perfeição de si mesmo e dos outros.
+            </p>
+
+            <p>
+                A disciplina cristã deve caminhar junto com
+                a sabedoria, o equilíbrio, o amor e a compreensão
+                das limitações humanas.
+            </p>
+
+            <h3>Disciplina não é legalismo</h3>
+
+            <p>
+                Também precisamos distinguir disciplina cristã
+                de legalismo religioso.
+            </p>
+
+            <p>
+                O legalismo procura estabelecer regras humanas
+                como se o cumprimento delas fosse a base
+                da aceitação diante de Deus.
+            </p>
+
+            <p>
+                A Bíblia ensina que a salvação é pela graça,
+                mediante a fé, e não resultado de nossas obras.
+                As boas obras e a obediência são frutos de uma
+                vida transformada por Cristo.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Porque pela graça sois salvos, por meio da fé;
+                    e isso não vem de vós; é dom de Deus.
+                    Não vem das obras, para que ninguém se glorie."
+                </p>
+
+                <strong>Efésios 2:8-9</strong>
+
+            </div>
+
+            <p>
+                Portanto, a disciplina não é um meio de comprar
+                o favor de Deus. É uma resposta de gratidão
+                e compromisso daquele que deseja viver segundo
+                os ensinamentos de Cristo.
+            </p>
+
+        </section>
+
+
+        <!-- PAULO -->
+
+        <section class="secao">
+
+            <h2>3. O exemplo do apóstolo Paulo: disciplina e propósito</h2>
+
+            <p>
+                O apóstolo Paulo utilizou uma comparação com
+                o esporte para ensinar princípios importantes
+                sobre a vida cristã.
+            </p>
+
+            <p>
+                Em sua época, competições atléticas eram
+                conhecidas em diferentes regiões do mundo
+                greco-romano. Os atletas precisavam de
+                treinamento, preparação, esforço e disciplina
+                para participar das competições.
+            </p>
+
+            <p>
+                Paulo utiliza essa realidade para ilustrar
+                a importância de uma vida orientada por
+                propósito e compromisso.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Não sabeis vós que os que correm no estádio,
+                    todos, na verdade, correm, mas um só leva
+                    o prêmio? Correi de tal maneira que o alcanceis."
+                </p>
+
+                <strong>1 Coríntios 9:24</strong>
+
+            </div>
+
+            <h3>O atleta precisa de preparação</h3>
+
+            <p>
+                Um atleta não alcança bons resultados apenas
+                porque deseja vencer. Ele precisa treinar,
+                desenvolver habilidades e manter uma rotina
+                de preparação.
+            </p>
+
+            <p>
+                Da mesma maneira, o crescimento cristão exige
+                dedicação. Conhecer a Palavra de Deus, desenvolver
+                uma vida de oração e praticar os ensinamentos
+                de Cristo requerem compromisso contínuo.
+            </p>
+
+            <h3>O atleta precisa de autocontrole</h3>
+
+            <div class="versiculo">
+
+                <p>
+                    "E todo aquele que luta de tudo se abstém;
+                    eles o fazem para alcançar uma coroa
+                    corruptível; nós, porém, uma incorruptível."
+                </p>
+
+                <strong>1 Coríntios 9:25</strong>
+
+            </div>
+
+            <p>
+                Paulo destaca que o atleta precisa controlar
+                determinados hábitos e comportamentos para
+                alcançar seus objetivos.
+            </p>
+
+            <p>
+                O cristão também precisa aprender a estabelecer
+                prioridades, administrar seu tempo e evitar
+                atitudes que prejudiquem sua caminhada espiritual.
+            </p>
+
+            <p>
+                A comparação de Paulo não significa que a
+                salvação seja conquistada por desempenho
+                religioso. O texto utiliza a imagem da competição
+                para ensinar dedicação, perseverança e propósito.
+            </p>
+
+            <h3>Uma vida orientada por objetivos</h3>
+
+            <p>
+                No mesmo capítulo, Paulo afirma que não corria
+                sem direção. Sua vida estava orientada por
+                uma missão e por um propósito.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Pois eu assim corro, não como a coisa incerta;
+                    assim combato, não como batendo no ar."
+                </p>
+
+                <strong>1 Coríntios 9:26</strong>
+
+            </div>
+
+            <p>
+                O exemplo do apóstolo nos ensina que uma vida
+                disciplinada precisa ter direção. Não basta
+                estar ocupado; é necessário compreender quais
+                responsabilidades realmente merecem nossa atenção.
+            </p>
+
+        </section>
+
+
+        <!-- VIDA ESPIRITUAL -->
+
+        <section class="secao">
+
+            <h2>4. A disciplina na vida espiritual</h2>
+
+            <p>
+                O crescimento espiritual exige dedicação
+                e constância. A comunhão com Deus não deve
+                ser tratada apenas como uma atividade ocasional,
+                mas como parte essencial da vida cristã.
+            </p>
+
+            <h3>A disciplina do estudo bíblico</h3>
+
+            <p>
+                A leitura e o estudo das Escrituras ajudam
+                o cristão a conhecer melhor a vontade de Deus,
+                compreender os princípios da fé e desenvolver
+                discernimento.
+            </p>
+
+            <p>
+                É importante estabelecer momentos regulares
+                para estudar a Bíblia, refletir sobre seus
+                ensinamentos e procurar aplicá-los à vida.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Antes, tem o seu prazer na lei do Senhor,
+                    e na sua lei medita de dia e de noite."
+                </p>
+
+                <strong>Salmo 1:2</strong>
+
+            </div>
+
+            <h3>A disciplina da oração</h3>
+
+            <p>
+                A oração é uma expressão de comunhão e
+                dependência de Deus. Ela permite apresentar
+                ao Senhor nossas necessidades, agradecimentos,
+                preocupações e pedidos de orientação.
+            </p>
+
+            <p>
+                Desenvolver uma rotina de oração ajuda
+                a manter a vida espiritual presente nas
+                decisões e atividades cotidianas.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Orai sem cessar."
+                </p>
+
+                <strong>1 Tessalonicenses 5:17</strong>
+
+            </div>
+
+            <h3>A disciplina da comunhão cristã</h3>
+
+            <p>
+                A vida cristã não foi planejada para ser
+                vivida de maneira isolada. A participação
+                na Igreja, a comunhão com os irmãos e o
+                serviço cristão contribuem para o crescimento
+                e a edificação espiritual.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Não deixando a nossa congregação,
+                    como é costume de alguns, antes,
+                    admoestando-nos uns aos outros."
+                </p>
+
+                <strong>Hebreus 10:25</strong>
+
+            </div>
+
+            <h3>A disciplina da prática da Palavra</h3>
+
+            <p>
+                O conhecimento bíblico precisa produzir
+                transformação na maneira de viver.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "E sede cumpridores da palavra e não
+                    somente ouvintes, enganando-vos com
+                    falsos discursos."
+                </p>
+
+                <strong>Tiago 1:22</strong>
+
+            </div>
+
+            <p>
+                A disciplina espiritual não consiste apenas
+                em acumular informações religiosas, mas
+                em desenvolver uma vida coerente com os
+                ensinamentos de Cristo.
+            </p>
+
+        </section>
+
+
+        <!-- TEMPO -->
+
+        <section class="secao">
+
+            <h2>5. Disciplina e administração do tempo</h2>
+
+            <p>
+                O tempo é um recurso limitado. Todos os dias
+                recebemos novas oportunidades e responsabilidades,
+                mas não podemos realizar tudo ao mesmo tempo.
+            </p>
+
+            <p>
+                Por isso, a disciplina exige capacidade de
+                estabelecer prioridades e organizar as
+                atividades de maneira responsável.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Remindo o tempo, porquanto os dias são maus."
+                </p>
+
+                <strong>Efésios 5:16</strong>
+
+            </div>
+
+            <h3>Estabelecer prioridades</h3>
+
+            <p>
+                O homem cristão precisa compreender quais
+                responsabilidades merecem atenção e evitar
+                desperdiçar tempo com atividades que não
+                contribuem para seus deveres e objetivos.
+            </p>
+
+            <h3>Organizar compromissos</h3>
+
+            <p>
+                Planejar horários, cumprir prazos e respeitar
+                compromissos são atitudes que demonstram
+                responsabilidade.
+            </p>
+
+            <h3>Equilibrar as diferentes áreas da vida</h3>
+
+            <p>
+                A disciplina também exige equilíbrio entre
+                as responsabilidades profissionais, familiares,
+                espirituais e pessoais.
+            </p>
+
+            <p>
+                O trabalho não deve consumir todo o tempo
+                do homem a ponto de fazê-lo negligenciar
+                a família e a comunhão com Deus.
+            </p>
+
+            <p>
+                Da mesma maneira, a participação em atividades
+                religiosas não deve ser utilizada como
+                justificativa para abandonar responsabilidades
+                familiares ou profissionais.
+            </p>
+
+            <div class="destaque">
+
+                <strong>Princípio importante:</strong>
+
+                Administrar bem o tempo é reconhecer que
+                nossas responsabilidades fazem parte da
+                mordomia que devemos exercer diante de Deus.
+
+            </div>
+
+        </section>
+
+
+        <!-- DISCIPLINA PESSOAL -->
+
+        <section class="secao">
+
+            <h2>6. Disciplina pessoal e formação de bons hábitos</h2>
+
+            <p>
+                A disciplina também se manifesta nos hábitos
+                que desenvolvemos diariamente.
+            </p>
+
+            <p>
+                Pequenas atitudes, quando praticadas com
+                constância, podem contribuir significativamente
+                para a formação do caráter e para a organização
+                da vida.
+            </p>
+
+            <h3>Responsabilidade com a saúde</h3>
+
+            <p>
+                Cuidar do corpo, respeitar os limites físicos,
+                procurar orientação médica quando necessário
+                e desenvolver hábitos saudáveis são atitudes
+                relacionadas à responsabilidade pessoal.
+            </p>
+
+            <h3>Organização financeira</h3>
+
+            <p>
+                O homem cristão deve procurar administrar
+                seus recursos com prudência, evitar gastos
+                irresponsáveis e cumprir seus compromissos.
+            </p>
+
+            <h3>Responsabilidade com a palavra</h3>
+
+            <p>
+                Cumprir promessas, respeitar acordos e ser
+                pontual são atitudes que demonstram disciplina
+                e consideração pelas outras pessoas.
+            </p>
+
+            <h3>Controle das distrações</h3>
+
+            <p>
+                O uso excessivo de dispositivos eletrônicos,
+                redes sociais e outras formas de entretenimento
+                pode prejudicar o aproveitamento do tempo.
+            </p>
+
+            <p>
+                Desenvolver disciplina significa aprender
+                a estabelecer limites e utilizar esses
+                recursos de maneira equilibrada.
+            </p>
+
+            <h3>Perseverança nos compromissos</h3>
+
+            <p>
+                Uma pessoa disciplinada não depende exclusivamente
+                da motivação do momento. Ela procura manter
+                seus compromissos mesmo quando surgem
+                dificuldades ou quando a tarefa deixa de
+                parecer agradável.
+            </p>
+
+        </section>
+
+
+        <!-- DISCIPLINA E CORREÇÃO -->
+
+        <section class="secao">
+
+            <h2>7. A disciplina como instrumento de crescimento</h2>
+
+            <p>
+                A Bíblia também apresenta a disciplina como
+                parte do processo de orientação, correção
+                e amadurecimento.
+            </p>
+
+            <p>
+                Em diferentes passagens, as Escrituras
+                ensinam que a correção pode contribuir
+                para o desenvolvimento de uma vida mais
+                sábia e responsável.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Porque o Senhor corrige o que ama
+                    e açoita a qualquer que recebe por filho."
+                </p>
+
+                <strong>Hebreus 12:6</strong>
+
+            </div>
+
+            <p>
+                O contexto de Hebreus 12 apresenta a disciplina
+                de Deus como parte de seu cuidado paternal
+                com aqueles que lhe pertencem.
+            </p>
+
+            <p>
+                Essa passagem não deve ser interpretada
+                como autorização para violência ou abuso.
+                A disciplina bíblica está relacionada
+                à formação, correção e amadurecimento.
+            </p>
+
+            <h3>Reconhecer os próprios erros</h3>
+
+            <p>
+                O homem disciplinado não procura justificar
+                permanentemente suas falhas. Ele reconhece
+                quando erra, assume responsabilidades
+                e procura corrigir seu comportamento.
+            </p>
+
+            <h3>Aprender com a correção</h3>
+
+            <p>
+                Receber orientação exige humildade.
+                A disposição de ouvir conselhos e corrigir
+                atitudes demonstra maturidade.
+            </p>
+
+            <h3>Continuar crescendo</h3>
+
+            <p>
+                A formação cristã é um processo contínuo.
+                Não devemos imaginar que alcançamos
+                maturidade completa em determinado momento.
+            </p>
+
+            <p>
+                Precisamos permanecer disponíveis ao ensino
+                das Escrituras e ao aperfeiçoamento de nossa
+                conduta.
+            </p>
+
+        </section>
+
+
+        <!-- VIDA PRÁTICA -->
+
+        <section class="secao">
+
+            <h2>8. A disciplina nas responsabilidades do homem cristão</h2>
+
+            <p>
+                A disciplina precisa produzir resultados
+                concretos nas diferentes áreas da vida.
+            </p>
+
+            <h3>Na família</h3>
+
+            <p>
+                O homem deve demonstrar constância no cuidado
+                com sua família, cumprir responsabilidades,
+                participar da educação dos filhos e cultivar
+                relacionamentos fundamentados no amor e no respeito.
+            </p>
+
+            <h3>Na Igreja</h3>
+
+            <p>
+                A disciplina se manifesta na participação,
+                na pontualidade, no compromisso com o serviço
+                cristão e na fidelidade às responsabilidades
+                assumidas.
+            </p>
+
+            <h3>No trabalho</h3>
+
+            <p>
+                O homem disciplinado procura realizar suas
+                atividades com dedicação, honestidade,
+                organização e respeito aos compromissos.
+            </p>
+
+            <h3>Na vida financeira</h3>
+
+            <p>
+                É necessário desenvolver responsabilidade
+                na administração dos recursos, planejar
+                despesas e evitar decisões impulsivas.
+            </p>
+
+            <h3>Na vida espiritual</h3>
+
+            <p>
+                A disciplina aparece na dedicação ao estudo
+                bíblico, na oração, na comunhão cristã
+                e na prática dos ensinamentos de Cristo.
+            </p>
+
+            <div class="destaque">
+
+                <strong>Aplicação prática:</strong>
+
+                Uma vida disciplinada não é construída
+                por meio de grandes promessas ocasionais,
+                mas por compromissos cotidianos que são
+                assumidos e cumpridos com responsabilidade.
+
+            </div>
+
+        </section>
+
+
+        <!-- CONCLUSÃO -->
+
+        <section class="secao">
+
+            <h2>9. Conclusão</h2>
+
+            <p>
+                A disciplina é indispensável à formação
+                de um homem cristão maduro. Ela contribui
+                para organizar a vida, fortalecer bons
+                hábitos e desenvolver constância no
+                cumprimento das responsabilidades.
+            </p>
+
+            <p>
+                O exemplo apresentado pelo apóstolo Paulo
+                demonstra a importância de viver com propósito,
+                dedicação e perseverança.
+            </p>
+
+            <p>
+                A disciplina espiritual nos ajuda a cultivar
+                comunhão com Deus, estudar as Escrituras,
+                participar da Igreja e praticar aquilo
+                que aprendemos.
+            </p>
+
+            <p>
+                Entretanto, precisamos lembrar que não somos
+                salvos por nossa disciplina. Somos salvos
+                pela graça de Deus, mediante a fé em Jesus
+                Cristo. A disciplina é uma expressão
+                de compromisso e amadurecimento na vida
+                daquele que deseja seguir o Senhor.
+            </p>
+
+            <p>
+                O homem segundo o coração de Deus procura
+                desenvolver uma vida ordenada, responsável
+                e perseverante, reconhecendo que cada área
+                de sua existência deve ser orientada pelos
+                princípios das Escrituras.
+            </p>
+
+        </section>
+
+
+        <!-- PRINCÍPIO FORMATIVO -->
+
+        <div class="principio">
+
+            <h2>Princípio Formativo</h2>
+
+            <p>
+                O homem segundo o coração de Deus desenvolve
+                disciplina por meio de uma vida comprometida
+                com as Escrituras, organizada em suas
+                responsabilidades e perseverante na prática
+                dos princípios cristãos.
+            </p>
+
+        </div>
+
+
+        <!-- MEMORIZAÇÃO -->
+
+        <section class="secao">
+
+            <h2>10. Versículo para memorizar</h2>
+
+            <div class="versiculo">
+
+                <p>
+                    "Mas esmurro o meu corpo e o reduzo
+                    à servidão, para que, pregando aos outros,
+                    eu mesmo não venha de alguma maneira
+                    a ficar reprovado."
+                </p>
+
+                <strong>1 Coríntios 9:27</strong>
+
+            </div>
+
+            <p>
+                Esse versículo apresenta a seriedade com
+                que Paulo encarava sua responsabilidade
+                no serviço cristão. Ele compreendia que
+                precisava viver de maneira coerente com
+                a mensagem que anunciava.
+            </p>
+
+            <p>
+                A linguagem utilizada pelo apóstolo é uma
+                comparação com a disciplina de um atleta
+                e expressa a necessidade de domínio sobre
+                os próprios impulsos e de perseverança
+                na caminhada cristã.
+            </p>
+
+        </section>
+
+
+        <!-- REFERÊNCIAS -->
+
+        <section class="secao">
+
+            <h2>11. Referências bíblicas para estudo</h2>
+
+            <div class="referencias">
+
+                <h3>Leitura principal</h3>
+
+                <ul class="lista">
+
+                    <li>1 Coríntios 9:24-27 — A disciplina e a perseverança na caminhada cristã.</li>
+
+                    <li>Salmo 1:1-3 — O prazer e a meditação na Palavra de Deus.</li>
+
+                    <li>Efésios 5:15-17 — Sabedoria e administração do tempo.</li>
+
+                    <li>Tiago 1:22-25 — A prática dos ensinamentos das Escrituras.</li>
+
+                </ul>
+
+                <h3>Leituras complementares</h3>
+
+                <ul class="lista">
+
+                    <li>Provérbios 6:6-11 — A diligência e o exemplo da formiga.</li>
+
+                    <li>Provérbios 13:4 — O valor da diligência.</li>
+
+                    <li>Provérbios 16:3 — A entrega dos planos ao Senhor.</li>
+
+                    <li>1 Tessalonicenses 5:16-22 — Práticas importantes da vida cristã.</li>
+
+                    <li>2 Timóteo 2:1-7 — Dedicação, perseverança e compromisso.</li>
+
+                    <li>Hebreus 12:5-11 — A disciplina como parte do cuidado de Deus.</li>
+
+                    <li>2 Pedro 1:5-8 — O desenvolvimento das virtudes cristãs.</li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- REFLEXÃO -->
+
+        <section class="reflexao">
+
+            <h2>Para Refletir</h2>
+
+            <p>
+                Muitas pessoas desejam alcançar maturidade,
+                desenvolver uma vida espiritual mais profunda
+                e construir relacionamentos saudáveis.
+                Entretanto, esses objetivos exigem compromisso
+                e perseverança.
+            </p>
+
+            <p>
+                A disciplina nos ensina que não devemos
+                depender exclusivamente da motivação
+                ou do entusiasmo de determinado momento.
+                Precisamos cultivar hábitos e atitudes
+                coerentes com aquilo em que acreditamos.
+            </p>
+
+            <p>
+                O homem segundo o coração de Deus compreende
+                que sua vida precisa ter direção. Ele procura
+                organizar seu tempo, cumprir suas responsabilidades
+                e manter uma caminhada constante com o Senhor.
+            </p>
+
+            <p>
+                A pergunta que precisamos fazer é:
+                nossas práticas diárias demonstram o compromisso
+                que afirmamos ter com Deus?
+            </p>
+
+        </section>
+
+
+        <!-- NAVEGAÇÃO -->
+
+        <nav class="navegacao-temas">
+
+            <a href="tema03.html" class="botao">
+                ← TEMA ANTERIOR
+            </a>
+
+            <a href="apresentacao.html" class="botao">
+                VOLTAR AO MÓDULO
+            </a>
+
+            <a href="tema05.html" class="botao">
+                PRÓXIMO TEMA →
+            </a>
+
+            <a href="../../../uhbb_psh.html" class="botao">
+                PÁGINA PRINCIPAL
+            </a>
+
+        </nav>
+
+        <div style="text-align: center; margin-bottom: 40px;">
+
+            <button onclick="window.print()" class="botao"
+                style="border: none; cursor: pointer; font-family: 'Open Sans', sans-serif;">
+                IMPRIMIR ESTUDO
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <footer class="rodape-tema">
+
+        <p>
+            HOMENS SEGUNDO O CORAÇÃO DE DEUS
+        </p>
+
+        <p>
+            Formando homens, fortalecendo famílias e servindo à Igreja de Cristo.
+        </p>
+
+        <p>
+            Módulo 05 — Coragem, Disciplina e Domínio Próprio
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>O Domínio Próprio e o Controle das Emoções | Módulo 05</title>
+
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --marrom: #593B2B;
+            --marrom-escuro: #38271F;
+            --marrom-medio: #76523C;
+            --azul: #18334D;
+            --azul-claro: #294B65;
+            --dourado: #B08A48;
+            --dourado-claro: #D1B477;
+            --bege: #E9DFC9;
+            --creme: #F7F4EC;
+            --texto: #333333;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--creme);
+            color: var(--texto);
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.8;
+        }
+
+        .topo-tema {
+            background: linear-gradient(135deg, var(--marrom-escuro), var(--azul));
+            color: white;
+            padding: 65px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--dourado);
+        }
+
+        .topo-tema .identificacao {
+            color: var(--dourado-claro);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .topo-tema h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            margin: 18px auto;
+            max-width: 900px;
+            line-height: 1.3;
+        }
+
+        .topo-tema p {
+            max-width: 750px;
+            margin: 15px auto 0;
+            color: #eee5d5;
+            font-size: 1.05rem;
+        }
+
+        .conteudo-tema {
+            max-width: 1050px;
+            margin: 45px auto;
+            padding: 0 22px;
+        }
+
+        .secao {
+            background: white;
+            padding: 32px;
+            margin-bottom: 28px;
+            border-radius: 10px;
+            border-left: 5px solid var(--dourado);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+        }
+
+        .secao h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--azul);
+            font-size: 1.45rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .secao h3 {
+            color: var(--marrom);
+            font-size: 1.12rem;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        .secao p {
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .versiculo {
+            background: var(--azul);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .versiculo p {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.2rem;
+            font-style: italic;
+            line-height: 1.9;
+            text-align: center;
+        }
+
+        .versiculo strong {
+            display: block;
+            color: var(--dourado-claro);
+            margin-top: 15px;
+            font-size: 0.95rem;
+        }
+
+        .destaque {
+            background: var(--bege);
+            padding: 22px 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+            border-left: 4px solid var(--dourado);
+        }
+
+        .destaque strong {
+            color: var(--marrom-escuro);
+        }
+
+        .lista {
+            padding-left: 25px;
+        }
+
+        .lista li {
+            margin-bottom: 12px;
+        }
+
+        .referencias {
+            background: #f0f3f5;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid var(--azul);
+        }
+
+        .referencias h3 {
+            margin-top: 0;
+        }
+
+        .reflexao {
+            background: linear-gradient(135deg, var(--marrom-escuro), var(--marrom));
+            color: white;
+            padding: 32px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .reflexao h2 {
+            color: var(--dourado-claro);
+            font-family: 'Cinzel', serif;
+            margin-top: 0;
+        }
+
+        .reflexao p {
+            text-align: justify;
+        }
+
+        .principio {
+            background: white;
+            border: 2px solid var(--dourado);
+            padding: 28px;
+            text-align: center;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+
+        .principio h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--marrom);
+            margin-top: 0;
+        }
+
+        .principio p {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.08rem;
+            font-style: italic;
+        }
+
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .botao {
+            display: inline-block;
+            padding: 13px 23px;
+            background: var(--azul);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            background: var(--dourado);
+            color: var(--marrom-escuro);
+            transform: translateY(-2px);
+        }
+
+        .rodape-tema {
+            background: var(--marrom-escuro);
+            color: #e8dfd0;
+            text-align: center;
+            padding: 28px 20px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 650px) {
+
+            .secao {
+                padding: 23px;
+            }
+
+            .topo-tema {
+                padding: 45px 18px;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+            }
+
+            .botao {
+                text-align: center;
+                width: 100%;
+            }
+        }
+
+        @media print {
+
+            body {
+                background: white;
+                color: black;
+            }
+
+            .topo-tema {
+                background: white;
+                color: black;
+                border-bottom: 2px solid black;
+                padding: 25px;
+            }
+
+            .topo-tema .identificacao,
+            .topo-tema p {
+                color: black;
+            }
+
+            .secao {
+                box-shadow: none;
+                border: 1px solid #ccc;
+                break-inside: avoid;
+            }
+
+            .versiculo,
+            .reflexao {
+                background: #eee;
+                color: black;
+            }
+
+            .versiculo strong,
+            .reflexao h2 {
+                color: black;
+            }
+
+            .navegacao-temas,
+            .rodape-tema {
+                display: none;
+            }
+
+            .conteudo-tema {
+                margin: 20px auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="topo-tema">
+
+        <div class="identificacao">
+            Homens Segundo o Coração de Deus
+        </div>
+
+        <h1>O Domínio Próprio e o Controle das Emoções</h1>
+
+        <p>
+            Módulo 05 — Coragem, Disciplina e Domínio Próprio
+            <br>
+            Tema 05
+        </p>
+
+    </header>
+
+
+    <main class="conteudo-tema">
+
+        <!-- INTRODUÇÃO -->
+
+        <section class="secao">
+
+            <h2>1. Introdução</h2>
+
+            <p>
+                O ser humano experimenta diferentes emoções
+                ao longo da vida. Alegria, tristeza, medo,
+                preocupação, indignação, frustração e entusiasmo
+                fazem parte da experiência humana.
+            </p>
+
+            <p>
+                Essas emoções influenciam nossos pensamentos,
+                relacionamentos e decisões. Entretanto,
+                quando não sabemos lidar adequadamente com
+                nossos sentimentos e impulsos, podemos agir
+                de maneira precipitada e provocar consequências
+                negativas para nós mesmos e para outras pessoas.
+            </p>
+
+            <p>
+                A vida cristã exige maturidade também nessa área.
+                O homem que deseja viver segundo os princípios
+                das Escrituras precisa aprender a reconhecer
+                suas emoções, avaliar suas reações e orientar
+                seu comportamento de acordo com a vontade de Deus.
+            </p>
+
+            <p>
+                Nesse contexto, o domínio próprio ocupa lugar
+                fundamental. Ele não significa ausência de
+                sentimentos, mas capacidade de não permitir
+                que desejos, impulsos e emoções determinem
+                descontroladamente nossas atitudes.
+            </p>
+
+            <div class="destaque">
+
+                <strong>Ideia central:</strong>
+
+                O domínio próprio é a capacidade de orientar
+                pensamentos, desejos, palavras e atitudes
+                de maneira equilibrada, permitindo que os
+                princípios bíblicos e a ação do Espírito Santo
+                conduzam nossa maneira de viver.
+
+            </div>
+
+        </section>
+
+
+        <!-- SIGNIFICADO -->
+
+        <section class="secao">
+
+            <h2>2. O significado bíblico do domínio próprio</h2>
+
+            <p>
+                Domínio próprio é a capacidade de exercer
+                controle sobre os próprios impulsos e
+                comportamentos, evitando atitudes precipitadas
+                ou prejudiciais.
+            </p>
+
+            <p>
+                Na perspectiva bíblica, essa qualidade está
+                relacionada à maturidade espiritual e à
+                transformação do caráter.
+            </p>
+
+            <p>
+                O homem cristão não deve ser governado
+                exclusivamente por aquilo que sente em
+                determinado momento. Seus sentimentos
+                precisam ser considerados, mas suas decisões
+                devem ser orientadas pela verdade e pela
+                sabedoria das Escrituras.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Mas o fruto do Espírito é: amor, gozo,
+                    paz, longanimidade, benignidade, bondade,
+                    fé, mansidão, temperança."
+                </p>
+
+                <strong>Gálatas 5:22-23</strong>
+
+            </div>
+
+            <h3>O domínio próprio como fruto do Espírito</h3>
+
+            <p>
+                A palavra traduzida como temperança em
+                algumas versões bíblicas também aparece
+                como domínio próprio em outras traduções.
+            </p>
+
+            <p>
+                Paulo apresenta essa qualidade entre as
+                manifestações do fruto do Espírito Santo.
+                Isso demonstra que o domínio próprio não
+                deve ser compreendido apenas como resultado
+                da força de vontade humana.
+            </p>
+
+            <p>
+                O cristão é chamado a viver sob a direção
+                do Espírito, permitindo que Deus transforme
+                seu caráter e suas atitudes.
+            </p>
+
+            <p>
+                Isso não elimina nossa responsabilidade
+                pessoal. A vida cristã envolve dependência
+                de Deus e disposição consciente para obedecer
+                à sua Palavra.
+            </p>
+
+            <div class="destaque">
+
+                <strong>Princípio fundamental:</strong>
+
+                O domínio próprio não é simplesmente reprimir
+                sentimentos ou confiar na própria força.
+                É desenvolver uma vida orientada pelo Espírito
+                Santo, com responsabilidade e obediência
+                aos ensinamentos de Cristo.
+
+            </div>
+
+        </section>
+
+
+        <!-- EMOÇÕES -->
+
+        <section class="secao">
+
+            <h2>3. Compreendendo as emoções humanas</h2>
+
+            <p>
+                As emoções fazem parte da experiência humana
+                e estão presentes em diferentes momentos
+                da vida.
+            </p>
+
+            <p>
+                A Bíblia apresenta personagens que experimentaram
+                sentimentos intensos, demonstrando que sentir
+                emoções não é, por si só, algo incompatível
+                com a fé.
+            </p>
+
+            <h3>Jesus e a experiência das emoções</h3>
+
+            <p>
+                Os Evangelhos apresentam Jesus demonstrando
+                compaixão, tristeza, indignação e profunda
+                angústia em diferentes situações.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Jesus chorou."
+                </p>
+
+                <strong>João 11:35</strong>
+
+            </div>
+
+            <p>
+                Nesse episódio, Jesus chorou diante da morte
+                de Lázaro e da dor daqueles que estavam
+                ao seu redor.
+            </p>
+
+            <p>
+                Sua reação demonstra que a expressão da
+                tristeza não é sinal de fraqueza espiritual.
+                O próprio Senhor Jesus manifestou emoções
+                humanas de maneira verdadeira.
+            </p>
+
+            <h3>Jesus e a indignação</h3>
+
+            <p>
+                Em Marcos 3:1-5, Jesus demonstra indignação
+                diante da dureza de coração daqueles que
+                observavam a situação de um homem com a
+                mão ressequida, preocupados em acusá-lo
+                por causa de uma cura realizada no sábado.
+            </p>
+
+            <p>
+                A indignação de Jesus estava relacionada
+                à injustiça e à dureza de coração.
+                Sua atitude não foi uma reação descontrolada,
+                mas uma manifestação coerente com sua
+                santidade e seu compromisso com o bem.
+            </p>
+
+            <h3>Sentir não é o mesmo que agir</h3>
+
+            <p>
+                É importante compreender a diferença entre
+                experimentar uma emoção e decidir como
+                reagir diante dela.
+            </p>
+
+            <p>
+                Sentir raiva não significa que precisamos
+                agredir alguém. Sentir medo não significa
+                que devemos abandonar nossas responsabilidades.
+                Sentir tristeza não significa que perdemos
+                a fé.
+            </p>
+
+            <p>
+                O domínio próprio nos ajuda a avaliar
+                nossas reações e escolher atitudes
+                responsáveis.
+            </p>
+
+        </section>
+
+
+        <!-- IRA -->
+
+        <section class="secao">
+
+            <h2>4. O domínio próprio diante da ira</h2>
+
+            <p>
+                A ira é uma emoção que pode surgir diante
+                de situações de injustiça, frustração,
+                desrespeito ou contrariedade.
+            </p>
+
+            <p>
+                Entretanto, quando não é administrada
+                adequadamente, pode produzir palavras
+                ofensivas, agressividade, conflitos
+                e decisões das quais posteriormente
+                nos arrependemos.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Irai-vos e não pequeis; não se ponha
+                    o sol sobre a vossa ira."
+                </p>
+
+                <strong>Efésios 4:26</strong>
+
+            </div>
+
+            <p>
+                Paulo reconhece a possibilidade da ira,
+                mas ensina que ela não deve conduzir
+                ao pecado.
+            </p>
+
+            <p>
+                O versículo seguinte também alerta para
+                que não seja dada oportunidade ao diabo
+                por meio de atitudes pecaminosas.
+            </p>
+
+            <h3>Como lidar com a ira?</h3>
+
+            <ul class="lista">
+
+                <li>
+                    Reconhecer quando estamos irritados
+                    e compreender o motivo da reação.
+                </li>
+
+                <li>
+                    Evitar responder impulsivamente
+                    durante um momento de intensa irritação.
+                </li>
+
+                <li>
+                    Procurar compreender a situação
+                    antes de tirar conclusões.
+                </li>
+
+                <li>
+                    Conversar com respeito, mesmo
+                    quando existe discordância.
+                </li>
+
+                <li>
+                    Reconhecer erros e pedir perdão
+                    quando nossas atitudes prejudicam
+                    outras pessoas.
+                </li>
+
+            </ul>
+
+            <div class="versiculo">
+
+                <p>
+                    "O homem iracundo suscita contendas,
+                    mas o longânimo apaziguará a luta."
+                </p>
+
+                <strong>Provérbios 15:18</strong>
+
+            </div>
+
+            <p>
+                A sabedoria bíblica demonstra que a maneira
+                como reagimos aos conflitos pode contribuir
+                para a paz ou aumentar os problemas.
+            </p>
+
+        </section>
+
+
+        <!-- PALAVRAS -->
+
+        <section class="secao">
+
+            <h2>5. O domínio próprio nas palavras</h2>
+
+            <p>
+                As palavras possuem grande influência
+                sobre os relacionamentos. Uma frase
+                pronunciada sem reflexão pode provocar
+                feridas, desentendimentos e afastamentos.
+            </p>
+
+            <p>
+                O homem cristão precisa aprender a falar
+                com responsabilidade, considerando
+                o conteúdo, o momento e a maneira
+                como se comunica.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "O que guarda a sua boca e a sua língua
+                    guarda das angústias a sua alma."
+                </p>
+
+                <strong>Provérbios 21:23</strong>
+
+            </div>
+
+            <h3>Falar no momento adequado</h3>
+
+            <p>
+                Nem toda situação exige uma resposta imediata.
+                Muitas vezes, ouvir com atenção e refletir
+                antes de falar é uma atitude de sabedoria.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Todo o homem seja pronto para ouvir,
+                    tardio para falar, tardio para se irar."
+                </p>
+
+                <strong>Tiago 1:19</strong>
+
+            </div>
+
+            <h3>Evitar palavras destrutivas</h3>
+
+            <p>
+                Insultos, humilhações, ameaças, fofocas
+                e acusações irresponsáveis não combinam
+                com o caráter cristão.
+            </p>
+
+            <p>
+                O domínio próprio também se manifesta
+                quando escolhemos não utilizar palavras
+                para ferir ou diminuir outras pessoas.
+            </p>
+
+            <h3>Utilizar palavras que edifiquem</h3>
+
+            <div class="versiculo">
+
+                <p>
+                    "Não saia da vossa boca nenhuma palavra
+                    torpe, mas só a que for boa para promover
+                    a edificação, para que dê graça aos que
+                    a ouvem."
+                </p>
+
+                <strong>Efésios 4:29</strong>
+
+            </div>
+
+            <p>
+                A comunicação cristã deve contribuir
+                para a edificação, a verdade e o respeito.
+            </p>
+
+        </section>
+
+
+        <!-- DESEJOS E IMPULSOS -->
+
+        <section class="secao">
+
+            <h2>6. O domínio próprio diante dos desejos e impulsos</h2>
+
+            <p>
+                Além das emoções, o ser humano também
+                experimenta desejos e impulsos que podem
+                influenciar suas escolhas.
+            </p>
+
+            <p>
+                Nem todo desejo deve ser transformado
+                em ação. A maturidade exige capacidade
+                de avaliar as consequências de nossas
+                decisões e reconhecer os limites
+                estabelecidos pela Palavra de Deus.
+            </p>
+
+            <h3>Controlar impulsos</h3>
+
+            <p>
+                A impulsividade pode levar a decisões
+                precipitadas em diferentes áreas da vida:
+                relacionamentos, finanças, trabalho,
+                alimentação, uso de tecnologias e
+                comportamento pessoal.
+            </p>
+
+            <p>
+                O domínio próprio nos ensina a pensar
+                antes de agir e a considerar se determinada
+                atitude é correta, necessária e responsável.
+            </p>
+
+            <h3>Resistir às tentações</h3>
+
+            <p>
+                A Bíblia ensina que o cristão deve resistir
+                às tentações e procurar viver em santidade.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Vigiai e orai, para que não entreis
+                    em tentação; na verdade, o espírito
+                    está pronto, mas a carne é fraca."
+                </p>
+
+                <strong>Mateus 26:41</strong>
+
+            </div>
+
+            <p>
+                Jesus ensinou seus discípulos sobre a
+                importância da vigilância e da oração.
+                A consciência de nossas limitações deve
+                nos conduzir à dependência de Deus.
+            </p>
+
+            <h3>Estabelecer limites saudáveis</h3>
+
+            <p>
+                O homem cristão precisa reconhecer situações
+                que podem favorecer comportamentos prejudiciais
+                e estabelecer limites adequados.
+            </p>
+
+            <p>
+                Isso pode envolver evitar ambientes de risco,
+                administrar o uso de tecnologias, cuidar
+                dos relacionamentos e buscar ajuda quando
+                necessário.
+            </p>
+
+            <div class="destaque">
+
+                <strong>Aplicação prática:</strong>
+
+                Domínio próprio também significa reconhecer
+                nossas vulnerabilidades e tomar decisões
+                preventivas para não alimentar situações
+                que podem nos conduzir ao pecado.
+
+            </div>
+
+        </section>
+
+
+        <!-- RELACIONAMENTOS -->
+
+        <section class="secao">
+
+            <h2>7. O domínio próprio nos relacionamentos</h2>
+
+            <p>
+                A maturidade cristã se manifesta de maneira
+                muito clara na forma como tratamos as pessoas,
+                especialmente quando existem diferenças,
+                frustrações e conflitos.
+            </p>
+
+            <h3>No casamento e na família</h3>
+
+            <p>
+                O domínio próprio é necessário para lidar
+                com divergências, conversar com respeito,
+                reconhecer erros e evitar atitudes agressivas.
+            </p>
+
+            <p>
+                A autoridade e a responsabilidade familiar
+                nunca devem ser utilizadas como justificativa
+                para violência, intimidação ou humilhação.
+            </p>
+
+            <p>
+                O homem cristão é chamado a demonstrar amor,
+                cuidado, paciência e respeito.
+            </p>
+
+            <h3>Na Igreja</h3>
+
+            <p>
+                A convivência cristã exige paciência,
+                humildade e capacidade de lidar com
+                diferenças de opinião.
+            </p>
+
+            <p>
+                O domínio próprio ajuda a evitar discussões
+                desnecessárias, fofocas, atitudes de
+                superioridade e conflitos motivados
+                pelo orgulho.
+            </p>
+
+            <h3>No trabalho</h3>
+
+            <p>
+                O ambiente profissional também exige
+                equilíbrio emocional. Pressões, cobranças,
+                discordâncias e dificuldades não devem
+                servir de justificativa para comportamentos
+                desrespeitosos.
+            </p>
+
+            <h3>Na sociedade</h3>
+
+            <p>
+                O homem cristão precisa manter uma postura
+                responsável diante das diferenças sociais,
+                culturais e de opinião, tratando as pessoas
+                com dignidade.
+            </p>
+
+        </section>
+
+
+        <!-- MANSIDÃO -->
+
+        <section class="secao">
+
+            <h2>8. Mansidão não é fraqueza</h2>
+
+            <p>
+                Um equívoco comum é imaginar que domínio
+                próprio e mansidão representam fraqueza
+                ou falta de personalidade.
+            </p>
+
+            <p>
+                Entretanto, a mansidão bíblica está
+                relacionada à força conduzida com equilíbrio,
+                humildade e respeito.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Bem-aventurados os mansos, porque
+                    eles herdarão a terra."
+                </p>
+
+                <strong>Mateus 5:5</strong>
+
+            </div>
+
+            <p>
+                Jesus apresenta a mansidão como uma
+                característica daqueles que pertencem
+                ao Reino de Deus.
+            </p>
+
+            <p>
+                Ser manso não significa aceitar passivamente
+                toda injustiça ou deixar de defender aquilo
+                que é correto. Significa agir sem permitir
+                que orgulho, ódio ou desejo de vingança
+                controlem nossas atitudes.
+            </p>
+
+            <p>
+                Um homem pode ser firme em suas convicções
+                e, ao mesmo tempo, tratar as pessoas
+                com respeito.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Melhor é o longânimo do que o valente,
+                    e o que governa o seu espírito do que
+                    o que toma uma cidade."
+                </p>
+
+                <strong>Provérbios 16:32</strong>
+
+            </div>
+
+            <p>
+                A sabedoria de Provérbios destaca que
+                governar a si mesmo é uma demonstração
+                de força e maturidade.
+            </p>
+
+        </section>
+
+
+        <!-- PRÁTICA -->
+
+        <section class="secao">
+
+            <h2>9. Desenvolvendo o domínio próprio na prática</h2>
+
+            <p>
+                O domínio próprio precisa ser desenvolvido
+                no cotidiano. A formação cristã envolve
+                atitudes conscientes e dependência contínua
+                da ação do Espírito Santo.
+            </p>
+
+            <h3>1. Reconhecer as próprias emoções</h3>
+
+            <p>
+                Aprender a identificar o que estamos sentindo
+                é um passo importante. Precisamos reconhecer
+                quando estamos irritados, frustrados,
+                preocupados ou emocionalmente sobrecarregados.
+            </p>
+
+            <h3>2. Pensar antes de reagir</h3>
+
+            <p>
+                Antes de responder a uma provocação ou
+                tomar uma decisão importante, é necessário
+                refletir sobre as consequências.
+            </p>
+
+            <h3>3. Submeter as decisões aos princípios bíblicos</h3>
+
+            <p>
+                Nossas escolhas precisam ser examinadas
+                à luz da Palavra de Deus. Uma atitude
+                não se torna correta simplesmente porque
+                sentimos vontade de realizá-la.
+            </p>
+
+            <h3>4. Cultivar uma vida de oração</h3>
+
+            <p>
+                A oração nos ajuda a reconhecer nossa
+                dependência do Senhor e buscar sabedoria
+                para enfrentar as situações da vida.
+            </p>
+
+            <h3>5. Desenvolver hábitos saudáveis</h3>
+
+            <p>
+                Sono adequado, alimentação equilibrada,
+                atividade física, organização do tempo
+                e relacionamentos saudáveis contribuem
+                para o bem-estar e para uma vida mais
+                equilibrada.
+            </p>
+
+            <h3>6. Reconhecer quando precisamos de ajuda</h3>
+
+            <p>
+                Existem situações em que nossas dificuldades
+                emocionais exigem acompanhamento e orientação
+                profissional.
+            </p>
+
+            <p>
+                Buscar ajuda psicológica ou médica quando
+                necessário não representa falta de fé.
+                É uma atitude responsável diante das
+                próprias limitações.
+            </p>
+
+            <h3>7. Aprender a pedir perdão e recomeçar</h3>
+
+            <p>
+                Quando falhamos no controle de nossas
+                atitudes, precisamos reconhecer os erros,
+                reparar os danos quando possível e procurar
+                agir de maneira diferente.
+            </p>
+
+            <div class="destaque">
+
+                <strong>Importante:</strong>
+
+                O crescimento no domínio próprio é um
+                processo. Não significa que o cristão
+                nunca enfrentará dificuldades emocionais,
+                mas que deve buscar amadurecimento e
+                transformação contínuos em Cristo.
+
+            </div>
+
+        </section>
+
+
+        <!-- CONCLUSÃO -->
+
+        <section class="secao">
+
+            <h2>10. Conclusão</h2>
+
+            <p>
+                O domínio próprio é uma qualidade essencial
+                à formação de um homem cristão maduro.
+                Ele influencia a maneira como lidamos
+                com nossas emoções, desejos, palavras,
+                decisões e relacionamentos.
+            </p>
+
+            <p>
+                As Escrituras demonstram que o domínio
+                próprio faz parte do fruto do Espírito.
+                Por isso, não devemos compreendê-lo
+                apenas como uma conquista da força
+                de vontade humana.
+            </p>
+
+            <p>
+                A vida cristã exige dependência de Deus,
+                compromisso com a Palavra e disposição
+                para desenvolver atitudes coerentes
+                com os ensinamentos de Jesus.
+            </p>
+
+            <p>
+                O homem segundo o coração de Deus não
+                precisa esconder suas emoções nem
+                fingir que nunca enfrenta dificuldades.
+                Ele precisa aprender a lidar com elas
+                de maneira responsável, sem permitir
+                que impulsos descontrolados determinem
+                seu comportamento.
+            </p>
+
+            <p>
+                A verdadeira maturidade se manifesta
+                quando nossas atitudes demonstram
+                equilíbrio, mansidão, sabedoria e
+                compromisso com Cristo.
+            </p>
+
+        </section>
+
+
+        <!-- PRINCÍPIO FORMATIVO -->
+
+        <div class="principio">
+
+            <h2>Princípio Formativo</h2>
+
+            <p>
+                O homem segundo o coração de Deus busca
+                desenvolver domínio próprio pela ação
+                do Espírito Santo, orientando suas emoções,
+                desejos, palavras e atitudes pelos
+                princípios das Escrituras.
+            </p>
+
+        </div>
+
+
+        <!-- MEMORIZAÇÃO -->
+
+        <section class="secao">
+
+            <h2>11. Versículo para memorizar</h2>
+
+            <div class="versiculo">
+
+                <p>
+                    "Melhor é o longânimo do que o valente,
+                    e o que governa o seu espírito do que
+                    o que toma uma cidade."
+                </p>
+
+                <strong>Provérbios 16:32</strong>
+
+            </div>
+
+            <p>
+                Esse provérbio ensina que a capacidade
+                de governar a si mesmo representa uma
+                demonstração extraordinária de força
+                e sabedoria.
+            </p>
+
+            <p>
+                O homem cristão precisa compreender que
+                vencer os próprios impulsos, agir com
+                equilíbrio e manter uma conduta coerente
+                com a Palavra de Deus são expressões
+                importantes de maturidade espiritual.
+            </p>
+
+        </section>
+
+
+        <!-- REFERÊNCIAS -->
+
+        <section class="secao">
+
+            <h2>12. Referências bíblicas para estudo</h2>
+
+            <div class="referencias">
+
+                <h3>Leitura principal</h3>
+
+                <ul class="lista">
+
+                    <li>Gálatas 5:16-25 — As obras da carne e o fruto do Espírito.</li>
+
+                    <li>Provérbios 16:32 — O valor de governar o próprio espírito.</li>
+
+                    <li>Tiago 1:19-20 — O cuidado com as palavras e a ira.</li>
+
+                    <li>Efésios 4:25-32 — A transformação da conduta cristã.</li>
+
+                    <li>Mateus 26:36-46 — Jesus no Getsêmani.</li>
+
+                </ul>
+
+                <h3>Leituras complementares</h3>
+
+                <ul class="lista">
+
+                    <li>Provérbios 14:29 — A paciência e o domínio da ira.</li>
+
+                    <li>Provérbios 15:1 — A resposta branda.</li>
+
+                    <li>Provérbios 21:23 — O cuidado com as palavras.</li>
+
+                    <li>Mateus 5:1-12 — As bem-aventuranças.</li>
+
+                    <li>Romanos 12:17-21 — A conduta cristã diante do mal.</li>
+
+                    <li>1 Coríntios 10:13 — A fidelidade de Deus diante da tentação.</li>
+
+                    <li>2 Timóteo 1:7 — Poder, amor e moderação.</li>
+
+                    <li>2 Pedro 1:5-8 — O desenvolvimento das virtudes cristãs.</li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- REFLEXÃO -->
+
+        <section class="reflexao">
+
+            <h2>Para Refletir</h2>
+
+            <p>
+                Um homem pode demonstrar força física,
+                capacidade intelectual e habilidade
+                profissional, mas ainda enfrentar
+                dificuldades para controlar suas
+                próprias reações.
+            </p>
+
+            <p>
+                A maturidade cristã exige mais do que
+                capacidade de enfrentar desafios externos.
+                Também exige disposição para reconhecer
+                as próprias limitações e permitir que
+                Deus transforme nosso caráter.
+            </p>
+
+            <p>
+                Dominar a própria língua, controlar
+                impulsos, lidar com a ira, agir com
+                mansidão e tomar decisões responsáveis
+                são manifestações práticas de uma
+                vida orientada pelo Espírito Santo.
+            </p>
+
+            <p>
+                A pergunta que precisamos fazer é:
+                minhas emoções e meus impulsos estão
+                determinando minhas atitudes ou estou
+                aprendendo a conduzir minha vida segundo
+                os princípios da Palavra de Deus?
+            </p>
+
+        </section>
+
+
+        <!-- NAVEGAÇÃO -->
+
+        <nav class="navegacao-temas">
+
+            <a href="tema04.html" class="botao">
+                ← TEMA ANTERIOR
+            </a>
+
+            <a href="apresentacao.html" class="botao">
+                VOLTAR AO MÓDULO
+            </a>
+
+            <a href="tema06.html" class="botao">
+                PRÓXIMO TEMA →
+            </a>
+
+            <a href="../../../uhbb_psh.html" class="botao">
+                PÁGINA PRINCIPAL
+            </a>
+
+        </nav>
+
+        <div style="text-align: center; margin-bottom: 40px;">
+
+            <button onclick="window.print()" class="botao"
+                style="border: none; cursor: pointer; font-family: 'Open Sans', sans-serif;">
+                IMPRIMIR ESTUDO
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <footer class="rodape-tema">
+
+        <p>
+            HOMENS SEGUNDO O CORAÇÃO DE DEUS
+        </p>
+
+        <p>
+            Formando homens, fortalecendo famílias e servindo à Igreja de Cristo.
+        </p>
+
+        <p>
+            Módulo 05 — Coragem, Disciplina e Domínio Próprio
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

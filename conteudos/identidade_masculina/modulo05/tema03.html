@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Coragem Moral e a Fidelidade a Deus | Módulo 05</title>
+
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --marrom: #593B2B;
+            --marrom-escuro: #38271F;
+            --marrom-medio: #76523C;
+            --azul: #18334D;
+            --azul-claro: #294B65;
+            --dourado: #B08A48;
+            --dourado-claro: #D1B477;
+            --bege: #E9DFC9;
+            --creme: #F7F4EC;
+            --texto: #333333;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--creme);
+            color: var(--texto);
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.8;
+        }
+
+        .topo-tema {
+            background: linear-gradient(135deg, var(--marrom-escuro), var(--azul));
+            color: white;
+            padding: 65px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--dourado);
+        }
+
+        .topo-tema .identificacao {
+            color: var(--dourado-claro);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .topo-tema h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            margin: 18px auto;
+            max-width: 900px;
+            line-height: 1.3;
+        }
+
+        .topo-tema p {
+            max-width: 750px;
+            margin: 15px auto 0;
+            color: #eee5d5;
+            font-size: 1.05rem;
+        }
+
+        .conteudo-tema {
+            max-width: 1050px;
+            margin: 45px auto;
+            padding: 0 22px;
+        }
+
+        .secao {
+            background: white;
+            padding: 32px;
+            margin-bottom: 28px;
+            border-radius: 10px;
+            border-left: 5px solid var(--dourado);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+        }
+
+        .secao h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--azul);
+            font-size: 1.45rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .secao h3 {
+            color: var(--marrom);
+            font-size: 1.12rem;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        .secao p {
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .versiculo {
+            background: var(--azul);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .versiculo p {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.2rem;
+            font-style: italic;
+            line-height: 1.9;
+            text-align: center;
+        }
+
+        .versiculo strong {
+            display: block;
+            color: var(--dourado-claro);
+            margin-top: 15px;
+            font-size: 0.95rem;
+        }
+
+        .destaque {
+            background: var(--bege);
+            padding: 22px 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+            border-left: 4px solid var(--dourado);
+        }
+
+        .destaque strong {
+            color: var(--marrom-escuro);
+        }
+
+        .lista {
+            padding-left: 25px;
+        }
+
+        .lista li {
+            margin-bottom: 12px;
+        }
+
+        .referencias {
+            background: #f0f3f5;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid var(--azul);
+        }
+
+        .referencias h3 {
+            margin-top: 0;
+        }
+
+        .reflexao {
+            background: linear-gradient(135deg, var(--marrom-escuro), var(--marrom));
+            color: white;
+            padding: 32px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .reflexao h2 {
+            color: var(--dourado-claro);
+            font-family: 'Cinzel', serif;
+            margin-top: 0;
+        }
+
+        .reflexao p {
+            text-align: justify;
+        }
+
+        .principio {
+            background: white;
+            border: 2px solid var(--dourado);
+            padding: 28px;
+            text-align: center;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+
+        .principio h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--marrom);
+            margin-top: 0;
+        }
+
+        .principio p {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.08rem;
+            font-style: italic;
+        }
+
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .botao {
+            display: inline-block;
+            padding: 13px 23px;
+            background: var(--azul);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            background: var(--dourado);
+            color: var(--marrom-escuro);
+            transform: translateY(-2px);
+        }
+
+        .rodape-tema {
+            background: var(--marrom-escuro);
+            color: #e8dfd0;
+            text-align: center;
+            padding: 28px 20px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 650px) {
+
+            .secao {
+                padding: 23px;
+            }
+
+            .topo-tema {
+                padding: 45px 18px;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+            }
+
+            .botao {
+                text-align: center;
+                width: 100%;
+            }
+        }
+
+        @media print {
+
+            body {
+                background: white;
+                color: black;
+            }
+
+            .topo-tema {
+                background: white;
+                color: black;
+                border-bottom: 2px solid black;
+                padding: 25px;
+            }
+
+            .topo-tema .identificacao,
+            .topo-tema p {
+                color: black;
+            }
+
+            .secao {
+                box-shadow: none;
+                border: 1px solid #ccc;
+                break-inside: avoid;
+            }
+
+            .versiculo,
+            .reflexao {
+                background: #eee;
+                color: black;
+            }
+
+            .versiculo strong,
+            .reflexao h2 {
+                color: black;
+            }
+
+            .navegacao-temas,
+            .rodape-tema {
+                display: none;
+            }
+
+            .conteudo-tema {
+                margin: 20px auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="topo-tema">
+
+        <div class="identificacao">
+            Homens Segundo o Coração de Deus
+        </div>
+
+        <h1>A Coragem Moral e a Fidelidade a Deus</h1>
+
+        <p>
+            Módulo 05 — Coragem, Disciplina e Domínio Próprio
+            <br>
+            Tema 03
+        </p>
+
+    </header>
+
+
+    <main class="conteudo-tema">
+
+        <!-- INTRODUÇÃO -->
+
+        <section class="secao">
+
+            <h2>1. Introdução</h2>
+
+            <p>
+                Nem toda demonstração de coragem acontece diante
+                de perigos físicos ou situações extraordinárias.
+                Existem momentos em que o maior desafio de um homem
+                é permanecer fiel aos seus princípios.
+            </p>
+
+            <p>
+                Em determinadas circunstâncias, fazer o que é correto
+                pode significar contrariar opiniões, enfrentar
+                pressões sociais, recusar vantagens desonestas
+                ou assumir uma posição que não será bem recebida
+                por outras pessoas.
+            </p>
+
+            <p>
+                Essas situações exigem coragem moral: a disposição
+                de agir de acordo com os princípios corretos,
+                mesmo quando isso envolve dificuldades ou
+                consequências pessoais.
+            </p>
+
+            <p>
+                Para o cristão, essa coragem está fundamentada
+                na fidelidade a Deus e na submissão à sua Palavra.
+                Não se trata de defender opiniões pessoais a
+                qualquer custo, mas de procurar viver de acordo
+                com os ensinamentos das Escrituras.
+            </p>
+
+            <div class="destaque">
+
+                <strong>Ideia central:</strong>
+
+                A coragem moral é a disposição de permanecer
+                fiel aos princípios de Deus, mesmo quando
+                as pressões externas tornam difícil fazer
+                aquilo que é correto.
+
+            </div>
+
+        </section>
+
+
+        <!-- CONCEITO -->
+
+        <section class="secao">
+
+            <h2>2. O significado da coragem moral</h2>
+
+            <p>
+                A coragem moral está relacionada à capacidade
+                de tomar decisões corretas e manter uma conduta
+                coerente com os princípios éticos e espirituais
+                que orientam a vida.
+            </p>
+
+            <p>
+                Uma pessoa demonstra coragem moral quando
+                escolhe a verdade em vez da mentira, a honestidade
+                em vez da vantagem desonesta e a justiça em vez
+                da conveniência pessoal.
+            </p>
+
+            <p>
+                Essa coragem pode ser necessária em situações
+                simples do cotidiano ou em decisões de grande
+                importância.
+            </p>
+
+            <h3>A coragem de fazer o que é correto</h3>
+
+            <p>
+                Nem sempre a decisão correta será a mais fácil.
+                Em algumas situações, agir corretamente poderá
+                provocar críticas, rejeição ou perda de benefícios.
+            </p>
+
+            <p>
+                O homem cristão precisa compreender que sua
+                responsabilidade diante de Deus é mais importante
+                do que a aprovação de todas as pessoas.
+            </p>
+
+            <h3>A coragem de permanecer fiel</h3>
+
+            <p>
+                A fidelidade não deve depender apenas das
+                circunstâncias favoráveis. O compromisso com
+                Deus precisa orientar as decisões tanto nos
+                momentos tranquilos quanto nos períodos de
+                dificuldade.
+            </p>
+
+            <p>
+                Permanecer fiel significa não abandonar os
+                princípios bíblicos simplesmente porque
+                outras pessoas escolheram um caminho diferente.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Mais importa obedecer a Deus do que aos homens."
+                </p>
+
+                <strong>Atos 5:29</strong>
+
+            </div>
+
+            <p>
+                Essa declaração dos apóstolos revela a importância
+                da obediência a Deus quando existe conflito entre
+                sua vontade e determinadas exigências humanas.
+            </p>
+
+        </section>
+
+
+        <!-- DANIEL -->
+
+        <section class="secao">
+
+            <h2>3. Daniel: coragem para permanecer fiel a Deus</h2>
+
+            <p>
+                A história de Daniel apresenta um dos exemplos
+                mais conhecidos de coragem moral nas Escrituras.
+            </p>
+
+            <p>
+                Daniel estava entre os judeus levados para o
+                cativeiro babilônico. Mesmo vivendo em uma cultura
+                diferente, cercado por costumes e práticas
+                religiosas distintas, procurou permanecer fiel
+                ao Deus de Israel.
+            </p>
+
+            <p>
+                O primeiro capítulo do livro de Daniel registra
+                sua decisão de não se contaminar com os alimentos
+                e o vinho da mesa do rei.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "E Daniel assentou no seu coração não se
+                    contaminar com a porção do manjar do rei,
+                    nem com o vinho que ele bebia."
+                </p>
+
+                <strong>Daniel 1:8</strong>
+
+            </div>
+
+            <h3>Uma decisão consciente</h3>
+
+            <p>
+                Daniel não tomou sua decisão por impulso.
+                O texto demonstra que ele havia estabelecido
+                em seu coração uma posição de fidelidade.
+            </p>
+
+            <p>
+                Ele procurou uma maneira respeitosa e responsável
+                de manter sua convicção, conversando com o
+                responsável por sua alimentação.
+            </p>
+
+            <p>
+                Sua atitude revela que a fidelidade a Deus
+                pode caminhar junto com respeito, prudência
+                e sabedoria.
+            </p>
+
+            <h3>Fidelidade mesmo diante da ameaça</h3>
+
+            <p>
+                Em Daniel 6, encontramos outro episódio importante.
+                Alguns homens procuraram encontrar motivos para
+                acusá-lo diante do rei e conseguiram estabelecer
+                um decreto que proibia temporariamente a oração
+                a qualquer deus ou homem, exceto ao próprio rei.
+            </p>
+
+            <p>
+                Daniel sabia que desobedecer ao decreto poderia
+                levá-lo à morte. Mesmo assim, continuou orando
+                a Deus como fazia habitualmente.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Daniel, pois, quando soube que a escritura
+                    estava assinada, entrou em sua casa
+                    e, em cima, no seu quarto, onde havia
+                    janelas abertas da banda de Jerusalém,
+                    três vezes no dia se punha de joelhos,
+                    e orava, e dava graças diante do seu Deus,
+                    como também antes costumava fazer."
+                </p>
+
+                <strong>Daniel 6:10</strong>
+
+            </div>
+
+            <p>
+                Daniel não utilizou a dificuldade como justificativa
+                para abandonar sua comunhão com Deus.
+                Sua fidelidade permaneceu firme mesmo diante
+                de uma ameaça concreta.
+            </p>
+
+            <div class="destaque">
+
+                <strong>Lição para nossa vida:</strong>
+
+                A fidelidade a Deus não deve ser negociada
+                em troca de segurança, reconhecimento ou
+                vantagens pessoais. O homem cristão precisa
+                cultivar convicções fundamentadas nas Escrituras
+                e agir de acordo com elas.
+
+            </div>
+
+        </section>
+
+
+        <!-- SADRAQUE MESAQUE ABEDNEGO -->
+
+        <section class="secao">
+
+            <h2>4. Sadraque, Mesaque e Abede-Nego: fidelidade sem negociação</h2>
+
+            <p>
+                Daniel 3 apresenta outro exemplo extraordinário
+                de coragem moral. Os três jovens judeus Sadraque,
+                Mesaque e Abede-Nego foram confrontados com uma
+                ordem do rei Nabucodonosor.
+            </p>
+
+            <p>
+                O rei havia determinado que todos deveriam se
+                prostrar diante de uma imagem de ouro.
+                Aqueles que desobedecessem seriam lançados
+                em uma fornalha de fogo ardente.
+            </p>
+
+            <p>
+                Os três jovens se recusaram a adorar a imagem,
+                pois sua fidelidade pertencia exclusivamente
+                ao Senhor.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Eis que o nosso Deus, a quem nós servimos,
+                    é que nos pode livrar; ele nos livrará
+                    do forno de fogo ardente e da tua mão,
+                    ó rei. E, se não, fica sabendo, ó rei,
+                    que não serviremos a teus deuses nem
+                    adoraremos a estátua de ouro que levantaste."
+                </p>
+
+                <strong>Daniel 3:17-18</strong>
+
+            </div>
+
+            <h3>Uma fé que não depende do resultado</h3>
+
+            <p>
+                A resposta dos três jovens apresenta um princípio
+                extraordinário: eles confiavam que Deus poderia
+                livrá-los, mas sua fidelidade não dependia
+                da garantia de que seriam poupados.
+            </p>
+
+            <p>
+                Eles estavam dispostos a permanecer fiéis mesmo
+                que o resultado fosse diferente daquele que
+                desejavam.
+            </p>
+
+            <p>
+                Essa atitude demonstra que a obediência a Deus
+                não deve ser condicionada à obtenção de benefícios.
+                A fidelidade cristã é um compromisso com o Senhor,
+                e não uma negociação para conseguir vantagens.
+            </p>
+
+            <h3>O que aprendemos com esses jovens?</h3>
+
+            <ul class="lista">
+
+                <li>
+                    A adoração pertence exclusivamente a Deus.
+                </li>
+
+                <li>
+                    A pressão da maioria não torna uma atitude
+                    incorreta em algo aceitável.
+                </li>
+
+                <li>
+                    A fidelidade pode exigir sacrifícios.
+                </li>
+
+                <li>
+                    A confiança em Deus não depende de resultados
+                    imediatos.
+                </li>
+
+                <li>
+                    É possível permanecer firme sem agir com
+                    arrogância ou violência.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- CONSCIÊNCIA -->
+
+        <section class="secao">
+
+            <h2>5. A consciência cristã precisa ser orientada pela Palavra</h2>
+
+            <p>
+                A consciência humana desempenha um papel importante
+                nas decisões morais. Ela está relacionada à
+                percepção que uma pessoa possui sobre o certo
+                e o errado.
+            </p>
+
+            <p>
+                Entretanto, nossa consciência não é infalível.
+                Ela pode ser influenciada por experiências,
+                costumes, interesses pessoais e valores
+                aprendidos ao longo da vida.
+            </p>
+
+            <p>
+                Por isso, o cristão não deve considerar
+                qualquer opinião pessoal como se fosse
+                automaticamente a vontade de Deus.
+            </p>
+
+            <h3>A Palavra de Deus como referência</h3>
+
+            <p>
+                As Escrituras oferecem os princípios que devem
+                orientar a formação moral do cristão.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Lâmpada para os meus pés é tua palavra
+                    e luz, para o meu caminho."
+                </p>
+
+                <strong>Salmo 119:105</strong>
+
+            </div>
+
+            <p>
+                A Palavra de Deus ilumina o caminho e oferece
+                orientação para nossas escolhas.
+            </p>
+
+            <p>
+                Isso significa que nossas decisões precisam
+                ser examinadas à luz dos ensinamentos bíblicos,
+                e não apenas de nossas preferências.
+            </p>
+
+            <h3>Consciência, sabedoria e humildade</h3>
+
+            <p>
+                O homem cristão deve estudar as Escrituras,
+                buscar entendimento e reconhecer que pode
+                precisar corrigir suas próprias convicções.
+            </p>
+
+            <p>
+                Uma consciência bem orientada não produz
+                arrogância espiritual. Ela conduz à humildade,
+                à responsabilidade e à disposição de obedecer
+                ao Senhor.
+            </p>
+
+        </section>
+
+
+        <!-- PRESSÕES -->
+
+        <section class="secao">
+
+            <h2>6. A coragem moral diante das pressões do cotidiano</h2>
+
+            <p>
+                A coragem moral não é necessária apenas em
+                acontecimentos extraordinários. Ela está
+                presente em diversas situações comuns da vida.
+            </p>
+
+            <h3>Pressão para mentir</h3>
+
+            <p>
+                Um homem pode enfrentar situações em que mentir
+                parece ser a maneira mais fácil de evitar
+                consequências ou obter alguma vantagem.
+            </p>
+
+            <p>
+                A coragem moral exige escolher a verdade,
+                mesmo quando a honestidade pode trazer
+                desconforto.
+            </p>
+
+            <h3>Pressão para agir desonestamente</h3>
+
+            <p>
+                No ambiente profissional, comercial ou
+                administrativo, podem surgir oportunidades
+                de obter vantagens por meios incorretos.
+            </p>
+
+            <p>
+                O cristão precisa manter sua integridade,
+                lembrando que sua responsabilidade diante
+                de Deus não desaparece quando ninguém está
+                observando.
+            </p>
+
+            <h3>Pressão dos grupos sociais</h3>
+
+            <p>
+                Em determinadas situações, alguém pode ser
+                pressionado por amigos, colegas ou conhecidos
+                a participar de atitudes contrárias aos
+                princípios cristãos.
+            </p>
+
+            <p>
+                A coragem moral exige saber dizer não quando
+                necessário, sem desprezar as pessoas ou
+                agir com superioridade.
+            </p>
+
+            <h3>Pressão para permanecer em silêncio diante da injustiça</h3>
+
+            <p>
+                Existem situações em que presenciamos atitudes
+                injustas contra outras pessoas. O medo de
+                desagradar alguém ou sofrer consequências
+                pode levar ao silêncio.
+            </p>
+
+            <p>
+                A coragem moral também envolve defender
+                a verdade e agir com justiça, utilizando
+                meios responsáveis, respeitosos e adequados.
+            </p>
+
+            <div class="destaque">
+
+                <strong>Princípio importante:</strong>
+
+                A coragem moral não significa procurar conflitos
+                ou enfrentar pessoas desnecessariamente.
+                Significa não abandonar a verdade e a justiça
+                apenas para preservar interesses pessoais.
+
+            </div>
+
+        </section>
+
+
+        <!-- TESTEMUNHO -->
+
+        <section class="secao">
+
+            <h2>7. Fidelidade a Deus em todas as áreas da vida</h2>
+
+            <p>
+                A fidelidade cristã não deve ficar limitada
+                aos momentos de culto ou às atividades
+                religiosas. Ela precisa orientar toda
+                a existência.
+            </p>
+
+            <h3>Na vida pessoal</h3>
+
+            <p>
+                O homem cristão deve procurar viver de maneira
+                coerente com aquilo que professa, mantendo
+                seus compromissos e procurando corrigir
+                atitudes contrárias à Palavra de Deus.
+            </p>
+
+            <h3>Na família</h3>
+
+            <p>
+                A fidelidade se manifesta no compromisso,
+                na responsabilidade, no respeito e no cuidado
+                com aqueles que Deus colocou sob sua
+                responsabilidade.
+            </p>
+
+            <h3>Na Igreja</h3>
+
+            <p>
+                O homem cristão deve cooperar com a comunidade
+                de fé, respeitar os princípios bíblicos,
+                servir com humildade e contribuir para
+                a edificação dos irmãos.
+            </p>
+
+            <h3>No trabalho</h3>
+
+            <p>
+                A honestidade, a responsabilidade e o respeito
+                aos compromissos são manifestações práticas
+                da fidelidade aos princípios cristãos.
+            </p>
+
+            <h3>Na sociedade</h3>
+
+            <p>
+                O cristão deve procurar exercer sua cidadania
+                com responsabilidade, respeitar as pessoas,
+                defender a justiça e agir de maneira coerente
+                com sua fé.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Sê fiel até à morte, e dar-te-ei
+                    a coroa da vida."
+                </p>
+
+                <strong>Apocalipse 2:10</strong>
+
+            </div>
+
+            <p>
+                A mensagem dirigida à igreja de Esmirna
+                apresenta a importância da perseverança
+                e da fidelidade a Cristo mesmo diante
+                da perseguição e do sofrimento.
+            </p>
+
+        </section>
+
+
+        <!-- EQUILÍBRIO -->
+
+        <section class="secao">
+
+            <h2>8. Coragem moral não é intolerância ou arrogância</h2>
+
+            <p>
+                É importante distinguir a firmeza nos princípios
+                bíblicos de atitudes marcadas por orgulho,
+                agressividade ou desrespeito.
+            </p>
+
+            <p>
+                O homem cristão não deve utilizar sua fé como
+                justificativa para humilhar pessoas, impor
+                opiniões pessoais ou tratar aqueles que pensam
+                diferente com desprezo.
+            </p>
+
+            <p>
+                A fidelidade a Deus precisa caminhar junto
+                com o amor ao próximo, a humildade e a
+                responsabilidade nas palavras e atitudes.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Antes, santificai a Cristo, como Senhor,
+                    em vosso coração; e estai sempre preparados
+                    para responder com mansidão e temor
+                    a qualquer que vos pedir a razão
+                    da esperança que há em vós."
+                </p>
+
+                <strong>1 Pedro 3:15</strong>
+
+            </div>
+
+            <p>
+                Esse texto apresenta um equilíbrio fundamental:
+                o cristão deve estar preparado para defender
+                sua esperança, mas precisa fazê-lo com mansidão
+                e respeito.
+            </p>
+
+            <p>
+                A firmeza cristã não elimina a gentileza.
+                A coragem moral não precisa de agressividade
+                para demonstrar convicção.
+            </p>
+
+        </section>
+
+
+        <!-- CONCLUSÃO -->
+
+        <section class="secao">
+
+            <h2>9. Conclusão</h2>
+
+            <p>
+                A coragem moral é indispensável à formação
+                de um homem comprometido com Deus.
+                Ela se manifesta quando escolhemos permanecer
+                fiéis aos princípios bíblicos mesmo diante
+                de pressões, ameaças ou vantagens que
+                poderiam nos afastar da verdade.
+            </p>
+
+            <p>
+                Daniel demonstrou fidelidade em uma cultura
+                contrária às suas convicções. Sadraque,
+                Mesaque e Abede-Nego permaneceram firmes
+                mesmo diante da ameaça de morte.
+            </p>
+
+            <p>
+                Esses exemplos nos ensinam que a fidelidade
+                ao Senhor não pode depender da aprovação
+                das pessoas nem da garantia de resultados
+                favoráveis.
+            </p>
+
+            <p>
+                O homem segundo o coração de Deus procura
+                desenvolver uma consciência orientada pelas
+                Escrituras, agir com justiça, defender a
+                verdade e permanecer fiel ao Evangelho
+                em todas as áreas da vida.
+            </p>
+
+        </section>
+
+
+        <!-- PRINCÍPIO FORMATIVO -->
+
+        <div class="principio">
+
+            <h2>Princípio Formativo</h2>
+
+            <p>
+                O homem segundo o coração de Deus demonstra
+                coragem moral quando permanece fiel à Palavra,
+                escolhe o que é correto e não negocia seus
+                princípios para obter aprovação ou vantagens
+                pessoais.
+            </p>
+
+        </div>
+
+
+        <!-- MEMORIZAÇÃO -->
+
+        <section class="secao">
+
+            <h2>10. Versículo para memorizar</h2>
+
+            <div class="versiculo">
+
+                <p>
+                    "Mais importa obedecer a Deus do que aos homens."
+                </p>
+
+                <strong>Atos 5:29</strong>
+
+            </div>
+
+            <p>
+                Memorize esse princípio e reflita sobre sua
+                aplicação. A fidelidade ao Senhor deve orientar
+                nossas decisões, especialmente quando somos
+                pressionados a agir contra os ensinamentos
+                das Escrituras.
+            </p>
+
+        </section>
+
+
+        <!-- REFERÊNCIAS -->
+
+        <section class="secao">
+
+            <h2>11. Referências bíblicas para estudo</h2>
+
+            <div class="referencias">
+
+                <h3>Leitura principal</h3>
+
+                <ul class="lista">
+
+                    <li>Daniel 1:1-21 — A decisão de Daniel de permanecer fiel.</li>
+
+                    <li>Daniel 3:1-30 — A fidelidade de Sadraque, Mesaque e Abede-Nego.</li>
+
+                    <li>Daniel 6:1-28 — A perseverança de Daniel em sua vida de oração.</li>
+
+                    <li>Atos 5:17-32 — A obediência dos apóstolos a Deus.</li>
+
+                </ul>
+
+                <h3>Leituras complementares</h3>
+
+                <ul class="lista">
+
+                    <li>Êxodo 20:1-17 — Os Dez Mandamentos.</li>
+
+                    <li>Salmo 119:105-112 — A Palavra de Deus como orientação.</li>
+
+                    <li>Provérbios 4:23-27 — A vigilância sobre o coração e os caminhos.</li>
+
+                    <li>Romanos 12:1-2 — A transformação e a renovação da mente.</li>
+
+                    <li>1 Pedro 3:13-17 — A defesa da esperança cristã com mansidão.</li>
+
+                    <li>Apocalipse 2:8-11 — A fidelidade diante da perseguição.</li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- REFLEXÃO -->
+
+        <section class="reflexao">
+
+            <h2>Para Refletir</h2>
+
+            <p>
+                A verdadeira coragem nem sempre será reconhecida
+                pelas pessoas. Muitas vezes, ninguém perceberá
+                a decisão difícil que um homem tomou para
+                permanecer honesto, fiel e comprometido
+                com a Palavra de Deus.
+            </p>
+
+            <p>
+                Daniel poderia ter abandonado sua prática
+                de oração para preservar sua segurança.
+                Os três jovens poderiam ter se prostrado
+                diante da imagem para evitar a fornalha.
+                Entretanto, escolheram permanecer fiéis
+                ao Senhor.
+            </p>
+
+            <p>
+                Nossa geração também precisa de homens que
+                compreendam que caráter não se constrói
+                apenas por meio de palavras, mas por decisões
+                concretas.
+            </p>
+
+            <p>
+                A pergunta que precisamos fazer não é apenas:
+                "Tenho coragem para enfrentar dificuldades?",
+                mas também: "Tenho coragem para permanecer
+                fiel a Deus quando fazer o que é certo
+                se torna difícil?"
+            </p>
+
+        </section>
+
+
+        <!-- NAVEGAÇÃO -->
+
+        <nav class="navegacao-temas">
+
+            <a href="tema02.html" class="botao">
+                ← TEMA ANTERIOR
+            </a>
+
+            <a href="apresentacao.html" class="botao">
+                VOLTAR AO MÓDULO
+            </a>
+
+            <a href="tema04.html" class="botao">
+                PRÓXIMO TEMA →
+            </a>
+
+            <a href="../../../uhbb_psh.html" class="botao">
+                PÁGINA PRINCIPAL
+            </a>
+
+        </nav>
+
+        <div style="text-align: center; margin-bottom: 40px;">
+
+            <button onclick="window.print()" class="botao"
+                style="border: none; cursor: pointer; font-family: 'Open Sans', sans-serif;">
+                IMPRIMIR ESTUDO
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <footer class="rodape-tema">
+
+        <p>
+            HOMENS SEGUNDO O CORAÇÃO DE DEUS
+        </p>
+
+        <p>
+            Formando homens, fortalecendo famílias e servindo à Igreja de Cristo.
+        </p>
+
+        <p>
+            Módulo 05 — Coragem, Disciplina e Domínio Próprio
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

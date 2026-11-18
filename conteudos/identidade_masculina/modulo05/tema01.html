@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Coragem à Luz das Escrituras | Módulo 05</title>
+
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --marrom: #593B2B;
+            --marrom-escuro: #38271F;
+            --marrom-medio: #76523C;
+            --azul: #18334D;
+            --azul-claro: #294B65;
+            --dourado: #B08A48;
+            --dourado-claro: #D1B477;
+            --bege: #E9DFC9;
+            --creme: #F7F4EC;
+            --texto: #333333;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--creme);
+            color: var(--texto);
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.8;
+        }
+
+        .topo-tema {
+            background: linear-gradient(135deg, var(--marrom-escuro), var(--azul));
+            color: white;
+            padding: 65px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--dourado);
+        }
+
+        .topo-tema .identificacao {
+            color: var(--dourado-claro);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .topo-tema h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            margin: 18px auto;
+            max-width: 900px;
+            line-height: 1.3;
+        }
+
+        .topo-tema p {
+            max-width: 750px;
+            margin: 15px auto 0;
+            color: #eee5d5;
+            font-size: 1.05rem;
+        }
+
+        .conteudo-tema {
+            max-width: 1050px;
+            margin: 45px auto;
+            padding: 0 22px;
+        }
+
+        .secao {
+            background: white;
+            padding: 32px;
+            margin-bottom: 28px;
+            border-radius: 10px;
+            border-left: 5px solid var(--dourado);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+        }
+
+        .secao h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--azul);
+            font-size: 1.45rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .secao h3 {
+            color: var(--marrom);
+            font-size: 1.12rem;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        .secao p {
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .versiculo {
+            background: var(--azul);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .versiculo p {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.2rem;
+            font-style: italic;
+            line-height: 1.9;
+            text-align: center;
+        }
+
+        .versiculo strong {
+            display: block;
+            color: var(--dourado-claro);
+            margin-top: 15px;
+            font-size: 0.95rem;
+        }
+
+        .destaque {
+            background: var(--bege);
+            padding: 22px 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+            border-left: 4px solid var(--dourado);
+        }
+
+        .destaque strong {
+            color: var(--marrom-escuro);
+        }
+
+        .lista {
+            padding-left: 25px;
+        }
+
+        .lista li {
+            margin-bottom: 12px;
+        }
+
+        .referencias {
+            background: #f0f3f5;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid var(--azul);
+        }
+
+        .referencias h3 {
+            margin-top: 0;
+        }
+
+        .reflexao {
+            background: linear-gradient(135deg, var(--marrom-escuro), var(--marrom));
+            color: white;
+            padding: 32px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .reflexao h2 {
+            color: var(--dourado-claro);
+            font-family: 'Cinzel', serif;
+            margin-top: 0;
+        }
+
+        .reflexao p {
+            text-align: justify;
+        }
+
+        .principio {
+            background: #fff;
+            border: 2px solid var(--dourado);
+            padding: 28px;
+            text-align: center;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+
+        .principio h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--marrom);
+            margin-top: 0;
+        }
+
+        .principio p {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.08rem;
+            font-style: italic;
+        }
+
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .botao {
+            display: inline-block;
+            padding: 13px 23px;
+            background: var(--azul);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            background: var(--dourado);
+            color: var(--marrom-escuro);
+            transform: translateY(-2px);
+        }
+
+        .rodape-tema {
+            background: var(--marrom-escuro);
+            color: #e8dfd0;
+            text-align: center;
+            padding: 28px 20px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 650px) {
+
+            .secao {
+                padding: 23px;
+            }
+
+            .topo-tema {
+                padding: 45px 18px;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+            }
+
+            .botao {
+                text-align: center;
+                width: 100%;
+            }
+        }
+
+        @media print {
+
+            body {
+                background: white;
+                color: black;
+            }
+
+            .topo-tema {
+                background: white;
+                color: black;
+                border-bottom: 2px solid black;
+                padding: 25px;
+            }
+
+            .topo-tema .identificacao,
+            .topo-tema p {
+                color: black;
+            }
+
+            .secao {
+                box-shadow: none;
+                border: 1px solid #ccc;
+                break-inside: avoid;
+            }
+
+            .versiculo,
+            .reflexao {
+                background: #eee;
+                color: black;
+            }
+
+            .versiculo strong,
+            .reflexao h2 {
+                color: black;
+            }
+
+            .navegacao-temas,
+            .rodape-tema {
+                display: none;
+            }
+
+            .conteudo-tema {
+                margin: 20px auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="topo-tema">
+
+        <div class="identificacao">
+            Homens Segundo o Coração de Deus
+        </div>
+
+        <h1>A Coragem à Luz das Escrituras</h1>
+
+        <p>
+            Módulo 05 — Coragem, Disciplina e Domínio Próprio
+            <br>
+            Tema 01
+        </p>
+
+    </header>
+
+
+    <main class="conteudo-tema">
+
+        <!-- INTRODUÇÃO -->
+
+        <section class="secao">
+
+            <h2>1. Introdução</h2>
+
+            <p>
+                A coragem é uma característica importante na formação
+                do caráter cristão. Em diferentes momentos da vida,
+                o homem precisa enfrentar situações que exigem firmeza,
+                responsabilidade e disposição para agir corretamente.
+            </p>
+
+            <p>
+                A Bíblia apresenta homens e mulheres que demonstraram
+                coragem diante de circunstâncias difíceis. Entretanto,
+                a coragem ensinada pelas Escrituras não está fundamentada
+                na força física, na autoconfiança ou na ausência de medo.
+                Sua verdadeira origem está na confiança em Deus.
+            </p>
+
+            <p>
+                O homem cristão não é chamado a viver de maneira
+                imprudente ou a demonstrar força para impressionar
+                outras pessoas. Ele é chamado a confiar no Senhor,
+                permanecer firme em sua Palavra e cumprir com fidelidade
+                as responsabilidades que recebeu.
+            </p>
+
+            <div class="destaque">
+                <strong>Ideia central:</strong>
+                A verdadeira coragem cristã nasce da confiança em Deus
+                e se manifesta na disposição de obedecer à sua Palavra,
+                mesmo quando isso exige esforço, renúncia e firmeza.
+            </div>
+
+        </section>
+
+
+        <!-- CONCEITO BÍBLICO -->
+
+        <section class="secao">
+
+            <h2>2. O significado da coragem na perspectiva bíblica</h2>
+
+            <p>
+                Em nossa sociedade, a palavra coragem costuma ser
+                associada à bravura, à força e à capacidade de enfrentar
+                situações perigosas. Embora esses aspectos possam estar
+                relacionados ao conceito, a perspectiva bíblica apresenta
+                uma compreensão mais profunda.
+            </p>
+
+            <p>
+                A coragem cristã está relacionada à confiança em Deus,
+                à fidelidade aos seus princípios e à disposição de agir
+                de maneira correta, mesmo quando as circunstâncias
+                não são favoráveis.
+            </p>
+
+            <p>
+                Isso significa que uma pessoa pode demonstrar coragem
+                sem levantar a voz, sem enfrentar alguém fisicamente
+                ou sem realizar qualquer ato extraordinário.
+                Muitas vezes, a coragem aparece nas decisões silenciosas
+                e nas atitudes cotidianas.
+            </p>
+
+            <h3>A coragem não depende da ausência de medo</h3>
+
+            <p>
+                Sentir medo é uma experiência humana. O medo pode surgir
+                diante de situações desconhecidas, responsabilidades
+                importantes, perdas, ameaças ou dificuldades.
+            </p>
+
+            <p>
+                A Bíblia não ensina que o servo de Deus jamais sentirá
+                medo. Ela ensina que ele pode encontrar no Senhor
+                a segurança necessária para continuar cumprindo
+                sua missão.
+            </p>
+
+            <p>
+                Portanto, coragem não significa nunca sentir medo.
+                Significa não permitir que o medo determine, sozinho,
+                nossas decisões, especialmente quando sabemos qual
+                é o caminho correto diante de Deus.
+            </p>
+
+            <h3>A coragem não é imprudência</h3>
+
+            <p>
+                Também é importante compreender que coragem não
+                significa agir sem pensar, desprezar os perigos
+                ou assumir riscos desnecessários.
+            </p>
+
+            <p>
+                A prudência é uma virtude bíblica. O homem cristão
+                deve avaliar suas atitudes, considerar suas
+                responsabilidades e buscar sabedoria antes de agir.
+            </p>
+
+            <p>
+                A coragem verdadeira não se opõe à prudência.
+                Pelo contrário, deve caminhar acompanhada dela.
+            </p>
+
+        </section>
+
+
+        <!-- JOSUÉ -->
+
+        <section class="secao">
+
+            <h2>3. A coragem de Josué: confiança na presença de Deus</h2>
+
+            <p>
+                Um dos exemplos mais conhecidos de coragem nas
+                Escrituras está na história de Josué.
+            </p>
+
+            <p>
+                Após a morte de Moisés, Josué recebeu a responsabilidade
+                de conduzir o povo de Israel na continuidade da missão
+                de entrar na Terra Prometida.
+            </p>
+
+            <p>
+                Não era uma tarefa simples. Ele precisava assumir
+                a liderança de uma nação, conduzir o povo em uma nova
+                etapa de sua história e enfrentar desafios importantes.
+            </p>
+
+            <p>
+                Nesse contexto, Deus falou diretamente a Josué,
+                orientando-o a ser forte e corajoso.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Não to mandei eu? Esforça-te, e tem bom ânimo;
+                    não pasmes, nem te espantes, porque o Senhor,
+                    teu Deus, é contigo, por onde quer que andares."
+                </p>
+
+                <strong>Josué 1:9</strong>
+
+            </div>
+
+            <h3>A origem da coragem de Josué</h3>
+
+            <p>
+                A ordem divina para que Josué fosse forte e corajoso
+                estava acompanhada de uma promessa: Deus estaria
+                com ele.
+            </p>
+
+            <p>
+                A coragem de Josué não deveria depender exclusivamente
+                de sua capacidade pessoal, de sua experiência ou
+                de sua habilidade como líder.
+            </p>
+
+            <p>
+                Sua segurança estava fundamentada na presença
+                e na fidelidade do próprio Deus.
+            </p>
+
+            <h3>A coragem e a Palavra de Deus</h3>
+
+            <p>
+                No mesmo contexto, Josué recebeu a orientação de
+                meditar na Lei do Senhor e ter o cuidado de obedecer
+                a tudo o que estava escrito nela.
+            </p>
+
+            <p>
+                Isso demonstra que a coragem bíblica não está separada
+                da obediência. Josué precisava confiar em Deus,
+                conhecer sua Palavra e conduzir sua vida de acordo
+                com as orientações recebidas.
+            </p>
+
+            <p>
+                A verdadeira firmeza espiritual não consiste apenas
+                em demonstrar determinação, mas em permanecer fiel
+                à vontade de Deus.
+            </p>
+
+        </section>
+
+
+        <!-- CONFIANÇA EM DEUS -->
+
+        <section class="secao">
+
+            <h2>4. A coragem fundamentada na confiança em Deus</h2>
+
+            <p>
+                O livro dos Salmos apresenta diversas declarações
+                de confiança no Senhor. Em momentos de dificuldade,
+                o salmista reconhece que sua segurança não está
+                nas circunstâncias, mas em Deus.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "O Senhor é a minha luz e a minha salvação;
+                    a quem temerei? O Senhor é a força da minha vida;
+                    de quem me recearei?"
+                </p>
+
+                <strong>Salmo 27:1</strong>
+
+            </div>
+
+            <p>
+                O salmista não afirma que nunca enfrentaria perigos
+                ou dificuldades. Sua declaração demonstra que a
+                confiança em Deus era maior do que as ameaças
+                que poderiam surgir.
+            </p>
+
+            <p>
+                O homem cristão também precisa desenvolver essa
+                confiança. Sua vida não estará livre de problemas,
+                mas ele pode enfrentar as circunstâncias sabendo
+                que Deus permanece fiel.
+            </p>
+
+            <h3>O que significa confiar em Deus?</h3>
+
+            <ul class="lista">
+
+                <li>
+                    Reconhecer que Deus é soberano e digno de confiança.
+                </li>
+
+                <li>
+                    Buscar orientação nas Escrituras antes de tomar
+                    decisões importantes.
+                </li>
+
+                <li>
+                    Não abandonar os princípios bíblicos por causa
+                    de pressões externas.
+                </li>
+
+                <li>
+                    Manter a esperança mesmo quando os resultados
+                    não são imediatamente visíveis.
+                </li>
+
+                <li>
+                    Reconhecer que nossas capacidades são limitadas
+                    e que precisamos da direção do Senhor.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- ESPÍRITO DE CORAGEM -->
+
+        <section class="secao">
+
+            <h2>5. Deus nos chama a uma vida de firmeza e equilíbrio</h2>
+
+            <p>
+                Na segunda carta a Timóteo, o apóstolo Paulo apresenta
+                uma orientação importante sobre a maneira como o
+                cristão deve viver e exercer seu ministério.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Porque Deus não nos deu o espírito de temor,
+                    mas de fortaleza, e de amor, e de moderação."
+                </p>
+
+                <strong>2 Timóteo 1:7</strong>
+
+            </div>
+
+            <p>
+                Nesse texto, Paulo encoraja Timóteo a permanecer firme
+                no serviço cristão, sem permitir que o medo o impeça
+                de cumprir sua responsabilidade.
+            </p>
+
+            <p>
+                O versículo apresenta três características importantes:
+            </p>
+
+            <h3>Fortaleza</h3>
+
+            <p>
+                Refere-se à capacidade de permanecer firme e continuar
+                cumprindo a responsabilidade recebida. Não é uma
+                exaltação da força física, mas uma disposição de
+                perseverar no serviço a Deus.
+            </p>
+
+            <h3>Amor</h3>
+
+            <p>
+                A coragem cristã precisa estar acompanhada do amor.
+                Não deve produzir arrogância, agressividade ou desprezo
+                pelas pessoas. O cristão deve agir com firmeza,
+                mas também com consideração e respeito.
+            </p>
+
+            <h3>Moderação</h3>
+
+            <p>
+                A moderação está relacionada ao equilíbrio,
+                à sensatez e ao domínio próprio. A coragem não deve
+                transformar o homem em alguém impulsivo ou
+                irresponsável.
+            </p>
+
+            <div class="destaque">
+
+                <strong>Uma importante lição:</strong>
+
+                A coragem cristã não é agressividade. Ela reúne
+                firmeza, amor e equilíbrio. O homem segundo o coração
+                de Deus precisa saber quando agir, como agir e por
+                quais princípios deve orientar suas atitudes.
+
+            </div>
+
+        </section>
+
+
+        <!-- APLICAÇÕES -->
+
+        <section class="secao">
+
+            <h2>6. A coragem nas responsabilidades da vida</h2>
+
+            <p>
+                A coragem ensinada pelas Escrituras não deve ficar
+                restrita ao conhecimento teórico. Ela precisa
+                manifestar-se nas responsabilidades que fazem parte
+                da vida cotidiana.
+            </p>
+
+            <h3>Na vida pessoal</h3>
+
+            <p>
+                O homem cristão precisa ter coragem para reconhecer
+                suas limitações, admitir seus erros, buscar
+                amadurecimento e tomar decisões responsáveis.
+            </p>
+
+            <h3>Na família</h3>
+
+            <p>
+                A coragem também se manifesta na disposição de cuidar
+                da família, assumir responsabilidades, proteger,
+                orientar e demonstrar amor.
+            </p>
+
+            <p>
+                Um homem não demonstra coragem apenas quando enfrenta
+                situações extraordinárias, mas também quando permanece
+                fiel aos compromissos assumidos dentro de casa.
+            </p>
+
+            <h3>Na Igreja</h3>
+
+            <p>
+                Na comunidade cristã, é necessário ter coragem para
+                servir, cooperar, assumir responsabilidades e
+                permanecer comprometido com a obra de Deus.
+            </p>
+
+            <h3>No trabalho e na sociedade</h3>
+
+            <p>
+                O cristão precisa demonstrar firmeza para agir com
+                honestidade, cumprir seus deveres e manter seus
+                princípios mesmo quando enfrenta pressões para
+                agir de maneira contrária à sua consciência.
+            </p>
+
+            <h3>No testemunho cristão</h3>
+
+            <p>
+                Seguir a Cristo exige disposição para viver de acordo
+                com o Evangelho. O homem cristão deve procurar
+                demonstrar sua fé por meio de suas atitudes,
+                palavras e relacionamentos.
+            </p>
+
+        </section>
+
+
+        <!-- DISTORÇÕES -->
+
+        <section class="secao">
+
+            <h2>7. O que não devemos confundir com coragem cristã</h2>
+
+            <p>
+                Algumas atitudes podem ser confundidas com coragem,
+                mas não correspondem aos princípios apresentados
+                pelas Escrituras.
+            </p>
+
+            <ul class="lista">
+
+                <li>
+                    <strong>Agressividade:</strong>
+                    tratar as pessoas com violência ou intimidação
+                    não é demonstração de coragem cristã.
+                </li>
+
+                <li>
+                    <strong>Orgulho:</strong>
+                    acreditar que não precisa de ajuda ou orientação
+                    não representa força espiritual.
+                </li>
+
+                <li>
+                    <strong>Imprudência:</strong>
+                    desprezar os riscos e agir sem responsabilidade
+                    não é sinal de sabedoria.
+                </li>
+
+                <li>
+                    <strong>Autoritarismo:</strong>
+                    impor a própria vontade por meio da força
+                    não corresponde ao exemplo de Cristo.
+                </li>
+
+                <li>
+                    <strong>Ausência de sentimentos:</strong>
+                    reconhecer o medo, a tristeza ou a dificuldade
+                    não torna alguém menos corajoso.
+                </li>
+
+            </ul>
+
+            <p>
+                Jesus Cristo é o maior exemplo de firmeza, obediência
+                e confiança no Pai. Sua vida demonstra que verdadeira
+                força espiritual está associada ao amor, à humildade
+                e à disposição de servir.
+            </p>
+
+        </section>
+
+
+        <!-- CONCLUSÃO -->
+
+        <section class="secao">
+
+            <h2>8. Conclusão</h2>
+
+            <p>
+                A coragem é uma qualidade indispensável à formação
+                do homem cristão. Entretanto, ela precisa estar
+                fundamentada nos princípios da Palavra de Deus.
+            </p>
+
+            <p>
+                O exemplo de Josué demonstra que a verdadeira
+                coragem está relacionada à confiança na presença
+                do Senhor e à obediência à sua Palavra.
+            </p>
+
+            <p>
+                O testemunho dos Salmos nos ensina que Deus é
+                a fonte de nossa segurança. A orientação de Paulo
+                a Timóteo nos lembra que a vida cristã deve ser
+                marcada por fortaleza, amor e moderação.
+            </p>
+
+            <p>
+                Portanto, o homem segundo o coração de Deus não
+                procura simplesmente parecer corajoso diante
+                das pessoas. Ele procura desenvolver uma vida
+                de confiança no Senhor, firmeza nos princípios
+                bíblicos e responsabilidade em suas atitudes.
+            </p>
+
+        </section>
+
+
+        <!-- PRINCÍPIO FORMATIVO -->
+
+        <div class="principio">
+
+            <h2>Princípio Formativo</h2>
+
+            <p>
+                A verdadeira coragem do homem cristão nasce da
+                confiança em Deus e se manifesta na disposição
+                de obedecer à sua Palavra, cumprir suas
+                responsabilidades e permanecer firme nos
+                princípios do Evangelho.
+            </p>
+
+        </div>
+
+
+        <!-- MEMORIZAÇÃO -->
+
+        <section class="secao">
+
+            <h2>9. Versículo para memorizar</h2>
+
+            <div class="versiculo">
+
+                <p>
+                    "Não to mandei eu? Esforça-te, e tem bom ânimo;
+                    não pasmes, nem te espantes, porque o Senhor,
+                    teu Deus, é contigo, por onde quer que andares."
+                </p>
+
+                <strong>Josué 1:9</strong>
+
+            </div>
+
+            <p>
+                Procure memorizar o versículo e compreender sua
+                mensagem. A coragem ensinada por Deus não depende
+                apenas da capacidade humana, mas da confiança
+                em sua presença e fidelidade.
+            </p>
+
+        </section>
+
+
+        <!-- REFERÊNCIAS -->
+
+        <section class="secao">
+
+            <h2>10. Referências bíblicas para estudo</h2>
+
+            <div class="referencias">
+
+                <h3>Leitura principal</h3>
+
+                <ul class="lista">
+
+                    <li>Josué 1:1-9 — A missão de Josué e a ordem de Deus para que fosse forte e corajoso.</li>
+
+                    <li>Salmo 27:1-5 — A confiança do salmista no Senhor.</li>
+
+                    <li>2 Timóteo 1:6-8 — Fortaleza, amor e moderação na vida cristã.</li>
+
+                </ul>
+
+                <h3>Leituras complementares</h3>
+
+                <ul class="lista">
+
+                    <li>Deuteronômio 31:6-8 — O encorajamento à confiança em Deus.</li>
+
+                    <li>Salmo 56:3-4 — A confiança no Senhor em momentos de medo.</li>
+
+                    <li>Provérbios 3:5-6 — Confiar no Senhor e buscar sua direção.</li>
+
+                    <li>1 Coríntios 16:13-14 — Vigilância, firmeza, coragem e amor.</li>
+
+                    <li>Efésios 6:10-18 — A força do cristão no Senhor e a armadura de Deus.</li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- REFLEXÃO -->
+
+        <section class="reflexao">
+
+            <h2>Para Refletir</h2>
+
+            <p>
+                A coragem cristã não é medida pelo tamanho dos desafios
+                que um homem enfrenta, mas pela confiança que deposita
+                em Deus e pela fidelidade com que procura cumprir
+                sua vontade.
+            </p>
+
+            <p>
+                Josué recebeu uma missão importante e ouviu de Deus
+                uma orientação clara: deveria ser forte e corajoso,
+                porque o Senhor estaria com ele.
+            </p>
+
+            <p>
+                Em nossa geração, também precisamos de homens que
+                compreendam que coragem não significa dominar pessoas,
+                demonstrar superioridade ou agir impulsivamente.
+                Significa viver com responsabilidade, firmeza,
+                amor e confiança no Senhor.
+            </p>
+
+        </section>
+
+
+        <!-- NAVEGAÇÃO -->
+
+        <nav class="navegacao-temas">
+
+            <a href="apresentacao.html" class="botao">
+                ← VOLTAR AO MÓDULO
+            </a>
+
+            <a href="tema02.html" class="botao">
+                PRÓXIMO TEMA →
+            </a>
+
+            <a href="../../../uhbb_psh.html" class="botao">
+                PÁGINA PRINCIPAL
+            </a>
+
+        </nav>
+
+        <div style="text-align: center; margin-bottom: 40px;">
+
+            <button onclick="window.print()" class="botao"
+                style="border: none; cursor: pointer; font-family: 'Open Sans', sans-serif;">
+                IMPRIMIR ESTUDO
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <footer class="rodape-tema">
+
+        <p>
+            HOMENS SEGUNDO O CORAÇÃO DE DEUS
+        </p>
+
+        <p>
+            Formando homens, fortalecendo famílias e servindo à Igreja de Cristo.
+        </p>
+
+        <p>
+            Módulo 05 — Coragem, Disciplina e Domínio Próprio
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Módulo 05 — Coragem, Disciplina e Domínio Próprio</title>
+
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <style>
+
+        .pagina-modulo {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 22px 60px;
+            color: #38271F;
+        }
+
+        .cabecalho-modulo {
+            background: linear-gradient(135deg, #38271F, #18334D);
+            color: #F7F4EC;
+            padding: 60px 35px;
+            border-radius: 14px;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .identificacao-modulo {
+            display: inline-block;
+            color: #D1B477;
+            font-family: 'Cinzel', serif;
+            font-size: 14px;
+            letter-spacing: 3px;
+            margin-bottom: 18px;
+        }
+
+        .cabecalho-modulo h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(26px, 4vw, 40px);
+            line-height: 1.4;
+            margin-bottom: 20px;
+        }
+
+        .cabecalho-modulo p {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 16px;
+            line-height: 1.9;
+            color: #E9DFC9;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .bloco-apresentacao {
+            background: #FFFFFF;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            border: 1px solid #E9DFC9;
+            box-shadow: 0 4px 15px rgba(56, 39, 31, 0.06);
+        }
+
+        .bloco-apresentacao h2 {
+            font-family: 'Cinzel', serif;
+            color: #593B2B;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .bloco-apresentacao p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            line-height: 1.9;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .bloco-apresentacao ul {
+            padding-left: 25px;
+        }
+
+        .bloco-apresentacao li {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.9;
+            margin-bottom: 10px;
+        }
+
+        .destaque {
+            background: #E9DFC9;
+            border-left: 5px solid #B08A48;
+            padding: 25px;
+            border-radius: 7px;
+            margin: 25px 0;
+        }
+
+        .destaque p {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 17px;
+            line-height: 1.9;
+            margin: 0;
+        }
+
+        .grade-temas {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+            margin-top: 25px;
+        }
+
+        .card-tema {
+            background: #FFFFFF;
+            border: 1px solid #E9DFC9;
+            border-radius: 10px;
+            padding: 25px;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-tema:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(56, 39, 31, 0.12);
+            border-color: #B08A48;
+        }
+
+        .numero-tema {
+            color: #B08A48;
+            font-family: 'Cinzel', serif;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .card-tema h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 19px;
+            line-height: 1.5;
+            color: #593B2B;
+            margin-bottom: 13px;
+        }
+
+        .card-tema p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            line-height: 1.8;
+            color: #594A40;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .card-tema a {
+            display: inline-block;
+            text-align: center;
+            padding: 12px 18px;
+            background: #593B2B;
+            color: #FFFFFF;
+            text-decoration: none;
+            border-radius: 6px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .card-tema a:hover {
+            background: #B08A48;
+            color: #38271F;
+        }
+
+        .objetivos-lista li {
+            margin-bottom: 12px;
+        }
+
+        .versiculo {
+            background: #18334D;
+            color: #F7F4EC;
+            padding: 35px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .versiculo h2 {
+            font-family: 'Cinzel', serif;
+            color: #D1B477;
+            margin-bottom: 20px;
+        }
+
+        .versiculo p {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 19px;
+            line-height: 1.9;
+        }
+
+        .versiculo strong {
+            display: block;
+            color: #D1B477;
+            margin-top: 18px;
+        }
+
+        .principio-formativo {
+            text-align: center;
+            padding: 30px;
+            margin-top: 30px;
+            border-top: 2px solid #B08A48;
+            border-bottom: 2px solid #B08A48;
+        }
+
+        .principio-formativo h2 {
+            font-family: 'Cinzel', serif;
+            color: #593B2B;
+            margin-bottom: 18px;
+        }
+
+        .principio-formativo p {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 17px;
+            line-height: 1.9;
+        }
+
+        .botoes-modulo {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .botoes-modulo a {
+            display: inline-block;
+            padding: 15px 24px;
+            background: #593B2B;
+            color: #FFFFFF;
+            text-decoration: none;
+            border-radius: 6px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .botoes-modulo a:hover {
+            background: #B08A48;
+            color: #38271F;
+            transform: translateY(-2px);
+        }
+
+        .botoes-modulo .secundario {
+            background: #18334D;
+        }
+
+        @media(max-width: 750px) {
+
+            .grade-temas {
+                grid-template-columns: 1fr;
+            }
+
+            .cabecalho-modulo {
+                padding: 42px 22px;
+            }
+
+            .bloco-apresentacao {
+                padding: 23px;
+            }
+
+        }
+
+        @media print {
+
+            body {
+                background: #FFFFFF !important;
+            }
+
+            .pagina-modulo {
+                max-width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            .cabecalho-modulo {
+                background: #FFFFFF !important;
+                color: #000000 !important;
+                border: 2px solid #593B2B;
+            }
+
+            .cabecalho-modulo p,
+            .identificacao-modulo {
+                color: #000000 !important;
+            }
+
+            .card-tema {
+                box-shadow: none;
+                break-inside: avoid;
+            }
+
+            .card-tema a,
+            .botoes-modulo {
+                display: none !important;
+            }
+
+            .grade-temas {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .versiculo {
+                background: #FFFFFF !important;
+                color: #000000 !important;
+                border: 1px solid #18334D;
+            }
+
+            .versiculo h2,
+            .versiculo strong {
+                color: #000000 !important;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<main class="pagina-modulo">
+
+
+    <!-- CABEÇALHO -->
+
+    <header class="cabecalho-modulo">
+
+        <span class="identificacao-modulo">
+            ÁREA 01 • IDENTIDADE MASCULINA CRISTÃ
+        </span>
+
+        <h1>
+            MÓDULO 05<br>
+            Coragem, Disciplina e Domínio Próprio
+        </h1>
+
+        <p>
+            Desenvolvendo firmeza diante das dificuldades,
+            disciplina na caminhada cristã e domínio próprio
+            para viver segundo os princípios das Escrituras.
+        </p>
+
+    </header>
+
+
+    <!-- APRESENTAÇÃO -->
+
+    <section class="bloco-apresentacao">
+
+        <h2>Apresentação do Módulo</h2>
+
+        <p>
+            A vida cristã exige disposição para enfrentar desafios,
+            permanecer fiel a Deus e conduzir a própria existência
+            segundo os princípios das Escrituras.
+        </p>
+
+        <p>
+            Nesse caminho, coragem, disciplina e domínio próprio
+            são virtudes fundamentais para o amadurecimento
+            espiritual e para o desenvolvimento de uma vida
+            responsável.
+        </p>
+
+        <p>
+            A coragem cristã não deve ser confundida com imprudência
+            ou ausência de medo. Ela está relacionada à confiança
+            em Deus e à disposição de permanecer fiel mesmo diante
+            de situações difíceis.
+        </p>
+
+        <p>
+            A disciplina envolve organização, perseverança,
+            responsabilidade e compromisso com aquilo que é correto.
+            O domínio próprio, por sua vez, permite que o homem
+            conduza suas emoções, palavras e desejos de maneira
+            equilibrada, sob a orientação do Espírito Santo.
+        </p>
+
+        <p>
+            Neste módulo, estudaremos essas virtudes à luz das
+            Escrituras e refletiremos sobre sua importância
+            na vida pessoal, familiar, espiritual e social.
+        </p>
+
+        <div class="destaque">
+
+            <p>
+                O homem cristão não é chamado a viver dominado
+                pelo medo, pela impulsividade ou pela indisciplina,
+                mas a desenvolver uma vida de confiança em Deus,
+                responsabilidade e equilíbrio.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- OBJETIVOS -->
+
+    <section class="bloco-apresentacao">
+
+        <h2>Objetivos de Aprendizagem</h2>
+
+        <p>
+            Ao concluir este módulo, esperamos que o aluno seja
+            capaz de:
+        </p>
+
+        <ul class="objetivos-lista">
+
+            <li>
+                Compreender o significado da coragem segundo
+                os ensinamentos bíblicos.
+            </li>
+
+            <li>
+                Reconhecer a importância da confiança em Deus
+                diante do medo e das adversidades.
+            </li>
+
+            <li>
+                Desenvolver coragem moral para permanecer fiel
+                aos princípios das Escrituras.
+            </li>
+
+            <li>
+                Compreender a disciplina como parte da formação
+                espiritual e da responsabilidade pessoal.
+            </li>
+
+            <li>
+                Reconhecer a importância do domínio próprio
+                no controle das emoções, palavras e desejos.
+            </li>
+
+            <li>
+                Valorizar a perseverança e a firmeza na caminhada
+                cristã.
+            </li>
+
+            <li>
+                Aplicar esses princípios à vida familiar,
+                profissional, espiritual e social.
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- CONTEÚDO PROGRAMÁTICO -->
+
+    <section class="bloco-apresentacao">
+
+        <h2>Conteúdo Programático</h2>
+
+        <p>
+            O módulo está organizado em seis temas de estudo,
+            que apresentam os fundamentos bíblicos e as aplicações
+            práticas dessas virtudes na formação do homem cristão.
+        </p>
+
+    </section>
+
+
+    <!-- TEMAS -->
+
+    <section class="grade-temas">
+
+
+        <article class="card-tema">
+
+            <span class="numero-tema">TEMA 01</span>
+
+            <h3>
+                A Coragem à Luz das Escrituras
+            </h3>
+
+            <p>
+                Estudo sobre o significado da coragem na perspectiva
+                bíblica, sua relação com a fé e a confiança em Deus,
+                e sua importância na vida do homem cristão.
+            </p>
+
+            <a href="tema01.html">
+                ACESSAR ESTUDO →
+            </a>
+
+        </article>
+
+
+        <article class="card-tema">
+
+            <span class="numero-tema">TEMA 02</span>
+
+            <h3>
+                A Coragem diante do Medo e das Adversidades
+            </h3>
+
+            <p>
+                Reflexão sobre como enfrentar dificuldades,
+                inseguranças e desafios sem abandonar a confiança
+                em Deus e a responsabilidade cristã.
+            </p>
+
+            <a href="tema02.html">
+                ACESSAR ESTUDO →
+            </a>
+
+        </article>
+
+
+        <article class="card-tema">
+
+            <span class="numero-tema">TEMA 03</span>
+
+            <h3>
+                A Coragem Moral e a Fidelidade a Deus
+            </h3>
+
+            <p>
+                Estudo sobre a firmeza necessária para defender
+                os princípios bíblicos, agir corretamente e
+                permanecer fiel a Deus mesmo diante de pressões.
+            </p>
+
+            <a href="tema03.html">
+                ACESSAR ESTUDO →
+            </a>
+
+        </article>
+
+
+        <article class="card-tema">
+
+            <span class="numero-tema">TEMA 04</span>
+
+            <h3>
+                A Disciplina na Vida Cristã
+            </h3>
+
+            <p>
+                Compreensão da disciplina como compromisso
+                com o crescimento espiritual, a organização
+                pessoal, a responsabilidade e a perseverança.
+            </p>
+
+            <a href="tema04.html">
+                ACESSAR ESTUDO →
+            </a>
+
+        </article>
+
+
+        <article class="card-tema">
+
+            <span class="numero-tema">TEMA 05</span>
+
+            <h3>
+                O Domínio Próprio e o Controle das Emoções
+            </h3>
+
+            <p>
+                Estudo sobre o domínio próprio como fruto do Espírito,
+                abordando o controle das emoções, das palavras,
+                dos impulsos e dos desejos.
+            </p>
+
+            <a href="tema05.html">
+                ACESSAR ESTUDO →
+            </a>
+
+        </article>
+
+
+        <article class="card-tema">
+
+            <span class="numero-tema">TEMA 06</span>
+
+            <h3>
+                Perseverança e Firmeza na Caminhada Cristã
+            </h3>
+
+            <p>
+                Reflexão sobre a constância na fé, a resistência
+                diante das dificuldades e o compromisso de
+                permanecer fiel a Cristo ao longo da vida.
+            </p>
+
+            <a href="tema06.html">
+                ACESSAR ESTUDO →
+            </a>
+
+        </article>
+
+
+    </section>
+
+
+    <!-- FUNDAMENTAÇÃO BÍBLICA -->
+
+    <section class="bloco-apresentacao" style="margin-top: 35px;">
+
+        <h2>Fundamentação Bíblica</h2>
+
+        <p>
+            O estudo deste módulo será fundamentado nas Escrituras
+            Sagradas, considerando especialmente os seguintes textos:
+        </p>
+
+        <ul>
+
+            <li>Josué 1:9 — Coragem e confiança na presença de Deus.</li>
+
+            <li>Salmo 27:1 — O Senhor como fonte de confiança.</li>
+
+            <li>Daniel 3:16-18 — Fidelidade a Deus diante da pressão.</li>
+
+            <li>Provérbios 16:32 — O valor do domínio próprio.</li>
+
+            <li>1 Coríntios 9:24-27 — Disciplina e perseverança.</li>
+
+            <li>Gálatas 5:22-23 — O fruto do Espírito.</li>
+
+            <li>2 Timóteo 1:7 — Poder, amor e moderação.</li>
+
+            <li>Hebreus 12:1-2 — Perseverança na caminhada da fé.</li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- VERSÍCULO -->
+
+    <section class="versiculo">
+
+        <h2>Versículo-chave do Módulo</h2>
+
+        <p>
+            “Porque Deus não nos deu o espírito de temor,
+            mas de fortaleza, e de amor, e de moderação.”
+        </p>
+
+        <strong>2 Timóteo 1:7</strong>
+
+    </section>
+
+
+    <!-- PRINCÍPIO FORMATIVO -->
+
+    <section class="principio-formativo">
+
+        <h2>Princípio Formativo</h2>
+
+        <p>
+            O homem segundo o coração de Deus procura desenvolver
+            coragem fundamentada na fé, disciplina orientada
+            pelas Escrituras e domínio próprio produzido pelo
+            Espírito Santo, permanecendo firme em seus compromissos
+            com Deus e com o próximo.
+        </p>
+
+    </section>
+
+
+    <!-- NAVEGAÇÃO -->
+
+    <div class="botoes-modulo">
+
+        <a style="text-align: center; margin: 15px 0;"   href="../identidade_masculina.html"
+        style="
+            display: inline-block;
+            background: #593B2B;
+            color: #FFFFFF;
+            padding: 16px 18px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 1px;
+              ">
+            ← ÁREA DE IDENTIDADE MASCULINA
+        </a>
+        <div style="text-align: center; margin: 15px 0;">
+            <a href="../../../questionarios/identidade_masculina/avaliacao_modulo05.html"
+             style="
+            display: inline-block;
+            background: #593B2B;
+            color: #FFFFFF;
+            padding: 16px 28px ;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 1px;
+              ">
+        REALIZAR AVALIAÇÃO DO MÓDULO 05 →
+            </a>
+
+        </div>
+
+        <a style="text-align: center; margin: 15px 0;" 
+        href="../../../uhbb_psh.html"
+        style="
+            display: inline-block;
+            background: #593B2B;
+            color: #FFFFFF;
+            padding: 10px 18px ;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 1px;
+              ">
+            PÁGINA PRINCIPAL
+        </a>
+
+    </div>
+
+
+</main>
+
+</body>
+
+</html>
