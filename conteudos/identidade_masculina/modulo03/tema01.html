@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tema 01 — A Masculinidade à Luz das Escrituras</title>
+
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        .pagina-tema {
+            width: min(100% - 35px, 950px);
+            margin: 40px auto 70px;
+        }
+
+        .cabecalho-tema {
+            background: linear-gradient(135deg, #38271F, #18334D);
+            color: #F7F4EC;
+            padding: 45px 30px;
+            border-radius: 12px;
+            border-bottom: 5px solid #B08A48;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .identificacao-tema {
+            color: #D1B477;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .cabecalho-tema h1 {
+            font-family: "Cinzel", serif;
+            font-size: clamp(1.7rem, 4vw, 2.5rem);
+            line-height: 1.3;
+            margin: 18px 0;
+        }
+
+        .cabecalho-tema p {
+            color: #E9DFC9;
+            margin: 0;
+        }
+
+        .conteudo-tema {
+            background: #FFFFFF;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+            margin-bottom: 25px;
+        }
+
+        .conteudo-tema h2 {
+            font-family: "Cinzel", serif;
+            color: #18334D;
+            font-size: 1.45rem;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #E9DFC9;
+        }
+
+        .conteudo-tema h2:first-child {
+            margin-top: 0;
+        }
+
+        .conteudo-tema h3 {
+            color: #593B2B;
+            font-size: 1.1rem;
+            margin-top: 25px;
+        }
+
+        .conteudo-tema p {
+            line-height: 1.9;
+            margin-bottom: 17px;
+            text-align: justify;
+        }
+
+        .versiculo {
+            background: #F7F4EC;
+            border-left: 5px solid #B08A48;
+            padding: 22px;
+            margin: 25px 0;
+            border-radius: 5px;
+            font-family: "Libre Baskerville", serif;
+            font-style: italic;
+            color: #38271F;
+            line-height: 1.9;
+        }
+
+        .versiculo strong {
+            display: block;
+            margin-top: 12px;
+            color: #76523C;
+            font-family: "Open Sans", sans-serif;
+            font-style: normal;
+        }
+
+        .destaque {
+            background: #F1E8D6;
+            border-radius: 8px;
+            padding: 22px;
+            margin: 25px 0;
+        }
+
+        .destaque strong {
+            color: #593B2B;
+        }
+
+        .lista-estudo {
+            padding-left: 25px;
+            line-height: 1.9;
+        }
+
+        .lista-estudo li {
+            margin-bottom: 10px;
+        }
+
+        .quadro-principio {
+            background: #18334D;
+            color: #F7F4EC;
+            padding: 28px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .quadro-principio h3 {
+            color: #D1B477;
+            font-family: "Cinzel", serif;
+            margin-top: 0;
+        }
+
+        .quadro-principio p {
+            text-align: center;
+            margin-bottom: 0;
+        }
+
+        .reflexao {
+            background: #F7F4EC;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #E9DFC9;
+            margin-top: 30px;
+        }
+
+        .reflexao h3 {
+            margin-top: 0;
+            color: #18334D;
+        }
+
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .botao-tema {
+            display: inline-block;
+            padding: 13px 22px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.2s;
+        }
+
+        .botao-tema:hover {
+            transform: translateY(-2px);
+        }
+
+        .botao-voltar {
+            background: #593B2B;
+            color: #FFFFFF;
+        }
+
+        .botao-proximo {
+            background: #18334D;
+            color: #FFFFFF;
+        }
+
+        .botao-modulo {
+            background: #B08A48;
+            color: #38271F;
+        }
+
+        .leituras {
+            background: #FFFFFF;
+            padding: 28px;
+            border-radius: 10px;
+            border-left: 5px solid #B08A48;
+            margin-top: 25px;
+        }
+
+        .leituras h3 {
+            font-family: "Cinzel", serif;
+            color: #18334D;
+            margin-top: 0;
+        }
+
+        .leituras ul {
+            line-height: 1.9;
+            padding-left: 22px;
+        }
+
+        @media (max-width: 650px) {
+
+            .conteudo-tema {
+                padding: 23px 18px;
+            }
+
+            .cabecalho-tema {
+                padding: 35px 20px;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+            }
+
+            .botao-tema {
+                text-align: center;
+            }
+
+        }
+
+        @media print {
+
+            body {
+                background: #FFFFFF;
+            }
+
+            .pagina-tema {
+                width: 100%;
+                margin: 0;
+            }
+
+            .cabecalho-tema {
+                background: #FFFFFF;
+                color: #000000;
+                border: 2px solid #000000;
+            }
+
+            .identificacao-tema,
+            .cabecalho-tema p {
+                color: #000000;
+            }
+
+            .conteudo-tema {
+                box-shadow: none;
+                padding: 15px;
+            }
+
+            .navegacao-temas {
+                display: none;
+            }
+
+            .quadro-principio {
+                background: #FFFFFF;
+                color: #000000;
+                border: 1px solid #000000;
+            }
+
+            .quadro-principio h3 {
+                color: #000000;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <main class="pagina-tema">
+
+
+        <!-- CABEÇALHO -->
+
+        <header class="cabecalho-tema">
+
+            <div class="identificacao-tema">
+                Ambiente 01 — Identidade Masculina Cristã
+            </div>
+
+            <h1>
+                A Masculinidade à Luz das Escrituras
+            </h1>
+
+            <p>
+                Módulo 03 — Masculinidade e Responsabilidade Cristã
+            </p>
+
+            <p>
+                Tema 01 de 06
+            </p>
+
+        </header>
+
+
+
+        <!-- CONTEÚDO -->
+
+        <article class="conteudo-tema">
+
+
+            <h2>1. Introdução</h2>
+
+            <p>
+                A compreensão da masculinidade é uma questão importante
+                para a formação do homem cristão. Vivemos em uma sociedade
+                na qual existem diferentes opiniões sobre o que significa
+                ser homem, quais são suas responsabilidades e como deve
+                comportar-se diante da família e da sociedade.
+            </p>
+
+            <p>
+                Algumas ideias associam masculinidade exclusivamente à
+                força física, à autoridade, à independência ou à capacidade
+                de conquistar posições de destaque. Outras apresentam
+                modelos que desconsideram a responsabilidade, o compromisso
+                e o caráter.
+            </p>
+
+            <p>
+                Diante dessas diferentes concepções, o cristão precisa
+                buscar nas Escrituras Sagradas os fundamentos para
+                compreender sua identidade e orientar sua maneira de viver.
+            </p>
+
+            <p>
+                A Bíblia não apresenta a masculinidade como uma autorização
+                para dominar outras pessoas, mas oferece princípios que
+                orientam o homem a viver diante de Deus com responsabilidade,
+                integridade, fidelidade e disposição para servir.
+            </p>
+
+
+            <div class="versiculo">
+
+                "E criou Deus o homem à sua imagem; à imagem de Deus o criou;
+                macho e fêmea os criou."
+
+                <strong>Gênesis 1:27</strong>
+
+            </div>
+
+
+
+            <h2>2. A masculinidade dentro da criação de Deus</h2>
+
+            <p>
+                A compreensão bíblica da masculinidade começa com o
+                reconhecimento de que o ser humano é criatura de Deus.
+                O homem não determina sozinho o sentido de sua existência.
+                Sua identidade encontra fundamento na vontade e no propósito
+                do Criador.
+            </p>
+
+            <p>
+                Em Gênesis 1:27, encontramos a afirmação de que Deus criou
+                o ser humano à sua imagem e semelhança, distinguindo homem
+                e mulher. Essa declaração estabelece a dignidade da vida
+                humana e apresenta ambos como criaturas que possuem valor
+                diante de Deus.
+            </p>
+
+            <p>
+                Portanto, a masculinidade deve ser compreendida dentro
+                desse contexto da criação. Ser homem não significa possuir
+                maior valor diante de Deus, nem representa uma condição
+                de superioridade espiritual ou humana em relação à mulher.
+            </p>
+
+            <p>
+                A identidade masculina é uma dimensão da existência humana
+                criada por Deus e deve ser vivida com gratidão, responsabilidade
+                e respeito ao próximo.
+            </p>
+
+
+            <div class="destaque">
+
+                <strong>Princípio importante:</strong>
+
+                <p>
+                    A dignidade do homem não está fundamentada em sua força,
+                    riqueza, posição social ou capacidade de exercer autoridade.
+                    Está relacionada ao fato de ter sido criado por Deus.
+                </p>
+
+            </div>
+
+
+
+            <h2>3. Masculinidade não é superioridade</h2>
+
+            <p>
+                Um dos erros que precisam ser evitados na compreensão
+                da masculinidade é a ideia de que o homem possui maior
+                valor do que a mulher ou que está autorizado a tratá-la
+                com desprezo, violência ou desrespeito.
+            </p>
+
+            <p>
+                Gênesis 1:27 apresenta homem e mulher como participantes
+                da dignidade concedida pelo Criador. Essa verdade deve
+                orientar as relações humanas e impedir que diferenças
+                sejam utilizadas como justificativa para humilhação
+                ou exploração.
+            </p>
+
+            <p>
+                O ensino bíblico também não permite que a masculinidade
+                seja reduzida ao exercício autoritário do poder.
+                A responsabilidade deve ser acompanhada de justiça,
+                respeito e consideração pelo próximo.
+            </p>
+
+            <p>
+                O homem cristão precisa compreender que sua identidade
+                não lhe concede o direito de diminuir outras pessoas.
+                Pelo contrário, deve reconhecer o valor daqueles com
+                quem convive e agir com dignidade em seus relacionamentos.
+            </p>
+
+
+            <div class="versiculo">
+
+                "Amai-vos cordialmente uns aos outros com amor fraternal,
+                preferindo-vos em honra uns aos outros."
+
+                <strong>Romanos 12:10</strong>
+
+            </div>
+
+
+
+            <h2>4. O homem diante de Deus: identidade e responsabilidade</h2>
+
+            <p>
+                A Bíblia apresenta o ser humano como criatura responsável
+                diante de seu Criador. Essa responsabilidade aparece desde
+                os primeiros capítulos de Gênesis.
+            </p>
+
+            <p>
+                Em Gênesis 2:15, Deus coloca o homem no jardim do Éden
+                para o cultivar e guardar. O texto apresenta uma tarefa
+                confiada por Deus e demonstra que o trabalho e o cuidado
+                com aquilo que foi criado fazem parte da experiência humana.
+            </p>
+
+            <p>
+                A responsabilidade não deve ser confundida com domínio
+                irresponsável. O homem recebe tarefas e atribuições que
+                precisam ser exercidas de maneira coerente com a vontade
+                do Criador.
+            </p>
+
+            <p>
+                Esse princípio pode ser aplicado à vida familiar,
+                profissional, espiritual e social. O homem cristão
+                precisa reconhecer que suas decisões e atitudes
+                produzem consequências e que deve responder por elas
+                diante de Deus.
+            </p>
+
+
+            <div class="versiculo">
+
+                "E tomou o Senhor Deus o homem e o pôs no jardim do Éden
+                para o lavrar e o guardar."
+
+                <strong>Gênesis 2:15</strong>
+
+            </div>
+
+
+
+            <h2>5. As características de uma masculinidade orientada pela Bíblia</h2>
+
+            <p>
+                Embora a Bíblia não apresente uma lista única e fechada
+                de características que definam a masculinidade, suas
+                orientações sobre caráter e conduta oferecem princípios
+                fundamentais para a formação do homem cristão.
+            </p>
+
+            <h3>5.1. Responsabilidade</h3>
+
+            <p>
+                O homem deve reconhecer suas obrigações e assumir as
+                consequências de suas decisões. A responsabilidade
+                exige compromisso com Deus, com a família, com o trabalho
+                e com a comunidade.
+            </p>
+
+            <h3>5.2. Integridade</h3>
+
+            <p>
+                A integridade está relacionada à coerência entre aquilo
+                que se acredita, aquilo que se fala e aquilo que se pratica.
+                O homem cristão deve buscar uma conduta honesta, evitando
+                a falsidade e a hipocrisia.
+            </p>
+
+            <h3>5.3. Justiça</h3>
+
+            <p>
+                A justiça exige que o homem trate as pessoas com dignidade,
+                reconhecendo seus direitos e evitando atitudes de exploração,
+                preconceito ou injustiça.
+            </p>
+
+            <h3>5.4. Humildade</h3>
+
+            <p>
+                A humildade não significa ausência de firmeza ou coragem.
+                Significa reconhecer os próprios limites, aceitar correção
+                e compreender que ninguém é autossuficiente diante de Deus.
+            </p>
+
+            <h3>5.5. Domínio próprio</h3>
+
+            <p>
+                O domínio próprio envolve controlar impulsos, palavras,
+                reações e desejos. O homem cristão não deve ser governado
+                pela ira, pela violência ou pela satisfação imediata
+                de suas vontades.
+            </p>
+
+            <h3>5.6. Amor e disposição para servir</h3>
+
+            <p>
+                A vida cristã exige que o relacionamento com o próximo
+                seja marcado pelo amor e pela disposição para contribuir
+                com o bem das outras pessoas. Servir não diminui o homem;
+                expressa maturidade e compromisso cristão.
+            </p>
+
+
+            <div class="versiculo">
+
+                "Ele te declarou, ó homem, o que é bom; e que é o que
+                o Senhor pede de ti, senão que pratiques a justiça,
+                e ames a beneficência, e andes humildemente com o teu Deus?"
+
+                <strong>Miqueias 6:8</strong>
+
+            </div>
+
+
+
+            <h2>6. Masculinidade e responsabilidade na sociedade</h2>
+
+            <p>
+                A masculinidade cristã não deve ficar restrita à aparência,
+                ao discurso religioso ou ao ambiente da igreja. Seus
+                princípios precisam ser demonstrados nas atitudes
+                cotidianas.
+            </p>
+
+            <p>
+                O homem cristão está presente em diferentes ambientes:
+                no lar, no trabalho, na igreja, na comunidade e na sociedade.
+                Em todos eles, deve buscar uma conduta coerente com sua fé.
+            </p>
+
+            <p>
+                Isso significa agir com honestidade nas atividades
+                profissionais, respeitar as pessoas, cumprir compromissos,
+                cuidar da família, contribuir com a comunidade e participar
+                responsavelmente da vida da igreja.
+            </p>
+
+            <p>
+                A fé cristã não deve produzir apenas conhecimento teórico.
+                Ela precisa influenciar o comportamento e orientar as
+                escolhas que o homem realiza ao longo de sua vida.
+            </p>
+
+
+            <div class="versiculo">
+
+                "Assim resplandeça a vossa luz diante dos homens,
+                para que vejam as vossas boas obras e glorifiquem
+                a vosso Pai, que está nos céus."
+
+                <strong>Mateus 5:16</strong>
+
+            </div>
+
+
+
+            <h2>7. A masculinidade e a formação do caráter cristão</h2>
+
+            <p>
+                O caráter é uma dimensão fundamental da formação
+                cristã. Não basta que um homem seja reconhecido por
+                suas capacidades, conquistas ou posição social.
+                É necessário que sua conduta demonstre valores
+                coerentes com a fé que professa.
+            </p>
+
+            <p>
+                O desenvolvimento do caráter envolve aprendizado,
+                correção, disciplina e crescimento espiritual.
+                O homem precisa estar disposto a reconhecer seus erros,
+                abandonar práticas prejudiciais e buscar uma vida
+                cada vez mais coerente com os ensinamentos bíblicos.
+            </p>
+
+            <p>
+                A masculinidade cristã não é uma representação exterior
+                construída para impressionar outras pessoas. Ela deve
+                ser percebida na maneira como o homem vive, trata
+                os outros e assume suas responsabilidades.
+            </p>
+
+            <p>
+                Por isso, a formação masculina precisa estar acompanhada
+                do estudo das Escrituras, da oração, da comunhão cristã
+                e da prática dos ensinamentos de Deus.
+            </p>
+
+
+
+            <h2>8. Aplicação à vida do homem cristão</h2>
+
+            <p>
+                O estudo da masculinidade à luz das Escrituras deve
+                conduzir a uma reflexão sobre a própria maneira de viver.
+                Não se trata apenas de compreender conceitos, mas de
+                avaliar atitudes e assumir compromissos.
+            </p>
+
+            <p>O homem cristão deve procurar:</p>
+
+            <ul class="lista-estudo">
+
+                <li>
+                    Reconhecer Deus como Criador e Senhor de sua existência.
+                </li>
+
+                <li>
+                    Valorizar a dignidade de todas as pessoas.
+                </li>
+
+                <li>
+                    Rejeitar atitudes de arrogância, violência e desrespeito.
+                </li>
+
+                <li>
+                    Assumir suas responsabilidades com honestidade.
+                </li>
+
+                <li>
+                    Desenvolver um caráter marcado pela justiça e pela integridade.
+                </li>
+
+                <li>
+                    Cultivar relacionamentos fundamentados no amor e no respeito.
+                </li>
+
+                <li>
+                    Demonstrar sua fé por meio de atitudes coerentes com a Palavra de Deus.
+                </li>
+
+            </ul>
+
+
+
+            <div class="quadro-principio">
+
+                <h3>Princípio Formativo</h3>
+
+                <p>
+                    A masculinidade cristã deve ser compreendida
+                    à luz da criação de Deus e vivida com responsabilidade,
+                    integridade, respeito, humildade e disposição
+                    para servir.
+                </p>
+
+            </div>
+
+
+
+            <h2>9. Conclusão</h2>
+
+            <p>
+                A masculinidade, quando compreendida à luz das Escrituras,
+                não representa superioridade, autoritarismo ou privilégio
+                para dominar outras pessoas.
+            </p>
+
+            <p>
+                Ela está inserida na realidade da criação divina e deve
+                ser vivida de maneira responsável, reconhecendo a dignidade
+                humana e a dependência do homem em relação ao Criador.
+            </p>
+
+            <p>
+                O homem cristão é chamado a desenvolver um caráter coerente
+                com sua fé, assumir suas responsabilidades e demonstrar
+                por meio de suas atitudes os princípios que aprendeu
+                na Palavra de Deus.
+            </p>
+
+            <p>
+                A verdadeira formação masculina não acontece apenas
+                pela aquisição de conhecimentos, mas pelo crescimento
+                de uma vida comprometida com Deus e com o próximo.
+            </p>
+
+
+            <div class="versiculo">
+
+                "Sede vigilantes, permanecei firmes na fé, portai-vos
+                varonilmente, fortalecei-vos."
+
+                <strong>1 Coríntios 16:13</strong>
+
+            </div>
+
+
+            <div class="reflexao">
+
+                <h3>Reflexão para o estudo pessoal</h3>
+
+                <p>
+                    1. Minha compreensão sobre masculinidade está fundamentada
+                    nas Escrituras ou em padrões culturais?
+                </p>
+
+                <p>
+                    2. Tenho reconhecido minhas responsabilidades diante de Deus?
+                </p>
+
+                <p>
+                    3. Minhas atitudes demonstram respeito pela dignidade
+                    de outras pessoas?
+                </p>
+
+                <p>
+                    4. Tenho buscado desenvolver um caráter coerente com
+                    minha fé cristã?
+                </p>
+
+                <p>
+                    5. O que preciso mudar em minha conduta para viver
+                    de maneira mais responsável diante de Deus?
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- LEITURAS BÍBLICAS -->
+
+        <section class="leituras">
+
+            <h3>Leituras bíblicas para aprofundamento</h3>
+
+            <ul>
+
+                <li>Gênesis 1:26-28 — A criação do ser humano.</li>
+
+                <li>Gênesis 2:7-17 — A formação e a responsabilidade humana.</li>
+
+                <li>Salmo 8 — A dignidade e a responsabilidade do ser humano.</li>
+
+                <li>Miqueias 6:8 — Justiça, misericórdia e humildade.</li>
+
+                <li>Mateus 5:13-16 — O testemunho diante da sociedade.</li>
+
+                <li>Romanos 12:9-18 — O caráter e os relacionamentos cristãos.</li>
+
+                <li>Gálatas 5:22-23 — O fruto do Espírito.</li>
+
+                <li>1 Coríntios 16:13-14 — Firmeza na fé e amor.</li>
+
+            </ul>
+
+        </section>
+
+
+
+        <!-- NAVEGAÇÃO -->
+
+        <nav class="navegacao-temas">
+
+            <a href="apresentacao.html"
+                class="botao-tema botao-voltar">
+
+                ← APRESENTAÇÃO DO MÓDULO
+
+            </a>
+
+            <a href="apresentacao.html"
+                class="botao-tema botao-modulo">
+
+                VISÃO GERAL
+
+            </a>
+
+            <a href="tema02.html"
+                class="botao-tema botao-proximo">
+
+                PRÓXIMO TEMA →
+
+            </a>
+
+        </nav>
+
+
+        <div class="navegacao-temas">
+
+            <a href="../../../uhbb_psh.html"
+                class="botao-tema botao-voltar">
+
+                VOLTAR À PÁGINA PRINCIPAL
+
+            </a>
+
+            <button onclick="window.print()"
+                class="botao-tema botao-modulo">
+
+                IMPRIMIR ESTUDO
+
+            </button>
+
+        </div>
+
+
+    </main>
+
+</body>
+
+</html>

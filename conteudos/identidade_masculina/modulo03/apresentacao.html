@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Módulo 03 — Masculinidade e Responsabilidade Cristã</title>
+
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        :root {
+            --marrom: #593B2B;
+            --marrom-escuro: #38271F;
+            --marrom-medio: #76523C;
+            --azul: #18334D;
+            --azul-claro: #294B65;
+            --dourado: #B08A48;
+            --dourado-claro: #D1B477;
+            --bege: #E9DFC9;
+            --creme: #F7F4EC;
+            --texto: #39332D;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--creme);
+            color: var(--texto);
+            font-family: "Open Sans", sans-serif;
+            line-height: 1.8;
+        }
+
+        .topo-modulo {
+            background: linear-gradient(
+                135deg,
+                var(--marrom-escuro),
+                var(--azul)
+            );
+            color: white;
+            text-align: center;
+            padding: 65px 22px;
+        }
+
+        .identificacao {
+            color: var(--dourado-claro);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .topo-modulo h1 {
+            font-family: "Cinzel", serif;
+            font-size: clamp(27px, 5vw, 45px);
+            max-width: 950px;
+            margin: 20px auto;
+            line-height: 1.3;
+        }
+
+        .topo-modulo p {
+            color: var(--bege);
+            max-width: 750px;
+            margin: auto;
+            font-size: 16px;
+        }
+
+        .faixa-modulo {
+            background: var(--dourado);
+            color: var(--marrom-escuro);
+            text-align: center;
+            padding: 13px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .navegacao {
+            background: white;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding: 15px;
+            border-bottom: 1px solid #ddd2bd;
+        }
+
+        .navegacao a {
+            color: var(--azul);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 9px 15px;
+            border-radius: 4px;
+        }
+
+        .navegacao a:hover {
+            background: var(--bege);
+        }
+
+        .conteudo {
+            max-width: 1050px;
+            margin: 45px auto;
+            padding: 0 22px;
+        }
+
+        .bloco {
+            background: white;
+            margin-bottom: 28px;
+            padding: 32px;
+            border-radius: 9px;
+            border-left: 5px solid var(--dourado);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .bloco h2 {
+            color: var(--azul);
+            font-family: "Cinzel", serif;
+            font-size: 23px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .bloco h3 {
+            color: var(--marrom);
+            font-family: "Libre Baskerville", serif;
+            font-size: 18px;
+        }
+
+        .bloco p {
+            text-align: justify;
+            margin-bottom: 16px;
+        }
+
+        .versiculo {
+            background: var(--bege);
+            border-left: 4px solid var(--dourado);
+            padding: 22px;
+            margin: 22px 0;
+            border-radius: 5px;
+            font-family: "Libre Baskerville", serif;
+            color: var(--marrom-escuro);
+            font-size: 17px;
+            font-style: italic;
+        }
+
+        .versiculo strong {
+            display: block;
+            margin-top: 12px;
+            font-family: "Open Sans", sans-serif;
+            font-size: 13px;
+            font-style: normal;
+        }
+
+        .destaque {
+            background: #F2EEE4;
+            border-radius: 7px;
+            padding: 23px;
+            margin: 22px 0;
+        }
+
+        .destaque strong {
+            color: var(--azul);
+        }
+
+        .objetivos li,
+        .leituras li {
+            margin-bottom: 12px;
+        }
+
+        .temas {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-top: 25px;
+        }
+
+        .card-tema {
+            background: #F7F4EC;
+            border: 1px solid #ddd2bd;
+            border-left: 4px solid var(--dourado);
+            padding: 20px;
+            border-radius: 6px;
+        }
+
+        .card-tema span {
+            color: var(--dourado);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .card-tema h3 {
+            color: var(--azul);
+            font-family: "Libre Baskerville", serif;
+            font-size: 16px;
+            margin: 8px 0;
+        }
+
+        .card-tema p {
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+
+        .metodologia {
+            background: var(--azul);
+            color: white;
+            padding: 32px;
+            border-radius: 9px;
+            margin-bottom: 28px;
+        }
+
+        .metodologia h2 {
+            color: var(--dourado-claro);
+            font-family: "Cinzel", serif;
+        }
+
+        .metodologia li {
+            margin-bottom: 12px;
+        }
+
+        .chamada {
+            background: var(--marrom-escuro);
+            color: white;
+            text-align: center;
+            padding: 38px 25px;
+            border-radius: 9px;
+            margin-top: 30px;
+        }
+
+        .chamada h2 {
+            color: var(--dourado-claro);
+            font-family: "Cinzel", serif;
+        }
+
+        .chamada p {
+            max-width: 700px;
+            margin: 15px auto;
+        }
+
+        .botao {
+            display: inline-block;
+            background: var(--dourado);
+            color: var(--marrom-escuro);
+            text-decoration: none;
+            padding: 15px 25px;
+            margin-top: 18px;
+            border-radius: 5px;
+            font-size: 13px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            background: var(--dourado-claro);
+            transform: translateY(-2px);
+        }
+
+        .rodape {
+            background: var(--marrom-escuro);
+            color: var(--bege);
+            text-align: center;
+            padding: 27px;
+            margin-top: 50px;
+            font-size: 13px;
+        }
+
+        @media (max-width: 700px) {
+
+            .temas {
+                grid-template-columns: 1fr;
+            }
+
+            .bloco {
+                padding: 23px 19px;
+            }
+
+            .topo-modulo {
+                padding: 45px 18px;
+            }
+
+        }
+
+        @media print {
+
+            body {
+                background: white;
+                color: black;
+                font-size: 11pt;
+            }
+
+            .topo-modulo,
+            .metodologia,
+            .chamada {
+                background: white;
+                color: black;
+                border: 1px solid #999;
+            }
+
+            .topo-modulo p,
+            .identificacao,
+            .metodologia h2,
+            .chamada h2 {
+                color: black;
+            }
+
+            .navegacao,
+            .faixa-modulo,
+            .botao,
+            .rodape {
+                display: none;
+            }
+
+            .conteudo {
+                margin: 15px auto;
+            }
+
+            .bloco {
+                box-shadow: none;
+                border: 1px solid #ccc;
+                break-inside: avoid;
+            }
+
+            .temas {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- CABEÇALHO -->
+
+    <header class="topo-modulo">
+
+        <div class="identificacao">
+            Ambiente 01 — Identidade Masculina Cristã
+        </div>
+
+        <h1>Masculinidade e Responsabilidade Cristã</h1>
+
+        <p>
+            Uma reflexão bíblica sobre o significado
+            de assumir responsabilidades diante de Deus,
+            da família, da Igreja e da sociedade.
+        </p>
+
+    </header>
+
+
+    <div class="faixa-modulo">
+
+        MÓDULO 03 — FORMAÇÃO E IDENTIDADE CRISTÃ
+
+    </div>
+
+
+    <!-- NAVEGAÇÃO -->
+
+    <nav class="navegacao">
+
+        <a href="../../../uhbb_psh.html">
+            PÁGINA PRINCIPAL
+        </a>
+
+        <a href="../modulo02/apresentacao.html">
+            MÓDULO ANTERIOR
+        </a>
+
+    </nav>
+
+
+    <main class="conteudo">
+
+
+        <!-- APRESENTAÇÃO -->
+
+        <section class="bloco">
+
+            <h2>1. Apresentação do Módulo</h2>
+
+            <p>
+                A masculinidade cristã não deve ser compreendida
+                apenas como uma característica biológica ou
+                uma identidade social. À luz das Escrituras,
+                ela envolve também caráter, compromisso,
+                responsabilidade e disposição para viver
+                de acordo com a vontade de Deus.
+            </p>
+
+            <p>
+                O homem foi criado por Deus e recebeu
+                responsabilidades relacionadas à sua
+                própria existência, à família, ao trabalho,
+                aos relacionamentos e à convivência social.
+                Essas responsabilidades não devem ser
+                interpretadas como privilégios de superioridade,
+                mas como oportunidades de serviço e cuidado.
+            </p>
+
+            <p>
+                Este módulo tem como propósito estudar
+                a responsabilidade cristã na vida masculina,
+                compreendendo que a maturidade não se manifesta
+                apenas em palavras, mas principalmente
+                nas atitudes e decisões cotidianas.
+            </p>
+
+            <p>
+                O exemplo de Jesus Cristo será uma referência
+                fundamental para compreender uma masculinidade
+                marcada pelo amor, pela verdade, pela humildade
+                e pelo serviço.
+            </p>
+
+        </section>
+
+
+        <!-- FUNDAMENTO BÍBLICO -->
+
+        <section class="bloco">
+
+            <h2>2. Fundamento Bíblico</h2>
+
+            <div class="versiculo">
+
+                "Tudo quanto fizerdes, fazei-o de todo
+                o coração, como para o Senhor
+                e não para homens."
+
+                <strong>Colossenses 3:23</strong>
+
+            </div>
+
+            <p>
+                O texto de Colossenses apresenta um princípio
+                importante para a vida cristã: nossas atividades
+                devem ser realizadas com dedicação e consciência
+                de que servimos ao Senhor.
+            </p>
+
+            <p>
+                Esse princípio alcança a vida profissional,
+                familiar, espiritual e social. A responsabilidade
+                cristã não está restrita às atividades religiosas,
+                mas deve orientar toda a conduta do homem
+                que deseja viver segundo os ensinamentos
+                das Escrituras.
+            </p>
+
+            <p>
+                A formação masculina cristã exige coerência
+                entre fé, palavras, decisões e atitudes.
+            </p>
+
+        </section>
+
+
+        <!-- OBJETIVOS -->
+
+        <section class="bloco">
+
+            <h2>3. Objetivos de Aprendizagem</h2>
+
+            <p>
+                Ao concluir este módulo, espera-se que o aluno
+                seja capaz de:
+            </p>
+
+            <ul class="objetivos">
+
+                <li>
+                    Compreender a responsabilidade masculina
+                    à luz dos princípios bíblicos.
+                </li>
+
+                <li>
+                    Reconhecer a importância da responsabilidade
+                    pessoal e moral.
+                </li>
+
+                <li>
+                    Identificar responsabilidades relacionadas
+                    à vida familiar e aos relacionamentos.
+                </li>
+
+                <li>
+                    Compreender a importância da responsabilidade
+                    espiritual e do compromisso com Deus.
+                </li>
+
+                <li>
+                    Valorizar o trabalho, a honestidade
+                    e o compromisso profissional.
+                </li>
+
+                <li>
+                    Reconhecer o serviço cristão como expressão
+                    de maturidade e amor ao próximo.
+                </li>
+
+                <li>
+                    Aplicar os ensinamentos bíblicos
+                    às decisões e circunstâncias da vida.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- CONTEÚDO PROGRAMÁTICO -->
+
+        <section class="bloco">
+
+            <h2>4. Conteúdo Programático</h2>
+
+            <p>
+                O módulo será desenvolvido por meio de
+                seis temas de estudo, organizados para
+                conduzir o aluno da compreensão da
+                responsabilidade pessoal à sua aplicação
+                nas diferentes áreas da vida.
+            </p>
+
+            <div class="temas">
+
+                <article class="card-tema">
+
+                    <span>TEMA 01</span>
+
+                    <h3>A Masculinidade à Luz das Escrituras</h3>
+
+                    <p>
+                        A compreensão bíblica da masculinidade
+                        e sua relação com a identidade,
+                        o caráter e a responsabilidade.
+                    </p>
+
+                </article>
+
+
+                <article class="card-tema">
+
+                    <span>TEMA 02</span>
+
+                    <h3>A Responsabilidade Pessoal e Moral</h3>
+
+                    <p>
+                        Decisões, consciência, integridade
+                        e responsabilidade pelas próprias
+                        atitudes.
+                    </p>
+
+                </article>
+
+
+                <article class="card-tema">
+
+                    <span>TEMA 03</span>
+
+                    <h3>O Homem e suas Responsabilidades Familiares</h3>
+
+                    <p>
+                        Compromisso, cuidado, respeito,
+                        fidelidade e participação na
+                        construção da vida familiar.
+                    </p>
+
+                </article>
+
+
+                <article class="card-tema">
+
+                    <span>TEMA 04</span>
+
+                    <h3>Responsabilidade Espiritual e Vida com Deus</h3>
+
+                    <p>
+                        Comunhão com Deus, oração,
+                        conhecimento bíblico e maturidade
+                        na caminhada cristã.
+                    </p>
+
+                </article>
+
+
+                <article class="card-tema">
+
+                    <span>TEMA 05</span>
+
+                    <h3>Trabalho, Ética e Responsabilidade Social</h3>
+
+                    <p>
+                        Honestidade, dedicação profissional,
+                        compromisso social e testemunho cristão.
+                    </p>
+
+                </article>
+
+
+                <article class="card-tema">
+
+                    <span>TEMA 06</span>
+
+                    <h3>O Homem Cristão e o Serviço ao Próximo</h3>
+
+                    <p>
+                        Serviço cristão, solidariedade,
+                        cooperação e responsabilidade
+                        na Igreja e na sociedade.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- METODOLOGIA -->
+
+        <section class="metodologia">
+
+            <h2>5. Metodologia de Estudo</h2>
+
+            <p>
+                O conteúdo será desenvolvido por meio
+                de estudos bíblicos e reflexões práticas,
+                procurando relacionar os ensinamentos
+                das Escrituras às situações reais
+                da vida cotidiana.
+            </p>
+
+            <ul>
+
+                <li>
+                    Leitura e interpretação de textos bíblicos.
+                </li>
+
+                <li>
+                    Estudo dos princípios cristãos relacionados
+                    à responsabilidade masculina.
+                </li>
+
+                <li>
+                    Reflexão sobre situações familiares,
+                    profissionais e sociais.
+                </li>
+
+                <li>
+                    Perguntas para reflexão individual
+                    e discussão em grupo.
+                </li>
+
+                <li>
+                    Aplicação prática dos princípios
+                    estudados.
+                </li>
+
+                <li>
+                    Questionário de avaliação e fixação
+                    da aprendizagem.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- LEITURAS -->
+
+        <section class="bloco">
+
+            <h2>6. Leituras Bíblicas Fundamentais</h2>
+
+            <p>
+                As seguintes passagens oferecem fundamentos
+                para o desenvolvimento dos temas deste módulo:
+            </p>
+
+            <ul class="leituras">
+
+                <li>
+                    Gênesis 1:26-28 — A criação e a responsabilidade humana.
+                </li>
+
+                <li>
+                    Miqueias 6:8 — Justiça, misericórdia e humildade diante de Deus.
+                </li>
+
+                <li>
+                    Mateus 5:13-16 — O testemunho dos discípulos.
+                </li>
+
+                <li>
+                    Mateus 20:25-28 — A liderança e o serviço.
+                </li>
+
+                <li>
+                    Marcos 10:42-45 — O exemplo de Jesus como servo.
+                </li>
+
+                <li>
+                    Colossenses 3:17-24 — A vida cotidiana diante do Senhor.
+                </li>
+
+                <li>
+                    1 Timóteo 5:8 — Responsabilidade familiar.
+                </li>
+
+                <li>
+                    Tiago 1:22-27 — A prática da Palavra.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- PRINCÍPIO FORMATIVO -->
+
+        <section class="bloco">
+
+            <h2>7. Princípio Formativo do Módulo</h2>
+
+            <p>
+                A responsabilidade cristã não deve ser
+                confundida com autoritarismo, orgulho
+                ou imposição sobre outras pessoas.
+            </p>
+
+            <p>
+                O modelo apresentado por Jesus Cristo
+                é o da liderança que serve, do amor que
+                cuida e da autoridade exercida com
+                humildade e responsabilidade.
+            </p>
+
+            <p>
+                O homem cristão é chamado a assumir
+                seus compromissos, reconhecer seus
+                erros, cumprir seus deveres e demonstrar
+                sua fé por meio de atitudes coerentes
+                com a Palavra de Deus.
+            </p>
+
+            <div class="destaque">
+
+                <strong>Princípio central:</strong>
+
+                <p>
+                    A verdadeira masculinidade cristã
+                    manifesta-se não na busca de privilégios,
+                    mas na disposição de assumir responsabilidades,
+                    servir com amor e viver com fidelidade
+                    diante de Deus.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CHAMADA -->
+
+        <section class="chamada">
+
+            <h2>Inicie seus Estudos</h2>
+
+            <p>
+                A responsabilidade cristã começa quando
+                compreendemos que nossa vida pertence
+                a Deus e que nossas atitudes devem
+                refletir os ensinamentos de Cristo.
+            </p>
+
+            <p>
+                Prepare-se para estudar os fundamentos
+                bíblicos de uma masculinidade comprometida
+                com a fé, a família, a Igreja e a sociedade.
+            </p>
+
+            <a href="tema01.html" class="botao">
+                INICIAR TEMA 01 →
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+
+    <footer class="rodape">
+
+        <p>
+            HOMENS SEGUNDO O CORAÇÃO DE DEUS
+        </p>
+
+        <p>
+            Formando homens, fortalecendo famílias
+            e servindo à Igreja de Cristo.
+        </p>
+
+        <p>
+            Ambiente 01 — Identidade Masculina Cristã
+        </p>
+
+        <p>
+            Módulo 03 — Masculinidade e Responsabilidade Cristã
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

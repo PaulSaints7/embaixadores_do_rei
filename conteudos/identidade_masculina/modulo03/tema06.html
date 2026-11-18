@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tema 06 — O Homem Cristão e o Serviço ao Próximo</title>
+
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #F7F4EC;
+            color: #38271F;
+            font-family: "Open Sans", sans-serif;
+            line-height: 1.8;
+        }
+
+        .pagina-tema {
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        .cabecalho-tema {
+            background: linear-gradient(135deg, #38271F, #18334D);
+            color: #F7F4EC;
+            padding: 55px 20px;
+            text-align: center;
+            border-bottom: 5px solid #B08A48;
+        }
+
+        .cabecalho-tema .identificacao {
+            font-size: 0.85rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #D1B477;
+            margin-bottom: 15px;
+        }
+
+        .cabecalho-tema h1 {
+            font-family: "Cinzel", serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            max-width: 950px;
+            margin: 0 auto 15px;
+            line-height: 1.35;
+        }
+
+        .cabecalho-tema p {
+            max-width: 750px;
+            margin: 0 auto;
+            color: #E9DFC9;
+            font-size: 1rem;
+        }
+
+        .conteudo-tema {
+            max-width: 1050px;
+            margin: 45px auto;
+            padding: 0 25px;
+        }
+
+        .introducao {
+            background: #E9DFC9;
+            border-left: 5px solid #B08A48;
+            padding: 25px 30px;
+            margin-bottom: 35px;
+            border-radius: 5px;
+        }
+
+        .introducao p {
+            margin: 0;
+            font-size: 1.05rem;
+        }
+
+        .secao-conteudo {
+            background: #FFFFFF;
+            padding: 28px 32px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(56, 39, 31, 0.07);
+        }
+
+        .secao-conteudo h2 {
+            font-family: "Cinzel", serif;
+            color: #18334D;
+            font-size: 1.35rem;
+            margin-top: 0;
+            margin-bottom: 18px;
+            border-bottom: 1px solid #D1B477;
+            padding-bottom: 10px;
+        }
+
+        .secao-conteudo h3 {
+            color: #76523C;
+            font-size: 1.05rem;
+            margin-top: 22px;
+            margin-bottom: 8px;
+        }
+
+        .secao-conteudo p {
+            margin: 12px 0;
+            text-align: justify;
+        }
+
+        .referencia {
+            display: block;
+            color: #76523C;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+
+        .versiculo {
+            background: #F7F4EC;
+            border-left: 4px solid #B08A48;
+            padding: 20px 25px;
+            margin: 20px 0;
+            font-family: "Libre Baskerville", serif;
+            font-style: italic;
+            color: #593B2B;
+        }
+
+        .lista-conteudo {
+            padding-left: 25px;
+        }
+
+        .lista-conteudo li {
+            margin-bottom: 12px;
+        }
+
+        .destaque {
+            background: #18334D;
+            color: #F7F4EC;
+            padding: 28px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .destaque h2 {
+            font-family: "Cinzel", serif;
+            color: #D1B477;
+            margin-top: 0;
+        }
+
+        .destaque p {
+            margin-bottom: 0;
+        }
+
+        .reflexao {
+            background: #E9DFC9;
+            padding: 25px 30px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .reflexao h2 {
+            font-family: "Cinzel", serif;
+            color: #38271F;
+            margin-top: 0;
+        }
+
+        .reflexao ol {
+            padding-left: 22px;
+        }
+
+        .reflexao li {
+            margin-bottom: 12px;
+        }
+
+        .conclusao {
+            background: #FFFFFF;
+            border-top: 4px solid #B08A48;
+            padding: 30px;
+            margin-top: 30px;
+            border-radius: 8px;
+        }
+
+        .conclusao h2 {
+            font-family: "Cinzel", serif;
+            color: #18334D;
+            margin-top: 0;
+        }
+
+        .principio-formativo {
+            text-align: center;
+            padding: 30px 20px;
+            margin: 35px 0;
+            background: #38271F;
+            color: #F7F4EC;
+            border-radius: 8px;
+        }
+
+        .principio-formativo h2 {
+            font-family: "Cinzel", serif;
+            color: #D1B477;
+            font-size: 1.2rem;
+            margin-top: 0;
+        }
+
+        .principio-formativo p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-family: "Libre Baskerville", serif;
+            font-size: 1.05rem;
+        }
+
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 45px 0;
+        }
+
+        .botao-navegacao {
+            display: inline-block;
+            background: #18334D;
+            color: #FFFFFF;
+            padding: 13px 22px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .botao-navegacao:hover {
+            background: #B08A48;
+            color: #38271F;
+            transform: translateY(-2px);
+        }
+
+        .rodape-tema {
+            background: #38271F;
+            color: #E9DFC9;
+            text-align: center;
+            padding: 25px 20px;
+            border-top: 4px solid #B08A48;
+        }
+
+        .rodape-tema p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 700px) {
+
+            .cabecalho-tema {
+                padding: 40px 18px;
+            }
+
+            .conteudo-tema {
+                padding: 0 15px;
+                margin: 25px auto;
+            }
+
+            .secao-conteudo {
+                padding: 22px 20px;
+            }
+
+            .introducao {
+                padding: 20px;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+            }
+
+            .botao-navegacao {
+                text-align: center;
+            }
+        }
+
+        @media print {
+
+            body {
+                background: #FFFFFF;
+                color: #000000;
+                font-size: 11pt;
+            }
+
+            .cabecalho-tema {
+                background: #FFFFFF;
+                color: #000000;
+                border-bottom: 2px solid #000000;
+                padding: 25px;
+            }
+
+            .cabecalho-tema .identificacao,
+            .cabecalho-tema p {
+                color: #000000;
+            }
+
+            .conteudo-tema {
+                max-width: 100%;
+                margin: 15px auto;
+                padding: 0;
+            }
+
+            .secao-conteudo,
+            .introducao,
+            .conclusao,
+            .reflexao,
+            .destaque,
+            .principio-formativo {
+                box-shadow: none;
+                break-inside: avoid;
+                background: #FFFFFF;
+                color: #000000;
+                border: 1px solid #CCCCCC;
+            }
+
+            .secao-conteudo h2,
+            .destaque h2,
+            .principio-formativo h2,
+            .conclusao h2,
+            .reflexao h2 {
+                color: #000000;
+            }
+
+            .navegacao-temas,
+            .rodape-tema {
+                display: none;
+            }
+
+            a {
+                color: #000000;
+                text-decoration: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="pagina-tema">
+
+        <header class="cabecalho-tema">
+
+            <div class="identificacao">
+                Identidade Masculina Cristã | Módulo 03 | Tema 06
+            </div>
+
+            <h1>O Homem Cristão e o Serviço ao Próximo</h1>
+
+            <p>
+                O serviço como expressão do amor cristão,
+                da humildade e do compromisso com Deus e com as pessoas.
+            </p>
+
+        </header>
+
+
+        <main class="conteudo-tema">
+
+            <section class="introducao">
+
+                <p>
+                    O serviço ao próximo é uma expressão concreta da fé
+                    cristã. Jesus Cristo ensinou e demonstrou que a
+                    verdadeira grandeza não está no desejo de dominar
+                    ou receber privilégios, mas na disposição de servir.
+                    O homem cristão é chamado a utilizar suas capacidades,
+                    seus recursos e seu tempo para contribuir com o bem
+                    das pessoas, edificar a Igreja e testemunhar o amor
+                    de Deus na sociedade.
+                </p>
+
+            </section>
+
+
+            <section class="secao-conteudo">
+
+                <h2>1. O Serviço no Ensino de Jesus</h2>
+
+                <p>
+                    Durante seu ministério terreno, Jesus apresentou
+                    uma compreensão de grandeza diferente daquela
+                    frequentemente valorizada pela sociedade.
+                    Enquanto muitos procuravam posições de destaque,
+                    autoridade e reconhecimento, Cristo ensinou
+                    que seus discípulos deveriam desenvolver uma
+                    atitude de serviço.
+                </p>
+
+                <p>
+                    Jesus não apenas ensinou sobre o serviço:
+                    ele próprio demonstrou essa disposição em
+                    suas relações com as pessoas. Sua vida foi
+                    marcada pelo cuidado, pela compaixão,
+                    pelo acolhimento e pela entrega.
+                </p>
+
+                <div class="versiculo">
+                    "Porque o Filho do Homem também não veio para
+                    ser servido, mas para servir e dar a sua vida
+                    em resgate de muitos."
+                    <br><br>
+                    Marcos 10:45
+                </div>
+
+                <p>
+                    O homem cristão deve compreender que servir
+                    não diminui sua dignidade. Pelo contrário,
+                    demonstra maturidade, humildade e compromisso
+                    com os ensinamentos de Cristo.
+                </p>
+
+                <span class="referencia">
+                    Referências bíblicas: Mateus 20:25-28;
+                    Marcos 10:42-45; João 13:1-17.
+                </span>
+
+            </section>
+
+
+            <section class="secao-conteudo">
+
+                <h2>2. A Humildade como Fundamento do Serviço</h2>
+
+                <p>
+                    O serviço cristão exige humildade. Isso significa
+                    reconhecer que nossas capacidades e oportunidades
+                    devem ser utilizadas também para beneficiar outras
+                    pessoas.
+                </p>
+
+                <p>
+                    A humildade não significa considerar-se inferior
+                    ou negar o valor das próprias habilidades.
+                    Significa abandonar o orgulho, a vaidade e o desejo
+                    de reconhecimento a qualquer preço.
+                </p>
+
+                <p>
+                    O homem cristão deve aprender a colaborar,
+                    ouvir, compartilhar responsabilidades e
+                    reconhecer a contribuição dos outros.
+                </p>
+
+                <div class="versiculo">
+                    "Nada façais por contenda ou por vanglória,
+                    mas por humildade; cada um considere os outros
+                    superiores a si mesmo."
+                    <br><br>
+                    Filipenses 2:3
+                </div>
+
+                <p>
+                    A humildade cristã conduz a uma postura de respeito
+                    e consideração. Quem serve não procura transformar
+                    sua contribuição em instrumento de superioridade
+                    sobre aqueles que recebem ajuda.
+                </p>
+
+                <span class="referencia">
+                    Referências bíblicas: Filipenses 2:3-8;
+                    Romanos 12:3; 1 Pedro 5:5-6.
+                </span>
+
+            </section>
+
+
+            <section class="secao-conteudo">
+
+                <h2>3. O Amor como Motivação para Servir</h2>
+
+                <p>
+                    O serviço cristão deve nascer do amor. A Bíblia
+                    ensina que o amor a Deus e ao próximo está
+                    no centro dos mandamentos.
+                </p>
+
+                <p>
+                    Servir apenas para receber elogios, conquistar
+                    prestígio ou obter vantagens pessoais não
+                    corresponde ao espírito ensinado por Jesus.
+                    A verdadeira disposição de servir procura
+                    o bem do outro.
+                </p>
+
+                <div class="versiculo">
+                    "Porque toda a lei se cumpre numa só palavra,
+                    nesta: Amarás o teu próximo como a ti mesmo."
+                    <br><br>
+                    Gálatas 5:14
+                </div>
+
+                <p>
+                    O amor cristão não deve permanecer apenas
+                    no discurso. Ele precisa se transformar
+                    em atitudes concretas, como ouvir,
+                    acolher, ajudar, orientar e compartilhar.
+                </p>
+
+                <p>
+                    O homem cristão deve procurar identificar
+                    as necessidades das pessoas ao seu redor
+                    e avaliar de que maneira pode contribuir
+                    de forma responsável.
+                </p>
+
+                <span class="referencia">
+                    Referências bíblicas: Mateus 22:34-40;
+                    João 13:34-35; 1 Coríntios 13:1-7;
+                    1 João 3:16-18.
+                </span>
+
+            </section>
+
+
+            <section class="secao-conteudo">
+
+                <h2>4. O Serviço na Vida da Igreja</h2>
+
+                <p>
+                    A Igreja é uma comunidade formada por pessoas
+                    que receberam diferentes dons, capacidades
+                    e oportunidades de serviço. Cada membro
+                    pode contribuir para a edificação do corpo
+                    de Cristo.
+                </p>
+
+                <p>
+                    O homem cristão não deve limitar sua participação
+                    na Igreja à presença nos cultos. Ele também
+                    pode colaborar com atividades de ensino,
+                    evangelização, recepção, visitação, assistência,
+                    organização e outras formas de ministério.
+                </p>
+
+                <div class="versiculo">
+                    "Cada um administre aos outros o dom como o recebeu,
+                    como bons despenseiros da multiforme graça de Deus."
+                    <br><br>
+                    1 Pedro 4:10
+                </div>
+
+                <h3>O valor dos diferentes dons</h3>
+
+                <p>
+                    Nem todos possuem as mesmas habilidades ou
+                    exercem as mesmas funções. Algumas pessoas
+                    possuem facilidade para ensinar; outras
+                    se destacam no acolhimento, na administração,
+                    na música, na visitação ou no cuidado com
+                    os necessitados.
+                </p>
+
+                <p>
+                    A diversidade de dons não deve produzir
+                    competição, mas cooperação. O objetivo
+                    é que cada pessoa utilize aquilo que recebeu
+                    para o bem da comunidade cristã.
+                </p>
+
+                <span class="referencia">
+                    Referências bíblicas: Romanos 12:4-8;
+                    1 Coríntios 12:4-27; Efésios 4:11-16;
+                    1 Pedro 4:10-11.
+                </span>
+
+            </section>
+
+
+            <section class="secao-conteudo">
+
+                <h2>5. O Serviço por Meio da Evangelização</h2>
+
+                <p>
+                    Uma das responsabilidades da Igreja é anunciar
+                    o Evangelho de Jesus Cristo. O homem cristão
+                    pode participar dessa missão utilizando
+                    diferentes oportunidades para compartilhar
+                    a mensagem da salvação.
+                </p>
+
+                <p>
+                    Evangelizar envolve anunciar a obra de Cristo,
+                    explicar a mensagem bíblica e testemunhar
+                    com fidelidade aquilo que as Escrituras ensinam.
+                </p>
+
+                <p>
+                    Esse trabalho deve ser realizado com amor,
+                    respeito e responsabilidade, sem coerção,
+                    humilhação ou manipulação das pessoas.
+                </p>
+
+                <div class="versiculo">
+                    "Ide por todo o mundo, pregai o evangelho
+                    a toda criatura."
+                    <br><br>
+                    Marcos 16:15
+                </div>
+
+                <p>
+                    O testemunho pessoal também possui importância.
+                    A maneira como o homem vive, trabalha,
+                    trata sua família e se relaciona com
+                    outras pessoas pode contribuir para
+                    a credibilidade de seu testemunho cristão.
+                </p>
+
+                <span class="referencia">
+                    Referências bíblicas: Mateus 28:19-20;
+                    Marcos 16:15; Atos 1:8; 1 Pedro 3:15-16.
+                </span>
+
+            </section>
+
+
+            <section class="secao-conteudo">
+
+                <h2>6. O Serviço aos Necessitados</h2>
+
+                <p>
+                    A Bíblia apresenta repetidamente a importância
+                    de cuidar daqueles que enfrentam situações
+                    de vulnerabilidade. Viúvas, órfãos, enfermos,
+                    estrangeiros, pobres e pessoas em sofrimento
+                    aparecem nas Escrituras como exemplos de
+                    pessoas que necessitam de atenção e cuidado.
+                </p>
+
+                <p>
+                    Jesus demonstrou compaixão pelas pessoas
+                    e ensinou seus discípulos a reconhecerem
+                    as necessidades humanas.
+                </p>
+
+                <div class="versiculo">
+                    "Assim resplandeça a vossa luz diante dos homens,
+                    para que vejam as vossas boas obras e glorifiquem
+                    a vosso Pai, que está nos céus."
+                    <br><br>
+                    Mateus 5:16
+                </div>
+
+                <h3>Formas práticas de ajudar</h3>
+
+                <ul class="lista-conteudo">
+
+                    <li>Visitar pessoas enfermas ou impossibilitadas de sair de casa.</li>
+
+                    <li>Auxiliar famílias que enfrentam dificuldades materiais.</li>
+
+                    <li>Oferecer apoio a idosos que necessitam de atenção.</li>
+
+                    <li>Participar de campanhas de arrecadação e assistência.</li>
+
+                    <li>Orientar pessoas que precisam de apoio e encaminhamento.</li>
+
+                    <li>Dedicar tempo para ouvir quem enfrenta momentos difíceis.</li>
+
+                    <li>Cooperar com projetos sociais e missionários da Igreja.</li>
+
+                </ul>
+
+                <p>
+                    A ajuda cristã deve respeitar a dignidade
+                    das pessoas. Quem recebe auxílio não deve
+                    ser tratado com desprezo, exposição pública
+                    ou constrangimento.
+                </p>
+
+                <span class="referencia">
+                    Referências bíblicas: Isaías 58:6-10;
+                    Mateus 25:34-40; Lucas 10:25-37;
+                    Tiago 1:27.
+                </span>
+
+            </section>
+
+
+            <section class="secao-conteudo">
+
+                <h2>7. O Serviço na Família e na Comunidade</h2>
+
+                <p>
+                    A disposição de servir não deve existir
+                    apenas dentro das atividades da Igreja.
+                    Ela também precisa estar presente na vida
+                    familiar e na comunidade em que o homem vive.
+                </p>
+
+                <p>
+                    O serviço começa muitas vezes em atitudes
+                    simples: ajudar nas tarefas do lar,
+                    cuidar de alguém que está doente,
+                    orientar um filho, apoiar um vizinho
+                    ou participar de uma iniciativa comunitária.
+                </p>
+
+                <p>
+                    O homem cristão deve compreender que
+                    a responsabilidade de servir não está
+                    restrita a cargos ou funções religiosas.
+                    Qualquer pessoa pode demonstrar amor
+                    por meio de atitudes responsáveis.
+                </p>
+
+                <p>
+                    O exemplo de Cristo deve orientar também
+                    a maneira como tratamos aqueles que convivem
+                    conosco diariamente.
+                </p>
+
+                <span class="referencia">
+                    Referências bíblicas: Gálatas 5:13;
+                    Filipenses 2:4; Colossenses 3:12-14;
+                    1 João 3:17-18.
+                </span>
+
+            </section>
+
+
+            <section class="secao-conteudo">
+
+                <h2>8. Liderança Servidora</h2>
+
+                <p>
+                    O homem cristão pode exercer funções de liderança
+                    em sua família, na Igreja, no trabalho e na
+                    sociedade. Entretanto, a liderança orientada
+                    pelos ensinamentos de Cristo deve estar
+                    fundamentada no serviço e na responsabilidade.
+                </p>
+
+                <p>
+                    Liderar não significa utilizar uma posição
+                    para impor vontades, buscar privilégios
+                    ou controlar outras pessoas. Significa
+                    assumir responsabilidades, orientar,
+                    cooperar e trabalhar pelo bem daqueles
+                    que estão sob sua influência.
+                </p>
+
+                <div class="versiculo">
+                    "O maior dentre vós será vosso servo."
+                    <br><br>
+                    Mateus 23:11
+                </div>
+
+                <p>
+                    A liderança servidora exige humildade,
+                    integridade, capacidade de ouvir,
+                    disposição para ajudar e compromisso
+                    com os princípios bíblicos.
+                </p>
+
+                <p>
+                    O homem cristão que ocupa uma função
+                    de liderança deve compreender que
+                    sua autoridade precisa ser exercida
+                    com responsabilidade e respeito.
+                </p>
+
+                <span class="referencia">
+                    Referências bíblicas: Mateus 20:25-28;
+                    Mateus 23:11-12; João 13:12-17;
+                    1 Pedro 5:2-3.
+                </span>
+
+            </section>
+
+
+            <section class="secao-conteudo">
+
+                <h2>9. O Serviço como Testemunho da Fé</h2>
+
+                <p>
+                    A fé cristã deve produzir frutos visíveis
+                    na maneira como tratamos as pessoas.
+                    O serviço ao próximo não substitui a
+                    salvação pela graça mediante a fé,
+                    mas constitui uma expressão da fé
+                    verdadeira.
+                </p>
+
+                <p>
+                    As boas obras não são o preço da salvação.
+                    Elas são resultado de uma vida transformada
+                    por Cristo e de uma disposição de obedecer
+                    aos ensinamentos de Deus.
+                </p>
+
+                <div class="versiculo">
+                    "Porque somos feitura sua, criados em Cristo
+                    Jesus para as boas obras, as quais Deus
+                    preparou para que andássemos nelas."
+                    <br><br>
+                    Efésios 2:10
+                </div>
+
+                <p>
+                    O homem cristão deve compreender que
+                    servir é uma oportunidade de demonstrar
+                    gratidão a Deus e expressar o amor
+                    recebido por meio de Jesus Cristo.
+                </p>
+
+                <span class="referencia">
+                    Referências bíblicas: Efésios 2:8-10;
+                    Tiago 2:14-18; 1 João 3:16-18.
+                </span>
+
+            </section>
+
+
+            <section class="secao-conteudo">
+
+                <h2>10. Aplicação Prática: Uma Vida de Serviço</h2>
+
+                <p>
+                    O serviço cristão precisa ser colocado
+                    em prática no cotidiano. O homem pode
+                    demonstrar sua disposição de servir
+                    por meio de diferentes atitudes.
+                </p>
+
+                <ul class="lista-conteudo">
+
+                    <li>
+                        <strong>Na família:</strong>
+                        participar das responsabilidades do lar,
+                        cuidar e apoiar os familiares.
+                    </li>
+
+                    <li>
+                        <strong>Na Igreja:</strong>
+                        utilizar seus dons e capacidades
+                        para colaborar com os ministérios.
+                    </li>
+
+                    <li>
+                        <strong>Na evangelização:</strong>
+                        compartilhar o Evangelho com fidelidade,
+                        respeito e amor.
+                    </li>
+
+                    <li>
+                        <strong>Na comunidade:</strong>
+                        participar de ações que contribuam
+                        para o bem das pessoas.
+                    </li>
+
+                    <li>
+                        <strong>Entre os necessitados:</strong>
+                        demonstrar solidariedade e oferecer
+                        ajuda de maneira responsável.
+                    </li>
+
+                    <li>
+                        <strong>Na liderança:</strong>
+                        exercer influência por meio do exemplo,
+                        da humildade e do compromisso.
+                    </li>
+
+                    <li>
+                        <strong>Na vida cotidiana:</strong>
+                        reconhecer oportunidades de fazer
+                        o bem e agir com disposição.
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+            <section class="reflexao">
+
+                <h2>Reflexão Pessoal</h2>
+
+                <p>
+                    O serviço ao próximo exige uma avaliação
+                    sincera de nossas motivações e atitudes.
+                </p>
+
+                <ol>
+
+                    <li>
+                        Tenho demonstrado disposição para ajudar
+                        as pessoas sem esperar reconhecimento?
+                    </li>
+
+                    <li>
+                        Tenho utilizado meus dons e capacidades
+                        para contribuir com a Igreja?
+                    </li>
+
+                    <li>
+                        Minha família encontra em mim alguém
+                        disposto a colaborar e servir?
+                    </li>
+
+                    <li>
+                        Tenho demonstrado compaixão diante
+                        das necessidades das pessoas?
+                    </li>
+
+                    <li>
+                        Compreendo que a liderança cristã
+                        deve ser exercida por meio do serviço?
+                    </li>
+
+                    <li>
+                        Minhas atitudes demonstram o amor
+                        de Cristo àqueles que convivem comigo?
+                    </li>
+
+                </ol>
+
+                <p>
+                    Essas perguntas nos ajudam a compreender
+                    que servir não é apenas realizar grandes
+                    projetos. Muitas vezes, o serviço cristão
+                    começa em pequenas atitudes de amor,
+                    cuidado e responsabilidade.
+                </p>
+
+            </section>
+
+
+            <section class="conclusao">
+
+                <h2>Conclusão</h2>
+
+                <p>
+                    O serviço ao próximo é uma expressão
+                    fundamental da vida cristã. Jesus Cristo
+                    ensinou que a verdadeira grandeza está
+                    na disposição de servir, e seu próprio
+                    ministério demonstrou esse princípio.
+                </p>
+
+                <p>
+                    O homem cristão precisa compreender
+                    que suas capacidades, seus recursos
+                    e suas oportunidades podem ser utilizados
+                    para beneficiar outras pessoas,
+                    fortalecer a Igreja e contribuir
+                    para o bem da sociedade.
+                </p>
+
+                <p>
+                    A maturidade cristã não é demonstrada
+                    apenas por conhecimento, posição
+                    ou reconhecimento. Ela também se revela
+                    na humildade, na compaixão e na disposição
+                    de colocar o amor em prática.
+                </p>
+
+                <p>
+                    Portanto, o homem que deseja viver
+                    segundo os princípios de Cristo deve
+                    desenvolver uma vida marcada pelo serviço,
+                    reconhecendo que servir ao próximo
+                    é uma maneira de expressar seu compromisso
+                    com Deus.
+                </p>
+
+            </section>
+
+
+            <section class="principio-formativo">
+
+                <h2>Princípio Formativo</h2>
+
+                <p>
+                    O homem cristão demonstra maturidade
+                    quando utiliza seus dons, capacidades
+                    e oportunidades para servir a Deus,
+                    edificar a Igreja e contribuir com
+                    o bem das pessoas, seguindo o exemplo
+                    de humildade e amor de Jesus Cristo.
+                </p>
+
+            </section>
+
+
+            <section class="secao-conteudo">
+
+                <h2>Leitura Bíblica para Aprofundamento</h2>
+
+                <ul class="lista-conteudo">
+
+                    <li>Mateus 20:25-28 — A grandeza no serviço.</li>
+
+                    <li>Mateus 22:34-40 — O amor a Deus e ao próximo.</li>
+
+                    <li>Mateus 25:31-40 — O cuidado com os necessitados.</li>
+
+                    <li>Marcos 10:42-45 — Jesus, o exemplo de servo.</li>
+
+                    <li>Lucas 10:25-37 — A parábola do bom samaritano.</li>
+
+                    <li>João 13:1-17 — Jesus lava os pés dos discípulos.</li>
+
+                    <li>Romanos 12:3-13 — Os dons e o serviço cristão.</li>
+
+                    <li>1 Coríntios 12:12-27 — A Igreja como corpo de Cristo.</li>
+
+                    <li>Efésios 2:8-10 — Salvação e boas obras.</li>
+
+                    <li>1 Pedro 4:10-11 — Servindo com os dons recebidos.</li>
+
+                </ul>
+
+            </section>
+
+
+            <nav class="navegacao-temas">
+
+                <a href="tema05.html" class="botao-navegacao">
+                    ← TEMA ANTERIOR
+                </a>
+
+                <a href="apresentacao.html" class="botao-navegacao">
+                    VISÃO GERAL DO MÓDULO
+                </a>
+
+                <a href="../../../uhbb_psh.html" class="botao-navegacao">
+                    PÁGINA PRINCIPAL
+                </a>
+
+            </nav>
+
+
+            <div style="text-align: center; margin-bottom: 40px;">
+
+                <button
+                    onclick="window.print()"
+                    class="botao-navegacao"
+                    style="border: none; cursor: pointer;">
+
+                    IMPRIMIR ESTUDO
+
+                </button>
+
+            </div>
+
+        </main>
+
+
+        <footer class="rodape-tema">
+
+            <p>
+                HOMENS SEGUNDO O CORAÇÃO DE DEUS
+            </p>
+
+            <p>
+                Formando homens, fortalecendo famílias e servindo à Igreja de Cristo.
+            </p>
+
+            <p>
+                Módulo 03 — Masculinidade e Responsabilidade Cristã
+            </p>
+
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

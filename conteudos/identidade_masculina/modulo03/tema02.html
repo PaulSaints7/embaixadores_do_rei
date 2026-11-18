@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tema 02 — A Responsabilidade Pessoal e Moral</title>
+
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        .pagina-tema {
+            width: min(100% - 35px, 950px);
+            margin: 40px auto 70px;
+        }
+
+        .cabecalho-tema {
+            background: linear-gradient(135deg, #38271F, #18334D);
+            color: #F7F4EC;
+            padding: 45px 30px;
+            border-radius: 12px;
+            border-bottom: 5px solid #B08A48;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .identificacao-tema {
+            color: #D1B477;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .cabecalho-tema h1 {
+            font-family: "Cinzel", serif;
+            font-size: clamp(1.7rem, 4vw, 2.5rem);
+            line-height: 1.3;
+            margin: 18px 0;
+        }
+
+        .cabecalho-tema p {
+            color: #E9DFC9;
+            margin: 0;
+        }
+
+        .conteudo-tema {
+            background: #FFFFFF;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+            margin-bottom: 25px;
+        }
+
+        .conteudo-tema h2 {
+            font-family: "Cinzel", serif;
+            color: #18334D;
+            font-size: 1.45rem;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #E9DFC9;
+        }
+
+        .conteudo-tema h2:first-child {
+            margin-top: 0;
+        }
+
+        .conteudo-tema h3 {
+            color: #593B2B;
+            font-size: 1.1rem;
+            margin-top: 25px;
+        }
+
+        .conteudo-tema p {
+            line-height: 1.9;
+            margin-bottom: 17px;
+            text-align: justify;
+        }
+
+        .versiculo {
+            background: #F7F4EC;
+            border-left: 5px solid #B08A48;
+            padding: 22px;
+            margin: 25px 0;
+            border-radius: 5px;
+            font-family: "Libre Baskerville", serif;
+            font-style: italic;
+            color: #38271F;
+            line-height: 1.9;
+        }
+
+        .versiculo strong {
+            display: block;
+            margin-top: 12px;
+            color: #76523C;
+            font-family: "Open Sans", sans-serif;
+            font-style: normal;
+        }
+
+        .destaque {
+            background: #F1E8D6;
+            border-radius: 8px;
+            padding: 22px;
+            margin: 25px 0;
+        }
+
+        .destaque strong {
+            color: #593B2B;
+        }
+
+        .lista-estudo {
+            padding-left: 25px;
+            line-height: 1.9;
+        }
+
+        .lista-estudo li {
+            margin-bottom: 10px;
+        }
+
+        .quadro-principio {
+            background: #18334D;
+            color: #F7F4EC;
+            padding: 28px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .quadro-principio h3 {
+            color: #D1B477;
+            font-family: "Cinzel", serif;
+            margin-top: 0;
+        }
+
+        .quadro-principio p {
+            text-align: center;
+            margin-bottom: 0;
+        }
+
+        .reflexao {
+            background: #F7F4EC;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #E9DFC9;
+            margin-top: 30px;
+        }
+
+        .reflexao h3 {
+            margin-top: 0;
+            color: #18334D;
+        }
+
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .botao-tema {
+            display: inline-block;
+            padding: 13px 22px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.2s;
+            border: none;
+            cursor: pointer;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        .botao-tema:hover {
+            transform: translateY(-2px);
+        }
+
+        .botao-voltar {
+            background: #593B2B;
+            color: #FFFFFF;
+        }
+
+        .botao-proximo {
+            background: #18334D;
+            color: #FFFFFF;
+        }
+
+        .botao-modulo {
+            background: #B08A48;
+            color: #38271F;
+        }
+
+        .leituras {
+            background: #FFFFFF;
+            padding: 28px;
+            border-radius: 10px;
+            border-left: 5px solid #B08A48;
+            margin-top: 25px;
+        }
+
+        .leituras h3 {
+            font-family: "Cinzel", serif;
+            color: #18334D;
+            margin-top: 0;
+        }
+
+        .leituras ul {
+            line-height: 1.9;
+            padding-left: 22px;
+        }
+
+        @media (max-width: 650px) {
+
+            .conteudo-tema {
+                padding: 23px 18px;
+            }
+
+            .cabecalho-tema {
+                padding: 35px 20px;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+            }
+
+            .botao-tema {
+                text-align: center;
+            }
+
+        }
+
+        @media print {
+
+            body {
+                background: #FFFFFF;
+            }
+
+            .pagina-tema {
+                width: 100%;
+                margin: 0;
+            }
+
+            .cabecalho-tema {
+                background: #FFFFFF;
+                color: #000000;
+                border: 2px solid #000000;
+            }
+
+            .identificacao-tema,
+            .cabecalho-tema p {
+                color: #000000;
+            }
+
+            .conteudo-tema {
+                box-shadow: none;
+                padding: 15px;
+            }
+
+            .navegacao-temas {
+                display: none;
+            }
+
+            .quadro-principio {
+                background: #FFFFFF;
+                color: #000000;
+                border: 1px solid #000000;
+            }
+
+            .quadro-principio h3 {
+                color: #000000;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <main class="pagina-tema">
+
+
+        <!-- CABEÇALHO -->
+
+        <header class="cabecalho-tema">
+
+            <div class="identificacao-tema">
+                Ambiente 01 — Identidade Masculina Cristã
+            </div>
+
+            <h1>
+                A Responsabilidade Pessoal e Moral
+            </h1>
+
+            <p>
+                Módulo 03 — Masculinidade e Responsabilidade Cristã
+            </p>
+
+            <p>
+                Tema 02 de 06
+            </p>
+
+        </header>
+
+
+
+        <!-- CONTEÚDO -->
+
+        <article class="conteudo-tema">
+
+
+            <h2>1. Introdução</h2>
+
+            <p>
+                A responsabilidade pessoal e moral é uma das bases
+                da formação do caráter cristão. Ela envolve a capacidade
+                de reconhecer o que é certo e errado, tomar decisões
+                conscientes e assumir as consequências das próprias
+                atitudes.
+            </p>
+
+            <p>
+                Em diferentes momentos da vida, o homem precisa fazer
+                escolhas que envolvem sua família, seu trabalho,
+                seus relacionamentos, sua vida espiritual e sua
+                participação na sociedade.
+            </p>
+
+            <p>
+                Essas decisões não devem ser orientadas apenas pelos
+                interesses pessoais, pela pressão de outras pessoas
+                ou pelas circunstâncias. O homem cristão precisa
+                considerar os princípios apresentados nas Escrituras
+                Sagradas.
+            </p>
+
+            <p>
+                A responsabilidade moral começa quando reconhecemos
+                que nossas escolhas possuem significado e consequências.
+                Não podemos atribuir permanentemente aos outros a culpa
+                por nossas próprias decisões.
+            </p>
+
+
+            <div class="versiculo">
+
+                "De maneira que cada um de nós dará conta de si mesmo
+                a Deus."
+
+                <strong>Romanos 14:12</strong>
+
+            </div>
+
+
+
+            <h2>2. O ser humano como agente responsável</h2>
+
+            <p>
+                A Bíblia apresenta o ser humano como uma criatura
+                que recebe responsabilidades de Deus. Desde o relato
+                da criação, encontramos orientações, tarefas e limites
+                estabelecidos pelo Criador.
+            </p>
+
+            <p>
+                Em Gênesis 2:15-17, Deus coloca o homem no jardim
+                do Éden para cultivá-lo e guardá-lo, além de estabelecer
+                uma orientação específica sobre a árvore do conhecimento
+                do bem e do mal.
+            </p>
+
+            <p>
+                Esse relato mostra que a existência humana envolve
+                responsabilidade. O homem recebe tarefas e precisa
+                responder por suas escolhas diante daquele que o criou.
+            </p>
+
+            <p>
+                A responsabilidade pessoal não significa que controlamos
+                todas as circunstâncias da vida. Existem situações que
+                não dependem de nossa vontade. Entretanto, somos chamados
+                a responder de maneira consciente e correta diante
+                daquilo que está sob nossa responsabilidade.
+            </p>
+
+
+            <div class="destaque">
+
+                <strong>Princípio importante:</strong>
+
+                <p>
+                    O homem responsável não controla todas as circunstâncias,
+                    mas procura agir corretamente diante delas, reconhecendo
+                    sua responsabilidade pelas próprias atitudes.
+                </p>
+
+            </div>
+
+
+
+            <h2>3. A liberdade e a responsabilidade pelas escolhas</h2>
+
+            <p>
+                A liberdade humana está relacionada à capacidade
+                de realizar escolhas. Entretanto, a liberdade não
+                significa ausência de limites ou inexistência
+                de consequências.
+            </p>
+
+            <p>
+                Em Gálatas 5:13, o apóstolo Paulo ensina que a liberdade
+                cristã não deve ser utilizada como oportunidade para
+                satisfazer desejos egoístas, mas como ocasião para
+                servir uns aos outros pelo amor.
+            </p>
+
+            <p>
+                Portanto, a liberdade precisa ser exercida com
+                responsabilidade. Uma decisão pode afetar não apenas
+                quem a toma, mas também familiares, amigos, irmãos
+                da igreja e outras pessoas da comunidade.
+            </p>
+
+            <p>
+                O homem cristão precisa aprender a avaliar suas escolhas,
+                considerando os princípios bíblicos, os possíveis
+                resultados e o bem daqueles que serão alcançados
+                por suas atitudes.
+            </p>
+
+
+            <div class="versiculo">
+
+                "Todas as coisas me são lícitas, mas nem todas
+                as coisas convêm; todas as coisas me são lícitas,
+                mas eu não me deixarei dominar por nenhuma."
+
+                <strong>1 Coríntios 6:12</strong>
+
+            </div>
+
+
+
+            <h2>4. A consciência moral e os princípios de Deus</h2>
+
+            <p>
+                A consciência moral está relacionada à capacidade
+                humana de reconhecer e avaliar o significado moral
+                das próprias atitudes.
+            </p>
+
+            <p>
+                As Escrituras apresentam a consciência como uma
+                dimensão importante da experiência humana. Entretanto,
+                a consciência não deve ser considerada uma fonte
+                infalível de orientação.
+            </p>
+
+            <p>
+                Ela pode ser influenciada pela educação, pelas
+                experiências, pelos costumes e pelas convicções
+                pessoais. Por isso, precisa ser orientada e examinada
+                à luz da Palavra de Deus.
+            </p>
+
+            <p>
+                O homem cristão não deve considerar uma atitude correta
+                apenas porque está acostumado a praticá-la ou porque
+                outras pessoas a aprovam. É necessário examinar
+                suas decisões diante dos princípios bíblicos.
+            </p>
+
+            <p>
+                A Palavra de Deus oferece fundamentos para discernir
+                entre o que é justo e injusto, verdadeiro e falso,
+                correto e prejudicial.
+            </p>
+
+
+            <div class="versiculo">
+
+                "Lâmpada para os meus pés é tua palavra e luz,
+                para o meu caminho."
+
+                <strong>Salmo 119:105</strong>
+
+            </div>
+
+
+
+            <h2>5. Honestidade e compromisso com a verdade</h2>
+
+            <p>
+                A honestidade é uma expressão essencial da responsabilidade
+                moral. Ela envolve agir com sinceridade, respeitar a verdade
+                e rejeitar práticas de engano, falsidade e corrupção.
+            </p>
+
+            <p>
+                O homem cristão precisa demonstrar honestidade não apenas
+                quando está sendo observado, mas também quando ninguém
+                está acompanhando suas atitudes.
+            </p>
+
+            <p>
+                Isso se aplica aos relacionamentos pessoais, aos negócios,
+                às atividades profissionais, à administração dos recursos
+                financeiros e ao exercício de funções na igreja.
+            </p>
+
+            <p>
+                A mentira pode comprometer relacionamentos, destruir
+                a confiança e produzir consequências prejudiciais.
+                A verdade, por sua vez, deve orientar a comunicação
+                e o comportamento do cristão.
+            </p>
+
+
+            <div class="versiculo">
+
+                "Pelo que deixai a mentira e falai a verdade
+                cada um com o seu próximo."
+
+                <strong>Efésios 4:25</strong>
+
+            </div>
+
+
+            <h3>5.1. Honestidade nos relacionamentos</h3>
+
+            <p>
+                A confiança é construída por meio de atitudes coerentes.
+                Um homem que promete e não cumpre, esconde informações
+                importantes ou utiliza a mentira para obter vantagens
+                compromete a qualidade de seus relacionamentos.
+            </p>
+
+            <h3>5.2. Honestidade no trabalho</h3>
+
+            <p>
+                A responsabilidade profissional exige dedicação,
+                respeito aos compromissos, cumprimento dos deveres
+                e utilização correta dos recursos confiados ao trabalhador.
+            </p>
+
+            <h3>5.3. Honestidade na vida cristã</h3>
+
+            <p>
+                Na igreja, a honestidade deve estar presente no serviço,
+                na administração, na liderança e nos relacionamentos.
+                O compromisso com a verdade é indispensável ao testemunho
+                cristão.
+            </p>
+
+
+
+            <h2>6. Assumir os próprios erros</h2>
+
+            <p>
+                Uma das manifestações mais importantes da maturidade
+                moral é a capacidade de reconhecer os próprios erros.
+            </p>
+
+            <p>
+                Muitas vezes, diante de uma falha, o ser humano procura
+                justificar suas atitudes, transferir a culpa ou esconder
+                aquilo que fez.
+            </p>
+
+            <p>
+                Entretanto, as Escrituras ensinam que devemos reconhecer
+                nossos pecados diante de Deus e buscar o caminho
+                do arrependimento.
+            </p>
+
+            <p>
+                O arrependimento verdadeiro não consiste apenas em
+                sentir tristeza pelas consequências de uma atitude.
+                Envolve reconhecer o erro, abandonar a prática pecaminosa
+                e buscar uma mudança de conduta.
+            </p>
+
+
+            <div class="versiculo">
+
+                "O que encobre as suas transgressões nunca prosperará;
+                mas o que as confessa e deixa alcançará misericórdia."
+
+                <strong>Provérbios 28:13</strong>
+
+            </div>
+
+
+            <h3>6.1. Reconhecer</h3>
+
+            <p>
+                O primeiro passo é admitir que houve uma falha,
+                sem tentar transformar o erro em acerto.
+            </p>
+
+            <h3>6.2. Confessar</h3>
+
+            <p>
+                A confissão envolve reconhecer diante de Deus
+                a realidade do pecado. Quando prejudicamos alguém,
+                também precisamos considerar nossa responsabilidade
+                diante dessa pessoa.
+            </p>
+
+            <h3>6.3. Arrepender-se</h3>
+
+            <p>
+                O arrependimento envolve mudança de atitude e abandono
+                do caminho errado.
+            </p>
+
+            <h3>6.4. Reparar quando possível</h3>
+
+            <p>
+                Quando uma atitude prejudica outra pessoa, o homem
+                responsável deve procurar corrigir o dano na medida
+                do possível, pedir perdão e assumir as consequências
+                de seus atos.
+            </p>
+
+
+
+            <h2>7. A responsabilidade pelas palavras e atitudes</h2>
+
+            <p>
+                A responsabilidade moral não se limita às grandes
+                decisões. Ela também aparece nas palavras, nas reações
+                e nos comportamentos cotidianos.
+            </p>
+
+            <p>
+                Uma palavra ofensiva pode ferir profundamente.
+                Uma atitude impensada pode prejudicar um relacionamento.
+                Uma reação violenta pode produzir consequências
+                graves para uma família ou comunidade.
+            </p>
+
+            <p>
+                Por isso, o homem cristão precisa desenvolver domínio
+                próprio e aprender a refletir antes de agir.
+            </p>
+
+            <p>
+                Isso não significa esconder sentimentos ou evitar
+                conversas difíceis. Significa expressar pensamentos
+                e sentimentos de maneira responsável, sem utilizar
+                a ira, a humilhação ou a violência como instrumentos
+                de relacionamento.
+            </p>
+
+
+            <div class="versiculo">
+
+                "Todo homem seja pronto para ouvir, tardio para falar,
+                tardio para se irar."
+
+                <strong>Tiago 1:19</strong>
+
+            </div>
+
+
+
+            <h2>8. A prestação de contas diante de Deus</h2>
+
+            <p>
+                A responsabilidade moral possui uma dimensão espiritual.
+                O homem cristão não deve orientar sua conduta apenas
+                pelo medo de ser descoberto ou pela preocupação
+                com a opinião das pessoas.
+            </p>
+
+            <p>
+                A Bíblia ensina que Deus conhece as ações e os pensamentos
+                humanos. A vida deve ser vivida com consciência de que
+                cada pessoa é responsável diante do Criador.
+            </p>
+
+            <p>
+                Essa realidade deve produzir reverência, sinceridade
+                e compromisso com uma conduta correta.
+            </p>
+
+            <p>
+                A prestação de contas diante de Deus não deve ser
+                utilizada apenas como motivo de temor, mas também
+                como fundamento para uma vida de fidelidade e
+                responsabilidade.
+            </p>
+
+
+            <div class="versiculo">
+
+                "Porque todos devemos comparecer ante o tribunal
+                de Cristo, para que cada um receba segundo o que
+                tiver feito por meio do corpo, ou bem ou mal."
+
+                <strong>2 Coríntios 5:10</strong>
+
+            </div>
+
+
+
+            <h2>9. A responsabilidade pessoal na vida do homem cristão</h2>
+
+            <p>
+                Os princípios estudados precisam ser aplicados
+                às diferentes áreas da vida.
+            </p>
+
+            <h3>9.1. Na vida espiritual</h3>
+
+            <p>
+                O homem deve assumir seu compromisso pessoal com Deus,
+                buscando desenvolver uma vida de oração, estudo bíblico,
+                obediência e crescimento espiritual.
+            </p>
+
+            <h3>9.2. Na família</h3>
+
+            <p>
+                Deve cumprir seus compromissos familiares com amor,
+                fidelidade, respeito e responsabilidade, reconhecendo
+                que suas atitudes afetam aqueles com quem convive.
+            </p>
+
+            <h3>9.3. No trabalho</h3>
+
+            <p>
+                Deve agir com honestidade, dedicação, pontualidade
+                e compromisso com suas obrigações profissionais.
+            </p>
+
+            <h3>9.4. Na igreja</h3>
+
+            <p>
+                Deve servir com fidelidade, respeitar os compromissos
+                assumidos e utilizar corretamente os recursos e dons
+                que lhe foram confiados.
+            </p>
+
+            <h3>9.5. Na sociedade</h3>
+
+            <p>
+                Deve respeitar as pessoas, cumprir seus deveres,
+                agir com justiça e contribuir para o bem da comunidade.
+            </p>
+
+
+
+            <h2>10. Aplicação prática</h2>
+
+            <p>
+                A responsabilidade pessoal e moral precisa ser
+                demonstrada em atitudes concretas. O homem cristão
+                deve procurar:
+            </p>
+
+            <ul class="lista-estudo">
+
+                <li>
+                    Reconhecer que suas decisões possuem consequências.
+                </li>
+
+                <li>
+                    Examinar suas escolhas à luz das Escrituras.
+                </li>
+
+                <li>
+                    Agir com honestidade mesmo quando não está sendo observado.
+                </li>
+
+                <li>
+                    Cumprir compromissos e respeitar sua palavra.
+                </li>
+
+                <li>
+                    Reconhecer os próprios erros sem transferir a culpa.
+                </li>
+
+                <li>
+                    Pedir perdão quando prejudicar alguém.
+                </li>
+
+                <li>
+                    Buscar reparar os danos que suas atitudes provocaram,
+                    quando isso for possível.
+                </li>
+
+                <li>
+                    Controlar palavras, reações e impulsos.
+                </li>
+
+                <li>
+                    Viver com consciência de sua responsabilidade diante de Deus.
+                </li>
+
+            </ul>
+
+
+
+            <div class="quadro-principio">
+
+                <h3>Princípio Formativo</h3>
+
+                <p>
+                    O homem cristão demonstra maturidade quando assume
+                    a responsabilidade por suas escolhas, reconhece
+                    seus erros, pratica a verdade e orienta sua conduta
+                    pelos princípios da Palavra de Deus.
+                </p>
+
+            </div>
+
+
+
+            <h2>11. Conclusão</h2>
+
+            <p>
+                A responsabilidade pessoal e moral é indispensável
+                à formação de um homem cristão maduro. Ela exige
+                consciência, honestidade, domínio próprio e disposição
+                para assumir as consequências das próprias decisões.
+            </p>
+
+            <p>
+                O homem não deve utilizar as circunstâncias, a influência
+                de outras pessoas ou as dificuldades da vida como
+                justificativa permanente para suas atitudes.
+            </p>
+
+            <p>
+                Reconhecer os próprios erros, buscar o arrependimento
+                e corrigir a conduta são manifestações de maturidade
+                e compromisso com Deus.
+            </p>
+
+            <p>
+                A verdadeira responsabilidade não está apenas em
+                cumprir obrigações exteriores, mas em desenvolver
+                uma vida coerente com a fé professada.
+            </p>
+
+
+            <div class="versiculo">
+
+                "Assim, pois, cada um de nós dará conta de si mesmo
+                a Deus."
+
+                <strong>Romanos 14:12</strong>
+
+            </div>
+
+
+            <div class="reflexao">
+
+                <h3>Reflexão para o estudo pessoal</h3>
+
+                <p>
+                    1. Tenho assumido a responsabilidade pelas minhas decisões?
+                </p>
+
+                <p>
+                    2. Costumo reconhecer meus erros ou procuro transferir
+                    a culpa para outras pessoas?
+                </p>
+
+                <p>
+                    3. Minha conduta demonstra honestidade quando ninguém
+                    está me observando?
+                </p>
+
+                <p>
+                    4. Tenho considerado os princípios bíblicos antes
+                    de tomar decisões importantes?
+                </p>
+
+                <p>
+                    5. Existe alguma atitude que preciso corrigir para
+                    viver com maior responsabilidade diante de Deus?
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- LEITURAS BÍBLICAS -->
+
+        <section class="leituras">
+
+            <h3>Leituras bíblicas para aprofundamento</h3>
+
+            <ul>
+
+                <li>Gênesis 2:15-17 — Responsabilidade e orientação divina.</li>
+
+                <li>Provérbios 28:13 — Confissão e abandono do pecado.</li>
+
+                <li>Salmo 119:105 — A Palavra de Deus como orientação.</li>
+
+                <li>Romanos 14:12 — Responsabilidade pessoal diante de Deus.</li>
+
+                <li>1 Coríntios 6:12 — Liberdade e domínio próprio.</li>
+
+                <li>Gálatas 5:13 — Liberdade exercida pelo amor.</li>
+
+                <li>Efésios 4:25-32 — Verdade, palavras e relacionamentos.</li>
+
+                <li>Tiago 1:19-22 — Ouvir, falar e praticar a Palavra.</li>
+
+                <li>2 Coríntios 5:10 — Prestação de contas diante de Cristo.</li>
+
+            </ul>
+
+        </section>
+
+
+
+        <!-- NAVEGAÇÃO -->
+
+        <nav class="navegacao-temas">
+
+            <a href="tema01.html"
+                class="botao-tema botao-voltar">
+
+                ← TEMA ANTERIOR
+
+            </a>
+
+            <a href="apresentacao.html"
+                class="botao-tema botao-modulo">
+
+                VISÃO GERAL DO MÓDULO
+
+            </a>
+
+            <a href="tema03.html"
+                class="botao-tema botao-proximo">
+
+                PRÓXIMO TEMA →
+
+            </a>
+
+        </nav>
+
+
+        <div class="navegacao-temas">
+
+            <a href="../../../uhbb_psh.html"
+                class="botao-tema botao-voltar">
+
+                VOLTAR À PÁGINA PRINCIPAL
+
+            </a>
+
+            <button onclick="window.print()"
+                class="botao-tema botao-modulo">
+
+                IMPRIMIR ESTUDO
+
+            </button>
+
+        </div>
+
+
+    </main>
+
+</body>
+
+</html>

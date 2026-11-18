@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tema 05 — Trabalho, Ética e Responsabilidade Social</title>
+
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #F7F4EC;
+            color: #38271F;
+            font-family: "Open Sans", sans-serif;
+            line-height: 1.8;
+        }
+
+        .pagina-tema {
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        .cabecalho-tema {
+            background: linear-gradient(135deg, #38271F, #18334D);
+            color: #F7F4EC;
+            padding: 55px 20px;
+            text-align: center;
+            border-bottom: 5px solid #B08A48;
+        }
+
+        .cabecalho-tema .identificacao {
+            font-size: 0.85rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #D1B477;
+            margin-bottom: 15px;
+        }
+
+        .cabecalho-tema h1 {
+            font-family: "Cinzel", serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            max-width: 950px;
+            margin: 0 auto 15px;
+            line-height: 1.35;
+        }
+
+        .cabecalho-tema p {
+            max-width: 750px;
+            margin: 0 auto;
+            color: #E9DFC9;
+            font-size: 1rem;
+        }
+
+        .conteudo-tema {
+            max-width: 1050px;
+            margin: 45px auto;
+            padding: 0 25px;
+        }
+
+        .introducao {
+            background: #E9DFC9;
+            border-left: 5px solid #B08A48;
+            padding: 25px 30px;
+            margin-bottom: 35px;
+            border-radius: 5px;
+        }
+
+        .introducao p {
+            margin: 0;
+            font-size: 1.05rem;
+        }
+
+        .secao-conteudo {
+            background: #FFFFFF;
+            padding: 28px 32px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(56, 39, 31, 0.07);
+        }
+
+        .secao-conteudo h2 {
+            font-family: "Cinzel", serif;
+            color: #18334D;
+            font-size: 1.35rem;
+            margin-top: 0;
+            margin-bottom: 18px;
+            border-bottom: 1px solid #D1B477;
+            padding-bottom: 10px;
+        }
+
+        .secao-conteudo h3 {
+            color: #76523C;
+            font-size: 1.05rem;
+            margin-top: 22px;
+            margin-bottom: 8px;
+        }
+
+        .secao-conteudo p {
+            margin: 12px 0;
+            text-align: justify;
+        }
+
+        .referencia {
+            display: block;
+            color: #76523C;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+
+        .versiculo {
+            background: #F7F4EC;
+            border-left: 4px solid #B08A48;
+            padding: 20px 25px;
+            margin: 20px 0;
+            font-family: "Libre Baskerville", serif;
+            font-style: italic;
+            color: #593B2B;
+        }
+
+        .lista-conteudo {
+            padding-left: 25px;
+        }
+
+        .lista-conteudo li {
+            margin-bottom: 12px;
+        }
+
+        .destaque {
+            background: #18334D;
+            color: #F7F4EC;
+            padding: 28px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .destaque h2 {
+            font-family: "Cinzel", serif;
+            color: #D1B477;
+            margin-top: 0;
+        }
+
+        .destaque p {
+            margin-bottom: 0;
+        }
+
+        .reflexao {
+            background: #E9DFC9;
+            padding: 25px 30px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .reflexao h2 {
+            font-family: "Cinzel", serif;
+            color: #38271F;
+            margin-top: 0;
+        }
+
+        .reflexao ol {
+            padding-left: 22px;
+        }
+
+        .reflexao li {
+            margin-bottom: 12px;
+        }
+
+        .conclusao {
+            background: #FFFFFF;
+            border-top: 4px solid #B08A48;
+            padding: 30px;
+            margin-top: 30px;
+            border-radius: 8px;
+        }
+
+        .conclusao h2 {
+            font-family: "Cinzel", serif;
+            color: #18334D;
+            margin-top: 0;
+        }
+
+        .principio-formativo {
+            text-align: center;
+            padding: 30px 20px;
+            margin: 35px 0;
+            background: #38271F;
+            color: #F7F4EC;
+            border-radius: 8px;
+        }
+
+        .principio-formativo h2 {
+            font-family: "Cinzel", serif;
+            color: #D1B477;
+            font-size: 1.2rem;
+            margin-top: 0;
+        }
+
+        .principio-formativo p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-family: "Libre Baskerville", serif;
+            font-size: 1.05rem;
+        }
+
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 45px 0;
+        }
+
+        .botao-navegacao {
+            display: inline-block;
+            background: #18334D;
+            color: #FFFFFF;
+            padding: 13px 22px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .botao-navegacao:hover {
+            background: #B08A48;
+            color: #38271F;
+            transform: translateY(-2px);
+        }
+
+        .rodape-tema {
+            background: #38271F;
+            color: #E9DFC9;
+            text-align: center;
+            padding: 25px 20px;
+            border-top: 4px solid #B08A48;
+        }
+
+        .rodape-tema p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 700px) {
+
+            .cabecalho-tema {
+                padding: 40px 18px;
+            }
+
+            .conteudo-tema {
+                padding: 0 15px;
+                margin: 25px auto;
+            }
+
+            .secao-conteudo {
+                padding: 22px 20px;
+            }
+
+            .introducao {
+                padding: 20px;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+            }
+
+            .botao-navegacao {
+                text-align: center;
+            }
+        }
+
+        @media print {
+
+            body {
+                background: #FFFFFF;
+                color: #000000;
+                font-size: 11pt;
+            }
+
+            .cabecalho-tema {
+                background: #FFFFFF;
+                color: #000000;
+                border-bottom: 2px solid #000000;
+                padding: 25px;
+            }
+
+            .cabecalho-tema .identificacao,
+            .cabecalho-tema p {
+                color: #000000;
+            }
+
+            .conteudo-tema {
+                max-width: 100%;
+                margin: 15px auto;
+                padding: 0;
+            }
+
+            .secao-conteudo,
+            .introducao,
+            .conclusao,
+            .reflexao,
+            .destaque,
+            .principio-formativo {
+                box-shadow: none;
+                break-inside: avoid;
+                background: #FFFFFF;
+                color: #000000;
+                border: 1px solid #CCCCCC;
+            }
+
+            .secao-conteudo h2,
+            .destaque h2,
+            .principio-formativo h2,
+            .conclusao h2,
+            .reflexao h2 {
+                color: #000000;
+            }
+
+            .navegacao-temas,
+            .rodape-tema {
+                display: none;
+            }
+
+            a {
+                color: #000000;
+                text-decoration: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="pagina-tema">
+
+        <header class="cabecalho-tema">
+
+            <div class="identificacao">
+                Identidade Masculina Cristã | Módulo 03 | Tema 05
+            </div>
+
+            <h1>Trabalho, Ética e Responsabilidade Social</h1>
+
+            <p>
+                O compromisso do homem cristão com a honestidade,
+                a dignidade do trabalho e o bem da sociedade.
+            </p>
+
+        </header>
+
+
+        <main class="conteudo-tema">
+
+            <section class="introducao">
+
+                <p>
+                    O trabalho faz parte da experiência humana e está
+                    relacionado à capacidade de produzir, desenvolver
+                    habilidades, cuidar da criação e contribuir para
+                    a vida em sociedade. A Bíblia apresenta o trabalho
+                    como uma atividade digna, que deve ser realizada
+                    com responsabilidade e honestidade. O homem cristão
+                    é chamado a demonstrar sua fé também no ambiente
+                    profissional e social, agindo com justiça, respeito,
+                    integridade e compromisso com o próximo.
+                </p>
+
+            </section>
+
+
+            <section class="secao-conteudo">
+
+                <h2>1. O Trabalho no Propósito de Deus</h2>
+
+                <p>
+                    O trabalho aparece no relato bíblico antes da entrada
+                    do pecado no mundo. Deus colocou o ser humano no jardim
+                    do Éden para o cultivar e guardar. Portanto, o trabalho
+                    não deve ser entendido originalmente como uma maldição,
+                    mas como parte da responsabilidade humana na criação.
+                </p>
+
+                <p>
+                    A atividade humana permite desenvolver capacidades,
+                    produzir bens, prestar serviços, cuidar do ambiente
+                    e contribuir para o sustento da vida. Por meio do
+                    trabalho, as pessoas também podem servir umas às
+                    outras e colaborar com o desenvolvimento da sociedade.
+                </p>
+
+                <div class="versiculo">
+                    "E tomou o Senhor Deus o homem e o pôs no jardim do Éden
+                    para o lavrar e o guardar."
+                    <br><br>
+                    Gênesis 2:15
+                </div>
+
+                <p>
+                    O homem cristão deve reconhecer que o trabalho possui
+                    valor e dignidade, independentemente de sua posição
+                    profissional ou do reconhecimento que recebe.
+                </p>
+
+                <span class="referencia">
+                    Referências bíblicas: Gênesis 1:28; Gênesis 2:15;
+                    Salmo 8:3-8.
+                </span>
+
+            </section>
+
+
+            <section class="secao-conteudo">
+
+                <h2>2. O Valor e a Dignidade do Trabalho</h2>
+
+                <p>
+                    Todas as atividades profissionais honestas possuem
+                    dignidade. O valor de uma pessoa não deve ser determinado
+                    pelo cargo que ocupa, pelo salário que recebe ou pelo
+                    prestígio social de sua profissão.
+                </p>
+
+                <p>
+                    Existem diferentes formas de trabalho: atividades
+                    manuais, intelectuais, técnicas, administrativas,
+                    comerciais, agrícolas, domésticas e muitas outras.
+                    Todas podem contribuir para o bem-estar das pessoas
+                    e para o funcionamento da sociedade.
+                </p>
+
+                <p>
+                    O homem cristão deve evitar o orgulho profissional
+                    e o desprezo por aqueles que realizam trabalhos
+                    diferentes dos seus. A dignidade humana não depende
+                    da posição econômica ou profissional.
+                </p>
+
+                <p>
+                    O trabalho também deve ser compreendido dentro
+                    de seus limites. Ele é importante, mas não deve
+                    ocupar o lugar de Deus, da família, da saúde
+                    e dos relacionamentos.
+                </p>
+
+                <span class="referencia">
+                    Referências bíblicas: Provérbios 14:23;
+                    Eclesiastes 3:12-13; Colossenses 3:23-24.
+                </span>
+
+            </section>
+
+
+            <section class="secao-conteudo">
+
+                <h2>3. Ética Cristã no Ambiente Profissional</h2>
+
+                <p>
+                    Ética é um conjunto de princípios e valores que
+                    orientam a conduta humana. A ética cristã encontra
+                    fundamento nas Escrituras e deve orientar a maneira
+                    como o homem se comporta em suas atividades
+                    profissionais.
+                </p>
+
+                <p>
+                    O cristão não deve separar sua fé de sua profissão.
+                    Os princípios que orientam sua vida na Igreja
+                    também precisam estar presentes no ambiente
+                    de trabalho.
+                </p>
+
+                <h3>Honestidade</h3>
+
+                <p>
+                    O homem cristão deve agir com transparência,
+                    evitando fraudes, mentiras, falsificações,
+                    desvios de recursos e qualquer forma de
+                    desonestidade.
+                </p>
+
+                <h3>Responsabilidade</h3>
+
+                <p>
+                    Cumprir horários, respeitar compromissos,
+                    realizar tarefas com dedicação e assumir
+                    as consequências dos próprios atos são
+                    atitudes que demonstram responsabilidade.
+                </p>
+
+                <h3>Respeito</h3>
+
+                <p>
+                    Colegas, clientes, empregadores, funcionários
+                    e demais pessoas devem ser tratados com dignidade,
+                    independentemente de sua posição profissional.
+                </p>
+
+                <h3>Justiça</h3>
+
+                <p>
+                    O cristão deve rejeitar práticas injustas,
+                    exploração, discriminação e favorecimentos
+                    desonestos. A justiça exige respeito aos direitos
+                    e à dignidade das pessoas.
+                </p>
+
+                <div class="versiculo">
+                    "O peso e a balança justos são do Senhor;
+                    obra sua são todas as pedras da bolsa."
+                    <br><br>
+                    Provérbios 16:11
+                </div>
+
+                <span class="referencia">
+                    Referências bíblicas: Levítico 19:11-13;
+                    Provérbios 11:1; Efésios 4:25;
+                    Colossenses 3:23-24.
+                </span>
+
+            </section>
+
+
+            <section class="secao-conteudo">
+
+                <h2>4. O Trabalho Realizado com Excelência</h2>
+
+                <p>
+                    O compromisso com a excelência significa procurar
+                    realizar as atividades com dedicação, cuidado
+                    e responsabilidade. Não se trata de buscar
+                    reconhecimento a qualquer preço, mas de compreender
+                    que o trabalho deve ser desenvolvido com seriedade.
+                </p>
+
+                <p>
+                    A Bíblia orienta o cristão a realizar suas atividades
+                    como quem serve ao Senhor. Esse princípio transforma
+                    a maneira como encaramos nossas obrigações.
+                </p>
+
+                <div class="versiculo">
+                    "E tudo quanto fizerdes, fazei-o de todo o coração,
+                    como ao Senhor e não aos homens."
+                    <br><br>
+                    Colossenses 3:23
+                </div>
+
+                <p>
+                    O homem cristão deve procurar desenvolver suas
+                    habilidades, aprender continuamente, respeitar
+                    os procedimentos necessários e entregar um trabalho
+                    compatível com suas responsabilidades.
+                </p>
+
+                <p>
+                    Excelência não significa perfeccionismo nem
+                    exploração de si mesmo. Significa compromisso
+                    com a qualidade, reconhecendo os limites humanos
+                    e a necessidade de equilíbrio.
+                </p>
+
+                <span class="referencia">
+                    Referências bíblicas: Provérbios 22:29;
+                    Eclesiastes 9:10; Colossenses 3:23-24.
+                </span>
+
+            </section>
+
+
+            <section class="secao-conteudo">
+
+                <h2>5. A Responsabilidade com os Recursos Financeiros</h2>
+
+                <p>
+                    O homem cristão deve administrar os recursos
+                    financeiros com prudência, honestidade e
+                    responsabilidade. O dinheiro possui utilidade
+                    para a manutenção da vida, o sustento familiar,
+                    o cumprimento de compromissos e a realização
+                    de atividades legítimas.
+                </p>
+
+                <p>
+                    Entretanto, a busca por riqueza não deve se
+                    transformar no principal objetivo da existência.
+                    A Bíblia alerta para os perigos da ganância,
+                    da avareza e do amor ao dinheiro.
+                </p>
+
+                <div class="versiculo">
+                    "Porque o amor ao dinheiro é a raiz de toda espécie
+                    de males."
+                    <br><br>
+                    1 Timóteo 6:10
+                </div>
+
+                <p>
+                    Administrar bem os recursos envolve planejar
+                    despesas, cumprir obrigações, evitar dívidas
+                    irresponsáveis, agir com transparência e
+                    reconhecer a importância da generosidade.
+                </p>
+
+                <p>
+                    A mordomia cristã ensina que os recursos
+                    devem ser utilizados de maneira responsável,
+                    considerando as necessidades pessoais,
+                    familiares e também as oportunidades de
+                    contribuir com o próximo.
+                </p>
+
+                <span class="referencia">
+                    Referências bíblicas: Provérbios 21:5;
+                    Lucas 16:10-13; 1 Timóteo 6:6-10;
+                    2 Coríntios 9:6-8.
+                </span>
+
+            </section>
+
+
+            <section class="secao-conteudo">
+
+                <h2>6. O Homem Cristão e a Responsabilidade Social</h2>
+
+                <p>
+                    O homem cristão vive em sociedade e possui
+                    responsabilidades que ultrapassam os limites
+                    de sua casa e de seu ambiente profissional.
+                    Ele deve reconhecer a dignidade das outras
+                    pessoas e procurar contribuir para o bem comum.
+                </p>
+
+                <p>
+                    A responsabilidade social envolve atitudes
+                    que promovem respeito, solidariedade, justiça,
+                    cooperação e cuidado com aqueles que enfrentam
+                    dificuldades.
+                </p>
+
+                <p>
+                    A fé cristã não deve produzir indiferença
+                    diante do sofrimento humano. O ensino bíblico
+                    orienta os seguidores de Cristo a demonstrar
+                    amor por meio de atitudes concretas.
+                </p>
+
+                <div class="versiculo">
+                    "Aprendei a fazer o bem; praticai o que é reto;
+                    ajudai o oprimido; fazei justiça ao órfão;
+                    tratai da causa das viúvas."
+                    <br><br>
+                    Isaías 1:17
+                </div>
+
+                <h3>Atitudes de responsabilidade social</h3>
+
+                <ul class="lista-conteudo">
+
+                    <li>Respeitar a dignidade de todas as pessoas.</li>
+
+                    <li>Auxiliar pessoas em situação de necessidade.</li>
+
+                    <li>Combater a injustiça e a discriminação.</li>
+
+                    <li>Participar de iniciativas comunitárias legítimas.</li>
+
+                    <li>Contribuir para a preservação do ambiente.</li>
+
+                    <li>Agir com honestidade nas relações sociais.</li>
+
+                    <li>Promover a paz e a cooperação na comunidade.</li>
+
+                </ul>
+
+                <span class="referencia">
+                    Referências bíblicas: Miqueias 6:8;
+                    Mateus 5:13-16; Lucas 10:25-37;
+                    Tiago 2:14-17.
+                </span>
+
+            </section>
+
+
+            <section class="secao-conteudo">
+
+                <h2>7. Cidadania e Compromisso com a Sociedade</h2>
+
+                <p>
+                    O cristão também possui responsabilidades como
+                    cidadão. Deve respeitar as leis legítimas,
+                    cumprir seus deveres, reconhecer os direitos
+                    das outras pessoas e contribuir para uma
+                    convivência social justa e pacífica.
+                </p>
+
+                <p>
+                    A Bíblia ensina que os cristãos devem respeitar
+                    as autoridades e agir de maneira responsável
+                    na sociedade. Esse respeito, entretanto,
+                    não significa obediência irrestrita a qualquer
+                    determinação humana. Quando uma ordem contraria
+                    claramente a vontade de Deus, a fidelidade
+                    ao Senhor deve prevalecer.
+                </p>
+
+                <p>
+                    A cidadania cristã exige consciência,
+                    responsabilidade e compromisso com a justiça.
+                    O homem cristão não deve ser indiferente
+                    aos problemas de sua comunidade.
+                </p>
+
+                <div class="versiculo">
+                    "Dai, pois, a César o que é de César e a Deus
+                    o que é de Deus."
+                    <br><br>
+                    Mateus 22:21
+                </div>
+
+                <p>
+                    A participação social deve ser conduzida
+                    com honestidade, respeito, responsabilidade
+                    e compromisso com a verdade.
+                </p>
+
+                <span class="referencia">
+                    Referências bíblicas: Mateus 22:15-22;
+                    Romanos 13:1-7; Atos 5:29;
+                    1 Pedro 2:13-17.
+                </span>
+
+            </section>
+
+
+            <section class="secao-conteudo">
+
+                <h2>8. O Cuidado com a Criação de Deus</h2>
+
+                <p>
+                    A responsabilidade humana apresentada em Gênesis
+                    inclui o cuidado com a criação. O ser humano
+                    recebeu a tarefa de cultivar e guardar aquilo
+                    que Deus criou.
+                </p>
+
+                <p>
+                    Esse princípio possui implicações práticas
+                    para a maneira como utilizamos os recursos
+                    naturais, cuidamos dos espaços coletivos
+                    e tratamos o ambiente em que vivemos.
+                </p>
+
+                <p>
+                    O homem cristão deve evitar o desperdício,
+                    a destruição irresponsável e a exploração
+                    desnecessária dos recursos. O cuidado ambiental
+                    também pode ser entendido como expressão
+                    de responsabilidade diante do Criador.
+                </p>
+
+                <p>
+                    Preservar a criação não significa atribuir
+                    a ela o lugar de Deus, mas reconhecer que
+                    o mundo criado possui valor e que o ser
+                    humano tem responsabilidades sobre ele.
+                </p>
+
+                <span class="referencia">
+                    Referências bíblicas: Gênesis 1:26-28;
+                    Gênesis 2:15; Salmo 24:1.
+                </span>
+
+            </section>
+
+
+            <section class="secao-conteudo">
+
+                <h2>9. O Equilíbrio entre Trabalho, Família e Vida Espiritual</h2>
+
+                <p>
+                    O trabalho é importante, mas não deve consumir
+                    todas as dimensões da existência humana.
+                    O homem cristão precisa compreender que também
+                    possui responsabilidades com sua família,
+                    sua saúde, sua vida espiritual e sua comunidade.
+                </p>
+
+                <p>
+                    A dedicação profissional não deve justificar
+                    abandono familiar, negligência espiritual
+                    ou descuido constante com a própria saúde.
+                </p>
+
+                <p>
+                    A Bíblia apresenta o descanso como parte
+                    da experiência humana. O equilíbrio entre
+                    trabalho e descanso contribui para uma vida
+                    mais saudável e responsável.
+                </p>
+
+                <p>
+                    A maturidade exige organização do tempo,
+                    estabelecimento de prioridades e disposição
+                    para reconhecer que nem todas as necessidades
+                    podem ser atendidas por meio do trabalho.
+                </p>
+
+                <span class="referencia">
+                    Referências bíblicas: Êxodo 20:8-11;
+                    Eclesiastes 3:1-8; Marcos 6:31;
+                    Efésios 5:15-17.
+                </span>
+
+            </section>
+
+
+            <section class="secao-conteudo">
+
+                <h2>10. Aplicação Prática: A Fé no Trabalho e na Sociedade</h2>
+
+                <p>
+                    A ética cristã precisa ser percebida nas atitudes
+                    diárias. O homem cristão pode demonstrar seu
+                    compromisso com Deus por meio de escolhas
+                    responsáveis em diferentes ambientes.
+                </p>
+
+                <ul class="lista-conteudo">
+
+                    <li>
+                        <strong>No trabalho:</strong>
+                        agir com honestidade, pontualidade,
+                        dedicação e respeito.
+                    </li>
+
+                    <li>
+                        <strong>Nas relações profissionais:</strong>
+                        tratar colegas, clientes e subordinados
+                        com dignidade e justiça.
+                    </li>
+
+                    <li>
+                        <strong>Na administração financeira:</strong>
+                        planejar, cumprir compromissos e evitar
+                        práticas desonestas.
+                    </li>
+
+                    <li>
+                        <strong>Na sociedade:</strong>
+                        respeitar direitos, cumprir deveres
+                        e contribuir para o bem comum.
+                    </li>
+
+                    <li>
+                        <strong>Na comunidade:</strong>
+                        demonstrar solidariedade e disposição
+                        para ajudar quem necessita.
+                    </li>
+
+                    <li>
+                        <strong>No cuidado ambiental:</strong>
+                        utilizar os recursos com responsabilidade
+                        e evitar desperdícios.
+                    </li>
+
+                    <li>
+                        <strong>Na vida pessoal:</strong>
+                        manter equilíbrio entre trabalho,
+                        família, descanso e comunhão com Deus.
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+            <section class="reflexao">
+
+                <h2>Reflexão Pessoal</h2>
+
+                <p>
+                    A responsabilidade profissional e social
+                    exige uma avaliação sincera de nossas atitudes.
+                </p>
+
+                <ol>
+
+                    <li>
+                        Tenho realizado meu trabalho com honestidade
+                        e responsabilidade?
+                    </li>
+
+                    <li>
+                        Trato todas as pessoas com respeito,
+                        independentemente de sua posição social
+                        ou profissional?
+                    </li>
+
+                    <li>
+                        Tenho administrado meus recursos financeiros
+                        com prudência e equilíbrio?
+                    </li>
+
+                    <li>
+                        Demonstro preocupação com as necessidades
+                        das pessoas ao meu redor?
+                    </li>
+
+                    <li>
+                        Tenho cumprido minhas responsabilidades
+                        como cidadão?
+                    </li>
+
+                    <li>
+                        Consigo equilibrar minhas atividades
+                        profissionais com minha família e minha
+                        vida espiritual?
+                    </li>
+
+                </ol>
+
+                <p>
+                    Essas perguntas nos ajudam a compreender que
+                    a fé cristã deve influenciar não apenas aquilo
+                    que fazemos dentro da Igreja, mas também nossa
+                    maneira de viver e trabalhar em sociedade.
+                </p>
+
+            </section>
+
+
+            <section class="conclusao">
+
+                <h2>Conclusão</h2>
+
+                <p>
+                    O trabalho e a responsabilidade social fazem
+                    parte da vida do homem cristão. As Escrituras
+                    ensinam que devemos desenvolver nossas atividades
+                    com dedicação, honestidade e compromisso com
+                    o próximo.
+                </p>
+
+                <p>
+                    A ética cristã não pode ser limitada ao discurso
+                    religioso. Ela precisa orientar nossas escolhas,
+                    nossas relações profissionais, nossa administração
+                    financeira e nossa participação na sociedade.
+                </p>
+
+                <p>
+                    O homem que deseja viver segundo os princípios
+                    de Deus deve compreender que sua profissão,
+                    sua cidadania e suas atitudes cotidianas também
+                    constituem oportunidades de testemunhar sua fé.
+                </p>
+
+            </section>
+
+
+            <section class="principio-formativo">
+
+                <h2>Princípio Formativo</h2>
+
+                <p>
+                    O homem cristão demonstra responsabilidade
+                    profissional e social quando trabalha com
+                    dedicação, age com honestidade, respeita
+                    a dignidade humana e utiliza suas capacidades
+                    para contribuir com o bem de sua família,
+                    da Igreja e da sociedade.
+                </p>
+
+            </section>
+
+
+            <section class="secao-conteudo">
+
+                <h2>Leitura Bíblica para Aprofundamento</h2>
+
+                <ul class="lista-conteudo">
+
+                    <li>Gênesis 2:15 — O trabalho na criação.</li>
+
+                    <li>Salmo 24:1 — Deus como Senhor da criação.</li>
+
+                    <li>Provérbios 11:1 — Honestidade nas relações comerciais.</li>
+
+                    <li>Provérbios 22:29 — Dedicação e competência no trabalho.</li>
+
+                    <li>Eclesiastes 3:1-13 — O tempo e as atividades humanas.</li>
+
+                    <li>Mateus 5:13-16 — O testemunho cristão no mundo.</li>
+
+                    <li>Mateus 22:15-22 — Responsabilidade diante da sociedade.</li>
+
+                    <li>Colossenses 3:22-24 — Trabalho realizado para o Senhor.</li>
+
+                    <li>1 Timóteo 6:6-10 — Contentamento e cuidado com o dinheiro.</li>
+
+                    <li>Tiago 2:14-17 — Fé demonstrada por meio das obras.</li>
+
+                </ul>
+
+            </section>
+
+
+            <nav class="navegacao-temas">
+
+                <a href="tema04.html" class="botao-navegacao">
+                    ← TEMA ANTERIOR
+                </a>
+
+                <a href="apresentacao.html" class="botao-navegacao">
+                    VISÃO GERAL DO MÓDULO
+                </a>
+
+                <a href="tema06.html" class="botao-navegacao">
+                    PRÓXIMO TEMA →
+                </a>
+
+            </nav>
+
+
+            <div style="text-align: center; margin-bottom: 40px;">
+
+                <button
+                    onclick="window.print()"
+                    class="botao-navegacao"
+                    style="border: none; cursor: pointer;">
+
+                    IMPRIMIR ESTUDO
+
+                </button>
+
+            </div>
+
+        </main>
+
+
+        <footer class="rodape-tema">
+
+            <p>
+                HOMENS SEGUNDO O CORAÇÃO DE DEUS
+            </p>
+
+            <p>
+                Formando homens, fortalecendo famílias e servindo à Igreja de Cristo.
+            </p>
+
+            <p>
+                Módulo 03 — Masculinidade e Responsabilidade Cristã
+            </p>
+
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

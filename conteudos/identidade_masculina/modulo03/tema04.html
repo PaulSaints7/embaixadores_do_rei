@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tema 04 — Responsabilidade Espiritual e Vida com Deus</title>
+
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #F7F4EC;
+            color: #38271F;
+            font-family: "Open Sans", sans-serif;
+            line-height: 1.8;
+        }
+
+        .pagina-tema {
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        .cabecalho-tema {
+            background: linear-gradient(135deg, #38271F, #18334D);
+            color: #F7F4EC;
+            padding: 55px 20px;
+            text-align: center;
+            border-bottom: 5px solid #B08A48;
+        }
+
+        .cabecalho-tema .identificacao {
+            font-size: 0.85rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #D1B477;
+            margin-bottom: 15px;
+        }
+
+        .cabecalho-tema h1 {
+            font-family: "Cinzel", serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            max-width: 950px;
+            margin: 0 auto 15px;
+            line-height: 1.35;
+        }
+
+        .cabecalho-tema p {
+            max-width: 750px;
+            margin: 0 auto;
+            color: #E9DFC9;
+            font-size: 1rem;
+        }
+
+        .conteudo-tema {
+            max-width: 1050px;
+            margin: 45px auto;
+            padding: 0 25px;
+        }
+
+        .introducao {
+            background: #E9DFC9;
+            border-left: 5px solid #B08A48;
+            padding: 25px 30px;
+            margin-bottom: 35px;
+            border-radius: 5px;
+        }
+
+        .introducao p {
+            margin: 0;
+            font-size: 1.05rem;
+        }
+
+        .secao-conteudo {
+            background: #FFFFFF;
+            padding: 28px 32px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(56, 39, 31, 0.07);
+        }
+
+        .secao-conteudo h2 {
+            font-family: "Cinzel", serif;
+            color: #18334D;
+            font-size: 1.35rem;
+            margin-top: 0;
+            margin-bottom: 18px;
+            border-bottom: 1px solid #D1B477;
+            padding-bottom: 10px;
+        }
+
+        .secao-conteudo h3 {
+            color: #76523C;
+            font-size: 1.05rem;
+            margin-top: 22px;
+            margin-bottom: 8px;
+        }
+
+        .secao-conteudo p {
+            margin: 12px 0;
+            text-align: justify;
+        }
+
+        .referencia {
+            display: block;
+            color: #76523C;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+
+        .versiculo {
+            background: #F7F4EC;
+            border-left: 4px solid #B08A48;
+            padding: 20px 25px;
+            margin: 20px 0;
+            font-family: "Libre Baskerville", serif;
+            font-style: italic;
+            color: #593B2B;
+        }
+
+        .lista-conteudo {
+            padding-left: 25px;
+        }
+
+        .lista-conteudo li {
+            margin-bottom: 12px;
+        }
+
+        .destaque {
+            background: #18334D;
+            color: #F7F4EC;
+            padding: 28px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .destaque h2 {
+            font-family: "Cinzel", serif;
+            color: #D1B477;
+            margin-top: 0;
+        }
+
+        .destaque p {
+            margin-bottom: 0;
+        }
+
+        .reflexao {
+            background: #E9DFC9;
+            padding: 25px 30px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .reflexao h2 {
+            font-family: "Cinzel", serif;
+            color: #38271F;
+            margin-top: 0;
+        }
+
+        .reflexao ol {
+            padding-left: 22px;
+        }
+
+        .reflexao li {
+            margin-bottom: 12px;
+        }
+
+        .conclusao {
+            background: #FFFFFF;
+            border-top: 4px solid #B08A48;
+            padding: 30px;
+            margin-top: 30px;
+            border-radius: 8px;
+        }
+
+        .conclusao h2 {
+            font-family: "Cinzel", serif;
+            color: #18334D;
+            margin-top: 0;
+        }
+
+        .principio-formativo {
+            text-align: center;
+            padding: 30px 20px;
+            margin: 35px 0;
+            background: #38271F;
+            color: #F7F4EC;
+            border-radius: 8px;
+        }
+
+        .principio-formativo h2 {
+            font-family: "Cinzel", serif;
+            color: #D1B477;
+            font-size: 1.2rem;
+            margin-top: 0;
+        }
+
+        .principio-formativo p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-family: "Libre Baskerville", serif;
+            font-size: 1.05rem;
+        }
+
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 45px 0;
+        }
+
+        .botao-navegacao {
+            display: inline-block;
+            background: #18334D;
+            color: #FFFFFF;
+            padding: 13px 22px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .botao-navegacao:hover {
+            background: #B08A48;
+            color: #38271F;
+            transform: translateY(-2px);
+        }
+
+        .rodape-tema {
+            background: #38271F;
+            color: #E9DFC9;
+            text-align: center;
+            padding: 25px 20px;
+            border-top: 4px solid #B08A48;
+        }
+
+        .rodape-tema p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 700px) {
+
+            .cabecalho-tema {
+                padding: 40px 18px;
+            }
+
+            .conteudo-tema {
+                padding: 0 15px;
+                margin: 25px auto;
+            }
+
+            .secao-conteudo {
+                padding: 22px 20px;
+            }
+
+            .introducao {
+                padding: 20px;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+            }
+
+            .botao-navegacao {
+                text-align: center;
+            }
+        }
+
+        @media print {
+
+            body {
+                background: #FFFFFF;
+                color: #000000;
+                font-size: 11pt;
+            }
+
+            .cabecalho-tema {
+                background: #FFFFFF;
+                color: #000000;
+                border-bottom: 2px solid #000000;
+                padding: 25px;
+            }
+
+            .cabecalho-tema .identificacao,
+            .cabecalho-tema p {
+                color: #000000;
+            }
+
+            .conteudo-tema {
+                max-width: 100%;
+                margin: 15px auto;
+                padding: 0;
+            }
+
+            .secao-conteudo,
+            .introducao,
+            .conclusao,
+            .reflexao,
+            .destaque,
+            .principio-formativo {
+                box-shadow: none;
+                break-inside: avoid;
+                background: #FFFFFF;
+                color: #000000;
+                border: 1px solid #CCCCCC;
+            }
+
+            .secao-conteudo h2,
+            .destaque h2,
+            .principio-formativo h2,
+            .conclusao h2,
+            .reflexao h2 {
+                color: #000000;
+            }
+
+            .navegacao-temas,
+            .rodape-tema {
+                display: none;
+            }
+
+            a {
+                color: #000000;
+                text-decoration: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="pagina-tema">
+
+        <header class="cabecalho-tema">
+
+            <div class="identificacao">
+                Identidade Masculina Cristã | Módulo 03 | Tema 04
+            </div>
+
+            <h1>Responsabilidade Espiritual e Vida com Deus</h1>
+
+            <p>
+                A importância da comunhão com Deus, do crescimento espiritual
+                e de uma vida orientada pelas Escrituras.
+            </p>
+
+        </header>
+
+
+        <main class="conteudo-tema">
+
+            <section class="introducao">
+
+                <p>
+                    A formação espiritual é uma dimensão essencial da vida
+                    cristã. O homem que deseja viver segundo a vontade de Deus
+                    precisa desenvolver uma relação pessoal e contínua com o
+                    Senhor. Essa caminhada envolve oração, conhecimento da
+                    Palavra, fé, obediência, santificação e participação na
+                    comunidade da Igreja. A maturidade espiritual não é
+                    demonstrada apenas pelo conhecimento religioso, mas
+                    principalmente pela transformação do caráter e das atitudes.
+                </p>
+
+            </section>
+
+
+            <section class="secao-conteudo">
+
+                <h2>1. A Vida Espiritual como Relacionamento com Deus</h2>
+
+                <p>
+                    A vida cristã começa com a iniciativa de Deus em oferecer
+                    salvação ao ser humano por meio de Jesus Cristo. Aquele
+                    que recebe Cristo pela fé é chamado a viver em comunhão
+                    com Deus e a desenvolver uma caminhada de obediência
+                    e confiança no Senhor.
+                </p>
+
+                <p>
+                    Essa relação não deve ser reduzida a práticas exteriores
+                    ou a uma rotina religiosa. O relacionamento com Deus
+                    envolve fé sincera, amor, confiança, reverência e
+                    disposição para seguir seus ensinamentos.
+                </p>
+
+                <p>
+                    O homem cristão precisa compreender que sua identidade
+                    e seu propósito encontram fundamento em Deus. Por isso,
+                    sua vida espiritual deve influenciar suas decisões,
+                    seus relacionamentos e suas responsabilidades.
+                </p>
+
+                <div class="versiculo">
+                    "Chegai-vos a Deus, e ele se chegará a vós."
+                    <br><br>
+                    Tiago 4:8
+                </div>
+
+                <span class="referencia">
+                    Referências bíblicas: João 15:4-5; Tiago 4:8;
+                    Romanos 5:1-2.
+                </span>
+
+            </section>
+
+
+            <section class="secao-conteudo">
+
+                <h2>2. A Importância da Oração</h2>
+
+                <p>
+                    A oração é uma das expressões fundamentais da comunhão
+                    com Deus. Por meio dela, o cristão apresenta ao Senhor
+                    suas necessidades, agradecimentos, preocupações e
+                    pedidos de orientação.
+                </p>
+
+                <p>
+                    Orar também significa reconhecer a dependência de Deus,
+                    buscar sua direção e cultivar uma atitude de confiança
+                    diante das circunstâncias da vida.
+                </p>
+
+                <p>
+                    O homem cristão não deve procurar a oração apenas nos
+                    momentos de crise. A comunhão com Deus precisa fazer
+                    parte de sua rotina, tanto nos períodos de dificuldade
+                    quanto nos momentos de tranquilidade.
+                </p>
+
+                <div class="versiculo">
+                    "Orai sem cessar."
+                    <br><br>
+                    1 Tessalonicenses 5:17
+                </div>
+
+                <h3>Aspectos importantes da oração</h3>
+
+                <ul class="lista-conteudo">
+
+                    <li>
+                        <strong>Adoração:</strong>
+                        reconhecer a grandeza, a santidade e a soberania
+                        de Deus.
+                    </li>
+
+                    <li>
+                        <strong>Gratidão:</strong>
+                        agradecer pelas bênçãos, pelo cuidado e pela
+                        provisão do Senhor.
+                    </li>
+
+                    <li>
+                        <strong>Confissão:</strong>
+                        reconhecer os pecados e buscar o perdão de Deus.
+                    </li>
+
+                    <li>
+                        <strong>Súplica:</strong>
+                        apresentar necessidades pessoais e de outras pessoas.
+                    </li>
+
+                    <li>
+                        <strong>Intercessão:</strong>
+                        orar pela família, pela Igreja, pelos enfermos,
+                        pelas autoridades e por aqueles que necessitam
+                        de ajuda.
+                    </li>
+
+                </ul>
+
+                <p>
+                    A oração não deve ser tratada como uma fórmula para
+                    obrigar Deus a realizar nossos desejos. Ela expressa
+                    confiança e submissão à vontade do Senhor.
+                </p>
+
+                <span class="referencia">
+                    Referências bíblicas: Mateus 6:5-13;
+                    Filipenses 4:6-7; 1 Timóteo 2:1-2.
+                </span>
+
+            </section>
+
+
+            <section class="secao-conteudo">
+
+                <h2>3. O Conhecimento e o Estudo das Escrituras</h2>
+
+                <p>
+                    A Bíblia é a Palavra de Deus e a referência fundamental
+                    para a fé e a prática cristãs. Por meio das Escrituras,
+                    conhecemos a revelação de Deus, compreendemos o ensino
+                    de Cristo e recebemos orientação para nossa maneira
+                    de viver.
+                </p>
+
+                <p>
+                    O homem cristão precisa desenvolver o hábito de estudar
+                    a Bíblia com atenção, procurando compreender seu contexto,
+                    sua mensagem e sua aplicação à vida cotidiana.
+                </p>
+
+                <p>
+                    Não basta apenas conhecer versículos isolados ou
+                    repetir ensinamentos. É necessário compreender o sentido
+                    do texto bíblico e permitir que seus princípios orientem
+                    as escolhas e atitudes.
+                </p>
+
+                <div class="versiculo">
+                    "Lâmpada para os meus pés é tua palavra e luz para
+                    o meu caminho."
+                    <br><br>
+                    Salmo 119:105
+                </div>
+
+                <h3>Práticas para o crescimento no conhecimento bíblico</h3>
+
+                <ul class="lista-conteudo">
+
+                    <li>Reservar tempo regularmente para a leitura bíblica.</li>
+
+                    <li>Estudar o contexto dos textos e passagens.</li>
+
+                    <li>Comparar passagens relacionadas ao mesmo assunto.</li>
+
+                    <li>Participar de estudos bíblicos e da Escola Bíblica.</li>
+
+                    <li>Buscar orientação pastoral quando houver dúvidas.</li>
+
+                    <li>Aplicar os ensinamentos compreendidos à vida diária.</li>
+
+                </ul>
+
+                <p>
+                    O conhecimento bíblico deve produzir crescimento,
+                    humildade e transformação. A finalidade do estudo
+                    não é alimentar orgulho religioso, mas conduzir
+                    o cristão a uma vida mais fiel a Deus.
+                </p>
+
+                <span class="referencia">
+                    Referências bíblicas: Salmo 119:9-11;
+                    2 Timóteo 3:16-17; Atos 17:11.
+                </span>
+
+            </section>
+
+
+            <section class="secao-conteudo">
+
+                <h2>4. Santificação e Transformação do Caráter</h2>
+
+                <p>
+                    A santificação está relacionada à obra de Deus na vida
+                    daqueles que pertencem a Cristo. O cristão é chamado
+                    a abandonar práticas pecaminosas e a desenvolver uma
+                    vida orientada pela vontade do Senhor.
+                </p>
+
+                <p>
+                    Essa caminhada envolve mudança de pensamentos,
+                    comportamentos, prioridades e relacionamentos.
+                    Não significa alcançar perfeição humana por esforço
+                    próprio, mas crescer continuamente na obediência
+                    a Deus, dependendo de sua graça.
+                </p>
+
+                <p>
+                    O homem cristão deve compreender que sua vida espiritual
+                    também se manifesta no modo como trabalha, trata as
+                    pessoas, utiliza seus recursos e administra suas
+                    responsabilidades.
+                </p>
+
+                <div class="versiculo">
+                    "Mas, como é santo aquele que vos chamou, sede vós
+                    também santos em toda a vossa maneira de viver."
+                    <br><br>
+                    1 Pedro 1:15
+                </div>
+
+                <h3>Frutos de uma vida orientada pelo Espírito</h3>
+
+                <p>
+                    A transformação espiritual se torna visível quando
+                    o cristão desenvolve características que refletem
+                    a ação do Espírito Santo em sua vida.
+                </p>
+
+                <p>
+                    A carta aos Gálatas apresenta o fruto do Espírito:
+                    amor, alegria, paz, longanimidade, benignidade,
+                    bondade, fidelidade, mansidão e domínio próprio.
+                </p>
+
+                <p>
+                    Essas características devem orientar a maneira como
+                    o homem cristão se relaciona com sua família, com
+                    os irmãos da Igreja e com a sociedade.
+                </p>
+
+                <span class="referencia">
+                    Referências bíblicas: Romanos 12:1-2;
+                    Gálatas 5:22-23; 1 Pedro 1:14-16.
+                </span>
+
+            </section>
+
+
+            <section class="secao-conteudo">
+
+                <h2>5. Obediência e Prática da Palavra de Deus</h2>
+
+                <p>
+                    A maturidade espiritual não pode ser medida apenas
+                    pela quantidade de informações bíblicas que alguém
+                    possui. O conhecimento das Escrituras precisa ser
+                    acompanhado pela disposição de obedecer aos seus
+                    ensinamentos.
+                </p>
+
+                <p>
+                    O homem cristão demonstra responsabilidade espiritual
+                    quando procura colocar em prática aquilo que aprende
+                    na Palavra de Deus.
+                </p>
+
+                <div class="versiculo">
+                    "E sede cumpridores da palavra e não somente ouvintes,
+                    enganando-vos com falsos discursos."
+                    <br><br>
+                    Tiago 1:22
+                </div>
+
+                <p>
+                    A obediência aparece nas escolhas cotidianas: falar
+                    a verdade, agir com justiça, cumprir compromissos,
+                    rejeitar a desonestidade, perdoar, tratar o próximo
+                    com dignidade e permanecer fiel aos princípios
+                    ensinados por Cristo.
+                </p>
+
+                <p>
+                    Uma vida espiritual consistente deve produzir
+                    coerência entre aquilo que o homem declara crer
+                    e aquilo que efetivamente pratica.
+                </p>
+
+                <span class="referencia">
+                    Referências bíblicas: João 14:21;
+                    Tiago 1:22-25; 1 João 2:3-6.
+                </span>
+
+            </section>
+
+
+            <section class="secao-conteudo">
+
+                <h2>6. A Importância da Comunhão com a Igreja</h2>
+
+                <p>
+                    A vida cristã não foi apresentada nas Escrituras como
+                    uma experiência exclusivamente individual. O cristão
+                    faz parte do corpo de Cristo e é chamado a viver em
+                    comunhão com outros irmãos na fé.
+                </p>
+
+                <p>
+                    A Igreja é uma comunidade de adoração, ensino,
+                    discipulado, serviço e testemunho. Nela, os cristãos
+                    aprendem juntos, compartilham experiências, recebem
+                    orientação e cooperam na missão de anunciar o Evangelho.
+                </p>
+
+                <p>
+                    O homem cristão precisa participar ativamente da vida
+                    da Igreja, valorizando os cultos, os estudos bíblicos,
+                    a comunhão e as oportunidades de serviço.
+                </p>
+
+                <div class="versiculo">
+                    "Não deixando a nossa congregação, como é costume
+                    de alguns, antes admoestando-nos uns aos outros."
+                    <br><br>
+                    Hebreus 10:25
+                </div>
+
+                <h3>Comunhão também significa responsabilidade</h3>
+
+                <p>
+                    Participar da Igreja não significa apenas frequentar
+                    reuniões. Significa reconhecer que cada cristão possui
+                    responsabilidades na edificação da comunidade.
+                </p>
+
+                <p>
+                    O homem cristão deve contribuir com seus dons,
+                    conhecimentos, tempo e disposição para servir,
+                    respeitando a liderança da Igreja e cooperando
+                    com os demais irmãos.
+                </p>
+
+                <span class="referencia">
+                    Referências bíblicas: Atos 2:42-47;
+                    1 Coríntios 12:12-27; Hebreus 10:24-25.
+                </span>
+
+            </section>
+
+
+            <section class="secao-conteudo">
+
+                <h2>7. A Responsabilidade Espiritual no Ambiente Familiar</h2>
+
+                <p>
+                    A espiritualidade do homem cristão também deve
+                    influenciar positivamente a vida de sua família.
+                    Sua conduta pode contribuir para a construção
+                    de um ambiente de respeito, amor, oração e
+                    conhecimento da Palavra de Deus.
+                </p>
+
+                <p>
+                    Essa responsabilidade não deve ser confundida
+                    com imposição religiosa ou controle sobre os
+                    demais integrantes da família. O caminho cristão
+                    é apresentado por meio do ensino, do exemplo,
+                    do diálogo e do serviço.
+                </p>
+
+                <p>
+                    O homem pode incentivar momentos de oração,
+                    leitura bíblica e participação na Igreja,
+                    respeitando a dignidade e a responsabilidade
+                    de cada membro da família.
+                </p>
+
+                <p>
+                    A coerência entre fé e comportamento é especialmente
+                    importante dentro do lar. O exemplo diário costuma
+                    comunicar muito mais do que discursos.
+                </p>
+
+                <span class="referencia">
+                    Referências bíblicas: Deuteronômio 6:6-9;
+                    Josué 24:15; Colossenses 3:16-17.
+                </span>
+
+            </section>
+
+
+            <section class="secao-conteudo">
+
+                <h2>8. Discernimento Espiritual diante das Decisões</h2>
+
+                <p>
+                    A vida apresenta situações que exigem escolhas,
+                    avaliações e decisões. O homem cristão precisa
+                    desenvolver discernimento para reconhecer aquilo
+                    que está de acordo com os princípios da Palavra
+                    de Deus.
+                </p>
+
+                <p>
+                    Discernimento espiritual não significa acreditar
+                    que toda impressão pessoal seja uma orientação divina.
+                    É necessário examinar as decisões à luz das Escrituras,
+                    buscar sabedoria, considerar suas consequências
+                    e ouvir conselhos responsáveis.
+                </p>
+
+                <p>
+                    A oração, o estudo bíblico e a comunhão com cristãos
+                    maduros podem auxiliar nesse processo.
+                </p>
+
+                <div class="versiculo">
+                    "E não vos conformeis com este mundo, mas transformai-vos
+                    pela renovação do vosso entendimento, para que experimenteis
+                    qual seja a boa, agradável e perfeita vontade de Deus."
+                    <br><br>
+                    Romanos 12:2
+                </div>
+
+                <p>
+                    O homem cristão deve evitar decisões impulsivas
+                    que contrariem os princípios bíblicos. A maturidade
+                    exige reflexão, responsabilidade e disposição
+                    para escolher aquilo que honra a Deus.
+                </p>
+
+                <span class="referencia">
+                    Referências bíblicas: Provérbios 3:5-6;
+                    Romanos 12:2; Filipenses 1:9-10.
+                </span>
+
+            </section>
+
+
+            <section class="secao-conteudo">
+
+                <h2>9. Perseverança na Caminhada Cristã</h2>
+
+                <p>
+                    A caminhada cristã possui momentos de alegria,
+                    dificuldades, dúvidas e desafios. O homem cristão
+                    precisa compreender que a fidelidade a Deus exige
+                    perseverança.
+                </p>
+
+                <p>
+                    Perseverar significa continuar confiando no Senhor,
+                    mesmo quando as circunstâncias são difíceis.
+                    Não significa ignorar problemas ou fingir que
+                    não existem fraquezas, mas buscar a Deus e
+                    permanecer firme na fé.
+                </p>
+
+                <p>
+                    O crescimento espiritual é um processo contínuo.
+                    Existem momentos de aprendizado, correção,
+                    amadurecimento e renovação.
+                </p>
+
+                <div class="versiculo">
+                    "Corramos com paciência a carreira que nos está
+                    proposta, olhando para Jesus, autor e consumador
+                    da fé."
+                    <br><br>
+                    Hebreus 12:1-2
+                </div>
+
+                <p>
+                    O homem cristão deve aprender a depender da graça
+                    de Deus, reconhecer suas limitações e permanecer
+                    comprometido com a caminhada de fé.
+                </p>
+
+                <span class="referencia">
+                    Referências bíblicas: João 15:4-5;
+                    Hebreus 12:1-2; Filipenses 3:12-14.
+                </span>
+
+            </section>
+
+
+            <section class="secao-conteudo">
+
+                <h2>10. Aplicação Prática: Uma Vida Espiritual Responsável</h2>
+
+                <p>
+                    O desenvolvimento espiritual precisa fazer parte
+                    da rotina. Algumas atitudes ajudam o homem cristão
+                    a cultivar uma caminhada mais consistente com Deus.
+                </p>
+
+                <ul class="lista-conteudo">
+
+                    <li>
+                        <strong>Oração diária:</strong>
+                        reservar momentos para conversar com Deus,
+                        agradecer e buscar sua direção.
+                    </li>
+
+                    <li>
+                        <strong>Leitura bíblica:</strong>
+                        desenvolver o hábito de estudar as Escrituras
+                        com atenção e regularidade.
+                    </li>
+
+                    <li>
+                        <strong>Obediência:</strong>
+                        procurar aplicar os ensinamentos bíblicos
+                        nas decisões e nos relacionamentos.
+                    </li>
+
+                    <li>
+                        <strong>Comunhão:</strong>
+                        participar da vida da Igreja e cultivar
+                        relacionamentos cristãos saudáveis.
+                    </li>
+
+                    <li>
+                        <strong>Serviço:</strong>
+                        utilizar seus dons e capacidades para
+                        contribuir com a obra de Deus.
+                    </li>
+
+                    <li>
+                        <strong>Perseverança:</strong>
+                        manter o compromisso com Cristo também
+                        nos períodos de dificuldade.
+                    </li>
+
+                    <li>
+                        <strong>Exemplo:</strong>
+                        demonstrar por meio das atitudes os valores
+                        da fé que professa.
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+            <section class="reflexao">
+
+                <h2>Reflexão Pessoal</h2>
+
+                <p>
+                    A responsabilidade espiritual exige uma avaliação
+                    sincera da maneira como estamos conduzindo nossa
+                    caminhada com Deus.
+                </p>
+
+                <ol>
+
+                    <li>
+                        Tenho cultivado uma vida de oração ou procuro
+                        Deus somente quando enfrento dificuldades?
+                    </li>
+
+                    <li>
+                        Tenho dedicado tempo ao estudo e à compreensão
+                        das Escrituras?
+                    </li>
+
+                    <li>
+                        Minhas atitudes demonstram os princípios
+                        que afirmo encontrar na Palavra de Deus?
+                    </li>
+
+                    <li>
+                        Tenho participado ativamente da comunhão
+                        e do serviço na Igreja?
+                    </li>
+
+                    <li>
+                        Minha vida espiritual tem influenciado
+                        positivamente minha família e meus relacionamentos?
+                    </li>
+
+                    <li>
+                        Tenho buscado crescer espiritualmente,
+                        reconhecendo minhas limitações e dependendo
+                        da graça de Deus?
+                    </li>
+
+                </ol>
+
+                <p>
+                    Essas perguntas são oportunidades para avaliar
+                    a própria caminhada, reconhecer necessidades
+                    de crescimento e buscar uma vida cada vez mais
+                    comprometida com Cristo.
+                </p>
+
+            </section>
+
+
+            <section class="conclusao">
+
+                <h2>Conclusão</h2>
+
+                <p>
+                    A responsabilidade espiritual é parte essencial
+                    da formação do homem cristão. Sua caminhada com Deus
+                    deve ser alimentada pela oração, pelo conhecimento
+                    das Escrituras, pela obediência, pela comunhão
+                    com a Igreja e pela perseverança na fé.
+                </p>
+
+                <p>
+                    A maturidade espiritual não é demonstrada apenas
+                    por palavras, conhecimentos ou posições religiosas.
+                    Ela se manifesta em uma vida que procura refletir
+                    o caráter de Cristo.
+                </p>
+
+                <p>
+                    Portanto, o homem que deseja viver segundo o coração
+                    de Deus precisa assumir com seriedade sua caminhada
+                    espiritual, permitindo que a Palavra do Senhor
+                    oriente suas decisões, transforme seu caráter
+                    e fortaleça seu testemunho.
+                </p>
+
+            </section>
+
+
+            <section class="principio-formativo">
+
+                <h2>Princípio Formativo</h2>
+
+                <p>
+                    O homem cristão demonstra responsabilidade espiritual
+                    quando cultiva uma vida de comunhão com Deus, conhece
+                    e pratica as Escrituras, participa da vida da Igreja
+                    e permite que sua fé transforme seu caráter e suas atitudes.
+                </p>
+
+            </section>
+
+
+            <section class="secao-conteudo">
+
+                <h2>Leitura Bíblica para Aprofundamento</h2>
+
+                <ul class="lista-conteudo">
+
+                    <li>Salmo 1 — A vida orientada pela Palavra de Deus.</li>
+
+                    <li>Salmo 119:9-16 — A Palavra e a conduta do cristão.</li>
+
+                    <li>Mateus 6:5-13 — O ensino de Jesus sobre a oração.</li>
+
+                    <li>João 15:1-8 — A permanência em Cristo.</li>
+
+                    <li>Romanos 12:1-2 — A transformação da vida cristã.</li>
+
+                    <li>Gálatas 5:16-25 — A vida orientada pelo Espírito.</li>
+
+                    <li>Efésios 6:10-18 — A armadura de Deus.</li>
+
+                    <li>Filipenses 4:4-9 — Oração, paz e pensamento cristão.</li>
+
+                    <li>2 Timóteo 3:14-17 — A importância das Escrituras.</li>
+
+                    <li>Hebreus 10:19-25 — Perseverança e comunhão cristã.</li>
+
+                </ul>
+
+            </section>
+
+
+            <nav class="navegacao-temas">
+
+                <a href="tema03.html" class="botao-navegacao">
+                    ← TEMA ANTERIOR
+                </a>
+
+                <a href="apresentacao.html" class="botao-navegacao">
+                    VISÃO GERAL DO MÓDULO
+                </a>
+
+                <a href="tema05.html" class="botao-navegacao">
+                    PRÓXIMO TEMA →
+                </a>
+
+            </nav>
+
+
+            <div style="text-align: center; margin-bottom: 40px;">
+
+                <button
+                    onclick="window.print()"
+                    class="botao-navegacao"
+                    style="border: none; cursor: pointer;">
+
+                    IMPRIMIR ESTUDO
+
+                </button>
+
+            </div>
+
+        </main>
+
+
+        <footer class="rodape-tema">
+
+            <p>
+                HOMENS SEGUNDO O CORAÇÃO DE DEUS
+            </p>
+
+            <p>
+                Formando homens, fortalecendo famílias e servindo à Igreja de Cristo.
+            </p>
+
+            <p>
+                Módulo 03 — Masculinidade e Responsabilidade Cristã
+            </p>
+
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
