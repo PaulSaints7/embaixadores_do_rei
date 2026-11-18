@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tema 04 | Sexualidade, Casamento e Família à Luz das Escrituras</title>
+
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --marrom: #593B2B;
+            --marrom-escuro: #38271F;
+            --marrom-medio: #76523C;
+            --azul: #18334D;
+            --azul-claro: #294B65;
+            --dourado: #B08A48;
+            --dourado-claro: #D1B477;
+            --pergaminho: #E9DFC9;
+            --creme: #F7F4EC;
+            --texto: #332A24;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--creme);
+            color: var(--texto);
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.8;
+        }
+
+        .topo {
+            background: linear-gradient(135deg, var(--marrom-escuro), var(--azul));
+            color: white;
+            padding: 55px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--dourado);
+        }
+
+        .topo .identificacao {
+            color: var(--dourado-claro);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .topo h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.7rem, 4vw, 2.7rem);
+            max-width: 950px;
+            margin: 20px auto;
+            line-height: 1.35;
+        }
+
+        .topo p {
+            max-width: 750px;
+            margin: auto;
+            color: #eee5d6;
+        }
+
+        .container {
+            width: min(1050px, 92%);
+            margin: 40px auto;
+        }
+
+        .conteudo {
+            background: white;
+            padding: clamp(22px, 5vw, 48px);
+            border-radius: 12px;
+            box-shadow: 0 5px 22px rgba(56, 39, 31, 0.08);
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--marrom);
+            font-size: 1.45rem;
+            margin-top: 42px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--pergaminho);
+        }
+
+        h3 {
+            color: var(--azul);
+            font-size: 1.12rem;
+            margin-top: 28px;
+        }
+
+        p {
+            margin: 15px 0;
+        }
+
+        .introducao {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.08rem;
+            line-height: 1.9;
+            color: var(--marrom-escuro);
+        }
+
+        .versiculo {
+            background: var(--pergaminho);
+            border-left: 5px solid var(--dourado);
+            padding: 24px;
+            margin: 30px 0;
+            border-radius: 6px;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.05rem;
+        }
+
+        .versiculo strong {
+            display: block;
+            margin-top: 12px;
+            color: var(--marrom);
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .destaque {
+            background: #f3eee5;
+            border-left: 5px solid var(--azul-claro);
+            padding: 20px 24px;
+            margin: 25px 0;
+            border-radius: 6px;
+        }
+
+        .alerta {
+            background: #f7eee7;
+            border-left: 5px solid #9a6244;
+            padding: 20px 24px;
+            margin: 25px 0;
+            border-radius: 6px;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .aplicacao {
+            background: #f8f6f0;
+            padding: 20px 24px;
+            border-radius: 8px;
+            margin: 18px 0;
+            border: 1px solid #e8dfd1;
+        }
+
+        .reflexao {
+            background: linear-gradient(135deg, var(--azul), var(--marrom-escuro));
+            color: white;
+            padding: 28px;
+            border-radius: 10px;
+            margin-top: 35px;
+        }
+
+        .reflexao h2 {
+            color: var(--dourado-claro);
+            border-bottom-color: rgba(255,255,255,0.2);
+            margin-top: 0;
+        }
+
+        .reflexao p {
+            color: #f1e9dc;
+        }
+
+        .navegacao {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 35px 0;
+        }
+
+        .botao {
+            display: inline-block;
+            padding: 13px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .botao-principal {
+            background: var(--marrom);
+            color: white;
+        }
+
+        .botao-secundario {
+            background: var(--azul);
+            color: white;
+        }
+
+        .botao:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        .rodape {
+            background: var(--marrom-escuro);
+            color: #e9dfd0;
+            text-align: center;
+            padding: 28px 15px;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 650px) {
+            .navegacao {
+                flex-direction: column;
+            }
+
+            .botao {
+                width: 100%;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .topo {
+                background: white !important;
+                color: black;
+                border-bottom: 2px solid #777;
+            }
+
+            .topo p,
+            .topo .identificacao {
+                color: #333;
+            }
+
+            .conteudo {
+                box-shadow: none;
+                padding: 0;
+            }
+
+            .navegacao,
+            .rodape {
+                display: none;
+            }
+
+            .reflexao {
+                background: white !important;
+                color: black;
+                border: 1px solid #777;
+            }
+
+            .reflexao h2,
+            .reflexao p {
+                color: black;
+            }
+
+            h2, h3 {
+                break-after: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="topo">
+    <div class="identificacao">
+        Área 01 — Identidade Masculina Cristã | Módulo 07
+    </div>
+
+    <h1>Sexualidade, Casamento e Família à Luz das Escrituras</h1>
+
+    <p>
+        Compreendendo a dignidade humana, a fidelidade conjugal
+        e a responsabilidade familiar segundo os princípios da Palavra de Deus.
+    </p>
+</header>
+
+<main class="container">
+    <article class="conteudo">
+
+        <p class="introducao">
+            A sexualidade, o casamento e a família fazem parte de dimensões
+            importantes da experiência humana. As Escrituras apresentam
+            princípios para vivermos essas áreas com dignidade, fidelidade,
+            responsabilidade, amor e respeito. O homem cristão é chamado
+            a orientar suas escolhas pela vontade de Deus, reconhecendo
+            que seus relacionamentos também fazem parte de seu testemunho.
+        </p>
+
+        <div class="versiculo">
+            "Venerado seja entre todos o matrimônio e o leito sem mácula;
+            porém aos que se dão à prostituição, e aos adúlteros,
+            Deus os julgará."
+            <strong>Hebreus 13:4</strong>
+        </div>
+
+        <h2>1. A dignidade humana e a sexualidade na criação</h2>
+
+        <p>
+            A Bíblia ensina que o ser humano foi criado por Deus à sua imagem
+            e semelhança. Essa verdade estabelece a dignidade de cada pessoa,
+            independentemente de sua condição social, idade, capacidade,
+            aparência ou situação familiar.
+        </p>
+
+        <p>
+            Em Gênesis 1:27-28, encontramos o relato da criação do homem
+            e da mulher. Ambos recebem dignidade diante do Criador e participam
+            da responsabilidade de cuidar da criação.
+        </p>
+
+        <p>
+            A sexualidade integra a experiência humana e deve ser compreendida
+            à luz dos propósitos de Deus. Não é algo separado da espiritualidade,
+            da responsabilidade moral ou do cuidado com o próximo.
+        </p>
+
+        <p>
+            O ensino bíblico convida o cristão a tratar o próprio corpo e o corpo
+            do próximo com respeito, reconhecendo que ninguém deve ser reduzido
+            a objeto de satisfação, exploração ou interesse pessoal.
+        </p>
+
+        <div class="destaque">
+            <strong>Princípio fundamental:</strong>
+            a dignidade de uma pessoa não depende de sua condição conjugal,
+            de sua história afetiva ou de sua situação familiar. Todo ser humano
+            deve ser tratado com respeito, amor e consideração.
+        </div>
+
+        <h2>2. Sexualidade, santidade e responsabilidade</h2>
+
+        <p>
+            A santidade cristã alcança todas as dimensões da vida, inclusive
+            os pensamentos, desejos, relacionamentos e comportamentos.
+            O discípulo de Cristo é chamado a viver de maneira coerente
+            com os ensinamentos das Escrituras.
+        </p>
+
+        <p>
+            Em 1 Coríntios 6:18-20, Paulo ensina que o corpo deve ser tratado
+            com responsabilidade diante de Deus. O apóstolo também lembra
+            que o cristão pertence ao Senhor.
+        </p>
+
+        <p>
+            A pureza sexual não se resume à aparência exterior. Envolve
+            integridade, domínio próprio, respeito, fidelidade e uma postura
+            responsável diante dos próprios desejos.
+        </p>
+
+        <h3>Alguns princípios bíblicos importantes:</h3>
+
+        <ul>
+            <li>
+                <strong>Pureza:</strong> cultivar pensamentos e atitudes
+                coerentes com os ensinamentos de Cristo.
+            </li>
+
+            <li>
+                <strong>Fidelidade:</strong> honrar os compromissos assumidos
+                nos relacionamentos.
+            </li>
+
+            <li>
+                <strong>Respeito:</strong> reconhecer a dignidade do próximo,
+                sem manipulação, exploração ou violência.
+            </li>
+
+            <li>
+                <strong>Domínio próprio:</strong> não permitir que desejos
+                e impulsos controlem as decisões.
+            </li>
+
+            <li>
+                <strong>Responsabilidade:</strong> compreender que escolhas
+                relacionadas à sexualidade podem produzir consequências
+                emocionais, familiares e sociais.
+            </li>
+        </ul>
+
+        <p>
+            Em 1 Tessalonicenses 4:3-5, Paulo relaciona a vontade de Deus
+            à santificação e ao domínio próprio. O cristão não deve tratar
+            o próximo como instrumento de satisfação pessoal.
+        </p>
+
+        <h2>3. O casamento segundo as Escrituras</h2>
+
+        <p>
+            Em Gênesis 2:18-24, encontramos o relato da criação da mulher
+            e da instituição da união conjugal. O texto apresenta o casamento
+            como uma relação de compromisso, união e companheirismo.
+        </p>
+
+        <p>
+            Jesus reafirma esse princípio em Mateus 19:4-6, ensinando sobre
+            a união matrimonial e a importância de não tratar levianamente
+            aquilo que Deus estabeleceu.
+        </p>
+
+        <p>
+            Na compreensão doutrinária batista tradicional, o casamento
+            é entendido como uma união conjugal entre homem e mulher,
+            marcada pelo compromisso, pela fidelidade e pela responsabilidade
+            diante de Deus e da sociedade.
+        </p>
+
+        <p>
+            O casamento não deve ser compreendido apenas como uma formalidade
+            social ou uma relação de conveniência. É uma aliança que exige
+            dedicação, respeito, diálogo, cuidado e disposição para enfrentar
+            juntos os desafios da vida.
+        </p>
+
+        <h3>Características de um casamento orientado pelos princípios bíblicos</h3>
+
+        <ul>
+            <li>Compromisso e fidelidade entre os cônjuges.</li>
+            <li>Amor demonstrado por atitudes concretas.</li>
+            <li>Respeito mútuo e consideração pelas necessidades do outro.</li>
+            <li>Diálogo honesto e disposição para resolver conflitos.</li>
+            <li>Responsabilidade compartilhada na vida familiar.</li>
+            <li>Perdão, paciência e disposição para crescer juntos.</li>
+            <li>Centralidade de Cristo na orientação da vida conjugal.</li>
+        </ul>
+
+        <div class="versiculo">
+            "Maridos, amai vossa mulher, como também Cristo amou a igreja
+            e a si mesmo se entregou por ela."
+            <strong>Efésios 5:25</strong>
+        </div>
+
+        <p>
+            O texto de Efésios apresenta um padrão elevado para o amor conjugal:
+            o amor sacrificial de Cristo. O marido é chamado a amar,
+            cuidar e agir em favor da esposa, não a exercer domínio egoísta
+            ou autoritarismo.
+        </p>
+
+        <h2>4. O homem cristão como esposo</h2>
+
+        <p>
+            O papel do homem no casamento não deve ser definido por orgulho,
+            imposição ou superioridade. A responsabilidade cristã começa
+            pelo compromisso de amar, respeitar, proteger e servir.
+        </p>
+
+        <p>
+            Efésios 5:21-33 deve ser lido em seu contexto, começando pela
+            orientação de submissão mútua no temor de Cristo. Ao falar
+            especificamente aos maridos, Paulo enfatiza o amor sacrificial,
+            tomando Cristo como referência.
+        </p>
+
+        <p>
+            Ser um esposo segundo os princípios bíblicos envolve:
+        </p>
+
+        <ul>
+            <li>Tratar a esposa com dignidade e respeito.</li>
+            <li>Manter fidelidade nos pensamentos, palavras e atitudes.</li>
+            <li>Participar das responsabilidades do lar.</li>
+            <li>Ouvir, dialogar e considerar a opinião da esposa.</li>
+            <li>Agir com paciência e domínio próprio nos conflitos.</li>
+            <li>Demonstrar amor por meio de atitudes cotidianas.</li>
+            <li>Buscar orientação bíblica e ajuda responsável quando necessário.</li>
+        </ul>
+
+        <div class="alerta">
+            <strong>Uma advertência necessária:</strong>
+            nenhum texto bíblico deve ser utilizado para justificar agressões,
+            ameaças, humilhações, coerção sexual, controle abusivo ou violência
+            doméstica. A liderança cristã não autoriza abuso. A segurança
+            e a dignidade de todos os membros da família devem ser preservadas.
+            Situações de violência exigem proteção e busca de ajuda adequada.
+        </div>
+
+        <h2>5. O homem cristão como pai e educador</h2>
+
+        <p>
+            A paternidade é uma responsabilidade que envolve muito mais
+            do que prover recursos materiais. O pai participa da formação
+            emocional, moral e espiritual dos filhos.
+        </p>
+
+        <p>
+            Em Deuteronômio 6:6-7, o povo de Israel recebe a orientação
+            de ensinar os mandamentos de Deus aos filhos nas diferentes
+            situações da vida cotidiana.
+        </p>
+
+        <p>
+            Em Efésios 6:4, Paulo orienta os pais a não provocarem seus filhos
+            à ira, mas a criá-los na disciplina e na instrução do Senhor.
+        </p>
+
+        <p>
+            Essas orientações mostram que a educação cristã não deve ser
+            baseada no medo, na violência ou na humilhação. A disciplina
+            deve caminhar junto com o amor, a orientação, o exemplo
+            e a responsabilidade.
+        </p>
+
+        <h3>Responsabilidades importantes da paternidade cristã</h3>
+
+        <ul>
+            <li>Demonstrar amor e presença na vida dos filhos.</li>
+            <li>Ensinar princípios bíblicos por palavras e pelo exemplo.</li>
+            <li>Participar da educação e do desenvolvimento das crianças.</li>
+            <li>Estabelecer limites com equilíbrio e responsabilidade.</li>
+            <li>Ouvir os filhos e compreender suas necessidades.</li>
+            <li>Proteger a família contra situações de negligência e violência.</li>
+            <li>Reconhecer os próprios erros e pedir perdão quando necessário.</li>
+        </ul>
+
+        <p>
+            O exemplo do pai exerce influência significativa na formação
+            dos filhos. Mais do que exigir comportamentos, o homem cristão
+            deve procurar demonstrar, em sua própria vida, os valores
+            que deseja transmitir.
+        </p>
+
+        <h2>6. A família como espaço de amor, cuidado e formação</h2>
+
+        <p>
+            A família é um dos ambientes mais importantes para o desenvolvimento
+            humano e para a transmissão de valores. É no convívio familiar
+            que muitas pessoas aprendem sobre respeito, solidariedade,
+            responsabilidade, perdão e cooperação.
+        </p>
+
+        <p>
+            A Bíblia apresenta diversos relatos de famílias com experiências
+            de alegria, dificuldades, conflitos, perdas e restauração.
+            Esses relatos demonstram que a vida familiar exige sabedoria,
+            paciência e dependência de Deus.
+        </p>
+
+        <p>
+            O homem cristão deve compreender que sua responsabilidade familiar
+            não termina no casamento ou na paternidade. Ele também é filho,
+            irmão, tio, avô e participante de uma rede de relacionamentos
+            que merece atenção e cuidado.
+        </p>
+
+        <p>
+            Nem todos os homens estão casados ou possuem filhos. A condição
+            de solteiro, viúvo ou divorciado não diminui a dignidade cristã
+            de ninguém. Cada homem pode expressar amor, responsabilidade
+            e maturidade nos relacionamentos que fazem parte de sua realidade.
+        </p>
+
+        <h2>7. A responsabilidade do homem cristão diante dos desafios familiares</h2>
+
+        <p>
+            As famílias enfrentam diferentes desafios: dificuldades financeiras,
+            conflitos entre gerações, enfermidades, mudanças sociais,
+            problemas de comunicação e situações de sofrimento emocional.
+        </p>
+
+        <p>
+            O homem cristão não deve ignorar essas dificuldades nem acreditar
+            que precisa resolver tudo sozinho. A maturidade também se manifesta
+            na capacidade de reconhecer limites, procurar orientação
+            e aceitar ajuda.
+        </p>
+
+        <p>
+            A Igreja pode exercer papel importante nesse processo,
+            oferecendo comunhão, aconselhamento pastoral responsável,
+            ensino bíblico e apoio às famílias.
+        </p>
+
+        <p>
+            Em Gálatas 6:2, Paulo ensina os cristãos a levarem as cargas
+            uns dos outros. Esse princípio também deve orientar a maneira
+            como os homens da Igreja apoiam famílias que enfrentam momentos
+            difíceis.
+        </p>
+
+        <h2>8. Aplicações práticas para o homem cristão</h2>
+
+        <div class="aplicacao">
+            <h3>Na vida pessoal</h3>
+            <p>
+                Desenvolver pureza, domínio próprio, responsabilidade
+                e coerência entre a fé professada e o comportamento cotidiano.
+            </p>
+        </div>
+
+        <div class="aplicacao">
+            <h3>No casamento</h3>
+            <p>
+                Cultivar fidelidade, diálogo, respeito, companheirismo
+                e amor sacrificial, reconhecendo a esposa como pessoa
+                de igual dignidade diante de Deus.
+            </p>
+        </div>
+
+        <div class="aplicacao">
+            <h3>Na paternidade</h3>
+            <p>
+                Participar ativamente da formação dos filhos, oferecendo
+                presença, orientação, proteção, carinho e exemplo cristão.
+            </p>
+        </div>
+
+        <div class="aplicacao">
+            <h3>Na família ampliada</h3>
+            <p>
+                Respeitar pais e familiares, valorizar as diferentes gerações
+                e contribuir para relacionamentos marcados por cuidado,
+                paciência e solidariedade.
+            </p>
+        </div>
+
+        <div class="aplicacao">
+            <h3>Na Igreja</h3>
+            <p>
+                Apoiar famílias, acolher pessoas em dificuldades,
+                promover relacionamentos saudáveis e contribuir para
+                uma comunidade cristã que pratica o amor de Cristo.
+            </p>
+        </div>
+
+        <div class="aplicacao">
+            <h3>Na sociedade</h3>
+            <p>
+                Defender a dignidade humana, agir com responsabilidade
+                e contribuir para ambientes familiares e comunitários
+                mais seguros, respeitosos e solidários.
+            </p>
+        </div>
+
+        <h2>9. Conclusão</h2>
+
+        <p>
+            Sexualidade, casamento e família são dimensões da vida que exigem
+            responsabilidade diante de Deus e respeito ao próximo.
+            As Escrituras oferecem princípios para que essas áreas sejam
+            conduzidas com santidade, fidelidade, amor e compromisso.
+        </p>
+
+        <p>
+            O homem cristão não demonstra sua maturidade pela imposição
+            de sua vontade, mas pela disposição de viver segundo os valores
+            de Cristo. Sua força deve estar acompanhada de domínio próprio;
+            sua autoridade, de responsabilidade; e suas convicções,
+            de amor e respeito.
+        </p>
+
+        <p>
+            Seja solteiro, casado, pai ou não, cada homem é chamado
+            a honrar a Deus em seus relacionamentos e a contribuir
+            para uma sociedade em que a dignidade humana seja respeitada.
+        </p>
+
+        <div class="versiculo">
+            "E, sobre tudo isto, revesti-vos de amor, que é o vínculo
+            da perfeição."
+            <strong>Colossenses 3:14</strong>
+        </div>
+
+        <section class="reflexao">
+            <h2>Para refletir</h2>
+
+            <p>
+                1. Como os princípios bíblicos devem orientar a maneira
+                como o homem cristão compreende e vive sua sexualidade?
+            </p>
+
+            <p>
+                2. Qual é a principal característica do amor que Efésios 5:25
+                apresenta como referência para o marido?
+            </p>
+
+            <p>
+                3. Por que a educação dos filhos deve combinar disciplina,
+                amor e exemplo pessoal?
+            </p>
+
+            <p>
+                4. Como um homem cristão pode contribuir para relacionamentos
+                familiares mais saudáveis?
+            </p>
+
+            <p>
+                5. De que maneira podemos demonstrar respeito e dignidade
+                às pessoas que vivem situações familiares diferentes das nossas?
+            </p>
+
+            <p>
+                <strong>Desafio pessoal:</strong> examine seus relacionamentos
+                e identifique uma atitude concreta que possa melhorar
+                sua maneira de demonstrar amor, respeito, fidelidade
+                e responsabilidade.
+            </p>
+        </section>
+
+        <h2>Referências bíblicas para aprofundamento</h2>
+
+        <ul>
+            <li>Gênesis 1:26-28 — A criação do ser humano.</li>
+            <li>Gênesis 2:18-24 — A instituição do casamento.</li>
+            <li>Deuteronômio 6:4-9 — O ensino da Palavra aos filhos.</li>
+            <li>Salmos 127:1-5 — A família e a dependência de Deus.</li>
+            <li>Provérbios 5:15-23 — Fidelidade conjugal.</li>
+            <li>Mateus 19:3-9 — O ensino de Jesus sobre o casamento.</li>
+            <li>1 Coríntios 6:18-20 — O corpo e a responsabilidade cristã.</li>
+            <li>1 Coríntios 7:1-16 — Orientações sobre casamento.</li>
+            <li>Efésios 5:21-33 — Amor e responsabilidade no casamento.</li>
+            <li>Efésios 6:1-4 — Relações entre pais e filhos.</li>
+            <li>Colossenses 3:12-21 — Princípios para a vida familiar.</li>
+            <li>1 Tessalonicenses 4:3-8 — Santificação e pureza.</li>
+            <li>Hebreus 13:4 — Honra ao casamento.</li>
+            <li>1 Pedro 3:7 — Consideração e respeito no relacionamento conjugal.</li>
+        </ul>
+
+        <div class="navegacao">
+            <a href="tema03.html" class="botao botao-secundario">
+                ← Tema Anterior
+            </a>
+
+            <a href="apresentacao.html" class="botao botao-principal">
+                Apresentação do Módulo
+            </a>
+
+            <a href="tema05.html" class="botao botao-secundario">
+                Próximo Tema →
+            </a>
+        </div>
+
+    </article>
+</main>
+
+<footer class="rodape">
+    <p>
+        HOMENS SEGUNDO O CORAÇÃO DE DEUS
+    </p>
+
+    <p>
+        Formando homens, fortalecendo famílias e servindo à Igreja de Cristo.
+    </p>
+
+    <p>
+        Área 01 — Identidade Masculina Cristã | Módulo 07
+    </p>
+</footer>
+
+</body>
+</html>

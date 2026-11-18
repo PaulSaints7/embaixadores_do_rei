@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tema 02 | Ética Cristã e Tomada de Decisões</title>
+
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --marrom: #593B2B;
+            --marrom-escuro: #38271F;
+            --marrom-medio: #76523C;
+            --azul: #18334D;
+            --azul-claro: #294B65;
+            --dourado: #B08A48;
+            --dourado-claro: #D1B477;
+            --pergaminho: #E9DFC9;
+            --creme: #F7F4EC;
+            --texto: #3B332C;
+            --branco: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--creme);
+            color: var(--texto);
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.8;
+        }
+
+        .cabecalho {
+            background: linear-gradient(135deg, var(--marrom-escuro), var(--azul));
+            color: var(--branco);
+            text-align: center;
+            padding: 55px 20px;
+            border-bottom: 5px solid var(--dourado);
+        }
+
+        .cabecalho .identificacao {
+            color: var(--dourado-claro);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.82rem;
+            margin-bottom: 15px;
+        }
+
+        .cabecalho h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.7rem, 4vw, 2.5rem);
+            max-width: 950px;
+            margin: 0 auto 15px;
+            line-height: 1.4;
+        }
+
+        .cabecalho p {
+            color: var(--pergaminho);
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .container {
+            width: min(1000px, 92%);
+            margin: 40px auto;
+        }
+
+        .conteudo {
+            background: var(--branco);
+            padding: 35px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            border-left: 5px solid var(--dourado);
+            box-shadow: 0 4px 15px rgba(56, 39, 31, 0.07);
+        }
+
+        .conteudo h2 {
+            color: var(--azul);
+            font-family: 'Cinzel', serif;
+            font-size: 1.45rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .conteudo h3 {
+            color: var(--marrom);
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.12rem;
+            margin-top: 28px;
+        }
+
+        .conteudo p {
+            text-align: justify;
+            margin-bottom: 16px;
+        }
+
+        .destaque {
+            background: var(--pergaminho);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 25px 0;
+            border-left: 4px solid var(--dourado);
+        }
+
+        .destaque p {
+            margin-bottom: 0;
+        }
+
+        .versiculo {
+            background: var(--azul);
+            color: var(--branco);
+            padding: 30px;
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        .versiculo p {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.15rem;
+            font-style: italic;
+            line-height: 1.9;
+        }
+
+        .versiculo strong {
+            display: block;
+            color: var(--dourado-claro);
+            margin-top: 15px;
+        }
+
+        .lista {
+            padding-left: 25px;
+        }
+
+        .lista li {
+            margin-bottom: 12px;
+        }
+
+        .reflexao {
+            background: var(--marrom-escuro);
+            color: var(--pergaminho);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        .reflexao h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--dourado-claro);
+            margin-top: 0;
+        }
+
+        .reflexao p {
+            text-align: justify;
+        }
+
+        .navegacao {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 35px 0;
+        }
+
+        .navegacao a {
+            background: var(--azul);
+            color: var(--branco);
+            text-decoration: none;
+            padding: 13px 20px;
+            border-radius: 6px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .navegacao a:hover {
+            background: var(--marrom);
+        }
+
+        footer {
+            background: var(--marrom-escuro);
+            color: var(--pergaminho);
+            text-align: center;
+            padding: 28px 20px;
+            border-top: 4px solid var(--dourado);
+        }
+
+        footer strong {
+            color: var(--dourado-claro);
+        }
+
+        @media (max-width: 600px) {
+            .conteudo {
+                padding: 23px 20px;
+            }
+
+            .navegacao {
+                flex-direction: column;
+            }
+
+            .navegacao a {
+                width: 100%;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .cabecalho,
+            .versiculo,
+            .reflexao,
+            footer {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .navegacao {
+                display: none;
+            }
+
+            .conteudo {
+                box-shadow: none;
+                break-inside: avoid;
+            }
+
+            .container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="cabecalho">
+
+        <div class="identificacao">
+            Área 01 — Identidade Masculina Cristã | Módulo 07
+        </div>
+
+        <h1>Ética Cristã e Tomada de Decisões</h1>
+
+        <p>
+            Tema 02 — Desenvolvendo uma consciência orientada pelas Escrituras
+            e uma conduta marcada pela integridade.
+        </p>
+
+    </header>
+
+
+    <main class="container">
+
+
+        <section class="conteudo">
+
+            <h2>1. Introdução</h2>
+
+            <p>
+                Todos os dias, o ser humano precisa tomar decisões.
+                Algumas são simples e fazem parte da rotina; outras
+                envolvem responsabilidades importantes e podem
+                produzir consequências duradouras para a própria vida
+                e para outras pessoas.
+            </p>
+
+            <p>
+                Escolhas relacionadas à família, ao trabalho, ao dinheiro,
+                aos relacionamentos, à vida pública e à participação
+                na Igreja exigem reflexão e responsabilidade.
+                Nem sempre o caminho mais fácil é o mais correto,
+                e nem sempre aquilo que oferece vantagens imediatas
+                corresponde ao que é justo diante de Deus.
+            </p>
+
+            <p>
+                A ética cristã oferece princípios para orientar
+                a conduta humana. Ela não se fundamenta simplesmente
+                nos costumes de uma sociedade ou nas preferências
+                individuais, mas na revelação de Deus e nos ensinamentos
+                das Escrituras Sagradas.
+            </p>
+
+            <p>
+                O homem cristão é chamado a desenvolver uma vida
+                coerente com sua fé. Isso significa que suas decisões
+                devem demonstrar honestidade, justiça, amor ao próximo,
+                domínio próprio e compromisso com a verdade.
+            </p>
+
+            <div class="destaque">
+                <p>
+                    <strong>Princípio fundamental:</strong>
+                    A integridade cristã consiste em viver de maneira
+                    coerente com a fé professada, buscando agradar
+                    a Deus tanto nas decisões públicas quanto nas
+                    escolhas que ninguém mais conhece.
+                </p>
+            </div>
+
+        </section>
+
+
+        <section class="conteudo">
+
+            <h2>2. O que é Ética Cristã?</h2>
+
+            <p>
+                A ética cristã é o conjunto de princípios e orientações
+                morais fundamentados na revelação de Deus, nas Escrituras
+                Sagradas e no ensino de Jesus Cristo.
+            </p>
+
+            <p>
+                Ela procura responder a perguntas importantes:
+                O que é correto? O que é justo? Como devemos tratar
+                as pessoas? Quais responsabilidades temos diante
+                de Deus e do próximo? Como devemos agir diante
+                de situações difíceis?
+            </p>
+
+            <p>
+                A Bíblia não apresenta apenas uma lista de proibições.
+                Ela revela o caráter de Deus, ensina o propósito
+                da vida humana e orienta o cristão a desenvolver
+                uma conduta que expresse amor, santidade e justiça.
+            </p>
+
+            <h3>O caráter de Deus como fundamento moral</h3>
+
+            <p>
+                Deus é santo, justo, verdadeiro e amoroso.
+                Seus atributos não são características passageiras,
+                mas expressam seu caráter perfeito.
+            </p>
+
+            <p>
+                Por isso, a ética cristã não depende simplesmente
+                daquilo que uma pessoa considera conveniente.
+                O cristão procura compreender a vontade de Deus
+                e orientar sua vida de acordo com ela.
+            </p>
+
+            <h3>Jesus Cristo como referência de conduta</h3>
+
+            <p>
+                Jesus ensinou seus discípulos a amar a Deus,
+                amar o próximo, agir com misericórdia, rejeitar
+                a hipocrisia e praticar a justiça.
+            </p>
+
+            <p>
+                Em João 13:34-35, Jesus apresenta um novo mandamento:
+                que seus discípulos amem uns aos outros como ele
+                os amou. Esse amor deve caracterizar a comunidade
+                cristã e ser reconhecido por meio de atitudes concretas.
+            </p>
+
+        </section>
+
+
+        <section class="versiculo">
+
+            <p>
+                "Tudo o que quereis que os homens vos façam,
+                fazei-lho também vós."
+            </p>
+
+            <strong>Mateus 7:12</strong>
+
+        </section>
+
+
+        <section class="conteudo">
+
+            <h2>3. A Consciência e a Responsabilidade Moral</h2>
+
+            <p>
+                A consciência humana está relacionada à capacidade
+                de avaliar pensamentos, intenções e comportamentos,
+                reconhecendo diferenças entre aquilo que se considera
+                correto e aquilo que se considera errado.
+            </p>
+
+            <p>
+                Entretanto, a consciência não é infalível.
+                Ela pode ser influenciada pela educação, pela cultura,
+                pelas experiências pessoais, pelos interesses
+                e até por informações equivocadas.
+            </p>
+
+            <p>
+                Por isso, o homem cristão não deve considerar
+                seus sentimentos ou opiniões pessoais como
+                autoridade moral absoluta. Sua consciência precisa
+                ser orientada e examinada à luz da Palavra de Deus.
+            </p>
+
+            <h3>Uma consciência orientada pelas Escrituras</h3>
+
+            <p>
+                A leitura e o estudo da Bíblia ajudam o cristão
+                a compreender os princípios que devem orientar
+                suas escolhas.
+            </p>
+
+            <p>
+                Quanto mais uma pessoa conhece os ensinamentos
+                das Escrituras e procura colocá-los em prática,
+                mais desenvolve discernimento para reconhecer
+                situações que exigem cuidado moral e espiritual.
+            </p>
+
+            <h3>A responsabilidade pelas escolhas</h3>
+
+            <p>
+                Cada pessoa é responsável por suas atitudes.
+                Não é correto transferir constantemente para
+                outras pessoas a culpa por decisões tomadas
+                de maneira consciente.
+            </p>
+
+            <p>
+                O homem cristão precisa aprender a reconhecer
+                seus erros, assumir suas responsabilidades,
+                pedir perdão quando necessário e procurar
+                reparar os danos que suas atitudes tenham causado.
+            </p>
+
+        </section>
+
+
+        <section class="conteudo">
+
+            <h2>4. Princípios Bíblicos para Tomar Decisões</h2>
+
+            <p>
+                A Bíblia apresenta princípios que ajudam o cristão
+                a avaliar situações e escolher caminhos responsáveis.
+                Esses princípios não eliminam a necessidade de
+                reflexão, mas oferecem fundamentos seguros
+                para o discernimento.
+            </p>
+
+            <h3>1. Buscar a vontade de Deus</h3>
+
+            <p>
+                Antes de tomar decisões importantes, o cristão
+                deve buscar orientação nas Escrituras e desenvolver
+                uma vida de oração.
+            </p>
+
+            <p>
+                Em Provérbios 3:5-6, encontramos a orientação
+                para confiar no Senhor de todo o coração e
+                reconhecê-lo em nossos caminhos.
+            </p>
+
+            <h3>2. Avaliar as consequências</h3>
+
+            <p>
+                Uma decisão responsável considera não apenas
+                os benefícios imediatos, mas também suas possíveis
+                consequências para a própria pessoa e para o próximo.
+            </p>
+
+            <p>
+                Provérbios 14:15 ensina que o prudente considera
+                os seus passos, enquanto o inexperiente acredita
+                facilmente em tudo.
+            </p>
+
+            <h3>3. Agir com amor e justiça</h3>
+
+            <p>
+                O amor ao próximo deve estar presente nas escolhas
+                do cristão. Uma decisão não deve ser avaliada
+                apenas pelo benefício pessoal que proporciona,
+                mas também pela maneira como afeta outras pessoas.
+            </p>
+
+            <p>
+                Miqueias 6:8 apresenta três orientações importantes:
+                praticar a justiça, amar a misericórdia e andar
+                humildemente com Deus.
+            </p>
+
+            <h3>4. Rejeitar a desonestidade</h3>
+
+            <p>
+                O cristão não deve utilizar a mentira, a fraude
+                ou a manipulação para obter vantagens.
+                A honestidade precisa estar presente mesmo
+                quando agir corretamente parece trazer prejuízos.
+            </p>
+
+            <p>
+                Efésios 4:25 orienta os cristãos a abandonarem
+                a mentira e falarem a verdade uns com os outros.
+            </p>
+
+            <h3>5. Procurar sabedoria e bons conselhos</h3>
+
+            <p>
+                Decisões importantes podem exigir conhecimento,
+                experiência e orientação de pessoas maduras.
+                Procurar conselhos não representa fraqueza,
+                mas prudência.
+            </p>
+
+            <p>
+                Provérbios 15:22 ensina que os planos fracassam
+                quando não há conselho, mas podem ser bem-sucedidos
+                quando existem muitos conselheiros.
+            </p>
+
+            <h3>6. Considerar a glória de Deus</h3>
+
+            <p>
+                O objetivo da vida cristã não é apenas alcançar
+                vantagens pessoais, mas honrar a Deus por meio
+                de todas as atividades.
+            </p>
+
+            <p>
+                Em 1 Coríntios 10:31, Paulo ensina que tudo
+                deve ser feito para a glória de Deus.
+            </p>
+
+        </section>
+
+
+        <section class="versiculo">
+
+            <p>
+                "E tudo quanto fizerdes, fazei-o de todo o coração,
+                como ao Senhor, e não aos homens."
+            </p>
+
+            <strong>Colossenses 3:23</strong>
+
+        </section>
+
+
+        <section class="conteudo">
+
+            <h2>5. Integridade nas Diferentes Áreas da Vida</h2>
+
+            <p>
+                A integridade não deve ser demonstrada apenas
+                em situações extraordinárias. Ela precisa fazer
+                parte da rotina e orientar as atitudes do homem
+                cristão em todos os ambientes.
+            </p>
+
+            <h3>Na vida pessoal</h3>
+
+            <p>
+                Agir com sinceridade, controlar os próprios impulsos,
+                reconhecer erros e manter coerência entre aquilo
+                que se acredita e aquilo que se pratica.
+            </p>
+
+            <h3>Na família</h3>
+
+            <p>
+                Cumprir compromissos, respeitar o cônjuge,
+                cuidar dos filhos, manter a palavra e agir
+                com honestidade nas responsabilidades familiares.
+            </p>
+
+            <h3>No casamento</h3>
+
+            <p>
+                A fidelidade, o respeito e a transparência são
+                fundamentais para a construção de um relacionamento
+                saudável. A confiança não deve ser tratada como
+                algo secundário.
+            </p>
+
+            <h3>No trabalho</h3>
+
+            <p>
+                Ser honesto nas atividades profissionais,
+                respeitar colegas, cumprir horários, evitar
+                fraudes e não utilizar recursos da empresa
+                de maneira indevida.
+            </p>
+
+            <h3>Na administração financeira</h3>
+
+            <p>
+                Administrar os recursos com responsabilidade,
+                honrar compromissos, evitar dívidas irresponsáveis
+                e rejeitar práticas desonestas para obter dinheiro.
+            </p>
+
+            <h3>Na Igreja</h3>
+
+            <p>
+                Servir com sinceridade, cumprir responsabilidades,
+                utilizar corretamente os recursos da comunidade
+                e evitar atitudes que comprometam a confiança
+                entre os irmãos.
+            </p>
+
+            <h3>Na sociedade</h3>
+
+            <p>
+                Respeitar as leis legítimas, agir com cidadania,
+                combater a corrupção e contribuir para o bem comum.
+            </p>
+
+        </section>
+
+
+        <section class="conteudo">
+
+            <h2>6. Dilemas Éticos e Pressões Cotidianas</h2>
+
+            <p>
+                Nem sempre as decisões são simples.
+                Existem situações em que interesses pessoais,
+                pressões profissionais, dificuldades financeiras
+                ou expectativas de outras pessoas podem colocar
+                o cristão diante de dilemas éticos.
+            </p>
+
+            <p>
+                Nessas circunstâncias, é necessário avaliar
+                os princípios envolvidos e procurar agir
+                de maneira coerente com a fé.
+            </p>
+
+            <h3>Quando a mentira parece vantajosa</h3>
+
+            <p>
+                Um profissional pode ser pressionado a apresentar
+                informações falsas para proteger interesses
+                particulares ou beneficiar alguém.
+            </p>
+
+            <p>
+                O princípio bíblico da verdade ensina que
+                a honestidade não deve ser abandonada
+                em troca de vantagens temporárias.
+            </p>
+
+            <h3>Quando existe pressão para participar de algo errado</h3>
+
+            <p>
+                Um homem pode ser convidado por amigos ou colegas
+                a participar de atitudes desonestas, ilegais
+                ou prejudiciais a outras pessoas.
+            </p>
+
+            <p>
+                A fidelidade a Deus exige coragem para dizer não,
+                mesmo quando isso significa enfrentar
+                desaprovação ou perder alguma vantagem.
+            </p>
+
+            <h3>Quando interesses pessoais entram em conflito com a justiça</h3>
+
+            <p>
+                O cristão precisa reconhecer que nem sempre
+                aquilo que é melhor para seus próprios interesses
+                é o que corresponde à justiça.
+            </p>
+
+            <p>
+                A ética cristã exige consideração pelo próximo,
+                respeito à dignidade humana e compromisso
+                com a verdade.
+            </p>
+
+            <div class="destaque">
+                <p>
+                    <strong>Uma pergunta importante:</strong>
+                    Se minha decisão fosse conhecida por minha família,
+                    pela Igreja e por Deus, eu teria tranquilidade
+                    para assumir publicamente a responsabilidade
+                    por ela?
+                </p>
+            </div>
+
+        </section>
+
+
+        <section class="conteudo">
+
+            <h2>7. O Exemplo Bíblico de Daniel</h2>
+
+            <p>
+                Daniel é um exemplo importante de integridade
+                e fidelidade a Deus diante de pressões externas.
+            </p>
+
+            <p>
+                Levado para a Babilônia durante o exílio,
+                Daniel passou a viver em uma sociedade com
+                costumes, valores e práticas diferentes daqueles
+                que conhecia.
+            </p>
+
+            <p>
+                Em Daniel 1:8, o texto afirma que ele decidiu
+                não se contaminar com a comida e a bebida
+                oferecidas pelo rei.
+            </p>
+
+            <p>
+                Sua atitude demonstra que, mesmo vivendo em
+                um ambiente cultural diferente, ele procurava
+                permanecer fiel às suas convicções religiosas.
+            </p>
+
+            <p>
+                Posteriormente, em Daniel 6, encontramos outro
+                episódio de fidelidade. Mesmo diante de uma
+                ordem que proibia a oração a qualquer pessoa
+                que não fosse o rei, Daniel continuou orando
+                a Deus como costumava fazer.
+            </p>
+
+            <p>
+                Sua integridade não dependia de conveniência
+                ou reconhecimento público. Ele permaneceu
+                fiel mesmo diante de consequências graves.
+            </p>
+
+            <p>
+                A experiência de Daniel ensina que o homem
+                cristão pode viver e trabalhar em diferentes
+                ambientes culturais sem abandonar suas
+                convicções fundamentais.
+            </p>
+
+            <p>
+                Sua fidelidade deve ser acompanhada de sabedoria,
+                respeito e responsabilidade, mas não pode
+                ser negociada por vantagens pessoais.
+            </p>
+
+        </section>
+
+
+        <section class="conteudo">
+
+            <h2>8. Conclusão</h2>
+
+            <p>
+                A ética cristã não é apenas um conjunto de
+                conceitos teóricos. Ela deve orientar a maneira
+                como o homem vive, trabalha, administra seus
+                recursos, trata sua família e se relaciona
+                com a sociedade.
+            </p>
+
+            <p>
+                Tomar decisões responsáveis exige conhecimento
+                das Escrituras, oração, sabedoria, domínio próprio
+                e disposição para assumir as consequências
+                das próprias escolhas.
+            </p>
+
+            <p>
+                O homem segundo o coração de Deus não procura
+                apenas parecer correto diante das pessoas.
+                Ele deseja viver com integridade diante do Senhor.
+            </p>
+
+            <p>
+                Em um mundo no qual muitas vezes as vantagens
+                pessoais são colocadas acima da verdade,
+                o cristão é chamado a demonstrar que a fidelidade
+                a Deus continua sendo seu compromisso maior.
+            </p>
+
+            <p>
+                Que nossas decisões revelem uma fé sincera
+                e uma vida comprometida com os valores
+                do Evangelho.
+            </p>
+
+        </section>
+
+
+        <section class="versiculo">
+
+            <p>
+                "O que anda em sinceridade, e pratica a justiça,
+                e fala verazmente segundo o seu coração."
+            </p>
+
+            <strong>Salmos 15:2</strong>
+
+        </section>
+
+
+        <section class="reflexao">
+
+            <h2>Para Refletir</h2>
+
+            <p>
+                1. Qual é a diferença entre agir de acordo com
+                os próprios interesses e agir segundo os
+                princípios da ética cristã?
+            </p>
+
+            <p>
+                2. Por que a consciência humana precisa ser
+                orientada pelas Escrituras?
+            </p>
+
+            <p>
+                3. Como o homem cristão deve agir quando
+                enfrenta pressão para participar de uma
+                atitude desonesta?
+            </p>
+
+            <p>
+                4. Existe coerência entre sua fé professada
+                e suas atitudes no ambiente familiar e profissional?
+            </p>
+
+            <p>
+                5. Que decisões você precisa rever para viver
+                com maior integridade diante de Deus?
+            </p>
+
+        </section>
+
+
+        <section class="conteudo">
+
+            <h2>Referências Bíblicas para Estudo</h2>
+
+            <ul class="lista">
+
+                <li>Gênesis 39:1-23 — José e sua integridade diante da tentação.</li>
+
+                <li>Daniel 1:1-21 — A fidelidade de Daniel em Babilônia.</li>
+
+                <li>Daniel 6:1-28 — A perseverança de Daniel na oração.</li>
+
+                <li>Provérbios 3:5-6 — Confiança e orientação do Senhor.</li>
+
+                <li>Provérbios 14:15 — Prudência na avaliação dos caminhos.</li>
+
+                <li>Provérbios 15:22 — A importância dos bons conselhos.</li>
+
+                <li>Miqueias 6:8 — Justiça, misericórdia e humildade.</li>
+
+                <li>Mateus 7:12 — O princípio do tratamento ao próximo.</li>
+
+                <li>João 13:34-35 — O mandamento do amor.</li>
+
+                <li>Romanos 12:1-2 — A renovação da mente.</li>
+
+                <li>1 Coríntios 10:31 — Fazer tudo para a glória de Deus.</li>
+
+                <li>Efésios 4:25-32 — Verdade, bondade e perdão.</li>
+
+                <li>Colossenses 3:23-24 — Trabalho realizado para o Senhor.</li>
+
+                <li>1 Pedro 3:15-16 — Testemunho com mansidão e boa consciência.</li>
+
+            </ul>
+
+        </section>
+
+
+        <nav class="navegacao">
+
+            <a href="tema01.html">
+                ← TEMA ANTERIOR
+            </a>
+
+            <a href="apresentacao.html">
+                APRESENTAÇÃO DO MÓDULO
+            </a>
+
+            <a href="tema03.html">
+                PRÓXIMO TEMA →
+            </a>
+
+        </nav>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            <strong>HOMENS SEGUNDO O CORAÇÃO DE DEUS</strong>
+        </p>
+
+        <p>
+            Formando homens, fortalecendo famílias e servindo à Igreja de Cristo.
+        </p>
+
+        <p>
+            Área 01 — Identidade Masculina Cristã | Módulo 07 | Tema 02
+        </p>
+
+    </footer>
+
+</body>
+</html>

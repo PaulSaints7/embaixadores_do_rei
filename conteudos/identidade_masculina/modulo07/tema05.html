@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tema 05 | Trabalho, Finanças e Responsabilidade Social</title>
+
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --marrom: #593B2B;
+            --marrom-escuro: #38271F;
+            --marrom-medio: #76523C;
+            --azul: #18334D;
+            --azul-claro: #294B65;
+            --dourado: #B08A48;
+            --dourado-claro: #D1B477;
+            --pergaminho: #E9DFC9;
+            --creme: #F7F4EC;
+            --texto: #332A24;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--creme);
+            color: var(--texto);
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.8;
+        }
+
+        .topo {
+            background: linear-gradient(135deg, var(--marrom-escuro), var(--azul));
+            color: white;
+            padding: 55px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--dourado);
+        }
+
+        .identificacao {
+            color: var(--dourado-claro);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .topo h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.7rem, 4vw, 2.7rem);
+            max-width: 950px;
+            margin: 20px auto;
+            line-height: 1.35;
+        }
+
+        .topo p {
+            max-width: 750px;
+            margin: auto;
+            color: #eee5d6;
+        }
+
+        .container {
+            width: min(1050px, 92%);
+            margin: 40px auto;
+        }
+
+        .conteudo {
+            background: white;
+            padding: clamp(22px, 5vw, 48px);
+            border-radius: 12px;
+            box-shadow: 0 5px 22px rgba(56, 39, 31, 0.08);
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--marrom);
+            font-size: 1.45rem;
+            margin-top: 42px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--pergaminho);
+        }
+
+        h3 {
+            color: var(--azul);
+            font-size: 1.12rem;
+            margin-top: 28px;
+        }
+
+        p {
+            margin: 15px 0;
+        }
+
+        .introducao {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.08rem;
+            line-height: 1.9;
+            color: var(--marrom-escuro);
+        }
+
+        .versiculo {
+            background: var(--pergaminho);
+            border-left: 5px solid var(--dourado);
+            padding: 24px;
+            margin: 30px 0;
+            border-radius: 6px;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.05rem;
+        }
+
+        .versiculo strong {
+            display: block;
+            margin-top: 12px;
+            color: var(--marrom);
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .destaque {
+            background: #f3eee5;
+            border-left: 5px solid var(--azul-claro);
+            padding: 20px 24px;
+            margin: 25px 0;
+            border-radius: 6px;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .aplicacao {
+            background: #f8f6f0;
+            padding: 20px 24px;
+            border-radius: 8px;
+            margin: 18px 0;
+            border: 1px solid #e8dfd1;
+        }
+
+        .reflexao {
+            background: linear-gradient(135deg, var(--azul), var(--marrom-escuro));
+            color: white;
+            padding: 28px;
+            border-radius: 10px;
+            margin-top: 35px;
+        }
+
+        .reflexao h2 {
+            color: var(--dourado-claro);
+            border-bottom-color: rgba(255,255,255,0.2);
+            margin-top: 0;
+        }
+
+        .reflexao p {
+            color: #f1e9dc;
+        }
+
+        .navegacao {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 35px 0;
+        }
+
+        .botao {
+            display: inline-block;
+            padding: 13px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .botao-principal {
+            background: var(--marrom);
+            color: white;
+        }
+
+        .botao-secundario {
+            background: var(--azul);
+            color: white;
+        }
+
+        .botao:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        .rodape {
+            background: var(--marrom-escuro);
+            color: #e9dfd0;
+            text-align: center;
+            padding: 28px 15px;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 650px) {
+            .navegacao {
+                flex-direction: column;
+            }
+
+            .botao {
+                width: 100%;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .topo {
+                background: white !important;
+                color: black;
+                border-bottom: 2px solid #777;
+            }
+
+            .topo p,
+            .identificacao {
+                color: #333;
+            }
+
+            .conteudo {
+                box-shadow: none;
+                padding: 0;
+            }
+
+            .navegacao,
+            .rodape {
+                display: none;
+            }
+
+            .reflexao {
+                background: white !important;
+                color: black;
+                border: 1px solid #777;
+            }
+
+            .reflexao h2,
+            .reflexao p {
+                color: black;
+            }
+
+            h2, h3 {
+                break-after: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="topo">
+    <div class="identificacao">
+        Área 01 — Identidade Masculina Cristã | Módulo 07
+    </div>
+
+    <h1>Trabalho, Finanças e Responsabilidade Social</h1>
+
+    <p>
+        Compreendendo o trabalho como responsabilidade, os recursos como
+        mordomia e a vida profissional como oportunidade de testemunhar
+        os valores do Reino de Deus.
+    </p>
+</header>
+
+<main class="container">
+    <article class="conteudo">
+
+        <p class="introducao">
+            O trabalho, a administração financeira e o compromisso com
+            a sociedade fazem parte da vida cotidiana do homem cristão.
+            A Bíblia ensina que nossos recursos, capacidades e oportunidades
+            devem ser administrados com honestidade, responsabilidade,
+            generosidade e gratidão a Deus. A fé não deve ficar restrita
+            ao ambiente da Igreja: ela precisa orientar também nossas
+            decisões profissionais, econômicas e sociais.
+        </p>
+
+        <div class="versiculo">
+            "E tudo quanto fizerdes, fazei-o de todo o coração,
+            como ao Senhor e não aos homens."
+            <strong>Colossenses 3:23</strong>
+        </div>
+
+        <h2>1. O trabalho no propósito de Deus</h2>
+
+        <p>
+            O trabalho está presente no relato bíblico desde a criação.
+            Em Gênesis 2:15, Deus coloca o homem no jardim do Éden para
+            o cultivar e guardar. Antes mesmo da entrada do pecado no mundo,
+            o ser humano já havia recebido uma responsabilidade relacionada
+            ao cuidado da criação.
+        </p>
+
+        <p>
+            Isso demonstra que o trabalho não deve ser compreendido apenas
+            como uma obrigação para garantir a sobrevivência. Ele também
+            representa uma oportunidade de desenvolver capacidades,
+            produzir, servir e contribuir para o bem comum.
+        </p>
+
+        <p>
+            Depois da entrada do pecado, o trabalho passou a ser acompanhado
+            por dificuldades, cansaço, conflitos e frustrações, conforme
+            apresentado em Gênesis 3:17-19. Entretanto, continua sendo
+            uma dimensão importante da responsabilidade humana.
+        </p>
+
+        <h3>O trabalho como expressão de responsabilidade</h3>
+
+        <ul>
+            <li>Desenvolver habilidades e capacidades recebidas.</li>
+            <li>Contribuir para o sustento próprio e familiar.</li>
+            <li>Produzir bens e serviços úteis à sociedade.</li>
+            <li>Exercer uma atividade com honestidade e dedicação.</li>
+            <li>Servir ao próximo por meio das próprias competências.</li>
+            <li>Reconhecer a dignidade de diferentes profissões e ocupações.</li>
+        </ul>
+
+        <div class="destaque">
+            <strong>Princípio importante:</strong>
+            nenhuma profissão honesta deve ser desprezada por causa de seu
+            prestígio, remuneração ou posição social. A dignidade do trabalho
+            não depende exclusivamente do reconhecimento humano.
+        </div>
+
+        <h2>2. Excelência profissional e testemunho cristão</h2>
+
+        <p>
+            O homem cristão é chamado a demonstrar sua fé também no ambiente
+            profissional. Sua conduta deve refletir honestidade, compromisso,
+            respeito, pontualidade, competência e responsabilidade.
+        </p>
+
+        <p>
+            Em Colossenses 3:22-24, Paulo orienta os cristãos a realizarem
+            suas atividades com sinceridade de coração, como serviço ao Senhor.
+            O princípio ensina que a qualidade do trabalho não deve depender
+            apenas da presença de supervisores ou da possibilidade de receber
+            reconhecimento.
+        </p>
+
+        <p>
+            A excelência profissional não significa perfeccionismo ou
+            necessidade de alcançar sucesso a qualquer custo. Significa
+            procurar realizar as responsabilidades com dedicação,
+            honestidade e consciência diante de Deus.
+        </p>
+
+        <h3>Atitudes que caracterizam um profissional cristão</h3>
+
+        <ul>
+            <li>Ser honesto nas relações comerciais e profissionais.</li>
+            <li>Cumprir compromissos assumidos.</li>
+            <li>Respeitar colegas, superiores, subordinados e clientes.</li>
+            <li>Evitar fraudes, corrupção, falsificações e vantagens ilícitas.</li>
+            <li>Reconhecer erros e assumir responsabilidades.</li>
+            <li>Buscar aperfeiçoamento e atualização profissional.</li>
+            <li>Não utilizar a fé como instrumento de manipulação ou exploração.</li>
+        </ul>
+
+        <p>
+            O testemunho cristão no trabalho não depende apenas de falar
+            sobre religião. Ele também se manifesta na maneira como
+            tratamos as pessoas e cumprimos nossas obrigações.
+        </p>
+
+        <h2>3. O dinheiro e a mordomia cristã</h2>
+
+        <p>
+            A Bíblia apresenta o ser humano como administrador dos recursos
+            que recebe. Essa compreensão é conhecida como mordomia cristã.
+            O dinheiro, os bens materiais, o tempo e as capacidades pessoais
+            devem ser utilizados com sabedoria e responsabilidade.
+        </p>
+
+        <p>
+            Em Mateus 6:19-21, Jesus ensina que os tesouros terrenos são
+            passageiros e orienta seus discípulos a valorizarem aquilo
+            que possui significado eterno.
+        </p>
+
+        <p>
+            O dinheiro não é apresentado nas Escrituras como algo
+            automaticamente mau. O problema está em transformá-lo
+            em objeto de confiança absoluta, ambição descontrolada
+            ou fonte de injustiça.
+        </p>
+
+        <div class="versiculo">
+            "Porque o amor do dinheiro é a raiz de toda espécie de males;
+            e nessa cobiça alguns se desviaram da fé e se traspassaram
+            a si mesmos com muitas dores."
+            <strong>1 Timóteo 6:10</strong>
+        </div>
+
+        <p>
+            O ensino bíblico não condena a existência de recursos financeiros,
+            mas adverte contra a cobiça e o desejo de colocar a riqueza
+            acima de Deus e das pessoas.
+        </p>
+
+        <h2>4. Planejamento financeiro e responsabilidade</h2>
+
+        <p>
+            A administração responsável das finanças exige planejamento,
+            equilíbrio e capacidade de tomar decisões conscientes.
+            O homem cristão deve evitar tanto a negligência financeira
+            quanto a obsessão pelo acúmulo de riquezas.
+        </p>
+
+        <p>
+            Provérbios 21:5 apresenta o valor dos planos bem elaborados
+            e alerta contra decisões precipitadas. Esse princípio pode
+            ser aplicado à organização do orçamento familiar e ao uso
+            dos recursos disponíveis.
+        </p>
+
+        <h3>Princípios para uma administração financeira saudável</h3>
+
+        <ul>
+            <li>
+                <strong>Planejamento:</strong> conhecer a própria realidade
+                financeira e organizar receitas e despesas.
+            </li>
+
+            <li>
+                <strong>Prudência:</strong> evitar compras impulsivas
+                e compromissos financeiros incompatíveis com a renda.
+            </li>
+
+            <li>
+                <strong>Honestidade:</strong> cumprir obrigações e evitar
+                práticas financeiras fraudulentas.
+            </li>
+
+            <li>
+                <strong>Contentamento:</strong> não medir o valor pessoal
+                pela quantidade de bens acumulados.
+            </li>
+
+            <li>
+                <strong>Generosidade:</strong> separar recursos e oportunidades
+                para ajudar pessoas e cooperar com a obra cristã.
+            </li>
+
+            <li>
+                <strong>Responsabilidade familiar:</strong> participar
+                das decisões econômicas que afetam o lar.
+            </li>
+        </ul>
+
+        <p>
+            Planejar as finanças não significa confiar exclusivamente
+            nos próprios recursos. Significa administrar com sabedoria
+            aquilo que está sob nossa responsabilidade, reconhecendo
+            a dependência de Deus.
+        </p>
+
+        <h2>5. O perigo do materialismo e da ganância</h2>
+
+        <p>
+            O materialismo acontece quando os bens materiais passam
+            a ocupar uma posição central na maneira de compreender
+            a vida e medir o sucesso.
+        </p>
+
+        <p>
+            A sociedade frequentemente associa realização pessoal
+            à aquisição de propriedades, veículos, roupas, tecnologia
+            e outros símbolos de consumo. Entretanto, a Bíblia ensina
+            que o valor de uma pessoa não está determinado pela quantidade
+            de coisas que possui.
+        </p>
+
+        <p>
+            Em Lucas 12:15, Jesus adverte seus ouvintes a guardarem-se
+            da avareza, lembrando que a vida de uma pessoa não consiste
+            na abundância dos bens que possui.
+        </p>
+
+        <p>
+            A ganância pode prejudicar relacionamentos, comprometer
+            a honestidade e levar alguém a sacrificar valores espirituais
+            e familiares em busca de vantagens materiais.
+        </p>
+
+        <div class="destaque">
+            O homem cristão deve trabalhar para viver com dignidade,
+            cuidar de sua família e servir ao próximo, sem transformar
+            o dinheiro em seu senhor.
+        </div>
+
+        <h2>6. Generosidade e solidariedade cristã</h2>
+
+        <p>
+            A generosidade é uma expressão prática do amor cristão.
+            A Bíblia ensina que os recursos devem ser administrados
+            de maneira que também possam beneficiar outras pessoas.
+        </p>
+
+        <p>
+            Em 2 Coríntios 9:6-8, Paulo apresenta a importância da contribuição
+            voluntária e alegre, destacando que Deus ama quem dá com alegria.
+        </p>
+
+        <p>
+            A generosidade cristã não deve ser praticada para conquistar
+            prestígio, obter vantagens espirituais ou obrigar Deus
+            a conceder prosperidade material. Ela nasce da gratidão,
+            do amor e da compreensão de que tudo deve ser administrado
+            diante do Senhor.
+        </p>
+
+        <h3>A generosidade pode ser demonstrada de diferentes maneiras:</h3>
+
+        <ul>
+            <li>Contribuindo voluntariamente para a obra de Deus.</li>
+            <li>Apoiando pessoas em situações de necessidade.</li>
+            <li>Compartilhando conhecimentos e experiências.</li>
+            <li>Oferecendo tempo e habilidades em favor do próximo.</li>
+            <li>Participando de iniciativas de assistência e solidariedade.</li>
+            <li>Cooperando com ações que promovam dignidade e justiça.</li>
+        </ul>
+
+        <p>
+            A generosidade não depende exclusivamente da quantidade de dinheiro
+            disponível. Pessoas com poucos recursos também podem demonstrar
+            solidariedade por meio do tempo, da atenção, do trabalho
+            e de outras formas de serviço.
+        </p>
+
+        <h2>7. Responsabilidade social e compromisso com o próximo</h2>
+
+        <p>
+            A fé cristã possui consequências para a maneira como o homem
+            se relaciona com a sociedade. O amor ao próximo não deve permanecer
+            apenas no discurso, mas precisa produzir atitudes concretas.
+        </p>
+
+        <p>
+            Em Miqueias 6:8, encontramos uma síntese importante daquilo
+            que Deus requer: praticar a justiça, amar a misericórdia
+            e andar humildemente com Deus.
+        </p>
+
+        <p>
+            Esse princípio mostra que a espiritualidade verdadeira
+            não pode ser separada da maneira como tratamos outras pessoas,
+            especialmente aquelas que enfrentam dificuldades.
+        </p>
+
+        <h3>Responsabilidade social na prática</h3>
+
+        <ul>
+            <li>Respeitar os direitos e a dignidade de cada pessoa.</li>
+            <li>Combater a corrupção e as práticas desonestas.</li>
+            <li>Valorizar a educação e o desenvolvimento humano.</li>
+            <li>Demonstrar solidariedade com pessoas vulneráveis.</li>
+            <li>Contribuir para a preservação do meio ambiente.</li>
+            <li>Respeitar as leis justas e exercer a cidadania responsável.</li>
+            <li>Participar de iniciativas que promovam o bem comum.</li>
+        </ul>
+
+        <p>
+            A responsabilidade social cristã não substitui a missão espiritual
+            da Igreja, mas expressa o amor ao próximo que deve acompanhar
+            a vida daqueles que seguem a Cristo.
+        </p>
+
+        <h2>8. O homem cristão e a responsabilidade familiar</h2>
+
+        <p>
+            O trabalho e a administração financeira também possuem
+            consequências diretas para a vida familiar. O homem deve
+            compreender que suas decisões profissionais e econômicas
+            podem afetar profundamente aqueles que convivem com ele.
+        </p>
+
+        <p>
+            Em 1 Timóteo 5:8, Paulo destaca a seriedade da responsabilidade
+            de cuidar dos membros da própria família. Esse princípio
+            não deve ser reduzido apenas à provisão financeira:
+            envolve cuidado, presença, proteção e compromisso.
+        </p>
+
+        <p>
+            A responsabilidade familiar também não significa que todo
+            o sustento deva recair exclusivamente sobre o homem.
+            As famílias podem organizar suas responsabilidades de diferentes
+            maneiras, conforme suas circunstâncias, capacidades e acordos.
+            O princípio cristão é a cooperação, a responsabilidade
+            e o cuidado mútuo.
+        </p>
+
+        <p>
+            Um homem não deve sacrificar continuamente sua família
+            em nome de uma busca descontrolada por dinheiro, prestígio
+            ou crescimento profissional. O trabalho é importante,
+            mas não deve ocupar o lugar de Deus nem destruir os
+            relacionamentos que ele tem a responsabilidade de cultivar.
+        </p>
+
+        <h2>9. Aplicações práticas para o homem cristão</h2>
+
+        <div class="aplicacao">
+            <h3>Na vida profissional</h3>
+            <p>
+                Trabalhar com dedicação, honestidade, competência
+                e respeito, compreendendo que a profissão também pode
+                ser um instrumento de serviço ao próximo.
+            </p>
+        </div>
+
+        <div class="aplicacao">
+            <h3>Na administração financeira</h3>
+            <p>
+                Planejar despesas, evitar desperdícios, cumprir compromissos
+                e utilizar os recursos com prudência e responsabilidade.
+            </p>
+        </div>
+
+        <div class="aplicacao">
+            <h3>Na família</h3>
+            <p>
+                Participar das decisões econômicas, valorizar o tempo
+                com os familiares e compreender que cuidado e presença
+                são tão importantes quanto a provisão material.
+            </p>
+        </div>
+
+        <div class="aplicacao">
+            <h3>Na Igreja</h3>
+            <p>
+                Cooperar com a obra cristã por meio de contribuições,
+                talentos, conhecimentos, trabalho voluntário e disposição
+                para servir.
+            </p>
+        </div>
+
+        <div class="aplicacao">
+            <h3>Na sociedade</h3>
+            <p>
+                Agir com justiça, respeitar a dignidade humana,
+                combater práticas corruptas e contribuir para o bem comum.
+            </p>
+        </div>
+
+        <h2>10. Conclusão</h2>
+
+        <p>
+            O trabalho, o dinheiro e a responsabilidade social não são
+            assuntos separados da vida espiritual. São dimensões nas quais
+            o homem cristão demonstra sua fidelidade aos princípios
+            das Escrituras.
+        </p>
+
+        <p>
+            Trabalhar com honestidade, administrar os recursos com sabedoria,
+            praticar a generosidade e cuidar do próximo são atitudes
+            que revelam uma fé comprometida com os ensinamentos de Cristo.
+        </p>
+
+        <p>
+            O verdadeiro sucesso não pode ser medido apenas pela posição
+            profissional, pelo patrimônio acumulado ou pelo reconhecimento
+            social. Uma vida bem administrada diante de Deus também se revela
+            no caráter, nos relacionamentos, na fidelidade e no serviço.
+        </p>
+
+        <div class="versiculo">
+            "Portanto, quer comais quer bebais, ou façais outra qualquer
+            coisa, fazei tudo para glória de Deus."
+            <strong>1 Coríntios 10:31</strong>
+        </div>
+
+        <section class="reflexao">
+            <h2>Para refletir</h2>
+
+            <p>
+                1. Por que o trabalho pode ser compreendido como parte
+                da responsabilidade humana diante de Deus?
+            </p>
+
+            <p>
+                2. Como o homem cristão pode demonstrar sua fé no ambiente
+                profissional?
+            </p>
+
+            <p>
+                3. Qual é a diferença entre administrar dinheiro com sabedoria
+                e transformar a riqueza em objetivo principal da vida?
+            </p>
+
+            <p>
+                4. De que maneira a generosidade pode ser praticada mesmo
+                por pessoas que possuem poucos recursos financeiros?
+            </p>
+
+            <p>
+                5. Como equilibrar as responsabilidades profissionais,
+                financeiras e familiares?
+            </p>
+
+            <p>
+                6. Que atitudes concretas demonstram responsabilidade social
+                à luz dos princípios bíblicos?
+            </p>
+
+            <p>
+                <strong>Desafio pessoal:</strong> examine sua relação com
+                o trabalho, o dinheiro e o próximo. Identifique uma atitude
+                que precisa ser corrigida e uma oportunidade concreta
+                de utilizar seus recursos ou capacidades para servir.
+            </p>
+        </section>
+
+        <h2>Referências bíblicas para aprofundamento</h2>
+
+        <ul>
+            <li>Gênesis 2:15 — O trabalho na criação.</li>
+            <li>Gênesis 3:17-19 — O trabalho e as consequências do pecado.</li>
+            <li>Provérbios 6:6-11 — A diligência e a responsabilidade.</li>
+            <li>Provérbios 21:5 — Planejamento e prudência.</li>
+            <li>Provérbios 22:7 — O cuidado com o endividamento.</li>
+            <li>Mateus 6:19-34 — Tesouros, prioridades e confiança em Deus.</li>
+            <li>Lucas 12:13-21 — A advertência contra a avareza.</li>
+            <li>Atos 20:33-35 — Trabalho e generosidade.</li>
+            <li>1 Coríntios 10:31 — Fazer tudo para a glória de Deus.</li>
+            <li>2 Coríntios 9:6-11 — Generosidade cristã.</li>
+            <li>Efésios 4:28 — Trabalhar para ter com que ajudar.</li>
+            <li>Colossenses 3:22-24 — Trabalho realizado para o Senhor.</li>
+            <li>1 Tessalonicenses 4:11-12 — Trabalho e bom testemunho.</li>
+            <li>1 Timóteo 6:6-10, 17-19 — Contentamento e uso das riquezas.</li>
+            <li>Tiago 2:14-17 — Fé demonstrada por obras de misericórdia.</li>
+            <li>Miqueias 6:8 — Justiça, misericórdia e humildade.</li>
+        </ul>
+
+        <div class="navegacao">
+            <a href="tema04.html" class="botao botao-secundario">
+                ← Tema Anterior
+            </a>
+
+            <a href="apresentacao.html" class="botao botao-principal">
+                Apresentação do Módulo
+            </a>
+
+            <a href="tema06.html" class="botao botao-secundario">
+                Próximo Tema →
+            </a>
+        </div>
+
+    </article>
+</main>
+
+<footer class="rodape">
+    <p>HOMENS SEGUNDO O CORAÇÃO DE DEUS</p>
+
+    <p>
+        Formando homens, fortalecendo famílias e servindo à Igreja de Cristo.
+    </p>
+
+    <p>
+        Área 01 — Identidade Masculina Cristã | Módulo 07
+    </p>
+</footer>
+
+</body>
+</html>

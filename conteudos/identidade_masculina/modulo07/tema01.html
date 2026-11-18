@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tema 01 | Os Valores do Reino de Deus em uma Sociedade em Transformação</title>
+
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --marrom: #593B2B;
+            --marrom-escuro: #38271F;
+            --marrom-medio: #76523C;
+            --azul: #18334D;
+            --azul-claro: #294B65;
+            --dourado: #B08A48;
+            --dourado-claro: #D1B477;
+            --pergaminho: #E9DFC9;
+            --creme: #F7F4EC;
+            --texto: #3B332C;
+            --branco: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--creme);
+            color: var(--texto);
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.8;
+        }
+
+        .cabecalho {
+            background: linear-gradient(135deg, var(--marrom-escuro), var(--azul));
+            color: var(--branco);
+            text-align: center;
+            padding: 55px 20px;
+            border-bottom: 5px solid var(--dourado);
+        }
+
+        .cabecalho .identificacao {
+            color: var(--dourado-claro);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.82rem;
+            margin-bottom: 15px;
+        }
+
+        .cabecalho h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.7rem, 4vw, 2.5rem);
+            max-width: 950px;
+            margin: 0 auto 15px;
+            line-height: 1.4;
+        }
+
+        .cabecalho p {
+            color: var(--pergaminho);
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .container {
+            width: min(1000px, 92%);
+            margin: 40px auto;
+        }
+
+        .conteudo {
+            background: var(--branco);
+            padding: 35px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            border-left: 5px solid var(--dourado);
+            box-shadow: 0 4px 15px rgba(56, 39, 31, 0.07);
+        }
+
+        .conteudo h2 {
+            color: var(--azul);
+            font-family: 'Cinzel', serif;
+            font-size: 1.45rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .conteudo h3 {
+            color: var(--marrom);
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.12rem;
+            margin-top: 28px;
+        }
+
+        .conteudo p {
+            text-align: justify;
+            margin-bottom: 16px;
+        }
+
+        .destaque {
+            background: var(--pergaminho);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 25px 0;
+            border-left: 4px solid var(--dourado);
+        }
+
+        .destaque p {
+            margin-bottom: 0;
+        }
+
+        .versiculo {
+            background: var(--azul);
+            color: var(--branco);
+            padding: 30px;
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        .versiculo p {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.15rem;
+            font-style: italic;
+            line-height: 1.9;
+        }
+
+        .versiculo strong {
+            display: block;
+            color: var(--dourado-claro);
+            margin-top: 15px;
+        }
+
+        .lista {
+            padding-left: 25px;
+        }
+
+        .lista li {
+            margin-bottom: 12px;
+        }
+
+        .reflexao {
+            background: var(--marrom-escuro);
+            color: var(--pergaminho);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        .reflexao h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--dourado-claro);
+            margin-top: 0;
+        }
+
+        .reflexao p {
+            text-align: justify;
+        }
+
+        .navegacao {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 35px 0;
+        }
+
+        .navegacao a {
+            background: var(--azul);
+            color: var(--branco);
+            text-decoration: none;
+            padding: 13px 20px;
+            border-radius: 6px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .navegacao a:hover {
+            background: var(--marrom);
+        }
+
+        footer {
+            background: var(--marrom-escuro);
+            color: var(--pergaminho);
+            text-align: center;
+            padding: 28px 20px;
+            border-top: 4px solid var(--dourado);
+        }
+
+        footer strong {
+            color: var(--dourado-claro);
+        }
+
+        @media (max-width: 600px) {
+            .conteudo {
+                padding: 23px 20px;
+            }
+
+            .navegacao {
+                flex-direction: column;
+            }
+
+            .navegacao a {
+                width: 100%;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .cabecalho,
+            .versiculo,
+            .reflexao,
+            footer {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .navegacao {
+                display: none;
+            }
+
+            .conteudo {
+                box-shadow: none;
+                break-inside: avoid;
+            }
+
+            .container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="cabecalho">
+
+        <div class="identificacao">
+            Área 01 — Identidade Masculina Cristã | Módulo 07
+        </div>
+
+        <h1>Os Valores do Reino de Deus em uma Sociedade em Transformação</h1>
+
+        <p>
+            Tema 01 — Os princípios eternos de Deus como fundamento
+            para a vida do homem cristão.
+        </p>
+
+    </header>
+
+
+    <main class="container">
+
+
+        <section class="conteudo">
+
+            <h2>1. Introdução</h2>
+
+            <p>
+                Vivemos em uma sociedade marcada por mudanças constantes.
+                Os avanços tecnológicos, as transformações culturais,
+                as novas formas de relacionamento e as diferentes
+                concepções sobre a vida influenciam profundamente
+                o comportamento das pessoas.
+            </p>
+
+            <p>
+                Nesse cenário, o homem cristão precisa compreender
+                que sua identidade e sua conduta não devem ser
+                determinadas simplesmente pelas tendências de cada época.
+                Sua referência fundamental é a Palavra de Deus.
+            </p>
+
+            <p>
+                A Bíblia apresenta o Reino de Deus como o governo
+                soberano do Senhor sobre todas as coisas. Jesus Cristo
+                anunciou esse Reino e ensinou seus discípulos a viverem
+                de acordo com seus valores.
+            </p>
+
+            <p>
+                O homem cristão é chamado a viver neste mundo sem
+                abandonar os princípios do Evangelho. Isso significa
+                desenvolver uma consciência orientada pelas Escrituras,
+                praticar a justiça, amar o próximo, agir com integridade
+                e permanecer fiel a Cristo.
+            </p>
+
+            <div class="destaque">
+                <p>
+                    <strong>Princípio fundamental:</strong> Os valores
+                    do Reino de Deus não são determinados pelas
+                    transformações da sociedade. Eles encontram seu
+                    fundamento no caráter de Deus e na revelação
+                    das Escrituras Sagradas.
+                </p>
+            </div>
+
+        </section>
+
+
+        <section class="conteudo">
+
+            <h2>2. O Reino de Deus e seus Valores</h2>
+
+            <p>
+                O Reino de Deus ocupa lugar central na mensagem
+                de Jesus Cristo. Seu ministério anunciou a chegada
+                do Reino e convocou as pessoas ao arrependimento
+                e à fé.
+            </p>
+
+            <p>
+                Em Marcos 1:14-15, Jesus anuncia que o tempo estava
+                cumprido e que o Reino de Deus havia chegado.
+                Sua mensagem exigia uma resposta: arrependimento
+                e fé no Evangelho.
+            </p>
+
+            <p>
+                O Reino de Deus não deve ser confundido com um
+                território político ou uma organização humana.
+                Ele expressa o governo soberano de Deus, que se
+                manifesta na história e será plenamente reconhecido
+                na consumação de seu propósito.
+            </p>
+
+            <p>
+                Os ensinamentos de Jesus revelam valores que devem
+                caracterizar a vida daqueles que pertencem ao Reino.
+                Entre eles estão:
+            </p>
+
+            <ul class="lista">
+
+                <li>
+                    <strong>Amor:</strong> Amar a Deus acima de todas
+                    as coisas e ao próximo como a si mesmo
+                    (Mateus 22:37-40).
+                </li>
+
+                <li>
+                    <strong>Justiça:</strong> Buscar uma vida que
+                    corresponda à vontade de Deus
+                    (Mateus 5:6; Mateus 6:33).
+                </li>
+
+                <li>
+                    <strong>Misericórdia:</strong> Demonstrar compaixão
+                    e disposição para perdoar
+                    (Mateus 5:7).
+                </li>
+
+                <li>
+                    <strong>Humildade:</strong> Reconhecer a dependência
+                    de Deus e abandonar a arrogância
+                    (Mateus 5:3; Filipenses 2:3-4).
+                </li>
+
+                <li>
+                    <strong>Verdade:</strong> Rejeitar a falsidade e
+                    viver com sinceridade diante de Deus e das pessoas
+                    (Efésios 4:25).
+                </li>
+
+                <li>
+                    <strong>Serviço:</strong> Colocar os dons e capacidades
+                    a serviço de Deus e do próximo
+                    (Marcos 10:43-45).
+                </li>
+
+                <li>
+                    <strong>Fidelidade:</strong> Permanecer comprometido
+                    com Cristo e seus ensinamentos
+                    (João 14:15).
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <section class="versiculo">
+
+            <p>
+                "Mas buscai primeiro o Reino de Deus, e a sua justiça,
+                e todas estas coisas vos serão acrescentadas."
+            </p>
+
+            <strong>Mateus 6:33</strong>
+
+        </section>
+
+
+        <section class="conteudo">
+
+            <h2>3. Uma Sociedade em Constante Transformação</h2>
+
+            <p>
+                As sociedades humanas passam por transformações
+                ao longo da história. Mudanças econômicas, políticas,
+                científicas e culturais modificam a maneira como
+                as pessoas trabalham, se comunicam, organizam
+                suas famílias e compreendem o mundo.
+            </p>
+
+            <p>
+                Algumas transformações produzem benefícios importantes,
+                como avanços na medicina, na educação, na comunicação
+                e nas condições de vida. Outras podem favorecer
+                comportamentos que entram em conflito com os
+                ensinamentos bíblicos.
+            </p>
+
+            <p>
+                Por isso, o cristão não deve assumir uma postura
+                de aceitação automática de tudo o que surge,
+                mas também não deve rejeitar indiscriminadamente
+                qualquer mudança.
+            </p>
+
+            <p>
+                É necessário desenvolver discernimento. A realidade
+                deve ser examinada com responsabilidade, considerando
+                os conhecimentos disponíveis e, sobretudo, os
+                princípios morais e espirituais revelados nas Escrituras.
+            </p>
+
+            <h3>O perigo de acompanhar tudo sem reflexão</h3>
+
+            <p>
+                Quando uma pessoa aceita qualquer comportamento
+                apenas porque se tornou popular, corre o risco
+                de abandonar convicções importantes.
+            </p>
+
+            <p>
+                A popularidade de uma ideia não é garantia de
+                que ela seja verdadeira ou moralmente correta.
+                O homem cristão precisa avaliar suas escolhas
+                e não permitir que a pressão social substitua
+                sua consciência orientada pela Palavra de Deus.
+            </p>
+
+            <h3>O perigo de rejeitar tudo sem discernimento</h3>
+
+            <p>
+                Também é necessário reconhecer que nem toda mudança
+                social representa uma ameaça à fé cristã. Descobertas
+                científicas, novas ferramentas tecnológicas e
+                transformações positivas nas condições de vida
+                podem contribuir para o bem comum.
+            </p>
+
+            <p>
+                O cristão pode utilizar os recursos e conhecimentos
+                de sua época com responsabilidade, desde que suas
+                escolhas permaneçam coerentes com os princípios
+                do Evangelho.
+            </p>
+
+        </section>
+
+
+        <section class="conteudo">
+
+            <h2>4. A Transformação da Mente e a Fidelidade às Escrituras</h2>
+
+            <p>
+                Em Romanos 12:1-2, o apóstolo Paulo apresenta um
+                importante ensinamento sobre a vida cristã.
+                Ele orienta os irmãos a não se conformarem com
+                os padrões deste mundo, mas a experimentarem
+                a transformação pela renovação da mente.
+            </p>
+
+            <p>
+                Essa transformação está relacionada à maneira
+                como o cristão pensa, interpreta a realidade
+                e toma suas decisões.
+            </p>
+
+            <p>
+                Não se trata de abandonar a sociedade ou viver
+                isolado das pessoas, mas de não permitir que
+                valores contrários à vontade de Deus determinem
+                a conduta do discípulo de Cristo.
+            </p>
+
+            <p>
+                A renovação da mente acontece mediante a ação
+                do Espírito Santo, a compreensão das Escrituras,
+                a comunhão com Deus e a prática da fé.
+            </p>
+
+            <h3>A Bíblia como referência para a vida</h3>
+
+            <p>
+                As Escrituras Sagradas são a referência fundamental
+                para a fé e a conduta cristã. Por meio delas,
+                conhecemos a vontade de Deus e recebemos orientação
+                para viver de maneira responsável.
+            </p>
+
+            <p>
+                Em 2 Timóteo 3:16-17, Paulo ensina que toda a
+                Escritura é inspirada por Deus e útil para o ensino,
+                a repreensão, a correção e a educação na justiça.
+            </p>
+
+            <p>
+                Portanto, o homem cristão precisa desenvolver
+                o hábito de estudar a Bíblia, compreender seus
+                ensinamentos e aplicá-los às situações concretas
+                da vida.
+            </p>
+
+        </section>
+
+
+        <section class="conteudo">
+
+            <h2>5. O Homem Cristão como Sal e Luz do Mundo</h2>
+
+            <p>
+                No Sermão do Monte, Jesus utiliza duas imagens
+                para descrever a influência que seus discípulos
+                devem exercer no mundo: o sal da terra e a luz do mundo
+                (Mateus 5:13-16).
+            </p>
+
+            <p>
+                Essas imagens ensinam que a vida cristã não deve
+                permanecer escondida ou limitada a uma experiência
+                religiosa particular. O discípulo de Cristo deve
+                demonstrar, por suas atitudes, a realidade de sua fé.
+            </p>
+
+            <h3>Ser sal da terra</h3>
+
+            <p>
+                O sal era utilizado na preservação dos alimentos
+                e também como elemento de sabor. Na ilustração
+                de Jesus, ele representa a influência que os
+                discípulos devem exercer no mundo.
+            </p>
+
+            <p>
+                O homem cristão deve contribuir para uma sociedade
+                mais justa e responsável, rejeitando a corrupção,
+                a desonestidade, a violência e a indiferença
+                diante do sofrimento humano.
+            </p>
+
+            <h3>Ser luz do mundo</h3>
+
+            <p>
+                A luz permite enxergar e orienta aqueles que
+                caminham na escuridão. Jesus ensina que as boas
+                obras dos discípulos devem ser vistas pelas pessoas,
+                levando-as a glorificar o Pai celestial.
+            </p>
+
+            <p>
+                O testemunho cristão acontece por meio de atitudes
+                concretas: honestidade, respeito, misericórdia,
+                fidelidade, justiça e amor ao próximo.
+            </p>
+
+            <div class="destaque">
+                <p>
+                    O homem cristão não é chamado a conquistar
+                    reconhecimento pessoal, mas a viver de maneira
+                    que suas atitudes apontem para Deus.
+                    O testemunho deve glorificar o Pai, e não alimentar
+                    a vaidade humana.
+                </p>
+            </div>
+
+        </section>
+
+
+        <section class="conteudo">
+
+            <h2>6. O Homem Cristão diante das Pressões da Sociedade</h2>
+
+            <p>
+                Em diferentes momentos, o homem cristão pode
+                enfrentar pressões para agir contra suas convicções.
+                Essas pressões podem surgir no ambiente profissional,
+                nos relacionamentos, nas amizades, na vida pública
+                e até dentro do próprio círculo familiar.
+            </p>
+
+            <p>
+                Nessas situações, é necessário unir firmeza
+                de convicção, sabedoria e respeito pelas pessoas.
+            </p>
+
+            <h3>Firmeza sem arrogância</h3>
+
+            <p>
+                Permanecer fiel aos princípios bíblicos não
+                significa tratar com desprezo aqueles que pensam
+                de maneira diferente. O cristão deve defender
+                suas convicções com respeito, mansidão e
+                responsabilidade.
+            </p>
+
+            <p>
+                Em 1 Pedro 3:15, encontramos a orientação de
+                apresentar a razão da esperança cristã com
+                mansidão e temor.
+            </p>
+
+            <h3>Coragem sem violência</h3>
+
+            <p>
+                A coragem cristã não deve ser confundida com
+                agressividade. O homem cristão precisa ter
+                disposição para defender o que é correto,
+                mas sem recorrer à violência, à humilhação
+                ou à intimidação.
+            </p>
+
+            <h3>Convicção sem intolerância</h3>
+
+            <p>
+                O cristão deve permanecer fiel à verdade
+                bíblica, reconhecendo a dignidade de todas
+                as pessoas e tratando o próximo com respeito.
+            </p>
+
+            <p>
+                Isso não significa concordar com todas as ideias
+                ou comportamentos, mas compreender que a
+                discordância deve ser conduzida com amor,
+                equilíbrio e responsabilidade.
+            </p>
+
+        </section>
+
+
+        <section class="conteudo">
+
+            <h2>7. Os Valores do Reino nas Diferentes Áreas da Vida</h2>
+
+            <p>
+                Os valores do Reino de Deus precisam orientar
+                a vida do homem cristão em todas as suas dimensões.
+                Não existe separação entre a fé professada
+                e a responsabilidade cotidiana.
+            </p>
+
+            <h3>Na vida pessoal</h3>
+
+            <p>
+                Buscar uma vida de santidade, domínio próprio,
+                humildade, honestidade e comunhão com Deus.
+            </p>
+
+            <h3>No casamento e na família</h3>
+
+            <p>
+                Demonstrar amor, fidelidade, paciência, respeito
+                e responsabilidade. O homem cristão deve compreender
+                que sua família não é um instrumento para satisfazer
+                interesses pessoais, mas uma responsabilidade
+                que exige cuidado e dedicação.
+            </p>
+
+            <h3>Na Igreja</h3>
+
+            <p>
+                Servir aos irmãos, cooperar com a missão da Igreja,
+                respeitar a liderança e contribuir para a edificação
+                da comunidade cristã.
+            </p>
+
+            <h3>No trabalho</h3>
+
+            <p>
+                Exercer suas atividades com competência, honestidade,
+                pontualidade e responsabilidade, compreendendo
+                que o trabalho também pode ser uma expressão
+                de serviço a Deus.
+            </p>
+
+            <h3>Na sociedade</h3>
+
+            <p>
+                Respeitar as pessoas, cumprir suas responsabilidades,
+                promover a justiça, praticar a solidariedade
+                e contribuir para o bem comum.
+            </p>
+
+        </section>
+
+
+        <section class="conteudo">
+
+            <h2>8. Conclusão</h2>
+
+            <p>
+                A sociedade está em constante transformação,
+                mas o homem cristão possui uma referência permanente:
+                a Palavra de Deus.
+            </p>
+
+            <p>
+                Os valores do Reino de Deus devem orientar suas
+                decisões, seus relacionamentos, seu comportamento
+                profissional e sua participação na sociedade.
+            </p>
+
+            <p>
+                Ser fiel a Cristo não significa viver afastado
+                do mundo, mas viver nele com uma identidade
+                transformada pelo Evangelho.
+            </p>
+
+            <p>
+                O homem segundo o coração de Deus é chamado
+                a demonstrar que sua fé é verdadeira por meio
+                de uma vida marcada pelo amor, pela justiça,
+                pela integridade, pela humildade e pelo serviço.
+            </p>
+
+            <p>
+                Em uma sociedade que muda constantemente,
+                o cristão deve permanecer firme em Cristo,
+                buscando a orientação do Espírito Santo
+                e vivendo de acordo com as Escrituras.
+            </p>
+
+        </section>
+
+
+        <section class="versiculo">
+
+            <p>
+                "Jesus Cristo é o mesmo ontem, e hoje, e eternamente."
+            </p>
+
+            <strong>Hebreus 13:8</strong>
+
+        </section>
+
+
+        <section class="reflexao">
+
+            <h2>Para Refletir</h2>
+
+            <p>
+                1. Quais valores da sociedade contemporânea podem
+                entrar em conflito com os ensinamentos das Escrituras?
+            </p>
+
+            <p>
+                2. Como o homem cristão pode permanecer fiel à Bíblia
+                sem tratar com desrespeito aqueles que pensam diferente?
+            </p>
+
+            <p>
+                3. De que maneira você pode demonstrar os valores
+                do Reino de Deus em sua família, no trabalho e na Igreja?
+            </p>
+
+            <p>
+                4. Suas decisões cotidianas são orientadas principalmente
+                pela Palavra de Deus ou pela pressão das pessoas
+                e das circunstâncias?
+            </p>
+
+        </section>
+
+
+        <section class="conteudo">
+
+            <h2>Referências Bíblicas para Estudo</h2>
+
+            <ul class="lista">
+
+                <li>Mateus 5:1-16 — Os valores do Reino e o testemunho dos discípulos.</li>
+
+                <li>Mateus 6:19-34 — Prioridades e confiança em Deus.</li>
+
+                <li>Mateus 22:34-40 — O amor a Deus e ao próximo.</li>
+
+                <li>Marcos 1:14-15 — O anúncio do Reino de Deus.</li>
+
+                <li>Romanos 12:1-2 — A transformação e a renovação da mente.</li>
+
+                <li>Romanos 13:8-10 — O amor como cumprimento da lei.</li>
+
+                <li>2 Timóteo 3:14-17 — A inspiração e a utilidade das Escrituras.</li>
+
+                <li>1 Pedro 2:11-17 — O testemunho cristão na sociedade.</li>
+
+                <li>1 Pedro 3:15-16 — A defesa da esperança cristã com mansidão.</li>
+
+                <li>Hebreus 13:8 — A imutabilidade de Jesus Cristo.</li>
+
+            </ul>
+
+        </section>
+
+
+        <nav class="navegacao">
+
+            <a href="apresentacao.html">
+                ← VOLTAR AO MÓDULO 07
+            </a>
+
+            <a href="tema02.html">
+                PRÓXIMO TEMA →
+            </a>
+
+            <a href="../../../uhbb_psh.html">
+                PÁGINA PRINCIPAL
+            </a>
+
+        </nav>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            <strong>HOMENS SEGUNDO O CORAÇÃO DE DEUS</strong>
+        </p>
+
+        <p>
+            Formando homens, fortalecendo famílias e servindo à Igreja de Cristo.
+        </p>
+
+        <p>
+            Área 01 — Identidade Masculina Cristã | Módulo 07 | Tema 01
+        </p>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Módulo 07 | O Homem Cristão diante dos Desafios Contemporâneos</title>
+
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --marrom: #593B2B;
+            --marrom-escuro: #38271F;
+            --marrom-medio: #76523C;
+            --azul: #18334D;
+            --azul-claro: #294B65;
+            --dourado: #B08A48;
+            --dourado-claro: #D1B477;
+            --pergaminho: #E9DFC9;
+            --creme: #F7F4EC;
+            --texto: #3B332C;
+            --branco: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--creme);
+            color: var(--texto);
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.7;
+        }
+
+        .cabecalho-modulo {
+            background: linear-gradient(135deg, var(--marrom-escuro), var(--azul));
+            color: var(--branco);
+            padding: 65px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--dourado);
+        }
+
+        .cabecalho-modulo .identificacao {
+            font-size: 0.85rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--dourado-claro);
+            margin-bottom: 15px;
+        }
+
+        .cabecalho-modulo h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            max-width: 950px;
+            margin: 0 auto 20px;
+            line-height: 1.3;
+        }
+
+        .cabecalho-modulo p {
+            max-width: 750px;
+            margin: auto;
+            color: #E9DFC9;
+            font-size: 1.05rem;
+        }
+
+        .container {
+            width: min(1100px, 92%);
+            margin: 45px auto;
+        }
+
+        .secao {
+            background: var(--branco);
+            padding: 35px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(56, 39, 31, 0.08);
+            border-left: 5px solid var(--dourado);
+        }
+
+        .secao h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--azul);
+            font-size: 1.55rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .secao h3 {
+            color: var(--marrom);
+            font-family: 'Libre Baskerville', serif;
+        }
+
+        .secao p {
+            text-align: justify;
+        }
+
+        .objetivos {
+            padding-left: 22px;
+        }
+
+        .objetivos li {
+            margin-bottom: 10px;
+        }
+
+        .versiculo {
+            background: var(--azul);
+            color: var(--branco);
+            padding: 30px;
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+
+        .versiculo p {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.2rem;
+            font-style: italic;
+            line-height: 1.8;
+        }
+
+        .versiculo strong {
+            color: var(--dourado-claro);
+            display: block;
+            margin-top: 15px;
+        }
+
+        .grade-temas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 22px;
+            margin-top: 25px;
+        }
+
+        .card-tema {
+            background: var(--creme);
+            border: 1px solid #D8C9AE;
+            border-radius: 12px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card-tema:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(56, 39, 31, 0.12);
+        }
+
+        .numero-tema {
+            color: var(--dourado);
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card-tema h3 {
+            color: var(--azul);
+            font-family: 'Cinzel', serif;
+            font-size: 1.05rem;
+            line-height: 1.5;
+            margin: 0 0 12px;
+        }
+
+        .card-tema p {
+            font-size: 0.92rem;
+            flex-grow: 1;
+            text-align: left;
+        }
+
+        .botao {
+            display: inline-block;
+            background: var(--marrom);
+            color: var(--branco);
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+
+        .botao:hover {
+            background: var(--azul);
+        }
+
+        .botao-avaliacao {
+            background: var(--dourado);
+            color: var(--marrom-escuro);
+            font-size: 1rem;
+            padding: 16px 28px;
+        }
+
+        .botao-avaliacao:hover {
+            background: var(--marrom-escuro);
+            color: var(--branco);
+        }
+
+        .avaliacao {
+            background: linear-gradient(135deg, var(--azul), var(--marrom-escuro));
+            color: var(--branco);
+            padding: 40px 30px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .avaliacao h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--dourado-claro);
+            margin-top: 0;
+        }
+
+        .avaliacao p {
+            max-width: 750px;
+            margin: 15px auto 25px;
+        }
+
+        .referencias {
+            background: var(--pergaminho);
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .referencias h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--marrom-escuro);
+            margin-top: 0;
+        }
+
+        .referencias p {
+            margin-bottom: 0;
+        }
+
+        .navegacao {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 15px;
+            margin: 35px 0;
+        }
+
+        .navegacao a {
+            text-decoration: none;
+            color: var(--branco);
+            background: var(--azul);
+            padding: 13px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .navegacao a:hover {
+            background: var(--marrom);
+        }
+
+        footer {
+            background: var(--marrom-escuro);
+            color: var(--pergaminho);
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 4px solid var(--dourado);
+            font-size: 0.9rem;
+        }
+
+        footer strong {
+            color: var(--dourado-claro);
+        }
+
+        @media (max-width: 600px) {
+            .cabecalho-modulo {
+                padding: 45px 18px;
+            }
+
+            .secao {
+                padding: 24px 20px;
+            }
+
+            .navegacao {
+                flex-direction: column;
+            }
+
+            .navegacao a {
+                width: 100%;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .cabecalho-modulo,
+            .avaliacao,
+            footer {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .botao,
+            .navegacao {
+                display: none;
+            }
+
+            .secao,
+            .card-tema {
+                box-shadow: none;
+                break-inside: avoid;
+            }
+
+            .container {
+                width: 100%;
+                margin: 20px auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="cabecalho-modulo">
+
+        <div class="identificacao">
+            Área 01 — Identidade Masculina Cristã
+        </div>
+
+        <h1>O Homem Cristão diante dos Desafios Contemporâneos</h1>
+
+        <p>
+            Módulo 07 — Vivendo os valores do Reino de Deus em uma sociedade
+            em transformação, com fidelidade às Escrituras e compromisso com Cristo.
+        </p>
+
+    </header>
+
+
+    <main class="container">
+
+        <section class="secao">
+
+            <h2>Apresentação do Módulo</h2>
+
+            <p>
+                O homem cristão vive em uma sociedade marcada por rápidas
+                transformações culturais, sociais, econômicas e tecnológicas.
+                Essas mudanças apresentam oportunidades, mas também desafios
+                que exigem discernimento, maturidade espiritual e firmeza de caráter.
+            </p>
+
+            <p>
+                A fé cristã não deve ser vivida apenas dentro das paredes da
+                igreja. O Evangelho orienta todas as dimensões da existência:
+                a vida pessoal, os relacionamentos, a família, o trabalho,
+                a participação social e o testemunho público.
+            </p>
+
+            <p>
+                Neste módulo, estudaremos como os princípios das Escrituras
+                orientam o homem cristão diante das questões contemporâneas.
+                Nosso propósito não é simplesmente rejeitar ou aceitar
+                indiscriminadamente as transformações da sociedade, mas
+                desenvolver discernimento para avaliar pensamentos,
+                comportamentos e decisões à luz da Palavra de Deus.
+            </p>
+
+            <p>
+                O homem segundo o coração de Deus é chamado a viver com
+                fidelidade a Cristo, demonstrando amor, responsabilidade,
+                honestidade, respeito, coragem e compromisso com o próximo.
+            </p>
+
+        </section>
+
+
+        <section class="secao">
+
+            <h2>Objetivos de Aprendizagem</h2>
+
+            <p>Ao concluir este módulo, o participante deverá ser capaz de:</p>
+
+            <ul class="objetivos">
+
+                <li>
+                    Compreender a importância dos valores do Reino de Deus
+                    diante das transformações da sociedade.
+                </li>
+
+                <li>
+                    Reconhecer a importância da ética cristã na tomada
+                    de decisões pessoais, familiares e profissionais.
+                </li>
+
+                <li>
+                    Desenvolver discernimento bíblico diante das influências
+                    da cultura contemporânea.
+                </li>
+
+                <li>
+                    Compreender os princípios bíblicos relacionados à
+                    sexualidade, ao casamento e à família.
+                </li>
+
+                <li>
+                    Reconhecer o trabalho, os recursos financeiros e a
+                    responsabilidade social como dimensões da mordomia cristã.
+                </li>
+
+                <li>
+                    Fortalecer o testemunho cristão e a perseverança na fé
+                    em diferentes ambientes da sociedade.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <section class="versiculo">
+
+            <p>
+                "E não vos conformeis com este mundo, mas transformai-vos
+                pela renovação do vosso entendimento, para que experimenteis
+                qual seja a boa, agradável e perfeita vontade de Deus."
+            </p>
+
+            <strong>Romanos 12:2</strong>
+
+        </section>
+
+
+        <section class="secao">
+
+            <h2>Conteúdo Programático</h2>
+
+            <p>
+                O módulo está organizado em seis temas de estudo.
+                Cada tema apresenta fundamentos bíblicos, reflexões
+                teológicas e aplicações práticas para a vida do homem cristão.
+            </p>
+
+
+            <div class="grade-temas">
+
+
+                <article class="card-tema">
+
+                    <div class="numero-tema">01</div>
+
+                    <h3>
+                        Os Valores do Reino de Deus em uma Sociedade em Transformação
+                    </h3>
+
+                    <p>
+                        Estudo dos princípios do Reino de Deus e sua importância
+                        para orientar a conduta cristã diante das mudanças
+                        culturais e sociais.
+                    </p>
+
+                    <a href="tema01.html" class="botao">
+                        ESTUDAR TEMA 01
+                    </a>
+
+                </article>
+
+
+                <article class="card-tema">
+
+                    <div class="numero-tema">02</div>
+
+                    <h3>
+                        Ética Cristã e Tomada de Decisões
+                    </h3>
+
+                    <p>
+                        A consciência cristã, a integridade moral e a
+                        responsabilidade de tomar decisões orientadas
+                        pelos ensinamentos das Escrituras.
+                    </p>
+
+                    <a href="tema02.html" class="botao">
+                        ESTUDAR TEMA 02
+                    </a>
+
+                </article>
+
+
+                <article class="card-tema">
+
+                    <div class="numero-tema">03</div>
+
+                    <h3>
+                        O Homem Cristão e os Desafios da Cultura Contemporânea
+                    </h3>
+
+                    <p>
+                        Reflexão sobre o relativismo, o materialismo,
+                        o consumismo e outras influências culturais,
+                        desenvolvendo discernimento fundamentado na Bíblia.
+                    </p>
+
+                    <a href="tema03.html" class="botao">
+                        ESTUDAR TEMA 03
+                    </a>
+
+                </article>
+
+
+                <article class="card-tema">
+
+                    <div class="numero-tema">04</div>
+
+                    <h3>
+                        Sexualidade, Casamento e Família à Luz das Escrituras
+                    </h3>
+
+                    <p>
+                        Estudo dos princípios bíblicos relacionados à
+                        sexualidade, à fidelidade conjugal, ao casamento
+                        e à responsabilidade familiar.
+                    </p>
+
+                    <a href="tema04.html" class="botao">
+                        ESTUDAR TEMA 04
+                    </a>
+
+                </article>
+
+
+                <article class="card-tema">
+
+                    <div class="numero-tema">05</div>
+
+                    <h3>
+                        Trabalho, Finanças e Responsabilidade Social
+                    </h3>
+
+                    <p>
+                        O trabalho como vocação, a administração responsável
+                        dos recursos, a honestidade e o compromisso cristão
+                        com o bem-estar do próximo.
+                    </p>
+
+                    <a href="tema05.html" class="botao">
+                        ESTUDAR TEMA 05
+                    </a>
+
+                </article>
+
+
+                <article class="card-tema">
+
+                    <div class="numero-tema">06</div>
+
+                    <h3>
+                        Testemunho Cristão e Perseverança na Fé
+                    </h3>
+
+                    <p>
+                        A importância de viver e anunciar o Evangelho com
+                        coragem, equilíbrio, amor e fidelidade a Jesus Cristo,
+                        mesmo diante das adversidades.
+                    </p>
+
+                    <a href="tema06.html" class="botao">
+                        ESTUDAR TEMA 06
+                    </a>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <section class="secao">
+
+            <h2>Fundamentação Bíblica</h2>
+
+            <p>
+                O estudo deste módulo está fundamentado nas Escrituras
+                Sagradas, que orientam o cristão em sua relação com Deus,
+                com a família, com a Igreja e com a sociedade.
+            </p>
+
+            <div class="referencias">
+
+                <h3>Textos bíblicos fundamentais</h3>
+
+                <p>
+                    Gênesis 1:26-28; Deuteronômio 6:4-9; Salmos 1:1-3;
+                    Mateus 5:13-16; Mateus 6:19-34; Mateus 22:34-40;
+                    João 17:14-18; Romanos 12:1-2; Romanos 13:1-10;
+                    1 Coríntios 6:12-20; 1 Coríntios 10:31-33;
+                    Gálatas 5:13-26; Efésios 5:15-33; Efésios 6:10-18;
+                    Filipenses 2:14-16; Colossenses 3:12-24;
+                    1 Timóteo 6:6-10; 1 Pedro 2:11-17.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="secao">
+
+            <h2>Aplicação à Vida do Homem Cristão</h2>
+
+            <p>
+                O conhecimento bíblico precisa produzir transformação
+                na maneira como vivemos. Por isso, os ensinamentos
+                deste módulo devem ser aplicados às diferentes áreas
+                da vida cotidiana.
+            </p>
+
+            <h3>Na vida pessoal</h3>
+
+            <p>
+                Desenvolver discernimento, domínio próprio, responsabilidade
+                e fidelidade aos princípios do Evangelho.
+            </p>
+
+            <h3>Na família</h3>
+
+            <p>
+                Cultivar relacionamentos fundamentados no amor, no respeito,
+                na fidelidade, no cuidado e na responsabilidade.
+            </p>
+
+            <h3>Na Igreja</h3>
+
+            <p>
+                Participar ativamente da comunidade cristã, cooperando
+                com a missão da Igreja e servindo aos irmãos.
+            </p>
+
+            <h3>No trabalho e na sociedade</h3>
+
+            <p>
+                Agir com honestidade, justiça, responsabilidade e respeito,
+                demonstrando por meio das atitudes a transformação produzida
+                pelo Evangelho.
+            </p>
+
+        </section>
+
+
+        <section class="avaliacao">
+
+            <h2>Avaliação do Módulo 07</h2>
+
+            <p>
+                Após estudar os seis temas, realize a avaliação para
+                verificar sua compreensão dos conteúdos apresentados.
+                O questionário contempla os fundamentos bíblicos e as
+                aplicações práticas desenvolvidas neste módulo.
+            </p>
+
+            <a href="../../../questionarios/identidade_masculina/avaliacao_modulo07.html"
+               class="botao botao-avaliacao">
+
+                REALIZAR AVALIAÇÃO DO MÓDULO 07
+
+            </a>
+
+        </section>
+
+
+        <nav class="navegacao">
+
+            <a href="../identidade_masculina.html">
+                ← VOLTAR À ÁREA 01
+            </a>
+            <a href="../../../questionarios/identidade_masculina/avaliacao_modulo07.html">
+                REALIZAR AVALIAÇÃO DO MÓDULO 07
+            </a>
+            <a href="../../../uhbb_psh.html">
+                PÁGINA PRINCIPAL
+            </a>
+
+        </nav>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            <strong>HOMENS SEGUNDO O CORAÇÃO DE DEUS</strong>
+        </p>
+
+        <p>
+            Formando homens, fortalecendo famílias e servindo à Igreja de Cristo.
+        </p>
+
+        <p>
+            Área 01 — Identidade Masculina Cristã | Módulo 07
+        </p>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tema 06 | Testemunho Cristão e Perseverança na Fé</title>
+
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --marrom: #593B2B;
+            --marrom-escuro: #38271F;
+            --marrom-medio: #76523C;
+            --azul: #18334D;
+            --azul-claro: #294B65;
+            --dourado: #B08A48;
+            --dourado-claro: #D1B477;
+            --pergaminho: #E9DFC9;
+            --creme: #F7F4EC;
+            --texto: #332A24;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--creme);
+            color: var(--texto);
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.8;
+        }
+
+        .topo {
+            background: linear-gradient(135deg, var(--marrom-escuro), var(--azul));
+            color: white;
+            padding: 55px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--dourado);
+        }
+
+        .identificacao {
+            color: var(--dourado-claro);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .topo h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.7rem, 4vw, 2.7rem);
+            max-width: 950px;
+            margin: 20px auto;
+            line-height: 1.35;
+        }
+
+        .topo p {
+            max-width: 750px;
+            margin: auto;
+            color: #eee5d6;
+        }
+
+        .container {
+            width: min(1050px, 92%);
+            margin: 40px auto;
+        }
+
+        .conteudo {
+            background: white;
+            padding: clamp(22px, 5vw, 48px);
+            border-radius: 12px;
+            box-shadow: 0 5px 22px rgba(56, 39, 31, 0.08);
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--marrom);
+            font-size: 1.45rem;
+            margin-top: 42px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--pergaminho);
+        }
+
+        h3 {
+            color: var(--azul);
+            font-size: 1.12rem;
+            margin-top: 28px;
+        }
+
+        p {
+            margin: 15px 0;
+        }
+
+        .introducao {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.08rem;
+            line-height: 1.9;
+            color: var(--marrom-escuro);
+        }
+
+        .versiculo {
+            background: var(--pergaminho);
+            border-left: 5px solid var(--dourado);
+            padding: 24px;
+            margin: 30px 0;
+            border-radius: 6px;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.05rem;
+        }
+
+        .versiculo strong {
+            display: block;
+            margin-top: 12px;
+            color: var(--marrom);
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .destaque {
+            background: #f3eee5;
+            border-left: 5px solid var(--azul-claro);
+            padding: 20px 24px;
+            margin: 25px 0;
+            border-radius: 6px;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .aplicacao {
+            background: #f8f6f0;
+            padding: 20px 24px;
+            border-radius: 8px;
+            margin: 18px 0;
+            border: 1px solid #e8dfd1;
+        }
+
+        .reflexao {
+            background: linear-gradient(135deg, var(--azul), var(--marrom-escuro));
+            color: white;
+            padding: 28px;
+            border-radius: 10px;
+            margin-top: 35px;
+        }
+
+        .reflexao h2 {
+            color: var(--dourado-claro);
+            border-bottom-color: rgba(255,255,255,0.2);
+            margin-top: 0;
+        }
+
+        .reflexao p {
+            color: #f1e9dc;
+        }
+
+        .navegacao {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 35px 0;
+        }
+
+        .botao {
+            display: inline-block;
+            padding: 13px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .botao-principal {
+            background: var(--marrom);
+            color: white;
+        }
+
+        .botao-secundario {
+            background: var(--azul);
+            color: white;
+        }
+
+        .botao:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        .rodape {
+            background: var(--marrom-escuro);
+            color: #e9dfd0;
+            text-align: center;
+            padding: 28px 15px;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 650px) {
+            .navegacao {
+                flex-direction: column;
+            }
+
+            .botao {
+                width: 100%;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .topo {
+                background: white !important;
+                color: black;
+                border-bottom: 2px solid #777;
+            }
+
+            .topo p,
+            .identificacao {
+                color: #333;
+            }
+
+            .conteudo {
+                box-shadow: none;
+                padding: 0;
+            }
+
+            .navegacao,
+            .rodape {
+                display: none;
+            }
+
+            .reflexao {
+                background: white !important;
+                color: black;
+                border: 1px solid #777;
+            }
+
+            .reflexao h2,
+            .reflexao p {
+                color: black;
+            }
+
+            h2, h3 {
+                break-after: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="topo">
+    <div class="identificacao">
+        Área 01 — Identidade Masculina Cristã | Módulo 07
+    </div>
+
+    <h1>Testemunho Cristão e Perseverança na Fé</h1>
+
+    <p>
+        Vivendo de maneira coerente com o Evangelho, permanecendo fiel
+        a Cristo e testemunhando sua graça em todas as circunstâncias.
+    </p>
+</header>
+
+<main class="container">
+    <article class="conteudo">
+
+        <p class="introducao">
+            A vida cristã não consiste apenas em professar uma fé,
+            conhecer ensinamentos bíblicos ou participar de atividades
+            religiosas. O Evangelho transforma a maneira como pensamos,
+            decidimos, trabalhamos e nos relacionamos. O homem segundo
+            o coração de Deus é chamado a testemunhar sua fé por meio
+            de uma vida coerente com os ensinamentos de Jesus Cristo,
+            permanecendo fiel ao Senhor mesmo diante das dificuldades.
+        </p>
+
+        <div class="versiculo">
+            "Somente deveis portar-vos dignamente conforme o evangelho
+            de Cristo, para que, quer vá e vos veja, quer esteja ausente,
+            ouça acerca de vós que estais num mesmo espírito,
+            combatendo juntamente com o mesmo ânimo pela fé do evangelho."
+            <strong>Filipenses 1:27</strong>
+        </div>
+
+        <h2>1. O que significa testemunhar a fé cristã?</h2>
+
+        <p>
+            Testemunhar significa apresentar evidências de uma realidade
+            que conhecemos e vivemos. No contexto cristão, o testemunho
+            envolve anunciar o Evangelho e demonstrar, por meio da conduta,
+            os efeitos da fé em Jesus Cristo.
+        </p>
+
+        <p>
+            O testemunho cristão não deve ser confundido com uma tentativa
+            de aparentar perfeição. Todos os cristãos continuam sujeitos
+            a limitações, fraquezas e erros. A diferença está na disposição
+            de reconhecer os próprios pecados, buscar o perdão de Deus
+            e permitir que a Palavra oriente sua transformação.
+        </p>
+
+        <p>
+            Em Mateus 5:13-16, Jesus compara seus discípulos ao sal da terra
+            e à luz do mundo. A imagem ensina que a presença dos cristãos
+            deve produzir influência positiva e apontar para a glória
+            do Pai celestial.
+        </p>
+
+        <h3>O testemunho cristão envolve:</h3>
+
+        <ul>
+            <li>Confessar publicamente a fé em Jesus Cristo.</li>
+            <li>Conhecer e comunicar a mensagem do Evangelho.</li>
+            <li>Demonstrar amor, justiça, misericórdia e integridade.</li>
+            <li>Manter coerência entre palavras e atitudes.</li>
+            <li>Tratar as pessoas com dignidade e respeito.</li>
+            <li>Reconhecer erros e demonstrar disposição para mudar.</li>
+            <li>Apontar para Cristo, e não para a própria reputação.</li>
+        </ul>
+
+        <div class="destaque">
+            <strong>Princípio fundamental:</strong>
+            o testemunho cristão não é uma apresentação de superioridade
+            moral. É a demonstração de uma vida alcançada pela graça
+            de Deus e comprometida com os ensinamentos de Cristo.
+        </div>
+
+        <h2>2. A coerência entre fé e comportamento</h2>
+
+        <p>
+            Uma das maiores responsabilidades do cristão é viver de maneira
+            coerente com aquilo que afirma crer. A fé professada deve
+            influenciar as decisões pessoais, os relacionamentos,
+            a vida profissional e a participação na sociedade.
+        </p>
+
+        <p>
+            Em Tiago 2:14-17, encontramos o ensino de que a fé verdadeira
+            não pode permanecer apenas no discurso. Tiago utiliza o exemplo
+            de alguém que encontra uma pessoa necessitada e oferece
+            somente palavras, sem qualquer atitude concreta de ajuda.
+        </p>
+
+        <p>
+            O texto não ensina que as obras compram a salvação. A salvação
+            é pela graça de Deus, mediante a fé em Jesus Cristo
+            (Efésios 2:8-10). As boas obras são consequência da fé
+            e evidência de uma vida transformada.
+        </p>
+
+        <h3>Áreas em que a coerência cristã deve aparecer</h3>
+
+        <ul>
+            <li>
+                <strong>Vida pessoal:</strong> honestidade, domínio próprio
+                e responsabilidade.
+            </li>
+
+            <li>
+                <strong>Família:</strong> amor, respeito, fidelidade
+                e cuidado.
+            </li>
+
+            <li>
+                <strong>Trabalho:</strong> dedicação, justiça e integridade.
+            </li>
+
+            <li>
+                <strong>Igreja:</strong> comunhão, serviço, humildade
+                e compromisso.
+            </li>
+
+            <li>
+                <strong>Sociedade:</strong> respeito, solidariedade,
+                responsabilidade e justiça.
+            </li>
+        </ul>
+
+        <div class="versiculo">
+            "Assim resplandeça a vossa luz diante dos homens,
+            para que vejam as vossas boas obras e glorifiquem
+            a vosso Pai, que está nos céus."
+            <strong>Mateus 5:16</strong>
+        </div>
+
+        <h2>3. O testemunho cristão dentro da família</h2>
+
+        <p>
+            A família é um dos primeiros ambientes em que o testemunho
+            cristão pode ser observado. É relativamente fácil apresentar
+            uma imagem de espiritualidade diante de pessoas que nos conhecem
+            superficialmente. Entretanto, o comportamento dentro de casa
+            revela muito sobre nosso caráter.
+        </p>
+
+        <p>
+            O homem cristão deve procurar demonstrar os valores do Evangelho
+            no relacionamento com a esposa, os filhos, os pais e os demais
+            familiares.
+        </p>
+
+        <p>
+            Isso envolve disposição para ouvir, paciência diante dos conflitos,
+            respeito pelas diferenças, compromisso com a verdade e capacidade
+            de reconhecer quando erra.
+        </p>
+
+        <p>
+            A espiritualidade familiar não deve ser construída pelo medo
+            ou pela imposição religiosa. Deve ser cultivada por meio
+            do exemplo, do diálogo, da oração, do ensino das Escrituras
+            e de relacionamentos marcados pelo amor.
+        </p>
+
+        <h2>4. O testemunho cristão na Igreja e na sociedade</h2>
+
+        <p>
+            A Igreja é uma comunidade de pessoas que foram chamadas
+            para viver em comunhão e servir umas às outras. O testemunho
+            cristão também se manifesta na maneira como os homens participam
+            da vida comunitária.
+        </p>
+
+        <p>
+            O homem cristão não deve buscar reconhecimento pessoal,
+            prestígio ou posições de destaque como finalidade de seu serviço.
+            Sua participação deve ser orientada pelo amor a Cristo
+            e pelo compromisso com o bem da comunidade.
+        </p>
+
+        <p>
+            Na sociedade, o cristão é chamado a agir com responsabilidade,
+            respeitar a dignidade humana, defender a justiça e contribuir
+            para o bem comum.
+        </p>
+
+        <p>
+            Em 1 Pedro 2:12, os cristãos são orientados a manter uma conduta
+            exemplar entre aqueles que ainda não compartilham sua fé.
+            O comportamento cristão pode contribuir para que outras pessoas
+            reconheçam a bondade de Deus.
+        </p>
+
+        <h2>5. A coragem de permanecer fiel em uma sociedade contrária à fé</h2>
+
+        <p>
+            Nem sempre viver de acordo com os princípios bíblicos será
+            fácil. O homem cristão pode enfrentar pressões profissionais,
+            familiares, culturais e sociais para abandonar suas convicções.
+        </p>
+
+        <p>
+            Em determinadas situações, agir corretamente pode significar
+            recusar uma vantagem desonesta, defender alguém injustiçado,
+            permanecer fiel aos compromissos assumidos ou não participar
+            de práticas incompatíveis com a fé.
+        </p>
+
+        <p>
+            A Bíblia apresenta exemplos de homens que enfrentaram
+            circunstâncias difíceis sem abandonar sua confiança em Deus.
+        </p>
+
+        <h3>Daniel: fidelidade em uma cultura diferente</h3>
+
+        <p>
+            Daniel foi levado para a Babilônia, onde passou a viver
+            em um ambiente cultural diferente daquele em que havia sido
+            formado. Mesmo diante das pressões da corte, decidiu permanecer
+            fiel aos princípios que reconhecia diante de Deus.
+        </p>
+
+        <p>
+            Em Daniel 1:8, encontramos sua decisão de não se contaminar
+            com os alimentos e o vinho do rei. Posteriormente, em Daniel 6,
+            sua fidelidade a Deus também se manifesta quando enfrenta
+            uma ordem que proibia a prática de sua devoção.
+        </p>
+
+        <p>
+            Daniel demonstra que é possível viver em uma sociedade
+            diferente, participar de responsabilidades públicas
+            e preservar convicções espirituais.
+        </p>
+
+        <h3>José: integridade diante da tentação</h3>
+
+        <p>
+            Em Gênesis 39, José enfrenta uma situação em que poderia
+            comprometer seus princípios morais. Mesmo diante da pressão,
+            decide não praticar aquilo que considerava pecado contra Deus.
+        </p>
+
+        <p>
+            Sua história mostra que a integridade não depende da vigilância
+            constante de outras pessoas. O caráter também se manifesta
+            nas decisões tomadas quando ninguém está observando.
+        </p>
+
+        <div class="destaque">
+            A fidelidade cristã exige convicção, coragem e discernimento.
+            Não significa agir com arrogância, hostilidade ou violência,
+            mas permanecer comprometido com a verdade e com o amor de Cristo.
+        </div>
+
+        <h2>6. As dificuldades e provações da vida cristã</h2>
+
+        <p>
+            A vida cristã não é uma promessa de ausência de sofrimento.
+            As Escrituras reconhecem que os discípulos de Jesus enfrentam
+            enfermidades, perdas, injustiças, perseguições, frustrações
+            e diferentes tipos de provação.
+        </p>
+
+        <p>
+            Em João 16:33, Jesus declara aos discípulos que eles enfrentariam
+            aflições no mundo, mas deveriam ter bom ânimo, porque ele
+            venceu o mundo.
+        </p>
+
+        <p>
+            A perseverança cristã não significa negar a dor ou fingir
+            que os problemas não existem. Significa continuar confiando
+            em Deus mesmo quando as circunstâncias são difíceis.
+        </p>
+
+        <p>
+            O cristão pode sentir tristeza, medo, cansaço e desânimo.
+            Reconhecer essas experiências não representa necessariamente
+            falta de fé. Em momentos assim, buscar apoio espiritual,
+            familiar, comunitário e profissional pode ser uma atitude
+            de sabedoria.
+        </p>
+
+        <h2>7. O significado da perseverança na fé</h2>
+
+        <p>
+            Perseverar significa permanecer firme e continuar caminhando
+            apesar das dificuldades. Na vida cristã, a perseverança
+            está relacionada à confiança em Deus, à fidelidade a Cristo
+            e à continuidade da caminhada de fé.
+        </p>
+
+        <p>
+            Em Hebreus 12:1-3, o autor utiliza a figura de uma corrida
+            para ensinar os cristãos a deixarem aquilo que os impede
+            de avançar e correrem com perseverança, olhando firmemente
+            para Jesus.
+        </p>
+
+        <p>
+            A perseverança não deve ser confundida com autossuficiência.
+            O cristão não permanece fiel apenas pela força de sua vontade.
+            Ele depende da graça, da Palavra e da ação sustentadora de Deus.
+        </p>
+
+        <h3>Elementos importantes para perseverar na fé</h3>
+
+        <ul>
+            <li>
+                <strong>Confiança em Deus:</strong> permanecer dependente
+                do Senhor em todas as circunstâncias.
+            </li>
+
+            <li>
+                <strong>Conhecimento das Escrituras:</strong> alimentar
+                a fé por meio do estudo da Palavra.
+            </li>
+
+            <li>
+                <strong>Oração:</strong> cultivar comunhão com Deus
+                e apresentar a ele preocupações e necessidades.
+            </li>
+
+            <li>
+                <strong>Comunhão cristã:</strong> caminhar com outros
+                irmãos, oferecendo e recebendo encorajamento.
+            </li>
+
+            <li>
+                <strong>Obediência:</strong> procurar viver de acordo
+                com os ensinamentos de Cristo.
+            </li>
+
+            <li>
+                <strong>Esperança:</strong> lembrar das promessas de Deus
+                e da esperança da vida eterna.
+            </li>
+        </ul>
+
+        <div class="versiculo">
+            "Mas aquele que perseverar até ao fim será salvo."
+            <strong>Mateus 24:13</strong>
+        </div>
+
+        <p>
+            Essa declaração de Jesus aparece no contexto de seus ensinamentos
+            sobre perseguição, tribulação e perseverança dos discípulos.
+            Ela não deve ser interpretada como se a salvação pudesse
+            ser conquistada por esforço humano. A perseverança é uma
+            característica da caminhada daqueles que pertencem a Cristo.
+        </p>
+
+        <h2>8. A importância da comunhão e do encorajamento</h2>
+
+        <p>
+            A caminhada cristã não foi planejada para ser vivida em isolamento.
+            Deus reúne seu povo em comunidade, onde os cristãos podem
+            compartilhar experiências, servir uns aos outros e fortalecer
+            sua fé.
+        </p>
+
+        <p>
+            Hebreus 10:24-25 destaca a importância de estimularmos uns
+            aos outros ao amor e às boas obras, sem abandonarmos
+            a congregação.
+        </p>
+
+        <p>
+            O homem cristão precisa compreender que maturidade não significa
+            nunca precisar de ajuda. Em determinados momentos, ele também
+            precisará de aconselhamento, oração, encorajamento e apoio.
+        </p>
+
+        <p>
+            Participar da Igreja, desenvolver amizades cristãs saudáveis
+            e cultivar relacionamentos de confiança são atitudes que
+            contribuem para uma caminhada espiritual mais firme.
+        </p>
+
+        <h2>9. O testemunho cristão diante das novas gerações</h2>
+
+        <p>
+            Uma das formas mais importantes de testemunhar a fé é transmitir
+            às novas gerações os valores do Evangelho.
+        </p>
+
+        <p>
+            Crianças, adolescentes e jovens observam os adultos e aprendem
+            não apenas por aquilo que ouvem, mas também pelo comportamento
+            que presenciam.
+        </p>
+
+        <p>
+            O homem cristão pode influenciar positivamente as novas gerações
+            por meio da convivência familiar, do discipulado, do serviço
+            na Igreja e da participação em projetos de formação cristã.
+        </p>
+
+        <p>
+            Em 2 Timóteo 2:2, Paulo orienta Timóteo a transmitir os ensinamentos
+            recebidos a pessoas fiéis e capacitadas para ensinar outras.
+            Esse princípio demonstra a importância da continuidade
+            na transmissão da fé.
+        </p>
+
+        <h3>Como transmitir um testemunho duradouro?</h3>
+
+        <ul>
+            <li>Ensinar as Escrituras com fidelidade.</li>
+            <li>Demonstrar coerência entre discurso e comportamento.</li>
+            <li>Valorizar a família e a comunhão cristã.</li>
+            <li>Incentivar a participação dos jovens na Igreja.</li>
+            <li>Compartilhar experiências sem esconder as próprias limitações.</li>
+            <li>Ensinar que a verdadeira grandeza está no serviço a Deus e ao próximo.</li>
+        </ul>
+
+        <h2>10. Aplicações práticas para o homem cristão</h2>
+
+        <div class="aplicacao">
+            <h3>Na vida pessoal</h3>
+            <p>
+                Cultivar integridade, domínio próprio, humildade e fidelidade
+                aos ensinamentos de Cristo, inclusive nas decisões tomadas
+                longe dos olhares de outras pessoas.
+            </p>
+        </div>
+
+        <div class="aplicacao">
+            <h3>Na família</h3>
+            <p>
+                Ser exemplo de amor, responsabilidade, perdão e compromisso,
+                reconhecendo que o testemunho começa também dentro de casa.
+            </p>
+        </div>
+
+        <div class="aplicacao">
+            <h3>Na Igreja</h3>
+            <p>
+                Participar da comunhão, servir com humildade, encorajar
+                outros irmãos e contribuir para a edificação da comunidade.
+            </p>
+        </div>
+
+        <div class="aplicacao">
+            <h3>No trabalho</h3>
+            <p>
+                Permanecer honesto e responsável, recusando práticas
+                incompatíveis com a fé, mesmo quando isso representa
+                dificuldades ou renúncias.
+            </p>
+        </div>
+
+        <div class="aplicacao">
+            <h3>Na sociedade</h3>
+            <p>
+                Demonstrar respeito, justiça, solidariedade e coragem moral,
+                sendo uma presença positiva e um testemunho dos valores
+                do Reino de Deus.
+            </p>
+        </div>
+
+        <h2>11. Conclusão</h2>
+
+        <p>
+            O testemunho cristão é uma expressão visível da fé em Jesus Cristo.
+            Ele aparece nas palavras, nas decisões, nos relacionamentos
+            e na maneira como enfrentamos os desafios da vida.
+        </p>
+
+        <p>
+            O homem segundo o coração de Deus não é aquele que nunca enfrenta
+            dificuldades, mas aquele que procura permanecer fiel ao Senhor,
+            reconhecendo sua dependência da graça divina.
+        </p>
+
+        <p>
+            A perseverança não nasce da confiança exagerada em nossas próprias
+            capacidades. Ela está fundamentada em Cristo, que sustenta
+            seus discípulos e lhes oferece esperança.
+        </p>
+
+        <p>
+            Ao concluir este módulo, compreendemos que a identidade masculina
+            cristã deve ser demonstrada em uma vida de caráter, responsabilidade,
+            amor, serviço e fidelidade ao Evangelho.
+        </p>
+
+        <div class="versiculo">
+            "Combati o bom combate, acabei a carreira, guardei a fé."
+            <strong>2 Timóteo 4:7</strong>
+        </div>
+
+        <section class="reflexao">
+            <h2>Para refletir</h2>
+
+            <p>
+                1. Qual é a diferença entre professar a fé cristã
+                e demonstrá-la por meio do comportamento?
+            </p>
+
+            <p>
+                2. Por que o testemunho dentro da família é tão importante
+                quanto o testemunho público?
+            </p>
+
+            <p>
+                3. O que podemos aprender com a fidelidade de Daniel
+                e a integridade de José?
+            </p>
+
+            <p>
+                4. Como um homem cristão pode permanecer firme na fé
+                quando enfrenta dificuldades e pressões sociais?
+            </p>
+
+            <p>
+                5. Por que a comunhão com outros cristãos contribui
+                para a perseverança espiritual?
+            </p>
+
+            <p>
+                6. Que tipo de legado espiritual um homem cristão
+                pode transmitir às próximas gerações?
+            </p>
+
+            <p>
+                <strong>Desafio pessoal:</strong> examine sua caminhada
+                cristã e identifique uma área em que precisa demonstrar
+                maior coerência entre aquilo que acredita e aquilo que pratica.
+                Estabeleça uma atitude concreta para fortalecer seu testemunho
+                e sua fidelidade a Cristo.
+            </p>
+        </section>
+
+        <h2>Referências bíblicas para aprofundamento</h2>
+
+        <ul>
+            <li>Daniel 1 — A fidelidade de Daniel em Babilônia.</li>
+            <li>Daniel 6 — A perseverança de Daniel na oração.</li>
+            <li>Gênesis 39 — A integridade de José.</li>
+            <li>Mateus 5:13-16 — Sal da terra e luz do mundo.</li>
+            <li>Mateus 24:9-13 — Perseverança em meio às dificuldades.</li>
+            <li>João 16:33 — A vitória de Cristo sobre o mundo.</li>
+            <li>Atos 1:8 — O testemunho dos discípulos.</li>
+            <li>Romanos 12:1-2 — Transformação e renovação da mente.</li>
+            <li>Efésios 2:8-10 — Salvação pela graça e boas obras.</li>
+            <li>Filipenses 1:27 — Conduta digna do Evangelho.</li>
+            <li>Colossenses 3:12-17 — Características da vida cristã.</li>
+            <li>1 Pedro 2:9-12 — O testemunho do povo de Deus.</li>
+            <li>Hebreus 10:19-25 — Perseverança e comunhão cristã.</li>
+            <li>Hebreus 12:1-3 — Correndo com perseverança.</li>
+            <li>Tiago 2:14-17 — A fé demonstrada por obras.</li>
+            <li>2 Timóteo 2:1-2 — Transmissão da fé às próximas gerações.</li>
+            <li>2 Timóteo 4:6-8 — A fidelidade até o fim.</li>
+        </ul>
+
+        <div class="navegacao">
+            <a href="tema05.html" class="botao botao-secundario">
+                ← Tema Anterior
+            </a>
+
+            <a href="apresentacao.html" class="botao botao-principal">
+                Apresentação do Módulo
+            </a>
+
+            <a href="../identidade_masculina.html" class="botao botao-secundario">
+                Concluir Área 01 →
+            </a>
+        </div>
+
+    </article>
+</main>
+
+<footer class="rodape">
+    <p>HOMENS SEGUNDO O CORAÇÃO DE DEUS</p>
+
+    <p>
+        Formando homens, fortalecendo famílias e servindo à Igreja de Cristo.
+    </p>
+
+    <p>
+        Área 01 — Identidade Masculina Cristã | Módulo 07
+    </p>
+</footer>
+
+</body>
+</html>

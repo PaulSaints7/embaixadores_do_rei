@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tema 03 | O Homem Cristão e os Desafios da Cultura Contemporânea</title>
+
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --marrom: #593B2B;
+            --marrom-escuro: #38271F;
+            --marrom-medio: #76523C;
+            --azul: #18334D;
+            --azul-claro: #294B65;
+            --dourado: #B08A48;
+            --dourado-claro: #D1B477;
+            --pergaminho: #E9DFC9;
+            --creme: #F7F4EC;
+            --texto: #3B332C;
+            --branco: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--creme);
+            color: var(--texto);
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.8;
+        }
+
+        .cabecalho {
+            background: linear-gradient(135deg, var(--marrom-escuro), var(--azul));
+            color: var(--branco);
+            text-align: center;
+            padding: 55px 20px;
+            border-bottom: 5px solid var(--dourado);
+        }
+
+        .cabecalho .identificacao {
+            color: var(--dourado-claro);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.82rem;
+            margin-bottom: 15px;
+        }
+
+        .cabecalho h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.7rem, 4vw, 2.5rem);
+            max-width: 950px;
+            margin: 0 auto 15px;
+            line-height: 1.4;
+        }
+
+        .cabecalho p {
+            color: var(--pergaminho);
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .container {
+            width: min(1000px, 92%);
+            margin: 40px auto;
+        }
+
+        .conteudo {
+            background: var(--branco);
+            padding: 35px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            border-left: 5px solid var(--dourado);
+            box-shadow: 0 4px 15px rgba(56, 39, 31, 0.07);
+        }
+
+        .conteudo h2 {
+            color: var(--azul);
+            font-family: 'Cinzel', serif;
+            font-size: 1.45rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .conteudo h3 {
+            color: var(--marrom);
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.12rem;
+            margin-top: 28px;
+        }
+
+        .conteudo p {
+            text-align: justify;
+            margin-bottom: 16px;
+        }
+
+        .destaque {
+            background: var(--pergaminho);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 25px 0;
+            border-left: 4px solid var(--dourado);
+        }
+
+        .destaque p {
+            margin-bottom: 0;
+        }
+
+        .versiculo {
+            background: var(--azul);
+            color: var(--branco);
+            padding: 30px;
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        .versiculo p {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.15rem;
+            font-style: italic;
+            line-height: 1.9;
+        }
+
+        .versiculo strong {
+            display: block;
+            color: var(--dourado-claro);
+            margin-top: 15px;
+        }
+
+        .lista {
+            padding-left: 25px;
+        }
+
+        .lista li {
+            margin-bottom: 12px;
+        }
+
+        .reflexao {
+            background: var(--marrom-escuro);
+            color: var(--pergaminho);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        .reflexao h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--dourado-claro);
+            margin-top: 0;
+        }
+
+        .reflexao p {
+            text-align: justify;
+        }
+
+        .navegacao {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 35px 0;
+        }
+
+        .navegacao a {
+            background: var(--azul);
+            color: var(--branco);
+            text-decoration: none;
+            padding: 13px 20px;
+            border-radius: 6px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .navegacao a:hover {
+            background: var(--marrom);
+        }
+
+        footer {
+            background: var(--marrom-escuro);
+            color: var(--pergaminho);
+            text-align: center;
+            padding: 28px 20px;
+            border-top: 4px solid var(--dourado);
+        }
+
+        footer strong {
+            color: var(--dourado-claro);
+        }
+
+        @media (max-width: 600px) {
+            .conteudo {
+                padding: 23px 20px;
+            }
+
+            .navegacao {
+                flex-direction: column;
+            }
+
+            .navegacao a {
+                width: 100%;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .cabecalho,
+            .versiculo,
+            .reflexao,
+            footer {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .navegacao {
+                display: none;
+            }
+
+            .conteudo {
+                box-shadow: none;
+                break-inside: avoid;
+            }
+
+            .container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="cabecalho">
+
+        <div class="identificacao">
+            Área 01 — Identidade Masculina Cristã | Módulo 07
+        </div>
+
+        <h1>O Homem Cristão e os Desafios da Cultura Contemporânea</h1>
+
+        <p>
+            Tema 03 — Discernimento, identidade cristã e fidelidade
+            ao Evangelho em uma sociedade de múltiplas influências.
+        </p>
+
+    </header>
+
+
+    <main class="container">
+
+
+        <section class="conteudo">
+
+            <h2>1. Introdução</h2>
+
+            <p>
+                A sociedade contemporânea é marcada por transformações
+                rápidas e profundas. A tecnologia, os meios de comunicação,
+                as redes sociais, a globalização e as mudanças nos
+                comportamentos influenciam a maneira como as pessoas
+                pensam, trabalham, se relacionam e compreendem a vida.
+            </p>
+
+            <p>
+                O homem cristão não está fora dessa realidade.
+                Ele vive, trabalha, constitui família, participa
+                da sociedade e convive diariamente com ideias,
+                valores e comportamentos diferentes daqueles
+                apresentados pelas Escrituras.
+            </p>
+
+            <p>
+                Esse cenário exige discernimento. Nem tudo o que
+                é apresentado como moderno é necessariamente bom,
+                assim como nem tudo o que é novo deve ser rejeitado.
+                O cristão precisa aprender a examinar as ideias,
+                avaliar seus efeitos e tomar decisões coerentes
+                com sua fé.
+            </p>
+
+            <p>
+                Entre os desafios culturais que merecem atenção
+                estão o relativismo moral, o materialismo,
+                o consumismo, o individualismo, a superficialidade
+                dos relacionamentos e o uso inadequado da tecnologia.
+            </p>
+
+            <div class="destaque">
+                <p>
+                    <strong>Princípio fundamental:</strong>
+                    O homem cristão deve compreender a sociedade
+                    em que vive, mas não permitir que seus valores
+                    sejam determinados por padrões contrários
+                    à Palavra de Deus.
+                </p>
+            </div>
+
+        </section>
+
+
+        <section class="conteudo">
+
+            <h2>2. Cultura Contemporânea: Compreendendo o Nosso Tempo</h2>
+
+            <p>
+                Cultura é o conjunto de conhecimentos, valores,
+                costumes, crenças, práticas e formas de expressão
+                desenvolvidos por uma sociedade ao longo de sua história.
+            </p>
+
+            <p>
+                A cultura influencia a maneira como as pessoas
+                compreendem o mundo e organizam sua vida.
+                Ela está presente na linguagem, na educação,
+                na arte, na música, no trabalho, na política,
+                nos relacionamentos e nas tradições.
+            </p>
+
+            <p>
+                O cristão faz parte de uma sociedade e não precisa
+                rejeitar toda manifestação cultural. A produção
+                artística, o conhecimento científico, a tecnologia
+                e diferentes expressões humanas podem contribuir
+                para o desenvolvimento da sociedade.
+            </p>
+
+            <p>
+                Entretanto, toda expressão cultural precisa
+                ser examinada criticamente. Existem ideias
+                e práticas que podem entrar em conflito com
+                os princípios bíblicos.
+            </p>
+
+            <h3>O desafio do discernimento</h3>
+
+            <p>
+                Discernimento é a capacidade de avaliar situações,
+                reconhecer diferenças entre o bem e o mal e
+                tomar decisões com sabedoria.
+            </p>
+
+            <p>
+                O homem cristão precisa desenvolver essa capacidade
+                por meio do estudo das Escrituras, da oração,
+                da maturidade espiritual e da reflexão responsável.
+            </p>
+
+            <p>
+                Em 1 Tessalonicenses 5:21, Paulo orienta os cristãos
+                a examinarem tudo e reterem o que é bom.
+                Esse princípio demonstra a importância de uma
+                postura cuidadosa diante das diferentes influências.
+            </p>
+
+        </section>
+
+
+        <section class="versiculo">
+
+            <p>
+                "Examinai tudo. Retende o bem."
+            </p>
+
+            <strong>1 Tessalonicenses 5:21</strong>
+
+        </section>
+
+
+        <section class="conteudo">
+
+            <h2>3. O Relativismo Moral e a Verdade</h2>
+
+            <p>
+                O relativismo moral é uma maneira de pensar
+                segundo a qual os conceitos de certo e errado
+                dependem das opiniões, dos interesses ou das
+                circunstâncias de cada pessoa ou grupo.
+            </p>
+
+            <p>
+                Nessa perspectiva, aquilo que uma pessoa considera
+                correto pode ser considerado errado por outra,
+                sem que exista necessariamente um critério
+                moral superior para avaliar essas diferenças.
+            </p>
+
+            <p>
+                O homem cristão reconhece que existem diferenças
+                culturais e que muitas questões exigem reflexão.
+                Entretanto, compreende que a verdade não depende
+                apenas das preferências humanas.
+            </p>
+
+            <h3>A verdade como fundamento da vida cristã</h3>
+
+            <p>
+                A Bíblia apresenta Deus como verdadeiro e confiável.
+                Jesus Cristo declarou ser o caminho, a verdade
+                e a vida (João 14:6).
+            </p>
+
+            <p>
+                Isso significa que a fé cristã não se fundamenta
+                simplesmente em opiniões pessoais, mas na revelação
+                de Deus registrada nas Escrituras.
+            </p>
+
+            <p>
+                O cristão deve permanecer comprometido com a verdade,
+                evitando tanto a relativização dos princípios bíblicos
+                quanto a arrogância no tratamento daqueles que
+                possuem convicções diferentes.
+            </p>
+
+            <h3>Verdade com amor e respeito</h3>
+
+            <p>
+                Defender a verdade não autoriza o cristão a humilhar,
+                insultar ou tratar pessoas com desprezo.
+                Efésios 4:15 apresenta a orientação de seguir
+                a verdade em amor.
+            </p>
+
+            <p>
+                O homem cristão precisa desenvolver equilíbrio:
+                convicção sem arrogância, firmeza sem agressividade
+                e respeito sem abandonar suas crenças.
+            </p>
+
+        </section>
+
+
+        <section class="conteudo">
+
+            <h2>4. Materialismo e Consumismo</h2>
+
+            <p>
+                O materialismo, no sentido abordado neste estudo,
+                representa uma maneira de compreender a existência
+                dando importância excessiva aos bens materiais,
+                ao dinheiro e às conquistas econômicas.
+            </p>
+
+            <p>
+                O consumismo, por sua vez, caracteriza-se pela
+                busca constante de adquirir produtos e serviços,
+                muitas vezes sem que exista uma necessidade real.
+            </p>
+
+            <p>
+                A sociedade de consumo frequentemente associa
+                felicidade, reconhecimento e realização pessoal
+                à aquisição de bens, à aparência e ao poder econômico.
+            </p>
+
+            <p>
+                O problema não está em possuir recursos financeiros
+                ou adquirir bens necessários. O problema surge
+                quando essas coisas passam a ocupar o lugar
+                que pertence a Deus e se tornam o centro
+                da existência humana.
+            </p>
+
+            <h3>O perigo de colocar os bens acima de Deus</h3>
+
+            <p>
+                Em Mateus 6:19-21, Jesus ensina que os discípulos
+                não devem acumular tesouros exclusivamente na terra,
+                mas buscar aquilo que possui valor diante de Deus.
+            </p>
+
+            <p>
+                O coração humano tende a se apegar àquilo que
+                considera mais precioso. Por isso, Jesus relaciona
+                os tesouros ao coração.
+            </p>
+
+            <h3>O dinheiro e a responsabilidade cristã</h3>
+
+            <p>
+                A Bíblia não ensina que possuir dinheiro seja
+                automaticamente pecado. Os recursos financeiros
+                podem ser utilizados para sustentar a família,
+                realizar projetos, ajudar necessitados e contribuir
+                com a obra de Deus.
+            </p>
+
+            <p>
+                O problema é o amor ao dinheiro, que pode conduzir
+                à ganância, à injustiça e ao abandono de princípios
+                espirituais.
+            </p>
+
+            <p>
+                Em 1 Timóteo 6:10, Paulo alerta que o amor ao dinheiro
+                é raiz de toda espécie de males.
+            </p>
+
+            <div class="destaque">
+                <p>
+                    O homem cristão deve administrar seus recursos
+                    com responsabilidade, sem transformar o patrimônio,
+                    o consumo ou a posição social em medidas
+                    de seu valor pessoal.
+                </p>
+            </div>
+
+        </section>
+
+
+        <section class="versiculo">
+
+            <p>
+                "Porque onde estiver o vosso tesouro,
+                aí estará também o vosso coração."
+            </p>
+
+            <strong>Mateus 6:21</strong>
+
+        </section>
+
+
+        <section class="conteudo">
+
+            <h2>5. Individualismo e Enfraquecimento dos Relacionamentos</h2>
+
+            <p>
+                O individualismo excessivo coloca os interesses
+                pessoais acima das necessidades e responsabilidades
+                relacionadas às outras pessoas.
+            </p>
+
+            <p>
+                Embora cada indivíduo possua dignidade, direitos
+                e responsabilidades próprios, a vida humana
+                não foi concebida para ser vivida em isolamento.
+            </p>
+
+            <p>
+                A Bíblia ensina a importância da comunhão,
+                da cooperação, do serviço e do cuidado mútuo.
+            </p>
+
+            <h3>A responsabilidade com o próximo</h3>
+
+            <p>
+                Em Filipenses 2:3-4, Paulo orienta os cristãos
+                a não agirem por interesse egoísta ou vaidade,
+                mas a considerarem também os interesses dos outros.
+            </p>
+
+            <p>
+                Isso não significa desprezar as próprias necessidades,
+                mas reconhecer que o amor cristão exige atenção,
+                generosidade e responsabilidade.
+            </p>
+
+            <h3>O individualismo dentro da família</h3>
+
+            <p>
+                Quando os interesses individuais são colocados
+                acima dos compromissos familiares, podem surgir
+                conflitos, distanciamento e negligência.
+            </p>
+
+            <p>
+                O homem cristão deve compreender que a vida familiar
+                exige diálogo, cooperação, fidelidade, cuidado
+                e disposição para servir.
+            </p>
+
+            <h3>O individualismo dentro da Igreja</h3>
+
+            <p>
+                A Igreja é uma comunidade de pessoas que foram
+                chamadas para viver em comunhão e cooperar
+                na missão cristã.
+            </p>
+
+            <p>
+                O cristão não deve participar da comunidade
+                apenas para receber benefícios, mas também
+                para contribuir com seus dons, capacidades
+                e serviço.
+            </p>
+
+        </section>
+
+
+        <section class="conteudo">
+
+            <h2>6. Tecnologia, Redes Sociais e Responsabilidade Cristã</h2>
+
+            <p>
+                A tecnologia transformou profundamente a comunicação,
+                o trabalho, a educação e o acesso à informação.
+                A internet e as redes sociais permitem compartilhar
+                conhecimentos, manter relacionamentos e divulgar
+                mensagens em escala mundial.
+            </p>
+
+            <p>
+                Esses recursos podem ser utilizados para o bem,
+                inclusive na evangelização, no ensino bíblico
+                e na cooperação entre comunidades cristãs.
+            </p>
+
+            <p>
+                Entretanto, também existem riscos relacionados
+                ao uso inadequado dessas ferramentas.
+            </p>
+
+            <h3>O excesso de exposição</h3>
+
+            <p>
+                A busca constante por curtidas, comentários
+                e reconhecimento pode alimentar a vaidade
+                e a dependência da aprovação dos outros.
+            </p>
+
+            <p>
+                O homem cristão precisa compreender que seu valor
+                não depende da quantidade de seguidores ou
+                da aprovação recebida nas redes sociais.
+            </p>
+
+            <h3>A disseminação de informações falsas</h3>
+
+            <p>
+                Compartilhar informações sem verificar sua origem
+                pode contribuir para a divulgação de mentiras,
+                injustiças e conflitos.
+            </p>
+
+            <p>
+                A responsabilidade cristã exige cuidado com aquilo
+                que se publica, comenta e compartilha.
+            </p>
+
+            <h3>O uso do tempo</h3>
+
+            <p>
+                O uso excessivo de dispositivos eletrônicos
+                pode prejudicar o convívio familiar, o trabalho,
+                o descanso e a vida espiritual.
+            </p>
+
+            <p>
+                Efésios 5:15-16 orienta os cristãos a viverem
+                com sabedoria, aproveitando bem o tempo.
+            </p>
+
+            <h3>O testemunho cristão no ambiente digital</h3>
+
+            <p>
+                O comportamento nas redes sociais também faz
+                parte do testemunho cristão. A maneira de falar,
+                discutir, discordar e compartilhar conteúdos
+                deve refletir os valores do Evangelho.
+            </p>
+
+            <p>
+                O ambiente digital não deve ser utilizado
+                como espaço para agressões, difamações,
+                humilhações ou disseminação irresponsável
+                de informações.
+            </p>
+
+        </section>
+
+
+        <section class="conteudo">
+
+            <h2>7. O Homem Cristão e a Influência da Cultura</h2>
+
+            <p>
+                O cristão não é chamado a viver isolado da sociedade.
+                Jesus orou ao Pai por seus discípulos, reconhecendo
+                que eles estavam no mundo, embora não pertencessem
+                ao sistema de valores contrário a Deus
+                (João 17:14-18).
+            </p>
+
+            <p>
+                Essa realidade apresenta um equilíbrio importante:
+                o discípulo de Cristo precisa conviver com as pessoas,
+                participar da sociedade e exercer sua responsabilidade,
+                sem abandonar sua identidade espiritual.
+            </p>
+
+            <h3>Conhecer sem imitar indiscriminadamente</h3>
+
+            <p>
+                O homem cristão pode estudar diferentes ideias,
+                conhecer outras culturas e dialogar com pessoas
+                que possuem convicções distintas.
+            </p>
+
+            <p>
+                Conhecer uma ideia não significa concordar com ela.
+                O discernimento permite avaliar o que pode ser
+                aproveitado e aquilo que precisa ser rejeitado
+                à luz das Escrituras.
+            </p>
+
+            <h3>Influenciar pelo exemplo</h3>
+
+            <p>
+                O cristão não deve limitar sua participação
+                na sociedade a críticas e condenações.
+                Ele também é chamado a demonstrar, por meio
+                de sua conduta, os valores do Reino de Deus.
+            </p>
+
+            <p>
+                Sua honestidade, bondade, responsabilidade,
+                respeito e disposição para servir podem exercer
+                influência positiva sobre outras pessoas.
+            </p>
+
+            <h3>Preservar a identidade cristã</h3>
+
+            <p>
+                A identidade cristã está fundamentada na relação
+                com Jesus Cristo. Por isso, não deve ser substituída
+                pela busca de aprovação social ou pela adoção
+                indiscriminada de padrões culturais.
+            </p>
+
+            <p>
+                O homem cristão precisa permanecer consciente
+                de sua fé e de suas responsabilidades,
+                mesmo quando suas convicções não são populares.
+            </p>
+
+        </section>
+
+
+        <section class="conteudo">
+
+            <h2>8. O Exemplo de José no Egito</h2>
+
+            <p>
+                A história de José, registrada em Gênesis 37–50,
+                oferece importantes ensinamentos sobre fidelidade
+                a Deus em um ambiente cultural diferente.
+            </p>
+
+            <p>
+                José foi levado para o Egito ainda jovem,
+                afastado de sua família e submetido a circunstâncias
+                difíceis. Mesmo vivendo em uma sociedade com
+                costumes diferentes, ele demonstrou responsabilidade,
+                competência e fidelidade.
+            </p>
+
+            <p>
+                Em Gênesis 39, quando foi tentado pela mulher
+                de Potifar, José recusou-se a praticar o pecado.
+                Sua resposta demonstra que sua conduta não
+                dependia da presença ou fiscalização de outras pessoas.
+            </p>
+
+            <p>
+                Ele declarou que não poderia cometer aquela
+                grande maldade e pecar contra Deus.
+            </p>
+
+            <p>
+                Posteriormente, José recebeu responsabilidades
+                importantes no governo do Egito. Sua história
+                demonstra que é possível atuar em diferentes
+                ambientes sociais e profissionais sem abandonar
+                a fidelidade ao Senhor.
+            </p>
+
+            <p>
+                O exemplo de José ensina que integridade,
+                competência e fidelidade a Deus devem caminhar juntas.
+            </p>
+
+        </section>
+
+
+        <section class="conteudo">
+
+            <h2>9. Conclusão</h2>
+
+            <p>
+                A cultura contemporânea apresenta desafios
+                que exigem atenção, conhecimento e maturidade
+                espiritual.
+            </p>
+
+            <p>
+                O relativismo moral, o materialismo, o consumismo,
+                o individualismo e o uso inadequado da tecnologia
+                podem influenciar negativamente a vida das pessoas.
+            </p>
+
+            <p>
+                Entretanto, o homem cristão não precisa viver
+                dominado pelo medo das transformações sociais.
+                Ele deve desenvolver discernimento, utilizar
+                com responsabilidade os recursos de seu tempo
+                e permanecer comprometido com as Escrituras.
+            </p>
+
+            <p>
+                Seu chamado é viver no mundo como discípulo
+                de Jesus Cristo, demonstrando os valores do Reino
+                por meio de suas escolhas, palavras e atitudes.
+            </p>
+
+            <p>
+                A verdadeira maturidade cristã não está em
+                acompanhar todas as tendências nem em rejeitar
+                indiscriminadamente tudo o que é novo.
+                Está em discernir, escolher com sabedoria
+                e permanecer fiel a Deus.
+            </p>
+
+        </section>
+
+
+        <section class="versiculo">
+
+            <p>
+                "Não ameis o mundo, nem o que no mundo há.
+                Se alguém ama o mundo, o amor do Pai não está nele."
+            </p>
+
+            <strong>1 João 2:15</strong>
+
+        </section>
+
+
+        <section class="reflexao">
+
+            <h2>Para Refletir</h2>
+
+            <p>
+                1. Quais influências da cultura contemporânea
+                representam desafios para a vida cristã?
+            </p>
+
+            <p>
+                2. Como podemos utilizar a tecnologia e as redes
+                sociais de maneira responsável e coerente
+                com os valores do Evangelho?
+            </p>
+
+            <p>
+                3. Qual é a diferença entre possuir recursos
+                financeiros e transformar o dinheiro no centro
+                da própria existência?
+            </p>
+
+            <p>
+                4. Como o homem cristão pode conviver com pessoas
+                que possuem valores diferentes sem abandonar
+                suas convicções?
+            </p>
+
+            <p>
+                5. Que influências culturais precisam ser avaliadas
+                com mais cuidado em sua vida cotidiana?
+            </p>
+
+        </section>
+
+
+        <section class="conteudo">
+
+            <h2>Referências Bíblicas para Estudo</h2>
+
+            <ul class="lista">
+
+                <li>Gênesis 37–50 — A história de José no Egito.</li>
+
+                <li>Gênesis 39:1-23 — Integridade diante da tentação.</li>
+
+                <li>Mateus 6:19-24 — Tesouros, prioridades e fidelidade a Deus.</li>
+
+                <li>Mateus 16:24-26 — O valor da vida diante de Deus.</li>
+
+                <li>João 14:6 — Jesus Cristo, o caminho, a verdade e a vida.</li>
+
+                <li>João 17:14-18 — Os discípulos no mundo.</li>
+
+                <li>Romanos 12:1-2 — A renovação da mente.</li>
+
+                <li>1 Coríntios 10:23-33 — Liberdade e responsabilidade cristã.</li>
+
+                <li>Efésios 4:15, 25-32 — Verdade e amor nas relações.</li>
+
+                <li>Efésios 5:15-16 — Sabedoria e bom uso do tempo.</li>
+
+                <li>Filipenses 2:3-5 — Humildade e consideração pelo próximo.</li>
+
+                <li>1 Tessalonicenses 5:21 — Examinar tudo e reter o bem.</li>
+
+                <li>1 Timóteo 6:6-10 — Contentamento e perigo do amor ao dinheiro.</li>
+
+                <li>1 João 2:15-17 — O amor ao mundo e a vontade de Deus.</li>
+
+            </ul>
+
+        </section>
+
+
+        <nav class="navegacao">
+
+            <a href="tema02.html">
+                ← TEMA ANTERIOR
+            </a>
+
+            <a href="apresentacao.html">
+                APRESENTAÇÃO DO MÓDULO
+            </a>
+
+            <a href="tema04.html">
+                PRÓXIMO TEMA →
+            </a>
+
+        </nav>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            <strong>HOMENS SEGUNDO O CORAÇÃO DE DEUS</strong>
+        </p>
+
+        <p>
+            Formando homens, fortalecendo famílias e servindo à Igreja de Cristo.
+        </p>
+
+        <p>
+            Área 01 — Identidade Masculina Cristã | Módulo 07 | Tema 03
+        </p>
+
+    </footer>
+
+</body>
+</html>
