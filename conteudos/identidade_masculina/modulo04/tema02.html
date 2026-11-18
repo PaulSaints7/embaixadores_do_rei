@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Honra como Princípio da Vida Cristã | Módulo 04</title>
+
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        :root {
+            --marrom-escuro: #38271F;
+            --marrom: #593B2B;
+            --marrom-medio: #76523C;
+            --azul: #18334D;
+            --azul-claro: #294B65;
+            --dourado: #B08A48;
+            --dourado-claro: #D1B477;
+            --pergaminho: #E9DFC9;
+            --creme: #F7F4EC;
+            --texto: #333333;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--creme);
+            color: var(--texto);
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.8;
+        }
+
+        .topo-tema {
+            background: linear-gradient(
+                135deg,
+                var(--marrom-escuro),
+                var(--azul)
+            );
+
+            color: white;
+            padding: 55px 20px;
+            text-align: center;
+        }
+
+        .topo-tema .identificacao {
+            color: var(--dourado-claro);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .topo-tema h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            max-width: 900px;
+            margin: 0 auto 18px;
+            line-height: 1.4;
+        }
+
+        .topo-tema p {
+            max-width: 750px;
+            margin: auto;
+            color: #E9DFC9;
+            font-size: 1rem;
+        }
+
+        .linha-dourada {
+            width: 85px;
+            height: 3px;
+            background: var(--dourado);
+            margin: 25px auto;
+        }
+
+        .conteudo {
+            max-width: 1050px;
+            margin: 45px auto;
+            padding: 0 22px;
+        }
+
+        .bloco {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 28px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+            border-left: 5px solid var(--dourado);
+        }
+
+        .bloco h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--marrom);
+            font-size: 1.35rem;
+            margin-top: 0;
+            margin-bottom: 18px;
+        }
+
+        .bloco h3 {
+            color: var(--azul);
+            font-size: 1.08rem;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        .bloco p {
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .versiculo {
+            background: var(--pergaminho);
+            border-left: 5px solid var(--dourado);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 22px 0;
+        }
+
+        .versiculo p {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.05rem;
+            color: var(--marrom-escuro);
+            font-style: italic;
+            text-align: left;
+            margin-bottom: 12px;
+        }
+
+        .versiculo strong {
+            color: var(--marrom);
+        }
+
+        .lista {
+            padding-left: 25px;
+            margin: 15px 0;
+        }
+
+        .lista li {
+            margin-bottom: 12px;
+        }
+
+        .destaque {
+            background: #F0F3F5;
+            border-left: 5px solid var(--azul);
+            padding: 22px;
+            border-radius: 7px;
+            margin: 22px 0;
+        }
+
+        .destaque strong {
+            color: var(--azul);
+        }
+
+        .reflexao {
+            background: var(--azul);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 28px;
+        }
+
+        .reflexao h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--dourado-claro);
+            margin-top: 0;
+        }
+
+        .reflexao p {
+            text-align: justify;
+        }
+
+        .reflexao li {
+            margin-bottom: 12px;
+        }
+
+        .principio {
+            text-align: center;
+            background: var(--marrom-escuro);
+            color: white;
+            padding: 35px 25px;
+            border-radius: 10px;
+            margin: 35px 0;
+        }
+
+        .principio h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--dourado-claro);
+            margin-top: 0;
+        }
+
+        .principio p {
+            max-width: 800px;
+            margin: auto;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.08rem;
+        }
+
+        .navegacao {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 40px 0;
+        }
+
+        .botao {
+            display: inline-block;
+            background: var(--azul);
+            color: white;
+            padding: 13px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            background: var(--marrom);
+            transform: translateY(-2px);
+        }
+
+        .botao-secundario {
+            background: var(--marrom);
+        }
+
+        .rodape-tema {
+            background: var(--marrom-escuro);
+            color: var(--pergaminho);
+            text-align: center;
+            padding: 25px 15px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 650px) {
+
+            .bloco {
+                padding: 22px 18px;
+            }
+
+            .topo-tema {
+                padding: 40px 18px;
+            }
+
+            .navegacao {
+                flex-direction: column;
+            }
+
+            .botao {
+                text-align: center;
+            }
+
+        }
+
+        @media print {
+
+            body {
+                background: white;
+                color: black;
+            }
+
+            .topo-tema {
+                background: white !important;
+                color: black !important;
+                padding: 20px;
+            }
+
+            .topo-tema h1,
+            .topo-tema p,
+            .topo-tema .identificacao {
+                color: black !important;
+            }
+
+            .conteudo {
+                max-width: 100%;
+                margin: 20px auto;
+            }
+
+            .bloco {
+                box-shadow: none;
+                border: 1px solid #cccccc;
+                break-inside: avoid;
+            }
+
+            .reflexao,
+            .principio,
+            .versiculo,
+            .destaque {
+                background: white !important;
+                color: black !important;
+                border: 1px solid #999999;
+            }
+
+            .reflexao h2,
+            .principio h2 {
+                color: black !important;
+            }
+
+            .navegacao,
+            .rodape-tema {
+                display: none;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header class="topo-tema">
+
+        <div class="identificacao">
+            Homens Segundo o Coração de Deus
+        </div>
+
+        <h1>A Honra como Princípio da Vida Cristã</h1>
+
+        <div class="linha-dourada"></div>
+
+        <p>
+            Módulo 04 — Caráter, Honra e Integridade
+            <br>
+            Tema 02 de 06
+        </p>
+
+    </header>
+
+
+    <main class="conteudo">
+
+        <!-- INTRODUÇÃO -->
+
+        <section class="bloco">
+
+            <h2>1. Introdução</h2>
+
+            <p>
+                A honra é um princípio importante para a construção de
+                relacionamentos saudáveis e para o desenvolvimento de
+                uma vida orientada pelos valores cristãos.
+            </p>
+
+            <p>
+                Em uma sociedade na qual muitas vezes prevalecem o
+                individualismo, a busca por reconhecimento e o interesse
+                pessoal, a Bíblia apresenta uma perspectiva diferente:
+                o ser humano deve reconhecer o valor das outras pessoas
+                e tratá-las com respeito e dignidade.
+            </p>
+
+            <p>
+                Honrar alguém significa reconhecer seu valor, respeitar
+                sua dignidade e demonstrar consideração por meio de
+                atitudes coerentes.
+            </p>
+
+            <p>
+                Para o homem cristão, a honra não deve ser apenas uma
+                palavra bonita ou um conceito associado à tradição.
+                Ela precisa fazer parte de sua maneira de viver,
+                relacionar-se e cumprir suas responsabilidades.
+            </p>
+
+        </section>
+
+
+        <!-- CONCEITO -->
+
+        <section class="bloco">
+
+            <h2>2. O significado da honra</h2>
+
+            <p>
+                Honra está relacionada ao reconhecimento do valor,
+                da dignidade e da importância de uma pessoa ou de uma
+                responsabilidade.
+            </p>
+
+            <p>
+                Na perspectiva bíblica, honrar envolve atitudes como
+                respeito, consideração, fidelidade, reconhecimento
+                e responsabilidade.
+            </p>
+
+            <p>
+                A honra não depende exclusivamente de posição social,
+                riqueza, autoridade ou prestígio. Ela deve orientar
+                a maneira como tratamos as pessoas, independentemente
+                de sua condição.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Amai-vos cordialmente uns aos outros com amor
+                    fraternal, preferindo-vos em honra uns aos outros."
+                </p>
+
+                <strong>Romanos 12:10</strong>
+
+            </div>
+
+            <p>
+                O ensinamento de Paulo apresenta uma dimensão importante
+                da honra cristã: o respeito e a consideração não devem
+                ser reservados apenas às pessoas das quais esperamos
+                algum benefício.
+            </p>
+
+            <p>
+                O cristão é chamado a cultivar relacionamentos marcados
+                pelo amor fraternal e pela disposição de reconhecer
+                o valor do próximo.
+            </p>
+
+        </section>
+
+
+        <!-- HONRA E ORGULHO -->
+
+        <section class="bloco">
+
+            <h2>3. Honra não é orgulho nem vaidade</h2>
+
+            <p>
+                É importante distinguir a honra cristã da busca por
+                reconhecimento pessoal.
+            </p>
+
+            <p>
+                O orgulho procura colocar o próprio indivíduo acima
+                dos demais. A vaidade busca reconhecimento, admiração
+                e destaque. A honra cristã, por outro lado, está
+                relacionada ao respeito, à responsabilidade e ao
+                reconhecimento da dignidade das pessoas.
+            </p>
+
+            <p>
+                O homem cristão não deve viver procurando aplausos
+                ou posições de destaque. Sua conduta deve ser orientada
+                pela fidelidade a Deus e pelo desejo de fazer aquilo
+                que é correto.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Nada façais por contenda ou por vanglória, mas
+                    por humildade; cada um considere os outros superiores
+                    a si mesmo."
+                </p>
+
+                <strong>Filipenses 2:3</strong>
+
+            </div>
+
+            <p>
+                Esse ensinamento não significa que o cristão deva
+                desprezar a própria dignidade ou aceitar injustiças.
+                Significa que ele não deve colocar o ego e os interesses
+                pessoais acima do amor e do respeito ao próximo.
+            </p>
+
+            <div class="destaque">
+
+                <strong>Uma diferença fundamental:</strong>
+
+                <p>
+                    O orgulho deseja ser honrado pelos outros.
+                    A honra cristã procura tratar os outros com dignidade,
+                    mesmo quando não existe qualquer possibilidade de
+                    receber reconhecimento em troca.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- HONRA A DEUS -->
+
+        <section class="bloco">
+
+            <h2>4. Honrar a Deus acima de todas as coisas</h2>
+
+            <p>
+                A honra cristã começa no relacionamento com Deus.
+                Reconhecer sua autoridade, respeitar sua Palavra
+                e procurar viver de acordo com sua vontade são
+                expressões de reverência e fidelidade ao Criador.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Portanto, quer comais quer bebais ou façais outra
+                    qualquer coisa, fazei tudo para a glória de Deus."
+                </p>
+
+                <strong>1 Coríntios 10:31</strong>
+
+            </div>
+
+            <p>
+                Paulo ensina que a vida cristã não deve ser dividida
+                entre atividades religiosas e atividades comuns.
+                Todas as dimensões da existência podem ser conduzidas
+                de maneira que honrem a Deus.
+            </p>
+
+            <h3>Como honramos a Deus?</h3>
+
+            <ul class="lista">
+
+                <li>
+                    Procurando conhecer e obedecer à sua Palavra.
+                </li>
+
+                <li>
+                    Cultivando uma vida de oração e comunhão com Deus.
+                </li>
+
+                <li>
+                    Agindo com honestidade e justiça.
+                </li>
+
+                <li>
+                    Demonstrando amor e misericórdia ao próximo.
+                </li>
+
+                <li>
+                    Cumprindo nossas responsabilidades com fidelidade.
+                </li>
+
+                <li>
+                    Utilizando nossos dons e capacidades para servir.
+                </li>
+
+            </ul>
+
+            <p>
+                Honrar a Deus significa reconhecer que nossa vida,
+                nossas capacidades e nossas responsabilidades devem
+                estar submetidas aos princípios do Reino de Deus.
+            </p>
+
+        </section>
+
+
+        <!-- HONRA À FAMÍLIA -->
+
+        <section class="bloco">
+
+            <h2>5. A honra nas relações familiares</h2>
+
+            <p>
+                A família é um dos primeiros ambientes nos quais
+                aprendemos a demonstrar respeito, consideração
+                e responsabilidade.
+            </p>
+
+            <p>
+                A Bíblia apresenta orientações importantes sobre
+                a maneira como os membros da família devem tratar
+                uns aos outros.
+            </p>
+
+            <h3>5.1. Honrar pai e mãe</h3>
+
+            <p>
+                O mandamento de honrar pai e mãe ocupa lugar importante
+                nas Escrituras. Ele ensina que os filhos devem reconhecer
+                e respeitar seus pais.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Honra a teu pai e a tua mãe, que é o primeiro
+                    mandamento com promessa."
+                </p>
+
+                <strong>Efésios 6:2</strong>
+
+            </div>
+
+            <p>
+                A honra aos pais envolve respeito, gratidão e consideração.
+                Não significa que os pais sejam pessoas infalíveis,
+                mas que a relação familiar deve ser conduzida com
+                dignidade e responsabilidade.
+            </p>
+
+
+            <h3>5.2. Honrar a esposa</h3>
+
+            <p>
+                O relacionamento conjugal deve ser marcado pelo amor,
+                pelo respeito e pelo reconhecimento da dignidade da
+                esposa.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Igualmente vós, maridos, coabitai com elas com
+                    entendimento, dando honra à mulher, como vaso
+                    mais fraco; como sendo vós os seus coerdeiros
+                    da graça da vida."
+                </p>
+
+                <strong>1 Pedro 3:7</strong>
+
+            </div>
+
+            <p>
+                O texto apresenta uma orientação direta aos maridos:
+                tratar suas esposas com consideração e honra.
+                A expressão utilizada não deve ser entendida como
+                inferioridade de valor, pois o próprio versículo
+                reconhece ambos como coerdeiros da graça da vida.
+            </p>
+
+            <p>
+                Honrar a esposa significa respeitar sua dignidade,
+                ouvir suas opiniões, valorizar sua contribuição,
+                agir com fidelidade e exercer o amor de maneira
+                responsável.
+            </p>
+
+
+            <h3>5.3. Honrar os filhos</h3>
+
+            <p>
+                Os filhos também devem ser tratados com respeito,
+                cuidado e consideração.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "E vós, pais, não provoqueis a ira a vossos filhos,
+                    mas criai-os na doutrina e admoestação do Senhor."
+                </p>
+
+                <strong>Efésios 6:4</strong>
+
+            </div>
+
+            <p>
+                A responsabilidade paterna não autoriza atitudes
+                de humilhação, violência ou desprezo. O pai cristão
+                deve orientar, corrigir e educar seus filhos com
+                equilíbrio, amor e responsabilidade.
+            </p>
+
+        </section>
+
+
+        <!-- HONRA AO PRÓXIMO -->
+
+        <section class="bloco">
+
+            <h2>6. Honrar o próximo</h2>
+
+            <p>
+                A honra cristã não deve ficar limitada ao círculo
+                familiar ou religioso. Ela também precisa orientar
+                a maneira como tratamos todas as pessoas.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Portanto, tudo o que vós quereis que os homens
+                    vos façam, fazei-lho também vós."
+                </p>
+
+                <strong>Mateus 7:12</strong>
+
+            </div>
+
+            <p>
+                Conhecida como Regra de Ouro, essa orientação de Jesus
+                estabelece um princípio de consideração pelo próximo.
+                Não devemos exigir respeito enquanto tratamos outras
+                pessoas com desprezo.
+            </p>
+
+            <h3>Na prática, honrar o próximo significa:</h3>
+
+            <ul class="lista">
+
+                <li>Tratar todas as pessoas com dignidade.</li>
+
+                <li>Respeitar opiniões diferentes, sem abandonar as próprias convicções.</li>
+
+                <li>Evitar humilhações, insultos e palavras ofensivas.</li>
+
+                <li>Reconhecer o trabalho e a contribuição das pessoas.</li>
+
+                <li>Ser justo nas relações pessoais e profissionais.</li>
+
+                <li>Não utilizar a fragilidade de alguém para obter vantagens.</li>
+
+                <li>Demonstrar consideração pelos idosos e pelos necessitados.</li>
+
+            </ul>
+
+            <p>
+                A honra cristã exige que o valor das pessoas seja
+                reconhecido, mesmo quando existem diferenças de idade,
+                condição econômica, conhecimento ou posição social.
+            </p>
+
+        </section>
+
+
+        <!-- HONRA E AUTORIDADE -->
+
+        <section class="bloco">
+
+            <h2>7. Honra, respeito e autoridade</h2>
+
+            <p>
+                A Bíblia ensina que devemos reconhecer e respeitar
+                autoridades e responsabilidades legítimas.
+                Entretanto, esse respeito não significa obediência
+                cega nem autorização para práticas contrárias
+                aos princípios de Deus.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Toda a alma esteja sujeita às potestades superiores;
+                    porque não há potestade que não venha de Deus."
+                </p>
+
+                <strong>Romanos 13:1</strong>
+
+            </div>
+
+            <p>
+                O texto apresenta o princípio da submissão às autoridades
+                dentro da ordem estabelecida. Entretanto, a própria
+                Bíblia demonstra que a autoridade humana possui limites.
+            </p>
+
+            <p>
+                Quando autoridades exigiram que os apóstolos deixassem
+                de anunciar a mensagem de Cristo, eles responderam:
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Mais importa obedecer a Deus do que aos homens."
+                </p>
+
+                <strong>Atos 5:29</strong>
+
+            </div>
+
+            <p>
+                Portanto, o respeito às autoridades deve caminhar
+                juntamente com a fidelidade a Deus, a consciência
+                moral e a responsabilidade cristã.
+            </p>
+
+            <div class="destaque">
+
+                <strong>Uma orientação importante:</strong>
+
+                <p>
+                    A honra não deve ser utilizada para justificar
+                    abuso de autoridade, violência, exploração ou
+                    qualquer forma de injustiça. Respeitar alguém
+                    não significa aprovar atitudes erradas.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- HONRA NO TESTEMUNHO -->
+
+        <section class="bloco">
+
+            <h2>8. A honra no testemunho do homem cristão</h2>
+
+            <p>
+                O homem cristão deve compreender que suas atitudes
+                influenciam a maneira como as pessoas percebem sua
+                fé e seu compromisso com o Evangelho.
+            </p>
+
+            <p>
+                Não é suficiente falar sobre valores cristãos.
+                É necessário demonstrá-los por meio de uma conduta
+                coerente.
+            </p>
+
+            <p>
+                Um homem que prega respeito, mas humilha os outros;
+                que fala de fidelidade, mas não cumpre suas promessas;
+                ou que ensina honestidade, mas age desonestamente,
+                apresenta uma contradição entre discurso e comportamento.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Ninguém despreze a tua mocidade; mas sê o exemplo
+                    dos fiéis, na palavra, no trato, no amor, no espírito,
+                    na fé, na pureza."
+                </p>
+
+                <strong>1 Timóteo 4:12</strong>
+
+            </div>
+
+            <p>
+                Embora a orientação tenha sido dirigida originalmente
+                a Timóteo, seu princípio oferece uma importante reflexão
+                para todos os cristãos: a conduta deve confirmar aquilo
+                que professamos.
+            </p>
+
+            <h3>O homem cristão demonstra honra quando:</h3>
+
+            <ul class="lista">
+
+                <li>Cumpre suas promessas e compromissos.</li>
+
+                <li>Trata as pessoas com respeito, inclusive quando discorda delas.</li>
+
+                <li>Reconhece seus erros e procura repará-los.</li>
+
+                <li>Não utiliza sua posição para humilhar ou controlar os outros.</li>
+
+                <li>Protege a dignidade das pessoas sob sua responsabilidade.</li>
+
+                <li>Age com justiça mesmo quando isso exige renunciar a vantagens pessoais.</li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- CONCLUSÃO -->
+
+        <section class="bloco">
+
+            <h2>9. Conclusão</h2>
+
+            <p>
+                A honra é um princípio que deve orientar a vida do
+                homem cristão em seu relacionamento com Deus, com
+                a família, com a Igreja e com a sociedade.
+            </p>
+
+            <p>
+                Ela não deve ser confundida com orgulho, vaidade
+                ou busca por reconhecimento. A honra bíblica está
+                relacionada ao respeito, à dignidade, à fidelidade
+                e à responsabilidade.
+            </p>
+
+            <p>
+                Honrar a Deus significa reconhecer sua autoridade
+                e procurar viver segundo sua Palavra. Honrar a família
+                significa cultivar relacionamentos marcados pelo amor
+                e pelo respeito. Honrar o próximo significa reconhecer
+                sua dignidade e tratá-lo com consideração.
+            </p>
+
+            <p>
+                O homem segundo o coração de Deus não procura apenas
+                ser respeitado. Ele também assume o compromisso de
+                respeitar, valorizar e honrar as pessoas com quem
+                convive.
+            </p>
+
+        </section>
+
+
+        <!-- REFLEXÃO -->
+
+        <section class="reflexao">
+
+            <h2>Reflexão para a vida</h2>
+
+            <p>
+                A honra é demonstrada principalmente por atitudes
+                concretas. Ela aparece na maneira como tratamos
+                as pessoas, cumprimos nossas responsabilidades
+                e reagimos diante de situações difíceis.
+            </p>
+
+            <p>
+                Considere as seguintes perguntas:
+            </p>
+
+            <ol>
+
+                <li>
+                    Minhas atitudes demonstram respeito e consideração
+                    pelas pessoas?
+                </li>
+
+                <li>
+                    Tenho procurado honrar minha família por meio
+                    de minhas palavras e ações?
+                </li>
+
+                <li>
+                    Respeito as autoridades sem abrir mão dos princípios
+                    ensinados por Deus?
+                </li>
+
+                <li>
+                    Procuro reconhecer o valor das pessoas mesmo
+                    quando não concordo com suas opiniões?
+                </li>
+
+                <li>
+                    Minha maneira de viver contribui para um testemunho
+                    cristão digno e coerente?
+                </li>
+
+            </ol>
+
+        </section>
+
+
+        <!-- PRINCÍPIO FORMATIVO -->
+
+        <section class="principio">
+
+            <h2>Princípio Formativo</h2>
+
+            <p>
+                O homem segundo o coração de Deus compreende que a
+                verdadeira honra não está na busca por prestígio,
+                mas no reconhecimento da dignidade das pessoas,
+                no respeito aos princípios divinos e na fidelidade
+                às responsabilidades que recebeu.
+            </p>
+
+        </section>
+
+
+        <!-- VERSÍCULO PARA MEMORIZAÇÃO -->
+
+        <section class="bloco">
+
+            <h2>Versículo para memorizar</h2>
+
+            <div class="versiculo">
+
+                <p>
+                    "Amai-vos cordialmente uns aos outros com amor
+                    fraternal, preferindo-vos em honra uns aos outros."
+                </p>
+
+                <strong>Romanos 12:10</strong>
+
+            </div>
+
+            <p>
+                Esse ensinamento resume uma dimensão essencial
+                da honra cristã: reconhecer o valor das pessoas
+                e demonstrar respeito por meio de atitudes
+                sinceras e responsáveis.
+            </p>
+
+        </section>
+
+
+        <!-- NAVEGAÇÃO -->
+
+        <nav class="navegacao">
+
+            <a
+                href="tema01.html"
+                class="botao botao-secundario">
+
+                ← Tema Anterior
+
+            </a>
+
+            <a
+                href="tema03.html"
+                class="botao">
+
+                Próximo Tema →
+
+            </a>
+
+        </nav>
+
+        <div class="navegacao">
+
+            <a
+                href="apresentacao.html"
+                class="botao botao-secundario">
+
+                Voltar ao Módulo 04
+
+            </a>
+
+            <button
+                onclick="window.print()"
+                class="botao"
+                style="border: none; cursor: pointer; font-family: inherit;">
+
+                Imprimir Estudo
+
+            </button>
+
+            <a
+                href="../../../uhbb_psh.html"
+                class="botao botao-secundario">
+
+                Página Inicial
+
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <footer class="rodape-tema">
+
+        <p>
+            HOMENS SEGUNDO O CORAÇÃO DE DEUS
+        </p>
+
+        <p>
+            Formando homens, fortalecendo famílias e servindo à Igreja de Cristo.
+        </p>
+
+    </footer>
+
+</body>
+</html>

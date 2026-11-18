@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tema 05 — Coerência entre Fé, Palavras e Atitudes</title>
+
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        .conteudo-tema {
+            max-width: 1050px;
+            margin: 50px auto;
+            padding: 0 22px 60px;
+            color: #38271F;
+        }
+
+        .cabecalho-tema {
+            background: linear-gradient(135deg, #38271F, #18334D);
+            color: #F7F4EC;
+            padding: 55px 35px;
+            border-radius: 14px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .cabecalho-tema .numero {
+            display: inline-block;
+            color: #D1B477;
+            font-family: 'Cinzel', serif;
+            font-size: 15px;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+
+        .cabecalho-tema h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(25px, 4vw, 38px);
+            line-height: 1.35;
+            margin-bottom: 20px;
+        }
+
+        .cabecalho-tema p {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 16px;
+            line-height: 1.8;
+            color: #E9DFC9;
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .texto-biblico {
+            background: #E9DFC9;
+            border-left: 5px solid #B08A48;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 35px;
+            font-family: 'Libre Baskerville', serif;
+            line-height: 1.9;
+            font-size: 17px;
+        }
+
+        .texto-biblico strong {
+            color: #76523C;
+        }
+
+        .bloco-estudo {
+            background: #FFFFFF;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(56, 39, 31, 0.07);
+            border: 1px solid #E9DFC9;
+        }
+
+        .bloco-estudo h2 {
+            font-family: 'Cinzel', serif;
+            color: #593B2B;
+            font-size: 22px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .bloco-estudo h3 {
+            color: #76523C;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 17px;
+            margin-top: 22px;
+            margin-bottom: 10px;
+        }
+
+        .bloco-estudo p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            line-height: 1.9;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .bloco-estudo ul {
+            padding-left: 25px;
+            margin: 15px 0;
+        }
+
+        .bloco-estudo li {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.9;
+            margin-bottom: 10px;
+        }
+
+        .referencia {
+            color: #76523C;
+            font-weight: 700;
+        }
+
+        .destaque {
+            background: #F7F4EC;
+            border-left: 4px solid #B08A48;
+            padding: 22px;
+            margin: 25px 0;
+            border-radius: 6px;
+        }
+
+        .destaque p {
+            margin-bottom: 0;
+            font-family: 'Libre Baskerville', serif;
+        }
+
+        .caixa-reflexao {
+            background: #18334D;
+            color: #F7F4EC;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 35px;
+        }
+
+        .caixa-reflexao h2 {
+            font-family: 'Cinzel', serif;
+            color: #D1B477;
+            margin-bottom: 20px;
+        }
+
+        .caixa-reflexao p {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.9;
+            margin-bottom: 15px;
+        }
+
+        .versiculo-memorizacao {
+            background: #E9DFC9;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .versiculo-memorizacao h2 {
+            font-family: 'Cinzel', serif;
+            color: #593B2B;
+            margin-bottom: 18px;
+        }
+
+        .versiculo-memorizacao p {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 18px;
+            line-height: 1.9;
+            color: #38271F;
+        }
+
+        .versiculo-memorizacao strong {
+            display: block;
+            margin-top: 15px;
+            color: #76523C;
+        }
+
+        .principio-formativo {
+            text-align: center;
+            padding: 30px;
+            margin-top: 30px;
+            border-top: 2px solid #B08A48;
+            border-bottom: 2px solid #B08A48;
+        }
+
+        .principio-formativo h2 {
+            font-family: 'Cinzel', serif;
+            color: #593B2B;
+            margin-bottom: 15px;
+        }
+
+        .principio-formativo p {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 17px;
+            line-height: 1.9;
+        }
+
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 45px;
+        }
+
+        .navegacao-temas a {
+            display: inline-block;
+            padding: 14px 22px;
+            background: #593B2B;
+            color: #F7F4EC;
+            text-decoration: none;
+            border-radius: 6px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .navegacao-temas a:hover {
+            background: #B08A48;
+            color: #38271F;
+            transform: translateY(-2px);
+        }
+
+        .botoes-apoio {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 35px;
+        }
+
+        .botoes-apoio a,
+        .botoes-apoio button {
+            border: none;
+            padding: 13px 22px;
+            border-radius: 6px;
+            background: #18334D;
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .botoes-apoio a:hover,
+        .botoes-apoio button:hover {
+            background: #B08A48;
+            color: #38271F;
+        }
+
+        @media (max-width: 650px) {
+
+            .cabecalho-tema {
+                padding: 40px 22px;
+            }
+
+            .bloco-estudo {
+                padding: 22px;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+            }
+
+            .navegacao-temas a {
+                text-align: center;
+            }
+
+        }
+
+        @media print {
+
+            body {
+                background: #FFFFFF !important;
+                color: #000000 !important;
+            }
+
+            .conteudo-tema {
+                max-width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            .cabecalho-tema {
+                background: #FFFFFF !important;
+                color: #000000 !important;
+                border: 2px solid #593B2B;
+            }
+
+            .cabecalho-tema p,
+            .cabecalho-tema .numero {
+                color: #000000 !important;
+            }
+
+            .bloco-estudo {
+                box-shadow: none;
+                break-inside: avoid;
+            }
+
+            .caixa-reflexao {
+                background: #FFFFFF !important;
+                color: #000000 !important;
+                border: 1px solid #18334D;
+            }
+
+            .caixa-reflexao h2 {
+                color: #000000 !important;
+            }
+
+            .botoes-apoio,
+            .navegacao-temas {
+                display: none !important;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <main class="conteudo-tema">
+
+        <header class="cabecalho-tema">
+
+            <span class="numero">MÓDULO 04 • TEMA 05</span>
+
+            <h1>Coerência entre Fé, Palavras e Atitudes</h1>
+
+            <p>
+                A fé cristã transforma a maneira como pensamos,
+                falamos e agimos. O homem que segue a Cristo
+                é chamado a demonstrar, em sua vida cotidiana,
+                aquilo que professa com seus lábios.
+            </p>
+
+        </header>
+
+
+        <section class="texto-biblico">
+
+            <strong>Texto bíblico de referência:</strong>
+
+            <p>
+                “E sede cumpridores da palavra e não somente ouvintes,
+                enganando-vos a vós mesmos.”
+            </p>
+
+            <strong>Tiago 1:22</strong>
+
+        </section>
+
+
+        <section class="bloco-estudo">
+
+            <h2>1. Introdução: Quando a fé se torna uma maneira de viver</h2>
+
+            <p>
+                A vida cristã não pode ser compreendida apenas como
+                um conjunto de declarações religiosas, conhecimentos
+                bíblicos ou participação em atividades da Igreja.
+                Embora essas coisas tenham sua importância, a fé
+                cristã precisa alcançar todas as dimensões da existência.
+            </p>
+
+            <p>
+                O homem pode conhecer muitos textos das Escrituras,
+                falar sobre Deus e participar regularmente dos cultos.
+                Entretanto, sua conduta diária também precisa refletir
+                os princípios que afirma defender.
+            </p>
+
+            <p>
+                Isso não significa que o cristão seja perfeito ou nunca
+                cometa erros. Significa que ele reconhece a autoridade
+                de Cristo sobre sua vida e procura permitir que a Palavra
+                de Deus oriente suas decisões, relacionamentos e atitudes.
+            </p>
+
+            <p>
+                A coerência cristã é justamente essa busca por uma vida
+                em que a fé professada corresponda, de maneira crescente,
+                à maneira de viver.
+            </p>
+
+        </section>
+
+
+        <section class="bloco-estudo">
+
+            <h2>2. A Palavra de Deus deve ser praticada</h2>
+
+            <p>
+                Em sua carta, Tiago apresenta uma advertência importante:
+                não basta ouvir a Palavra de Deus; é necessário colocá-la
+                em prática.
+            </p>
+
+            <p>
+                O conhecimento bíblico possui grande valor, mas seu
+                propósito não é apenas aumentar nossas informações
+                religiosas. As Escrituras nos ensinam a conhecer a vontade
+                de Deus e a orientar nossa conduta segundo seus princípios.
+            </p>
+
+            <p>
+                Quando alguém ouve os ensinamentos bíblicos, mas
+                deliberadamente ignora sua aplicação, corre o risco de
+                desenvolver uma religião apenas exterior.
+            </p>
+
+            <p>
+                O verdadeiro aprendizado cristão envolve escutar,
+                compreender, refletir e obedecer.
+            </p>
+
+            <div class="destaque">
+
+                <p>
+                    A Palavra de Deus não foi entregue apenas para ser
+                    conhecida, mas também para orientar a maneira como
+                    vivemos.
+                </p>
+
+            </div>
+
+            <p class="referencia">
+                Referência bíblica: Tiago 1:22-25.
+            </p>
+
+        </section>
+
+
+        <section class="bloco-estudo">
+
+            <h2>3. A relação entre fé e obras</h2>
+
+            <p>
+                Em Tiago 2:14-18, encontramos um ensinamento fundamental
+                sobre a relação entre fé e comportamento.
+            </p>
+
+            <p>
+                Tiago questiona a validade de uma declaração de fé que
+                não produz qualquer manifestação prática de amor,
+                misericórdia e responsabilidade.
+            </p>
+
+            <p>
+                O apóstolo utiliza o exemplo de alguém que encontra
+                um irmão ou uma irmã necessitados e, em vez de oferecer
+                ajuda, limita-se a desejar que a pessoa fique bem.
+                Suas palavras não correspondem a uma atitude concreta.
+            </p>
+
+            <p>
+                É importante compreender corretamente esse ensino:
+                a Bíblia afirma que a salvação é pela graça de Deus,
+                mediante a fé, e não conquistada por obras humanas.
+            </p>
+
+            <p>
+                Entretanto, a fé verdadeira produz frutos. As boas obras
+                não compram a salvação, mas demonstram, na prática,
+                a transformação que Deus realiza na vida daquele que crê.
+            </p>
+
+            <p class="referencia">
+                Referências bíblicas: Efésios 2:8-10; Tiago 2:14-18.
+            </p>
+
+        </section>
+
+
+        <section class="bloco-estudo">
+
+            <h2>4. Não basta dizer: é necessário viver</h2>
+
+            <p>
+                Durante seu ministério, Jesus ensinou que a relação
+                com Deus não pode ser reduzida a declarações religiosas.
+            </p>
+
+            <p>
+                Em Mateus 7:21, encontramos uma advertência de Cristo
+                sobre aqueles que dizem “Senhor, Senhor”, mas não fazem
+                a vontade do Pai.
+            </p>
+
+            <p>
+                Jesus não estava ensinando que alguém conquista a
+                salvação simplesmente por realizar determinadas obras.
+                Ele estava confrontando a falsa segurança de uma
+                religiosidade que apresenta palavras, mas não se submete
+                verdadeiramente à vontade de Deus.
+            </p>
+
+            <p>
+                A profissão de fé precisa ser acompanhada de uma vida
+                que reconheça o senhorio de Cristo.
+            </p>
+
+            <p>
+                Isso também nos ensina a ter cuidado com a hipocrisia:
+                não devemos utilizar a linguagem cristã para construir
+                uma aparência de espiritualidade enquanto ignoramos
+                os princípios do Evangelho.
+            </p>
+
+            <p>
+                Ao mesmo tempo, não devemos assumir o papel de juízes
+                da salvação alheia. Nossa responsabilidade é examinar
+                nossa própria vida diante das Escrituras e procurar
+                viver fielmente diante de Deus.
+            </p>
+
+            <p class="referencia">
+                Referências bíblicas: Mateus 7:21-23; 2 Coríntios 13:5.
+            </p>
+
+        </section>
+
+
+        <section class="bloco-estudo">
+
+            <h2>5. O fruto do Espírito na conduta diária</h2>
+
+            <p>
+                A coerência cristã não depende apenas da força de vontade
+                humana. A vida cristã envolve a atuação do Espírito Santo,
+                que transforma o caráter e produz frutos naqueles que
+                pertencem a Cristo.
+            </p>
+
+            <p>
+                Em Gálatas 5:22-23, Paulo apresenta características
+                que devem marcar a vida conduzida pelo Espírito.
+            </p>
+
+            <p>
+                Entre elas encontramos:
+            </p>
+
+            <ul>
+                <li><strong>Amor:</strong> disposição para buscar o bem do próximo.</li>
+
+                <li><strong>Alegria:</strong> contentamento fundamentado em Deus.</li>
+
+                <li><strong>Paz:</strong> confiança em Deus e disposição para promover a reconciliação.</li>
+
+                <li><strong>Longanimidade:</strong> paciência diante das dificuldades e das pessoas.</li>
+
+                <li><strong>Benignidade:</strong> disposição para agir com bondade.</li>
+
+                <li><strong>Bondade:</strong> prática do que é correto e benéfico.</li>
+
+                <li><strong>Fidelidade:</strong> firmeza e confiança nos compromissos.</li>
+
+                <li><strong>Mansidão:</strong> força conduzida pela humildade e pelo domínio próprio.</li>
+
+                <li><strong>Domínio próprio:</strong> capacidade de controlar impulsos e desejos.</li>
+            </ul>
+
+            <p>
+                Essas características precisam aparecer nas situações
+                comuns da vida. Não são apenas conceitos religiosos,
+                mas evidências de uma existência orientada pelo Espírito.
+            </p>
+
+            <p class="referencia">
+                Referência bíblica: Gálatas 5:16-25.
+            </p>
+
+        </section>
+
+
+        <section class="bloco-estudo">
+
+            <h2>6. A coerência dentro da família</h2>
+
+            <p>
+                A família é um dos primeiros ambientes em que a coerência
+                da fé cristã pode ser percebida.
+            </p>
+
+            <p>
+                Um homem pode falar sobre amor, respeito, paciência
+                e responsabilidade nos ambientes religiosos. Entretanto,
+                esses princípios também precisam orientar sua convivência
+                com a esposa, os filhos, os pais e os demais familiares.
+            </p>
+
+            <p>
+                A educação cristã não acontece somente por meio de
+                discursos. O exemplo cotidiano possui grande importância
+                na formação das novas gerações.
+            </p>
+
+            <p>
+                Quando um pai ensina sobre honestidade, mas age de
+                maneira desonesta, transmite uma mensagem contraditória.
+                Quando fala sobre perdão, mas nunca reconhece os próprios
+                erros, enfraquece seu testemunho.
+            </p>
+
+            <p>
+                O homem cristão deve procurar demonstrar em casa os
+                mesmos valores que afirma defender publicamente.
+            </p>
+
+            <p class="referencia">
+                Referências bíblicas: Deuteronômio 6:6-7;
+                Colossenses 3:19-21; Efésios 6:4.
+            </p>
+
+        </section>
+
+
+        <section class="bloco-estudo">
+
+            <h2>7. A coerência na Igreja e na sociedade</h2>
+
+            <p>
+                A fé cristã também deve orientar a maneira como o homem
+                participa da Igreja e se relaciona com a sociedade.
+            </p>
+
+            <p>
+                Na Igreja, coerência significa servir com humildade,
+                respeitar os irmãos, cumprir responsabilidades e
+                contribuir para a edificação da comunidade cristã.
+            </p>
+
+            <p>
+                No trabalho, significa agir com honestidade, cumprir
+                compromissos, respeitar pessoas e não utilizar a fé
+                como justificativa para comportamentos inadequados.
+            </p>
+
+            <p>
+                Na sociedade, significa procurar exercer a cidadania
+                com responsabilidade, tratar as pessoas com dignidade
+                e demonstrar os valores do Evangelho.
+            </p>
+
+            <p>
+                O testemunho cristão não está limitado ao interior
+                do templo. Ele acompanha o discípulo em todos os
+                ambientes de sua existência.
+            </p>
+
+            <p class="referencia">
+                Referências bíblicas: Colossenses 3:17,23;
+                Mateus 5:16; 1 Pedro 2:12.
+            </p>
+
+        </section>
+
+
+        <section class="bloco-estudo">
+
+            <h2>8. A coerência também deve existir no ambiente digital</h2>
+
+            <p>
+                As redes sociais e os meios digitais fazem parte
+                da realidade contemporânea. Neles também expressamos
+                opiniões, compartilhamos informações e estabelecemos
+                relacionamentos.
+            </p>
+
+            <p>
+                Por isso, o comportamento cristão não deve ser
+                abandonado quando estamos diante de uma tela.
+            </p>
+
+            <p>
+                O homem cristão deve refletir sobre aquilo que publica,
+                comenta, compartilha e transmite. A facilidade de
+                comunicação não elimina a responsabilidade pelas palavras.
+            </p>
+
+            <p>
+                Compartilhar informações falsas, promover ofensas,
+                humilhar pessoas ou alimentar conflitos contradiz
+                os princípios de amor, verdade e respeito ensinados
+                nas Escrituras.
+            </p>
+
+            <p>
+                A fé deve orientar tanto nossas conversas presenciais
+                quanto nossa comunicação no ambiente digital.
+            </p>
+
+            <p class="referencia">
+                Referências bíblicas: Efésios 4:29;
+                Colossenses 4:6; Filipenses 4:8.
+            </p>
+
+        </section>
+
+
+        <section class="bloco-estudo">
+
+            <h2>9. O exemplo de Pedro: a restauração de uma vida</h2>
+
+            <p>
+                O apóstolo Pedro oferece uma importante reflexão sobre
+                as dificuldades de viver de maneira coerente com a fé.
+            </p>
+
+            <p>
+                Antes da crucificação de Jesus, Pedro afirmou que
+                permaneceria fiel ao Mestre. Entretanto, diante da
+                pressão e do medo, negou conhecê-lo por três vezes.
+            </p>
+
+            <p>
+                Sua atitude demonstrou uma contradição entre aquilo
+                que havia declarado e aquilo que conseguiu realizar
+                naquele momento.
+            </p>
+
+            <p>
+                Após a ressurreição, Jesus restaurou Pedro e lhe
+                confiou novamente responsabilidades no cuidado
+                de seu povo.
+            </p>
+
+            <p>
+                Esse episódio nos ensina que a coerência cristã não
+                significa nunca falhar. O discípulo pode enfrentar
+                momentos de fraqueza, mas deve reconhecer seus erros,
+                voltar-se para Cristo e prosseguir em fidelidade.
+            </p>
+
+            <p>
+                A restauração de Pedro demonstra a graça de Cristo
+                e a possibilidade de uma vida renovada.
+            </p>
+
+            <p class="referencia">
+                Referências bíblicas: Lucas 22:54-62;
+                João 21:15-19.
+            </p>
+
+        </section>
+
+
+        <section class="bloco-estudo">
+
+            <h2>10. A coerência como compromisso permanente</h2>
+
+            <p>
+                A formação do caráter cristão é um processo contínuo.
+                Todos os dias surgem oportunidades para demonstrar
+                se nossas escolhas estão sendo orientadas pela fé.
+            </p>
+
+            <p>
+                O homem segundo o coração de Deus precisa compreender
+                que sua profissão de fé envolve responsabilidade.
+                Não basta defender princípios bíblicos em público;
+                é necessário procurar praticá-los também nas decisões
+                particulares.
+            </p>
+
+            <p>
+                Isso exige humildade para reconhecer falhas, disposição
+                para aprender com as Escrituras e compromisso com o
+                crescimento espiritual.
+            </p>
+
+            <p>
+                A coerência não é uma apresentação de perfeição diante
+                das pessoas, mas uma busca sincera por fidelidade
+                diante de Deus.
+            </p>
+
+            <div class="destaque">
+
+                <p>
+                    A fé que professamos deve orientar a vida que vivemos.
+                    Nossas palavras anunciam aquilo em que cremos, mas
+                    nossas atitudes também precisam demonstrar essa fé.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="caixa-reflexao">
+
+            <h2>Reflexão para o homem cristão</h2>
+
+            <p>
+                Minha maneira de viver corresponde aos princípios
+                que afirmo defender?
+            </p>
+
+            <p>
+                Minha família consegue perceber em minhas atitudes
+                os valores cristãos que ensino?
+            </p>
+
+            <p>
+                Tenho demonstrado honestidade, respeito e amor
+                nos ambientes em que convivo?
+            </p>
+
+            <p>
+                Quando reconheço que minhas atitudes contradizem
+                minha fé, estou disposto a corrigir meus caminhos?
+            </p>
+
+            <p>
+                Que mudanças práticas preciso realizar para que
+                minha vida demonstre maior coerência com o Evangelho?
+            </p>
+
+        </section>
+
+
+        <section class="versiculo-memorizacao">
+
+            <h2>Versículo para memorizar</h2>
+
+            <p>
+                “E tudo quanto fizerdes, fazei-o de todo o coração,
+                como ao Senhor e não aos homens.”
+            </p>
+
+            <strong>Colossenses 3:23</strong>
+
+        </section>
+
+
+        <section class="principio-formativo">
+
+            <h2>Princípio Formativo</h2>
+
+            <p>
+                O homem segundo o coração de Deus procura viver
+                de maneira coerente com sua fé, permitindo que os
+                ensinamentos das Escrituras orientem suas palavras,
+                decisões e atitudes em todos os ambientes de sua vida.
+            </p>
+
+        </section>
+
+
+        <div class="botoes-apoio">
+
+            <button onclick="window.print()">
+                IMPRIMIR ESTUDO
+            </button>
+
+            <a href="apresentacao.html">
+                APRESENTAÇÃO DO MÓDULO
+            </a>
+
+        </div>
+
+
+        <nav class="navegacao-temas">
+
+            <a href="tema04.html">
+                ← TEMA ANTERIOR
+            </a>
+
+            <a href="tema06.html">
+                PRÓXIMO TEMA →
+            </a>
+
+        </nav>
+
+
+    </main>
+
+</body>
+
+</html>

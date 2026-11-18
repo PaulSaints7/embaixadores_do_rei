@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Integridade: Ser o Mesmo em Todas as Circunstâncias | Módulo 04</title>
+
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        :root {
+            --marrom-escuro: #38271F;
+            --marrom: #593B2B;
+            --marrom-medio: #76523C;
+            --azul: #18334D;
+            --azul-claro: #294B65;
+            --dourado: #B08A48;
+            --dourado-claro: #D1B477;
+            --pergaminho: #E9DFC9;
+            --creme: #F7F4EC;
+            --texto: #333333;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--creme);
+            color: var(--texto);
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.8;
+        }
+
+        .topo-tema {
+            background: linear-gradient(
+                135deg,
+                var(--marrom-escuro),
+                var(--azul)
+            );
+
+            color: white;
+            padding: 55px 20px;
+            text-align: center;
+        }
+
+        .topo-tema .identificacao {
+            color: var(--dourado-claro);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .topo-tema h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            max-width: 900px;
+            margin: 0 auto 18px;
+            line-height: 1.4;
+        }
+
+        .topo-tema p {
+            max-width: 750px;
+            margin: auto;
+            color: #E9DFC9;
+            font-size: 1rem;
+        }
+
+        .linha-dourada {
+            width: 85px;
+            height: 3px;
+            background: var(--dourado);
+            margin: 25px auto;
+        }
+
+        .conteudo {
+            max-width: 1050px;
+            margin: 45px auto;
+            padding: 0 22px;
+        }
+
+        .bloco {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 28px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+            border-left: 5px solid var(--dourado);
+        }
+
+        .bloco h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--marrom);
+            font-size: 1.35rem;
+            margin-top: 0;
+            margin-bottom: 18px;
+        }
+
+        .bloco h3 {
+            color: var(--azul);
+            font-size: 1.08rem;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        .bloco p {
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .versiculo {
+            background: var(--pergaminho);
+            border-left: 5px solid var(--dourado);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 22px 0;
+        }
+
+        .versiculo p {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.05rem;
+            color: var(--marrom-escuro);
+            font-style: italic;
+            text-align: left;
+            margin-bottom: 12px;
+        }
+
+        .versiculo strong {
+            color: var(--marrom);
+        }
+
+        .lista {
+            padding-left: 25px;
+            margin: 15px 0;
+        }
+
+        .lista li {
+            margin-bottom: 12px;
+        }
+
+        .destaque {
+            background: #F0F3F5;
+            border-left: 5px solid var(--azul);
+            padding: 22px;
+            border-radius: 7px;
+            margin: 22px 0;
+        }
+
+        .destaque strong {
+            color: var(--azul);
+        }
+
+        .reflexao {
+            background: var(--azul);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 28px;
+        }
+
+        .reflexao h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--dourado-claro);
+            margin-top: 0;
+        }
+
+        .reflexao p {
+            text-align: justify;
+        }
+
+        .reflexao li {
+            margin-bottom: 12px;
+        }
+
+        .principio {
+            text-align: center;
+            background: var(--marrom-escuro);
+            color: white;
+            padding: 35px 25px;
+            border-radius: 10px;
+            margin: 35px 0;
+        }
+
+        .principio h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--dourado-claro);
+            margin-top: 0;
+        }
+
+        .principio p {
+            max-width: 800px;
+            margin: auto;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.08rem;
+        }
+
+        .navegacao {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 40px 0;
+        }
+
+        .botao {
+            display: inline-block;
+            background: var(--azul);
+            color: white;
+            padding: 13px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            background: var(--marrom);
+            transform: translateY(-2px);
+        }
+
+        .botao-secundario {
+            background: var(--marrom);
+        }
+
+        .rodape-tema {
+            background: var(--marrom-escuro);
+            color: var(--pergaminho);
+            text-align: center;
+            padding: 25px 15px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 650px) {
+
+            .bloco {
+                padding: 22px 18px;
+            }
+
+            .topo-tema {
+                padding: 40px 18px;
+            }
+
+            .navegacao {
+                flex-direction: column;
+            }
+
+            .botao {
+                text-align: center;
+            }
+
+        }
+
+        @media print {
+
+            body {
+                background: white;
+                color: black;
+            }
+
+            .topo-tema {
+                background: white !important;
+                color: black !important;
+                padding: 20px;
+            }
+
+            .topo-tema h1,
+            .topo-tema p,
+            .topo-tema .identificacao {
+                color: black !important;
+            }
+
+            .conteudo {
+                max-width: 100%;
+                margin: 20px auto;
+            }
+
+            .bloco {
+                box-shadow: none;
+                border: 1px solid #cccccc;
+                break-inside: avoid;
+            }
+
+            .reflexao,
+            .principio,
+            .versiculo,
+            .destaque {
+                background: white !important;
+                color: black !important;
+                border: 1px solid #999999;
+            }
+
+            .reflexao h2,
+            .principio h2 {
+                color: black !important;
+            }
+
+            .navegacao,
+            .rodape-tema {
+                display: none;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header class="topo-tema">
+
+        <div class="identificacao">
+            Homens Segundo o Coração de Deus
+        </div>
+
+        <h1>Integridade: Ser o Mesmo em Todas as Circunstâncias</h1>
+
+        <div class="linha-dourada"></div>
+
+        <p>
+            Módulo 04 — Caráter, Honra e Integridade
+            <br>
+            Tema 03 de 06
+        </p>
+
+    </header>
+
+
+    <main class="conteudo">
+
+        <!-- INTRODUÇÃO -->
+
+        <section class="bloco">
+
+            <h2>1. Introdução</h2>
+
+            <p>
+                Uma das características mais importantes de um homem
+                de caráter é a integridade. Ela se manifesta quando
+                existe coerência entre aquilo que uma pessoa acredita,
+                aquilo que declara e a maneira como realmente vive.
+            </p>
+
+            <p>
+                Ser íntegro significa procurar agir corretamente
+                em todas as circunstâncias, sem construir uma
+                personalidade para a Igreja e outra para o restante
+                da vida.
+            </p>
+
+            <p>
+                A integridade não é demonstrada somente nos grandes
+                acontecimentos. Ela aparece nas pequenas decisões,
+                nos compromissos assumidos, na maneira de tratar
+                as pessoas e nas atitudes tomadas quando ninguém
+                está observando.
+            </p>
+
+            <p>
+                Para o homem cristão, viver com integridade significa
+                procurar manter sua conduta fundamentada nos princípios
+                das Escrituras, mesmo quando enfrenta pressões,
+                dificuldades ou oportunidades de obter vantagens
+                por meios incorretos.
+            </p>
+
+        </section>
+
+
+        <!-- CONCEITO -->
+
+        <section class="bloco">
+
+            <h2>2. O que significa viver com integridade?</h2>
+
+            <p>
+                A palavra integridade está relacionada à ideia de
+                inteireza, coerência e retidão. No campo moral,
+                descreve uma pessoa cuja conduta demonstra fidelidade
+                aos princípios que afirma defender.
+            </p>
+
+            <p>
+                Uma pessoa íntegra não procura adaptar seus valores
+                de acordo com as vantagens que determinada situação
+                pode oferecer. Ela procura manter suas convicções
+                mesmo quando agir corretamente exige sacrifícios.
+            </p>
+
+            <p>
+                A integridade envolve sinceridade, honestidade,
+                responsabilidade e coerência entre pensamento,
+                palavras e atitudes.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "O justo anda na sua sinceridade; bem-aventurados
+                    serão os seus filhos depois dele."
+                </p>
+
+                <strong>Provérbios 20:7</strong>
+
+            </div>
+
+            <p>
+                O texto destaca o valor de uma vida marcada pela
+                retidão. A integridade não beneficia apenas quem
+                a pratica, mas também influencia aqueles que
+                convivem com essa pessoa.
+            </p>
+
+            <div class="destaque">
+
+                <strong>Um princípio fundamental:</strong>
+
+                <p>
+                    Integridade é permanecer fiel aos princípios
+                    corretos mesmo quando as circunstâncias mudam
+                    e ninguém está presente para observar nossas
+                    decisões.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- COERÊNCIA -->
+
+        <section class="bloco">
+
+            <h2>3. A coerência entre convicções e atitudes</h2>
+
+            <p>
+                Uma das maiores demonstrações de integridade
+                acontece quando as atitudes correspondem às
+                convicções pessoais.
+            </p>
+
+            <p>
+                O homem cristão deve procurar viver de acordo
+                com aquilo que aprende nas Escrituras. Sua fé
+                não pode ficar restrita às palavras, aos cultos
+                ou às atividades religiosas.
+            </p>
+
+            <p>
+                A coerência cristã exige que os ensinamentos
+                de Cristo influenciem as decisões tomadas
+                em todas as áreas da vida.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Assim resplandeça a vossa luz diante dos homens,
+                    para que vejam as vossas boas obras e glorifiquem
+                    a vosso Pai, que está nos céus."
+                </p>
+
+                <strong>Mateus 5:16</strong>
+
+            </div>
+
+            <p>
+                Jesus ensina que a conduta dos seus discípulos
+                deve produzir um testemunho visível. As boas
+                obras não substituem a fé, mas demonstram
+                publicamente os frutos de uma vida comprometida
+                com Deus.
+            </p>
+
+            <h3>Quando existe falta de coerência?</h3>
+
+            <ul class="lista">
+
+                <li>
+                    Quando alguém ensina honestidade, mas pratica
+                    a desonestidade.
+                </li>
+
+                <li>
+                    Quando defende o respeito, mas humilha outras
+                    pessoas.
+                </li>
+
+                <li>
+                    Quando fala sobre fidelidade, mas não cumpre
+                    os compromissos assumidos.
+                </li>
+
+                <li>
+                    Quando exige responsabilidade dos outros,
+                    mas não assume suas próprias obrigações.
+                </li>
+
+                <li>
+                    Quando demonstra uma conduta na Igreja e outra
+                    completamente diferente fora dela.
+                </li>
+
+            </ul>
+
+            <p>
+                A integridade exige que a fé professada encontre
+                expressão concreta na maneira de viver.
+            </p>
+
+        </section>
+
+
+        <!-- VIDA PRIVADA -->
+
+        <section class="bloco">
+
+            <h2>4. Integridade quando ninguém está observando</h2>
+
+            <p>
+                É relativamente fácil demonstrar um bom comportamento
+                quando estamos diante de pessoas cuja opinião desejamos
+                conquistar. O verdadeiro desafio aparece quando
+                precisamos decidir corretamente sem receber
+                reconhecimento ou fiscalização.
+            </p>
+
+            <p>
+                A integridade não depende da presença de testemunhas.
+                Ela está relacionada às convicções que orientam
+                a consciência e às responsabilidades que assumimos
+                diante de Deus.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Os olhos do Senhor estão em todo lugar,
+                    contemplando os maus e os bons."
+                </p>
+
+                <strong>Provérbios 15:3</strong>
+
+            </div>
+
+            <p>
+                A consciência da presença de Deus deve levar
+                o cristão a viver com sinceridade, tanto em público
+                quanto em particular.
+            </p>
+
+            <h3>Exemplos cotidianos de integridade</h3>
+
+            <ul class="lista">
+
+                <li>
+                    Devolver um objeto encontrado, mesmo quando
+                    ninguém sabe que ele está em nossa posse.
+                </li>
+
+                <li>
+                    Cumprir um acordo mesmo quando seria possível
+                    encontrar uma desculpa para descumpri-lo.
+                </li>
+
+                <li>
+                    Registrar corretamente informações financeiras
+                    e profissionais.
+                </li>
+
+                <li>
+                    Evitar mentiras para escapar de consequências
+                    desagradáveis.
+                </li>
+
+                <li>
+                    Respeitar a confiança recebida de outras pessoas.
+                </li>
+
+                <li>
+                    Utilizar recursos da Igreja e do trabalho
+                    de maneira responsável.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- PRESSÕES -->
+
+        <section class="bloco">
+
+            <h2>5. A integridade diante das pressões e tentações</h2>
+
+            <p>
+                A integridade é frequentemente colocada à prova
+                quando uma pessoa enfrenta pressões externas,
+                dificuldades financeiras, interesses pessoais
+                ou oportunidades de obter vantagens indevidas.
+            </p>
+
+            <p>
+                Nessas situações, o homem precisa decidir se
+                permanecerá fiel aos seus princípios ou se
+                permitirá que as circunstâncias determinem
+                seu comportamento.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Não veio sobre vós tentação, senão humana;
+                    mas fiel é Deus, que não vos deixará tentar
+                    acima do que podeis."
+                </p>
+
+                <strong>1 Coríntios 10:13</strong>
+
+            </div>
+
+            <p>
+                Paulo ensina sobre a fidelidade de Deus diante
+                das tentações e sobre a possibilidade de encontrar
+                o escape para não ceder ao pecado.
+            </p>
+
+            <h3>Algumas situações que colocam a integridade à prova:</h3>
+
+            <ul class="lista">
+
+                <li>
+                    A possibilidade de ganhar dinheiro por meios
+                    desonestos.
+                </li>
+
+                <li>
+                    A pressão de colegas para participar de
+                    comportamentos incorretos.
+                </li>
+
+                <li>
+                    O desejo de esconder erros para preservar
+                    a própria imagem.
+                </li>
+
+                <li>
+                    A oportunidade de utilizar a posição ocupada
+                    para obter vantagens pessoais.
+                </li>
+
+                <li>
+                    A tentação de abandonar compromissos quando
+                    eles deixam de ser convenientes.
+                </li>
+
+            </ul>
+
+            <p>
+                A integridade exige coragem moral para permanecer
+                fiel ao que é correto, mesmo quando isso traz
+                dificuldades ou exige renúncia.
+            </p>
+
+        </section>
+
+
+        <!-- DANIEL -->
+
+        <section class="bloco">
+
+            <h2>6. Daniel: integridade em uma sociedade contrária às suas convicções</h2>
+
+            <p>
+                Daniel é um dos exemplos mais conhecidos de fidelidade
+                e integridade nas Escrituras.
+            </p>
+
+            <p>
+                Levado para a Babilônia ainda jovem, ele passou a viver
+                em um ambiente cultural, político e religioso diferente
+                daquele em que havia sido formado.
+            </p>
+
+            <p>
+                Apesar das mudanças e das pressões, Daniel procurou
+                permanecer fiel aos princípios que orientavam sua
+                relação com Deus.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Então os presidentes e os príncipes procuravam
+                    achar ocasião contra Daniel a respeito do reino;
+                    mas não podiam achar ocasião ou culpa alguma;
+                    porque ele era fiel, e não se achava nele nenhum
+                    erro nem culpa."
+                </p>
+
+                <strong>Daniel 6:4</strong>
+
+            </div>
+
+            <p>
+                Seus adversários não encontraram motivos legítimos
+                para acusá-lo de corrupção ou negligência em suas
+                responsabilidades.
+            </p>
+
+            <p>
+                Como não conseguiram encontrar falhas em sua conduta
+                administrativa, procuraram utilizar sua fidelidade
+                religiosa para prejudicá-lo.
+            </p>
+
+            <p>
+                Daniel permaneceu comprometido com sua vida de oração,
+                mesmo diante da ameaça de ser lançado na cova dos leões.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Daniel, pois, quando soube que a escritura estava
+                    assinada, entrou em sua casa e, em cima, no seu
+                    quarto, onde havia janelas abertas da banda de
+                    Jerusalém, três vezes no dia se punha de joelhos,
+                    e orava, e dava graças diante do seu Deus,
+                    como também antes costumava fazer."
+                </p>
+
+                <strong>Daniel 6:10</strong>
+
+            </div>
+
+            <p>
+                A história de Daniel demonstra que a integridade
+                precisa permanecer firme mesmo quando existe pressão
+                para abandonar convicções importantes.
+            </p>
+
+            <p>
+                Também revela que a fidelidade a Deus deve acompanhar
+                a maneira como desempenhamos nossas responsabilidades
+                públicas e profissionais.
+            </p>
+
+        </section>
+
+
+        <!-- JÓ -->
+
+        <section class="bloco">
+
+            <h2>7. Jó: integridade em meio às adversidades</h2>
+
+            <p>
+                A história de Jó apresenta outro importante exemplo
+                de integridade.
+            </p>
+
+            <p>
+                O livro começa descrevendo um homem que possuía
+                uma vida marcada pelo temor a Deus e pela retidão.
+                Entretanto, Jó enfrentou perdas profundas e
+                circunstâncias extremamente dolorosas.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Havia um homem na terra de Uz, cujo nome era Jó;
+                    e era este homem íntegro, reto e temente a Deus
+                    e desviava-se do mal."
+                </p>
+
+                <strong>Jó 1:1</strong>
+
+            </div>
+
+            <p>
+                Durante seu sofrimento, Jó recebeu conselhos e
+                questionamentos de seus amigos. Sua experiência
+                mostra a complexidade das provações humanas
+                e a necessidade de buscar compreensão diante
+                de Deus.
+            </p>
+
+            <p>
+                Sua história também nos ensina que a integridade
+                não deve ser medida pela ausência de dificuldades
+                ou pela prosperidade material.
+            </p>
+
+            <p>
+                Uma pessoa pode enfrentar sofrimento e continuar
+                procurando viver diante de Deus com sinceridade.
+            </p>
+
+            <div class="destaque">
+
+                <strong>Aprendizado:</strong>
+
+                <p>
+                    A integridade não significa ter uma vida sem
+                    problemas. Significa procurar permanecer fiel
+                    a Deus mesmo quando não compreendemos plenamente
+                    as circunstâncias que enfrentamos.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- PAULO -->
+
+        <section class="bloco">
+
+            <h2>8. Paulo: consciência e sinceridade diante de Deus</h2>
+
+            <p>
+                O apóstolo Paulo também oferece importantes
+                ensinamentos sobre uma vida conduzida com
+                sinceridade e responsabilidade.
+            </p>
+
+            <p>
+                Ao escrever aos coríntios, Paulo destaca que
+                procurava conduzir seu ministério com simplicidade
+                e sinceridade diante de Deus.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Porque a nossa glória é esta: o testemunho
+                    da nossa consciência, de que com simplicidade
+                    e sinceridade de Deus, não com sabedoria
+                    carnal, mas na graça de Deus, temos vivido
+                    no mundo."
+                </p>
+
+                <strong>2 Coríntios 1:12</strong>
+
+            </div>
+
+            <p>
+                Paulo compreendia que o serviço cristão deveria
+                ser realizado com sinceridade, sem manipulação
+                ou interesses contrários ao Evangelho.
+            </p>
+
+            <p>
+                Sua orientação demonstra que a integridade também
+                é indispensável na liderança, no ministério e
+                no exercício de responsabilidades dentro da Igreja.
+            </p>
+
+        </section>
+
+
+        <!-- RESPONSABILIDADES -->
+
+        <section class="bloco">
+
+            <h2>9. A integridade nas diferentes áreas da vida</h2>
+
+            <p>
+                A integridade precisa acompanhar o homem cristão
+                em todas as dimensões de sua existência.
+            </p>
+
+            <h3>Na família</h3>
+
+            <p>
+                O homem íntegro procura ser verdadeiro em seus
+                relacionamentos, cumpre suas responsabilidades
+                familiares, respeita os compromissos conjugais
+                e procura oferecer aos filhos um exemplo coerente
+                de vida.
+            </p>
+
+            <h3>Na Igreja</h3>
+
+            <p>
+                A integridade aparece na fidelidade ao serviço,
+                na transparência, na responsabilidade com os
+                recursos da Igreja e na disposição de trabalhar
+                em cooperação com os irmãos.
+            </p>
+
+            <h3>No trabalho</h3>
+
+            <p>
+                O homem íntegro exerce sua profissão com honestidade,
+                respeita os acordos, não falsifica informações
+                e não utiliza meios desonestos para alcançar
+                resultados.
+            </p>
+
+            <h3>Na sociedade</h3>
+
+            <p>
+                A integridade se manifesta no cumprimento dos deveres,
+                no respeito às leis justas, na responsabilidade
+                cidadã e na disposição de contribuir para o bem comum.
+            </p>
+
+            <h3>Na vida pessoal</h3>
+
+            <p>
+                O homem íntegro procura manter coerência entre
+                seus pensamentos, palavras e comportamentos,
+                reconhecendo que sua vida particular também
+                deve ser orientada pelos princípios de Deus.
+            </p>
+
+        </section>
+
+
+        <!-- ERROS E RESTAURAÇÃO -->
+
+        <section class="bloco">
+
+            <h2>10. Integridade também exige reconhecer os próprios erros</h2>
+
+            <p>
+                É importante compreender que integridade não significa
+                perfeição absoluta ou ausência de falhas.
+            </p>
+
+            <p>
+                Todos os seres humanos estão sujeitos ao pecado,
+                às limitações e às decisões equivocadas. A diferença
+                está na maneira como cada pessoa reage diante
+                de seus próprios erros.
+            </p>
+
+            <p>
+                O homem íntegro não procura construir justificativas
+                permanentes para suas falhas, nem transfere sempre
+                a responsabilidade para outras pessoas.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Se confessarmos os nossos pecados, ele é fiel
+                    e justo para nos perdoar os pecados e nos purificar
+                    de toda injustiça."
+                </p>
+
+                <strong>1 João 1:9</strong>
+
+            </div>
+
+            <p>
+                A confissão sincera, o arrependimento e a disposição
+                para corrigir os próprios caminhos fazem parte
+                de uma vida cristã responsável.
+            </p>
+
+            <p>
+                Quando possível, também é necessário reparar os danos
+                causados, pedir perdão e reconstruir a confiança
+                por meio de atitudes coerentes.
+            </p>
+
+            <div class="destaque">
+
+                <strong>Integridade não é fingir que nunca erramos.</strong>
+
+                <p>
+                    É ter humildade para reconhecer as falhas,
+                    responsabilidade para assumir suas consequências
+                    e disposição para buscar uma vida transformada
+                    diante de Deus.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONCLUSÃO -->
+
+        <section class="bloco">
+
+            <h2>11. Conclusão</h2>
+
+            <p>
+                A integridade é uma característica essencial
+                do caráter cristão. Ela se manifesta na coerência
+                entre convicções, palavras e atitudes.
+            </p>
+
+            <p>
+                Ser íntegro significa procurar agir corretamente
+                em todas as circunstâncias, tanto diante das pessoas
+                quanto nos momentos em que ninguém está observando.
+            </p>
+
+            <p>
+                Daniel nos ensina a permanecer firmes em nossas
+                convicções. Jó demonstra que a integridade precisa
+                ser preservada mesmo em períodos de sofrimento.
+                Paulo apresenta a importância da sinceridade
+                no exercício do ministério cristão.
+            </p>
+
+            <p>
+                O homem segundo o coração de Deus deve compreender
+                que sua fé precisa orientar toda a sua existência.
+                Não basta professar valores cristãos: é necessário
+                procurar vivê-los diariamente.
+            </p>
+
+        </section>
+
+
+        <!-- REFLEXÃO -->
+
+        <section class="reflexao">
+
+            <h2>Reflexão para a vida</h2>
+
+            <p>
+                A integridade é revelada nas decisões que tomamos
+                quando nossos princípios são colocados à prova.
+                Ela exige sinceridade diante de Deus e responsabilidade
+                diante das pessoas.
+            </p>
+
+            <p>
+                Considere as seguintes perguntas:
+            </p>
+
+            <ol>
+
+                <li>
+                    Existe coerência entre aquilo que acredito,
+                    aquilo que falo e aquilo que pratico?
+                </li>
+
+                <li>
+                    Minha conduta é a mesma na Igreja, em casa
+                    e no ambiente de trabalho?
+                </li>
+
+                <li>
+                    Consigo permanecer fiel aos meus princípios
+                    quando enfrento pressões ou dificuldades?
+                </li>
+
+                <li>
+                    Tenho coragem para reconhecer meus erros
+                    e assumir suas consequências?
+                </li>
+
+                <li>
+                    As pessoas que convivem comigo podem confiar
+                    em minhas palavras e atitudes?
+                </li>
+
+            </ol>
+
+        </section>
+
+
+        <!-- PRINCÍPIO FORMATIVO -->
+
+        <section class="principio">
+
+            <h2>Princípio Formativo</h2>
+
+            <p>
+                O homem segundo o coração de Deus procura viver
+                com integridade, mantendo coerência entre suas
+                convicções, palavras e atitudes, permanecendo
+                fiel aos princípios das Escrituras em todas
+                as circunstâncias.
+            </p>
+
+        </section>
+
+
+        <!-- VERSÍCULO PARA MEMORIZAÇÃO -->
+
+        <section class="bloco">
+
+            <h2>Versículo para memorizar</h2>
+
+            <div class="versiculo">
+
+                <p>
+                    "O justo anda na sua sinceridade; bem-aventurados
+                    serão os seus filhos depois dele."
+                </p>
+
+                <strong>Provérbios 20:7</strong>
+
+            </div>
+
+            <p>
+                A integridade é um legado que ultrapassa a vida
+                individual. Uma conduta coerente pode influenciar
+                positivamente a família, os filhos, a Igreja
+                e as pessoas que convivem conosco.
+            </p>
+
+        </section>
+
+
+        <!-- NAVEGAÇÃO -->
+
+        <nav class="navegacao">
+
+            <a
+                href="tema02.html"
+                class="botao botao-secundario">
+
+                ← Tema Anterior
+
+            </a>
+
+            <a
+                href="tema04.html"
+                class="botao">
+
+                Próximo Tema →
+
+            </a>
+
+        </nav>
+
+        <div class="navegacao">
+
+            <a
+                href="apresentacao.html"
+                class="botao botao-secundario">
+
+                Voltar ao Módulo 04
+
+            </a>
+
+            <button
+                onclick="window.print()"
+                class="botao"
+                style="border: none; cursor: pointer; font-family: inherit;">
+
+                Imprimir Estudo
+
+            </button>
+
+            <a
+                href="../../../uhbb_psh.html"
+                class="botao botao-secundario">
+
+                Página Inicial
+
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <footer class="rodape-tema">
+
+        <p>
+            HOMENS SEGUNDO O CORAÇÃO DE DEUS
+        </p>
+
+        <p>
+            Formando homens, fortalecendo famílias e servindo à Igreja de Cristo.
+        </p>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>O Caráter Cristão e sua Formação | Módulo 04</title>
+
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        :root {
+            --marrom-escuro: #38271F;
+            --marrom: #593B2B;
+            --marrom-medio: #76523C;
+            --azul: #18334D;
+            --azul-claro: #294B65;
+            --dourado: #B08A48;
+            --dourado-claro: #D1B477;
+            --pergaminho: #E9DFC9;
+            --creme: #F7F4EC;
+            --texto: #333333;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--creme);
+            color: var(--texto);
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.8;
+        }
+
+        .topo-tema {
+            background: linear-gradient(
+                135deg,
+                var(--marrom-escuro),
+                var(--azul)
+            );
+
+            color: white;
+            padding: 55px 20px;
+            text-align: center;
+        }
+
+        .topo-tema .identificacao {
+            color: var(--dourado-claro);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .topo-tema h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            max-width: 900px;
+            margin: 0 auto 18px;
+            line-height: 1.4;
+        }
+
+        .topo-tema p {
+            max-width: 750px;
+            margin: auto;
+            color: #E9DFC9;
+            font-size: 1rem;
+        }
+
+        .linha-dourada {
+            width: 85px;
+            height: 3px;
+            background: var(--dourado);
+            margin: 25px auto;
+        }
+
+        .conteudo {
+            max-width: 1050px;
+            margin: 45px auto;
+            padding: 0 22px;
+        }
+
+        .bloco {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 28px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+            border-left: 5px solid var(--dourado);
+        }
+
+        .bloco h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--marrom);
+            font-size: 1.35rem;
+            margin-top: 0;
+            margin-bottom: 18px;
+        }
+
+        .bloco h3 {
+            color: var(--azul);
+            font-size: 1.08rem;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        .bloco p {
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .referencia {
+            color: var(--marrom-medio);
+            font-weight: 700;
+        }
+
+        .versiculo {
+            background: var(--pergaminho);
+            border-left: 5px solid var(--dourado);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 22px 0;
+        }
+
+        .versiculo p {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.05rem;
+            color: var(--marrom-escuro);
+            font-style: italic;
+            text-align: left;
+            margin-bottom: 12px;
+        }
+
+        .versiculo strong {
+            color: var(--marrom);
+        }
+
+        .lista {
+            padding-left: 25px;
+            margin: 15px 0;
+        }
+
+        .lista li {
+            margin-bottom: 12px;
+        }
+
+        .destaque {
+            background: #F0F3F5;
+            border-left: 5px solid var(--azul);
+            padding: 22px;
+            border-radius: 7px;
+            margin: 22px 0;
+        }
+
+        .destaque strong {
+            color: var(--azul);
+        }
+
+        .reflexao {
+            background: var(--azul);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 28px;
+        }
+
+        .reflexao h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--dourado-claro);
+            margin-top: 0;
+        }
+
+        .reflexao p {
+            text-align: justify;
+        }
+
+        .reflexao li {
+            margin-bottom: 12px;
+        }
+
+        .principio {
+            text-align: center;
+            background: var(--marrom-escuro);
+            color: white;
+            padding: 35px 25px;
+            border-radius: 10px;
+            margin: 35px 0;
+        }
+
+        .principio h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--dourado-claro);
+            margin-top: 0;
+        }
+
+        .principio p {
+            max-width: 800px;
+            margin: auto;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.08rem;
+        }
+
+        .navegacao {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 40px 0;
+        }
+
+        .botao {
+            display: inline-block;
+            background: var(--azul);
+            color: white;
+            padding: 13px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            background: var(--marrom);
+            transform: translateY(-2px);
+        }
+
+        .botao-secundario {
+            background: var(--marrom);
+        }
+
+        .rodape-tema {
+            background: var(--marrom-escuro);
+            color: var(--pergaminho);
+            text-align: center;
+            padding: 25px 15px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 650px) {
+
+            .bloco {
+                padding: 22px 18px;
+            }
+
+            .topo-tema {
+                padding: 40px 18px;
+            }
+
+            .navegacao {
+                flex-direction: column;
+            }
+
+            .botao {
+                text-align: center;
+            }
+
+        }
+
+        @media print {
+
+            body {
+                background: white;
+                color: black;
+            }
+
+            .topo-tema {
+                background: white !important;
+                color: black !important;
+                padding: 20px;
+            }
+
+            .topo-tema h1,
+            .topo-tema p,
+            .topo-tema .identificacao {
+                color: black !important;
+            }
+
+            .conteudo {
+                max-width: 100%;
+                margin: 20px auto;
+            }
+
+            .bloco {
+                box-shadow: none;
+                border: 1px solid #cccccc;
+                break-inside: avoid;
+            }
+
+            .reflexao,
+            .principio,
+            .versiculo,
+            .destaque {
+                background: white !important;
+                color: black !important;
+                border: 1px solid #999999;
+            }
+
+            .reflexao h2,
+            .principio h2 {
+                color: black !important;
+            }
+
+            .navegacao,
+            .rodape-tema {
+                display: none;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header class="topo-tema">
+
+        <div class="identificacao">
+            Homens Segundo o Coração de Deus
+        </div>
+
+        <h1>O Caráter Cristão e sua Formação</h1>
+
+        <div class="linha-dourada"></div>
+
+        <p>
+            Módulo 04 — Caráter, Honra e Integridade
+            <br>
+            Tema 01 de 06
+        </p>
+
+    </header>
+
+
+    <main class="conteudo">
+
+        <!-- INTRODUÇÃO -->
+
+        <section class="bloco">
+
+            <h2>1. Introdução</h2>
+
+            <p>
+                O caráter é uma das dimensões mais importantes da vida humana.
+                Ele está relacionado ao conjunto de princípios, valores e
+                convicções que orientam nossas decisões e determinam a maneira
+                como nos comportamos diante das diferentes circunstâncias
+                da vida.
+            </p>
+
+            <p>
+                A aparência pode impressionar, a posição social pode despertar
+                admiração e as palavras podem transmitir uma imagem positiva.
+                Entretanto, é o caráter que revela quem realmente somos,
+                especialmente quando enfrentamos situações nas quais nossas
+                escolhas são colocadas à prova.
+            </p>
+
+            <p>
+                Nas Escrituras Sagradas, encontramos orientações fundamentais
+                para a formação de uma vida marcada pela fidelidade a Deus,
+                pela justiça, pela verdade e pelo amor ao próximo.
+            </p>
+
+            <p>
+                O homem cristão não deve se preocupar apenas com a imagem
+                que transmite às outras pessoas. Ele precisa desenvolver
+                uma vida coerente com sua fé, permitindo que os princípios
+                da Palavra de Deus orientem suas atitudes.
+            </p>
+
+        </section>
+
+
+        <!-- CONCEITO -->
+
+        <section class="bloco">
+
+            <h2>2. O que é caráter?</h2>
+
+            <p>
+                Caráter pode ser compreendido como o conjunto de disposições
+                morais e princípios que orientam a maneira como uma pessoa
+                pensa, decide e age.
+            </p>
+
+            <p>
+                Ele se manifesta nas escolhas cotidianas, na maneira de tratar
+                as pessoas, no cumprimento das responsabilidades e na postura
+                adotada diante de situações difíceis.
+            </p>
+
+            <p>
+                Uma pessoa de caráter procura agir corretamente não apenas
+                quando está sendo observada, mas também quando ninguém está
+                por perto para fiscalizar suas atitudes.
+            </p>
+
+            <div class="destaque">
+
+                <strong>Uma distinção importante:</strong>
+
+                <p>
+                    Reputação é aquilo que as pessoas pensam a nosso respeito.
+                    Caráter está relacionado àquilo que realmente somos e
+                    demonstramos por meio de nossas escolhas.
+                </p>
+
+            </div>
+
+            <p>
+                A formação do caráter não acontece apenas por meio de discursos
+                ou declarações de boas intenções. Ela envolve aprendizado,
+                convicções, decisões e atitudes praticadas continuamente.
+            </p>
+
+        </section>
+
+
+        <!-- FUNDAMENTO BÍBLICO -->
+
+        <section class="bloco">
+
+            <h2>3. O caráter diante de Deus</h2>
+
+            <p>
+                A Bíblia apresenta Deus como o fundamento de toda verdade,
+                justiça e bondade. Por isso, a formação do caráter cristão
+                não pode ser separada do relacionamento com o Criador.
+            </p>
+
+            <p>
+                O cristão é chamado a desenvolver uma vida que corresponda
+                aos princípios ensinados por Deus em sua Palavra.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Sede, pois, imitadores de Deus, como filhos amados."
+                </p>
+
+                <strong>Efésios 5:1</strong>
+
+            </div>
+
+            <p>
+                Esse ensinamento apresenta um princípio importante:
+                a vida cristã deve refletir o caráter de Deus, especialmente
+                por meio do amor, da justiça, da misericórdia e da verdade.
+            </p>
+
+            <p>
+                Isso não significa que o ser humano possa alcançar a perfeição
+                moral de Deus. Significa que o cristão deve orientar sua vida
+                pelos ensinamentos e pelo exemplo revelados nas Escrituras.
+            </p>
+
+            <h3>O caráter começa no interior</h3>
+
+            <p>
+                Jesus ensinou que as atitudes exteriores estão relacionadas
+                às condições do coração humano. Aquilo que uma pessoa alimenta
+                interiormente acaba influenciando suas palavras e ações.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Porque a boca fala do que está cheio o coração."
+                </p>
+
+                <strong>Mateus 12:34</strong>
+
+            </div>
+
+            <p>
+                Portanto, a formação do caráter exige atenção não somente
+                ao comportamento exterior, mas também aos pensamentos,
+                desejos, intenções e motivações.
+            </p>
+
+        </section>
+
+
+        <!-- FORMAÇÃO -->
+
+        <section class="bloco">
+
+            <h2>4. Como o caráter cristão é formado?</h2>
+
+            <p>
+                A formação do caráter cristão envolve um processo contínuo
+                de crescimento espiritual e transformação da maneira de
+                pensar e agir.
+            </p>
+
+            <p>
+                Esse processo está relacionado à ação de Deus na vida do
+                cristão, à orientação das Escrituras e à disposição pessoal
+                de obedecer aos ensinamentos de Cristo.
+            </p>
+
+            <h3>4.1. Pela Palavra de Deus</h3>
+
+            <p>
+                As Escrituras oferecem orientação para as decisões humanas,
+                revelando princípios que devem orientar nossa conduta.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Lâmpada para os meus pés é tua palavra e luz, para o
+                    meu caminho."
+                </p>
+
+                <strong>Salmo 119:105</strong>
+
+            </div>
+
+            <p>
+                O estudo e a prática da Palavra ajudam o cristão a discernir
+                o que é correto e a desenvolver uma vida orientada pela
+                vontade de Deus.
+            </p>
+
+
+            <h3>4.2. Pela renovação da mente</h3>
+
+            <p>
+                A transformação do comportamento também exige uma mudança
+                na maneira de pensar. O cristão precisa avaliar seus valores,
+                conceitos e decisões à luz dos ensinamentos bíblicos.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "E não vos conformeis com este mundo, mas transformai-vos
+                    pela renovação do vosso entendimento."
+                </p>
+
+                <strong>Romanos 12:2</strong>
+
+            </div>
+
+            <p>
+                A renovação da mente permite que os princípios de Deus
+                influenciem progressivamente as escolhas e atitudes
+                cotidianas.
+            </p>
+
+
+            <h3>4.3. Pela ação do Espírito Santo</h3>
+
+            <p>
+                A formação do caráter cristão não depende exclusivamente
+                da força de vontade humana. A Bíblia ensina que o Espírito
+                Santo produz frutos na vida daqueles que pertencem a Cristo.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Mas o fruto do Espírito é: amor, alegria, paz,
+                    longanimidade, benignidade, bondade, fidelidade,
+                    mansidão, domínio próprio."
+                </p>
+
+                <strong>Gálatas 5:22-23</strong>
+
+            </div>
+
+            <p>
+                Essas virtudes revelam características que devem marcar
+                a vida cristã. Elas demonstram a transformação que Deus
+                realiza na vida daqueles que caminham segundo o Espírito.
+            </p>
+
+
+            <h3>4.4. Pela prática diária</h3>
+
+            <p>
+                O conhecimento bíblico precisa produzir mudanças concretas.
+                Não basta conhecer o que é correto se não houver disposição
+                para colocar esse conhecimento em prática.
+            </p>
+
+            <p>
+                Cada decisão representa uma oportunidade de demonstrar
+                fidelidade aos princípios cristãos: cumprir uma promessa,
+                reconhecer um erro, falar a verdade, respeitar alguém
+                e agir com justiça.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "E sede cumpridores da palavra e não somente ouvintes,
+                    enganando-vos a vós mesmos."
+                </p>
+
+                <strong>Tiago 1:22</strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- VIRTUDES -->
+
+        <section class="bloco">
+
+            <h2>5. Virtudes que devem marcar o caráter cristão</h2>
+
+            <p>
+                O caráter de um homem segundo o coração de Deus deve
+                manifestar-se por meio de atitudes coerentes com os
+                ensinamentos de Cristo.
+            </p>
+
+            <p>Entre as virtudes que merecem destaque estão:</p>
+
+            <ul class="lista">
+
+                <li>
+                    <strong>Honestidade:</strong>
+                    agir com verdade e sinceridade, evitando a mentira,
+                    a fraude e qualquer forma de engano.
+                </li>
+
+                <li>
+                    <strong>Fidelidade:</strong>
+                    permanecer comprometido com Deus, com a família,
+                    com a Igreja e com as responsabilidades assumidas.
+                </li>
+
+                <li>
+                    <strong>Humildade:</strong>
+                    reconhecer os próprios limites, aceitar correções
+                    e tratar as pessoas com respeito.
+                </li>
+
+                <li>
+                    <strong>Justiça:</strong>
+                    procurar agir corretamente, sem favorecer interesses
+                    pessoais em prejuízo de outras pessoas.
+                </li>
+
+                <li>
+                    <strong>Domínio próprio:</strong>
+                    controlar impulsos, palavras e comportamentos,
+                    evitando atitudes precipitadas.
+                </li>
+
+                <li>
+                    <strong>Responsabilidade:</strong>
+                    assumir compromissos, cumprir deveres e reconhecer
+                    as consequências das próprias decisões.
+                </li>
+
+                <li>
+                    <strong>Amor ao próximo:</strong>
+                    demonstrar cuidado, respeito, misericórdia e disposição
+                    para servir.
+                </li>
+
+            </ul>
+
+            <p>
+                Essas virtudes não devem permanecer apenas como conceitos
+                abstratos. Elas precisam ser percebidas no relacionamento
+                com a família, na convivência com os irmãos da Igreja,
+                no ambiente de trabalho e na sociedade.
+            </p>
+
+        </section>
+
+
+        <!-- EXEMPLOS BÍBLICOS -->
+
+        <section class="bloco">
+
+            <h2>6. Exemplos bíblicos de caráter</h2>
+
+            <p>
+                A Bíblia apresenta homens cuja trajetória oferece importantes
+                ensinamentos sobre fidelidade, integridade e compromisso
+                com Deus.
+            </p>
+
+            <h3>6.1. José: fidelidade diante da tentação</h3>
+
+            <p>
+                A história de José demonstra que o caráter é colocado à
+                prova especialmente quando uma pessoa enfrenta situações
+                difíceis ou oportunidades de agir incorretamente.
+            </p>
+
+            <p>
+                Mesmo diante da tentação apresentada pela mulher de Potifar,
+                José recusou-se a praticar o pecado, reconhecendo que sua
+                atitude seria uma ofensa contra Deus.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Como, pois, faria eu este tamanho mal e pecaria
+                    contra Deus?"
+                </p>
+
+                <strong>Gênesis 39:9</strong>
+
+            </div>
+
+            <p>
+                José nos ensina que a fidelidade a Deus deve estar acima
+                das vantagens pessoais e das pressões circunstanciais.
+            </p>
+
+
+            <h3>6.2. Daniel: firmeza nas convicções</h3>
+
+            <p>
+                Daniel viveu em um ambiente cultural e religioso diferente
+                daquele no qual havia sido formado. Mesmo assim, procurou
+                permanecer fiel às suas convicções.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "E Daniel assentou no seu coração não se contaminar
+                    com a porção do manjar do rei."
+                </p>
+
+                <strong>Daniel 1:8</strong>
+
+            </div>
+
+            <p>
+                Sua atitude demonstra a importância de estabelecer
+                convicções firmes antes de enfrentar situações que
+                possam comprometer a fidelidade a Deus.
+            </p>
+
+
+            <h3>6.3. Jó: integridade em meio ao sofrimento</h3>
+
+            <p>
+                O livro de Jó apresenta um homem que enfrentou perdas,
+                sofrimento e questionamentos profundos, mas cuja história
+                destaca sua integridade e seu relacionamento com Deus.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Havia um homem na terra de Uz, cujo nome era Jó;
+                    e era este homem íntegro, reto e temente a Deus
+                    e desviava-se do mal."
+                </p>
+
+                <strong>Jó 1:1</strong>
+
+            </div>
+
+            <p>
+                A trajetória de Jó nos lembra que o caráter não deve
+                depender exclusivamente das circunstâncias favoráveis.
+                A fidelidade a Deus precisa permanecer mesmo nos períodos
+                de provação.
+            </p>
+
+        </section>
+
+
+        <!-- VIDA PRÁTICA -->
+
+        <section class="bloco">
+
+            <h2>7. O caráter nas diferentes áreas da vida</h2>
+
+            <p>
+                O caráter cristão não deve ficar restrito às atividades
+                religiosas. Ele precisa orientar toda a existência do homem.
+            </p>
+
+            <h3>Na família</h3>
+
+            <p>
+                O homem demonstra caráter quando trata os familiares com
+                amor e respeito, cumpre suas responsabilidades, reconhece
+                seus erros e procura construir relacionamentos saudáveis.
+            </p>
+
+            <h3>Na Igreja</h3>
+
+            <p>
+                O caráter aparece na fidelidade aos compromissos, na
+                humildade para servir, no respeito aos irmãos e na
+                disposição de cooperar com a obra de Deus.
+            </p>
+
+            <h3>No trabalho</h3>
+
+            <p>
+                O homem cristão demonstra suas convicções quando trabalha
+                honestamente, respeita seus colegas, cumpre suas obrigações
+                e não utiliza meios desonestos para obter vantagens.
+            </p>
+
+            <h3>Na sociedade</h3>
+
+            <p>
+                O caráter também se manifesta no respeito às pessoas,
+                no cumprimento dos deveres, na responsabilidade cidadã
+                e na defesa de atitudes justas.
+            </p>
+
+            <div class="destaque">
+
+                <strong>Princípio importante:</strong>
+
+                <p>
+                    O caráter cristão não pode ser dividido em duas
+                    personalidades: uma religiosa, apresentada na Igreja,
+                    e outra diferente, vivida no restante da semana.
+                    A fé deve orientar a vida por inteiro.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONCLUSÃO -->
+
+        <section class="bloco">
+
+            <h2>8. Conclusão</h2>
+
+            <p>
+                A formação do caráter cristão é um processo contínuo que
+                envolve relacionamento com Deus, conhecimento das Escrituras,
+                renovação da mente e prática dos ensinamentos de Cristo.
+            </p>
+
+            <p>
+                Um homem de caráter não é aquele que nunca comete erros,
+                mas aquele que reconhece suas falhas, aceita a correção,
+                busca o perdão de Deus e procura viver de maneira coerente
+                com sua fé.
+            </p>
+
+            <p>
+                José, Daniel e Jó são exemplos bíblicos que nos ajudam
+                a compreender a importância da fidelidade, da firmeza
+                nas convicções e da integridade diante das circunstâncias
+                da vida.
+            </p>
+
+            <p>
+                Portanto, o homem segundo o coração de Deus deve compreender
+                que seu caráter é revelado diariamente por suas escolhas,
+                palavras, atitudes e relacionamentos.
+            </p>
+
+        </section>
+
+
+        <!-- REFLEXÃO -->
+
+        <section class="reflexao">
+
+            <h2>Reflexão para a vida</h2>
+
+            <p>
+                A formação do caráter exige sinceridade diante de Deus
+                e disposição para avaliar a própria conduta.
+                Não basta desejar ser reconhecido como um homem íntegro;
+                é necessário procurar viver de maneira íntegra.
+            </p>
+
+            <p>
+                Considere as seguintes perguntas:
+            </p>
+
+            <ol>
+
+                <li>
+                    Minhas atitudes correspondem aos princípios que afirmo
+                    defender?
+                </li>
+
+                <li>
+                    Procuro agir corretamente mesmo quando ninguém está
+                    observando?
+                </li>
+
+                <li>
+                    Tenho disposição para reconhecer meus erros e aceitar
+                    correções?
+                </li>
+
+                <li>
+                    Minha fé influencia minhas decisões dentro e fora
+                    da Igreja?
+                </li>
+
+                <li>
+                    Que aspectos do meu caráter precisam ser aperfeiçoados
+                    diante de Deus?
+                </li>
+
+            </ol>
+
+        </section>
+
+
+        <!-- PRINCÍPIO FORMATIVO -->
+
+        <section class="principio">
+
+            <h2>Princípio Formativo</h2>
+
+            <p>
+                O homem segundo o coração de Deus procura desenvolver
+                um caráter fundamentado nas Escrituras, permitindo que
+                sua fé oriente suas convicções, escolhas e atitudes em
+                todas as áreas da vida.
+            </p>
+
+        </section>
+
+
+        <!-- VERSÍCULO PARA MEMORIZAÇÃO -->
+
+        <section class="bloco">
+
+            <h2>Versículo para memorizar</h2>
+
+            <div class="versiculo">
+
+                <p>
+                    "O justo anda na sua sinceridade; bem-aventurados
+                    serão os seus filhos depois dele."
+                </p>
+
+                <strong>Provérbios 20:7</strong>
+
+            </div>
+
+            <p>
+                A integridade de uma pessoa não beneficia somente sua
+                própria vida. Suas atitudes também influenciam aqueles
+                que convivem com ela, especialmente os membros de sua
+                família e as gerações seguintes.
+            </p>
+
+        </section>
+
+
+        <!-- NAVEGAÇÃO -->
+
+        <nav class="navegacao">
+
+            <a
+                href="apresentacao.html"
+                class="botao botao-secundario">
+
+                ← Voltar ao Módulo 04
+
+            </a>
+
+            <a
+                href="tema02.html"
+                class="botao">
+
+                Próximo Tema →
+
+            </a>
+
+        </nav>
+
+        <div class="navegacao">
+
+            <a
+                href="../../../uhbb_psh.html"
+                class="botao botao-secundario">
+
+                Página Inicial
+
+            </a>
+
+            <button
+                onclick="window.print()"
+                class="botao"
+                style="border: none; cursor: pointer; font-family: inherit;">
+
+                Imprimir Estudo
+
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <footer class="rodape-tema">
+
+        <p>
+            HOMENS SEGUNDO O CORAÇÃO DE DEUS
+        </p>
+
+        <p>
+            Formando homens, fortalecendo famílias e servindo à Igreja de Cristo.
+        </p>
+
+    </footer>
+
+</body>
+</html>

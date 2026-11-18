@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tema 06 — O Testemunho de um Homem de Caráter</title>
+
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        .conteudo-tema {
+            max-width: 1050px;
+            margin: 50px auto;
+            padding: 0 22px 60px;
+            color: #38271F;
+        }
+
+        .cabecalho-tema {
+            background: linear-gradient(135deg, #38271F, #18334D);
+            color: #F7F4EC;
+            padding: 55px 35px;
+            border-radius: 14px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .cabecalho-tema .numero {
+            display: inline-block;
+            color: #D1B477;
+            font-family: 'Cinzel', serif;
+            font-size: 15px;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+
+        .cabecalho-tema h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(25px, 4vw, 38px);
+            line-height: 1.35;
+            margin-bottom: 20px;
+        }
+
+        .cabecalho-tema p {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 16px;
+            line-height: 1.8;
+            color: #E9DFC9;
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .texto-biblico {
+            background: #E9DFC9;
+            border-left: 5px solid #B08A48;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 35px;
+            font-family: 'Libre Baskerville', serif;
+            line-height: 1.9;
+            font-size: 17px;
+        }
+
+        .texto-biblico strong {
+            color: #76523C;
+        }
+
+        .bloco-estudo {
+            background: #FFFFFF;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(56, 39, 31, 0.07);
+            border: 1px solid #E9DFC9;
+        }
+
+        .bloco-estudo h2 {
+            font-family: 'Cinzel', serif;
+            color: #593B2B;
+            font-size: 22px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .bloco-estudo h3 {
+            color: #76523C;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 17px;
+            margin-top: 22px;
+            margin-bottom: 10px;
+        }
+
+        .bloco-estudo p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            line-height: 1.9;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .bloco-estudo ul {
+            padding-left: 25px;
+            margin: 15px 0;
+        }
+
+        .bloco-estudo li {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.9;
+            margin-bottom: 10px;
+        }
+
+        .referencia {
+            color: #76523C;
+            font-weight: 700;
+        }
+
+        .destaque {
+            background: #F7F4EC;
+            border-left: 4px solid #B08A48;
+            padding: 22px;
+            margin: 25px 0;
+            border-radius: 6px;
+        }
+
+        .destaque p {
+            margin-bottom: 0;
+            font-family: 'Libre Baskerville', serif;
+        }
+
+        .caixa-reflexao {
+            background: #18334D;
+            color: #F7F4EC;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 35px;
+        }
+
+        .caixa-reflexao h2 {
+            font-family: 'Cinzel', serif;
+            color: #D1B477;
+            margin-bottom: 20px;
+        }
+
+        .caixa-reflexao p {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.9;
+            margin-bottom: 15px;
+        }
+
+        .versiculo-memorizacao {
+            background: #E9DFC9;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .versiculo-memorizacao h2 {
+            font-family: 'Cinzel', serif;
+            color: #593B2B;
+            margin-bottom: 18px;
+        }
+
+        .versiculo-memorizacao p {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 18px;
+            line-height: 1.9;
+            color: #38271F;
+        }
+
+        .versiculo-memorizacao strong {
+            display: block;
+            margin-top: 15px;
+            color: #76523C;
+        }
+
+        .principio-formativo {
+            text-align: center;
+            padding: 30px;
+            margin-top: 30px;
+            border-top: 2px solid #B08A48;
+            border-bottom: 2px solid #B08A48;
+        }
+
+        .principio-formativo h2 {
+            font-family: 'Cinzel', serif;
+            color: #593B2B;
+            margin-bottom: 15px;
+        }
+
+        .principio-formativo p {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 17px;
+            line-height: 1.9;
+        }
+
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 45px;
+        }
+
+        .navegacao-temas a {
+            display: inline-block;
+            padding: 14px 22px;
+            background: #593B2B;
+            color: #F7F4EC;
+            text-decoration: none;
+            border-radius: 6px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .navegacao-temas a:hover {
+            background: #B08A48;
+            color: #38271F;
+            transform: translateY(-2px);
+        }
+
+        .botoes-apoio {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 35px;
+        }
+
+        .botoes-apoio a,
+        .botoes-apoio button {
+            border: none;
+            padding: 13px 22px;
+            border-radius: 6px;
+            background: #18334D;
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .botoes-apoio a:hover,
+        .botoes-apoio button:hover {
+            background: #B08A48;
+            color: #38271F;
+        }
+
+        @media (max-width: 650px) {
+
+            .cabecalho-tema {
+                padding: 40px 22px;
+            }
+
+            .bloco-estudo {
+                padding: 22px;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+            }
+
+            .navegacao-temas a {
+                text-align: center;
+            }
+
+        }
+
+        @media print {
+
+            body {
+                background: #FFFFFF !important;
+                color: #000000 !important;
+            }
+
+            .conteudo-tema {
+                max-width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            .cabecalho-tema {
+                background: #FFFFFF !important;
+                color: #000000 !important;
+                border: 2px solid #593B2B;
+            }
+
+            .cabecalho-tema p,
+            .cabecalho-tema .numero {
+                color: #000000 !important;
+            }
+
+            .bloco-estudo {
+                box-shadow: none;
+                break-inside: avoid;
+            }
+
+            .caixa-reflexao {
+                background: #FFFFFF !important;
+                color: #000000 !important;
+                border: 1px solid #18334D;
+            }
+
+            .caixa-reflexao h2 {
+                color: #000000 !important;
+            }
+
+            .botoes-apoio,
+            .navegacao-temas {
+                display: none !important;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <main class="conteudo-tema">
+
+        <header class="cabecalho-tema">
+
+            <span class="numero">MÓDULO 04 • TEMA 06</span>
+
+            <h1>O Testemunho de um Homem de Caráter</h1>
+
+            <p>
+                O caráter cristão não se manifesta apenas naquilo
+                que um homem declara acreditar, mas também na maneira
+                como vive, trata as pessoas, cumpre suas responsabilidades
+                e representa os valores do Evangelho diante do mundo.
+            </p>
+
+        </header>
+
+
+        <section class="texto-biblico">
+
+            <strong>Texto bíblico de referência:</strong>
+
+            <p>
+                “O justo anda na sua sinceridade; bem-aventurados
+                serão os seus filhos depois dele.”
+            </p>
+
+            <strong>Provérbios 20:7</strong>
+
+        </section>
+
+
+        <section class="bloco-estudo">
+
+            <h2>1. Introdução: A vida como testemunho</h2>
+
+            <p>
+                Todo homem constrói, ao longo de sua existência,
+                uma história por meio de suas escolhas, palavras,
+                relacionamentos e atitudes.
+            </p>
+
+            <p>
+                Essa história não é formada somente por grandes
+                acontecimentos. Ela também é construída nas pequenas
+                decisões do cotidiano: cumprir uma promessa, reconhecer
+                um erro, tratar alguém com respeito, agir honestamente
+                quando ninguém está observando e assumir as próprias
+                responsabilidades.
+            </p>
+
+            <p>
+                Para o cristão, essas atitudes possuem uma dimensão
+                ainda mais profunda. A vida deve refletir os valores
+                daquele que ele afirma seguir: Jesus Cristo.
+            </p>
+
+            <p>
+                O testemunho de um homem de caráter não depende de
+                uma imagem de perfeição construída diante das pessoas.
+                Ele nasce de uma vida comprometida com Deus, marcada
+                pela sinceridade, pela fidelidade e pelo desejo
+                constante de viver segundo as Escrituras.
+            </p>
+
+        </section>
+
+
+        <section class="bloco-estudo">
+
+            <h2>2. O caráter cristão revela os valores do Evangelho</h2>
+
+            <p>
+                O caráter é percebido na maneira como uma pessoa
+                responde às situações da vida. Ele aparece nas decisões,
+                nas prioridades, nas reações diante das dificuldades
+                e no modo como tratamos aqueles que convivem conosco.
+            </p>
+
+            <p>
+                O homem cristão é chamado a desenvolver uma conduta
+                coerente com os ensinamentos de Cristo. Isso significa
+                procurar viver com justiça, humildade, amor, fidelidade
+                e domínio próprio.
+            </p>
+
+            <p>
+                A transformação do caráter faz parte do processo
+                de amadurecimento espiritual. O cristão não permanece
+                exatamente como era antes de conhecer a Cristo:
+                sua maneira de pensar e agir deve ser progressivamente
+                moldada pela Palavra de Deus.
+            </p>
+
+            <p>
+                Esse processo exige disposição para aprender,
+                reconhecer falhas e permitir que os ensinamentos
+                bíblicos orientem a vida.
+            </p>
+
+            <p class="referencia">
+                Referências bíblicas: Romanos 12:1-2;
+                Gálatas 5:22-23; Colossenses 3:12-14.
+            </p>
+
+        </section>
+
+
+        <section class="bloco-estudo">
+
+            <h2>3. O testemunho começa dentro de casa</h2>
+
+            <p>
+                A família é um dos ambientes mais importantes
+                para a manifestação do caráter de um homem.
+            </p>
+
+            <p>
+                Dentro de casa, as pessoas convivem de maneira
+                próxima e conseguem observar atitudes que nem sempre
+                são percebidas nos ambientes públicos.
+            </p>
+
+            <p>
+                O homem cristão demonstra seu caráter quando trata
+                os familiares com respeito, assume suas responsabilidades,
+                participa da educação dos filhos, oferece cuidado
+                e procura resolver conflitos com maturidade.
+            </p>
+
+            <p>
+                A autoridade familiar, quando exercida, deve estar
+                associada ao amor, à responsabilidade e ao serviço,
+                nunca à violência, à humilhação ou ao abuso.
+            </p>
+
+            <p>
+                O testemunho dentro do lar não é construído por
+                discursos isolados, mas por uma convivência marcada
+                por fidelidade, respeito e cuidado.
+            </p>
+
+            <div class="destaque">
+
+                <p>
+                    Não existe coerência em defender os valores
+                    cristãos publicamente e desprezá-los no ambiente
+                    familiar.
+                </p>
+
+            </div>
+
+            <p class="referencia">
+                Referências bíblicas: Efésios 5:25;
+                Efésios 6:4; Colossenses 3:19-21.
+            </p>
+
+        </section>
+
+
+        <section class="bloco-estudo">
+
+            <h2>4. O testemunho na Igreja de Cristo</h2>
+
+            <p>
+                A Igreja é uma comunidade formada por pessoas
+                que compartilham a fé em Jesus Cristo e procuram
+                crescer juntas na vida cristã.
+            </p>
+
+            <p>
+                Nesse ambiente, o caráter de um homem pode ser
+                demonstrado por meio de sua disposição para servir,
+                cooperar, respeitar os irmãos e contribuir para
+                a edificação da comunidade.
+            </p>
+
+            <p>
+                O testemunho cristão não depende de ocupar uma posição
+                de destaque ou exercer uma função de liderança.
+                Todo membro da Igreja possui oportunidades de servir
+                e demonstrar fidelidade.
+            </p>
+
+            <p>
+                Um homem de caráter não utiliza sua participação
+                na Igreja para buscar prestígio pessoal. Ele compreende
+                que os dons, as capacidades e as oportunidades
+                recebidas devem ser colocados a serviço de Deus
+                e do próximo.
+            </p>
+
+            <p>
+                Sua conduta deve contribuir para a unidade,
+                a comunhão e o crescimento espiritual da Igreja.
+            </p>
+
+            <p class="referencia">
+                Referências bíblicas: Marcos 10:43-45;
+                Romanos 12:4-8; 1 Pedro 4:10.
+            </p>
+
+        </section>
+
+
+        <section class="bloco-estudo">
+
+            <h2>5. O testemunho no trabalho e na sociedade</h2>
+
+            <p>
+                O caráter cristão também precisa estar presente
+                na vida profissional e nas relações sociais.
+            </p>
+
+            <p>
+                O trabalho oferece oportunidades diárias para
+                demonstrar honestidade, responsabilidade, respeito
+                e compromisso com aquilo que foi confiado a nós.
+            </p>
+
+            <p>
+                Um homem de caráter procura cumprir seus deveres,
+                respeitar acordos, tratar colegas com dignidade
+                e não obter vantagens por meio da mentira,
+                da exploração ou da injustiça.
+            </p>
+
+            <p>
+                Na sociedade, seu testemunho aparece na maneira
+                como participa da comunidade, respeita as leis
+                justas, exerce sua cidadania e se relaciona
+                com pessoas que possuem opiniões diferentes.
+            </p>
+
+            <p>
+                O cristão não precisa concordar com todas as ideias
+                existentes na sociedade, mas deve tratar as pessoas
+                com dignidade e manter sua conduta orientada
+                pelos princípios bíblicos.
+            </p>
+
+            <p class="referencia">
+                Referências bíblicas: Colossenses 3:23-24;
+                Tito 2:7-8; 1 Pedro 2:12-17.
+            </p>
+
+        </section>
+
+
+        <section class="bloco-estudo">
+
+            <h2>6. O testemunho nas pequenas atitudes</h2>
+
+            <p>
+                Muitas vezes, as pessoas imaginam que um grande
+                testemunho cristão depende de acontecimentos
+                extraordinários. Entretanto, a fidelidade também
+                se revela nas situações mais simples.
+            </p>
+
+            <p>
+                Existem atitudes cotidianas que demonstram
+                a presença de princípios sólidos na vida de
+                um homem:
+            </p>
+
+            <ul>
+
+                <li>Cumprir aquilo que prometeu.</li>
+
+                <li>Reconhecer os próprios erros e pedir perdão.</li>
+
+                <li>Respeitar as pessoas, independentemente de sua posição social.</li>
+
+                <li>Agir honestamente mesmo quando não existe fiscalização.</li>
+
+                <li>Tratar com responsabilidade os recursos que recebe.</li>
+
+                <li>Evitar palavras ofensivas e atitudes que humilhem outras pessoas.</li>
+
+                <li>Manter a fidelidade aos compromissos assumidos.</li>
+
+                <li>Demonstrar disposição para ajudar quem necessita.</li>
+
+            </ul>
+
+            <p>
+                Essas atitudes podem parecer simples, mas contribuem
+                para construir uma vida digna de confiança e coerente
+                com os ensinamentos cristãos.
+            </p>
+
+            <p class="referencia">
+                Referências bíblicas: Lucas 16:10;
+                Mateus 5:16; Filipenses 2:14-15.
+            </p>
+
+        </section>
+
+
+        <section class="bloco-estudo">
+
+            <h2>7. Um testemunho que permanece nas próximas gerações</h2>
+
+            <p>
+                O exemplo de um homem pode influenciar pessoas
+                que convivem com ele e também gerações futuras.
+            </p>
+
+            <p>
+                Filhos e jovens observam como os adultos enfrentam
+                dificuldades, tratam outras pessoas, lidam com
+                responsabilidades e demonstram sua fé.
+            </p>
+
+            <p>
+                Por isso, o testemunho de um homem não deve ser
+                pensado apenas em relação ao presente. Suas escolhas
+                podem deixar marcas importantes na formação daqueles
+                que virão depois dele.
+            </p>
+
+            <p>
+                Provérbios 20:7 apresenta a figura do justo que
+                anda em sua integridade e relaciona essa conduta
+                à bênção de seus descendentes.
+            </p>
+
+            <p>
+                Isso não significa que os filhos de um homem íntegro
+                jamais enfrentarão dificuldades ou farão escolhas
+                erradas. Significa que uma vida de fidelidade
+                oferece um exemplo valioso para aqueles que
+                acompanham sua caminhada.
+            </p>
+
+            <p>
+                O homem cristão deve compreender que seu testemunho
+                também participa da formação espiritual e moral
+                das próximas gerações.
+            </p>
+
+            <p class="referencia">
+                Referências bíblicas: Provérbios 20:7;
+                Deuteronômio 6:6-7; Salmo 78:4-7.
+            </p>
+
+        </section>
+
+
+        <section class="bloco-estudo">
+
+            <h2>8. O testemunho não significa perfeição</h2>
+
+            <p>
+                É importante compreender que um homem de caráter
+                não é alguém que nunca erra, nunca enfrenta dúvidas
+                ou jamais precisa de correção.
+            </p>
+
+            <p>
+                Todos os seres humanos são falíveis e necessitam
+                da graça de Deus. A diferença está na maneira
+                como respondemos aos nossos erros.
+            </p>
+
+            <p>
+                O homem cristão não deve esconder suas falhas,
+                justificar atitudes erradas ou transferir
+                continuamente a culpa para outras pessoas.
+            </p>
+
+            <p>
+                Ele precisa reconhecer seus pecados diante de Deus,
+                buscar o perdão, reparar os danos quando possível
+                e procurar corrigir sua conduta.
+            </p>
+
+            <p>
+                O testemunho cristão também aparece na humildade
+                de quem reconhece que precisa crescer e depende
+                continuamente da misericórdia do Senhor.
+            </p>
+
+            <p class="referencia">
+                Referências bíblicas: 1 João 1:8-9;
+                Provérbios 28:13; Filipenses 3:12-14.
+            </p>
+
+        </section>
+
+
+        <section class="bloco-estudo">
+
+            <h2>9. Jesus Cristo: o modelo supremo de caráter</h2>
+
+            <p>
+                O fundamento de toda formação cristã está em Jesus
+                Cristo. Ele não é apenas um exemplo moral entre
+                outros personagens da história: é o Senhor
+                e Salvador a quem o cristão deve seguir.
+            </p>
+
+            <p>
+                Em sua vida terrena, Jesus demonstrou amor,
+                verdade, justiça, misericórdia, humildade,
+                fidelidade ao Pai e disposição para servir.
+            </p>
+
+            <p>
+                Ele acolheu pessoas necessitadas, confrontou
+                a hipocrisia religiosa, ensinou a verdade
+                e entregou sua vida em favor dos pecadores.
+            </p>
+
+            <p>
+                Seu exemplo estabelece o padrão que deve orientar
+                o caráter de seus discípulos.
+            </p>
+
+            <p>
+                O homem cristão não é chamado a construir sua
+                identidade a partir dos modelos de sucesso,
+                poder ou prestígio apresentados pelo mundo,
+                mas a seguir os ensinamentos e o exemplo de Cristo.
+            </p>
+
+            <p>
+                Quanto mais conhecemos a Cristo e seus ensinamentos,
+                mais compreendemos a natureza do caráter que
+                devemos buscar desenvolver.
+            </p>
+
+            <p class="referencia">
+                Referências bíblicas: João 13:12-15;
+                Filipenses 2:5-8; 1 Pedro 2:21-23.
+            </p>
+
+        </section>
+
+
+        <section class="bloco-estudo">
+
+            <h2>10. O compromisso de uma vida que testemunha Cristo</h2>
+
+            <p>
+                Ao concluir este módulo, precisamos compreender
+                que caráter, honra e integridade não são apenas
+                conceitos que devem ser memorizados.
+            </p>
+
+            <p>
+                São princípios que precisam orientar nossa maneira
+                de viver diante de Deus e das pessoas.
+            </p>
+
+            <p>
+                O homem cristão deve procurar ser reconhecido
+                não pela aparência de sua espiritualidade,
+                pelo prestígio de sua posição ou pela quantidade
+                de palavras religiosas que utiliza, mas pela
+                sinceridade de sua fé e pela coerência de sua conduta.
+            </p>
+
+            <p>
+                Seu compromisso é permanecer fiel a Cristo,
+                buscar crescimento espiritual e permitir que
+                os valores do Evangelho sejam percebidos em
+                suas atitudes cotidianas.
+            </p>
+
+            <div class="destaque">
+
+                <p>
+                    Um homem de caráter não vive para construir
+                    uma imagem de perfeição diante das pessoas.
+                    Vive para honrar a Deus, seguindo a Cristo
+                    com sinceridade, fidelidade e responsabilidade.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="caixa-reflexao">
+
+            <h2>Reflexão para o homem cristão</h2>
+
+            <p>
+                Que tipo de testemunho minha vida tem deixado
+                para minha família?
+            </p>
+
+            <p>
+                As pessoas que convivem comigo conseguem perceber
+                os valores de Cristo em minhas atitudes?
+            </p>
+
+            <p>
+                Tenho procurado ser um homem confiável,
+                responsável e íntegro?
+            </p>
+
+            <p>
+                Quando erro, tenho humildade para reconhecer
+                minha falha e buscar corrigir meu comportamento?
+            </p>
+
+            <p>
+                Que legado espiritual e moral desejo deixar
+                para as próximas gerações?
+            </p>
+
+            <p>
+                Estou disposto a continuar permitindo que
+                Cristo transforme meu caráter?
+            </p>
+
+        </section>
+
+
+        <section class="versiculo-memorizacao">
+
+            <h2>Versículo para memorizar</h2>
+
+            <p>
+                “Assim resplandeça a vossa luz diante dos homens,
+                para que vejam as vossas boas obras e glorifiquem
+                a vosso Pai, que está nos céus.”
+            </p>
+
+            <strong>Mateus 5:16</strong>
+
+        </section>
+
+
+        <section class="principio-formativo">
+
+            <h2>Princípio Formativo</h2>
+
+            <p>
+                O homem segundo o coração de Deus procura desenvolver
+                uma vida de caráter, honra e integridade, tornando-se
+                um testemunho coerente do Evangelho na família,
+                na Igreja e na sociedade, seguindo o exemplo
+                de Jesus Cristo.
+            </p>
+
+        </section>
+
+
+        <div class="botoes-apoio">
+
+            <button onclick="window.print()">
+                IMPRIMIR ESTUDO
+            </button>
+
+            <a href="apresentacao.html">
+                APRESENTAÇÃO DO MÓDULO
+            </a>
+
+        </div>
+
+
+        <nav class="navegacao-temas">
+
+            <a href="tema05.html">
+                ← TEMA ANTERIOR
+            </a>
+
+            <a href="apresentacao.html">
+                CONCLUIR ESTUDOS DO MÓDULO
+            </a>
+
+        </nav>
+
+
+    </main>
+
+</body>
+
+</html>

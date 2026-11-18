@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Verdade, Honestidade e Transparência | Módulo 04</title>
+
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        :root {
+            --marrom-escuro: #38271F;
+            --marrom: #593B2B;
+            --marrom-medio: #76523C;
+            --azul: #18334D;
+            --azul-claro: #294B65;
+            --dourado: #B08A48;
+            --dourado-claro: #D1B477;
+            --pergaminho: #E9DFC9;
+            --creme: #F7F4EC;
+            --texto: #333333;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--creme);
+            color: var(--texto);
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.8;
+        }
+
+        .topo-tema {
+            background: linear-gradient(
+                135deg,
+                var(--marrom-escuro),
+                var(--azul)
+            );
+
+            color: white;
+            padding: 55px 20px;
+            text-align: center;
+        }
+
+        .topo-tema .identificacao {
+            color: var(--dourado-claro);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .topo-tema h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            max-width: 900px;
+            margin: 0 auto 18px;
+            line-height: 1.4;
+        }
+
+        .topo-tema p {
+            max-width: 750px;
+            margin: auto;
+            color: #E9DFC9;
+            font-size: 1rem;
+        }
+
+        .linha-dourada {
+            width: 85px;
+            height: 3px;
+            background: var(--dourado);
+            margin: 25px auto;
+        }
+
+        .conteudo {
+            max-width: 1050px;
+            margin: 45px auto;
+            padding: 0 22px;
+        }
+
+        .bloco {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 28px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+            border-left: 5px solid var(--dourado);
+        }
+
+        .bloco h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--marrom);
+            font-size: 1.35rem;
+            margin-top: 0;
+            margin-bottom: 18px;
+        }
+
+        .bloco h3 {
+            color: var(--azul);
+            font-size: 1.08rem;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        .bloco p {
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .versiculo {
+            background: var(--pergaminho);
+            border-left: 5px solid var(--dourado);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 22px 0;
+        }
+
+        .versiculo p {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.05rem;
+            color: var(--marrom-escuro);
+            font-style: italic;
+            text-align: left;
+            margin-bottom: 12px;
+        }
+
+        .versiculo strong {
+            color: var(--marrom);
+        }
+
+        .lista {
+            padding-left: 25px;
+            margin: 15px 0;
+        }
+
+        .lista li {
+            margin-bottom: 12px;
+        }
+
+        .destaque {
+            background: #F0F3F5;
+            border-left: 5px solid var(--azul);
+            padding: 22px;
+            border-radius: 7px;
+            margin: 22px 0;
+        }
+
+        .destaque strong {
+            color: var(--azul);
+        }
+
+        .reflexao {
+            background: var(--azul);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 28px;
+        }
+
+        .reflexao h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--dourado-claro);
+            margin-top: 0;
+        }
+
+        .reflexao p {
+            text-align: justify;
+        }
+
+        .reflexao li {
+            margin-bottom: 12px;
+        }
+
+        .principio {
+            text-align: center;
+            background: var(--marrom-escuro);
+            color: white;
+            padding: 35px 25px;
+            border-radius: 10px;
+            margin: 35px 0;
+        }
+
+        .principio h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--dourado-claro);
+            margin-top: 0;
+        }
+
+        .principio p {
+            max-width: 800px;
+            margin: auto;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.08rem;
+        }
+
+        .navegacao {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 40px 0;
+        }
+
+        .botao {
+            display: inline-block;
+            background: var(--azul);
+            color: white;
+            padding: 13px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            background: var(--marrom);
+            transform: translateY(-2px);
+        }
+
+        .botao-secundario {
+            background: var(--marrom);
+        }
+
+        .rodape-tema {
+            background: var(--marrom-escuro);
+            color: var(--pergaminho);
+            text-align: center;
+            padding: 25px 15px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 650px) {
+
+            .bloco {
+                padding: 22px 18px;
+            }
+
+            .topo-tema {
+                padding: 40px 18px;
+            }
+
+            .navegacao {
+                flex-direction: column;
+            }
+
+            .botao {
+                text-align: center;
+            }
+
+        }
+
+        @media print {
+
+            body {
+                background: white;
+                color: black;
+            }
+
+            .topo-tema {
+                background: white !important;
+                color: black !important;
+                padding: 20px;
+            }
+
+            .topo-tema h1,
+            .topo-tema p,
+            .topo-tema .identificacao {
+                color: black !important;
+            }
+
+            .conteudo {
+                max-width: 100%;
+                margin: 20px auto;
+            }
+
+            .bloco {
+                box-shadow: none;
+                border: 1px solid #cccccc;
+                break-inside: avoid;
+            }
+
+            .reflexao,
+            .principio,
+            .versiculo,
+            .destaque {
+                background: white !important;
+                color: black !important;
+                border: 1px solid #999999;
+            }
+
+            .reflexao h2,
+            .principio h2 {
+                color: black !important;
+            }
+
+            .navegacao,
+            .rodape-tema {
+                display: none;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header class="topo-tema">
+
+        <div class="identificacao">
+            Homens Segundo o Coração de Deus
+        </div>
+
+        <h1>Verdade, Honestidade e Transparência</h1>
+
+        <div class="linha-dourada"></div>
+
+        <p>
+            Módulo 04 — Caráter, Honra e Integridade
+            <br>
+            Tema 04 de 06
+        </p>
+
+    </header>
+
+
+    <main class="conteudo">
+
+        <!-- INTRODUÇÃO -->
+
+        <section class="bloco">
+
+            <h2>1. Introdução</h2>
+
+            <p>
+                A verdade, a honestidade e a transparência são valores
+                fundamentais para a construção de uma vida cristã
+                coerente e de relacionamentos saudáveis.
+            </p>
+
+            <p>
+                A confiança entre as pessoas depende, em grande parte,
+                da sinceridade com que se comunicam e da responsabilidade
+                com que cumprem seus compromissos.
+            </p>
+
+            <p>
+                Quando a mentira, a falsidade e a desonestidade passam
+                a fazer parte dos relacionamentos, a confiança é
+                prejudicada e os vínculos humanos se enfraquecem.
+            </p>
+
+            <p>
+                A Bíblia apresenta a verdade como um princípio
+                indispensável à vida daqueles que desejam seguir
+                os ensinamentos de Cristo.
+            </p>
+
+            <p>
+                Portanto, o homem cristão deve compreender que falar
+                a verdade, agir honestamente e conduzir seus compromissos
+                com transparência são expressões práticas de seu
+                compromisso com Deus.
+            </p>
+
+        </section>
+
+
+        <!-- VERDADE -->
+
+        <section class="bloco">
+
+            <h2>2. A verdade como fundamento da vida cristã</h2>
+
+            <p>
+                A verdade ocupa lugar central nas Escrituras.
+                Deus é apresentado como verdadeiro e fiel, e sua
+                Palavra constitui referência para a vida e a conduta
+                do cristão.
+            </p>
+
+            <p>
+                Jesus não apenas ensinou a importância da verdade,
+                mas também declarou sua relação fundamental com
+                ela.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Disse-lhe Jesus: Eu sou o caminho, e a verdade,
+                    e a vida. Ninguém vem ao Pai senão por mim."
+                </p>
+
+                <strong>João 14:6</strong>
+
+            </div>
+
+            <p>
+                Essa declaração apresenta Jesus como o único caminho
+                para o Pai e revela sua identidade e autoridade.
+                A verdade cristã não é apenas um conjunto de ideias,
+                mas está fundamentada na pessoa de Cristo.
+            </p>
+
+            <p>
+                Seguir Jesus significa reconhecer sua autoridade
+                e procurar viver de acordo com seus ensinamentos.
+            </p>
+
+            <h3>A verdade nas palavras e nas atitudes</h3>
+
+            <p>
+                A verdade deve orientar tanto a comunicação quanto
+                o comportamento. Não basta evitar mentiras verbais
+                se nossas atitudes procuram enganar outras pessoas.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Pelo que deixai a mentira e falai a verdade
+                    cada um com o seu próximo; porque somos membros
+                    uns dos outros."
+                </p>
+
+                <strong>Efésios 4:25</strong>
+
+            </div>
+
+            <p>
+                Paulo relaciona a verdade à própria natureza dos
+                relacionamentos cristãos. A comunidade de fé deve
+                ser construída sobre confiança, sinceridade e
+                responsabilidade mútua.
+            </p>
+
+        </section>
+
+
+        <!-- HONESTIDADE -->
+
+        <section class="bloco">
+
+            <h2>3. Honestidade: agir corretamente em todas as situações</h2>
+
+            <p>
+                Honestidade é a disposição de agir com retidão,
+                sinceridade e justiça, respeitando os princípios
+                morais que orientam a vida cristã.
+            </p>
+
+            <p>
+                Uma pessoa honesta não procura obter vantagens
+                por meio de mentiras, fraudes, manipulações
+                ou exploração da confiança alheia.
+            </p>
+
+            <p>
+                A honestidade precisa estar presente nas pequenas
+                e grandes decisões, inclusive naquelas que parecem
+                não ter consequências importantes.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Balança enganosa é abominação para o Senhor,
+                    mas o peso justo é o seu prazer."
+                </p>
+
+                <strong>Provérbios 11:1</strong>
+
+            </div>
+
+            <p>
+                Esse princípio demonstra que Deus se importa com
+                a justiça nas relações humanas e condena práticas
+                destinadas a enganar outras pessoas.
+            </p>
+
+            <h3>Exemplos de honestidade na vida cotidiana</h3>
+
+            <ul class="lista">
+
+                <li>
+                    Não utilizar informações falsas para conseguir
+                    benefícios.
+                </li>
+
+                <li>
+                    Cumprir acordos comerciais e profissionais.
+                </li>
+
+                <li>
+                    Devolver valores recebidos indevidamente.
+                </li>
+
+                <li>
+                    Não apropriar-se de recursos que pertencem
+                    a outras pessoas ou instituições.
+                </li>
+
+                <li>
+                    Reconhecer erros em vez de transferir
+                    responsabilidades.
+                </li>
+
+                <li>
+                    Ser correto na administração do dinheiro
+                    e dos bens sob sua responsabilidade.
+                </li>
+
+                <li>
+                    Não utilizar a confiança de alguém para
+                    obter vantagens pessoais.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- TRANSPARÊNCIA -->
+
+        <section class="bloco">
+
+            <h2>4. Transparência: viver sem duplicidade</h2>
+
+            <p>
+                Transparência está relacionada à clareza,
+                à sinceridade e à disposição de conduzir
+                relacionamentos e responsabilidades sem
+                esconder informações relevantes com a intenção
+                de enganar.
+            </p>
+
+            <p>
+                Ser transparente significa agir de maneira
+                coerente e permitir que nossas atitudes
+                correspondam àquilo que comunicamos.
+            </p>
+
+            <p>
+                A transparência não significa expor todos
+                os detalhes da vida pessoal ou abandonar
+                a privacidade. Existem informações que devem
+                ser tratadas com discrição e responsabilidade.
+            </p>
+
+            <p>
+                O problema está em utilizar o segredo,
+                a omissão ou a manipulação para encobrir
+                práticas incorretas ou prejudicar outras pessoas.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Porque nada podemos contra a verdade,
+                    senão pela verdade."
+                </p>
+
+                <strong>2 Coríntios 13:8</strong>
+
+            </div>
+
+            <p>
+                A transparência exige que o cristão tenha
+                disposição para agir corretamente mesmo
+                quando precisa prestar contas de suas decisões.
+            </p>
+
+            <h3>Transparência nas responsabilidades</h3>
+
+            <ul class="lista">
+
+                <li>
+                    Apresentar informações verdadeiras.
+                </li>
+
+                <li>
+                    Prestar contas dos recursos recebidos.
+                </li>
+
+                <li>
+                    Comunicar dificuldades e problemas relevantes.
+                </li>
+
+                <li>
+                    Evitar manipulações e omissões intencionais.
+                </li>
+
+                <li>
+                    Reconhecer erros e assumir responsabilidades.
+                </li>
+
+                <li>
+                    Respeitar a confiança depositada por outras pessoas.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- MENTIRA -->
+
+        <section class="bloco">
+
+            <h2>5. A mentira e suas consequências</h2>
+
+            <p>
+                A mentira é uma forma de comunicação ou comportamento
+                que procura apresentar como verdadeiro aquilo que
+                a pessoa sabe ser falso, com a intenção de enganar.
+            </p>
+
+            <p>
+                Ela pode aparecer em diferentes situações: na tentativa
+                de esconder erros, obter vantagens, evitar consequências
+                ou prejudicar a reputação de outras pessoas.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Os lábios mentirosos são abomináveis ao Senhor,
+                    mas os que agem fielmente são o seu deleite."
+                </p>
+
+                <strong>Provérbios 12:22</strong>
+
+            </div>
+
+            <p>
+                A Bíblia condena a mentira porque ela contradiz
+                a verdade e prejudica os relacionamentos.
+            </p>
+
+            <h3>Consequências da mentira</h3>
+
+            <ul class="lista">
+
+                <li>
+                    Destrói a confiança entre as pessoas.
+                </li>
+
+                <li>
+                    Provoca conflitos e desentendimentos.
+                </li>
+
+                <li>
+                    Pode prejudicar injustamente a reputação
+                    de outras pessoas.
+                </li>
+
+                <li>
+                    Produz insegurança nos relacionamentos.
+                </li>
+
+                <li>
+                    Exige novas mentiras para sustentar as anteriores.
+                </li>
+
+                <li>
+                    Compromete o testemunho cristão.
+                </li>
+
+            </ul>
+
+            <p>
+                A mentira pode parecer uma solução rápida
+                para determinado problema, mas frequentemente
+                produz consequências muito maiores.
+            </p>
+
+        </section>
+
+
+        <!-- PALAVRAS -->
+
+        <section class="bloco">
+
+            <h2>6. O compromisso com a verdade nas palavras</h2>
+
+            <p>
+                As palavras possuem grande influência sobre
+                os relacionamentos humanos. Elas podem transmitir
+                confiança, encorajamento e orientação, mas também
+                podem provocar sofrimento, conflitos e injustiças.
+            </p>
+
+            <p>
+                Por isso, o homem cristão deve desenvolver
+                responsabilidade na maneira de falar.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Mas seja o vosso falar: Sim, sim; não, não;
+                    porque o que passa disto é de procedência maligna."
+                </p>
+
+                <strong>Mateus 5:37</strong>
+
+            </div>
+
+            <p>
+                Jesus ensina sobre a importância da sinceridade
+                e da confiabilidade das palavras. O discípulo
+                de Cristo deve ser alguém cuja palavra tenha
+                credibilidade.
+            </p>
+
+            <h3>O homem cristão deve evitar:</h3>
+
+            <ul class="lista">
+
+                <li>Mentiras deliberadas.</li>
+
+                <li>Promessas que não pretende cumprir.</li>
+
+                <li>Falsas acusações.</li>
+
+                <li>Calúnias e difamações.</li>
+
+                <li>Exageros utilizados para manipular pessoas.</li>
+
+                <li>Palavras ofensivas e humilhantes.</li>
+
+                <li>Comentários que distorcem os fatos.</li>
+
+            </ul>
+
+            <p>
+                A responsabilidade com as palavras exige pensar
+                antes de falar, verificar informações e evitar
+                a propagação de conteúdos falsos.
+            </p>
+
+        </section>
+
+
+        <!-- CONFIANÇA -->
+
+        <section class="bloco">
+
+            <h2>7. Verdade e confiança nos relacionamentos</h2>
+
+            <p>
+                A confiança é construída ao longo do tempo,
+                por meio de atitudes coerentes e compromissos
+                cumpridos.
+            </p>
+
+            <p>
+                Quando uma pessoa demonstra sinceridade,
+                honestidade e responsabilidade, ela contribui
+                para relacionamentos mais seguros e saudáveis.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Melhor é o pobre que anda na sua sinceridade
+                    do que o perverso de lábios e tolo."
+                </p>
+
+                <strong>Provérbios 19:1</strong>
+
+            </div>
+
+            <p>
+                O texto valoriza a integridade acima da aparência
+                ou da condição material. A honestidade possui
+                importância maior do que a tentativa de impressionar
+                os outros por meio de falsas aparências.
+            </p>
+
+            <h3>Na família</h3>
+
+            <p>
+                A verdade fortalece a confiança entre marido,
+                esposa e filhos. A honestidade nas conversas
+                e a responsabilidade nos compromissos ajudam
+                a construir relacionamentos saudáveis.
+            </p>
+
+            <h3>Na Igreja</h3>
+
+            <p>
+                A transparência contribui para a confiança
+                entre os membros, especialmente no exercício
+                de funções administrativas, ministeriais
+                e de liderança.
+            </p>
+
+            <h3>No trabalho</h3>
+
+            <p>
+                A honestidade profissional demonstra respeito
+                aos colegas, empregadores, clientes e à própria
+                dignidade do trabalho.
+            </p>
+
+            <h3>Na sociedade</h3>
+
+            <p>
+                A verdade e a honestidade contribuem para relações
+                sociais mais justas, para a credibilidade das
+                instituições e para o respeito aos direitos
+                das pessoas.
+            </p>
+
+        </section>
+
+
+        <!-- EXEMPLOS BÍBLICOS -->
+
+        <section class="bloco">
+
+            <h2>8. Exemplos bíblicos de verdade e honestidade</h2>
+
+            <h3>8.1. Samuel: uma vida de responsabilidade</h3>
+
+            <p>
+                Ao final de seu período de liderança sobre Israel,
+                Samuel apresentou uma declaração pública na qual
+                pediu que o povo testemunhasse sobre sua conduta.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Eis-me aqui; testificai contra mim perante
+                    o Senhor e perante o seu ungido: de quem tomei
+                    o boi? de quem tomei o jumento? a quem defraudei?
+                    a quem oprimi? e da mão de quem tomei suborno
+                    para encobrir com ele os meus olhos?"
+                </p>
+
+                <strong>1 Samuel 12:3</strong>
+
+            </div>
+
+            <p>
+                Samuel demonstrou disposição para prestar contas
+                de sua atuação e permitir que sua conduta fosse
+                examinada publicamente.
+            </p>
+
+            <p>
+                Seu exemplo destaca a importância da honestidade
+                no exercício da liderança.
+            </p>
+
+
+            <h3>8.2. Zaqueu: a transformação da conduta</h3>
+
+            <p>
+                Zaqueu era chefe dos publicanos e possuía riqueza
+                relacionada à sua atividade de cobrança de impostos.
+                Após encontrar-se com Jesus, demonstrou disposição
+                para mudar sua maneira de agir.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "E, levantando-se Zaqueu, disse ao Senhor:
+                    Senhor, eis que eu dou aos pobres metade dos
+                    meus bens; e, se nalguma coisa tenho defraudado
+                    alguém, o restituo quadruplicado."
+                </p>
+
+                <strong>Lucas 19:8</strong>
+
+            </div>
+
+            <p>
+                A atitude de Zaqueu demonstra que o arrependimento
+                verdadeiro produz mudanças concretas.
+            </p>
+
+            <p>
+                Sua disposição para reparar prejuízos causados
+                revela a importância da responsabilidade e
+                da honestidade nas relações humanas.
+            </p>
+
+
+            <h3>8.3. Ananias e Safira: a gravidade da falsidade</h3>
+
+            <p>
+                Em Atos 5, encontramos o relato de Ananias e Safira,
+                que venderam uma propriedade e decidiram apresentar
+                parte do valor como se fosse o total.
+            </p>
+
+            <p>
+                O problema não estava simplesmente em terem
+                conservado parte do dinheiro, pois Pedro deixou
+                claro que a propriedade e seu valor estavam
+                sob responsabilidade deles.
+            </p>
+
+            <p>
+                O pecado estava na mentira deliberada e na tentativa
+                de aparentar uma generosidade que não correspondia
+                à realidade.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Por que encheu Satanás o teu coração, para
+                    que mentisses ao Espírito Santo?"
+                </p>
+
+                <strong>Atos 5:3</strong>
+
+            </div>
+
+            <p>
+                Esse episódio demonstra a gravidade da falsidade
+                diante de Deus e a importância da sinceridade
+                na comunidade cristã.
+            </p>
+
+        </section>
+
+
+        <!-- PRESTAÇÃO DE CONTAS -->
+
+        <section class="bloco">
+
+            <h2>9. Honestidade e transparência no exercício da liderança</h2>
+
+            <p>
+                Todo homem que recebe responsabilidades de liderança
+                precisa compreender que a confiança depositada
+                nele deve ser tratada com seriedade.
+            </p>
+
+            <p>
+                Na família, na Igreja e nas instituições,
+                a liderança exige responsabilidade e transparência.
+            </p>
+
+            <p>
+                Quem administra recursos financeiros, documentos,
+                projetos ou atividades coletivas deve agir com
+                clareza e prestar contas de suas decisões.
+            </p>
+
+            <div class="versiculo">
+
+                <p>
+                    "Além disso, requer-se nos despenseiros que
+                    cada um se ache fiel."
+                </p>
+
+                <strong>1 Coríntios 4:2</strong>
+
+            </div>
+
+            <p>
+                Paulo utiliza a figura do despenseiro para destacar
+                a responsabilidade de quem recebe algo para
+                administrar.
+            </p>
+
+            <h3>Práticas importantes para uma liderança transparente:</h3>
+
+            <ul class="lista">
+
+                <li>
+                    Registrar corretamente receitas e despesas.
+                </li>
+
+                <li>
+                    Apresentar informações verdadeiras.
+                </li>
+
+                <li>
+                    Respeitar as decisões coletivas.
+                </li>
+
+                <li>
+                    Não utilizar recursos institucionais
+                    para interesses particulares.
+                </li>
+
+                <li>
+                    Comunicar dificuldades e irregularidades.
+                </li>
+
+                <li>
+                    Prestar contas de maneira responsável.
+                </li>
+
+                <li>
+                    Reconhecer erros e corrigir procedimentos.
+                </li>
+
+            </ul>
+
+            <p>
+                A transparência fortalece a confiança e contribui
+                para uma liderança saudável e responsável.
+            </p>
+
+        </section>
+
+
+        <!-- CONCLUSÃO -->
+
+        <section class="bloco">
+
+            <h2>10. Conclusão</h2>
+
+            <p>
+                A verdade, a honestidade e a transparência são
+                princípios indispensáveis à formação do caráter
+                cristão.
+            </p>
+
+            <p>
+                A verdade deve orientar nossas palavras e atitudes.
+                A honestidade deve estar presente em nossas decisões
+                e compromissos. A transparência deve conduzir
+                nossas responsabilidades e relacionamentos.
+            </p>
+
+            <p>
+                Os exemplos de Samuel e Zaqueu demonstram a importância
+                da responsabilidade e da transformação de conduta.
+                O episódio de Ananias e Safira alerta para a gravidade
+                da falsidade diante de Deus.
+            </p>
+
+            <p>
+                O homem segundo o coração de Deus deve ser alguém
+                cuja palavra inspire confiança, cujas atitudes
+                demonstrem honestidade e cuja maneira de viver
+                seja marcada pela sinceridade.
+            </p>
+
+            <p>
+                A verdade não deve ser apenas aquilo que defendemos
+                em nossos discursos. Ela precisa estar presente
+                em nossa maneira de viver.
+            </p>
+
+        </section>
+
+
+        <!-- REFLEXÃO -->
+
+        <section class="reflexao">
+
+            <h2>Reflexão para a vida</h2>
+
+            <p>
+                A confiança é construída por meio de atitudes
+                sinceras e responsáveis. Cada palavra e cada
+                decisão podem fortalecer ou prejudicar os
+                relacionamentos.
+            </p>
+
+            <p>
+                Considere as seguintes perguntas:
+            </p>
+
+            <ol>
+
+                <li>
+                    Minhas palavras correspondem à realidade
+                    dos fatos?
+                </li>
+
+                <li>
+                    Sou honesto mesmo quando poderia obter
+                    vantagens por meio da desonestidade?
+                </li>
+
+                <li>
+                    As pessoas podem confiar nos compromissos
+                    que assumo?
+                </li>
+
+                <li>
+                    Tenho transparência no exercício das
+                    responsabilidades que recebo?
+                </li>
+
+                <li>
+                    Quando cometo um erro, tenho coragem
+                    de reconhecê-lo e procurar repará-lo?
+                </li>
+
+            </ol>
+
+        </section>
+
+
+        <!-- PRINCÍPIO FORMATIVO -->
+
+        <section class="principio">
+
+            <h2>Princípio Formativo</h2>
+
+            <p>
+                O homem segundo o coração de Deus procura viver
+                na verdade, agir com honestidade e conduzir
+                seus relacionamentos e responsabilidades
+                com transparência, demonstrando fidelidade
+                aos princípios das Escrituras.
+            </p>
+
+        </section>
+
+
+        <!-- VERSÍCULO PARA MEMORIZAÇÃO -->
+
+        <section class="bloco">
+
+            <h2>Versículo para memorizar</h2>
+
+            <div class="versiculo">
+
+                <p>
+                    "Pelo que deixai a mentira e falai a verdade
+                    cada um com o seu próximo; porque somos membros
+                    uns dos outros."
+                </p>
+
+                <strong>Efésios 4:25</strong>
+
+            </div>
+
+            <p>
+                A verdade fortalece os relacionamentos e contribui
+                para uma convivência fundamentada na confiança,
+                no respeito e na responsabilidade cristã.
+            </p>
+
+        </section>
+
+
+        <!-- NAVEGAÇÃO -->
+
+        <nav class="navegacao">
+
+            <a
+                href="tema03.html"
+                class="botao botao-secundario">
+
+                ← Tema Anterior
+
+            </a>
+
+            <a
+                href="tema05.html"
+                class="botao">
+
+                Próximo Tema →
+
+            </a>
+
+        </nav>
+
+        <div class="navegacao">
+
+            <a
+                href="apresentacao.html"
+                class="botao botao-secundario">
+
+                Voltar ao Módulo 04
+
+            </a>
+
+            <button
+                onclick="window.print()"
+                class="botao"
+                style="border: none; cursor: pointer; font-family: inherit;">
+
+                Imprimir Estudo
+
+            </button>
+
+            <a
+                href="../../../uhbb_psh.html"
+                class="botao botao-secundario">
+
+                Página Inicial
+
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <footer class="rodape-tema">
+
+        <p>
+            HOMENS SEGUNDO O CORAÇÃO DE DEUS
+        </p>
+
+        <p>
+            Formando homens, fortalecendo famílias e servindo à Igreja de Cristo.
+        </p>
+
+    </footer>
+
+</body>
+</html>
