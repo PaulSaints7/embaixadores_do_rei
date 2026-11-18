@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Módulo 04 — Caráter, Honra e Integridade</title>
+
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #F7F4EC;
+            color: #38271F;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .modulo-container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 35px 20px 70px;
+        }
+
+        /* CABEÇALHO */
+
+        .cabecalho-modulo {
+            background: linear-gradient(135deg, #38271F, #18334D);
+            color: #F7F4EC;
+            padding: 55px 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .identificacao {
+            color: #D1B477;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .cabecalho-modulo h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(26px, 5vw, 38px);
+            color: #E9DFC9;
+            margin: 20px 0;
+            line-height: 1.4;
+        }
+
+        .linha-dourada {
+            width: 90px;
+            height: 3px;
+            background: #B08A48;
+            margin: 25px auto;
+        }
+
+        .cabecalho-modulo p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        /* APRESENTAÇÃO */
+
+        .secao {
+            background: #FFFFFF;
+            border: 1px solid #DED3BF;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .secao h2 {
+            font-family: 'Cinzel', serif;
+            color: #593B2B;
+            font-size: 22px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .secao p {
+            font-size: 14px;
+            line-height: 1.9;
+            color: #62574E;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* OBJETIVOS */
+
+        .objetivos {
+            background: #E9DFC9;
+            border-left: 5px solid #B08A48;
+            border-radius: 5px;
+            padding: 25px 30px;
+            margin-bottom: 30px;
+        }
+
+        .objetivos h2 {
+            font-family: 'Cinzel', serif;
+            color: #593B2B;
+            font-size: 20px;
+            margin-top: 0;
+        }
+
+        .objetivos ul {
+            padding-left: 22px;
+            margin-bottom: 0;
+        }
+
+        .objetivos li {
+            color: #514438;
+            font-size: 13px;
+            line-height: 1.9;
+            margin-bottom: 9px;
+        }
+
+        /* TEMAS */
+
+        .titulo-temas {
+            text-align: center;
+            margin: 45px 0 30px;
+        }
+
+        .titulo-temas h2 {
+            font-family: 'Cinzel', serif;
+            color: #593B2B;
+            font-size: 25px;
+        }
+
+        .titulo-temas p {
+            color: #75695E;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        .grade-temas {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .card-tema {
+            background: #FFFFFF;
+            border: 1px solid #DED3BF;
+            border-radius: 8px;
+            padding: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-tema:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(56, 39, 31, 0.10);
+        }
+
+        .numero-tema {
+            color: #B08A48;
+            font-family: 'Cinzel', serif;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .card-tema h3 {
+            color: #593B2B;
+            font-family: 'Cinzel', serif;
+            font-size: 17px;
+            line-height: 1.5;
+            margin: 0 0 15px;
+        }
+
+        .card-tema p {
+            color: #62574E;
+            font-size: 13px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .botao-tema {
+            display: inline-block;
+            background: #593B2B;
+            color: #FFFFFF;
+            padding: 11px 17px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: background 0.3s ease;
+        }
+
+        .botao-tema:hover {
+            background: #18334D;
+        }
+
+        /* PRINCÍPIO FORMATIVO */
+
+        .principio {
+            background: linear-gradient(135deg, #18334D, #294B65);
+            color: #F7F4EC;
+            border-radius: 8px;
+            padding: 35px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .principio h2 {
+            font-family: 'Cinzel', serif;
+            color: #D1B477;
+            font-size: 21px;
+            margin-top: 0;
+        }
+
+        .principio p {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 16px;
+            line-height: 1.9;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* VERSÍCULO */
+
+        .versiculo {
+            text-align: center;
+            padding: 35px 20px;
+            margin-top: 25px;
+        }
+
+        .versiculo p {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 17px;
+            line-height: 1.9;
+            color: #593B2B;
+            font-style: italic;
+        }
+
+        .versiculo strong {
+            display: block;
+            color: #B08A48;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 12px;
+            letter-spacing: 1px;
+            margin-top: 15px;
+        }
+
+        /* NAVEGAÇÃO */
+
+        .navegacao {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .navegacao a {
+            display: inline-block;
+            padding: 14px 22px;
+            border: 1px solid #B08A48;
+            border-radius: 5px;
+            color: #593B2B;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .navegacao a:hover {
+            background: #593B2B;
+            color: #FFFFFF;
+        }
+
+        /* RODAPÉ */
+
+        .rodape {
+            background: #38271F;
+            color: #E9DFC9;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 12px;
+            line-height: 1.9;
+        }
+
+        .rodape strong {
+            color: #D1B477;
+        }
+
+        /* RESPONSIVIDADE */
+
+        @media (max-width: 700px) {
+
+            .grade-temas {
+                grid-template-columns: 1fr;
+            }
+
+            .cabecalho-modulo {
+                padding: 40px 20px;
+            }
+
+            .secao {
+                padding: 22px;
+            }
+
+            .principio {
+                padding: 25px 20px;
+            }
+
+        }
+
+        /* IMPRESSÃO */
+
+        @media print {
+
+            body {
+                background: #FFFFFF;
+            }
+
+            .navegacao {
+                display: none;
+            }
+
+            .card-tema {
+                break-inside: avoid;
+                box-shadow: none;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="modulo-container">
+
+    <!-- CABEÇALHO -->
+
+    <header class="cabecalho-modulo">
+
+        <div class="identificacao">
+            Escola de Formação Cristã Masculina
+        </div>
+
+        <h1>
+            Módulo 04
+            <br>
+            Caráter, Honra e Integridade
+        </h1>
+
+        <div class="linha-dourada"></div>
+
+        <p>
+            Uma formação voltada ao desenvolvimento do caráter cristão,
+            à valorização da honra e à construção de uma vida marcada
+            pela integridade diante de Deus e das pessoas.
+        </p>
+
+    </header>
+
+
+    <!-- APRESENTAÇÃO -->
+
+    <section class="secao">
+
+        <h2>Apresentação do Módulo</h2>
+
+        <p>
+            O caráter revela quem somos em nossa maneira de pensar,
+            decidir e agir. Mais do que aquilo que demonstramos
+            publicamente, ele envolve os princípios que orientam
+            nossas escolhas e atitudes, inclusive quando ninguém
+            está observando.
+        </p>
+
+        <p>
+            Na perspectiva das Escrituras Sagradas, o homem cristão
+            é chamado a desenvolver uma vida coerente com os
+            ensinamentos de Deus. Sua conduta deve ser marcada
+            pela verdade, pela justiça, pela fidelidade e pelo
+            compromisso com aquilo que é correto.
+        </p>
+
+        <p>
+            A honra não deve ser confundida com orgulho, vaidade
+            ou busca de reconhecimento. Ela se manifesta no respeito
+            a Deus, na consideração pelo próximo, na fidelidade aos
+            compromissos e na responsabilidade pelas próprias atitudes.
+        </p>
+
+        <p>
+            A integridade, por sua vez, representa a coerência entre
+            aquilo que professamos, aquilo em que acreditamos e
+            a maneira como vivemos. Um homem íntegro procura
+            permanecer fiel aos princípios de Deus mesmo diante
+            de pressões, dificuldades e oportunidades de agir
+            de maneira incorreta.
+        </p>
+
+        <p>
+            Neste módulo, estudaremos como o caráter cristão é
+            formado e como a honra e a integridade devem orientar
+            a vida pessoal, familiar, profissional, espiritual
+            e social.
+        </p>
+
+    </section>
+
+
+    <!-- OBJETIVOS -->
+
+    <section class="objetivos">
+
+        <h2>Objetivos de Aprendizagem</h2>
+
+        <ul>
+
+            <li>
+                Compreender a importância do caráter na formação
+                do homem cristão.
+            </li>
+
+            <li>
+                Reconhecer a honra como expressão de respeito,
+                responsabilidade e fidelidade aos princípios bíblicos.
+            </li>
+
+            <li>
+                Entender a integridade como coerência entre
+                convicções, palavras e atitudes.
+            </li>
+
+            <li>
+                Valorizar a verdade e a honestidade nos relacionamentos
+                e nas atividades cotidianas.
+            </li>
+
+            <li>
+                Desenvolver coerência entre a fé professada
+                e a conduta pessoal.
+            </li>
+
+            <li>
+                Reconhecer a importância do testemunho cristão
+                na família, na Igreja e na sociedade.
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- TEMAS -->
+
+    <section>
+
+        <div class="titulo-temas">
+
+            <h2>Conteúdo Programático</h2>
+
+            <p>
+                Seis temas para aprofundar os fundamentos bíblicos
+                do caráter, da honra e da integridade cristã.
+            </p>
+
+        </div>
+
+
+        <div class="grade-temas">
+
+
+            <!-- TEMA 01 -->
+
+            <article class="card-tema">
+
+                <div class="numero-tema">
+                    TEMA 01
+                </div>
+
+                <h3>
+                    O Caráter Cristão e sua Formação
+                </h3>
+
+                <p>
+                    Estudo sobre a formação do caráter à luz das
+                    Escrituras, a transformação da vida e o
+                    desenvolvimento de atitudes que refletem
+                    os princípios de Deus.
+                </p>
+
+                <a href="tema01.html" class="botao-tema">
+                    ACESSAR TEMA →
+                </a>
+
+            </article>
+
+
+            <!-- TEMA 02 -->
+
+            <article class="card-tema">
+
+                <div class="numero-tema">
+                    TEMA 02
+                </div>
+
+                <h3>
+                    A Honra como Princípio da Vida Cristã
+                </h3>
+
+                <p>
+                    Reflexão sobre o significado da honra,
+                    o respeito a Deus, a consideração pelo próximo
+                    e a fidelidade aos compromissos assumidos.
+                </p>
+
+                <a href="tema02.html" class="botao-tema">
+                    ACESSAR TEMA →
+                </a>
+
+            </article>
+
+
+            <!-- TEMA 03 -->
+
+            <article class="card-tema">
+
+                <div class="numero-tema">
+                    TEMA 03
+                </div>
+
+                <h3>
+                    Integridade: Ser o Mesmo em Todas as Circunstâncias
+                </h3>
+
+                <p>
+                    Compreensão da integridade como coerência
+                    de vida, fidelidade aos princípios bíblicos
+                    e compromisso com o que é correto.
+                </p>
+
+                <a href="tema03.html" class="botao-tema">
+                    ACESSAR TEMA →
+                </a>
+
+            </article>
+
+
+            <!-- TEMA 04 -->
+
+            <article class="card-tema">
+
+                <div class="numero-tema">
+                    TEMA 04
+                </div>
+
+                <h3>
+                    Verdade, Honestidade e Transparência
+                </h3>
+
+                <p>
+                    Estudo da importância da verdade nas palavras,
+                    nos relacionamentos, nas decisões e nas
+                    responsabilidades da vida cotidiana.
+                </p>
+
+                <a href="tema04.html" class="botao-tema">
+                    ACESSAR TEMA →
+                </a>
+
+            </article>
+
+
+            <!-- TEMA 05 -->
+
+            <article class="card-tema">
+
+                <div class="numero-tema">
+                    TEMA 05
+                </div>
+
+                <h3>
+                    Coerência entre Fé, Palavras e Atitudes
+                </h3>
+
+                <p>
+                    Reflexão sobre a necessidade de viver de acordo
+                    com aquilo que se professa, demonstrando
+                    autenticidade e compromisso com o Evangelho.
+                </p>
+
+                <a href="tema05.html" class="botao-tema">
+                    ACESSAR TEMA →
+                </a>
+
+            </article>
+
+
+            <!-- TEMA 06 -->
+
+            <article class="card-tema">
+
+                <div class="numero-tema">
+                    TEMA 06
+                </div>
+
+                <h3>
+                    O Testemunho de um Homem de Caráter
+                </h3>
+
+                <p>
+                    Aplicação dos princípios estudados à vida
+                    familiar, profissional, espiritual e social,
+                    considerando o testemunho cristão diante
+                    das pessoas.
+                </p>
+
+                <a href="tema06.html" class="botao-tema">
+                    ACESSAR TEMA →
+                </a>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- PRINCÍPIO FORMATIVO -->
+
+    <section class="principio">
+
+        <h2>Princípio Formativo</h2>
+
+        <p>
+            O homem segundo o coração de Deus procura desenvolver
+            um caráter fundamentado nas Escrituras, agir com honra
+            e permanecer íntegro em suas escolhas, demonstrando
+            coerência entre sua fé, suas palavras e suas atitudes.
+        </p>
+
+    </section>
+
+
+    <!-- VERSÍCULO -->
+
+    <section class="versiculo">
+
+        <p>
+            "O justo anda na sua sinceridade; bem-aventurados
+            serão os seus filhos depois dele."
+        </p>
+
+        <strong>PROVÉRBIOS 20:7</strong>
+
+    </section>
+
+
+    <!-- NAVEGAÇÃO -->
+
+    <nav class="navegacao">
+
+        <a href="../identidade_masculina.html">
+            ← ÁREA DE IDENTIDADE MASCULINA
+        </a>
+        <a href="../../../questionarios/identidade_masculina/avaliacao_modulo05.html">
+            REALIZAR AVALIAÇÃO DO MÓDULO 06
+        </a>
+        <a href="../../../uhbb_psh.html">
+            PÁGINA PRINCIPAL
+        </a>
+
+    </nav>
+
+</div>
+
+
+<!-- RODAPÉ -->
+
+<footer class="rodape">
+
+    <strong>HOMENS SEGUNDO O CORAÇÃO DE DEUS</strong>
+
+    <br>
+
+    Formando homens, fortalecendo famílias
+    e servindo à Igreja de Cristo.
+
+    <br>
+
+    Fundamentados nas Escrituras Sagradas.
+
+</footer>
+
+
+</body>
+</html>

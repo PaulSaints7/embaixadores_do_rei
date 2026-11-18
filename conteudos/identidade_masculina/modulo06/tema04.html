@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tema 04 | O Amor e a Compaixão de Jesus pelas Pessoas</title>
+
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        .pagina-tema {
+            max-width: 1050px;
+            margin: 40px auto;
+            padding: 30px;
+        }
+
+        .cabecalho-tema {
+            background: linear-gradient(135deg, #38271F, #18334D);
+            color: #F7F4EC;
+            padding: 55px 35px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .cabecalho-tema .identificacao {
+            color: #D1B477;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+
+        .cabecalho-tema h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            margin: 20px 0;
+            line-height: 1.4;
+        }
+
+        .cabecalho-tema p {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .conteudo-tema {
+            background: #F7F4EC;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            margin-bottom: 30px;
+        }
+
+        .conteudo-tema h2 {
+            font-family: 'Cinzel', serif;
+            color: #593B2B;
+            font-size: 1.35rem;
+            margin: 30px 0 15px;
+            border-bottom: 2px solid #D1B477;
+            padding-bottom: 10px;
+        }
+
+        .conteudo-tema h2:first-child {
+            margin-top: 0;
+        }
+
+        .conteudo-tema h3 {
+            color: #18334D;
+            margin-top: 22px;
+        }
+
+        .conteudo-tema p {
+            font-family: 'Open Sans', sans-serif;
+            color: #38271F;
+            line-height: 1.9;
+            text-align: justify;
+            margin-bottom: 16px;
+        }
+
+        .conteudo-tema ul {
+            padding-left: 25px;
+            line-height: 1.9;
+            color: #38271F;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .conteudo-tema li {
+            margin-bottom: 9px;
+        }
+
+        .versiculo {
+            background: #E9DFC9;
+            border-left: 5px solid #B08A48;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 6px;
+        }
+
+        .versiculo p {
+            font-family: 'Libre Baskerville', serif;
+            font-style: italic;
+            font-size: 1.05rem;
+            text-align: center;
+        }
+
+        .versiculo strong {
+            display: block;
+            text-align: center;
+            color: #593B2B;
+            margin-top: 12px;
+        }
+
+        .caixa-destaque {
+            background: #E9DFC9;
+            border-radius: 8px;
+            padding: 22px;
+            margin: 25px 0;
+            border-left: 5px solid #18334D;
+        }
+
+        .caixa-destaque p {
+            margin-bottom: 0;
+        }
+
+        .aplicacao {
+            background: #18334D;
+            color: #F7F4EC;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .aplicacao h2 {
+            color: #D1B477;
+            border-color: #B08A48;
+        }
+
+        .aplicacao p,
+        .aplicacao li {
+            color: #F7F4EC;
+        }
+
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 35px;
+        }
+
+        .botao-tema {
+            display: inline-block;
+            background: #593B2B;
+            color: #F7F4EC;
+            padding: 13px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .botao-tema:hover {
+            background: #18334D;
+            transform: translateY(-2px);
+        }
+
+        .referencias {
+            font-size: 0.95rem;
+            color: #76523C;
+        }
+
+        @media (max-width: 700px) {
+            .pagina-tema {
+                padding: 15px;
+                margin: 20px auto;
+            }
+
+            .cabecalho-tema {
+                padding: 35px 20px;
+            }
+
+            .cabecalho-tema h1 {
+                font-size: 1.5rem;
+            }
+
+            .conteudo-tema {
+                padding: 22px;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+            }
+
+            .botao-tema {
+                text-align: center;
+            }
+        }
+
+        @media print {
+            header,
+            footer,
+            .navegacao-temas,
+            .botao-imprimir {
+                display: none !important;
+            }
+
+            body {
+                background: white;
+            }
+
+            .pagina-tema {
+                margin: 0;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .conteudo-tema {
+                box-shadow: none;
+                padding: 15px;
+            }
+
+            .cabecalho-tema {
+                background: white;
+                color: black;
+                border: 2px solid #593B2B;
+            }
+
+            .cabecalho-tema .identificacao {
+                color: #593B2B;
+            }
+
+            .aplicacao {
+                background: white;
+                border: 1px solid #18334D;
+            }
+
+            .aplicacao p,
+            .aplicacao li,
+            .aplicacao h2 {
+                color: black;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<main class="pagina-tema">
+
+    <section class="cabecalho-tema">
+
+        <div class="identificacao">
+            Área 01 — Identidade Masculina Cristã
+        </div>
+
+        <h1>O Amor e a Compaixão de Jesus pelas Pessoas</h1>
+
+        <p>
+            Módulo 06 — O Exemplo de Jesus Cristo
+        </p>
+
+        <p>
+            O amor de Cristo não permaneceu apenas nas palavras.
+            Sua compaixão se manifestou em atitudes concretas
+            de cuidado, acolhimento e serviço.
+        </p>
+
+    </section>
+
+
+    <section class="conteudo-tema">
+
+        <h2>1. Introdução</h2>
+
+        <p>
+            Ao observarmos a vida de Jesus, encontramos uma
+            característica presente em todo o seu ministério:
+            o amor pelas pessoas.
+        </p>
+
+        <p>
+            Jesus não enxergava os seres humanos apenas como
+            parte de uma multidão. Ele reconhecia suas necessidades,
+            dores, dificuldades e esperanças. Aproximava-se
+            daqueles que sofriam, acolhia os rejeitados,
+            ensinava os que buscavam orientação e demonstrava
+            misericórdia diante das necessidades humanas.
+        </p>
+
+        <p>
+            Sua compaixão não era apenas um sentimento.
+            Ela se manifestava por meio de atitudes concretas:
+            curar enfermos, alimentar famintos, acolher crianças,
+            ensinar multidões, perdoar pecadores e oferecer
+            esperança aos que estavam sofrendo.
+        </p>
+
+        <p>
+            Neste estudo, compreenderemos como o amor e a
+            compaixão de Jesus devem influenciar a vida de
+            seus discípulos, especialmente nas relações
+            familiares, comunitárias e sociais.
+        </p>
+
+
+        <h2>2. O Amor como Característica do Ministério de Jesus</h2>
+
+        <p>
+            O amor ocupa lugar central no ensino e na atuação
+            de Jesus. Ele demonstrou que o relacionamento com
+            Deus está profundamente relacionado à maneira
+            como tratamos as outras pessoas.
+        </p>
+
+        <div class="versiculo">
+            <p>
+                "Um novo mandamento vos dou: Que vos ameis uns
+                aos outros; como eu vos amei a vós, que também
+                vós uns aos outros vos ameis."
+            </p>
+            <strong>João 13:34</strong>
+        </div>
+
+        <p>
+            Jesus estabeleceu seu próprio amor como referência
+            para o relacionamento entre seus discípulos.
+            Não se tratava de um amor limitado a palavras,
+            interesses pessoais ou afinidades.
+        </p>
+
+        <p>
+            O amor cristão envolve respeito, cuidado, fidelidade,
+            disposição para ajudar e compromisso com o bem
+            do próximo.
+        </p>
+
+        <p>
+            O exemplo de Cristo demonstra que amar significa
+            reconhecer a dignidade das pessoas e agir de maneira
+            coerente com os princípios do Reino de Deus.
+        </p>
+
+
+        <h2>3. Jesus Demonstrava Compaixão diante do Sofrimento</h2>
+
+        <p>
+            Os Evangelhos apresentam diversas situações em que
+            Jesus demonstrou profunda compaixão diante das
+            dificuldades enfrentadas pelas pessoas.
+        </p>
+
+        <p>
+            Em Mateus 9, ao observar as multidões, Jesus percebeu
+            que estavam aflitas e desamparadas, como ovelhas
+            sem pastor.
+        </p>
+
+        <div class="versiculo">
+            <p>
+                "E, vendo a multidão, teve grande compaixão deles,
+                porque andavam cansados e desgarrados, como ovelhas
+                que não têm pastor."
+            </p>
+            <strong>Mateus 9:36</strong>
+        </div>
+
+        <p>
+            A compaixão de Jesus não era uma simples manifestação
+            de pena. Ele reconhecia o sofrimento humano e se
+            dispunha a agir em favor daqueles que necessitavam.
+        </p>
+
+        <p>
+            Sua atitude revela que a fé verdadeira não deve
+            produzir indiferença diante da dor do próximo.
+            O discípulo de Cristo é chamado a desenvolver
+            sensibilidade, misericórdia e disposição para ajudar.
+        </p>
+
+
+        <h2>4. Jesus Acolhia os que Eram Rejeitados</h2>
+
+        <p>
+            Durante seu ministério, Jesus aproximou-se de pessoas
+            que frequentemente eram desprezadas ou excluídas
+            pela sociedade.
+        </p>
+
+        <p>
+            Ele conversou com samaritanos, acolheu pessoas
+            consideradas pecadoras, aproximou-se de enfermos
+            e demonstrou respeito por aqueles que eram
+            socialmente marginalizados.
+        </p>
+
+        <p>
+            Um exemplo marcante é o encontro de Jesus com a
+            mulher samaritana, registrado em João 4:1-30.
+            Naquela ocasião, Ele iniciou uma conversa com uma
+            mulher que pertencia a um grupo frequentemente
+            desprezado pelos judeus.
+        </p>
+
+        <p>
+            Jesus não permitiu que barreiras sociais e culturais
+            impedissem o diálogo. Ele tratou aquela mulher com
+            dignidade e revelou verdades espirituais importantes.
+        </p>
+
+        <p>
+            Outro exemplo está no encontro com Zaqueu,
+            registrado em Lucas 19:1-10. Jesus tomou a iniciativa
+            de aproximar-se daquele homem, demonstrando que
+            a graça de Deus alcança pessoas que precisam
+            de transformação.
+        </p>
+
+        <div class="versiculo">
+            <p>
+                "Porque o Filho do homem veio buscar e salvar
+                o que se havia perdido."
+            </p>
+            <strong>Lucas 19:10</strong>
+        </div>
+
+        <p>
+            O acolhimento de Jesus não significava aprovação
+            do pecado. Sua missão envolvia chamar as pessoas
+            ao arrependimento e oferecer-lhes a oportunidade
+            de uma vida transformada.
+        </p>
+
+
+        <h2>5. Jesus Demonstrava Amor por meio de Atitudes</h2>
+
+        <p>
+            O amor de Cristo era demonstrado por meio de ações
+            concretas. Ele não se limitava a ensinar sobre
+            misericórdia: colocava seus ensinamentos em prática.
+        </p>
+
+        <h3>Alguns exemplos registrados nos Evangelhos:</h3>
+
+        <ul>
+            <li>
+                <strong>Curou enfermos:</strong>
+                demonstrou cuidado com aqueles que sofriam
+                com doenças (Mateus 8:1-17).
+            </li>
+
+            <li>
+                <strong>Alimentou multidões:</strong>
+                preocupou-se com as necessidades das pessoas
+                que o acompanhavam (Marcos 6:34-44).
+            </li>
+
+            <li>
+                <strong>Acolheu crianças:</strong>
+                demonstrou que elas também mereciam atenção
+                e respeito (Marcos 10:13-16).
+            </li>
+
+            <li>
+                <strong>Socorreu os necessitados:</strong>
+                ensinou sobre misericórdia e cuidado
+                (Lucas 10:25-37).
+            </li>
+
+            <li>
+                <strong>Perdoou pecadores:</strong>
+                anunciou a possibilidade de arrependimento
+                e transformação (Lucas 7:36-50).
+            </li>
+
+            <li>
+                <strong>Consolou os que sofriam:</strong>
+                demonstrou compaixão diante da dor humana
+                (João 11:33-36).
+            </li>
+        </ul>
+
+        <p>
+            Esses acontecimentos demonstram que o amor cristão
+            deve produzir atitudes. Não basta afirmar que
+            nos preocupamos com as pessoas se permanecemos
+            indiferentes diante de suas necessidades.
+        </p>
+
+
+        <h2>6. A Compaixão de Jesus diante da Dor Humana</h2>
+
+        <p>
+            Um dos episódios mais expressivos da sensibilidade
+            humana de Jesus aconteceu diante da morte de Lázaro.
+        </p>
+
+        <p>
+            Ao encontrar Maria e outras pessoas chorando,
+            Jesus se comoveu profundamente. Mesmo sabendo
+            que realizaria um milagre, Ele não tratou a dor
+            daqueles que estavam sofrendo com indiferença.
+        </p>
+
+        <div class="versiculo">
+            <p>
+                "Jesus chorou."
+            </p>
+            <strong>João 11:35</strong>
+        </div>
+
+        <p>
+            Esse breve versículo revela a humanidade de Cristo
+            e sua capacidade de demonstrar compaixão.
+        </p>
+
+        <p>
+            Jesus não considerou o sofrimento humano irrelevante.
+            Ele se aproximou das pessoas e participou daquele
+            momento de tristeza.
+        </p>
+
+        <p>
+            Seu exemplo ensina que o homem cristão não precisa
+            esconder seus sentimentos nem tratar a dor dos
+            outros com frieza. Demonstrar sensibilidade,
+            ouvir e oferecer apoio são atitudes compatíveis
+            com uma vida de fé e maturidade.
+        </p>
+
+
+        <h2>7. O Amor de Jesus Também Envolvia Verdade e Correção</h2>
+
+        <p>
+            O amor de Jesus não deve ser confundido com
+            permissividade ou aprovação de qualquer comportamento.
+            Ele acolhia as pessoas, mas também ensinava a verdade
+            e chamava ao arrependimento.
+        </p>
+
+        <p>
+            Em diferentes ocasiões, Jesus confrontou a hipocrisia,
+            denunciou injustiças e corrigiu atitudes contrárias
+            à vontade de Deus.
+        </p>
+
+        <p>
+            Quando encontrou os comerciantes no templo,
+            por exemplo, demonstrou indignação diante da
+            utilização indevida daquele lugar de adoração
+            (João 2:13-17).
+        </p>
+
+        <p>
+            Seu ensino também apresentava a necessidade
+            de abandonar o pecado e viver de acordo com
+            a vontade divina.
+        </p>
+
+        <div class="versiculo">
+            <p>
+                "Nem eu também te condeno; vai-te, e não peques mais."
+            </p>
+            <strong>João 8:11</strong>
+        </div>
+
+        <p>
+            Essa passagem ilustra a relação entre misericórdia
+            e transformação. O amor cristão acolhe, mas não
+            abandona a verdade. Ele procura o bem verdadeiro
+            da pessoa.
+        </p>
+
+        <div class="caixa-destaque">
+            <p>
+                <strong>Princípio importante:</strong>
+                amar alguém não significa concordar com todas
+                as suas escolhas. O amor cristão deve ser
+                acompanhado de verdade, respeito, justiça
+                e compromisso com a vontade de Deus.
+            </p>
+        </div>
+
+
+        <h2>8. O Amor de Cristo e a Formação do Homem Cristão</h2>
+
+        <p>
+            O exemplo de Jesus apresenta um modelo de masculinidade
+            marcado pelo amor, pela responsabilidade e pelo cuidado.
+        </p>
+
+        <p>
+            O homem cristão não deve confundir força com
+            brutalidade, autoridade com autoritarismo ou
+            firmeza com ausência de sensibilidade.
+        </p>
+
+        <p>
+            A vida de Cristo demonstra que a verdadeira
+            maturidade inclui a capacidade de cuidar, acolher,
+            ouvir, proteger e servir.
+        </p>
+
+        <h3>O exemplo de Jesus nos ensina a:</h3>
+
+        <ul>
+            <li>
+                <strong>Respeitar as pessoas:</strong>
+                reconhecer a dignidade de cada ser humano.
+            </li>
+
+            <li>
+                <strong>Demonstrar compaixão:</strong>
+                perceber o sofrimento e procurar ajudar.
+            </li>
+
+            <li>
+                <strong>Praticar a misericórdia:</strong>
+                tratar as pessoas com bondade e disposição
+                para perdoar.
+            </li>
+
+            <li>
+                <strong>Defender a verdade:</strong>
+                não confundir amor com tolerância ao engano
+                e à injustiça.
+            </li>
+
+            <li>
+                <strong>Cuidar dos vulneráveis:</strong>
+                demonstrar atenção aos que necessitam de proteção
+                e apoio.
+            </li>
+
+            <li>
+                <strong>Servir ao próximo:</strong>
+                transformar a fé em atitudes concretas.
+            </li>
+        </ul>
+
+        <p>
+            Essas atitudes devem aparecer na maneira como
+            o homem trata sua esposa, seus filhos, seus pais,
+            seus irmãos na Igreja, seus colegas de trabalho
+            e todas as pessoas com quem convive.
+        </p>
+
+
+        <h2>9. O Amor Cristão na Família, na Igreja e na Sociedade</h2>
+
+        <p>
+            O amor ensinado por Jesus precisa ultrapassar
+            os limites das palavras e alcançar os diferentes
+            ambientes da vida.
+        </p>
+
+        <h3>Na família:</h3>
+
+        <ul>
+            <li>Tratar os familiares com respeito e consideração.</li>
+            <li>Demonstrar carinho e atenção aos filhos.</li>
+            <li>Ouvir antes de julgar ou corrigir.</li>
+            <li>Assumir responsabilidades pelo bem-estar familiar.</li>
+            <li>Praticar o perdão e buscar a reconciliação.</li>
+        </ul>
+
+        <h3>Na Igreja:</h3>
+
+        <ul>
+            <li>Acolher novos irmãos e visitantes.</li>
+            <li>Visitar e apoiar pessoas enfermas ou necessitadas.</li>
+            <li>Evitar julgamentos precipitados e atitudes de desprezo.</li>
+            <li>Promover a comunhão e a cooperação.</li>
+            <li>Servir sem buscar reconhecimento pessoal.</li>
+        </ul>
+
+        <h3>Na sociedade:</h3>
+
+        <ul>
+            <li>Tratar todas as pessoas com dignidade.</li>
+            <li>Praticar solidariedade e responsabilidade social.</li>
+            <li>Agir com justiça e honestidade.</li>
+            <li>Combater a indiferença diante do sofrimento.</li>
+            <li>Contribuir para o bem da comunidade.</li>
+        </ul>
+
+        <p>
+            O amor cristão não deve ficar restrito ao ambiente
+            religioso. Ele precisa ser percebido nas atitudes
+            cotidianas e no testemunho público dos discípulos
+            de Jesus.
+        </p>
+
+
+        <section class="aplicacao">
+
+            <h2>10. Aplicações para a Vida</h2>
+
+            <p>
+                O amor e a compaixão de Jesus nos convidam
+                a avaliar como temos tratado as pessoas
+                ao nosso redor.
+            </p>
+
+            <ul>
+                <li>
+                    Tenho demonstrado amor por meio de atitudes
+                    concretas?
+                </li>
+
+                <li>
+                    Consigo perceber as necessidades das pessoas
+                    que convivem comigo?
+                </li>
+
+                <li>
+                    Trato minha família com paciência,
+                    respeito e consideração?
+                </li>
+
+                <li>
+                    Tenho acolhido pessoas que enfrentam
+                    dificuldades ou situações de rejeição?
+                </li>
+
+                <li>
+                    Sei corrigir com respeito, sem humilhar
+                    ou agir com arrogância?
+                </li>
+
+                <li>
+                    Minha fé tem produzido atitudes de
+                    misericórdia e serviço?
+                </li>
+            </ul>
+
+            <p>
+                O homem segundo o coração de Deus precisa
+                compreender que o amor não é sinal de fraqueza.
+                Pelo contrário, exige maturidade, responsabilidade
+                e disposição para colocar o bem do próximo
+                em consideração.
+            </p>
+
+        </section>
+
+
+        <h2>11. Para Guardar no Coração</h2>
+
+        <div class="versiculo">
+            <p>
+                "Um novo mandamento vos dou: Que vos ameis uns
+                aos outros; como eu vos amei a vós, que também
+                vós uns aos outros vos ameis."
+            </p>
+            <strong>João 13:34</strong>
+        </div>
+
+        <p>
+            Jesus demonstrou amor e compaixão por meio de
+            suas palavras e atitudes. Ele acolheu os rejeitados,
+            cuidou dos necessitados, consolou os que sofriam
+            e ensinou a verdade.
+        </p>
+
+        <p>
+            Seus discípulos são chamados a seguir esse exemplo,
+            desenvolvendo uma vida marcada pelo amor, pela
+            misericórdia, pelo respeito e pelo serviço ao próximo.
+        </p>
+
+
+        <h2>12. Referências Bíblicas para Estudo</h2>
+
+        <p class="referencias">
+            Mateus 8:1-17; Mateus 9:35-38; Mateus 14:13-21;
+            Marcos 6:34-44; Marcos 10:13-16; Lucas 7:36-50;
+            Lucas 10:25-37; Lucas 19:1-10; João 4:1-30;
+            João 8:1-11; João 11:33-36; João 13:34-35;
+            1 João 4:7-12.
+        </p>
+
+        <div class="caixa-destaque">
+            <p>
+                <strong>Objetivo de aprendizagem:</strong>
+                compreender como o amor e a compaixão se
+                manifestaram na vida e no ministério de Jesus,
+                reconhecendo a importância de aplicar esses
+                princípios nos relacionamentos familiares,
+                na Igreja e na sociedade.
+            </p>
+        </div>
+
+    </section>
+
+
+    <div class="navegacao-temas">
+
+        <a href="tema03.html" class="botao-tema">
+            ← TEMA ANTERIOR
+        </a>
+
+        <a href="tema05.html" class="botao-tema">
+            PRÓXIMO TEMA →
+        </a>
+
+    </div>
+
+    <div class="navegacao-temas">
+
+        <a href="apresentacao.html" class="botao-tema">
+            VOLTAR AO MÓDULO 06
+        </a>
+
+        <a href="../identidade_masculina.html" class="botao-tema">
+            ÁREA DE IDENTIDADE MASCULINA
+        </a>
+
+        <a href="../../../uhbb_psh.html" class="botao-tema">
+            PÁGINA PRINCIPAL
+        </a>
+
+        <button onclick="window.print()" class="botao-tema botao-imprimir">
+            IMPRIMIR ESTUDO
+        </button>
+
+    </div>
+
+</main>
+
+</body>
+</html>

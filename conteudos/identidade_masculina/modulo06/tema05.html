@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tema 05 do Módulo 06 - A Liderança Servidora e a Humildade de Jesus.">
+    <title>A Liderança Servidora e a Humildade de Jesus | Homens Segundo o Coração de Deus</title>
+
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        .pagina-tema {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 35px 22px 60px;
+            color: #38271F;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .cabecalho-tema {
+            background: linear-gradient(135deg, #38271F, #18334D);
+            color: #F7F4EC;
+            padding: 48px 35px;
+            border-radius: 12px;
+            margin-bottom: 35px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.16);
+        }
+
+        .identificacao-tema {
+            color: #D1B477;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .cabecalho-tema h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.8rem, 4vw, 2.7rem);
+            line-height: 1.35;
+            margin: 0 0 18px;
+        }
+
+        .cabecalho-tema p {
+            color: #E9DFC9;
+            font-size: 1rem;
+            line-height: 1.7;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .conteudo-tema {
+            background: #F7F4EC;
+            padding: 35px;
+            border-radius: 12px;
+            border: 1px solid #E9DFC9;
+            box-shadow: 0 4px 15px rgba(56,39,31,0.07);
+        }
+
+        .conteudo-tema h2 {
+            color: #593B2B;
+            font-family: 'Cinzel', serif;
+            font-size: 1.55rem;
+            margin: 38px 0 17px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #D1B477;
+        }
+
+        .conteudo-tema h2:first-child {
+            margin-top: 0;
+        }
+
+        .conteudo-tema h3 {
+            color: #18334D;
+            font-size: 1.12rem;
+            margin: 25px 0 10px;
+        }
+
+        .conteudo-tema p {
+            font-size: 1rem;
+            line-height: 1.85;
+            margin-bottom: 17px;
+            text-align: justify;
+        }
+
+        .conteudo-tema ul {
+            padding-left: 25px;
+            margin-bottom: 22px;
+        }
+
+        .conteudo-tema li {
+            line-height: 1.8;
+            margin-bottom: 9px;
+        }
+
+        .versiculo {
+            background: #E9DFC9;
+            border-left: 5px solid #B08A48;
+            padding: 23px 25px;
+            margin: 28px 0;
+            border-radius: 5px;
+            font-family: 'Libre Baskerville', serif;
+            font-style: italic;
+            line-height: 1.9;
+        }
+
+        .referencia {
+            display: block;
+            text-align: right;
+            margin-top: 12px;
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            color: #593B2B;
+        }
+
+        .caixa-destaque {
+            background: #EAF0F4;
+            border-left: 5px solid #18334D;
+            padding: 22px 25px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+
+        .caixa-destaque p:last-child {
+            margin-bottom: 0;
+        }
+
+        .aplicacao {
+            background: #F1E8D7;
+            border: 1px solid #D1B477;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+
+        .aplicacao h3 {
+            margin-top: 0;
+            color: #593B2B;
+            font-family: 'Cinzel', serif;
+        }
+
+        .referencias-biblicas {
+            background: #FFFFFF;
+            border: 1px solid #E9DFC9;
+            border-radius: 8px;
+            padding: 23px 25px;
+            margin-top: 30px;
+        }
+
+        .referencias-biblicas ul {
+            margin-bottom: 0;
+        }
+
+        .conclusao {
+            background: #18334D;
+            color: #F7F4EC;
+            padding: 28px;
+            border-radius: 8px;
+            margin-top: 35px;
+        }
+
+        .conclusao h2 {
+            color: #D1B477;
+            border-bottom-color: #B08A48;
+            margin-top: 0;
+        }
+
+        .conclusao p {
+            color: #F7F4EC;
+        }
+
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 35px;
+        }
+
+        .botao-tema {
+            display: inline-block;
+            padding: 13px 21px;
+            background: #593B2B;
+            color: #F7F4EC;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .botao-tema:hover {
+            background: #18334D;
+            transform: translateY(-2px);
+        }
+
+        .botao-secundario {
+            background: #18334D;
+        }
+
+        .botao-imprimir {
+            background: #B08A48;
+            color: #38271F;
+            border: none;
+            cursor: pointer;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .botao-imprimir:hover {
+            background: #D1B477;
+        }
+
+        @media (max-width: 700px) {
+            .pagina-tema {
+                padding: 20px 12px 40px;
+            }
+
+            .cabecalho-tema {
+                padding: 35px 20px;
+            }
+
+            .conteudo-tema {
+                padding: 23px 18px;
+            }
+
+            .conteudo-tema p {
+                text-align: left;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+            }
+
+            .botao-tema {
+                text-align: center;
+            }
+        }
+
+        @media print {
+            body {
+                background: white !important;
+            }
+
+            .pagina-tema {
+                max-width: 100%;
+                padding: 0;
+            }
+
+            .cabecalho-tema {
+                background: white !important;
+                color: #38271F !important;
+                box-shadow: none;
+                border: 2px solid #593B2B;
+            }
+
+            .cabecalho-tema p {
+                color: #38271F !important;
+            }
+
+            .conteudo-tema {
+                box-shadow: none;
+                border: none;
+                padding: 15px 0;
+            }
+
+            .conclusao {
+                background: white !important;
+                color: #38271F !important;
+                border: 1px solid #593B2B;
+            }
+
+            .conclusao p,
+            .conclusao h2 {
+                color: #38271F !important;
+            }
+
+            .navegacao-temas {
+                display: none !important;
+            }
+
+            .botao-imprimir {
+                display: none !important;
+            }
+
+            h2, h3 {
+                break-after: avoid;
+            }
+
+            p, li {
+                orphans: 3;
+                widows: 3;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<main class="pagina-tema">
+
+    <header class="cabecalho-tema">
+        <div class="identificacao-tema">
+            Área 01 • Identidade Masculina Cristã
+            <br>
+            Módulo 06 • O Exemplo de Jesus Cristo
+        </div>
+
+        <h1>A Liderança Servidora e a Humildade de Jesus</h1>
+
+        <p>
+            Jesus Cristo revelou que a verdadeira grandeza não está em dominar
+            pessoas, buscar privilégios ou exigir reconhecimento, mas em servir
+            com humildade, amor e disposição para fazer a vontade de Deus.
+        </p>
+    </header>
+
+    <article class="conteudo-tema">
+
+        <h2>1. A grandeza segundo Jesus</h2>
+
+        <p>
+            Os valores do Reino de Deus são diferentes dos critérios de grandeza
+            frequentemente encontrados na sociedade. Muitas pessoas associam
+            liderança ao poder, à posição social, ao prestígio e à capacidade de
+            dar ordens. Jesus, entretanto, apresentou uma perspectiva diferente.
+        </p>
+
+        <p>
+            Quando seus discípulos discutiram sobre quem seria o maior entre
+            eles, Jesus ensinou que a grandeza no Reino de Deus está relacionada
+            ao serviço. Ele não condenou toda forma de liderança ou autoridade,
+            mas corrigiu a maneira orgulhosa e dominadora de exercê-las.
+        </p>
+
+        <div class="versiculo">
+            “O maior entre vós seja como o menor; e quem governa, como quem serve.”
+            <span class="referencia">Lucas 22:26</span>
+        </div>
+
+        <p>
+            Para Jesus, liderar não significa colocar-se acima das pessoas para
+            obter vantagens. Significa assumir responsabilidades e utilizar a
+            influência recebida para cuidar, orientar e contribuir para o bem
+            daqueles que estão sob nossa responsabilidade.
+        </p>
+
+        <h2>2. Jesus ensinou pelo próprio exemplo</h2>
+
+        <p>
+            Uma das demonstrações mais marcantes da humildade de Jesus aconteceu
+            durante a última ceia com seus discípulos. Naquela ocasião, Jesus
+            levantou-se da mesa, tomou uma toalha e uma bacia com água e começou
+            a lavar os pés dos discípulos.
+        </p>
+
+        <p>
+            Na cultura daquele tempo, lavar os pés era uma tarefa normalmente
+            realizada por um servo. Ao assumir essa função, Jesus demonstrou
+            que a verdadeira liderança não depende de privilégios, mas de
+            disposição para servir.
+        </p>
+
+        <p>
+            O mais importante é que Jesus conhecia sua identidade e sua
+            autoridade. Sua humildade não era sinal de insegurança ou fraqueza.
+            Ele sabia quem era e, mesmo assim, escolheu servir.
+        </p>
+
+        <div class="versiculo">
+            “Ora, se eu, Senhor e Mestre, vos lavei os pés, vós deveis também
+            lavar os pés uns aos outros.”
+            <span class="referencia">João 13:14</span>
+        </div>
+
+        <p>
+            Depois desse gesto, Jesus explicou que havia deixado um exemplo para
+            seus discípulos. O serviço cristão não deveria ser apenas uma ideia
+            admirada, mas uma prática presente no relacionamento entre os
+            seguidores de Cristo.
+        </p>
+
+        <h2>3. A humildade de Jesus</h2>
+
+        <p>
+            A humildade de Jesus estava presente em toda a sua vida e ministério.
+            Ele não buscou reconhecimento humano, não utilizou sua autoridade
+            para satisfazer interesses pessoais e não tratou as pessoas com
+            desprezo.
+        </p>
+
+        <p>
+            O apóstolo Paulo apresenta Cristo como o maior exemplo de humildade
+            e obediência. Em Filipenses 2:5-8, somos ensinados a considerar o
+            exemplo de Jesus, que assumiu a condição de servo e humilhou-se,
+            tornando-se obediente até a morte, e morte de cruz.
+        </p>
+
+        <div class="caixa-destaque">
+            <p>
+                A humildade cristã não significa pensar que não temos valor.
+                Significa reconhecer nossa dependência de Deus, abandonar o
+                orgulho e tratar os outros com consideração, respeito e amor.
+            </p>
+        </div>
+
+        <p>
+            Jesus não precisava demonstrar superioridade por meio de arrogância.
+            Sua autoridade estava fundamentada em sua identidade, em sua missão
+            e em sua perfeita obediência ao Pai.
+        </p>
+
+        <h2>4. Liderança não é dominação</h2>
+
+        <p>
+            Em Mateus 20:25-28, Jesus advertiu seus discípulos sobre a maneira
+            como os governantes das nações exerciam autoridade, dominando e
+            impondo seu poder sobre as pessoas.
+        </p>
+
+        <p>
+            Em seguida, ensinou que entre seus seguidores não deveria ser assim.
+            Aquele que desejasse ser grande deveria servir aos demais.
+        </p>
+
+        <div class="versiculo">
+            “Bem como o Filho do Homem não veio para ser servido, mas para
+            servir e para dar a sua vida em resgate de muitos.”
+            <span class="referencia">Mateus 20:28</span>
+        </div>
+
+        <p>
+            A liderança servidora não elimina a autoridade, a responsabilidade
+            ou a necessidade de tomar decisões. Ela transforma a maneira como
+            essas responsabilidades são exercidas.
+        </p>
+
+        <p>
+            Um líder cristão pode precisar corrigir, orientar, estabelecer
+            limites e tomar decisões difíceis. Entretanto, deve fazer isso
+            com justiça, equilíbrio, respeito e compromisso com a verdade,
+            nunca utilizando sua posição para humilhar, manipular ou explorar
+            outras pessoas.
+        </p>
+
+        <h2>5. Jesus e o serviço ao próximo</h2>
+
+        <p>
+            O ministério de Jesus foi marcado por atitudes concretas de serviço.
+            Ele ensinou multidões, acolheu pessoas desprezadas, cuidou dos
+            enfermos, alimentou os famintos, consolou os aflitos e dedicou
+            atenção aos seus discípulos.
+        </p>
+
+        <p>
+            Seu serviço não era uma estratégia para conquistar popularidade.
+            Era expressão de seu amor, de sua compaixão e de sua missão.
+        </p>
+
+        <p>
+            Em Marcos 10:45, Jesus declara que veio para servir e dar sua vida
+            em resgate de muitos. Essa declaração também aponta para a
+            singularidade de sua obra redentora.
+        </p>
+
+        <div class="caixa-destaque">
+            <p>
+                O serviço de Jesus na cruz possui caráter único e salvador.
+                Nenhum ser humano pode repetir sua obra de redenção. O discípulo,
+                porém, é chamado a seguir seu exemplo de amor, humildade,
+                obediência e dedicação ao próximo.
+            </p>
+        </div>
+
+        <h2>6. A liderança servidora na vida do homem cristão</h2>
+
+        <p>
+            O exemplo de Jesus oferece princípios importantes para o homem
+            cristão em suas diferentes responsabilidades. A masculinidade
+            bíblica não deve ser confundida com agressividade, autoritarismo
+            ou desejo de controlar os outros.
+        </p>
+
+        <p>
+            A força de um homem cristão deve estar associada ao caráter,
+            à responsabilidade, ao domínio próprio e à disposição para servir.
+            Sua liderança deve produzir cuidado, segurança, orientação e
+            edificação.
+        </p>
+
+        <h3>Na família</h3>
+
+        <p>
+            O homem cristão deve compreender sua responsabilidade familiar
+            como um chamado ao amor, ao cuidado e ao serviço. Ser esposo ou
+            pai não significa exercer domínio egoísta, mas assumir
+            responsabilidades com maturidade, respeito e dedicação.
+        </p>
+
+        <p>
+            O exemplo de Cristo ensina que o amor verdadeiro não procura
+            apenas seus próprios interesses. Ele se expressa em atitudes
+            concretas de cuidado, proteção, presença e compromisso.
+        </p>
+
+        <h3>Na Igreja</h3>
+
+        <p>
+            O homem cristão deve estar disposto a servir, cooperar, ensinar,
+            aprender e trabalhar pela edificação da comunidade. Nenhuma função
+            deve ser utilizada como instrumento de vaidade ou superioridade.
+        </p>
+
+        <p>
+            A liderança na Igreja precisa ser exercida com fidelidade às
+            Escrituras, respeito à liderança pastoral, espírito de cooperação
+            e compromisso com a missão cristã.
+        </p>
+
+        <h3>Na sociedade</h3>
+
+        <p>
+            No trabalho e na convivência social, o homem cristão deve demonstrar
+            honestidade, respeito, responsabilidade e disposição para contribuir
+            com o bem comum.
+        </p>
+
+        <p>
+            Sua influência deve ser utilizada para promover justiça, dignidade,
+            paz e respeito ao próximo, refletindo os valores do Evangelho.
+        </p>
+
+        <div class="aplicacao">
+            <h3>Aplicações práticas</h3>
+
+            <p>O exemplo de Jesus nos desafia a:</p>
+
+            <ul>
+                <li>Colocar o serviço acima da busca por reconhecimento.</li>
+                <li>Tratar todas as pessoas com dignidade e respeito.</li>
+                <li>Reconhecer nossos erros e ter disposição para aprender.</li>
+                <li>Exercer autoridade com justiça, amor e responsabilidade.</li>
+                <li>Servir à família sem orgulho ou autoritarismo.</li>
+                <li>Participar da vida da Igreja com humildade e dedicação.</li>
+                <li>Utilizar nossos dons e capacidades para o bem do próximo.</li>
+                <li>Seguir o exemplo de Cristo em nossas atitudes diárias.</li>
+            </ul>
+        </div>
+
+        <h2>7. Reflexão para a vida</h2>
+
+        <p>
+            A liderança servidora começa no coração. Antes de desejar posições
+            de destaque, o homem cristão precisa desenvolver disposição para
+            servir. Antes de exigir respeito, deve aprender a respeitar.
+            Antes de cobrar responsabilidades, deve demonstrar compromisso
+            com as suas próprias.
+        </p>
+
+        <p>
+            O exemplo de Jesus nos ensina que a verdadeira grandeza não está
+            em quantas pessoas estão à nossa disposição, mas em nossa disposição
+            de amar e servir de maneira responsável.
+        </p>
+
+        <p>
+            O homem que segue a Cristo não utiliza sua força para oprimir,
+            mas para proteger e ajudar; não utiliza sua autoridade para
+            humilhar, mas para orientar; não busca ser servido em todas as
+            circunstâncias, mas procura reconhecer as necessidades daqueles
+            que estão ao seu redor.
+        </p>
+
+        <div class="versiculo">
+            “Nada façais por contenda ou por vanglória, mas por humildade;
+            cada um considere os outros superiores a si mesmo.”
+            <span class="referencia">Filipenses 2:3</span>
+        </div>
+
+        <div class="referencias-biblicas">
+            <h2>Referências bíblicas para estudo</h2>
+
+            <ul>
+                <li>Mateus 20:25-28 — A grandeza por meio do serviço.</li>
+                <li>Marcos 10:42-45 — Jesus veio para servir.</li>
+                <li>Lucas 22:24-27 — O maior deve ser como quem serve.</li>
+                <li>João 13:1-17 — Jesus lava os pés dos discípulos.</li>
+                <li>Filipenses 2:3-8 — Humildade e obediência de Cristo.</li>
+                <li>1 Pedro 5:2-3 — Liderança sem domínio autoritário.</li>
+                <li>Gálatas 5:13 — Servir uns aos outros pelo amor.</li>
+                <li>Colossenses 3:12-14 — Humildade, mansidão e amor.</li>
+            </ul>
+        </div>
+
+        <div class="conclusao">
+            <h2>Conclusão</h2>
+
+            <p>
+                Jesus Cristo é o maior exemplo de liderança servidora e humildade.
+                Sua vida demonstra que autoridade e serviço não são conceitos
+                incompatíveis. Pelo contrário, a verdadeira liderança cristã
+                encontra no amor, na responsabilidade e na disposição de servir
+                seus fundamentos.
+            </p>
+
+            <p>
+                O homem segundo o coração de Deus não mede sua grandeza pelo
+                poder que exerce sobre os outros, mas pela fidelidade com que
+                serve a Deus e demonstra amor ao próximo.
+            </p>
+
+            <p>
+                Seguir Jesus é aprender a liderar servindo, agir com humildade
+                e colocar nossos dons e responsabilidades a serviço do Reino
+                de Deus.
+            </p>
+        </div>
+
+    </article>
+
+    <nav class="navegacao-temas">
+
+        <a href="tema04.html" class="botao-tema botao-secundario">
+            ← Tema Anterior
+        </a>
+
+        <a href="apresentacao.html" class="botao-tema">
+            Apresentação do Módulo
+        </a>
+
+        <a href="tema06.html" class="botao-tema">
+            Próximo Tema →
+        </a>
+
+        <a href="../identidade_masculina.html" class="botao-tema botao-secundario">
+            Índice da Área 01
+        </a>
+
+        <a href="../../../uhbb_psh.html" class="botao-tema botao-secundario">
+            Página Principal
+        </a>
+
+        <button onclick="window.print()" class="botao-tema botao-imprimir">
+            Imprimir / Salvar em PDF
+        </button>
+
+    </nav>
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tema 06 do Módulo 06 - A Coragem, a Fidelidade e a Entrega de Jesus.">
+    <title>A Coragem, a Fidelidade e a Entrega de Jesus | Homens Segundo o Coração de Deus</title>
+
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        .pagina-tema {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 35px 22px 60px;
+            color: #38271F;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .cabecalho-tema {
+            background: linear-gradient(135deg, #38271F, #18334D);
+            color: #F7F4EC;
+            padding: 48px 35px;
+            border-radius: 12px;
+            margin-bottom: 35px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.16);
+        }
+
+        .identificacao-tema {
+            color: #D1B477;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .cabecalho-tema h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.8rem, 4vw, 2.7rem);
+            line-height: 1.35;
+            margin: 0 0 18px;
+        }
+
+        .cabecalho-tema p {
+            color: #E9DFC9;
+            font-size: 1rem;
+            line-height: 1.7;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .conteudo-tema {
+            background: #F7F4EC;
+            padding: 35px;
+            border-radius: 12px;
+            border: 1px solid #E9DFC9;
+            box-shadow: 0 4px 15px rgba(56,39,31,0.07);
+        }
+
+        .conteudo-tema h2 {
+            color: #593B2B;
+            font-family: 'Cinzel', serif;
+            font-size: 1.55rem;
+            margin: 38px 0 17px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #D1B477;
+        }
+
+        .conteudo-tema h2:first-child {
+            margin-top: 0;
+        }
+
+        .conteudo-tema h3 {
+            color: #18334D;
+            font-size: 1.12rem;
+            margin: 25px 0 10px;
+        }
+
+        .conteudo-tema p {
+            font-size: 1rem;
+            line-height: 1.85;
+            margin-bottom: 17px;
+            text-align: justify;
+        }
+
+        .conteudo-tema ul {
+            padding-left: 25px;
+            margin-bottom: 22px;
+        }
+
+        .conteudo-tema li {
+            line-height: 1.8;
+            margin-bottom: 9px;
+        }
+
+        .versiculo {
+            background: #E9DFC9;
+            border-left: 5px solid #B08A48;
+            padding: 23px 25px;
+            margin: 28px 0;
+            border-radius: 5px;
+            font-family: 'Libre Baskerville', serif;
+            font-style: italic;
+            line-height: 1.9;
+        }
+
+        .referencia {
+            display: block;
+            text-align: right;
+            margin-top: 12px;
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            color: #593B2B;
+        }
+
+        .caixa-destaque {
+            background: #EAF0F4;
+            border-left: 5px solid #18334D;
+            padding: 22px 25px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+
+        .caixa-destaque p:last-child {
+            margin-bottom: 0;
+        }
+
+        .aplicacao {
+            background: #F1E8D7;
+            border: 1px solid #D1B477;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+
+        .aplicacao h3 {
+            margin-top: 0;
+            color: #593B2B;
+            font-family: 'Cinzel', serif;
+        }
+
+        .referencias-biblicas {
+            background: #FFFFFF;
+            border: 1px solid #E9DFC9;
+            border-radius: 8px;
+            padding: 23px 25px;
+            margin-top: 30px;
+        }
+
+        .referencias-biblicas ul {
+            margin-bottom: 0;
+        }
+
+        .conclusao {
+            background: #18334D;
+            color: #F7F4EC;
+            padding: 28px;
+            border-radius: 8px;
+            margin-top: 35px;
+        }
+
+        .conclusao h2 {
+            color: #D1B477;
+            border-bottom-color: #B08A48;
+            margin-top: 0;
+        }
+
+        .conclusao p {
+            color: #F7F4EC;
+        }
+
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 35px;
+        }
+
+        .botao-tema {
+            display: inline-block;
+            padding: 13px 21px;
+            background: #593B2B;
+            color: #F7F4EC;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .botao-tema:hover {
+            background: #18334D;
+            transform: translateY(-2px);
+        }
+
+        .botao-secundario {
+            background: #18334D;
+        }
+
+        .botao-imprimir {
+            background: #B08A48;
+            color: #38271F;
+            border: none;
+            cursor: pointer;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .botao-imprimir:hover {
+            background: #D1B477;
+        }
+
+        @media (max-width: 700px) {
+            .pagina-tema {
+                padding: 20px 12px 40px;
+            }
+
+            .cabecalho-tema {
+                padding: 35px 20px;
+            }
+
+            .conteudo-tema {
+                padding: 23px 18px;
+            }
+
+            .conteudo-tema p {
+                text-align: left;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+            }
+
+            .botao-tema {
+                text-align: center;
+            }
+        }
+
+        @media print {
+            body {
+                background: white !important;
+            }
+
+            .pagina-tema {
+                max-width: 100%;
+                padding: 0;
+            }
+
+            .cabecalho-tema {
+                background: white !important;
+                color: #38271F !important;
+                box-shadow: none;
+                border: 2px solid #593B2B;
+            }
+
+            .cabecalho-tema p {
+                color: #38271F !important;
+            }
+
+            .conteudo-tema {
+                box-shadow: none;
+                border: none;
+                padding: 15px 0;
+            }
+
+            .conclusao {
+                background: white !important;
+                color: #38271F !important;
+                border: 1px solid #593B2B;
+            }
+
+            .conclusao p,
+            .conclusao h2 {
+                color: #38271F !important;
+            }
+
+            .navegacao-temas {
+                display: none !important;
+            }
+
+            .botao-imprimir {
+                display: none !important;
+            }
+
+            h2, h3 {
+                break-after: avoid;
+            }
+
+            p, li {
+                orphans: 3;
+                widows: 3;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<main class="pagina-tema">
+
+    <header class="cabecalho-tema">
+        <div class="identificacao-tema">
+            Área 01 • Identidade Masculina Cristã
+            <br>
+            Módulo 06 • O Exemplo de Jesus Cristo
+        </div>
+
+        <h1>A Coragem, a Fidelidade e a Entrega de Jesus</h1>
+
+        <p>
+            A vida de Jesus Cristo revela coragem diante das adversidades,
+            fidelidade absoluta à vontade do Pai e amor sacrificial.
+            Sua caminhada até a cruz e sua vitória na ressurreição
+            constituem o fundamento da fé cristã.
+        </p>
+    </header>
+
+    <article class="conteudo-tema">
+
+        <h2>1. A coragem de Jesus diante das adversidades</h2>
+
+        <p>
+            Jesus enfrentou oposição, incompreensão, perseguição e sofrimento
+            durante seu ministério. Mesmo diante das ameaças, permaneceu fiel
+            à missão que havia recebido do Pai.
+        </p>
+
+        <p>
+            Sua coragem não era resultado de orgulho, violência ou desejo de
+            confronto. Ela estava fundamentada em sua identidade, em sua
+            comunhão com o Pai e na certeza de que deveria cumprir sua missão.
+        </p>
+
+        <p>
+            Jesus não alterou sua mensagem para conquistar aprovação humana.
+            Ensinou a verdade, confrontou a hipocrisia religiosa e anunciou
+            o Reino de Deus, mesmo sabendo que sua fidelidade despertaria
+            oposição.
+        </p>
+
+        <div class="versiculo">
+            “Mas importa que o mundo saiba que eu amo o Pai e que faço como
+            o Pai me mandou.”
+            <span class="referencia">João 14:31</span>
+        </div>
+
+        <p>
+            A coragem de Cristo demonstra que fidelidade a Deus nem sempre
+            significa ausência de dificuldades. Muitas vezes, permanecer
+            obediente exige enfrentar situações desconfortáveis e suportar
+            consequências difíceis.
+        </p>
+
+        <h2>2. A fidelidade de Jesus à vontade do Pai</h2>
+
+        <p>
+            Desde o início de seu ministério, Jesus demonstrou compromisso
+            absoluto com a vontade do Pai. Sua missão não estava orientada
+            por interesses pessoais, mas pelo propósito divino.
+        </p>
+
+        <p>
+            Em João 6:38, Jesus declara que desceu do céu não para fazer sua
+            própria vontade, mas a vontade daquele que o enviou.
+        </p>
+
+        <p>
+            Essa fidelidade aparece em suas palavras, em suas atitudes,
+            em seu relacionamento com as pessoas e em sua disposição
+            de cumprir integralmente sua missão.
+        </p>
+
+        <div class="versiculo">
+            “Não se faça a minha vontade, mas a tua.”
+            <span class="referencia">Lucas 22:42</span>
+        </div>
+
+        <p>
+            A obediência de Jesus não foi uma atitude isolada. Ela caracterizou
+            toda a sua existência terrena e alcançou seu momento mais profundo
+            na entrega voluntária de sua vida na cruz.
+        </p>
+
+        <h2>3. A coragem de Jesus no Getsêmani</h2>
+
+        <p>
+            Na noite anterior à crucificação, Jesus foi ao jardim do Getsêmani
+            para orar. Aquele momento revela a profundidade de seu sofrimento
+            diante daquilo que estava prestes a enfrentar.
+        </p>
+
+        <p>
+            Jesus conhecia o sofrimento que o aguardava. Sua angústia não era
+            imaginária. Ele experimentou profunda tristeza e aflição, mas
+            permaneceu em submissão à vontade do Pai.
+        </p>
+
+        <p>
+            No Getsêmani, encontramos uma demonstração extraordinária de
+            fidelidade: Jesus expressa sua angústia em oração, mas não abandona
+            sua missão.
+        </p>
+
+        <div class="caixa-destaque">
+            <p>
+                A coragem cristã não significa ausência de medo, tristeza
+                ou sofrimento. Significa permanecer fiel a Deus mesmo quando
+                o caminho é difícil, buscando nele força e direção.
+            </p>
+        </div>
+
+        <p>
+            O episódio também nos ensina sobre a importância da oração nos
+            momentos de maior dificuldade. Jesus buscou comunhão com o Pai
+            antes de enfrentar a prisão, o julgamento e a crucificação.
+        </p>
+
+        <h2>4. Jesus permaneceu fiel diante da injustiça</h2>
+
+        <p>
+            Depois de sua prisão, Jesus foi submetido a interrogatórios,
+            acusações, humilhações e julgamentos marcados pela injustiça.
+            Mesmo diante de seus acusadores, não abandonou sua missão.
+        </p>
+
+        <p>
+            Ele foi ridicularizado, açoitado e tratado com crueldade. Sua
+            fidelidade permaneceu inabalável diante da violência e da
+            rejeição.
+        </p>
+
+        <p>
+            Jesus não respondeu à injustiça com uma atitude de vingança.
+            Sua conduta revelou domínio próprio, firmeza e compromisso
+            com a vontade de Deus.
+        </p>
+
+        <div class="versiculo">
+            “O qual não cometeu pecado, nem na sua boca se achou engano.”
+            <span class="referencia">1 Pedro 2:22</span>
+        </div>
+
+        <p>
+            A atitude de Jesus não deve ser confundida com aprovação da
+            injustiça ou passividade diante do mal. Seu exemplo demonstra
+            que é possível permanecer fiel à verdade sem permitir que o
+            ódio e a vingança controlem nossas atitudes.
+        </p>
+
+        <h2>5. A entrega de Jesus na cruz</h2>
+
+        <p>
+            A crucificação representa o ponto central da missão redentora
+            de Jesus Cristo. Ele entregou sua vida voluntariamente, cumprindo
+            o propósito salvador de Deus.
+        </p>
+
+        <p>
+            A morte de Cristo não foi simplesmente o exemplo de um homem
+            corajoso diante da morte. Foi um acontecimento único na história
+            da salvação: o Filho de Deus entregou-se em favor dos pecadores.
+        </p>
+
+        <p>
+            A Bíblia ensina que Cristo morreu pelos nossos pecados, conforme
+            as Escrituras, e que sua morte possui significado redentor.
+        </p>
+
+        <div class="versiculo">
+            “Mas Deus prova o seu amor para conosco em que Cristo morreu
+            por nós, sendo nós ainda pecadores.”
+            <span class="referencia">Romanos 5:8</span>
+        </div>
+
+        <p>
+            A cruz revela a profundidade do amor de Deus e a gravidade do
+            pecado humano. A salvação não é conquistada por mérito, esforço
+            ou sacrifício pessoal. Ela é oferecida pela graça de Deus,
+            mediante a obra de Jesus Cristo.
+        </p>
+
+        <div class="caixa-destaque">
+            <p>
+                A entrega de Jesus possui caráter único e suficiente para a
+                redenção. Nenhum homem pode repetir sua obra salvadora.
+                O cristão é chamado a seguir seu exemplo de fidelidade,
+                amor e obediência, mas nunca a ocupar o lugar de Cristo
+                como Salvador.
+            </p>
+        </div>
+
+        <h2>6. A ressurreição: a vitória de Cristo</h2>
+
+        <p>
+            A história de Jesus não terminou na cruz. Ao terceiro dia,
+            conforme as Escrituras, Ele ressuscitou dentre os mortos.
+            A ressurreição é fundamento essencial da fé cristã e testemunha
+            a vitória de Cristo sobre o pecado e a morte.
+        </p>
+
+        <p>
+            O apóstolo Paulo afirma que, se Cristo não ressuscitou,
+            a fé cristã seria inútil. Entretanto, Cristo ressuscitou,
+            sendo as primícias dos que dormem.
+        </p>
+
+        <div class="versiculo">
+            “Mas de fato Cristo ressuscitou dentre os mortos, e foi feito
+            as primícias dos que dormem.”
+            <span class="referencia">1 Coríntios 15:20</span>
+        </div>
+
+        <p>
+            A ressurreição confirma a vitória de Jesus e sustenta a esperança
+            cristã. O Salvador que morreu na cruz está vivo e reina.
+        </p>
+
+        <p>
+            Por isso, o exemplo de Jesus não nos conduz ao desespero diante
+            do sofrimento. Ele nos aponta para a esperança, para a fidelidade
+            de Deus e para a certeza da vida eterna em Cristo.
+        </p>
+
+        <h2>7. O que o exemplo de Jesus ensina ao homem cristão?</h2>
+
+        <p>
+            A vida de Jesus apresenta princípios fundamentais para a formação
+            do caráter masculino cristão. Sua coragem, fidelidade e disposição
+            de cumprir a vontade do Pai oferecem uma referência para nossas
+            decisões e responsabilidades.
+        </p>
+
+        <h3>Coragem para fazer o que é correto</h3>
+
+        <p>
+            O homem cristão deve ter coragem para defender a verdade, agir
+            com justiça e permanecer fiel às Escrituras, mesmo quando suas
+            convicções não são populares.
+        </p>
+
+        <h3>Fidelidade nos compromissos</h3>
+
+        <p>
+            A fidelidade deve estar presente no relacionamento com Deus,
+            na vida familiar, no casamento, na criação dos filhos,
+            no trabalho e no serviço à Igreja.
+        </p>
+
+        <h3>Responsabilidade diante das dificuldades</h3>
+
+        <p>
+            Seguir a Cristo não significa fugir das responsabilidades quando
+            surgem problemas. Significa enfrentá-los com oração, sabedoria,
+            perseverança e confiança em Deus.
+        </p>
+
+        <h3>Amor que se expressa em atitudes</h3>
+
+        <p>
+            O amor cristão não deve permanecer apenas nas palavras. Ele se
+            manifesta em cuidado, compromisso, generosidade, perdão e
+            disposição para ajudar aqueles que precisam.
+        </p>
+
+        <div class="aplicacao">
+            <h3>Aplicações práticas</h3>
+
+            <p>O exemplo de Jesus nos desafia a:</p>
+
+            <ul>
+                <li>Manter a fidelidade a Deus mesmo diante das dificuldades.</li>
+                <li>Buscar a vontade do Senhor por meio da oração e das Escrituras.</li>
+                <li>Ter coragem para defender a verdade com amor e respeito.</li>
+                <li>Enfrentar responsabilidades sem fugir dos compromissos.</li>
+                <li>Desenvolver domínio próprio diante de provocações e injustiças.</li>
+                <li>Demonstrar amor por meio de atitudes concretas.</li>
+                <li>Perseverar na fé quando atravessarmos momentos difíceis.</li>
+                <li>Manter a esperança fundamentada na ressurreição de Cristo.</li>
+            </ul>
+        </div>
+
+        <h2>8. Reflexão para a vida</h2>
+
+        <p>
+            A coragem de um homem cristão não deve ser medida pela disposição
+            de enfrentar conflitos ou demonstrar força física. Ela deve ser
+            percebida em sua capacidade de permanecer fiel a Deus, assumir
+            responsabilidades e agir corretamente mesmo quando isso exige
+            renúncia.
+        </p>
+
+        <p>
+            A fidelidade também não se limita aos momentos de destaque.
+            Ela aparece nas decisões cotidianas, na honestidade, no cumprimento
+            da palavra, no cuidado com a família e na dedicação ao serviço
+            cristão.
+        </p>
+
+        <p>
+            Jesus nos ensina que a obediência a Deus deve estar acima dos
+            interesses pessoais. Sua entrega na cruz revela o amor de Deus
+            e constitui o fundamento da nossa salvação.
+        </p>
+
+        <div class="versiculo">
+            “Olhando para Jesus, autor e consumador da fé, o qual, pelo gozo
+            que lhe estava proposto, suportou a cruz, desprezando a afronta,
+            e assentou-se à destra do trono de Deus.”
+            <span class="referencia">Hebreus 12:2</span>
+        </div>
+
+        <div class="referencias-biblicas">
+            <h2>Referências bíblicas para estudo</h2>
+
+            <ul>
+                <li>João 6:38 — Jesus veio cumprir a vontade do Pai.</li>
+                <li>João 10:17-18 — A entrega voluntária de Jesus.</li>
+                <li>Lucas 22:39-46 — A oração de Jesus no Getsêmani.</li>
+                <li>Lucas 22:47-71 — A prisão e o julgamento de Jesus.</li>
+                <li>Lucas 23:1-49 — A crucificação de Cristo.</li>
+                <li>Lucas 24:1-12 — A ressurreição de Jesus.</li>
+                <li>Filipenses 2:5-11 — A humilhação e a exaltação de Cristo.</li>
+                <li>Hebreus 12:1-3 — Perseverança olhando para Jesus.</li>
+                <li>1 Pedro 2:21-25 — Cristo como exemplo de fidelidade.</li>
+                <li>1 Coríntios 15:12-22 — A importância da ressurreição.</li>
+                <li>Romanos 5:6-11 — Cristo morreu pelos pecadores.</li>
+            </ul>
+        </div>
+
+        <div class="conclusao">
+            <h2>Conclusão</h2>
+
+            <p>
+                Jesus Cristo demonstrou coragem diante do sofrimento,
+                fidelidade absoluta à vontade do Pai e amor sacrificial
+                por aqueles que veio salvar.
+            </p>
+
+            <p>
+                Sua morte na cruz e sua ressurreição constituem o fundamento
+                da esperança cristã. Ele não é apenas uma referência moral,
+                mas o Filho de Deus, Senhor e Salvador.
+            </p>
+
+            <p>
+                O homem segundo o coração de Deus é chamado a seguir os passos
+                de Cristo em sua fidelidade, coragem, obediência e amor,
+                reconhecendo que sua salvação depende inteiramente da graça
+                de Deus revelada em Jesus.
+            </p>
+
+            <p>
+                Olhar para Jesus é aprender a viver com propósito, permanecer
+                firme na fé e cumprir com responsabilidade a missão que Deus
+                nos confiou.
+            </p>
+        </div>
+
+    </article>
+
+    <nav class="navegacao-temas">
+
+        <a href="tema05.html" class="botao-tema botao-secundario">
+            ← Tema Anterior
+        </a>
+
+        <a href="apresentacao.html" class="botao-tema">
+            Apresentação do Módulo
+        </a>
+
+        <a href="../identidade_masculina.html" class="botao-tema botao-secundario">
+            Índice da Área 01
+        </a>
+
+        <a href="../../../uhbb_psh.html" class="botao-tema botao-secundario">
+            Página Principal
+        </a>
+
+        <button onclick="window.print()" class="botao-tema botao-imprimir">
+            Imprimir / Salvar em PDF
+        </button>
+
+    </nav>
+
+</main>
+
+</body>
+</html>
