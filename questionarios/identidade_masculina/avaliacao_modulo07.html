@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Avaliação do Módulo 07 | Identidade Masculina Cristã</title>
+
+    <link rel="stylesheet" href="../../css/uhbb.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --marrom: #593B2B;
+            --marrom-escuro: #38271F;
+            --marrom-medio: #76523C;
+            --azul: #18334D;
+            --azul-claro: #294B65;
+            --dourado: #B08A48;
+            --dourado-claro: #D1B477;
+            --pergaminho: #E9DFC9;
+            --creme: #F7F4EC;
+            --texto: #332A24;
+            --verde: #276749;
+            --vermelho: #9B2C2C;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--creme);
+            color: var(--texto);
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.7;
+        }
+
+        .topo {
+            background: linear-gradient(135deg, var(--marrom-escuro), var(--azul));
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+            border-bottom: 5px solid var(--dourado);
+        }
+
+        .topo .identificacao {
+            color: var(--dourado-claro);
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .topo h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            margin: 18px auto;
+            max-width: 900px;
+        }
+
+        .topo p {
+            color: #eee5d6;
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .container {
+            width: min(1000px, 93%);
+            margin: 35px auto;
+        }
+
+        .painel {
+            background: white;
+            padding: 28px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(56, 39, 31, 0.08);
+            margin-bottom: 25px;
+        }
+
+        .painel h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--marrom);
+            margin-top: 0;
+        }
+
+        .identificacao-participante {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+            margin-top: 20px;
+        }
+
+        .campo {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+
+        .campo label {
+            font-weight: 700;
+            color: var(--azul);
+        }
+
+        .campo input {
+            padding: 13px;
+            border: 1px solid #d7cbb8;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: inherit;
+            width: 100%;
+        }
+
+        .progresso-container {
+            margin: 25px 0 10px;
+        }
+
+        .progresso-info {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            color: var(--azul);
+            margin-bottom: 8px;
+        }
+
+        .progresso-barra {
+            width: 100%;
+            height: 13px;
+            background: #e7dfd3;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .progresso-preenchimento {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, var(--dourado), var(--marrom));
+            transition: width 0.3s;
+        }
+
+        .instrucoes {
+            background: #f3eee5;
+            border-left: 5px solid var(--dourado);
+            padding: 18px 22px;
+            border-radius: 6px;
+            margin-top: 20px;
+        }
+
+        .questao {
+            background: white;
+            padding: 27px;
+            margin-bottom: 22px;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(56, 39, 31, 0.06);
+            border-left: 4px solid var(--dourado);
+        }
+
+        .questao h3 {
+            color: var(--azul);
+            margin-top: 0;
+            font-size: 1.08rem;
+        }
+
+        .alternativa {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 13px 15px;
+            margin: 10px 0;
+            border: 1px solid #e4ddd2;
+            border-radius: 7px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .alternativa:hover {
+            background: #f7f3eb;
+            border-color: var(--dourado);
+        }
+
+        .alternativa input {
+            margin-top: 5px;
+            accent-color: var(--marrom);
+        }
+
+        .alternativa span {
+            flex: 1;
+        }
+
+        .alternativa.correta {
+            background: #e8f5ed;
+            border-color: var(--verde);
+        }
+
+        .alternativa.incorreta {
+            background: #fceaea;
+            border-color: var(--vermelho);
+        }
+
+        .explicacao {
+            display: none;
+            margin-top: 18px;
+            padding: 17px;
+            background: #f3eee5;
+            border-radius: 7px;
+            border-left: 4px solid var(--azul);
+        }
+
+        .explicacao strong {
+            color: var(--azul);
+        }
+
+        .explicacao.mostrar {
+            display: block;
+        }
+
+        .botoes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            justify-content: center;
+            margin: 35px 0;
+        }
+
+        button,
+        .botao-link {
+            border: none;
+            padding: 14px 24px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s;
+            font-family: inherit;
+            text-align: center;
+        }
+
+        .botao-principal {
+            background: var(--marrom);
+            color: white;
+        }
+
+        .botao-secundario {
+            background: var(--azul);
+            color: white;
+        }
+
+        .botao-claro {
+            background: var(--pergaminho);
+            color: var(--marrom-escuro);
+        }
+
+        button:hover,
+        .botao-link:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .resultado {
+            display: none;
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(56, 39, 31, 0.08);
+            margin-top: 35px;
+            text-align: center;
+        }
+
+        .resultado h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--marrom);
+        }
+
+        .pontuacao {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--dourado);
+            margin: 20px 0;
+        }
+
+        .classificacao {
+            display: inline-block;
+            padding: 10px 22px;
+            border-radius: 30px;
+            background: var(--pergaminho);
+            color: var(--marrom-escuro);
+            font-weight: 700;
+            margin: 10px;
+        }
+
+        .resumo {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .resumo-item {
+            background: #f7f4ec;
+            padding: 18px 10px;
+            border-radius: 8px;
+        }
+
+        .resumo-item strong {
+            display: block;
+            font-size: 1.6rem;
+            color: var(--azul);
+        }
+
+        .mensagem-final {
+            background: #f3eee5;
+            padding: 22px;
+            border-radius: 8px;
+            margin-top: 25px;
+            text-align: left;
+        }
+
+        .rodape {
+            background: var(--marrom-escuro);
+            color: #e9dfd0;
+            text-align: center;
+            padding: 28px 15px;
+            font-size: 0.85rem;
+            margin-top: 50px;
+        }
+
+        @media(max-width: 650px) {
+
+            .identificacao-participante {
+                grid-template-columns: 1fr;
+            }
+
+            .resumo {
+                grid-template-columns: 1fr;
+            }
+
+            .botoes {
+                flex-direction: column;
+            }
+
+            button,
+            .botao-link {
+                width: 100%;
+            }
+        }
+
+        @media print {
+
+            body {
+                background: white;
+            }
+
+            .topo {
+                background: white !important;
+                color: black;
+                border-bottom: 2px solid #777;
+            }
+
+            .topo p,
+            .topo .identificacao {
+                color: #333;
+            }
+
+            .painel,
+            .questao,
+            .resultado {
+                box-shadow: none;
+                border: 1px solid #ccc;
+            }
+
+            .botoes,
+            .rodape,
+            .instrucoes,
+            .progresso-container {
+                display: none !important;
+            }
+
+            .resultado {
+                display: block !important;
+            }
+
+            .explicacao {
+                display: block !important;
+            }
+
+            .questao {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="topo">
+
+    <div class="identificacao">
+        Área 01 — Identidade Masculina Cristã
+    </div>
+
+    <h1>Avaliação do Módulo 07</h1>
+
+    <p>
+        O Homem Cristão diante dos Desafios Contemporâneos
+    </p>
+
+</header>
+
+<main class="container">
+
+    <section class="painel">
+
+        <h2>Identificação do participante</h2>
+
+        <p>
+            Preencha seus dados antes de iniciar a avaliação.
+        </p>
+
+        <div class="identificacao-participante">
+
+            <div class="campo">
+                <label for="nome">Nome completo:</label>
+                <input type="text" id="nome" placeholder="Digite seu nome">
+            </div>
+
+            <div class="campo">
+                <label for="igreja">Igreja / Congregação:</label>
+                <input type="text" id="igreja" placeholder="Nome da igreja">
+            </div>
+
+        </div>
+
+        <div class="progresso-container">
+
+            <div class="progresso-info">
+                <span>Progresso da avaliação</span>
+                <span id="contador">0 de 20</span>
+            </div>
+
+            <div class="progresso-barra">
+                <div class="progresso-preenchimento" id="barra"></div>
+            </div>
+
+        </div>
+
+        <div class="instrucoes">
+
+            <strong>Orientações:</strong>
+
+            <ul>
+                <li>A avaliação contém 20 questões.</li>
+                <li>Cada questão possui quatro alternativas.</li>
+                <li>Somente uma alternativa está correta.</li>
+                <li>Cada resposta correta vale 5 pontos.</li>
+                <li>A pontuação máxima é de 100 pontos.</li>
+                <li>Todas as questões precisam ser respondidas.</li>
+                <li>Após a conclusão, você poderá conferir as explicações bíblicas.</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <form id="formulario">
+
+        <div id="questoes"></div>
+
+        <div class="botoes">
+
+            <button type="button" class="botao-principal" id="finalizar">
+                FINALIZAR AVALIAÇÃO
+            </button>
+
+            <button type="button" class="botao-claro" id="limpar">
+                LIMPAR RESPOSTAS
+            </button>
+
+        </div>
+
+    </form>
+
+
+    <section class="resultado" id="resultado">
+
+        <h2>Resultado da Avaliação</h2>
+
+        <p id="nomeResultado"></p>
+
+        <div class="pontuacao" id="pontuacao">0 / 100</div>
+
+        <div class="classificacao" id="classificacao"></div>
+
+        <div class="resumo">
+
+            <div class="resumo-item">
+                <strong id="acertos">0</strong>
+                Acertos
+            </div>
+
+            <div class="resumo-item">
+                <strong id="erros">0</strong>
+                Erros
+            </div>
+
+            <div class="resumo-item">
+                <strong id="percentual">0%</strong>
+                Aproveitamento
+            </div>
+
+        </div>
+
+        <div class="mensagem-final" id="mensagemFinal"></div>
+
+        <div class="botoes">
+
+            <button type="button" class="botao-principal" id="revisar">
+                REVISAR RESPOSTAS
+            </button>
+
+            <button type="button" class="botao-secundario" id="imprimir">
+                IMPRIMIR RESULTADO
+            </button>
+
+            <button type="button" class="botao-claro" id="refazer">
+                REFAZER AVALIAÇÃO
+            </button>
+
+            <a href="../../conteudos/identidade_masculina/modulo07/apresentacao.html"
+               class="botao-link botao-secundario">
+                VOLTAR AO MÓDULO 07
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="rodape">
+
+    <p>HOMENS SEGUNDO O CORAÇÃO DE DEUS</p>
+
+    <p>
+        Formando homens, fortalecendo famílias e servindo à Igreja de Cristo.
+    </p>
+
+    <p>
+        Área 01 — Identidade Masculina Cristã
+    </p>
+
+</footer>
+
+
+<script>
+
+"use strict";
+
+// ======================================================
+// AVALIAÇÃO DO MÓDULO 07
+// O HOMEM CRISTÃO DIANTE DOS DESAFIOS CONTEMPORÂNEOS
+// ======================================================
+
+const perguntas = [
+
+    {
+        pergunta: "1. Segundo as Escrituras, qual deve ser a principal referência para o homem cristão avaliar os valores de uma sociedade em transformação?",
+
+        alternativas: [
+            "A opinião da maioria das pessoas.",
+            "Os costumes mais populares de cada época.",
+            "A Palavra de Deus e os ensinamentos de Jesus Cristo.",
+            "Os interesses pessoais e as conveniências sociais."
+        ],
+
+        correta: 2,
+
+        explicacao: "O homem cristão deve avaliar pensamentos, valores e comportamentos à luz das Escrituras. Romanos 12:2 ensina sobre a transformação pela renovação da mente, para que o cristão possa experimentar a vontade de Deus.",
+
+        referencia: "Romanos 12:1-2; Salmos 119:105."
+    },
+
+    {
+        pergunta: "2. O que significa ser sal da terra e luz do mundo, conforme o ensino de Jesus?",
+
+        alternativas: [
+            "Buscar posições de superioridade sobre outras pessoas.",
+            "Influenciar positivamente a sociedade por meio de uma vida coerente com os valores do Reino de Deus.",
+            "Evitar qualquer relacionamento com pessoas que não compartilham a mesma fé.",
+            "Impor os próprios costumes religiosos a toda a sociedade."
+        ],
+
+        correta: 1,
+
+        explicacao: "Jesus ensina que seus discípulos devem exercer influência positiva no mundo, demonstrando boas obras que glorifiquem o Pai celestial. O testemunho cristão não é uma imposição, mas uma vida que aponta para Deus.",
+
+        referencia: "Mateus 5:13-16."
+    },
+
+    {
+        pergunta: "3. Qual é o fundamento da ética cristã?",
+
+        alternativas: [
+            "A busca pelo sucesso pessoal.",
+            "A aprovação da sociedade.",
+            "A tradição cultural de cada comunidade.",
+            "O caráter de Deus revelado nas Escrituras e os ensinamentos de Cristo."
+        ],
+
+        correta: 3,
+
+        explicacao: "A ética cristã encontra seu fundamento no caráter de Deus e em sua revelação. O cristão procura orientar suas decisões pelos princípios bíblicos e pelo exemplo de Jesus.",
+
+        referencia: "Levítico 19:2; Mateus 5:48; 1 Pedro 1:15-16."
+    },
+
+    {
+        pergunta: "4. Por que a consciência humana precisa ser orientada pelas Escrituras?",
+
+        alternativas: [
+            "Porque a consciência humana é limitada e pode ser influenciada por valores incorretos.",
+            "Porque a consciência não possui nenhuma utilidade moral.",
+            "Porque todas as decisões devem ser tomadas exclusivamente por outras pessoas.",
+            "Porque os ensinamentos bíblicos mudam conforme a opinião individual."
+        ],
+
+        correta: 0,
+
+        explicacao: "A consciência é importante na avaliação moral, mas não é infalível. Por isso, precisa ser formada e orientada pela verdade revelada por Deus.",
+
+        referencia: "Romanos 12:2; 1 Timóteo 1:5; Hebreus 5:14."
+    },
+
+    {
+        pergunta: "5. Qual atitude representa uma decisão ética coerente com os princípios cristãos?",
+
+        alternativas: [
+            "Aceitar uma vantagem desonesta quando ninguém estiver observando.",
+            "Escolher sempre aquilo que oferece maior benefício financeiro.",
+            "Agir com honestidade, mesmo quando isso exigir renunciar a uma vantagem pessoal.",
+            "Transferir para outras pessoas a responsabilidade pelas próprias decisões."
+        ],
+
+        correta: 2,
+
+        explicacao: "A integridade cristã exige fidelidade à verdade e à justiça, mesmo quando a escolha correta representa algum prejuízo pessoal. Daniel é um exemplo de fidelidade aos princípios de Deus.",
+
+        referencia: "Daniel 1:8; Provérbios 10:9; Miqueias 6:8."
+    },
+
+    {
+        pergunta: "6. Qual é o principal desafio do homem cristão diante da cultura contemporânea?",
+
+        alternativas: [
+            "Aceitar todas as ideias novas sem qualquer avaliação.",
+            "Desenvolver discernimento para avaliar a cultura à luz das Escrituras.",
+            "Rejeitar automaticamente tudo aquilo que é moderno.",
+            "Evitar qualquer participação na sociedade."
+        ],
+
+        correta: 1,
+
+        explicacao: "O cristão deve desenvolver discernimento. Isso significa examinar as ideias e práticas de seu tempo, reconhecendo aquilo que é compatível com os princípios bíblicos e rejeitando aquilo que contradiz a Palavra de Deus.",
+
+        referencia: "Romanos 12:2; 1 Tessalonicenses 5:21."
+    },
+
+    {
+        pergunta: "7. Segundo o ensino bíblico, qual é o principal perigo do materialismo?",
+
+        alternativas: [
+            "Ter uma atividade profissional.",
+            "Organizar as próprias finanças.",
+            "Possuir bens materiais adquiridos honestamente.",
+            "Transformar os bens e as riquezas em prioridades superiores a Deus."
+        ],
+
+        correta: 3,
+
+        explicacao: "Jesus advertiu contra a avareza e ensinou que a vida não consiste na abundância dos bens. O problema não está simplesmente em possuir recursos, mas em colocar a riqueza no centro da existência.",
+
+        referencia: "Lucas 12:15; Mateus 6:19-21."
+    },
+
+    {
+        pergunta: "8. Qual deve ser a postura do cristão diante das tecnologias e das redes sociais?",
+
+        alternativas: [
+            "Utilizá-las com responsabilidade, discernimento e respeito ao próximo.",
+            "Compartilhar qualquer informação que pareça interessante.",
+            "Utilizar as redes para atacar pessoas com opiniões diferentes.",
+            "Considerar que o ambiente virtual não exige responsabilidade moral."
+        ],
+
+        correta: 0,
+
+        explicacao: "A responsabilidade cristã alcança também o ambiente digital. Palavras, imagens, informações e atitudes nas redes sociais devem refletir verdade, respeito e domínio próprio.",
+
+        referencia: "Efésios 4:25-29; Efésios 5:15-16; Colossenses 4:6."
+    },
+
+    {
+        pergunta: "9. Qual é o fundamento bíblico para a compreensão da dignidade humana?",
+
+        alternativas: [
+            "A posição econômica de cada indivíduo.",
+            "A capacidade intelectual das pessoas.",
+            "A criação do ser humano à imagem e semelhança de Deus.",
+            "O reconhecimento social e profissional."
+        ],
+
+        correta: 2,
+
+        explicacao: "Gênesis ensina que homem e mulher foram criados à imagem de Deus. Essa verdade fundamenta a dignidade humana e exige respeito por todas as pessoas.",
+
+        referencia: "Gênesis 1:26-27; Tiago 3:9."
+    },
+
+    {
+        pergunta: "10. Na compreensão bíblica tradicional batista, como deve ser entendido o casamento?",
+
+        alternativas: [
+            "Como uma relação baseada exclusivamente em interesses financeiros.",
+            "Como uma união conjugal entre homem e mulher, marcada por compromisso e fidelidade.",
+            "Como um relacionamento sem responsabilidades permanentes.",
+            "Como uma instituição sem importância para a vida cristã."
+        ],
+
+        correta: 1,
+
+        explicacao: "A compreensão bíblica tradicional batista reconhece o casamento como união conjugal entre homem e mulher, envolvendo compromisso, fidelidade, respeito e responsabilidade diante de Deus.",
+
+        referencia: "Gênesis 2:18-24; Mateus 19:4-6; Hebreus 13:4."
+    },
+
+    {
+        pergunta: "11. Qual modelo de amor Efésios 5:25 apresenta aos maridos?",
+
+        alternativas: [
+            "O amor baseado exclusivamente na autoridade masculina.",
+            "O amor condicionado ao comportamento perfeito da esposa.",
+            "O amor que exige obediência sem oferecer cuidado.",
+            "O amor sacrificial de Cristo pela Igreja."
+        ],
+
+        correta: 3,
+
+        explicacao: "Paulo orienta os maridos a amarem suas esposas como Cristo amou a Igreja e entregou a si mesmo por ela. O modelo apresentado é de amor sacrificial, cuidado e responsabilidade.",
+
+        referencia: "Efésios 5:21-25."
+    },
+
+    {
+        pergunta: "12. Qual atitude melhor representa a responsabilidade de um pai cristão na educação dos filhos?",
+
+        alternativas: [
+            "Ensinar por meio do exemplo, do amor, da orientação e da disciplina responsável.",
+            "Utilizar o medo e a humilhação como instrumentos de educação.",
+            "Transferir integralmente para a Igreja a responsabilidade pela formação espiritual dos filhos.",
+            "Exigir dos filhos comportamentos que ele próprio não procura praticar."
+        ],
+
+        correta: 0,
+
+        explicacao: "A Bíblia orienta os pais a criarem os filhos na disciplina e instrução do Senhor, sem provocá-los à ira. O exemplo e o amor são elementos essenciais da formação cristã.",
+
+        referencia: "Deuteronômio 6:6-7; Efésios 6:4."
+    },
+
+    {
+        pergunta: "13. Qual é a compreensão cristã do trabalho apresentada nas Escrituras?",
+
+        alternativas: [
+            "O trabalho é uma atividade sem relação com a espiritualidade.",
+            "O trabalho só possui valor quando oferece grande remuneração.",
+            "O trabalho é uma responsabilidade humana e uma oportunidade de servir e glorificar a Deus.",
+            "O trabalho deve ocupar o lugar mais importante da existência humana."
+        ],
+
+        correta: 2,
+
+        explicacao: "O trabalho aparece na narrativa bíblica antes da entrada do pecado no mundo. Em Gênesis 2:15, Deus atribui ao homem a responsabilidade de cultivar e guardar o jardim.",
+
+        referencia: "Gênesis 2:15; Colossenses 3:23."
+    },
+
+    {
+        pergunta: "14. O que significa mordomia cristã na administração financeira?",
+
+        alternativas: [
+            "Acumular o máximo possível de riquezas.",
+            "Administrar com sabedoria, honestidade e responsabilidade os recursos recebidos.",
+            "Utilizar o dinheiro sem planejamento.",
+            "Considerar que os recursos materiais não possuem nenhuma importância."
+        ],
+
+        correta: 1,
+
+        explicacao: "A mordomia cristã reconhece que os recursos devem ser administrados com responsabilidade diante de Deus. Isso envolve planejamento, prudência, generosidade e honestidade.",
+
+        referencia: "Lucas 16:10-12; 1 Coríntios 4:2."
+    },
+
+    {
+        pergunta: "15. Qual é a principal advertência de 1 Timóteo 6:10?",
+
+        alternativas: [
+            "Todo trabalho remunerado é errado.",
+            "Todas as pessoas devem abandonar seus bens materiais.",
+            "A pobreza é condição obrigatória para a vida cristã.",
+            "O amor ao dinheiro pode conduzir à cobiça e ao afastamento da fé."
+        ],
+
+        correta: 3,
+
+        explicacao: "Paulo adverte contra o amor ao dinheiro. O problema não é simplesmente possuir recursos, mas permitir que a cobiça domine o coração e comprometa a fidelidade a Deus.",
+
+        referencia: "1 Timóteo 6:6-10."
+    },
+
+    {
+        pergunta: "16. Segundo 2 Coríntios 9:7, como deve ser praticada a generosidade cristã?",
+
+        alternativas: [
+            "Com disposição voluntária e alegria, não por obrigação ou constrangimento.",
+            "Para conquistar reconhecimento público.",
+            "Com a expectativa de obrigar Deus a conceder riquezas.",
+            "Somente quando houver recursos financeiros abundantes."
+        ],
+
+        correta: 0,
+
+        explicacao: "Paulo ensina que cada pessoa deve contribuir conforme propôs em seu coração, não com tristeza ou por necessidade, pois Deus ama quem dá com alegria.",
+
+        referencia: "2 Coríntios 9:6-8."
+    },
+
+    {
+        pergunta: "17. Qual princípio resume a responsabilidade social apresentada em Miqueias 6:8?",
+
+        alternativas: [
+            "Buscar prestígio e reconhecimento na sociedade.",
+            "Evitar qualquer contato com pessoas necessitadas.",
+            "Praticar a justiça, amar a misericórdia e andar humildemente com Deus.",
+            "Concentrar todos os esforços exclusivamente na prosperidade pessoal."
+        ],
+
+        correta: 2,
+
+        explicacao: "Miqueias 6:8 apresenta princípios fundamentais para uma vida que agrada a Deus: justiça, misericórdia e humildade. Esses valores também orientam a responsabilidade social cristã.",
+
+        referencia: "Miqueias 6:8."
+    },
+
+    {
+        pergunta: "18. O que caracteriza o verdadeiro testemunho cristão?",
+
+        alternativas: [
+            "Uma aparência religiosa sem compromisso com a vida cotidiana.",
+            "A coerência entre a fé professada e as atitudes praticadas.",
+            "A capacidade de demonstrar superioridade sobre outras pessoas.",
+            "A participação em atividades religiosas sem preocupação com o caráter."
+        ],
+
+        correta: 1,
+
+        explicacao: "O testemunho cristão envolve palavras e atitudes coerentes com o Evangelho. A fé verdadeira produz frutos na vida do discípulo, sem significar que ele tenha alcançado perfeição moral.",
+
+        referencia: "Mateus 5:16; Tiago 2:14-17."
+    },
+
+    {
+        pergunta: "19. O que podemos aprender com a história de Daniel diante das pressões da sociedade babilônica?",
+
+        alternativas: [
+            "Que devemos abandonar todas as responsabilidades sociais.",
+            "Que a fidelidade a Deus depende de vivermos exclusivamente entre pessoas da mesma fé.",
+            "Que devemos aceitar qualquer ordem humana, mesmo quando contradiz a vontade de Deus.",
+            "Que é possível viver em uma cultura diferente e permanecer fiel aos princípios de Deus."
+        ],
+
+        correta: 3,
+
+        explicacao: "Daniel demonstrou que era possível exercer responsabilidades em uma sociedade diferente sem abandonar suas convicções espirituais. Sua fidelidade permaneceu mesmo diante de pressões e ameaças.",
+
+        referencia: "Daniel 1:8; Daniel 6:10."
+    },
+
+    {
+        pergunta: "20. Segundo Hebreus 12:1-3, qual deve ser o fundamento da perseverança cristã?",
+
+        alternativas: [
+            "Olhar firmemente para Jesus, autor e consumador da fé.",
+            "Confiar exclusivamente na própria força de vontade.",
+            "Evitar todas as dificuldades da vida.",
+            "Buscar reconhecimento e aprovação das pessoas."
+        ],
+
+        correta: 0,
+
+        explicacao: "O autor de Hebreus orienta os cristãos a correrem com perseverança, olhando firmemente para Jesus. A caminhada cristã está fundamentada em Cristo, e não na autossuficiência humana.",
+
+        referencia: "Hebreus 12:1-3."
+    }
+
+];
+
+
+// ======================================================
+// CONSTRUÇÃO DAS QUESTÕES
+// ======================================================
+
+const areaQuestoes = document.getElementById("questoes");
+
+const contador = document.getElementById("contador");
+
+const barra = document.getElementById("barra");
+
+const formulario = document.getElementById("formulario");
+
+const resultado = document.getElementById("resultado");
+
+let avaliacaoFinalizada = false;
+
+
+function montarQuestoes() {
+
+    areaQuestoes.innerHTML = "";
+
+    perguntas.forEach((questao, indice) => {
+
+        const bloco = document.createElement("section");
+
+        bloco.className = "questao";
+
+        bloco.id = `questao-${indice}`;
+
+        let html = `
+            <h3>${questao.pergunta}</h3>
+        `;
+
+        questao.alternativas.forEach((alternativa, alternativaIndice) => {
+
+            const letra = String.fromCharCode(65 + alternativaIndice);
+
+            html += `
+                <label class="alternativa" id="alternativa-${indice}-${alternativaIndice}">
+
+                    <input
+                        type="radio"
+                        name="questao${indice}"
+                        value="${alternativaIndice}"
+                    >
+
+                    <span>
+                        <strong>${letra})</strong> ${alternativa}
+                    </span>
+
+                </label>
+            `;
+
+        });
+
+        html += `
+            <div class="explicacao" id="explicacao-${indice}"></div>
+        `;
+
+        bloco.innerHTML = html;
+
+        areaQuestoes.appendChild(bloco);
+
+    });
+
+    adicionarEventos();
+
+}
+
+
+// ======================================================
+// EVENTOS DAS RESPOSTAS
+// ======================================================
+
+function adicionarEventos() {
+
+    document.querySelectorAll('input[type="radio"]').forEach(input => {
+
+        input.addEventListener("change", atualizarProgresso);
+
+    });
+
+}
+
+
+function atualizarProgresso() {
+
+    const respondidas = perguntas.filter((questao, indice) => {
+
+        return document.querySelector(
+            `input[name="questao${indice}"]:checked`
+        );
+
+    }).length;
+
+    const percentual = (respondidas / perguntas.length) * 100;
+
+    contador.textContent = `${respondidas} de ${perguntas.length}`;
+
+    barra.style.width = `${percentual}%`;
+
+}
+
+
+// ======================================================
+// CLASSIFICAÇÃO DO RESULTADO
+// ======================================================
+
+function classificar(pontos) {
+
+    if (pontos >= 90) {
+
+        return {
+            titulo: "EXCELENTE",
+            mensagem: "Excelente desempenho! Você demonstrou compreensão muito consistente dos princípios bíblicos estudados."
+        };
+
+    }
+
+    if (pontos >= 80) {
+
+        return {
+            titulo: "MUITO BOM",
+            mensagem: "Muito bom! Você apresentou excelente aproveitamento e demonstrou boa compreensão do conteúdo."
+        };
+
+    }
+
+    if (pontos >= 70) {
+
+        return {
+            titulo: "BOM",
+            mensagem: "Bom resultado! Você demonstrou compreensão satisfatória dos temas estudados. Continue aprofundando seu conhecimento."
+        };
+
+    }
+
+    if (pontos >= 60) {
+
+        return {
+            titulo: "SATISFATÓRIO",
+            mensagem: "Você alcançou um resultado satisfatório. Recomendamos revisar os temas em que encontrou dificuldades."
+        };
+
+    }
+
+    return {
+        titulo: "PRECISA REFORÇAR",
+        mensagem: "Não desanime! Retome os estudos, consulte as referências bíblicas e refaça a avaliação quando estiver preparado."
+    };
+
+}
+
+
+// ======================================================
+// FINALIZAÇÃO E CORREÇÃO
+// ======================================================
+
+document.getElementById("finalizar").addEventListener("click", function() {
+
+    if (avaliacaoFinalizada) {
+        return;
+    }
+
+    const nome = document.getElementById("nome").value.trim();
+
+    if (!nome) {
+
+        alert("Informe seu nome antes de finalizar a avaliação.");
+
+        document.getElementById("nome").focus();
+
+        return;
+
+    }
+
+    let respondidas = 0;
+
+    let acertos = 0;
+
+    perguntas.forEach((questao, indice) => {
+
+        const resposta = document.querySelector(
+            `input[name="questao${indice}"]:checked`
+        );
+
+        if (resposta) {
+            respondidas++;
+        }
+
+    });
+
+    if (respondidas < perguntas.length) {
+
+        alert(
+            `Você respondeu ${respondidas} de ${perguntas.length} questões. Responda todas antes de finalizar.`
+        );
+
+        return;
+
+    }
+
+    perguntas.forEach((questao, indice) => {
+
+        const resposta = document.querySelector(
+            `input[name="questao${indice}"]:checked`
+        );
+
+        const respostaIndice = Number(resposta.value);
+
+        const correta = respostaIndice === questao.correta;
+
+        if (correta) {
+            acertos++;
+        }
+
+        // Bloquear alterações após a correção
+
+        document.querySelectorAll(
+            `input[name="questao${indice}"]`
+        ).forEach(input => {
+
+            input.disabled = true;
+
+        });
+
+        // Destacar alternativa correta
+
+        const alternativaCorreta = document.getElementById(
+            `alternativa-${indice}-${questao.correta}`
+        );
+
+        alternativaCorreta.classList.add("correta");
+
+        // Destacar alternativa incorreta escolhida
+
+        if (!correta) {
+
+            const alternativaEscolhida = document.getElementById(
+                `alternativa-${indice}-${respostaIndice}`
+            );
+
+            alternativaEscolhida.classList.add("incorreta");
+
+        }
+
+        // Exibir explicação bíblica
+
+        const explicacao = document.getElementById(
+            `explicacao-${indice}`
+        );
+
+        explicacao.innerHTML = `
+            <strong>
+                ${correta ? "RESPOSTA CORRETA!" : "RESPOSTA INCORRETA"}
+            </strong>
+
+            <p>${questao.explicacao}</p>
+
+            <strong>Referência bíblica:</strong>
+
+            <p>${questao.referencia}</p>
+        `;
+
+    });
+
+    const erros = perguntas.length - acertos;
+
+    const pontos = acertos * 5;
+
+    const percentual = (acertos / perguntas.length) * 100;
+
+    const classificacao = classificar(pontos);
+
+    avaliacaoFinalizada = true;
+
+    // Exibir resultado
+
+    document.getElementById("nomeResultado").innerHTML = `
+        <strong>Participante:</strong> ${escaparHTML(nome)}
+        <br>
+        <strong>Igreja:</strong> ${escaparHTML(
+            document.getElementById("igreja").value.trim() || "Não informada"
+        )}
+    `;
+
+    document.getElementById("pontuacao").textContent =
+        `${pontos} / 100`;
+
+    document.getElementById("classificacao").textContent =
+        classificacao.titulo;
+
+    document.getElementById("acertos").textContent = acertos;
+
+    document.getElementById("erros").textContent = erros;
+
+    document.getElementById("percentual").textContent =
+        `${percentual}%`;
+
+    document.getElementById("mensagemFinal").innerHTML = `
+        <h3>Mensagem ao participante</h3>
+
+        <p>${classificacao.mensagem}</p>
+
+        <p>
+            Esta avaliação é uma ferramenta de aprendizagem.
+            O conhecimento bíblico deve produzir crescimento espiritual,
+            transformação do caráter e compromisso com Cristo.
+        </p>
+
+        <p>
+            Continue estudando a Palavra de Deus e colocando em prática
+            os ensinamentos recebidos.
+        </p>
+
+        <strong>
+            "Sede cumpridores da palavra e não somente ouvintes."
+            — Tiago 1:22
+        </strong>
+    `;
+
+    resultado.style.display = "block";
+
+    document.getElementById("finalizar").disabled = true;
+
+    document.getElementById("limpar").disabled = true;
+
+    resultado.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+});
+
+
+// ======================================================
+// PROTEÇÃO DE TEXTO INSERIDO PELO PARTICIPANTE
+// ======================================================
+
+function escaparHTML(texto) {
+
+    return texto.replace(/[&<>"']/g, caractere => {
+
+        const entidades = {
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&#039;"
+        };
+
+        return entidades[caractere];
+
+    });
+
+}
+
+
+// ======================================================
+// REVISÃO DAS RESPOSTAS
+// ======================================================
+
+document.getElementById("revisar").addEventListener("click", function() {
+
+    if (!avaliacaoFinalizada) {
+        return;
+    }
+
+    document.querySelectorAll(".explicacao").forEach(elemento => {
+
+        elemento.classList.add("mostrar");
+
+    });
+
+    const primeiraQuestao = document.getElementById("questao-0");
+
+    primeiraQuestao.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+});
+
+
+// ======================================================
+// LIMPAR RESPOSTAS
+// ======================================================
+
+document.getElementById("limpar").addEventListener("click", function() {
+
+    if (avaliacaoFinalizada) {
+        return;
+    }
+
+    const confirmar = confirm(
+        "Deseja realmente apagar todas as respostas selecionadas?"
+    );
+
+    if (!confirmar) {
+        return;
+    }
+
+    formulario.reset();
+
+    atualizarProgresso();
+
+});
+
+
+// ======================================================
+// REFAZER A AVALIAÇÃO
+// ======================================================
+
+document.getElementById("refazer").addEventListener("click", function() {
+
+    const confirmar = confirm(
+        "Deseja reiniciar a avaliação? O resultado atual será perdido."
+    );
+
+    if (!confirmar) {
+        return;
+    }
+
+    avaliacaoFinalizada = false;
+
+    document.getElementById("nome").value = "";
+
+    document.getElementById("igreja").value = "";
+
+    resultado.style.display = "none";
+
+    document.getElementById("finalizar").disabled = false;
+
+    document.getElementById("limpar").disabled = false;
+
+    montarQuestoes();
+
+    atualizarProgresso();
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});
+
+
+// ======================================================
+// IMPRESSÃO
+// ======================================================
+
+document.getElementById("imprimir").addEventListener("click", function() {
+
+    if (!avaliacaoFinalizada) {
+        alert("Finalize a avaliação antes de imprimir.");
+        return;
+    }
+
+    window.print();
+
+});
+
+
+// ======================================================
+// INICIALIZAÇÃO
+// ======================================================
+
+montarQuestoes();
+
+atualizarProgresso();
+
+</script>
+
+</body>
+</html>

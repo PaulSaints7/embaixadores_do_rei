@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Avaliação do Módulo 05 | Homens Segundo o Coração de Deus</title>
+
+    <link rel="stylesheet" href="../../css/uhbb.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --marrom: #593B2B;
+            --marrom-escuro: #38271F;
+            --marrom-medio: #76523C;
+            --azul: #18334D;
+            --azul-claro: #294B65;
+            --dourado: #B08A48;
+            --dourado-claro: #D1B477;
+            --bege: #E9DFC9;
+            --creme: #F7F4EC;
+            --texto: #333333;
+            --verde: #28734B;
+            --vermelho: #A13B35;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--creme);
+            color: var(--texto);
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.7;
+        }
+
+        .cabecalho {
+            background: linear-gradient(135deg, var(--marrom-escuro), var(--azul));
+            color: white;
+            padding: 55px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--dourado);
+        }
+
+        .cabecalho .identificacao {
+            color: var(--dourado-claro);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .cabecalho h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.7rem, 4vw, 2.6rem);
+            margin: 18px auto;
+            max-width: 900px;
+        }
+
+        .cabecalho p {
+            color: #eee5d5;
+            max-width: 750px;
+            margin: 10px auto;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .painel-informacoes {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid var(--dourado);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+            margin-bottom: 25px;
+        }
+
+        .painel-informacoes h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--azul);
+            margin-top: 0;
+        }
+
+        .informacoes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .informacao {
+            background: var(--creme);
+            padding: 15px;
+            border-radius: 7px;
+            text-align: center;
+        }
+
+        .informacao strong {
+            display: block;
+            color: var(--marrom);
+            font-size: 1.35rem;
+        }
+
+        .barra-container {
+            background: #ddd;
+            height: 12px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .barra-progresso {
+            height: 100%;
+            width: 0%;
+            background: var(--dourado);
+            transition: width 0.3s;
+        }
+
+        .progresso-texto {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            font-size: 0.9rem;
+            margin-top: 8px;
+            color: #555;
+        }
+
+        .questao {
+            background: white;
+            padding: 27px;
+            margin-bottom: 22px;
+            border-radius: 10px;
+            border: 1px solid #e5e0d7;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        .questao h3 {
+            color: var(--azul);
+            font-size: 1.08rem;
+            margin-top: 0;
+            margin-bottom: 18px;
+        }
+
+        .tema {
+            display: inline-block;
+            background: var(--bege);
+            color: var(--marrom-escuro);
+            font-size: 0.76rem;
+            font-weight: 700;
+            padding: 5px 10px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+
+        .alternativa {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 13px 15px;
+            border: 1px solid #ddd;
+            border-radius: 7px;
+            margin: 10px 0;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .alternativa:hover {
+            background: #f5f1e8;
+            border-color: var(--dourado);
+        }
+
+        .alternativa input {
+            margin-top: 5px;
+            accent-color: var(--azul);
+        }
+
+        .alternativa.selecionada {
+            background: #f2ead8;
+            border-color: var(--dourado);
+        }
+
+        .alternativa.correta {
+            background: #e4f2e9;
+            border-color: var(--verde);
+        }
+
+        .alternativa.incorreta {
+            background: #f8e6e4;
+            border-color: var(--vermelho);
+        }
+
+        .alternativa input:disabled {
+            cursor: default;
+        }
+
+        .acoes {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 35px 0;
+        }
+
+        .botao {
+            display: inline-block;
+            border: none;
+            padding: 14px 25px;
+            background: var(--azul);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            background: var(--dourado);
+            color: var(--marrom-escuro);
+            transform: translateY(-2px);
+        }
+
+        .botao-secundario {
+            background: var(--marrom);
+        }
+
+        .resultado {
+            display: none;
+            background: white;
+            padding: 35px;
+            border-radius: 10px;
+            border-top: 5px solid var(--dourado);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            margin: 35px 0;
+        }
+
+        .resultado h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--azul);
+            text-align: center;
+        }
+
+        .pontuacao {
+            text-align: center;
+            background: var(--creme);
+            border-radius: 10px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+
+        .pontuacao .numero {
+            display: block;
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            color: var(--marrom);
+            font-weight: 700;
+        }
+
+        .estatisticas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 12px;
+        }
+
+        .estatistica {
+            background: var(--creme);
+            padding: 18px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .estatistica strong {
+            display: block;
+            font-size: 1.5rem;
+            color: var(--azul);
+        }
+
+        .classificacao {
+            text-align: center;
+            padding: 18px;
+            margin-top: 20px;
+            background: var(--bege);
+            border-radius: 8px;
+            color: var(--marrom-escuro);
+            font-weight: 700;
+        }
+
+        .explicacao {
+            display: none;
+            margin-top: 17px;
+            padding: 17px;
+            background: #f0f3f5;
+            border-left: 4px solid var(--azul);
+            border-radius: 6px;
+            font-size: 0.95rem;
+        }
+
+        .explicacao strong {
+            color: var(--azul);
+        }
+
+        .rodape {
+            background: var(--marrom-escuro);
+            color: #e8dfd0;
+            text-align: center;
+            padding: 28px 20px;
+            margin-top: 60px;
+        }
+
+        .mensagem-aviso {
+            display: none;
+            background: #fff0d8;
+            color: #704b16;
+            border-left: 4px solid var(--dourado);
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 600px) {
+
+            .cabecalho {
+                padding: 40px 18px;
+            }
+
+            .questao {
+                padding: 20px;
+            }
+
+            .resultado {
+                padding: 22px;
+            }
+
+            .acoes {
+                flex-direction: column;
+            }
+
+            .botao {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media print {
+
+            body {
+                background: white;
+                color: black;
+            }
+
+            .cabecalho {
+                background: white;
+                color: black;
+                border-bottom: 2px solid black;
+                padding: 20px;
+            }
+
+            .cabecalho .identificacao,
+            .cabecalho p {
+                color: black;
+            }
+
+            .painel-informacoes,
+            .questao,
+            .resultado {
+                box-shadow: none;
+                border: 1px solid #bbb;
+                break-inside: avoid;
+            }
+
+            .acoes,
+            .barra-container,
+            .progresso-texto,
+            .rodape {
+                display: none !important;
+            }
+
+            .explicacao {
+                display: block !important;
+            }
+
+            .resultado {
+                display: block !important;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header class="cabecalho">
+
+        <div class="identificacao">
+            Homens Segundo o Coração de Deus
+        </div>
+
+        <h1>Avaliação do Módulo 05</h1>
+
+        <p>
+            Coragem, Disciplina e Domínio Próprio
+        </p>
+
+        <p>
+            Avaliação de aprendizagem bíblica e formação cristã.
+        </p>
+
+    </header>
+
+
+    <main class="container">
+
+        <section class="painel-informacoes">
+
+            <h2>Orientações da Avaliação</h2>
+
+            <p>
+                Leia atentamente cada questão e escolha
+                apenas uma alternativa. Todas as questões
+                são obrigatórias para a conclusão da avaliação.
+            </p>
+
+            <p>
+                Ao finalizar, o sistema apresentará sua
+                pontuação, percentual de aproveitamento,
+                classificação e revisão comentada das respostas.
+            </p>
+
+            <div class="informacoes">
+
+                <div class="informacao">
+                    <strong>20</strong>
+                    Questões
+                </div>
+
+                <div class="informacao">
+                    <strong>05</strong>
+                    Pontos por questão
+                </div>
+
+                <div class="informacao">
+                    <strong>100</strong>
+                    Pontuação máxima
+                </div>
+
+                <div class="informacao">
+                    <strong>01</strong>
+                    Alternativa correta
+                </div>
+
+            </div>
+
+            <div class="barra-container">
+                <div class="barra-progresso" id="barra-progresso"></div>
+            </div>
+
+            <div class="progresso-texto">
+                <span id="contador">0 de 20 questões respondidas</span>
+                <span id="percentual-progresso">0%</span>
+            </div>
+
+        </section>
+
+
+        <div class="mensagem-aviso" id="aviso">
+            Existem questões sem resposta. Responda todas
+            antes de finalizar a avaliação.
+        </div>
+
+
+        <form id="formulario-avaliacao">
+
+            <div id="lista-questoes"></div>
+
+            <div class="acoes" id="acoes-avaliacao">
+
+                <button type="button" class="botao" id="finalizar">
+                    FINALIZAR AVALIAÇÃO
+                </button>
+
+                <button type="button" class="botao botao-secundario"
+                    id="limpar">
+                    LIMPAR RESPOSTAS
+                </button>
+
+            </div>
+
+        </form>
+
+
+        <!-- RESULTADO -->
+
+        <section class="resultado" id="resultado">
+
+            <h2>Resultado da Avaliação</h2>
+
+            <div class="pontuacao">
+
+                <span class="numero" id="nota">0</span>
+
+                <strong>pontos de 100 possíveis</strong>
+
+                <p id="mensagem-resultado"></p>
+
+            </div>
+
+            <div class="estatisticas">
+
+                <div class="estatistica">
+                    <strong id="acertos">0</strong>
+                    Acertos
+                </div>
+
+                <div class="estatistica">
+                    <strong id="erros">0</strong>
+                    Erros
+                </div>
+
+                <div class="estatistica">
+                    <strong id="percentual">0%</strong>
+                    Aproveitamento
+                </div>
+
+                <div class="estatistica">
+                    <strong id="pontos">0</strong>
+                    Pontos
+                </div>
+
+            </div>
+
+            <div class="classificacao" id="classificacao"></div>
+
+            <h3 style="color: var(--azul); margin-top: 35px;">
+                Revisão das Respostas
+            </h3>
+
+            <p>
+                Confira as respostas corretas e leia as
+                explicações bíblicas para reforçar seu aprendizado.
+            </p>
+
+            <div class="acoes">
+
+                <button type="button" class="botao" id="refazer">
+                    REFAZER A AVALIAÇÃO
+                </button>
+
+                <button type="button" class="botao botao-secundario"
+                    onclick="window.print()">
+                    IMPRIMIR RESULTADO
+                </button>
+
+                <a href="../../conteudos/identidade_masculina/modulo05/apresentacao.html"
+                    class="botao botao-secundario">
+                    VOLTAR AO MÓDULO
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="rodape">
+
+        <p>
+            HOMENS SEGUNDO O CORAÇÃO DE DEUS
+        </p>
+
+        <p>
+            Formando homens, fortalecendo famílias e servindo à Igreja de Cristo.
+        </p>
+
+        <p>
+            Avaliação do Módulo 05 — Coragem, Disciplina e Domínio Próprio
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        "use strict";
+
+        // =====================================================
+        // AVALIAÇÃO DO MÓDULO 05
+        // CORAGEM, DISCIPLINA E DOMÍNIO PRÓPRIO
+        // =====================================================
+
+
+        const questoes = [
+
+            {
+                tema: "Tema 01 — A Coragem à Luz das Escrituras",
+
+                pergunta: "Segundo a perspectiva bíblica, qual é a principal fonte da coragem do homem cristão?",
+
+                alternativas: [
+                    "A confiança exclusiva em sua própria capacidade.",
+                    "A confiança em Deus e em sua presença.",
+                    "A ausência completa de dificuldades.",
+                    "A superioridade sobre as outras pessoas."
+                ],
+
+                correta: 1,
+
+                explicacao: "A coragem bíblica está fundamentada na confiança em Deus. Em Josué 1:9, o Senhor encoraja Josué a ser forte e corajoso, lembrando-lhe que estaria com ele por onde andasse.",
+
+                referencia: "Josué 1:9."
+            },
+
+            {
+                tema: "Tema 01 — A Coragem à Luz das Escrituras",
+
+                pergunta: "De acordo com 2 Timóteo 1:7, quais elementos são apresentados como características da capacitação recebida de Deus?",
+
+                alternativas: [
+                    "Orgulho, autoridade e independência.",
+                    "Riqueza, prestígio e poder.",
+                    "Fortaleza, amor e moderação.",
+                    "Superioridade, competição e domínio sobre os outros."
+                ],
+
+                correta: 2,
+
+                explicacao: "Paulo ensina que Deus não nos deu espírito de covardia, mas de poder, amor e moderação. A coragem cristã deve estar acompanhada de amor e equilíbrio.",
+
+                referencia: "2 Timóteo 1:7."
+            },
+
+            {
+                tema: "Tema 02 — A Coragem diante do Medo e das Adversidades",
+
+                pergunta: "Qual deve ser a atitude do cristão diante do medo e das adversidades?",
+
+                alternativas: [
+                    "Reconhecer suas dificuldades e confiar em Deus para enfrentá-las.",
+                    "Negar que sente medo em qualquer circunstância.",
+                    "Abandonar suas responsabilidades até que tudo melhore.",
+                    "Agir impulsivamente para demonstrar coragem."
+                ],
+
+                correta: 0,
+
+                explicacao: "A coragem não significa ausência de medo. Significa enfrentar as circunstâncias com confiança em Deus, buscando sabedoria e orientação para agir corretamente.",
+
+                referencia: "Salmo 27:1; Isaías 41:10."
+            },
+
+            {
+                tema: "Tema 02 — A Coragem diante do Medo e das Adversidades",
+
+                pergunta: "O que podemos aprender com a atitude dos jovens hebreus diante da ameaça do rei Nabucodonosor?",
+
+                alternativas: [
+                    "Que a fidelidade a Deus depende de receber recompensas.",
+                    "Que devemos evitar qualquer situação de conflito.",
+                    "Que a obediência a Deus só é necessária quando não existe perigo.",
+                    "Que devemos permanecer fiéis a Deus mesmo quando enfrentamos consequências difíceis."
+                ],
+
+                correta: 3,
+
+                explicacao: "Sadraque, Mesaque e Abede-Nego demonstraram fidelidade ao Senhor mesmo diante da ameaça da fornalha. Sua obediência não dependia da garantia de livramento.",
+
+                referencia: "Daniel 3:16-18."
+            },
+
+            {
+                tema: "Tema 03 — A Coragem Moral e a Fidelidade a Deus",
+
+                pergunta: "O que caracteriza a coragem moral na vida cristã?",
+
+                alternativas: [
+                    "Impor opiniões pessoais sobre todas as pessoas.",
+                    "Defender aquilo que é correto diante de Deus, mesmo diante de pressões.",
+                    "Evitar assumir responsabilidades difíceis.",
+                    "Fazer qualquer coisa para conquistar reconhecimento."
+                ],
+
+                correta: 1,
+
+                explicacao: "A coragem moral envolve permanecer fiel aos princípios bíblicos, agir com justiça e defender a verdade mesmo quando isso exige renúncia ou enfrentamento de pressões.",
+
+                referencia: "Atos 5:27-29."
+            },
+
+            {
+                tema: "Tema 03 — A Coragem Moral e a Fidelidade a Deus",
+
+                pergunta: "Segundo a experiência de Daniel, qual atitude demonstra fidelidade a Deus diante de uma proibição injusta?",
+
+                alternativas: [
+                    "Abandonar completamente sua vida espiritual.",
+                    "Procurar vantagens pessoais por meio de acordos.",
+                    "Continuar buscando a Deus com fidelidade e responsabilidade.",
+                    "Agir com violência contra seus adversários."
+                ],
+
+                correta: 2,
+
+                explicacao: "Daniel continuou orando ao Senhor mesmo diante do decreto que proibia essa prática. Sua atitude demonstra firmeza espiritual e fidelidade a Deus.",
+
+                referencia: "Daniel 6:6-10."
+            },
+
+            {
+                tema: "Tema 04 — A Disciplina na Vida Cristã",
+
+                pergunta: "Como podemos compreender a disciplina na vida cristã?",
+
+                alternativas: [
+                    "Como compromisso e constância na prática dos princípios bíblicos.",
+                    "Como cumprimento de regras humanas para conquistar a salvação.",
+                    "Como controle rígido sobre a vida de outras pessoas.",
+                    "Como obrigação de nunca cometer erros."
+                ],
+
+                correta: 0,
+
+                explicacao: "A disciplina cristã envolve compromisso, constância e responsabilidade diante de Deus. Ela não é um meio de comprar a salvação, que é recebida pela graça mediante a fé.",
+
+                referencia: "Efésios 2:8-10; 1 Coríntios 9:24-27."
+            },
+
+            {
+                tema: "Tema 04 — A Disciplina na Vida Cristã",
+
+                pergunta: "Na comparação apresentada por Paulo entre a vida cristã e a preparação de um atleta, qual princípio se destaca?",
+
+                alternativas: [
+                    "A necessidade de competir para ser superior aos outros.",
+                    "A importância de evitar qualquer esforço pessoal.",
+                    "A busca de reconhecimento público como objetivo principal.",
+                    "A necessidade de treinamento, dedicação e domínio próprio."
+                ],
+
+                correta: 3,
+
+                explicacao: "Paulo utiliza a figura do atleta para ensinar sobre dedicação, preparação e domínio próprio. A vida cristã exige compromisso e perseverança.",
+
+                referencia: "1 Coríntios 9:24-27."
+            },
+
+            {
+                tema: "Tema 04 — A Disciplina na Vida Cristã",
+
+                pergunta: "Qual das alternativas representa uma prática de disciplina espiritual?",
+
+                alternativas: [
+                    "Abandonar a comunhão com a Igreja.",
+                    "Cultivar regularmente a oração, o estudo bíblico e a prática da Palavra.",
+                    "Estudar as Escrituras apenas quando surgem problemas.",
+                    "Substituir a vida espiritual por atividades profissionais."
+                ],
+
+                correta: 1,
+
+                explicacao: "A disciplina espiritual envolve desenvolver hábitos que favorecem o crescimento cristão, como oração, estudo das Escrituras, comunhão e obediência à Palavra.",
+
+                referencia: "Salmo 1:1-3; Atos 2:42."
+            },
+
+            {
+                tema: "Tema 04 — A Disciplina na Vida Cristã",
+
+                pergunta: "Qual é a diferença entre disciplina cristã e legalismo?",
+
+                alternativas: [
+                    "Não existe diferença entre os dois conceitos.",
+                    "A disciplina cristã elimina a necessidade da graça.",
+                    "A disciplina busca uma vida comprometida com Deus; o legalismo transforma regras em fundamento de aceitação diante dele.",
+                    "O legalismo é sempre necessário para alcançar maturidade espiritual."
+                ],
+
+                correta: 2,
+
+                explicacao: "A disciplina cristã é uma resposta de gratidão à graça de Deus e contribui para uma vida de obediência. O legalismo atribui às regras humanas um papel indevido na aceitação diante de Deus.",
+
+                referencia: "Efésios 2:8-10; Colossenses 2:20-23."
+            },
+
+            {
+                tema: "Tema 05 — O Domínio Próprio e o Controle das Emoções",
+
+                pergunta: "Segundo Gálatas 5:22-23, como o domínio próprio é apresentado?",
+
+                alternativas: [
+                    "Como fruto do Espírito.",
+                    "Como característica exclusiva de pessoas naturalmente calmas.",
+                    "Como resultado da riqueza material.",
+                    "Como ausência de sentimentos e emoções."
+                ],
+
+                correta: 0,
+
+                explicacao: "O domínio próprio aparece na lista do fruto do Espírito. Ele está relacionado à capacidade de orientar desejos, palavras e atitudes de acordo com a vontade de Deus.",
+
+                referencia: "Gálatas 5:22-23."
+            },
+
+            {
+                tema: "Tema 05 — O Domínio Próprio e o Controle das Emoções",
+
+                pergunta: "Qual afirmação expressa corretamente o relacionamento entre emoções e domínio próprio?",
+
+                alternativas: [
+                    "O cristão verdadeiro nunca sente tristeza ou indignação.",
+                    "Todas as emoções devem ser expressas imediatamente.",
+                    "Sentir emoções demonstra falta de maturidade espiritual.",
+                    "Sentir emoções é parte da experiência humana, mas nossas atitudes precisam ser orientadas com sabedoria."
+                ],
+
+                correta: 3,
+
+                explicacao: "A Bíblia apresenta pessoas que experimentaram diferentes emoções, inclusive Jesus. O domínio próprio não elimina os sentimentos, mas ajuda a responder a eles de maneira responsável.",
+
+                referencia: "João 11:35; Efésios 4:26."
+            },
+
+            {
+                tema: "Tema 05 — O Domínio Próprio e o Controle das Emoções",
+
+                pergunta: "Segundo Tiago 1:19, qual orientação deve ser observada nos relacionamentos?",
+
+                alternativas: [
+                    "Ser rápido para falar e lento para ouvir.",
+                    "Ser pronto para ouvir, tardio para falar e tardio para se irar.",
+                    "Evitar ouvir opiniões diferentes.",
+                    "Responder imediatamente a qualquer provocação."
+                ],
+
+                correta: 1,
+
+                explicacao: "Tiago orienta os cristãos a desenvolverem uma postura de escuta, prudência nas palavras e controle da ira. Essa atitude favorece relacionamentos mais saudáveis.",
+
+                referencia: "Tiago 1:19-20."
+            },
+
+            {
+                tema: "Tema 05 — O Domínio Próprio e o Controle das Emoções",
+
+                pergunta: "Qual atitude demonstra domínio próprio diante de uma provocação?",
+
+                alternativas: [
+                    "Responder com agressividade para impor respeito.",
+                    "Guardar ressentimento e planejar vingança.",
+                    "Procurar agir com equilíbrio, evitando palavras e atitudes impulsivas.",
+                    "Humilhar a pessoa diante de outras pessoas."
+                ],
+
+                correta: 2,
+
+                explicacao: "O domínio próprio permite responder às provocações com equilíbrio, evitando atitudes impulsivas. Provérbios ensina que controlar o próprio espírito é uma demonstração de força.",
+
+                referencia: "Provérbios 16:32; Efésios 4:29-32."
+            },
+
+            {
+                tema: "Tema 06 — Perseverança e Firmeza na Caminhada Cristã",
+
+                pergunta: "O que significa perseverar na caminhada cristã?",
+
+                alternativas: [
+                    "Permanecer fiel a Deus e continuar confiando nele mesmo diante das dificuldades.",
+                    "Nunca reconhecer erros ou limitações.",
+                    "Insistir em todas as decisões pessoais, mesmo quando são equivocadas.",
+                    "Esperar que a vida cristã seja livre de problemas."
+                ],
+
+                correta: 0,
+
+                explicacao: "Perseverar significa continuar firme na fé e no compromisso com Cristo, reconhecendo limitações, aprendendo com os erros e buscando a orientação de Deus.",
+
+                referencia: "Gálatas 6:9; Hebreus 12:1-2."
+            },
+
+            {
+                tema: "Tema 06 — Perseverança e Firmeza na Caminhada Cristã",
+
+                pergunta: "Em 1 Coríntios 15:58, Paulo orienta os cristãos a serem:",
+
+                alternativas: [
+                    "Independentes de Deus e autossuficientes.",
+                    "Preocupados apenas com conquistas pessoais.",
+                    "Firmes, constantes e abundantes na obra do Senhor.",
+                    "Imunes às dificuldades da vida."
+                ],
+
+                correta: 2,
+
+                explicacao: "Paulo ensina que os cristãos devem permanecer firmes e constantes, dedicando-se à obra do Senhor. Essa orientação está fundamentada na esperança da ressurreição.",
+
+                referencia: "1 Coríntios 15:58."
+            },
+
+            {
+                tema: "Tema 06 — Perseverança e Firmeza na Caminhada Cristã",
+
+                pergunta: "Segundo Hebreus 12:1-2, qual deve ser o foco principal da caminhada cristã?",
+
+                alternativas: [
+                    "A comparação constante com outras pessoas.",
+                    "A conquista de reconhecimento religioso.",
+                    "A demonstração de superioridade espiritual.",
+                    "Jesus Cristo, autor e consumador da fé."
+                ],
+
+                correta: 3,
+
+                explicacao: "O texto de Hebreus apresenta Jesus como referência central da caminhada cristã. O cristão deve correr com perseverança, olhando para Cristo.",
+
+                referencia: "Hebreus 12:1-3."
+            },
+
+            {
+                tema: "Tema 06 — Perseverança e Firmeza na Caminhada Cristã",
+
+                pergunta: "O que podemos aprender com as palavras de Paulo em 2 Timóteo 4:7?",
+
+                alternativas: [
+                    "Que a vida cristã deve ser orientada pela busca de reconhecimento.",
+                    "Que a fidelidade a Cristo deve marcar toda a caminhada, até o fim.",
+                    "Que as dificuldades são sinais de abandono por parte de Deus.",
+                    "Que o serviço cristão deve ser interrompido quando não há recompensas."
+                ],
+
+                correta: 1,
+
+                explicacao: "Ao declarar que combateu o bom combate, terminou a carreira e guardou a fé, Paulo expressa sua fidelidade à missão recebida e sua perseverança no serviço cristão.",
+
+                referencia: "2 Timóteo 4:6-8."
+            },
+
+            {
+                tema: "Integração dos Temas — Módulo 05",
+
+                pergunta: "Qual alternativa apresenta corretamente a relação entre coragem, disciplina, domínio próprio e perseverança?",
+
+                alternativas: [
+                    "A coragem substitui a disciplina, e o domínio próprio elimina as dificuldades.",
+                    "A disciplina é necessária apenas na Igreja, enquanto a perseverança é necessária apenas no trabalho.",
+                    "A coragem ajuda a enfrentar desafios, a disciplina mantém o compromisso, o domínio próprio orienta as atitudes e a perseverança sustenta a caminhada.",
+                    "As quatro qualidades dependem exclusivamente da força de vontade humana."
+                ],
+
+                correta: 2,
+
+                explicacao: "As quatro qualidades se complementam na formação cristã. Elas devem ser desenvolvidas em uma vida de confiança em Deus, obediência às Escrituras e dependência do Espírito Santo.",
+
+                referencia: "Gálatas 5:22-23; 1 Coríntios 9:24-27; Hebreus 12:1-2."
+            },
+
+            {
+                tema: "Integração dos Temas — Módulo 05",
+
+                pergunta: "Qual princípio deve orientar a vida do homem segundo o coração de Deus?",
+
+                alternativas: [
+                    "Viver com coragem, disciplina, domínio próprio e perseverança, confiando em Deus e procurando obedecer à sua Palavra.",
+                    "Conquistar autoridade sobre outras pessoas por meio da força.",
+                    "Evitar responsabilidades que exijam esforço e dedicação.",
+                    "Depender exclusivamente de sua capacidade pessoal para enfrentar a vida."
+                ],
+
+                correta: 0,
+
+                explicacao: "A formação cristã masculina deve ser fundamentada nas Escrituras e na confiança em Deus. O homem cristão é chamado a viver com responsabilidade, fidelidade, equilíbrio e perseverança.",
+
+                referencia: "Miqueias 6:8; Gálatas 5:22-23; 1 Coríntios 16:13-14."
+            }
+
+        ];
+
+
+        // =====================================================
+        // ELEMENTOS DA PÁGINA
+        // =====================================================
+
+        const listaQuestoes = document.getElementById("lista-questoes");
+
+        const barraProgresso = document.getElementById("barra-progresso");
+
+        const contador = document.getElementById("contador");
+
+        const percentualProgresso = document.getElementById("percentual-progresso");
+
+        const aviso = document.getElementById("aviso");
+
+        const resultado = document.getElementById("resultado");
+
+        const botaoFinalizar = document.getElementById("finalizar");
+
+        const botaoLimpar = document.getElementById("limpar");
+
+        const botaoRefazer = document.getElementById("refazer");
+
+
+        let avaliacaoFinalizada = false;
+
+
+        // =====================================================
+        // CRIAÇÃO DAS QUESTÕES
+        // =====================================================
+
+        function carregarQuestoes() {
+
+            listaQuestoes.innerHTML = "";
+
+            questoes.forEach((questao, indice) => {
+
+                const artigo = document.createElement("article");
+
+                artigo.className = "questao";
+
+                artigo.id = `questao-${indice}`;
+
+                let html = `
+                    <span class="tema">${questao.tema}</span>
+
+                    <h3>
+                        Questão ${indice + 1}:
+                        ${questao.pergunta}
+                    </h3>
+                `;
+
+                questao.alternativas.forEach((alternativa, alternativaIndice) => {
+
+                    const letra = String.fromCharCode(65 + alternativaIndice);
+
+                    html += `
+                        <label class="alternativa"
+                            id="alternativa-${indice}-${alternativaIndice}">
+
+                            <input
+                                type="radio"
+                                name="questao${indice}"
+                                value="${alternativaIndice}">
+
+                            <span>
+                                <strong>${letra})</strong>
+                                ${alternativa}
+                            </span>
+
+                        </label>
+                    `;
+
+                });
+
+                html += `
+                    <div class="explicacao" id="explicacao-${indice}"></div>
+                `;
+
+                artigo.innerHTML = html;
+
+                listaQuestoes.appendChild(artigo);
+
+            });
+
+            document.querySelectorAll(".alternativa input").forEach(input => {
+
+                input.addEventListener("change", () => {
+
+                    atualizarProgresso();
+
+                    document.querySelectorAll(
+                        `input[name="${input.name}"]`
+                    ).forEach(radio => {
+
+                        radio.parentElement.classList.remove("selecionada");
+
+                    });
+
+                    input.parentElement.classList.add("selecionada");
+
+                });
+
+            });
+
+            atualizarProgresso();
+
+        }
+
+
+        // =====================================================
+        // ATUALIZAÇÃO DO PROGRESSO
+        // =====================================================
+
+        function atualizarProgresso() {
+
+            const respondidas = questoes.filter((questao, indice) => {
+
+                return document.querySelector(
+                    `input[name="questao${indice}"]:checked`
+                );
+
+            }).length;
+
+            const percentual = (respondidas / questoes.length) * 100;
+
+            barraProgresso.style.width = `${percentual}%`;
+
+            contador.textContent =
+                `${respondidas} de ${questoes.length} questões respondidas`;
+
+            percentualProgresso.textContent =
+                `${Math.round(percentual)}%`;
+
+        }
+
+
+        // =====================================================
+        // FINALIZAÇÃO E CORREÇÃO
+        // =====================================================
+
+        function finalizarAvaliacao() {
+
+            if (avaliacaoFinalizada) {
+                return;
+            }
+
+            const respostas = [];
+
+            for (let indice = 0; indice < questoes.length; indice++) {
+
+                const selecionada = document.querySelector(
+                    `input[name="questao${indice}"]:checked`
+                );
+
+                if (!selecionada) {
+
+                    aviso.style.display = "block";
+
+                    document.getElementById(`questao-${indice}`)
+                        .scrollIntoView({
+                            behavior: "smooth",
+                            block: "center"
+                        });
+
+                    return;
+
+                }
+
+                respostas.push(Number(selecionada.value));
+
+            }
+
+            aviso.style.display = "none";
+
+            avaliacaoFinalizada = true;
+
+            let acertos = 0;
+
+            questoes.forEach((questao, indice) => {
+
+                const respostaUsuario = respostas[indice];
+
+                const respostaCorreta = questao.correta;
+
+                const acertou = respostaUsuario === respostaCorreta;
+
+                if (acertou) {
+                    acertos++;
+                }
+
+                questao.alternativas.forEach((alternativa, alternativaIndice) => {
+
+                    const elemento = document.getElementById(
+                        `alternativa-${indice}-${alternativaIndice}`
+                    );
+
+                    const radio = elemento.querySelector("input");
+
+                    radio.disabled = true;
+
+                    elemento.classList.remove("selecionada");
+
+                    if (alternativaIndice === respostaCorreta) {
+
+                        elemento.classList.add("correta");
+
+                    } else if (alternativaIndice === respostaUsuario) {
+
+                        elemento.classList.add("incorreta");
+
+                    }
+
+                });
+
+                const explicacao = document.getElementById(
+                    `explicacao-${indice}`
+                );
+
+                const letraCorreta = String.fromCharCode(65 + respostaCorreta);
+
+                explicacao.innerHTML = `
+                    <strong>
+                        ${acertou ? "Resposta correta!" : "Resposta incorreta."}
+                    </strong>
+
+                    <br><br>
+
+                    <strong>Alternativa correta: ${letraCorreta}</strong>
+
+                    <br><br>
+
+                    ${questao.explicacao}
+
+                    <br><br>
+
+                    <strong>Referência bíblica:</strong>
+                    ${questao.referencia}
+                `;
+
+                explicacao.style.display = "block";
+
+            });
+
+
+            // =================================================
+            // CÁLCULO DA NOTA
+            // =================================================
+
+            const erros = questoes.length - acertos;
+
+            const pontos = acertos * 5;
+
+            const percentual = Math.round(
+                (acertos / questoes.length) * 100
+            );
+
+
+            document.getElementById("nota").textContent = pontos;
+
+            document.getElementById("acertos").textContent = acertos;
+
+            document.getElementById("erros").textContent = erros;
+
+            document.getElementById("percentual").textContent =
+                `${percentual}%`;
+
+            document.getElementById("pontos").textContent = pontos;
+
+
+            // =================================================
+            // CLASSIFICAÇÃO
+            // =================================================
+
+            let classificacao = "";
+
+            let mensagem = "";
+
+            if (percentual >= 90) {
+
+                classificacao = "EXCELENTE DESEMPENHO";
+
+                mensagem = "Excelente! Você demonstrou ótimo domínio dos conteúdos estudados.";
+
+            } else if (percentual >= 80) {
+
+                classificacao = "MUITO BOM DESEMPENHO";
+
+                mensagem = "Muito bom! Você demonstrou uma compreensão consistente dos temas.";
+
+            } else if (percentual >= 70) {
+
+                classificacao = "BOM DESEMPENHO";
+
+                mensagem = "Bom trabalho! Continue aprofundando seus conhecimentos bíblicos.";
+
+            } else if (percentual >= 60) {
+
+                classificacao = "DESEMPENHO SATISFATÓRIO";
+
+                mensagem = "Você alcançou um resultado satisfatório, mas pode fortalecer seu aprendizado.";
+
+            } else {
+
+                classificacao = "É NECESSÁRIO REVISAR OS CONTEÚDOS";
+
+                mensagem = "Recomendamos revisar os seis temas e realizar novamente a avaliação.";
+
+            }
+
+
+            document.getElementById("classificacao").textContent =
+                classificacao;
+
+            document.getElementById("mensagem-resultado").textContent =
+                mensagem;
+
+
+            // =================================================
+            // EXIBIÇÃO DO RESULTADO
+            // =================================================
+
+            resultado.style.display = "block";
+
+            document.getElementById("acoes-avaliacao").style.display = "none";
+
+            resultado.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        }
+
+
+        // =====================================================
+        // LIMPAR RESPOSTAS
+        // =====================================================
+
+        function limparRespostas() {
+
+            if (avaliacaoFinalizada) {
+                return;
+            }
+
+            const confirmar = confirm(
+                "Deseja realmente apagar todas as respostas?"
+            );
+
+            if (!confirmar) {
+                return;
+            }
+
+            document.getElementById("formulario-avaliacao").reset();
+
+            document.querySelectorAll(".alternativa").forEach(elemento => {
+
+                elemento.classList.remove(
+                    "selecionada",
+                    "correta",
+                    "incorreta"
+                );
+
+            });
+
+            aviso.style.display = "none";
+
+            atualizarProgresso();
+
+        }
+
+
+        // =====================================================
+        // REFAZER A AVALIAÇÃO
+        // =====================================================
+
+        function refazerAvaliacao() {
+
+            const confirmar = confirm(
+                "Deseja iniciar novamente a avaliação? O resultado atual será reiniciado."
+            );
+
+            if (!confirmar) {
+                return;
+            }
+
+            avaliacaoFinalizada = false;
+
+            resultado.style.display = "none";
+
+            document.getElementById("acoes-avaliacao").style.display = "flex";
+
+            aviso.style.display = "none";
+
+            carregarQuestoes();
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+
+
+        // =====================================================
+        // EVENTOS
+        // =====================================================
+
+        botaoFinalizar.addEventListener(
+            "click",
+            finalizarAvaliacao
+        );
+
+        botaoLimpar.addEventListener(
+            "click",
+            limparRespostas
+        );
+
+        botaoRefazer.addEventListener(
+            "click",
+            refazerAvaliacao
+        );
+
+
+        // =====================================================
+        // INICIALIZAÇÃO
+        // =====================================================
+
+        carregarQuestoes();
+
+    </script>
+
+</body>
+
+</html>

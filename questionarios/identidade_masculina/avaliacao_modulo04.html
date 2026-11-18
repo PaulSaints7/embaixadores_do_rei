@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Avaliação — Módulo 04 | Homens Segundo o Coração de Deus</title>
+
+    <link rel="stylesheet" href="../../css/uhbb.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #F7F4EC;
+            color: #38271F;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .pagina-avaliacao {
+            max-width: 1050px;
+            margin: 45px auto;
+            padding: 0 20px 60px;
+        }
+
+        .cabecalho-avaliacao {
+            background: linear-gradient(135deg, #38271F, #18334D);
+            color: #F7F4EC;
+            padding: 45px 30px;
+            border-radius: 14px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .cabecalho-avaliacao .identificacao {
+            color: #D1B477;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 3px;
+            font-size: 14px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .cabecalho-avaliacao h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(24px, 4vw, 36px);
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+
+        .cabecalho-avaliacao p {
+            font-family: 'Libre Baskerville', serif;
+            color: #E9DFC9;
+            line-height: 1.8;
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .orientacoes {
+            background: #FFFFFF;
+            padding: 25px;
+            border-left: 5px solid #B08A48;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+
+        .orientacoes h2 {
+            font-family: 'Cinzel', serif;
+            color: #593B2B;
+            font-size: 19px;
+            margin-bottom: 12px;
+        }
+
+        .orientacoes ul {
+            padding-left: 22px;
+        }
+
+        .orientacoes li {
+            margin-bottom: 7px;
+        }
+
+        .painel-progresso {
+            background: #FFFFFF;
+            padding: 22px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            border: 1px solid #E9DFC9;
+        }
+
+        .informacoes-progresso {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+            font-weight: 700;
+            color: #593B2B;
+            font-size: 14px;
+        }
+
+        .barra-fundo {
+            width: 100%;
+            height: 12px;
+            background: #E9DFC9;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .barra-preenchimento {
+            width: 0%;
+            height: 100%;
+            background: #B08A48;
+            transition: width 0.3s ease;
+        }
+
+        .questao {
+            background: #FFFFFF;
+            border: 1px solid #E9DFC9;
+            border-radius: 10px;
+            padding: 28px;
+            margin-bottom: 22px;
+            box-shadow: 0 4px 12px rgba(56, 39, 31, 0.05);
+        }
+
+        .questao-cabecalho {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 18px;
+        }
+
+        .numero-questao {
+            font-family: 'Cinzel', serif;
+            color: #593B2B;
+            font-weight: 700;
+            font-size: 17px;
+        }
+
+        .tema-questao {
+            background: #E9DFC9;
+            color: #593B2B;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .questao h3 {
+            color: #38271F;
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .alternativas {
+            display: grid;
+            gap: 12px;
+        }
+
+        .alternativa {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            border: 1px solid #E9DFC9;
+            border-radius: 8px;
+            padding: 15px;
+            cursor: pointer;
+            transition: 0.2s;
+            line-height: 1.7;
+        }
+
+        .alternativa:hover {
+            border-color: #B08A48;
+            background: #F7F4EC;
+        }
+
+        .alternativa input {
+            margin-top: 5px;
+            accent-color: #593B2B;
+            flex-shrink: 0;
+        }
+
+        .alternativa.selecionada {
+            background: #F7F4EC;
+            border: 2px solid #B08A48;
+        }
+
+        .alternativa.correta {
+            background: #E7F3E8;
+            border: 2px solid #38834A;
+        }
+
+        .alternativa.incorreta {
+            background: #FBEAEA;
+            border: 2px solid #B94040;
+        }
+
+        .letra {
+            font-weight: 700;
+            color: #76523C;
+            min-width: 20px;
+        }
+
+        .explicacao {
+            display: none;
+            margin-top: 18px;
+            padding: 18px;
+            border-radius: 8px;
+            background: #F7F4EC;
+            border-left: 4px solid #B08A48;
+            line-height: 1.8;
+        }
+
+        .explicacao strong {
+            color: #593B2B;
+        }
+
+        .explicacao p {
+            margin-top: 8px;
+        }
+
+        .acoes {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 35px 0;
+        }
+
+        .botao {
+            border: none;
+            padding: 15px 25px;
+            border-radius: 7px;
+            background: #593B2B;
+            color: #FFFFFF;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            background: #B08A48;
+            color: #38271F;
+            transform: translateY(-2px);
+        }
+
+        .botao-secundario {
+            background: #18334D;
+        }
+
+        .resultado {
+            display: none;
+            background: #FFFFFF;
+            border: 2px solid #B08A48;
+            border-radius: 12px;
+            padding: 35px 25px;
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        .resultado h2 {
+            font-family: 'Cinzel', serif;
+            color: #593B2B;
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+
+        .pontuacao {
+            font-family: 'Cinzel', serif;
+            font-size: 55px;
+            font-weight: 700;
+            color: #B08A48;
+            margin: 15px 0;
+        }
+
+        .classificacao {
+            display: inline-block;
+            background: #E9DFC9;
+            padding: 12px 22px;
+            border-radius: 30px;
+            color: #593B2B;
+            font-weight: 700;
+            margin: 15px 0;
+        }
+
+        .estatisticas {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .estatistica {
+            background: #F7F4EC;
+            padding: 20px 10px;
+            border-radius: 8px;
+        }
+
+        .estatistica strong {
+            display: block;
+            color: #593B2B;
+            font-size: 25px;
+            margin-bottom: 5px;
+        }
+
+        .estatistica span {
+            font-size: 13px;
+        }
+
+        .mensagem-final {
+            font-family: 'Libre Baskerville', serif;
+            line-height: 1.9;
+            margin-top: 20px;
+        }
+
+        .rodape-avaliacao {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 25px;
+            border-top: 1px solid #D1B477;
+        }
+
+        .rodape-avaliacao a {
+            color: #593B2B;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .rodape-avaliacao a:hover {
+            color: #B08A48;
+        }
+
+        @media(max-width: 650px) {
+
+            .cabecalho-avaliacao {
+                padding: 35px 20px;
+            }
+
+            .questao {
+                padding: 20px;
+            }
+
+            .estatisticas {
+                grid-template-columns: 1fr;
+            }
+
+            .pontuacao {
+                font-size: 42px;
+            }
+
+        }
+
+        @media print {
+
+            body {
+                background: #FFFFFF !important;
+            }
+
+            .pagina-avaliacao {
+                max-width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            .cabecalho-avaliacao {
+                background: #FFFFFF !important;
+                color: #000000 !important;
+                border: 2px solid #593B2B;
+            }
+
+            .cabecalho-avaliacao p,
+            .cabecalho-avaliacao .identificacao {
+                color: #000000 !important;
+            }
+
+            .orientacoes,
+            .painel-progresso,
+            .acoes,
+            .rodape-avaliacao {
+                display: none !important;
+            }
+
+            .questao {
+                box-shadow: none;
+                break-inside: avoid;
+            }
+
+            .explicacao {
+                display: block !important;
+            }
+
+            .resultado {
+                display: block !important;
+                break-inside: avoid;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<main class="pagina-avaliacao">
+
+    <header class="cabecalho-avaliacao">
+
+        <span class="identificacao">
+            HOMENS SEGUNDO O CORAÇÃO DE DEUS
+        </span>
+
+        <h1>Avaliação do Módulo 04</h1>
+
+        <p>
+            Caráter, Honra e Integridade
+
+            <br><br>
+
+            Uma oportunidade para revisar os conhecimentos
+            adquiridos e refletir sobre os princípios bíblicos
+            que devem orientar a vida do homem cristão.
+        </p>
+
+    </header>
+
+
+    <section class="orientacoes">
+
+        <h2>Orientações da avaliação</h2>
+
+        <ul>
+
+            <li>A avaliação possui 20 questões.</li>
+
+            <li>Cada questão apresenta quatro alternativas.</li>
+
+            <li>Somente uma alternativa está correta.</li>
+
+            <li>Cada resposta correta vale 5 pontos.</li>
+
+            <li>A pontuação máxima é de 100 pontos.</li>
+
+            <li>É necessário responder a todas as questões para finalizar.</li>
+
+            <li>Após a conclusão, você poderá consultar as explicações e referências bíblicas.</li>
+
+        </ul>
+
+    </section>
+
+
+    <section class="painel-progresso">
+
+        <div class="informacoes-progresso">
+
+            <span id="contador-respostas">
+                Respondidas: 0 de 20
+            </span>
+
+            <span id="percentual-progresso">
+                0% concluído
+            </span>
+
+        </div>
+
+        <div class="barra-fundo">
+
+            <div
+                class="barra-preenchimento"
+                id="barra-progresso">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <form id="formulario-avaliacao">
+
+        <div id="lista-questoes"></div>
+
+        <div class="acoes">
+
+            <button
+                type="button"
+                class="botao"
+                id="botao-finalizar">
+
+                FINALIZAR AVALIAÇÃO
+
+            </button>
+
+            <button
+                type="button"
+                class="botao botao-secundario"
+                id="botao-refazer">
+
+                REFAZER AVALIAÇÃO
+
+            </button>
+
+        </div>
+
+    </form>
+
+
+    <section class="resultado" id="resultado">
+
+        <h2>Resultado da Avaliação</h2>
+
+        <p>Seu desempenho no Módulo 04 foi:</p>
+
+        <div class="pontuacao" id="pontuacao-final">
+            0/100
+        </div>
+
+        <div class="classificacao" id="classificacao">
+            Resultado
+        </div>
+
+        <div class="estatisticas">
+
+            <div class="estatistica">
+
+                <strong id="total-acertos">0</strong>
+
+                <span>Questões corretas</span>
+
+            </div>
+
+            <div class="estatistica">
+
+                <strong id="total-erros">0</strong>
+
+                <span>Questões incorretas</span>
+
+            </div>
+
+            <div class="estatistica">
+
+                <strong id="percentual-final">0%</strong>
+
+                <span>Aproveitamento</span>
+
+            </div>
+
+        </div>
+
+        <p class="mensagem-final" id="mensagem-final"></p>
+
+        <div class="acoes">
+
+            <button
+                class="botao"
+                type="button"
+                onclick="window.print()">
+
+                IMPRIMIR RESULTADO
+
+            </button>
+
+            <button
+                class="botao botao-secundario"
+                type="button"
+                id="botao-nova-tentativa">
+
+                TENTAR NOVAMENTE
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <footer class="rodape-avaliacao">
+
+        <p>
+            <a href="../../conteudos/identidade_masculina/modulo04/apresentacao.html">
+                ← VOLTAR AO MÓDULO 04
+            </a>
+        </p>
+
+        <p style="margin-top: 15px;">
+            Homens Segundo o Coração de Deus
+        </p>
+
+        <p>
+            Formando homens, fortalecendo famílias e servindo à Igreja de Cristo.
+        </p>
+
+    </footer>
+
+</main>
+
+
+<script>
+
+"use strict";
+
+
+// ======================================================
+// AVALIAÇÃO DO MÓDULO 04
+// CARÁTER, HONRA E INTEGRIDADE
+// ======================================================
+
+
+const questoes = [
+
+    {
+        tema: "Tema 01 — Caráter Cristão",
+
+        pergunta: "De acordo com os ensinamentos bíblicos, como devemos compreender a formação do caráter cristão?",
+
+        alternativas: [
+            "Como uma aparência de perfeição diante das outras pessoas.",
+            "Como um processo de transformação orientado pela Palavra de Deus.",
+            "Como uma característica que depende exclusivamente da personalidade de cada indivíduo.",
+            "Como uma condição alcançada somente por meio da participação em atividades religiosas."
+        ],
+
+        correta: 1,
+
+        explicacao: "A formação do caráter cristão envolve transformação da maneira de pensar e viver, conforme os princípios das Escrituras. Romanos 12:2 ensina sobre a renovação da mente e a transformação da vida.",
+
+        referencia: "Romanos 12:1-2."
+    },
+
+    {
+        tema: "Tema 01 — Caráter Cristão",
+
+        pergunta: "Qual alternativa apresenta características compatíveis com o caráter cristão?",
+
+        alternativas: [
+            "Orgulho, vaidade e busca constante por reconhecimento.",
+            "Autoritarismo, superioridade e domínio sobre os outros.",
+            "Integridade, humildade, amor e domínio próprio.",
+            "Indiferença, interesse pessoal e falta de responsabilidade."
+        ],
+
+        correta: 2,
+
+        explicacao: "O caráter cristão deve refletir valores ensinados nas Escrituras, como humildade, amor, mansidão, bondade e domínio próprio.",
+
+        referencia: "Gálatas 5:22-23; Colossenses 3:12-14."
+    },
+
+    {
+        tema: "Tema 02 — Honra",
+
+        pergunta: "Na perspectiva cristã, o que significa tratar as pessoas com honra?",
+
+        alternativas: [
+            "Demonstrar respeito, dignidade e consideração pelo próximo.",
+            "Reconhecer somente aqueles que possuem autoridade ou prestígio.",
+            "Exigir que todas as pessoas concordem conosco.",
+            "Buscar reconhecimento público por nossas atitudes."
+        ],
+
+        correta: 0,
+
+        explicacao: "A honra cristã envolve reconhecer o valor das pessoas e tratá-las com respeito. A Bíblia ensina a dar honra uns aos outros.",
+
+        referencia: "Romanos 12:10; 1 Pedro 2:17."
+    },
+
+    {
+        tema: "Tema 02 — Honra",
+
+        pergunta: "Segundo Romanos 12:10, qual atitude deve marcar o relacionamento entre os cristãos?",
+
+        alternativas: [
+            "Competição por posições de destaque.",
+            "Busca por vantagens pessoais.",
+            "Indiferença diante das necessidades dos irmãos.",
+            "Amor fraternal e preferência em honrar uns aos outros."
+        ],
+
+        correta: 3,
+
+        explicacao: "Paulo ensina que os cristãos devem desenvolver amor fraternal e demonstrar consideração mútua, procurando honrar uns aos outros.",
+
+        referencia: "Romanos 12:10."
+    },
+
+    {
+        tema: "Tema 03 — Integridade",
+
+        pergunta: "O que significa viver com integridade segundo os princípios bíblicos?",
+
+        alternativas: [
+            "Nunca enfrentar dificuldades ou cometer erros.",
+            "Manter coerência entre princípios, convicções e atitudes.",
+            "Construir uma imagem de perfeição diante da sociedade.",
+            "Evitar qualquer relacionamento com pessoas que pensam diferente."
+        ],
+
+        correta: 1,
+
+        explicacao: "Integridade não significa ausência absoluta de falhas. Significa viver com sinceridade e coerência, procurando permanecer fiel aos princípios corretos.",
+
+        referencia: "Provérbios 20:7; Salmo 15:1-2."
+    },
+
+    {
+        tema: "Tema 03 — Integridade",
+
+        pergunta: "Um homem encontra uma oportunidade de obter vantagem financeira por meio de uma atitude desonesta, mas decide recusá-la. Essa decisão demonstra:",
+
+        alternativas: [
+            "Falta de ambição e incapacidade de aproveitar oportunidades.",
+            "Medo de assumir responsabilidades.",
+            "Integridade e compromisso com os princípios corretos.",
+            "Desinteresse pelo próprio sustento."
+        ],
+
+        correta: 2,
+
+        explicacao: "A integridade exige que a pessoa permaneça fiel aos princípios corretos mesmo quando poderia obter vantagens por meio de uma atitude desonesta.",
+
+        referencia: "Provérbios 11:1; Provérbios 20:7."
+    },
+
+    {
+        tema: "Tema 03 — Integridade",
+
+        pergunta: "Qual atitude demonstra integridade quando alguém reconhece que cometeu um erro?",
+
+        alternativas: [
+            "Assumir a responsabilidade, reconhecer a falha e procurar corrigir suas consequências.",
+            "Esconder o ocorrido para preservar sua reputação.",
+            "Transferir a culpa para outras pessoas.",
+            "Ignorar o problema e esperar que desapareça."
+        ],
+
+        correta: 0,
+
+        explicacao: "A integridade envolve sinceridade e responsabilidade. A Bíblia ensina que aquele que confessa e deixa suas transgressões encontra misericórdia.",
+
+        referencia: "Provérbios 28:13; 1 João 1:9."
+    },
+
+    {
+        tema: "Tema 04 — Verdade e Honestidade",
+
+        pergunta: "Segundo Efésios 4:25, qual deve ser a atitude dos cristãos em relação à verdade?",
+
+        alternativas: [
+            "Utilizar a verdade somente quando houver vantagens.",
+            "Esconder informações sempre que isso for conveniente.",
+            "Falar a verdade apenas com pessoas próximas.",
+            "Deixar a mentira e falar a verdade uns com os outros."
+        ],
+
+        correta: 3,
+
+        explicacao: "Paulo orienta os cristãos a abandonar a mentira e falar a verdade, reconhecendo que pertencem uns aos outros como membros do mesmo corpo.",
+
+        referencia: "Efésios 4:25."
+    },
+
+    {
+        tema: "Tema 04 — Verdade e Honestidade",
+
+        pergunta: "Qual é a relação entre honestidade e transparência na vida cristã?",
+
+        alternativas: [
+            "São princípios que permitem esconder irregularidades quando ninguém percebe.",
+            "Envolvem sinceridade, responsabilidade e ausência de engano nas relações.",
+            "Exigem que todas as informações pessoais sejam divulgadas publicamente.",
+            "São importantes apenas para quem ocupa cargos de liderança."
+        ],
+
+        correta: 1,
+
+        explicacao: "Honestidade e transparência envolvem agir sem enganar e assumir responsabilidades. Isso não significa que uma pessoa precise expor todos os detalhes de sua vida particular.",
+
+        referencia: "2 Coríntios 13:8; Provérbios 11:1."
+    },
+
+    {
+        tema: "Tema 04 — Verdade e Honestidade",
+
+        pergunta: "De acordo com Mateus 5:37, como devem ser nossas palavras?",
+
+        alternativas: [
+            "Sempre acompanhadas de promessas grandiosas.",
+            "Adaptadas conforme a conveniência de cada situação.",
+            "Claras, verdadeiras e confiáveis.",
+            "Utilizadas para impressionar as outras pessoas."
+        ],
+
+        correta: 2,
+
+        explicacao: "Jesus ensina que nossa comunicação deve ser marcada pela sinceridade, de maneira que o sim seja sim e o não seja não.",
+
+        referencia: "Mateus 5:37."
+    },
+
+    {
+        tema: "Tema 05 — Coerência entre Fé e Atitudes",
+
+        pergunta: "Qual é o principal ensinamento de Tiago 1:22?",
+
+        alternativas: [
+            "Ser praticante da Palavra, e não apenas ouvinte.",
+            "Acumular conhecimentos bíblicos sem necessidade de aplicação.",
+            "Demonstrar conhecimento religioso por meio de discursos.",
+            "Evitar colocar em prática aquilo que exige mudanças pessoais."
+        ],
+
+        correta: 0,
+
+        explicacao: "Tiago ensina que o conhecimento da Palavra deve produzir obediência. A fé cristã precisa orientar a vida prática.",
+
+        referencia: "Tiago 1:22-25."
+    },
+
+    {
+        tema: "Tema 05 — Coerência entre Fé e Atitudes",
+
+        pergunta: "Qual afirmação expressa corretamente a relação entre salvação e boas obras?",
+
+        alternativas: [
+            "As boas obras são suficientes para conquistar a salvação.",
+            "A salvação depende exclusivamente da quantidade de boas ações.",
+            "A fé verdadeira dispensa qualquer transformação de comportamento.",
+            "A salvação é pela graça, mediante a fé, e as boas obras são frutos da vida transformada."
+        ],
+
+        correta: 3,
+
+        explicacao: "Efésios 2:8-10 ensina que somos salvos pela graça, mediante a fé, e não pelas obras. Entretanto, fomos criados em Cristo Jesus para as boas obras.",
+
+        referencia: "Efésios 2:8-10; Tiago 2:17."
+    },
+
+    {
+        tema: "Tema 05 — Coerência entre Fé e Atitudes",
+
+        pergunta: "Segundo Gálatas 5:22-23, o que caracteriza o fruto do Espírito?",
+
+        alternativas: [
+            "Prestígio, riqueza e reconhecimento público.",
+            "Amor, alegria, paz, longanimidade, benignidade, bondade, fidelidade, mansidão e domínio próprio.",
+            "Poder político, autoridade e superioridade.",
+            "Conhecimento intelectual sem transformação da conduta."
+        ],
+
+        correta: 1,
+
+        explicacao: "Paulo apresenta o fruto do Espírito como características que devem marcar a vida daqueles que são conduzidos pelo Espírito Santo.",
+
+        referencia: "Gálatas 5:22-23."
+    },
+
+    {
+        tema: "Tema 05 — Coerência entre Fé e Atitudes",
+
+        pergunta: "O que podemos aprender com a restauração de Pedro após negar Jesus?",
+
+        alternativas: [
+            "Que os erros não possuem consequências.",
+            "Que a fidelidade cristã depende exclusivamente da força humana.",
+            "Que Cristo pode restaurar aquele que reconhece sua falha e retorna ao seu chamado.",
+            "Que negar a fé é uma atitude sem importância."
+        ],
+
+        correta: 2,
+
+        explicacao: "Pedro negou Jesus, mas foi restaurado pelo Senhor e recebeu novamente a responsabilidade de cuidar de suas ovelhas. O episódio demonstra a graça e a restauração de Cristo.",
+
+        referencia: "Lucas 22:54-62; João 21:15-19."
+    },
+
+    {
+        tema: "Tema 06 — Testemunho Cristão",
+
+        pergunta: "Segundo Mateus 5:16, qual deve ser o resultado esperado das boas obras dos discípulos de Jesus?",
+
+        alternativas: [
+            "Que as pessoas glorifiquem o Pai celestial.",
+            "Que os discípulos recebam reconhecimento pessoal.",
+            "Que os cristãos sejam considerados superiores aos demais.",
+            "Que a fé seja utilizada para conquistar vantagens."
+        ],
+
+        correta: 0,
+
+        explicacao: "Jesus ensina que as boas obras devem ser visíveis de maneira que as pessoas glorifiquem a Deus, e não para alimentar a vaidade humana.",
+
+        referencia: "Mateus 5:16."
+    },
+
+    {
+        tema: "Tema 06 — Testemunho Cristão",
+
+        pergunta: "Por que o testemunho cristão deve começar dentro de casa?",
+
+        alternativas: [
+            "Porque a família deve obedecer sem questionar.",
+            "Porque somente os familiares precisam conhecer a fé.",
+            "Porque o comportamento público é menos importante que o familiar.",
+            "Porque a convivência familiar permite demonstrar diariamente amor, respeito e responsabilidade."
+        ],
+
+        correta: 3,
+
+        explicacao: "A família é um ambiente fundamental para a prática dos valores cristãos. A educação e o exemplo cotidiano participam da formação espiritual das próximas gerações.",
+
+        referencia: "Deuteronômio 6:6-7; Efésios 6:4."
+    },
+
+    {
+        tema: "Tema 06 — Testemunho Cristão",
+
+        pergunta: "De acordo com o ensino de Jesus em Marcos 10:43-45, como deve ser compreendida a verdadeira grandeza entre seus discípulos?",
+
+        alternativas: [
+            "Como capacidade de impor autoridade sobre os outros.",
+            "Como disposição para servir, seguindo o exemplo de Cristo.",
+            "Como conquista de posições de destaque.",
+            "Como superioridade sobre aqueles que possuem menos conhecimento."
+        ],
+
+        correta: 1,
+
+        explicacao: "Jesus ensinou que a verdadeira grandeza entre seus discípulos está relacionada ao serviço. Ele próprio apresentou sua vida como exemplo de serviço e entrega.",
+
+        referencia: "Marcos 10:43-45."
+    },
+
+    {
+        tema: "Tema 06 — Testemunho Cristão",
+
+        pergunta: "Qual princípio está presente em Provérbios 20:7?",
+
+        alternativas: [
+            "A riqueza material é a principal herança que um pai pode deixar.",
+            "O reconhecimento público determina o valor de uma pessoa.",
+            "A integridade de uma pessoa pode representar um exemplo valioso para seus descendentes.",
+            "Os filhos serão automaticamente perfeitos quando seus pais forem justos."
+        ],
+
+        correta: 2,
+
+        explicacao: "O texto apresenta o justo que anda em integridade e relaciona sua conduta à bênção de seus descendentes. Isso destaca a importância do exemplo transmitido às próximas gerações.",
+
+        referencia: "Provérbios 20:7."
+    },
+
+    {
+        tema: "Tema 06 — Testemunho Cristão",
+
+        pergunta: "O que caracteriza o testemunho de um homem cristão que reconhece suas próprias falhas?",
+
+        alternativas: [
+            "Reconhecer o erro, buscar o perdão de Deus e procurar corrigir sua conduta.",
+            "Esconder suas falhas para preservar uma imagem de perfeição.",
+            "Justificar seus erros com base nas atitudes de outras pessoas.",
+            "Afastar-se definitivamente de qualquer responsabilidade."
+        ],
+
+        correta: 0,
+
+        explicacao: "O cristão não é alguém que nunca falha. Ele precisa reconhecer seus pecados, buscar o perdão e continuar crescendo na fé.",
+
+        referencia: "1 João 1:8-9; Provérbios 28:13."
+    },
+
+    {
+        tema: "Tema 06 — Testemunho Cristão",
+
+        pergunta: "Quem é o modelo supremo de caráter para o homem cristão?",
+
+        alternativas: [
+            "Os homens mais influentes da sociedade.",
+            "Aqueles que alcançaram maior prestígio religioso.",
+            "Os líderes que possuem maior autoridade.",
+            "Jesus Cristo, por meio de seus ensinamentos e exemplo."
+        ],
+
+        correta: 3,
+
+        explicacao: "Jesus Cristo é o modelo supremo para seus discípulos. Sua vida revelou amor, humildade, fidelidade ao Pai, justiça e disposição para servir.",
+
+        referencia: "Filipenses 2:5-8; 1 Pedro 2:21-23."
+    },
+
+    {
+        tema: "Síntese do Módulo 04",
+
+        pergunta: "Qual alternativa melhor representa o princípio central do Módulo Caráter, Honra e Integridade?",
+
+        alternativas: [
+            "Construir uma reputação respeitável, independentemente das atitudes particulares.",
+            "Desenvolver uma vida fundamentada nas Escrituras, com coerência entre fé, palavras e atitudes.",
+            "Buscar reconhecimento por meio da aparência de espiritualidade.",
+            "Demonstrar autoridade sobre as pessoas como sinal de maturidade cristã."
+        ],
+
+        correta: 1,
+
+        explicacao: "O módulo apresenta o chamado para desenvolver caráter fundamentado nas Escrituras, agir com honra, permanecer íntegro e demonstrar coerência entre a fé professada e a vida cotidiana.",
+
+        referencia: "Provérbios 20:7; Tiago 1:22; Mateus 5:16."
+    }
+
+];
+
+
+// ======================================================
+// ELEMENTOS DA PÁGINA
+// ======================================================
+
+const listaQuestoes = document.getElementById("lista-questoes");
+
+const contadorRespostas = document.getElementById("contador-respostas");
+
+const percentualProgresso = document.getElementById("percentual-progresso");
+
+const barraProgresso = document.getElementById("barra-progresso");
+
+const botaoFinalizar = document.getElementById("botao-finalizar");
+
+const botaoRefazer = document.getElementById("botao-refazer");
+
+const botaoNovaTentativa = document.getElementById("botao-nova-tentativa");
+
+const resultado = document.getElementById("resultado");
+
+
+// ======================================================
+// GERAR QUESTÕES
+// ======================================================
+
+function carregarQuestoes() {
+
+    listaQuestoes.innerHTML = "";
+
+    resultado.style.display = "none";
+
+    questoes.forEach((questao, indice) => {
+
+        const numero = indice + 1;
+
+        const letras = ["A", "B", "C", "D"];
+
+        const alternativasHTML = questao.alternativas.map((alternativa, i) => {
+
+            return `
+
+                <label class="alternativa" data-indice="${i}">
+
+                    <input
+                        type="radio"
+                        name="questao${indice}"
+                        value="${i}"
+                    >
+
+                    <span class="letra">${letras[i]}.</span>
+
+                    <span>${alternativa}</span>
+
+                </label>
+
+            `;
+
+        }).join("");
+
+
+        const elemento = document.createElement("section");
+
+        elemento.className = "questao";
+
+        elemento.id = `questao-${indice}`;
+
+
+        elemento.innerHTML = `
+
+            <div class="questao-cabecalho">
+
+                <span class="numero-questao">
+                    QUESTÃO ${numero}
+                </span>
+
+                <span class="tema-questao">
+                    ${questao.tema}
+                </span>
+
+            </div>
+
+            <h3>${questao.pergunta}</h3>
+
+            <div class="alternativas">
+
+                ${alternativasHTML}
+
+            </div>
+
+            <div class="explicacao" id="explicacao-${indice}">
+
+                <strong>Explicação bíblica:</strong>
+
+                <p>${questao.explicacao}</p>
+
+                <p>
+                    <strong>Referência:</strong>
+                    ${questao.referencia}
+                </p>
+
+            </div>
+
+        `;
+
+
+        listaQuestoes.appendChild(elemento);
+
+    });
+
+
+    document.querySelectorAll(".alternativa input").forEach(input => {
+
+        input.addEventListener("change", () => {
+
+            const grupo = input.closest(".questao");
+
+            grupo.querySelectorAll(".alternativa").forEach(alternativa => {
+
+                alternativa.classList.remove("selecionada");
+
+            });
+
+            input.closest(".alternativa").classList.add("selecionada");
+
+            atualizarProgresso();
+
+        });
+
+    });
+
+
+    atualizarProgresso();
+
+}
+
+
+// ======================================================
+// ATUALIZAR PROGRESSO
+// ======================================================
+
+function atualizarProgresso() {
+
+    const respondidas = document.querySelectorAll(
+        '.questao input[type="radio"]:checked'
+    ).length;
+
+    const total = questoes.length;
+
+    const percentual = Math.round((respondidas / total) * 100);
+
+    contadorRespostas.textContent =
+        `Respondidas: ${respondidas} de ${total}`;
+
+    percentualProgresso.textContent =
+        `${percentual}% concluído`;
+
+    barraProgresso.style.width = `${percentual}%`;
+
+}
+
+
+// ======================================================
+// FINALIZAR A AVALIAÇÃO
+// ======================================================
+
+function finalizarAvaliacao() {
+
+    const respostas = [];
+
+    for (let i = 0; i < questoes.length; i++) {
+
+        const selecionada = document.querySelector(
+            `input[name="questao${i}"]:checked`
+        );
+
+        if (!selecionada) {
+
+            alert(
+                `Você ainda não respondeu à questão ${i + 1}.`
+            );
+
+            document.getElementById(`questao-${i}`).scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+            return;
+
+        }
+
+        respostas.push(Number(selecionada.value));
+
+    }
+
+
+    let acertos = 0;
+
+
+    questoes.forEach((questao, indice) => {
+
+        const respostaUsuario = respostas[indice];
+
+        const respostaCorreta = questao.correta;
+
+        const elementoQuestao = document.getElementById(
+            `questao-${indice}`
+        );
+
+        const alternativas = elementoQuestao.querySelectorAll(
+            ".alternativa"
+        );
+
+
+        alternativas.forEach((alternativa, indiceAlternativa) => {
+
+            const input = alternativa.querySelector("input");
+
+            input.disabled = true;
+
+            if (indiceAlternativa === respostaCorreta) {
+
+                alternativa.classList.add("correta");
+
+            }
+
+            if (
+                indiceAlternativa === respostaUsuario &&
+                respostaUsuario !== respostaCorreta
+            ) {
+
+                alternativa.classList.add("incorreta");
+
+            }
+
+        });
+
+
+        if (respostaUsuario === respostaCorreta) {
+
+            acertos++;
+
+        }
+
+
+        const explicacao = document.getElementById(
+            `explicacao-${indice}`
+        );
+
+        explicacao.style.display = "block";
+
+    });
+
+
+    const erros = questoes.length - acertos;
+
+    const pontos = acertos * 5;
+
+    const percentual = Math.round(
+        (acertos / questoes.length) * 100
+    );
+
+
+    apresentarResultado(acertos, erros, pontos, percentual);
+
+}
+
+
+// ======================================================
+// APRESENTAR RESULTADO
+// ======================================================
+
+function apresentarResultado(acertos, erros, pontos, percentual) {
+
+    let classificacao = "";
+
+    let mensagem = "";
+
+
+    if (percentual >= 90) {
+
+        classificacao = "EXCELENTE";
+
+        mensagem =
+            "Excelente resultado! Você demonstrou um ótimo domínio dos conteúdos estudados. Continue aprofundando seu conhecimento das Escrituras e procurando aplicar seus ensinamentos à vida cotidiana.";
+
+    }
+
+    else if (percentual >= 75) {
+
+        classificacao = "MUITO BOM";
+
+        mensagem =
+            "Muito bom! Você demonstrou boa compreensão dos princípios estudados. Continue crescendo no conhecimento bíblico e fortalecendo seu compromisso com uma vida cristã íntegra.";
+
+    }
+
+    else if (percentual >= 60) {
+
+        classificacao = "BOM";
+
+        mensagem =
+            "Bom trabalho! Você demonstrou compreensão de boa parte do conteúdo. Recomendamos revisar os temas em que encontrou dificuldades e continuar estudando.";
+
+    }
+
+    else if (percentual >= 40) {
+
+        classificacao = "EM DESENVOLVIMENTO";
+
+        mensagem =
+            "Você está em processo de aprendizagem. Revise os conteúdos do módulo, leia novamente as referências bíblicas e tente realizar a avaliação mais uma vez.";
+
+    }
+
+    else {
+
+        classificacao = "PRECISA REVISAR";
+
+        mensagem =
+            "Este resultado indica que é importante retomar os estudos. Leia novamente os seis temas, consulte as passagens bíblicas e procure compreender os princípios apresentados antes de refazer a avaliação.";
+
+    }
+
+
+    document.getElementById("pontuacao-final").textContent =
+        `${pontos}/100`;
+
+    document.getElementById("classificacao").textContent =
+        classificacao;
+
+    document.getElementById("total-acertos").textContent =
+        acertos;
+
+    document.getElementById("total-erros").textContent =
+        erros;
+
+    document.getElementById("percentual-final").textContent =
+        `${percentual}%`;
+
+    document.getElementById("mensagem-final").textContent =
+        mensagem;
+
+
+    resultado.style.display = "block";
+
+
+    resultado.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+
+    botaoFinalizar.disabled = true;
+
+    botaoFinalizar.style.opacity = "0.5";
+
+    botaoFinalizar.style.cursor = "not-allowed";
+
+}
+
+
+// ======================================================
+// REFAZER A AVALIAÇÃO
+// ======================================================
+
+function refazerAvaliacao() {
+
+    const confirmar = confirm(
+        "Deseja realmente refazer a avaliação? O resultado atual será reiniciado."
+    );
+
+    if (!confirmar) {
+
+        return;
+
+    }
+
+    botaoFinalizar.disabled = false;
+
+    botaoFinalizar.style.opacity = "1";
+
+    botaoFinalizar.style.cursor = "pointer";
+
+    carregarQuestoes();
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+
+// ======================================================
+// EVENTOS
+// ======================================================
+
+botaoFinalizar.addEventListener(
+    "click",
+    finalizarAvaliacao
+);
+
+botaoRefazer.addEventListener(
+    "click",
+    refazerAvaliacao
+);
+
+botaoNovaTentativa.addEventListener(
+    "click",
+    refazerAvaliacao
+);
+
+
+// ======================================================
+// INICIALIZAÇÃO
+// ======================================================
+
+carregarQuestoes();
+
+</script>
+
+</body>
+
+</html>

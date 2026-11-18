@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Avaliação do Módulo 06 | Homens Segundo o Coração de Deus</title>
+
+    <link rel="stylesheet" href="../../css/uhbb.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #E9DFC9;
+            font-family: 'Open Sans', sans-serif;
+            color: #38271F;
+        }
+
+        .container-avaliacao {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 35px 20px 60px;
+        }
+
+        .cabecalho-avaliacao {
+            background: linear-gradient(135deg, #38271F, #18334D);
+            color: #F7F4EC;
+            padding: 45px 30px;
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .cabecalho-avaliacao .identificacao {
+            color: #D1B477;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .cabecalho-avaliacao h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.7rem, 4vw, 2.6rem);
+            margin: 0 0 18px;
+            line-height: 1.4;
+        }
+
+        .cabecalho-avaliacao p {
+            color: #E9DFC9;
+            line-height: 1.7;
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .informacoes {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .info-card {
+            background: #F7F4EC;
+            padding: 18px 12px;
+            text-align: center;
+            border-radius: 8px;
+            border: 1px solid #D1B477;
+        }
+
+        .info-card strong {
+            display: block;
+            color: #593B2B;
+            font-family: 'Cinzel', serif;
+            font-size: 1.35rem;
+            margin-bottom: 5px;
+        }
+
+        .info-card span {
+            font-size: 0.8rem;
+            color: #76523C;
+        }
+
+        .progresso-container {
+            background: #F7F4EC;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        .progresso-texto {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            color: #593B2B;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        .barra-progresso {
+            height: 12px;
+            background: #E9DFC9;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .barra-preenchida {
+            width: 0%;
+            height: 100%;
+            background: #B08A48;
+            border-radius: 20px;
+            transition: width 0.3s ease;
+        }
+
+        .identificacao-aluno {
+            background: #F7F4EC;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        .identificacao-aluno h2 {
+            font-family: 'Cinzel', serif;
+            color: #593B2B;
+            font-size: 1.25rem;
+            margin-top: 0;
+        }
+
+        .campo-nome {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #D1B477;
+            border-radius: 5px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            margin-top: 10px;
+            background: white;
+        }
+
+        .questao {
+            background: #F7F4EC;
+            padding: 27px;
+            border-radius: 9px;
+            margin-bottom: 22px;
+            border: 1px solid #E0D5C0;
+            box-shadow: 0 3px 10px rgba(56,39,31,0.05);
+        }
+
+        .numero-questao {
+            display: inline-block;
+            background: #18334D;
+            color: #F7F4EC;
+            padding: 6px 13px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .questao h3 {
+            color: #38271F;
+            font-size: 1.08rem;
+            line-height: 1.7;
+            margin: 0 0 20px;
+        }
+
+        .alternativas {
+            display: grid;
+            gap: 11px;
+        }
+
+        .alternativa {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            background: white;
+            border: 1px solid #E0D5C0;
+            padding: 14px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            line-height: 1.6;
+            transition: 0.2s;
+        }
+
+        .alternativa:hover {
+            border-color: #B08A48;
+            background: #FBF8F1;
+        }
+
+        .alternativa input {
+            margin-top: 5px;
+            accent-color: #593B2B;
+            flex-shrink: 0;
+        }
+
+        .alternativa.selecionada {
+            border: 2px solid #B08A48;
+            background: #F1E8D7;
+        }
+
+        .alternativa.correta {
+            border: 2px solid #23834C;
+            background: #E5F4EA;
+        }
+
+        .alternativa.incorreta {
+            border: 2px solid #BD4141;
+            background: #FCEAEA;
+        }
+
+        .explicacao {
+            display: none;
+            padding: 17px;
+            margin-top: 17px;
+            border-radius: 6px;
+            line-height: 1.7;
+            background: #EAF0F4;
+            border-left: 4px solid #18334D;
+        }
+
+        .explicacao strong {
+            color: #18334D;
+        }
+
+        .explicacao p {
+            margin: 8px 0 0;
+        }
+
+        .botoes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+            justify-content: center;
+            margin: 35px 0;
+        }
+
+        .botao {
+            border: none;
+            padding: 15px 25px;
+            border-radius: 5px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .botao-principal {
+            background: #593B2B;
+            color: #F7F4EC;
+        }
+
+        .botao-principal:hover {
+            background: #18334D;
+        }
+
+        .botao-secundario {
+            background: #18334D;
+            color: #F7F4EC;
+        }
+
+        .botao-secundario:hover {
+            background: #294B65;
+        }
+
+        .botao-dourado {
+            background: #B08A48;
+            color: #38271F;
+        }
+
+        .botao-dourado:hover {
+            background: #D1B477;
+        }
+
+        .resultado {
+            display: none;
+            background: #F7F4EC;
+            padding: 35px;
+            border-radius: 12px;
+            margin-top: 35px;
+            text-align: center;
+            border: 2px solid #B08A48;
+        }
+
+        .resultado h2 {
+            font-family: 'Cinzel', serif;
+            color: #593B2B;
+            font-size: 1.8rem;
+        }
+
+        .pontuacao {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5rem;
+            color: #18334D;
+            margin: 15px 0;
+        }
+
+        .classificacao {
+            display: inline-block;
+            padding: 10px 22px;
+            border-radius: 30px;
+            background: #E9DFC9;
+            color: #593B2B;
+            font-weight: 700;
+            margin: 10px 0 20px;
+        }
+
+        .estatisticas {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin: 25px 0;
+        }
+
+        .estatistica {
+            background: #E9DFC9;
+            padding: 18px 10px;
+            border-radius: 7px;
+        }
+
+        .estatistica strong {
+            display: block;
+            font-size: 1.5rem;
+            color: #18334D;
+            margin-bottom: 5px;
+        }
+
+        .estatistica span {
+            font-size: 0.82rem;
+        }
+
+        .mensagem-resultado {
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 20px auto;
+        }
+
+        .aviso {
+            display: none;
+            background: #FCEAEA;
+            color: #8D2828;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .rodape-avaliacao {
+            text-align: center;
+            margin-top: 40px;
+            color: #76523C;
+            font-size: 0.85rem;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 700px) {
+            .container-avaliacao {
+                padding: 20px 12px 40px;
+            }
+
+            .cabecalho-avaliacao {
+                padding: 35px 20px;
+            }
+
+            .informacoes {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .questao {
+                padding: 20px 16px;
+            }
+
+            .estatisticas {
+                grid-template-columns: 1fr;
+            }
+
+            .botoes {
+                flex-direction: column;
+            }
+
+            .botao {
+                width: 100%;
+            }
+        }
+
+        @media print {
+            body {
+                background: white !important;
+            }
+
+            .container-avaliacao {
+                max-width: 100%;
+                padding: 0;
+            }
+
+            .cabecalho-avaliacao {
+                background: white !important;
+                color: #38271F !important;
+                border: 2px solid #593B2B;
+                box-shadow: none;
+            }
+
+            .cabecalho-avaliacao p {
+                color: #38271F !important;
+            }
+
+            .botoes,
+            .progresso-container,
+            .aviso {
+                display: none !important;
+            }
+
+            .questao {
+                break-inside: avoid;
+                box-shadow: none;
+            }
+
+            .alternativa {
+                break-inside: avoid;
+            }
+
+            .resultado {
+                display: block !important;
+                break-inside: avoid;
+            }
+
+            .explicacao {
+                display: block !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<main class="container-avaliacao">
+
+    <header class="cabecalho-avaliacao">
+
+        <div class="identificacao">
+            Área 01 • Identidade Masculina Cristã
+            <br>
+            Avaliação de Aprendizagem
+        </div>
+
+        <h1>Módulo 06<br>O Exemplo de Jesus Cristo</h1>
+
+        <p>
+            Esta avaliação tem como objetivo verificar a compreensão dos
+            ensinamentos bíblicos estudados nos seis temas do módulo,
+            especialmente a pessoa de Jesus Cristo, seu caráter, sua
+            obediência, seu amor, sua humildade e sua missão redentora.
+        </p>
+
+    </header>
+
+    <section class="informacoes">
+
+        <div class="info-card">
+            <strong>20</strong>
+            <span>Questões</span>
+        </div>
+
+        <div class="info-card">
+            <strong>5</strong>
+            <span>Pontos por questão</span>
+        </div>
+
+        <div class="info-card">
+            <strong>100</strong>
+            <span>Pontuação máxima</span>
+        </div>
+
+        <div class="info-card">
+            <strong>70%</strong>
+            <span>Referência de aproveitamento</span>
+        </div>
+
+    </section>
+
+    <section class="progresso-container">
+
+        <div class="progresso-texto">
+            <span>Progresso da avaliação</span>
+            <span id="contador">0 de 20 respondidas</span>
+        </div>
+
+        <div class="barra-progresso">
+            <div class="barra-preenchida" id="barra"></div>
+        </div>
+
+    </section>
+
+    <section class="identificacao-aluno">
+
+        <h2>Identificação do participante</h2>
+
+        <label for="nome">Nome completo:</label>
+
+        <input
+            type="text"
+            id="nome"
+            class="campo-nome"
+            placeholder="Digite seu nome"
+        >
+
+    </section>
+
+    <div class="aviso" id="aviso">
+        Atenção! Responda todas as 20 questões antes de finalizar a avaliação.
+    </div>
+
+    <form id="formAvaliacao">
+
+        <div id="questoes"></div>
+
+        <div class="botoes" id="botoesAvaliacao">
+
+            <button
+                type="button"
+                class="botao botao-principal"
+                onclick="finalizarAvaliacao()"
+            >
+                FINALIZAR AVALIAÇÃO
+            </button>
+
+            <button
+                type="button"
+                class="botao botao-dourado"
+                onclick="limparRespostas()"
+            >
+                LIMPAR RESPOSTAS
+            </button>
+
+            <a
+                href="../../conteudos/identidade_masculina/modulo06/apresentacao.html"
+                class="botao botao-secundario"
+            >
+                VOLTAR AO MÓDULO
+            </a>
+
+        </div>
+
+    </form>
+
+    <section class="resultado" id="resultado">
+
+        <h2>Resultado da Avaliação</h2>
+
+        <p id="nomeResultado"></p>
+
+        <div class="pontuacao" id="pontuacao">0/100</div>
+
+        <div class="classificacao" id="classificacao"></div>
+
+        <div class="estatisticas">
+
+            <div class="estatistica">
+                <strong id="acertos">0</strong>
+                <span>Questões corretas</span>
+            </div>
+
+            <div class="estatistica">
+                <strong id="erros">0</strong>
+                <span>Questões incorretas</span>
+            </div>
+
+            <div class="estatistica">
+                <strong id="percentual">0%</strong>
+                <span>Aproveitamento</span>
+            </div>
+
+        </div>
+
+        <p class="mensagem-resultado" id="mensagemResultado"></p>
+
+        <div class="botoes">
+
+            <button
+                type="button"
+                class="botao botao-principal"
+                onclick="window.print()"
+            >
+                IMPRIMIR RESULTADO
+            </button>
+
+            <button
+                type="button"
+                class="botao botao-dourado"
+                onclick="refazerAvaliacao()"
+            >
+                REFAZER AVALIAÇÃO
+            </button>
+
+            <a
+                href="../../conteudos/identidade_masculina/modulo06/apresentacao.html"
+                class="botao botao-secundario"
+            >
+                VOLTAR AO MÓDULO
+            </a>
+
+            <a
+                href="../../uhbb_psh.html"
+                class="botao botao-secundario"
+            >
+                PÁGINA PRINCIPAL
+            </a>
+
+        </div>
+
+    </section>
+
+    <footer class="rodape-avaliacao">
+
+        <p>
+            HOMENS SEGUNDO O CORAÇÃO DE DEUS
+            <br>
+            Formando homens, fortalecendo famílias e servindo à Igreja de Cristo.
+        </p>
+
+        <p>
+            “Olhando para Jesus, autor e consumador da fé.”
+            <br>
+            Hebreus 12:2
+        </p>
+
+    </footer>
+
+</main>
+
+<script>
+"use strict";
+
+// ======================================================
+// AVALIAÇÃO DO MÓDULO 06
+// O EXEMPLO DE JESUS CRISTO
+// 20 QUESTÕES - 5 PONTOS CADA
+// ======================================================
+
+const perguntas = [
+
+    {
+        pergunta: "Segundo João 1:1-14, quem é Jesus Cristo?",
+        alternativas: [
+            "Um profeta que recebeu autoridade humana.",
+            "Um mestre religioso criado por Deus.",
+            "O Verbo que estava com Deus e era Deus, e que se fez carne.",
+            "Um anjo enviado para ensinar a humanidade."
+        ],
+        correta: 2,
+        explicacao: "João apresenta Jesus como o Verbo eterno, que estava com Deus e era Deus. Na encarnação, o Verbo se fez carne e habitou entre nós.",
+        referencia: "João 1:1-14"
+    },
+
+    {
+        pergunta: "O que significa afirmar que Jesus é verdadeiro Deus e verdadeiro homem?",
+        alternativas: [
+            "Que Jesus deixou de ser Deus quando nasceu.",
+            "Que Jesus possuía natureza divina e assumiu verdadeira humanidade.",
+            "Que Jesus era apenas um homem com poderes especiais.",
+            "Que Jesus aparentava ser humano, mas não possuía corpo."
+        ],
+        correta: 1,
+        explicacao: "A fé cristã reconhece Jesus Cristo como o Filho de Deus encarnado, verdadeiro Deus e verdadeiro homem.",
+        referencia: "João 1:14; Filipenses 2:5-11; Colossenses 2:9"
+    },
+
+    {
+        pergunta: "De acordo com Lucas 2:52, o que aconteceu durante o crescimento de Jesus?",
+        alternativas: [
+            "Jesus cresceu em sabedoria, estatura e graça diante de Deus e dos homens.",
+            "Jesus deixou de precisar aprender e crescer.",
+            "Jesus viveu isolado de todas as pessoas.",
+            "Jesus recusou participar da vida familiar."
+        ],
+        correta: 0,
+        explicacao: "Lucas registra o desenvolvimento de Jesus em diferentes dimensões de sua humanidade, demonstrando que sua experiência humana foi real.",
+        referencia: "Lucas 2:52"
+    },
+
+    {
+        pergunta: "O que Hebreus 4:15 ensina sobre Jesus?",
+        alternativas: [
+            "Que Jesus nunca enfrentou tentações.",
+            "Que Jesus não conheceu o sofrimento humano.",
+            "Que Jesus pecou, mas depois se arrependeu.",
+            "Que Jesus foi tentado em todas as coisas, mas sem pecado."
+        ],
+        correta: 3,
+        explicacao: "Jesus experimentou a realidade das tentações e das limitações humanas, mas permaneceu absolutamente sem pecado.",
+        referencia: "Hebreus 4:14-16"
+    },
+
+    {
+        pergunta: "Qual era a atitude de Jesus em relação à vontade do Pai?",
+        alternativas: [
+            "Fazia somente aquilo que lhe proporcionava reconhecimento.",
+            "Buscava cumprir a vontade daquele que o enviou.",
+            "Evitava qualquer compromisso com sua missão.",
+            "Colocava seus interesses acima da vontade divina."
+        ],
+        correta: 1,
+        explicacao: "Jesus declarou que desceu do céu não para fazer sua própria vontade, mas a vontade daquele que o enviou.",
+        referencia: "João 6:38"
+    },
+
+    {
+        pergunta: "Segundo Marcos 1:35, qual hábito espiritual de Jesus é destacado?",
+        alternativas: [
+            "Afastar-se definitivamente dos discípulos.",
+            "Evitar momentos de silêncio.",
+            "Levantar-se de madrugada para orar em um lugar deserto.",
+            "Orar somente diante das multidões."
+        ],
+        correta: 2,
+        explicacao: "Jesus procurava momentos de recolhimento para orar, demonstrando a importância da comunhão com o Pai.",
+        referencia: "Marcos 1:35"
+    },
+
+    {
+        pergunta: "Em Lucas 6:12-13, o que Jesus fez antes de escolher os doze apóstolos?",
+        alternativas: [
+            "Passou a noite em oração a Deus.",
+            "Consultou os governantes de Jerusalém.",
+            "Escolheu os discípulos por popularidade.",
+            "Abandonou a decisão para evitar responsabilidades."
+        ],
+        correta: 0,
+        explicacao: "Jesus passou a noite em oração antes de escolher os doze apóstolos, demonstrando dependência do Pai em uma decisão importante.",
+        referencia: "Lucas 6:12-13"
+    },
+
+    {
+        pergunta: "O que aprendemos com a oração de Jesus no Getsêmani?",
+        alternativas: [
+            "Que devemos esconder de Deus nossas angústias.",
+            "Que a oração elimina automaticamente todas as dificuldades.",
+            "Que a vontade humana deve sempre prevalecer.",
+            "Que podemos expressar nossa angústia diante de Deus e nos submeter à sua vontade."
+        ],
+        correta: 3,
+        explicacao: "Jesus expressou sua profunda angústia, mas permaneceu obediente ao Pai: 'Não se faça a minha vontade, mas a tua'.",
+        referencia: "Lucas 22:39-46"
+    },
+
+    {
+        pergunta: "Qual característica do ministério de Jesus é destacada em Mateus 9:36?",
+        alternativas: [
+            "Indiferença diante das multidões.",
+            "Compaixão pelas pessoas aflitas e desamparadas.",
+            "Busca por prestígio religioso.",
+            "Desprezo pelos necessitados."
+        ],
+        correta: 1,
+        explicacao: "Jesus teve compaixão das multidões porque estavam aflitas e exaustas, como ovelhas sem pastor.",
+        referencia: "Mateus 9:36"
+    },
+
+    {
+        pergunta: "O que João 13:34 ensina sobre o amor cristão?",
+        alternativas: [
+            "Que devemos amar somente aqueles que concordam conosco.",
+            "Que o amor deve ser demonstrado apenas por palavras.",
+            "Que devemos amar uns aos outros como Jesus nos amou.",
+            "Que o amor é dispensável quando existe autoridade."
+        ],
+        correta: 2,
+        explicacao: "Jesus estabeleceu o amor demonstrado por Ele como referência para o relacionamento entre seus discípulos.",
+        referencia: "João 13:34-35"
+    },
+
+    {
+        pergunta: "O que o episódio de Jesus lavando os pés dos discípulos ensina?",
+        alternativas: [
+            "Que a verdadeira liderança cristã deve ser acompanhada de humildade e serviço.",
+            "Que os líderes devem evitar qualquer responsabilidade.",
+            "Que a autoridade deve ser exercida por meio da humilhação dos outros.",
+            "Que somente pessoas sem responsabilidades podem servir."
+        ],
+        correta: 0,
+        explicacao: "Ao lavar os pés dos discípulos, Jesus demonstrou que a verdadeira grandeza está associada ao serviço humilde.",
+        referencia: "João 13:1-17"
+    },
+
+    {
+        pergunta: "Segundo Mateus 20:25-28, como Jesus ensinou que seus discípulos deveriam exercer a grandeza?",
+        alternativas: [
+            "Dominando os demais para conquistar respeito.",
+            "Buscando posições de destaque.",
+            "Exigindo privilégios de todos.",
+            "Servindo aos outros, seguindo seu próprio exemplo."
+        ],
+        correta: 3,
+        explicacao: "Jesus ensinou que aquele que deseja ser grande deve servir, pois o próprio Filho do Homem veio para servir.",
+        referencia: "Mateus 20:25-28"
+    },
+
+    {
+        pergunta: "Qual ensinamento está presente em Filipenses 2:3-8?",
+        alternativas: [
+            "A busca pela superioridade pessoal.",
+            "A humildade, a consideração pelos outros e o exemplo de Cristo.",
+            "A rejeição de qualquer responsabilidade.",
+            "A valorização do orgulho como sinal de liderança."
+        ],
+        correta: 1,
+        explicacao: "Paulo ensina os cristãos a agirem com humildade e apresenta a humilhação e a obediência de Cristo como referência.",
+        referencia: "Filipenses 2:3-8"
+    },
+
+    {
+        pergunta: "O que a liderança servidora significa na vida do homem cristão?",
+        alternativas: [
+            "Abandonar toda responsabilidade familiar e social.",
+            "Permitir qualquer comportamento sem orientação.",
+            "Exercer responsabilidades com amor, justiça, humildade e compromisso com o bem dos outros.",
+            "Impor suas decisões por meio de ameaças."
+        ],
+        correta: 2,
+        explicacao: "A liderança servidora não elimina a autoridade, mas orienta seu exercício pelo amor, pela justiça, pelo cuidado e pela responsabilidade.",
+        referencia: "Marcos 10:42-45; 1 Pedro 5:2-3"
+    },
+
+    {
+        pergunta: "Qual foi a atitude de Jesus diante do sofrimento no Getsêmani?",
+        alternativas: [
+            "Expressou sua angústia em oração e permaneceu submisso à vontade do Pai.",
+            "Abandonou definitivamente sua missão.",
+            "Negou que estivesse sofrendo.",
+            "Procurou vingança contra seus perseguidores."
+        ],
+        correta: 0,
+        explicacao: "O relato do Getsêmani revela a profunda angústia de Jesus e sua submissão à vontade do Pai.",
+        referencia: "Lucas 22:39-46"
+    },
+
+    {
+        pergunta: "Segundo 1 Pedro 2:22, qual característica de Jesus é destacada?",
+        alternativas: [
+            "Que Ele evitava qualquer contato com pessoas pecadoras.",
+            "Que cometeu erros, mas procurou corrigi-los.",
+            "Que respondeu à injustiça com vingança.",
+            "Que não cometeu pecado e não havia engano em sua boca."
+        ],
+        correta: 3,
+        explicacao: "Pedro apresenta Jesus como aquele que não cometeu pecado e em cuja boca não se achou engano.",
+        referencia: "1 Pedro 2:21-23"
+    },
+
+    {
+        pergunta: "Qual é o significado central da morte de Jesus na cruz?",
+        alternativas: [
+            "Foi apenas o fim trágico de um mestre religioso.",
+            "Foi a entrega redentora de Cristo em favor dos pecadores.",
+            "Foi uma derrota definitiva de sua missão.",
+            "Foi um acontecimento sem relação com a salvação."
+        ],
+        correta: 1,
+        explicacao: "A morte de Cristo possui significado redentor. Ele morreu pelos pecadores, demonstrando o amor de Deus e realizando a obra da salvação.",
+        referencia: "Romanos 5:6-8; 1 Pedro 2:24"
+    },
+
+    {
+        pergunta: "O que diferencia a entrega de Jesus na cruz do serviço cristão cotidiano?",
+        alternativas: [
+            "Todo cristão pode realizar uma obra de salvação equivalente à de Jesus.",
+            "A cruz foi apenas um exemplo de coragem humana.",
+            "A entrega de Jesus foi uma obra redentora única, que não pode ser repetida pelos discípulos.",
+            "A morte de Jesus não possui significado especial."
+        ],
+        correta: 2,
+        explicacao: "A obra redentora de Cristo é única e suficiente. Os cristãos seguem seu exemplo de amor e fidelidade, mas não repetem sua obra salvadora.",
+        referencia: "Hebreus 9:24-28; 1 Pedro 2:24"
+    },
+
+    {
+        pergunta: "Qual é a importância da ressurreição de Jesus para a fé cristã?",
+        alternativas: [
+            "Confirma a vitória de Cristo sobre a morte e fundamenta a esperança cristã.",
+            "Demonstra que a morte venceu definitivamente.",
+            "Significa apenas que os discípulos mantiveram viva sua memória.",
+            "Não possui relação com a salvação."
+        ],
+        correta: 0,
+        explicacao: "A ressurreição é essencial à fé cristã. Paulo afirma que Cristo ressuscitou dentre os mortos e é as primícias dos que dormem.",
+        referencia: "1 Coríntios 15:12-22"
+    },
+
+    {
+        pergunta: "Segundo Hebreus 12:2, qual deve ser a referência do cristão em sua caminhada de fé?",
+        alternativas: [
+            "A aprovação de todas as pessoas.",
+            "A busca constante por prestígio.",
+            "A força e a capacidade exclusivamente humanas.",
+            "Jesus Cristo, autor e consumador da fé."
+        ],
+        correta: 3,
+        explicacao: "Hebreus orienta os cristãos a perseverarem olhando para Jesus, que suportou a cruz e está assentado à direita do trono de Deus.",
+        referencia: "Hebreus 12:1-3"
+    },
+
+    {
+        pergunta: "Qual atitude melhor representa o homem cristão que segue o exemplo de Jesus?",
+        alternativas: [
+            "Buscar poder e reconhecimento acima de tudo.",
+            "Viver com coragem, humildade, fidelidade a Deus e disposição para servir.",
+            "Evitar compromissos quando surgem dificuldades.",
+            "Utilizar sua autoridade para controlar e humilhar os outros."
+        ],
+        correta: 1,
+        explicacao: "O exemplo de Cristo inspira o homem cristão a viver com fidelidade, responsabilidade, coragem, humildade e amor ao próximo.",
+        referencia: "João 13:14-15; Filipenses 2:3-8; Hebreus 12:2"
+    }
+
+];
+
+// ======================================================
+// CONSTRUÇÃO DAS QUESTÕES
+// ======================================================
+
+const areaQuestoes = document.getElementById("questoes");
+
+perguntas.forEach((questao, indice) => {
+
+    const numero = indice + 1;
+
+    const alternativasHTML = questao.alternativas.map((alternativa, i) => {
+
+        const letra = String.fromCharCode(65 + i);
+
+        return `
+            <label class="alternativa" id="alternativa-${numero}-${i}">
+                <input
+                    type="radio"
+                    name="questao${numero}"
+                    value="${i}"
+                    onchange="atualizarProgresso()"
+                >
+                <span><strong>${letra})</strong> ${alternativa}</span>
+            </label>
+        `;
+
+    }).join("");
+
+    const elemento = document.createElement("section");
+
+    elemento.className = "questao";
+    elemento.id = `questao-${numero}`;
+
+    elemento.innerHTML = `
+        <span class="numero-questao">QUESTÃO ${String(numero).padStart(2, "0")}</span>
+
+        <h3>${questao.pergunta}</h3>
+
+        <div class="alternativas">
+            ${alternativasHTML}
+        </div>
+
+        <div class="explicacao" id="explicacao-${numero}">
+        </div>
+    `;
+
+    areaQuestoes.appendChild(elemento);
+
+});
+
+// ======================================================
+// PROGRESSO DA AVALIAÇÃO
+// ======================================================
+
+function atualizarProgresso() {
+
+    let respondidas = 0;
+
+    perguntas.forEach((questao, indice) => {
+
+        const numero = indice + 1;
+
+        if (document.querySelector(`input[name="questao${numero}"]:checked`)) {
+            respondidas++;
+        }
+
+    });
+
+    const percentual = (respondidas / perguntas.length) * 100;
+
+    document.getElementById("contador").textContent =
+        `${respondidas} de ${perguntas.length} respondidas`;
+
+    document.getElementById("barra").style.width =
+        `${percentual}%`;
+
+    document.querySelectorAll(".alternativa").forEach(elemento => {
+        elemento.classList.remove("selecionada");
+    });
+
+    document.querySelectorAll(".alternativa input:checked").forEach(input => {
+        input.closest(".alternativa").classList.add("selecionada");
+    });
+
+}
+
+// ======================================================
+// FINALIZAÇÃO E CORREÇÃO
+// ======================================================
+
+let avaliacaoFinalizada = false;
+
+function finalizarAvaliacao() {
+
+    if (avaliacaoFinalizada) {
+        return;
+    }
+
+    const nome = document.getElementById("nome").value.trim();
+
+    let respondidas = 0;
+
+    perguntas.forEach((questao, indice) => {
+
+        const numero = indice + 1;
+
+        if (document.querySelector(`input[name="questao${numero}"]:checked`)) {
+            respondidas++;
+        }
+
+    });
+
+    if (respondidas < perguntas.length) {
+
+        const aviso = document.getElementById("aviso");
+
+        aviso.style.display = "block";
+
+        aviso.textContent =
+            `Faltam ${perguntas.length - respondidas} questão(ões). Responda todas antes de finalizar.`;
+
+        aviso.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+
+        return;
+    }
+
+    document.getElementById("aviso").style.display = "none";
+
+    let acertos = 0;
+
+    perguntas.forEach((questao, indice) => {
+
+        const numero = indice + 1;
+
+        const resposta = document.querySelector(
+            `input[name="questao${numero}"]:checked`
+        );
+
+        const respostaEscolhida = Number(resposta.value);
+
+        const acertou = respostaEscolhida === questao.correta;
+
+        const alternativas = document.querySelectorAll(
+            `input[name="questao${numero}"]`
+        );
+
+        alternativas.forEach((input, i) => {
+
+            input.disabled = true;
+
+            const label = input.closest(".alternativa");
+
+            if (i === questao.correta) {
+                label.classList.add("correta");
+            }
+
+            if (i === respostaEscolhida && !acertou) {
+                label.classList.add("incorreta");
+            }
+
+        });
+
+        if (acertou) {
+            acertos++;
+        }
+
+        const letraCorreta = String.fromCharCode(65 + questao.correta);
+
+        const letraEscolhida = String.fromCharCode(65 + respostaEscolhida);
+
+        const explicacao = document.getElementById(
+            `explicacao-${numero}`
+        );
+
+        explicacao.innerHTML = `
+            <strong>${acertou ? "✓ Resposta correta!" : "✗ Resposta incorreta."}</strong>
+
+            <p>
+                <strong>Resposta correta:</strong> ${letraCorreta}
+            </p>
+
+            ${!acertou ? `
+                <p>
+                    <strong>Sua resposta:</strong> ${letraEscolhida}
+                </p>
+            ` : ""}
+
+            <p>
+                <strong>Explicação bíblica:</strong>
+                ${questao.explicacao}
+            </p>
+
+            <p>
+                <strong>Referência:</strong> ${questao.referencia}
+            </p>
+        `;
+
+        explicacao.style.display = "block";
+
+    });
+
+    avaliacaoFinalizada = true;
+
+    const erros = perguntas.length - acertos;
+
+    const pontos = acertos * 5;
+
+    const percentual = Math.round(
+        (acertos / perguntas.length) * 100
+    );
+
+    let classificacao = "";
+    let mensagem = "";
+
+    if (percentual >= 90) {
+
+        classificacao = "EXCELENTE";
+
+        mensagem =
+            "Excelente desempenho! Você demonstrou domínio muito bom dos conteúdos estudados. Continue aprofundando seu conhecimento bíblico e colocando os ensinamentos de Cristo em prática.";
+
+    } else if (percentual >= 70) {
+
+        classificacao = "MUITO BOM";
+
+        mensagem =
+            "Muito bom! Você alcançou o aproveitamento esperado. Continue estudando as Escrituras e fortalecendo sua compreensão sobre a pessoa e o exemplo de Jesus Cristo.";
+
+    } else if (percentual >= 50) {
+
+        classificacao = "EM DESENVOLVIMENTO";
+
+        mensagem =
+            "Você demonstrou compreensão parcial dos conteúdos. Recomendamos revisar os temas em que encontrou dificuldades e realizar novamente a avaliação.";
+
+    } else {
+
+        classificacao = "NECESSITA REFORÇO";
+
+        mensagem =
+            "É importante retomar os estudos do módulo com atenção. Leia novamente os seis temas, consulte as referências bíblicas e depois refaça a avaliação.";
+
+    }
+
+    document.getElementById("nomeResultado").textContent =
+        nome ? `Participante: ${nome}` : "Participante não identificado";
+
+    document.getElementById("pontuacao").textContent =
+        `${pontos}/100`;
+
+    document.getElementById("classificacao").textContent =
+        classificacao;
+
+    document.getElementById("acertos").textContent =
+        acertos;
+
+    document.getElementById("erros").textContent =
+        erros;
+
+    document.getElementById("percentual").textContent =
+        `${percentual}%`;
+
+    document.getElementById("mensagemResultado").textContent =
+        mensagem;
+
+    document.getElementById("resultado").style.display = "block";
+
+    document.getElementById("botoesAvaliacao").style.display = "none";
+
+    document.getElementById("resultado").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+}
+
+// ======================================================
+// LIMPAR RESPOSTAS
+// ======================================================
+
+function limparRespostas() {
+
+    if (avaliacaoFinalizada) {
+        return;
+    }
+
+    const confirmacao = confirm(
+        "Deseja realmente limpar todas as respostas?"
+    );
+
+    if (!confirmacao) {
+        return;
+    }
+
+    document.getElementById("formAvaliacao").reset();
+
+    document.querySelectorAll(".alternativa").forEach(elemento => {
+
+        elemento.classList.remove(
+            "selecionada",
+            "correta",
+            "incorreta"
+        );
+
+    });
+
+    document.querySelectorAll(".explicacao").forEach(elemento => {
+        elemento.style.display = "none";
+        elemento.innerHTML = "";
+    });
+
+    document.getElementById("aviso").style.display = "none";
+
+    atualizarProgresso();
+
+}
+
+// ======================================================
+// REFAZER A AVALIAÇÃO
+// ======================================================
+
+function refazerAvaliacao() {
+
+    const confirmacao = confirm(
+        "Deseja iniciar uma nova tentativa? O resultado atual será substituído."
+    );
+
+    if (!confirmacao) {
+        return;
+    }
+
+    window.location.reload();
+
+}
+
+</script>
+
+</body>
+</html>

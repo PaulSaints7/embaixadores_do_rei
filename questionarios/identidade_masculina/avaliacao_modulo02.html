@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Avaliação — Módulo 02 | Homens Segundo o Coração de Deus</title>
+
+    <link rel="stylesheet" href="../../css/uhbb.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Open+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --marrom: #593B2B;
+            --marrom-escuro: #38271F;
+            --marrom-medio: #76523C;
+            --azul: #18334D;
+            --azul-claro: #294B65;
+            --dourado: #B08A48;
+            --dourado-claro: #D1B477;
+            --bege: #E9DFC9;
+            --creme: #F7F4EC;
+            --branco: #FFFFFF;
+            --verde: #287A4D;
+            --vermelho: #A33B35;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--creme);
+            color: var(--marrom-escuro);
+            font-family: "Open Sans", sans-serif;
+            line-height: 1.7;
+        }
+
+        .cabecalho-avaliacao {
+            background: linear-gradient(
+                135deg,
+                var(--marrom-escuro),
+                var(--azul)
+            );
+            color: var(--creme);
+            padding: 55px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--dourado);
+        }
+
+        .cabecalho-avaliacao .identificacao {
+            color: var(--dourado-claro);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .cabecalho-avaliacao h1 {
+            font-family: "Cinzel", serif;
+            font-size: clamp(1.7rem, 4vw, 2.7rem);
+            margin: 15px 0;
+        }
+
+        .cabecalho-avaliacao p {
+            max-width: 750px;
+            margin: auto;
+            color: #E9DFC9;
+        }
+
+        .conteudo {
+            width: min(100% - 35px, 950px);
+            margin: 40px auto;
+        }
+
+        .painel-informacoes {
+            background: var(--branco);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 5px solid var(--dourado);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+            margin-bottom: 30px;
+        }
+
+        .painel-informacoes h2 {
+            font-family: "Cinzel", serif;
+            color: var(--azul);
+            margin-top: 0;
+        }
+
+        .dados-avaliacao {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .dado {
+            background: var(--creme);
+            padding: 13px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .dado strong {
+            display: block;
+            color: var(--marrom);
+            font-size: 1.3rem;
+        }
+
+        .progresso-container {
+            background: var(--branco);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+
+        .progresso-texto {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-weight: 700;
+            color: var(--azul);
+        }
+
+        .barra-fundo {
+            height: 12px;
+            background: var(--bege);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .barra-progresso {
+            width: 0%;
+            height: 100%;
+            background: var(--dourado);
+            transition: width 0.3s ease;
+        }
+
+        .questao {
+            background: var(--branco);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 22px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border-top: 3px solid var(--dourado);
+        }
+
+        .questao .tema {
+            color: var(--marrom-medio);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .questao h3 {
+            color: var(--azul);
+            font-size: 1.08rem;
+            margin: 12px 0 20px;
+        }
+
+        .alternativa {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            background: var(--creme);
+            border: 2px solid transparent;
+            padding: 13px 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .alternativa:hover {
+            border-color: var(--dourado);
+        }
+
+        .alternativa input {
+            margin-top: 6px;
+            accent-color: var(--marrom);
+        }
+
+        .alternativa.selecionada {
+            border-color: var(--dourado);
+            background: #F1E8D6;
+        }
+
+        .alternativa.correta {
+            border-color: var(--verde);
+            background: #E5F3E9;
+        }
+
+        .alternativa.incorreta {
+            border-color: var(--vermelho);
+            background: #F9E8E6;
+        }
+
+        .botoes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin: 35px 0;
+        }
+
+        .botao {
+            border: none;
+            border-radius: 7px;
+            padding: 14px 24px;
+            font-family: "Open Sans", sans-serif;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.2s;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .botao:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.08);
+        }
+
+        .botao-principal {
+            background: var(--azul);
+            color: white;
+        }
+
+        .botao-secundario {
+            background: var(--dourado);
+            color: var(--marrom-escuro);
+        }
+
+        .botao-voltar {
+            background: var(--marrom);
+            color: white;
+        }
+
+        #resultado {
+            display: none;
+            background: var(--branco);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 35px 0;
+            border-top: 5px solid var(--dourado);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+        }
+
+        #resultado h2 {
+            font-family: "Cinzel", serif;
+            color: var(--azul);
+            text-align: center;
+        }
+
+        .nota-final {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--marrom);
+            margin: 15px 0;
+        }
+
+        .classificacao {
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--verde);
+        }
+
+        .resumo-resultado {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 12px;
+            margin: 25px 0;
+        }
+
+        .resumo-item {
+            background: var(--creme);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .resumo-item strong {
+            display: block;
+            font-size: 1.5rem;
+            color: var(--azul);
+        }
+
+        .explicacao {
+            margin-top: 20px;
+            padding: 18px;
+            border-left: 4px solid var(--dourado);
+            background: var(--creme);
+            border-radius: 5px;
+        }
+
+        .explicacao h4 {
+            color: var(--azul);
+            margin: 0 0 8px;
+        }
+
+        .referencia {
+            display: block;
+            color: var(--marrom);
+            font-weight: 700;
+            margin-top: 8px;
+        }
+
+        .mensagem-final {
+            background: var(--azul);
+            color: var(--creme);
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .mensagem-final p {
+            margin: 5px 0;
+        }
+
+        .rodape {
+            background: var(--marrom-escuro);
+            color: var(--bege);
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .rodape strong {
+            color: var(--dourado-claro);
+        }
+
+        @media (max-width: 600px) {
+            .cabecalho-avaliacao {
+                padding: 40px 18px;
+            }
+
+            .questao {
+                padding: 20px 16px;
+            }
+
+            .botoes {
+                flex-direction: column;
+            }
+
+            .botao {
+                width: 100%;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .cabecalho-avaliacao {
+                background: white;
+                color: black;
+                border-bottom: 2px solid black;
+                padding: 20px;
+            }
+
+            .cabecalho-avaliacao .identificacao,
+            .cabecalho-avaliacao p {
+                color: black;
+            }
+
+            .progresso-container,
+            .botoes,
+            .alternativa input {
+                display: none !important;
+            }
+
+            .questao,
+            #resultado,
+            .painel-informacoes {
+                box-shadow: none;
+                break-inside: avoid;
+            }
+
+            #resultado {
+                display: block !important;
+            }
+
+            .rodape {
+                background: white;
+                color: black;
+                border-top: 1px solid black;
+            }
+
+            .rodape strong {
+                color: black;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="cabecalho-avaliacao">
+
+        <div class="identificacao">
+            Homens Segundo o Coração de Deus
+        </div>
+
+        <h1>Avaliação do Módulo 02</h1>
+
+        <p>
+            A Criação e a Identidade Humana
+        </p>
+
+    </header>
+
+
+    <main class="conteudo">
+
+        <section class="painel-informacoes">
+
+            <h2>Conhecimento e reflexão bíblica</h2>
+
+            <p>
+                Esta avaliação tem como objetivo verificar a compreensão
+                dos conteúdos estudados no Módulo 02, considerando o
+                testemunho das Escrituras Sagradas sobre a criação,
+                a identidade e a vocação humana.
+            </p>
+
+            <p>
+                Leia atentamente cada questão e escolha apenas uma
+                alternativa. Ao concluir, você receberá o resultado
+                acompanhado de explicações e referências bíblicas.
+            </p>
+
+            <div class="dados-avaliacao">
+
+                <div class="dado">
+                    <strong>20</strong>
+                    Questões
+                </div>
+
+                <div class="dado">
+                    <strong>4</strong>
+                    Alternativas
+                </div>
+
+                <div class="dado">
+                    <strong>100</strong>
+                    Pontos possíveis
+                </div>
+
+                <div class="dado">
+                    <strong>5</strong>
+                    Pontos por questão
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="progresso-container">
+
+            <div class="progresso-texto">
+
+                <span>Progresso da avaliação</span>
+
+                <span id="contador">0 de 20 respondidas</span>
+
+            </div>
+
+            <div class="barra-fundo">
+
+                <div class="barra-progresso" id="barra-progresso"></div>
+
+            </div>
+
+        </section>
+
+
+        <form id="formulario-avaliacao">
+
+            <div id="lista-questoes"></div>
+
+            <div class="botoes">
+
+                <button type="button"
+                    class="botao botao-principal"
+                    id="botao-finalizar">
+
+                    FINALIZAR AVALIAÇÃO
+
+                </button>
+
+                <button type="button"
+                    class="botao botao-secundario"
+                    id="botao-limpar">
+
+                    LIMPAR RESPOSTAS
+
+                </button>
+
+            </div>
+
+        </form>
+
+
+        <section id="resultado">
+
+            <h2>Resultado da Avaliação</h2>
+
+            <div class="nota-final" id="nota-final">
+                0%
+            </div>
+
+            <div class="classificacao" id="classificacao"></div>
+
+            <div class="resumo-resultado">
+
+                <div class="resumo-item">
+                    <strong id="total-acertos">0</strong>
+                    Acertos
+                </div>
+
+                <div class="resumo-item">
+                    <strong id="total-erros">0</strong>
+                    Erros
+                </div>
+
+                <div class="resumo-item">
+                    <strong id="total-pontos">0</strong>
+                    Pontos
+                </div>
+
+                <div class="resumo-item">
+                    <strong id="total-percentual">0%</strong>
+                    Aproveitamento
+                </div>
+
+            </div>
+
+            <h3>Correção comentada</h3>
+
+            <p>
+                A seguir, você poderá revisar as respostas e compreender
+                os fundamentos bíblicos de cada questão.
+            </p>
+
+            <div id="revisao"></div>
+
+            <div class="mensagem-final">
+
+                <p><strong>Continue crescendo no conhecimento da Palavra!</strong></p>
+
+                <p>
+                    O estudo das Escrituras deve produzir conhecimento,
+                    transformação de caráter e uma vida dedicada a Deus.
+                </p>
+
+                <p><em>2 Timóteo 3:16-17</em></p>
+
+            </div>
+
+            <div class="botoes">
+
+                <button type="button"
+                    class="botao botao-principal"
+                    id="botao-refazer">
+
+                    REFAZER A AVALIAÇÃO
+
+                </button>
+
+                <button type="button"
+                    class="botao botao-secundario"
+                    id="botao-imprimir">
+
+                    IMPRIMIR RESULTADO
+
+                </button>
+
+                <a href="../../conteudos/identidade_masculina/modulo02/apresentacao.html"
+                    class="botao botao-voltar">
+
+                    VOLTAR AO MÓDULO 02
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="rodape">
+
+        <p>
+            <strong>HOMENS SEGUNDO O CORAÇÃO DE DEUS</strong>
+        </p>
+
+        <p>
+            Formando homens, fortalecendo famílias e servindo à Igreja de Cristo.
+        </p>
+
+        <p>
+            Fundamentados nas Escrituras Sagradas.
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        "use strict";
+
+
+        // =====================================================
+        // AVALIAÇÃO DO MÓDULO 02
+        // A CRIAÇÃO E A IDENTIDADE HUMANA
+        // =====================================================
+
+
+        const questoes = [
+
+            // TEMA 01
+            {
+                tema: "Tema 01 — O Relato Bíblico da Criação do Ser Humano",
+
+                pergunta: "Segundo o relato bíblico de Gênesis, quem é o Criador de todas as coisas?",
+
+                alternativas: [
+                    "A humanidade, por meio de sua inteligência.",
+                    "Deus, que criou os céus e a terra.",
+                    "Os anjos, por determinação própria.",
+                    "A natureza, por um processo independente de Deus."
+                ],
+
+                correta: 1,
+
+                explicacao: "A Bíblia apresenta Deus como o Criador de todas as coisas. A existência do universo e da humanidade tem sua origem na ação criadora de Deus, e não em uma força independente dele.",
+
+                referencia: "Gênesis 1:1; Salmo 24:1; Apocalipse 4:11."
+            },
+
+            {
+                tema: "Tema 01 — O Relato Bíblico da Criação do Ser Humano",
+
+                pergunta: "O que significa afirmar que o ser humano foi criado à imagem e semelhança de Deus?",
+
+                alternativas: [
+                    "Que o ser humano possui a mesma natureza e os mesmos atributos de Deus.",
+                    "Que o ser humano é independente de seu Criador.",
+                    "Que o ser humano recebeu uma condição especial de dignidade e responsabilidade diante de Deus.",
+                    "Que somente algumas pessoas possuem valor diante de Deus."
+                ],
+
+                correta: 2,
+
+                explicacao: "Ser criado à imagem de Deus confere dignidade ao ser humano e está relacionado à sua capacidade de relacionamento, responsabilidade moral e representação do governo de Deus sobre a criação. Isso não significa que o homem seja igual a Deus em sua natureza ou atributos.",
+
+                referencia: "Gênesis 1:26-27; Salmo 8:4-6."
+            },
+
+            {
+                tema: "Tema 01 — O Relato Bíblico da Criação do Ser Humano",
+
+                pergunta: "Qual ensinamento encontramos no relato de Gênesis 2:7 sobre a formação do homem?",
+
+                alternativas: [
+                    "O homem surgiu por sua própria vontade.",
+                    "O homem foi formado do pó da terra e recebeu de Deus o fôlego de vida.",
+                    "O homem foi criado como um ser independente de Deus.",
+                    "O homem recebeu a vida por meio de outro ser humano."
+                ],
+
+                correta: 1,
+
+                explicacao: "Gênesis 2:7 apresenta o homem formado do pó da terra, recebendo de Deus o fôlego de vida. O texto destaca a dependência humana em relação ao Criador.",
+
+                referencia: "Gênesis 2:7; Atos 17:24-28."
+            },
+
+
+            // TEMA 02
+            {
+                tema: "Tema 02 — A Formação do Homem e a Dimensão Corporal da Existência",
+
+                pergunta: "De acordo com Gênesis 2:7, o que podemos compreender sobre a dimensão corporal do ser humano?",
+
+                alternativas: [
+                    "O corpo é uma prisão da qual o espírito precisa escapar.",
+                    "O corpo não possui importância para a vida espiritual.",
+                    "O corpo faz parte da criação de Deus e integra a existência humana.",
+                    "O corpo é resultado de uma criação independente de Deus."
+                ],
+
+                correta: 2,
+
+                explicacao: "O relato da formação do homem apresenta o corpo como parte da criação divina. A existência humana não deve ser compreendida desprezando a dimensão corporal.",
+
+                referencia: "Gênesis 2:7; Salmo 139:13-16."
+            },
+
+            {
+                tema: "Tema 02 — A Formação do Homem e a Dimensão Corporal da Existência",
+
+                pergunta: "Qual deve ser a atitude cristã em relação ao próprio corpo?",
+
+                alternativas: [
+                    "Desprezá-lo, pois somente a alma possui valor.",
+                    "Cuidar dele com responsabilidade, reconhecendo-o como parte da criação de Deus.",
+                    "Utilizá-lo sem considerar as consequências de suas atitudes.",
+                    "Considerá-lo superior à vida espiritual."
+                ],
+
+                correta: 1,
+
+                explicacao: "O cuidado com o corpo faz parte da responsabilidade cristã. A vida física deve ser tratada com dignidade, equilíbrio e responsabilidade, sem desprezar a dimensão espiritual.",
+
+                referencia: "1 Coríntios 6:19-20; 1 Timóteo 4:8."
+            },
+
+            {
+                tema: "Tema 02 — A Formação do Homem e a Dimensão Corporal da Existência",
+
+                pergunta: "O que a encarnação de Jesus Cristo nos ensina sobre a importância da existência corporal?",
+
+                alternativas: [
+                    "Que a existência corporal é incompatível com a santidade.",
+                    "Que Jesus apenas aparentou possuir um corpo humano.",
+                    "Que o corpo humano não possui importância para a fé cristã.",
+                    "Que o Filho de Deus assumiu verdadeiramente a natureza humana."
+                ],
+
+                correta: 3,
+
+                explicacao: "A encarnação demonstra que o Filho de Deus assumiu verdadeiramente a natureza humana. Isso impede que a fé cristã trate a existência corporal como algo sem valor.",
+
+                referencia: "João 1:14; Filipenses 2:5-8; Hebreus 2:14."
+            },
+
+
+            // TEMA 03
+            {
+                tema: "Tema 03 — A Dimensão Espiritual e Relacional do Ser Humano",
+
+                pergunta: "Qual é uma característica fundamental da dimensão espiritual do ser humano apresentada nas Escrituras?",
+
+                alternativas: [
+                    "A capacidade de viver completamente independente de Deus.",
+                    "A possibilidade de estabelecer relacionamento com Deus.",
+                    "A ausência de responsabilidade moral.",
+                    "A superioridade absoluta sobre todas as demais criaturas."
+                ],
+
+                correta: 1,
+
+                explicacao: "As Escrituras apresentam o ser humano como criatura que pode relacionar-se com Deus, adorá-lo, obedecer-lhe e viver em comunhão com ele.",
+
+                referencia: "Gênesis 1:26-27; João 4:23-24."
+            },
+
+            {
+                tema: "Tema 03 — A Dimensão Espiritual e Relacional do Ser Humano",
+
+                pergunta: "O que podemos compreender a partir de Gênesis 2:18, quando Deus afirma que não era bom que o homem estivesse só?",
+
+                alternativas: [
+                    "Que o ser humano foi criado para viver em isolamento.",
+                    "Que os relacionamentos humanos são desnecessários.",
+                    "Que a existência humana também envolve relacionamentos e convivência.",
+                    "Que somente o trabalho possui importância na vida humana."
+                ],
+
+                correta: 2,
+
+                explicacao: "Gênesis 2:18 apresenta a dimensão relacional da existência humana. O ser humano foi criado para viver relacionamentos, começando pela relação conjugal apresentada no contexto do texto.",
+
+                referencia: "Gênesis 2:18-24."
+            },
+
+            {
+                tema: "Tema 03 — A Dimensão Espiritual e Relacional do Ser Humano",
+
+                pergunta: "Qual atitude demonstra maturidade na dimensão relacional da vida cristã?",
+
+                alternativas: [
+                    "Evitar qualquer convivência com outras pessoas.",
+                    "Buscar relacionamentos fundamentados no amor, respeito, comunhão e serviço.",
+                    "Considerar os próprios interesses sempre superiores aos dos outros.",
+                    "Afastar-se da comunidade cristã."
+                ],
+
+                correta: 1,
+
+                explicacao: "A vida cristã envolve relacionamentos marcados pelo amor, pelo respeito e pelo serviço. A comunhão com outros cristãos faz parte da caminhada da Igreja.",
+
+                referencia: "João 13:34-35; Romanos 12:10; Hebreus 10:24-25."
+            },
+
+
+            // TEMA 04
+            {
+                tema: "Tema 04 — Homem e Mulher na Criação de Deus",
+
+                pergunta: "Segundo Gênesis 1:27, quem foi criado à imagem de Deus?",
+
+                alternativas: [
+                    "Somente o homem.",
+                    "Somente a mulher.",
+                    "O homem e a mulher.",
+                    "Somente aqueles que possuíam determinada posição social."
+                ],
+
+                correta: 2,
+
+                explicacao: "O texto afirma que Deus criou o ser humano à sua imagem e declara expressamente que os criou homem e mulher. Ambos possuem dignidade diante do Criador.",
+
+                referencia: "Gênesis 1:26-27."
+            },
+
+            {
+                tema: "Tema 04 — Homem e Mulher na Criação de Deus",
+
+                pergunta: "Qual princípio bíblico deve orientar o reconhecimento da dignidade do homem e da mulher?",
+
+                alternativas: [
+                    "A dignidade de uma pessoa depende de sua posição social.",
+                    "O valor humano é determinado pela força física.",
+                    "O homem possui valor diante de Deus, mas a mulher não.",
+                    "Homem e mulher possuem dignidade por terem sido criados à imagem de Deus."
+                ],
+
+                correta: 3,
+
+                explicacao: "A dignidade humana não depende de força, posição, riqueza ou capacidade. Homem e mulher são apresentados como criaturas de Deus, ambos portadores da imagem divina.",
+
+                referencia: "Gênesis 1:27; Gálatas 3:28."
+            },
+
+            {
+                tema: "Tema 04 — Homem e Mulher na Criação de Deus",
+
+                pergunta: "Qual deve ser a atitude de um homem cristão em relação à mulher?",
+
+                alternativas: [
+                    "Tratá-la com respeito, dignidade, consideração e amor.",
+                    "Considerá-la inferior em dignidade humana.",
+                    "Desprezar suas capacidades e responsabilidades.",
+                    "Entender que o respeito depende de sua posição familiar."
+                ],
+
+                correta: 0,
+
+                explicacao: "A dignidade humana exige respeito. A conduta cristã deve ser marcada pelo amor, pela honra e pela consideração ao próximo, inclusive nas relações entre homens e mulheres.",
+
+                referencia: "1 Pedro 3:7; Efésios 5:25; Romanos 12:10."
+            },
+
+
+            // TEMA 05
+            {
+                tema: "Tema 05 — A Liberdade Humana e os Limites Estabelecidos pelo Criador",
+
+                pergunta: "Em Gênesis 2:16-17, o que Deus estabeleceu ao apresentar ao homem uma ordem sobre a árvore do conhecimento do bem e do mal?",
+
+                alternativas: [
+                    "Que o homem não possuía liberdade para tomar decisões.",
+                    "Que a liberdade humana deveria ser exercida dentro de limites estabelecidos pelo Criador.",
+                    "Que o homem poderia fazer qualquer coisa sem consequências.",
+                    "Que a obediência não tinha importância na relação com Deus."
+                ],
+
+                correta: 1,
+
+                explicacao: "Deus concedeu ao homem liberdade para desfrutar do jardim, mas estabeleceu um limite específico. O texto mostra que liberdade e responsabilidade estão relacionadas.",
+
+                referencia: "Gênesis 2:16-17."
+            },
+
+            {
+                tema: "Tema 05 — A Liberdade Humana e os Limites Estabelecidos pelo Criador",
+
+                pergunta: "Qual é a relação entre liberdade e responsabilidade moral?",
+
+                alternativas: [
+                    "A liberdade elimina qualquer responsabilidade.",
+                    "A responsabilidade existe somente quando alguém é observado.",
+                    "As escolhas humanas possuem consequências e devem considerar a vontade de Deus.",
+                    "A liberdade permite que cada pessoa determine o que é certo e errado sem qualquer referência."
+                ],
+
+                correta: 2,
+
+                explicacao: "A liberdade humana não significa ausência de responsabilidade. As decisões devem ser tomadas considerando os princípios de Deus e as consequências morais das escolhas.",
+
+                referencia: "Gálatas 5:13; Romanos 14:12."
+            },
+
+            {
+                tema: "Tema 05 — A Liberdade Humana e os Limites Estabelecidos pelo Criador",
+
+                pergunta: "Segundo Gálatas 5:13, como o cristão deve utilizar sua liberdade?",
+
+                alternativas: [
+                    "Como oportunidade para servir uns aos outros pelo amor.",
+                    "Como justificativa para agir sem considerar o próximo.",
+                    "Como autorização para satisfazer qualquer desejo.",
+                    "Como motivo para rejeitar toda forma de responsabilidade."
+                ],
+
+                correta: 0,
+
+                explicacao: "Paulo ensina que a liberdade cristã não deve ser utilizada como oportunidade para a carne, mas como ocasião para servir uns aos outros pelo amor.",
+
+                referencia: "Gálatas 5:13-14."
+            },
+
+
+            // TEMA 06
+            {
+                tema: "Tema 06 — A Vocação Humana e o Propósito da Existência",
+
+                pergunta: "Segundo 1 Coríntios 10:31, qual deve ser o propósito que orienta as atividades da vida cristã?",
+
+                alternativas: [
+                    "Buscar reconhecimento pessoal acima de tudo.",
+                    "Conquistar riquezas como objetivo principal da existência.",
+                    "Viver exclusivamente para satisfazer os próprios desejos.",
+                    "Fazer todas as coisas para a glória de Deus."
+                ],
+
+                correta: 3,
+
+                explicacao: "A orientação de Paulo é abrangente: até mesmo as atividades comuns da vida devem ser realizadas para a glória de Deus.",
+
+                referencia: "1 Coríntios 10:31."
+            },
+
+            {
+                tema: "Tema 06 — A Vocação Humana e o Propósito da Existência",
+
+                pergunta: "Qual responsabilidade foi confiada ao ser humano no relato da criação?",
+
+                alternativas: [
+                    "Explorar a criação sem considerar suas consequências.",
+                    "Cuidar e exercer responsabilidade sobre a criação de Deus.",
+                    "Considerar a natureza uma propriedade sem valor.",
+                    "Abandonar o trabalho e a administração do mundo criado."
+                ],
+
+                correta: 1,
+
+                explicacao: "Deus confiou ao ser humano responsabilidades relacionadas ao cultivo e cuidado da criação. O domínio humano não deve ser entendido como autorização para destruição irresponsável.",
+
+                referencia: "Gênesis 1:26-28; Gênesis 2:15."
+            },
+
+            {
+                tema: "Tema 06 — A Vocação Humana e o Propósito da Existência",
+
+                pergunta: "De acordo com Colossenses 3:23-24, como o cristão deve realizar seu trabalho?",
+
+                alternativas: [
+                    "Com dedicação, como quem trabalha para o Senhor.",
+                    "Somente quando houver recompensa financeira imediata.",
+                    "Sem compromisso com a qualidade do que realiza.",
+                    "Buscando exclusivamente o reconhecimento das pessoas."
+                ],
+
+                correta: 0,
+
+                explicacao: "Paulo ensina que o trabalho deve ser realizado de coração, como para o Senhor. Essa orientação confere dignidade ao trabalho e destaca a responsabilidade cristã.",
+
+                referencia: "Colossenses 3:23-24."
+            },
+
+            {
+                tema: "Tema 06 — A Vocação Humana e o Propósito da Existência",
+
+                pergunta: "Como os dons e capacidades recebidos de Deus devem ser utilizados?",
+
+                alternativas: [
+                    "Somente para benefício individual.",
+                    "Para demonstrar superioridade sobre outras pessoas.",
+                    "Para servir, edificar outras pessoas e contribuir com a obra de Deus.",
+                    "Para evitar qualquer compromisso com a comunidade."
+                ],
+
+                correta: 2,
+
+                explicacao: "Os dons e capacidades devem ser utilizados com responsabilidade e espírito de serviço. Deus concede diferentes capacidades para o bem comum e a edificação da comunidade.",
+
+                referencia: "1 Pedro 4:10; 1 Coríntios 12:4-7."
+            },
+
+            {
+                tema: "Tema 06 — A Vocação Humana e o Propósito da Existência",
+
+                pergunta: "Qual afirmação resume adequadamente o propósito da existência humana segundo os princípios bíblicos estudados?",
+
+                alternativas: [
+                    "Viver sem reconhecer qualquer dependência de Deus.",
+                    "Buscar exclusivamente realizações materiais.",
+                    "Concentrar a existência apenas nos próprios interesses.",
+                    "Viver em relacionamento com Deus, glorificá-lo e servir ao próximo."
+                ],
+
+                correta: 3,
+
+                explicacao: "A existência humana encontra seu fundamento em Deus. A vida cristã envolve comunhão com o Criador, glorificação de seu nome e serviço ao próximo.",
+
+                referencia: "Isaías 43:7; Mateus 22:37-40; Colossenses 3:17."
+            }
+
+        ];
+
+
+        // =====================================================
+        // ELEMENTOS DA PÁGINA
+        // =====================================================
+
+        const listaQuestoes = document.getElementById("lista-questoes");
+
+        const contador = document.getElementById("contador");
+
+        const barraProgresso = document.getElementById("barra-progresso");
+
+        const formulario = document.getElementById("formulario-avaliacao");
+
+        const resultado = document.getElementById("resultado");
+
+
+        // =====================================================
+        // CONSTRUIR QUESTÕES
+        // =====================================================
+
+        function carregarQuestoes() {
+
+            listaQuestoes.innerHTML = "";
+
+            questoes.forEach(function (questao, indice) {
+
+                const numero = indice + 1;
+
+                const bloco = document.createElement("article");
+
+                bloco.className = "questao";
+
+                bloco.id = "questao-" + numero;
+
+                let html = `
+                    <div class="tema">${questao.tema}</div>
+
+                    <h3>
+                        ${numero}. ${questao.pergunta}
+                    </h3>
+                `;
+
+                questao.alternativas.forEach(function (alternativa, opcao) {
+
+                    const letra = String.fromCharCode(65 + opcao);
+
+                    html += `
+                        <label class="alternativa">
+
+                            <input
+                                type="radio"
+                                name="questao${numero}"
+                                value="${opcao}"
+                            >
+
+                            <span>
+                                <strong>${letra})</strong>
+                                ${alternativa}
+                            </span>
+
+                        </label>
+                    `;
+
+                });
+
+                bloco.innerHTML = html;
+
+                listaQuestoes.appendChild(bloco);
+
+            });
+
+            atualizarProgresso();
+
+            adicionarEventosAlternativas();
+
+        }
+
+
+        // =====================================================
+        // EVENTOS DAS ALTERNATIVAS
+        // =====================================================
+
+        function adicionarEventosAlternativas() {
+
+            const alternativas = document.querySelectorAll(".alternativa");
+
+            alternativas.forEach(function (alternativa) {
+
+                alternativa.addEventListener("click", function () {
+
+                    const grupo = alternativa.closest(".questao");
+
+                    grupo.querySelectorAll(".alternativa").forEach(function (item) {
+
+                        item.classList.remove("selecionada");
+
+                    });
+
+                    alternativa.classList.add("selecionada");
+
+                    atualizarProgresso();
+
+                });
+
+            });
+
+        }
+
+
+        // =====================================================
+        // ATUALIZAR PROGRESSO
+        // =====================================================
+
+        function atualizarProgresso() {
+
+            let respondidas = 0;
+
+            questoes.forEach(function (questao, indice) {
+
+                const numero = indice + 1;
+
+                const resposta = document.querySelector(
+                    `input[name="questao${numero}"]:checked`
+                );
+
+                if (resposta) {
+                    respondidas++;
+                }
+
+            });
+
+            contador.textContent =
+                respondidas + " de " + questoes.length + " respondidas";
+
+            const percentual =
+                (respondidas / questoes.length) * 100;
+
+            barraProgresso.style.width = percentual + "%";
+
+        }
+
+
+        // =====================================================
+        // FINALIZAR AVALIAÇÃO
+        // =====================================================
+
+        function finalizarAvaliacao() {
+
+            const respostas = [];
+
+            let respondidas = 0;
+
+            questoes.forEach(function (questao, indice) {
+
+                const numero = indice + 1;
+
+                const resposta = document.querySelector(
+                    `input[name="questao${numero}"]:checked`
+                );
+
+                if (resposta) {
+
+                    respostas.push(Number(resposta.value));
+
+                    respondidas++;
+
+                } else {
+
+                    respostas.push(null);
+
+                }
+
+            });
+
+
+            if (respondidas < questoes.length) {
+
+                alert(
+                    "Você ainda possui " +
+                    (questoes.length - respondidas) +
+                    " questão(ões) sem resposta. Complete todas antes de finalizar."
+                );
+
+                return;
+
+            }
+
+
+            let acertos = 0;
+
+            let erros = 0;
+
+            let pontos = 0;
+
+
+            questoes.forEach(function (questao, indice) {
+
+                if (respostas[indice] === questao.correta) {
+
+                    acertos++;
+
+                    pontos += 5;
+
+                } else {
+
+                    erros++;
+
+                }
+
+            });
+
+
+            const percentual = Math.round(
+                (acertos / questoes.length) * 100
+            );
+
+
+            let classificacao = "";
+
+            if (percentual >= 90) {
+
+                classificacao = "Excelente desempenho!";
+
+            } else if (percentual >= 75) {
+
+                classificacao = "Muito bom!";
+
+            } else if (percentual >= 60) {
+
+                classificacao = "Bom aproveitamento!";
+
+            } else if (percentual >= 40) {
+
+                classificacao = "Continue estudando!";
+
+            } else {
+
+                classificacao = "É hora de revisar o conteúdo!";
+
+            }
+
+
+            document.getElementById("nota-final").textContent =
+                percentual + "%";
+
+            document.getElementById("classificacao").textContent =
+                classificacao;
+
+            document.getElementById("total-acertos").textContent =
+                acertos;
+
+            document.getElementById("total-erros").textContent =
+                erros;
+
+            document.getElementById("total-pontos").textContent =
+                pontos;
+
+            document.getElementById("total-percentual").textContent =
+                percentual + "%";
+
+
+            gerarRevisao(respostas);
+
+
+            // Impedir alterações depois da finalização.
+
+            document.querySelectorAll("input[type='radio']").forEach(function (input) {
+
+                input.disabled = true;
+
+            });
+
+
+            document.getElementById("botao-finalizar").disabled = true;
+
+            resultado.style.display = "block";
+
+            resultado.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        }
+
+
+        // =====================================================
+        // GERAR CORREÇÃO COMENTADA
+        // =====================================================
+
+        function gerarRevisao(respostas) {
+
+            const revisao = document.getElementById("revisao");
+
+            revisao.innerHTML = "";
+
+
+            questoes.forEach(function (questao, indice) {
+
+                const numero = indice + 1;
+
+                const respostaUsuario = respostas[indice];
+
+                const acertou = respostaUsuario === questao.correta;
+
+                const letraCorreta = String.fromCharCode(
+                    65 + questao.correta
+                );
+
+                const letraUsuario = String.fromCharCode(
+                    65 + respostaUsuario
+                );
+
+
+                const bloco = document.createElement("div");
+
+                bloco.className = "explicacao";
+
+
+                bloco.innerHTML = `
+                    <h4>
+                        Questão ${numero} —
+                        ${acertou ? "Resposta correta" : "Resposta incorreta"}
+                    </h4>
+
+                    <p>
+                        <strong>Questão:</strong>
+                        ${questao.pergunta}
+                    </p>
+
+                    <p>
+                        <strong>Sua resposta:</strong>
+                        ${letraUsuario}) ${questao.alternativas[respostaUsuario]}
+                    </p>
+
+                    <p>
+                        <strong>Resposta correta:</strong>
+                        ${letraCorreta}) ${questao.alternativas[questao.correta]}
+                    </p>
+
+                    <p>
+                        ${questao.explicacao}
+                    </p>
+
+                    <span class="referencia">
+                        Referência bíblica: ${questao.referencia}
+                    </span>
+                `;
+
+
+                const alternativas = document.querySelectorAll(
+                    `input[name="questao${numero}"]`
+                );
+
+
+                alternativas.forEach(function (input) {
+
+                    const rotulo = input.closest(".alternativa");
+
+                    const valor = Number(input.value);
+
+                    if (valor === questao.correta) {
+
+                        rotulo.classList.add("correta");
+
+                    } else if (valor === respostaUsuario && !acertou) {
+
+                        rotulo.classList.add("incorreta");
+
+                    }
+
+                });
+
+
+                revisao.appendChild(bloco);
+
+            });
+
+        }
+
+
+        // =====================================================
+        // LIMPAR RESPOSTAS
+        // =====================================================
+
+        function limparRespostas() {
+
+            const confirmar = confirm(
+                "Deseja realmente limpar todas as respostas?"
+            );
+
+            if (!confirmar) return;
+
+            formulario.reset();
+
+            carregarQuestoes();
+
+            resultado.style.display = "none";
+
+            document.getElementById("botao-finalizar").disabled = false;
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+
+
+        // =====================================================
+        // REFAZER A AVALIAÇÃO
+        // =====================================================
+
+        function refazerAvaliacao() {
+
+            const confirmar = confirm(
+                "Deseja iniciar uma nova tentativa?"
+            );
+
+            if (!confirmar) return;
+
+            formulario.reset();
+
+            carregarQuestoes();
+
+            resultado.style.display = "none";
+
+            document.getElementById("botao-finalizar").disabled = false;
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+
+
+        // =====================================================
+        // IMPRESSÃO
+        // =====================================================
+
+        function imprimirResultado() {
+
+            window.print();
+
+        }
+
+
+        // =====================================================
+        // INICIALIZAÇÃO
+        // =====================================================
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            carregarQuestoes();
+
+            document.getElementById("botao-finalizar")
+                .addEventListener("click", finalizarAvaliacao);
+
+            document.getElementById("botao-limpar")
+                .addEventListener("click", limparRespostas);
+
+            document.getElementById("botao-refazer")
+                .addEventListener("click", refazerAvaliacao);
+
+            document.getElementById("botao-imprimir")
+                .addEventListener("click", imprimirResultado);
+
+        });
+
+    </script>
+
+</body>
+
+</html>
