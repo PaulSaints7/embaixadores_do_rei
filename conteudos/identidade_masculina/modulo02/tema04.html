@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tema 04 — Homem e Mulher na Criação de Deus</title>
+
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        :root {
+            --marrom: #593B2B;
+            --marrom-escuro: #38271F;
+            --marrom-medio: #76523C;
+            --azul: #18334D;
+            --azul-claro: #294B65;
+            --dourado: #B08A48;
+            --dourado-claro: #D1B477;
+            --bege: #E9DFC9;
+            --creme: #F7F4EC;
+            --texto: #39332D;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--creme);
+            color: var(--texto);
+            font-family: "Open Sans", sans-serif;
+            line-height: 1.8;
+        }
+
+        .topo-estudo {
+            background: linear-gradient(
+                135deg,
+                var(--marrom-escuro),
+                var(--azul)
+            );
+
+            color: white;
+            padding: 55px 20px;
+            text-align: center;
+        }
+
+        .topo-estudo .identificacao {
+            color: var(--dourado-claro);
+            font-size: 13px;
+            letter-spacing: 3px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .topo-estudo h1 {
+            font-family: "Cinzel", serif;
+            font-size: clamp(25px, 5vw, 42px);
+            margin: 18px auto;
+            max-width: 900px;
+            line-height: 1.3;
+        }
+
+        .topo-estudo p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: #E9DFC9;
+            font-size: 16px;
+        }
+
+        .navegacao-estudo {
+            background: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            border-bottom: 1px solid #ddd2bd;
+        }
+
+        .navegacao-estudo a {
+            color: var(--azul);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 9px 15px;
+            border-radius: 4px;
+        }
+
+        .navegacao-estudo a:hover {
+            background: var(--bege);
+        }
+
+        .conteudo {
+            max-width: 1000px;
+            margin: 45px auto;
+            padding: 0 22px;
+        }
+
+        .bloco {
+            background: white;
+            margin-bottom: 28px;
+            padding: 32px;
+            border-radius: 9px;
+            border-left: 5px solid var(--dourado);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .bloco h2 {
+            color: var(--azul);
+            font-family: "Cinzel", serif;
+            font-size: 23px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .bloco h3 {
+            color: var(--marrom);
+            font-family: "Libre Baskerville", serif;
+            font-size: 18px;
+            margin-top: 25px;
+        }
+
+        .bloco p {
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .referencia {
+            background: var(--bege);
+            border-left: 4px solid var(--dourado);
+            padding: 18px 22px;
+            margin: 22px 0;
+            border-radius: 4px;
+        }
+
+        .referencia strong {
+            color: var(--marrom-escuro);
+        }
+
+        .versiculo {
+            font-family: "Libre Baskerville", serif;
+            font-size: 17px;
+            color: var(--marrom-escuro);
+            font-style: italic;
+        }
+
+        .destaque {
+            background: #F2EEE4;
+            border-radius: 7px;
+            padding: 23px;
+            margin: 22px 0;
+        }
+
+        .destaque strong {
+            color: var(--azul);
+        }
+
+        .lista {
+            padding-left: 25px;
+        }
+
+        .lista li {
+            margin-bottom: 12px;
+        }
+
+        .aplicacao {
+            background: var(--azul);
+            color: white;
+            padding: 30px;
+            border-radius: 9px;
+            margin-bottom: 28px;
+        }
+
+        .aplicacao h2 {
+            color: var(--dourado-claro);
+            font-family: "Cinzel", serif;
+        }
+
+        .aplicacao li {
+            margin-bottom: 13px;
+        }
+
+        .perguntas {
+            background: white;
+            padding: 30px;
+            border-radius: 9px;
+            border: 1px solid #ddd2bd;
+        }
+
+        .perguntas h2 {
+            color: var(--azul);
+            font-family: "Cinzel", serif;
+        }
+
+        .perguntas ol {
+            padding-left: 24px;
+        }
+
+        .perguntas li {
+            margin-bottom: 15px;
+        }
+
+        .conclusao {
+            background: var(--marrom-escuro);
+            color: white;
+            text-align: center;
+            padding: 35px;
+            border-radius: 9px;
+            margin-top: 30px;
+        }
+
+        .conclusao h2 {
+            color: var(--dourado-claro);
+            font-family: "Cinzel", serif;
+        }
+
+        .rodape-estudo {
+            background: var(--marrom-escuro);
+            color: #E9DFC9;
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+            font-size: 13px;
+        }
+
+        .botoes-final {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 35px 0;
+        }
+
+        .botao {
+            display: inline-block;
+            background: var(--azul);
+            color: white;
+            text-decoration: none;
+            padding: 13px 20px;
+            border-radius: 5px;
+            font-size: 13px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            background: var(--marrom);
+        }
+
+        .botao-imprimir {
+            background: var(--dourado);
+            color: var(--marrom-escuro);
+            border: none;
+            cursor: pointer;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        @media (max-width: 650px) {
+
+            .bloco {
+                padding: 23px 19px;
+            }
+
+            .topo-estudo {
+                padding: 40px 18px;
+            }
+
+            .botoes-final {
+                flex-direction: column;
+            }
+
+            .botao {
+                text-align: center;
+            }
+
+        }
+
+        @media print {
+
+            body {
+                background: white;
+                color: black;
+                font-size: 11pt;
+            }
+
+            .topo-estudo {
+                background: white;
+                color: black;
+                padding: 20px;
+                border-bottom: 2px solid #333;
+            }
+
+            .topo-estudo .identificacao,
+            .topo-estudo p {
+                color: black;
+            }
+
+            .navegacao-estudo,
+            .botoes-final,
+            .rodape-estudo {
+                display: none;
+            }
+
+            .conteudo {
+                margin: 15px auto;
+                max-width: 100%;
+            }
+
+            .bloco,
+            .perguntas {
+                box-shadow: none;
+                border: 1px solid #ccc;
+                break-inside: avoid;
+            }
+
+            .aplicacao,
+            .conclusao {
+                background: white;
+                color: black;
+                border: 1px solid #999;
+            }
+
+            .aplicacao h2,
+            .conclusao h2 {
+                color: black;
+            }
+
+            .referencia {
+                background: white;
+                border: 1px solid #999;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+
+    <header class="topo-estudo">
+
+        <div class="identificacao">
+            Ambiente 01 — Identidade Masculina Cristã
+        </div>
+
+        <h1>Homem e Mulher na Criação de Deus</h1>
+
+        <p>
+            Módulo 02 — A Criação e a Identidade Humana
+            <br>
+            Tema 04
+        </p>
+
+    </header>
+
+
+    <!-- NAVEGAÇÃO -->
+
+    <nav class="navegacao-estudo">
+
+        <a href="apresentacao.html">APRESENTAÇÃO DO MÓDULO</a>
+
+        <a href="tema03.html">← TEMA ANTERIOR</a>
+
+        <a href="tema05.html">PRÓXIMO TEMA →</a>
+
+        <a href="../../../uhbb_psh.html">PÁGINA PRINCIPAL</a>
+
+    </nav>
+
+
+    <main class="conteudo">
+
+
+        <!-- INTRODUÇÃO -->
+
+        <section class="bloco">
+
+            <h2>1. Introdução ao Estudo</h2>
+
+            <p>
+                Ao apresentar a criação do ser humano, a Bíblia revela
+                que Deus criou a humanidade como homem e mulher.
+                Essa realidade faz parte do propósito do Criador e
+                está relacionada à dignidade, à identidade e à
+                vocação humana.
+            </p>
+
+            <p>
+                O relato bíblico não apresenta o homem e a mulher
+                como seres de valores diferentes, mas como criaturas
+                que compartilham a mesma dignidade diante de Deus.
+                Ambos foram criados à imagem e semelhança do Criador
+                e receberam responsabilidades relacionadas à vida,
+                à família e ao cuidado da criação.
+            </p>
+
+            <p>
+                Neste estudo, examinaremos o testemunho das Escrituras
+                sobre a criação do homem e da mulher, considerando
+                sua dignidade, sua condição humana e a importância
+                de relacionamentos fundamentados no respeito e no amor.
+            </p>
+
+            <div class="referencia">
+
+                <strong>Fundamento bíblico:</strong>
+
+                <p class="versiculo">
+                    "Criou Deus, pois, o homem à sua imagem,
+                    à imagem de Deus o criou; homem e mulher
+                    os criou."
+                </p>
+
+                <strong>Gênesis 1:27</strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- A CRIAÇÃO -->
+
+        <section class="bloco">
+
+            <h2>2. Homem e Mulher: Obra do Mesmo Criador</h2>
+
+            <p>
+                Gênesis 1 apresenta a criação do ser humano como
+                parte da obra criadora de Deus. O texto destaca
+                que a humanidade foi criada à imagem de Deus e
+                identifica expressamente homem e mulher como
+                participantes dessa condição.
+            </p>
+
+            <p>
+                Isso significa que a dignidade humana não depende
+                de força física, posição social, capacidade intelectual,
+                idade, condição econômica ou reconhecimento de outras
+                pessoas. O valor fundamental do ser humano está
+                relacionado ao fato de ter sido criado por Deus.
+            </p>
+
+            <h3>2.1. Uma mesma origem</h3>
+
+            <p>
+                Homem e mulher não são apresentados nas Escrituras
+                como criações de deuses diferentes ou como espécies
+                humanas distintas. Ambos pertencem à humanidade
+                criada pelo único Deus verdadeiro.
+            </p>
+
+            <p>
+                Essa origem comum estabelece uma importante
+                responsabilidade: reconhecer o valor do outro,
+                respeitar sua dignidade e rejeitar atitudes de
+                desprezo, exploração ou violência.
+            </p>
+
+            <h3>2.2. Uma mesma dignidade diante de Deus</h3>
+
+            <p>
+                Gênesis 1:27 afirma que tanto o homem quanto a mulher
+                foram criados à imagem de Deus. Portanto, nenhum
+                deles possui maior valor humano diante do Criador.
+            </p>
+
+            <p>
+                A dignidade da mulher não é concedida pelo homem,
+                assim como a dignidade do homem não depende da
+                aprovação da mulher. Ambos recebem seu valor
+                fundamental de Deus.
+            </p>
+
+            <div class="destaque">
+
+                <strong>Princípio fundamental:</strong>
+
+                <p>
+                    A criação bíblica ensina que homem e mulher
+                    compartilham a mesma dignidade como seres
+                    humanos criados à imagem de Deus.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- GÊNESIS 2 -->
+
+        <section class="bloco">
+
+            <h2>3. A Formação da Mulher e a Relação Humana</h2>
+
+            <p>
+                Gênesis 2 apresenta detalhes da formação do ser humano
+                e do estabelecimento das primeiras relações humanas.
+                O texto descreve a criação da mulher e a reação do
+                homem diante dessa realidade.
+            </p>
+
+            <div class="referencia">
+
+                <strong>Leitura bíblica: Gênesis 2:18-23</strong>
+
+                <p class="versiculo">
+                    "Disse mais o Senhor Deus: Não é bom que o homem
+                    esteja só; far-lhe-ei uma auxiliadora que lhe seja
+                    idônea."
+                </p>
+
+                <strong>Gênesis 2:18</strong>
+
+            </div>
+
+            <h3>3.1. A afirmação de que não é bom estar só</h3>
+
+            <p>
+                Em Gênesis 2:18, Deus declara que não era bom que
+                o homem estivesse só. Essa afirmação revela uma
+                dimensão importante da existência humana: fomos
+                criados para viver em relacionamento.
+            </p>
+
+            <p>
+                A vida humana envolve comunhão, convivência,
+                responsabilidade e relacionamentos. O ser humano
+                não foi criado para uma existência marcada pelo
+                isolamento absoluto.
+            </p>
+
+            <h3>3.2. A mulher como auxiliadora idônea</h3>
+
+            <p>
+                A expressão bíblica traduzida como "auxiliadora
+                idônea" apresenta a mulher como aquela que
+                corresponde ao homem e lhe oferece uma companhia
+                adequada.
+            </p>
+
+            <p>
+                A palavra "auxiliadora" não deve ser interpretada
+                automaticamente como inferioridade. Nas próprias
+                Escrituras, Deus é apresentado diversas vezes
+                como auxílio de seu povo.
+            </p>
+
+            <p>
+                O sentido do texto deve ser compreendido dentro
+                do contexto da criação e da relação estabelecida
+                por Deus entre homem e mulher.
+            </p>
+
+            <h3>3.3. A expressão de reconhecimento</h3>
+
+            <p>
+                Ao encontrar a mulher, o homem reconhece nela
+                alguém que compartilha sua própria natureza humana.
+                Gênesis 2:23 registra sua expressão de reconhecimento
+                e identificação.
+            </p>
+
+            <p>
+                O relato destaca uma relação de proximidade,
+                pertencimento e comunhão, e não uma relação
+                de hostilidade ou desprezo.
+            </p>
+
+        </section>
+
+
+        <!-- CASAMENTO -->
+
+        <section class="bloco">
+
+            <h2>4. O Casamento no Propósito da Criação</h2>
+
+            <p>
+                O relato de Gênesis apresenta o casamento como
+                parte da ordem estabelecida por Deus para a
+                humanidade.
+            </p>
+
+            <div class="referencia">
+
+                <strong>Gênesis 2:24</strong>
+
+                <p class="versiculo">
+                    "Por isso, deixa o homem pai e mãe e se une
+                    à sua mulher, tornando-se os dois uma só carne."
+                </p>
+
+            </div>
+
+            <p>
+                O texto apresenta três elementos importantes:
+            </p>
+
+            <ul class="lista">
+
+                <li>
+                    <strong>Deixar:</strong> o estabelecimento de
+                    uma nova unidade familiar, sem significar
+                    abandono das responsabilidades para com os pais.
+                </li>
+
+                <li>
+                    <strong>Unir-se:</strong> o compromisso de
+                    construir uma relação de aliança, fidelidade
+                    e responsabilidade.
+                </li>
+
+                <li>
+                    <strong>Uma só carne:</strong> a formação de
+                    uma unidade conjugal que envolve a dimensão
+                    física, afetiva e relacional da vida.
+                </li>
+
+            </ul>
+
+            <p>
+                Jesus reafirma esse princípio em Mateus 19:4-6,
+                relacionando o casamento ao propósito original
+                do Criador.
+            </p>
+
+            <p>
+                No ensino cristão, o casamento deve ser vivido
+                com fidelidade, respeito, compromisso e amor.
+                Não deve ser utilizado como instrumento de
+                dominação, violência ou exploração.
+            </p>
+
+        </section>
+
+
+        <!-- IGUALDADE E DIFERENÇAS -->
+
+        <section class="bloco">
+
+            <h2>5. Igualdade em Dignidade e Diferenças entre Homem e Mulher</h2>
+
+            <p>
+                Reconhecer a igualdade de dignidade entre homem
+                e mulher não significa afirmar que todas as
+                diferenças entre eles são inexistentes.
+            </p>
+
+            <p>
+                A própria narrativa bíblica identifica homem
+                e mulher como realidades distintas dentro da
+                criação humana. Entretanto, essa distinção
+                não autoriza concluir que um deles tenha
+                maior valor diante de Deus.
+            </p>
+
+            <h3>5.1. Igualdade em valor humano</h3>
+
+            <p>
+                Ambos são criaturas de Deus, ambos possuem
+                dignidade e ambos são responsáveis diante
+                do Criador.
+            </p>
+
+            <p>
+                O respeito à mulher não deve depender de sua
+                posição familiar, de sua condição social ou
+                de sua capacidade de atender às expectativas
+                de outras pessoas.
+            </p>
+
+            <h3>5.2. Diferença não significa inferioridade</h3>
+
+            <p>
+                A diferença entre homem e mulher não deve
+                ser transformada em motivo de desprezo,
+                humilhação ou competição.
+            </p>
+
+            <p>
+                O reconhecimento da diferença sexual também
+                não significa que todos os homens ou todas
+                as mulheres tenham exatamente as mesmas
+                características, habilidades, temperamentos
+                ou experiências.
+            </p>
+
+            <p>
+                Cada pessoa deve ser tratada com dignidade,
+                considerando sua individualidade e sua
+                responsabilidade diante de Deus.
+            </p>
+
+            <div class="destaque">
+
+                <strong>Uma distinção importante:</strong>
+
+                <p>
+                    Igualdade de dignidade não significa
+                    identidade absoluta de características.
+                    Diferença não significa superioridade
+                    ou inferioridade.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- NOVO TESTAMENTO -->
+
+        <section class="bloco">
+
+            <h2>6. A Dignidade da Mulher no Ensino do Novo Testamento</h2>
+
+            <p>
+                O Novo Testamento reafirma o valor das pessoas
+                diante de Deus e apresenta princípios que
+                devem orientar os relacionamentos cristãos.
+            </p>
+
+            <h3>6.1. A unidade em Cristo</h3>
+
+            <div class="referencia">
+
+                <strong>Gálatas 3:28</strong>
+
+                <p class="versiculo">
+                    "Dessarte, não pode haver judeu nem grego;
+                    nem escravo nem liberto; nem homem nem mulher;
+                    porque todos vós sois um em Cristo Jesus."
+                </p>
+
+            </div>
+
+            <p>
+                Nesse texto, Paulo ensina sobre a unidade dos
+                que pertencem a Cristo. As diferenças sociais,
+                étnicas e sexuais não estabelecem graus
+                diferentes de acesso à salvação.
+            </p>
+
+            <p>
+                Homens e mulheres são igualmente chamados à fé
+                em Cristo e participam da graça de Deus.
+            </p>
+
+            <h3>6.2. O amor e o respeito no casamento</h3>
+
+            <p>
+                Efésios 5:21-33 apresenta orientações sobre
+                os relacionamentos conjugais e deve ser lido
+                considerando seu contexto.
+            </p>
+
+            <p>
+                O ensino começa com a orientação de sujeição
+                mútua no temor de Cristo e apresenta o amor
+                sacrificial como referência para o relacionamento
+                conjugal.
+            </p>
+
+            <p>
+                O marido é chamado a amar sua esposa como
+                Cristo amou a Igreja, demonstrando um amor
+                que não procura explorar, humilhar ou destruir,
+                mas cuidar e servir.
+            </p>
+
+            <p>
+                O relacionamento cristão não pode justificar
+                violência doméstica, abuso, coerção ou
+                desrespeito à dignidade da outra pessoa.
+            </p>
+
+            <h3>6.3. Honra e consideração</h3>
+
+            <div class="referencia">
+
+                <strong>1 Pedro 3:7</strong>
+
+                <p class="versiculo">
+                    O apóstolo orienta os maridos a viverem
+                    com suas esposas com entendimento,
+                    concedendo-lhes honra.
+                </p>
+
+            </div>
+
+            <p>
+                O princípio da honra exige consideração,
+                respeito e responsabilidade. A fé cristã
+                não permite que o homem utilize sua condição
+                masculina como justificativa para tratar
+                a mulher com desprezo.
+            </p>
+
+        </section>
+
+
+        <!-- RESPONSABILIDADE DO HOMEM -->
+
+        <section class="bloco">
+
+            <h2>7. O Homem Cristão diante dessa Verdade</h2>
+
+            <p>
+                O estudo da criação do homem e da mulher
+                também conduz a uma reflexão sobre a maneira
+                como o homem cristão deve viver seus
+                relacionamentos.
+            </p>
+
+            <p>
+                A masculinidade cristã não deve ser construída
+                sobre a ideia de superioridade masculina,
+                agressividade ou domínio irresponsável.
+            </p>
+
+            <p>
+                O homem que deseja viver segundo os princípios
+                das Escrituras precisa reconhecer que a mulher
+                é uma pessoa criada por Deus, dotada de
+                dignidade e merecedora de respeito.
+            </p>
+
+            <h3>Atitudes que devem caracterizar o homem cristão:</h3>
+
+            <ul class="lista">
+
+                <li>
+                    Reconhecer a dignidade da mulher como
+                    criatura de Deus.
+                </li>
+
+                <li>
+                    Tratar mulheres com respeito, honestidade
+                    e consideração.
+                </li>
+
+                <li>
+                    Rejeitar a violência física, psicológica,
+                    verbal e moral.
+                </li>
+
+                <li>
+                    Valorizar a família e assumir suas
+                    responsabilidades.
+                </li>
+
+                <li>
+                    Cultivar relacionamentos fundamentados
+                    na fidelidade e no compromisso.
+                </li>
+
+                <li>
+                    Exercer liderança, quando lhe couber,
+                    com responsabilidade, amor e espírito
+                    de serviço.
+                </li>
+
+                <li>
+                    Reconhecer que todos prestaremos contas
+                    a Deus de nossas atitudes.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- APLICAÇÃO -->
+
+        <section class="aplicacao">
+
+            <h2>8. Aplicações para a Vida</h2>
+
+            <p>
+                A compreensão bíblica da criação do homem
+                e da mulher deve produzir mudanças concretas
+                na maneira como nos relacionamos.
+            </p>
+
+            <ul>
+
+                <li>
+                    <strong>Na família:</strong>
+                    cultivar respeito, diálogo, fidelidade
+                    e responsabilidade.
+                </li>
+
+                <li>
+                    <strong>No casamento:</strong>
+                    compreender o relacionamento como
+                    compromisso de amor, cuidado e aliança.
+                </li>
+
+                <li>
+                    <strong>Na Igreja:</strong>
+                    reconhecer a dignidade de todos os
+                    irmãos e irmãs em Cristo.
+                </li>
+
+                <li>
+                    <strong>Na sociedade:</strong>
+                    rejeitar atitudes de violência,
+                    exploração e discriminação.
+                </li>
+
+                <li>
+                    <strong>Na vida pessoal:</strong>
+                    avaliar as próprias atitudes e
+                    desenvolver um caráter coerente
+                    com os ensinamentos de Jesus.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- PERGUNTAS -->
+
+        <section class="perguntas">
+
+            <h2>9. Para Refletir</h2>
+
+            <ol>
+
+                <li>
+                    O que significa dizer que homem e mulher
+                    foram criados à imagem de Deus?
+                </li>
+
+                <li>
+                    Por que a diferença entre homem e mulher
+                    não significa que um tenha maior valor
+                    que o outro?
+                </li>
+
+                <li>
+                    O que significa a expressão bíblica
+                    "auxiliadora idônea" em Gênesis 2:18?
+                </li>
+
+                <li>
+                    Quais princípios de Gênesis 2:24 devem
+                    orientar a compreensão cristã do casamento?
+                </li>
+
+                <li>
+                    Como Gálatas 3:28 contribui para a
+                    compreensão da dignidade de homens
+                    e mulheres em Cristo?
+                </li>
+
+                <li>
+                    Que atitudes um homem cristão deve
+                    abandonar para construir relacionamentos
+                    fundamentados no respeito?
+                </li>
+
+                <li>
+                    Como podemos demonstrar, na prática,
+                    que reconhecemos a dignidade de cada
+                    pessoa criada por Deus?
+                </li>
+
+            </ol>
+
+        </section>
+
+
+        <!-- LEITURAS -->
+
+        <section class="bloco">
+
+            <h2>10. Leituras Bíblicas Complementares</h2>
+
+            <ul class="lista">
+
+                <li>Gênesis 1:26-28 — A criação da humanidade.</li>
+
+                <li>Gênesis 2:18-25 — A criação da mulher e o casamento.</li>
+
+                <li>Mateus 19:4-6 — Jesus reafirma o propósito do Criador.</li>
+
+                <li>Gálatas 3:26-29 — A unidade dos que pertencem a Cristo.</li>
+
+                <li>Efésios 5:21-33 — Orientações para a vida conjugal.</li>
+
+                <li>1 Pedro 3:7 — Honra e consideração no casamento.</li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- CONCLUSÃO -->
+
+        <section class="conclusao">
+
+            <h2>Conclusão</h2>
+
+            <p>
+                A Bíblia apresenta o homem e a mulher como
+                criaturas do mesmo Deus, participantes da
+                mesma dignidade humana e responsáveis diante
+                do Criador.
+            </p>
+
+            <p>
+                A masculinidade cristã não deve ser construída
+                sobre a desvalorização da mulher, mas sobre
+                o reconhecimento de que toda pessoa possui
+                valor diante de Deus.
+            </p>
+
+            <p>
+                O homem que deseja viver segundo o coração
+                de Deus precisa demonstrar, em suas atitudes,
+                o amor, a honra, o respeito e a responsabilidade
+                ensinados pelas Escrituras.
+            </p>
+
+            <p>
+                <strong>
+                    Ser homem segundo o coração de Deus é
+                    reconhecer o Criador, respeitar sua criação
+                    e viver de maneira digna diante dele.
+                </strong>
+            </p>
+
+        </section>
+
+
+        <!-- NAVEGAÇÃO FINAL -->
+
+        <div class="botoes-final">
+
+            <a href="tema03.html" class="botao">
+                ← TEMA ANTERIOR
+            </a>
+
+            <button
+                class="botao botao-imprimir"
+                onclick="window.print()">
+
+                IMPRIMIR ESTUDO
+
+            </button>
+
+            <a href="tema05.html" class="botao">
+                PRÓXIMO TEMA →
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <footer class="rodape-estudo">
+
+        <p>
+            HOMENS SEGUNDO O CORAÇÃO DE DEUS
+        </p>
+
+        <p>
+            Formando homens, fortalecendo famílias e
+            servindo à Igreja de Cristo.
+        </p>
+
+        <p>
+            Módulo 02 — A Criação e a Identidade Humana
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

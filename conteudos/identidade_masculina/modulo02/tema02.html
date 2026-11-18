@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Tema 02 - A Formação do Homem e a Dimensão Corporal da Existência. Módulo 02.">
+
+    <title>Tema 02 | A Formação do Homem e a Dimensão Corporal</title>
+
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --marrom-escuro: #38271F;
+            --marrom: #593B2B;
+            --marrom-medio: #76523C;
+            --azul: #18334D;
+            --azul-claro: #294B65;
+            --dourado: #B08A48;
+            --dourado-claro: #D1B477;
+            --bege: #E9DFC9;
+            --creme: #F7F4EC;
+            --branco: #FFFFFF;
+            --texto: #40372F;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--creme);
+            color: var(--texto);
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.85;
+        }
+
+        .estudo-container {
+            width: 100%;
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 30px 22px 70px;
+        }
+
+        .navegacao {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .navegacao a {
+            color: var(--azul);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .navegacao a:hover {
+            color: var(--dourado);
+        }
+
+        .cabecalho-estudo {
+            background: linear-gradient(135deg, var(--azul), var(--marrom-escuro));
+            color: var(--branco);
+            padding: 45px 30px;
+            border-radius: 10px;
+            border-bottom: 5px solid var(--dourado);
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .identificacao {
+            color: var(--dourado-claro);
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+        }
+
+        .numero-tema {
+            font-family: 'Cinzel', serif;
+            font-size: 3.2rem;
+            color: var(--dourado-claro);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .cabecalho-estudo h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.5rem, 4vw, 2.4rem);
+            line-height: 1.4;
+            margin: 0 auto 15px;
+            max-width: 850px;
+        }
+
+        .cabecalho-estudo p {
+            color: var(--bege);
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .conteudo-estudo {
+            background: var(--branco);
+            padding: 35px;
+            margin-top: 28px;
+            border-radius: 9px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+        }
+
+        .conteudo-estudo h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--azul);
+            font-size: 1.45rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--bege);
+        }
+
+        .conteudo-estudo h2:first-child {
+            margin-top: 0;
+        }
+
+        .conteudo-estudo h3 {
+            color: var(--marrom);
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.08rem;
+            margin-top: 25px;
+        }
+
+        .conteudo-estudo p {
+            text-align: justify;
+            margin-bottom: 16px;
+        }
+
+        .versiculo {
+            background: #F2EBDD;
+            border-left: 5px solid var(--dourado);
+            padding: 22px;
+            margin: 25px 0;
+            border-radius: 5px;
+            font-family: 'Libre Baskerville', serif;
+            color: var(--marrom);
+        }
+
+        .versiculo strong {
+            display: block;
+            text-align: right;
+            margin-top: 12px;
+            color: var(--azul);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .caixa-reflexao {
+            background: #EEF2F4;
+            border-left: 5px solid var(--azul);
+            padding: 22px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+
+        .caixa-reflexao h3 {
+            margin-top: 0;
+            color: var(--azul);
+        }
+
+        .caixa-aplicacao {
+            background: #F2EBDD;
+            border-left: 5px solid var(--dourado);
+            padding: 22px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+
+        .caixa-aplicacao h3 {
+            margin-top: 0;
+        }
+
+        .lista-estudo {
+            padding-left: 25px;
+        }
+
+        .lista-estudo li {
+            margin-bottom: 12px;
+        }
+
+        .referencias {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .referencias li {
+            background: #F2EBDD;
+            color: var(--marrom);
+            padding: 9px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .perguntas {
+            background: #F8F6F0;
+            padding: 22px 25px;
+            border-radius: 7px;
+            margin-top: 20px;
+        }
+
+        .perguntas li {
+            margin-bottom: 15px;
+        }
+
+        .navegacao-inferior {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .botao-navegacao {
+            display: inline-block;
+            padding: 13px 24px;
+            border-radius: 5px;
+            background: var(--azul);
+            color: var(--branco);
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .botao-navegacao:hover {
+            background: var(--marrom);
+            transform: translateY(-2px);
+        }
+
+        .rodape-estudo {
+            text-align: center;
+            color: #776B60;
+            font-size: 0.85rem;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 650px) {
+            .conteudo-estudo {
+                padding: 23px 18px;
+            }
+
+            .cabecalho-estudo {
+                padding: 35px 20px;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .navegacao,
+            .navegacao-inferior,
+            .rodape-estudo {
+                display: none;
+            }
+
+            .estudo-container {
+                padding: 0;
+            }
+
+            .conteudo-estudo,
+            .cabecalho-estudo {
+                box-shadow: none;
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="estudo-container">
+
+        <!-- NAVEGAÇÃO SUPERIOR -->
+
+        <nav class="navegacao">
+
+            <a href="tema01.html">
+                ← TEMA ANTERIOR
+            </a>
+
+            <a href="../../../uhbb_psh.html">
+                PÁGINA PRINCIPAL
+            </a>
+
+        </nav>
+
+
+        <!-- CABEÇALHO -->
+
+        <header class="cabecalho-estudo">
+
+            <div class="identificacao">
+                IDENTIDADE MASCULINA CRISTÃ | MÓDULO 02
+            </div>
+
+            <div class="numero-tema">
+                TEMA 02
+            </div>
+
+            <h1>
+                A FORMAÇÃO DO HOMEM E A DIMENSÃO CORPORAL DA EXISTÊNCIA
+            </h1>
+
+            <p>
+                Compreendendo o corpo humano como parte da criação
+                divina e expressão da dignidade da vida.
+            </p>
+
+        </header>
+
+
+        <!-- INTRODUÇÃO -->
+
+        <section class="conteudo-estudo">
+
+            <h2>1. Introdução</h2>
+
+            <p>
+                Ao estudar a criação do ser humano, encontramos
+                em Gênesis 2:7 uma descrição particularmente
+                significativa: Deus formou o homem do pó da terra
+                e lhe concedeu o fôlego de vida.
+            </p>
+
+            <p>
+                Esse relato nos conduz a uma reflexão importante
+                sobre a natureza humana. O homem não é apresentado
+                como uma existência abstrata, mas como um ser
+                concreto, formado por Deus e dotado de uma dimensão
+                corporal.
+            </p>
+
+            <p>
+                O corpo faz parte da identidade humana. Por meio
+                dele experimentamos o mundo, realizamos atividades,
+                trabalhamos, nos relacionamos e expressamos nossas
+                responsabilidades.
+            </p>
+
+            <p>
+                A fé cristã, portanto, não deve tratar o corpo
+                como algo sem importância. A Bíblia apresenta
+                o corpo como parte da criação divina, merecedor
+                de cuidado, respeito e uso responsável.
+            </p>
+
+        </section>
+
+
+        <!-- FORMAÇÃO DO HOMEM -->
+
+        <section class="conteudo-estudo">
+
+            <h2>2. A formação do homem a partir do pó da terra</h2>
+
+            <div class="versiculo">
+
+                "Então, formou o Senhor Deus ao homem do pó da terra
+                e lhe soprou nas narinas o fôlego de vida,
+                e o homem passou a ser alma vivente."
+
+                <strong>Gênesis 2:7</strong>
+
+            </div>
+
+            <p>
+                A descrição bíblica utiliza uma linguagem que
+                destaca a ação direta de Deus na formação do homem.
+                O Criador é apresentado como aquele que forma
+                a criatura humana.
+            </p>
+
+            <p>
+                A referência ao pó da terra chama nossa atenção
+                para a ligação entre o homem e o mundo material.
+                Nosso corpo pertence à realidade da criação.
+                Ele não é independente da natureza nem está
+                acima das condições próprias da vida terrena.
+            </p>
+
+            <p>
+                Essa passagem também nos lembra que a existência
+                humana é dependente de Deus. A vida não é uma
+                propriedade absoluta que podemos reivindicar
+                como se fôssemos seus próprios autores.
+            </p>
+
+            <h3>2.1. Nossa condição de criaturas</h3>
+
+            <p>
+                O ser humano possui capacidades extraordinárias:
+                pensa, aprende, constrói, transforma o ambiente,
+                desenvolve conhecimentos e estabelece relações.
+                Entretanto, nenhuma dessas capacidades elimina
+                sua condição de criatura.
+            </p>
+
+            <p>
+                Reconhecer essa condição nos conduz à humildade.
+                Não somos o centro absoluto do universo e não
+                ocupamos o lugar de Deus.
+            </p>
+
+            <h3>2.2. A fragilidade humana</h3>
+
+            <p>
+                A Bíblia utiliza a imagem do pó para lembrar
+                a fragilidade e a transitoriedade da existência.
+                Nosso corpo está sujeito ao envelhecimento,
+                às limitações e à morte.
+            </p>
+
+            <div class="versiculo">
+
+                "Porque ele conhece a nossa estrutura
+                e sabe que somos pó."
+
+                <strong>Salmo 103:14</strong>
+
+            </div>
+
+            <p>
+                Essa realidade não deve produzir desprezo pela vida,
+                mas consciência de nossa dependência de Deus
+                e responsabilidade no modo como vivemos.
+            </p>
+
+        </section>
+
+
+        <!-- CORPO COMO CRIAÇÃO DE DEUS -->
+
+        <section class="conteudo-estudo">
+
+            <h2>3. O corpo humano como parte da criação divina</h2>
+
+            <p>
+                A Bíblia apresenta a criação como obra de Deus.
+                Em Gênesis 1, ao concluir sua obra criadora,
+                o Senhor declara que tudo quanto havia feito
+                era muito bom.
+            </p>
+
+            <div class="versiculo">
+
+                "Viu Deus tudo quanto fizera, e eis que era
+                muito bom."
+
+                <strong>Gênesis 1:31</strong>
+
+            </div>
+
+            <p>
+                O corpo humano está incluído nessa criação.
+                Portanto, não devemos adotar uma visão que
+                despreze a existência física ou considere
+                a matéria como algo essencialmente mau.
+            </p>
+
+            <p>
+                O cristianismo afirma que Deus criou o ser humano
+                como uma unidade de existência, envolvendo
+                sua dimensão corporal e sua vida interior.
+            </p>
+
+            <h3>3.1. O corpo possui dignidade</h3>
+
+            <p>
+                O valor de uma pessoa não depende de sua aparência,
+                força física, juventude ou capacidade atlética.
+                A dignidade humana está fundamentada na criação
+                divina, e não nos padrões de beleza ou desempenho
+                estabelecidos pela sociedade.
+            </p>
+
+            <p>
+                Por isso, devemos rejeitar atitudes de humilhação,
+                discriminação e desprezo relacionadas às condições
+                físicas de qualquer pessoa.
+            </p>
+
+            <h3>3.2. O corpo não deve ser objeto de idolatria</h3>
+
+            <p>
+                Reconhecer o valor do corpo também não significa
+                transformá-lo em objeto de culto. A preocupação
+                exagerada com aparência, força, juventude ou
+                desempenho pode ocupar um lugar indevido na vida.
+            </p>
+
+            <p>
+                O cuidado corporal deve estar integrado a uma vida
+                equilibrada, orientada pelos princípios das
+                Escrituras.
+            </p>
+
+        </section>
+
+
+        <!-- CORPO E IDENTIDADE -->
+
+        <section class="conteudo-estudo">
+
+            <h2>4. O corpo e a identidade humana</h2>
+
+            <p>
+                Nossa existência corporal participa de nossa
+                identidade. Não somos simplesmente uma consciência
+                que utiliza um corpo como se ele fosse um instrumento
+                externo e descartável.
+            </p>
+
+            <p>
+                O corpo faz parte de quem somos. Nossa experiência
+                humana envolve sensações, movimentos, necessidades,
+                limitações, relacionamentos e atividades concretas.
+            </p>
+
+            <p>
+                A Bíblia não oferece um tratado científico sobre
+                anatomia ou fisiologia, mas apresenta princípios
+                fundamentais para compreender a dignidade e a
+                responsabilidade relacionadas ao corpo.
+            </p>
+
+            <h3>4.1. A dimensão corporal e a vida cotidiana</h3>
+
+            <p>
+                Alimentação, descanso, trabalho, movimento e
+                relacionamentos fazem parte da experiência humana.
+                Essas necessidades não devem ser consideradas
+                obstáculos à espiritualidade.
+            </p>
+
+            <p>
+                A vida cristã acontece na existência concreta.
+                Servimos a Deus também por meio das atitudes
+                e responsabilidades realizadas com nosso corpo.
+            </p>
+
+            <h3>4.2. A encarnação de Cristo</h3>
+
+            <p>
+                A encarnação de Jesus Cristo possui importância
+                fundamental para a compreensão cristã da existência
+                corporal.
+            </p>
+
+            <div class="versiculo">
+
+                "E o Verbo se fez carne e habitou entre nós..."
+
+                <strong>João 1:14</strong>
+
+            </div>
+
+            <p>
+                O Filho de Deus assumiu verdadeiramente a natureza
+                humana. Jesus experimentou a realidade da existência
+                corporal, conhecendo necessidades, cansaço, sofrimento
+                e limitações próprias da condição humana, sem pecado.
+            </p>
+
+            <p>
+                A encarnação demonstra que a existência corporal
+                não é incompatível com o propósito redentor de Deus.
+            </p>
+
+        </section>
+
+
+        <!-- CUIDADO DO CORPO -->
+
+        <section class="conteudo-estudo">
+
+            <h2>5. O cuidado responsável com o corpo</h2>
+
+            <p>
+                Se o corpo faz parte da criação divina, o cuidado
+                com ele deve ser compreendido como uma dimensão
+                da responsabilidade humana.
+            </p>
+
+            <div class="versiculo">
+
+                "Acaso, não sabeis que o vosso corpo é santuário
+                do Espírito Santo, que está em vós, o qual tendes
+                da parte de Deus, e que não sois de vós mesmos?"
+
+                <strong>1 Coríntios 6:19</strong>
+
+            </div>
+
+            <p>
+                Nesse contexto, Paulo está tratando especialmente
+                da santidade e da conduta sexual dos cristãos
+                em Corinto. O princípio apresentado também nos
+                ajuda a refletir sobre a responsabilidade que
+                temos diante de Deus em relação ao corpo.
+            </p>
+
+            <h3>5.1. Alimentação e equilíbrio</h3>
+
+            <p>
+                A alimentação deve ser conduzida com equilíbrio
+                e responsabilidade. Os alimentos atendem às
+                necessidades do organismo e fazem parte da vida
+                cotidiana.
+            </p>
+
+            <h3>5.2. Descanso e limites humanos</h3>
+
+            <p>
+                O descanso é uma necessidade da existência humana.
+                O próprio relato da criação apresenta o descanso
+                divino como parte do padrão estabelecido em
+                Gênesis 2:2-3.
+            </p>
+
+            <p>
+                Reconhecer nossos limites é importante para evitar
+                que o trabalho, a atividade ou as preocupações
+                ocupem todos os espaços da vida.
+            </p>
+
+            <h3>5.3. Saúde e responsabilidade</h3>
+
+            <p>
+                A prevenção, os cuidados médicos, a higiene
+                e a atenção às necessidades físicas são expressões
+                de responsabilidade. Buscar ajuda profissional
+                quando necessário não representa falta de fé.
+            </p>
+
+            <h3>5.4. Conduta e domínio próprio</h3>
+
+            <p>
+                O cristão deve procurar desenvolver hábitos
+                compatíveis com os princípios da Palavra de Deus,
+                evitando comportamentos que prejudiquem a si mesmo
+                e ao próximo.
+            </p>
+
+        </section>
+
+
+        <!-- CORPO E SERVIÇO -->
+
+        <section class="conteudo-estudo">
+
+            <h2>6. O corpo como instrumento de serviço</h2>
+
+            <p>
+                A existência corporal permite que expressemos
+                concretamente nosso amor a Deus e ao próximo.
+                Nossas mãos podem ajudar, nossos pés podem nos
+                conduzir ao encontro de quem precisa, nossa voz
+                pode consolar e nossas atitudes podem demonstrar
+                cuidado.
+            </p>
+
+            <div class="versiculo">
+
+                "Rogo-vos, pois, irmãos, pelas misericórdias
+                de Deus, que apresenteis o vosso corpo por
+                sacrifício vivo, santo e agradável a Deus,
+                que é o vosso culto racional."
+
+                <strong>Romanos 12:1</strong>
+
+            </div>
+
+            <p>
+                Paulo utiliza a imagem do corpo oferecido a Deus
+                para ensinar que a consagração cristã envolve
+                toda a existência. A adoração não está limitada
+                a palavras ou cerimônias: deve alcançar nossa
+                maneira de viver.
+            </p>
+
+            <p>
+                Assim, o trabalho honesto, o cuidado da família,
+                o serviço na Igreja, a solidariedade e a prática
+                da justiça podem expressar uma vida dedicada
+                ao Senhor.
+            </p>
+
+        </section>
+
+
+        <!-- VISÃO CRISTÃ E CULTURA -->
+
+        <section class="conteudo-estudo">
+
+            <h2>7. A visão cristã diante dos padrões da sociedade</h2>
+
+            <p>
+                A sociedade frequentemente associa o valor
+                masculino à força física, à aparência, à capacidade
+                de competir ou à demonstração de poder.
+            </p>
+
+            <p>
+                Entretanto, a identidade do homem cristão não deve
+                ser construída sobre esses critérios. A força
+                física pode ser uma característica positiva,
+                mas não determina o caráter de uma pessoa.
+            </p>
+
+            <p>
+                A verdadeira maturidade cristã envolve domínio
+                próprio, humildade, responsabilidade, coragem
+                moral e disposição para servir.
+            </p>
+
+            <div class="caixa-reflexao">
+
+                <h3>Uma reflexão necessária</h3>
+
+                <p>
+                    Um homem pode possuir grande força física
+                    e demonstrar pouca maturidade moral. Da mesma
+                    maneira, alguém com limitações físicas pode
+                    revelar coragem, sabedoria, fé e extraordinária
+                    capacidade de servir.
+                </p>
+
+                <p>
+                    A dignidade de uma pessoa não deve ser medida
+                    pela força de seus músculos, mas reconhecida
+                    à luz da criação de Deus.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- APLICAÇÃO -->
+
+        <section class="conteudo-estudo">
+
+            <h2>8. Aplicações para a vida cristã</h2>
+
+            <div class="caixa-aplicacao">
+
+                <h3>Na vida pessoal</h3>
+
+                <p>
+                    Desenvolver hábitos equilibrados, respeitar
+                    os limites do organismo e reconhecer o corpo
+                    como parte da criação divina.
+                </p>
+
+            </div>
+
+            <div class="caixa-aplicacao">
+
+                <h3>Na família</h3>
+
+                <p>
+                    Promover ambientes de cuidado, respeito
+                    e atenção às necessidades físicas dos
+                    familiares, especialmente crianças,
+                    idosos e pessoas enfermas.
+                </p>
+
+            </div>
+
+            <div class="caixa-aplicacao">
+
+                <h3>Na Igreja</h3>
+
+                <p>
+                    Reconhecer que o serviço cristão envolve
+                    atitudes concretas de acolhimento, ajuda,
+                    visitação e cuidado com as pessoas.
+                </p>
+
+            </div>
+
+            <div class="caixa-aplicacao">
+
+                <h3>Na sociedade</h3>
+
+                <p>
+                    Respeitar as pessoas independentemente de
+                    sua aparência, condição física, idade ou
+                    limitações, rejeitando preconceitos e
+                    discriminações.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- REFLEXÃO -->
+
+        <section class="conteudo-estudo">
+
+            <h2>9. Questões para Reflexão</h2>
+
+            <div class="perguntas">
+
+                <ol>
+
+                    <li>
+                        O que Gênesis 2:7 nos ensina sobre
+                        a formação e a dependência humana
+                        em relação a Deus?
+                    </li>
+
+                    <li>
+                        Por que o corpo não deve ser desprezado
+                        na compreensão cristã da existência?
+                    </li>
+
+                    <li>
+                        Qual é a importância da encarnação
+                        de Jesus Cristo para nossa compreensão
+                        da dimensão corporal?
+                    </li>
+
+                    <li>
+                        Como 1 Coríntios 6:19-20 orienta
+                        nossa responsabilidade diante do corpo?
+                    </li>
+
+                    <li>
+                        De que maneira podemos utilizar nossa
+                        existência corporal para servir a Deus
+                        e ao próximo?
+                    </li>
+
+                </ol>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONCLUSÃO -->
+
+        <section class="conteudo-estudo">
+
+            <h2>10. Conclusão</h2>
+
+            <p>
+                O corpo humano faz parte da boa criação de Deus
+                e integra a existência da pessoa. A formação
+                do homem a partir do pó da terra nos lembra
+                de nossa condição de criaturas e de nossa
+                dependência do Criador.
+            </p>
+
+            <p>
+                A fé cristã não nos ensina a desprezar o corpo,
+                mas a compreender sua dignidade e a responsabilidade
+                de utilizá-lo de maneira coerente com os propósitos
+                de Deus.
+            </p>
+
+            <p>
+                Para o homem que deseja viver segundo os princípios
+                das Escrituras, cuidar de si mesmo, respeitar
+                o próximo e colocar suas capacidades a serviço
+                do bem são atitudes que expressam uma vida
+                de responsabilidade diante do Senhor.
+            </p>
+
+            <div class="versiculo">
+
+                "Portanto, quer comais, quer bebais ou façais
+                outra coisa qualquer, fazei tudo para a glória
+                de Deus."
+
+                <strong>1 Coríntios 10:31</strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- REFERÊNCIAS -->
+
+        <section class="conteudo-estudo">
+
+            <h2>Referências Bíblicas para Aprofundamento</h2>
+
+            <ul class="referencias">
+
+                <li>Gênesis 1:26-31</li>
+
+                <li>Gênesis 2:7-15</li>
+
+                <li>Gênesis 2:21-23</li>
+
+                <li>Salmo 103:13-16</li>
+
+                <li>Salmo 139:13-16</li>
+
+                <li>João 1:14</li>
+
+                <li>Romanos 12:1-2</li>
+
+                <li>1 Coríntios 6:12-20</li>
+
+                <li>1 Coríntios 10:31</li>
+
+                <li>1 Timóteo 4:4-5</li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- NAVEGAÇÃO INFERIOR -->
+
+        <nav class="navegacao-inferior">
+
+            <a href="tema01.html"
+               class="botao-navegacao">
+
+                ← TEMA ANTERIOR
+
+            </a>
+
+            <a href="tema03.html"
+               class="botao-navegacao">
+
+                PRÓXIMO TEMA →
+
+            </a>
+
+        </nav>
+
+
+        <!-- RODAPÉ -->
+
+        <footer class="rodape-estudo">
+
+            <p>
+                HOMENS SEGUNDO O CORAÇÃO DE DEUS
+            </p>
+
+            <p>
+                Formando homens, fortalecendo famílias e servindo
+                à Igreja de Cristo.
+            </p>
+
+            <p>
+                Módulo 02 — Tema 02
+            </p>
+
+        </footer>
+
+    </main>
+
+</body>
+
+</html>

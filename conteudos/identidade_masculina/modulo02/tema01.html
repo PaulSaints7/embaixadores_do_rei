@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Tema 01 - O Relato Bíblico da Criação do Ser Humano. Módulo 02.">
+
+    <title>Tema 01 | A Criação do Ser Humano</title>
+
+    <link rel="stylesheet" href="../../../css/uhbb.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --marrom-escuro: #38271F;
+            --marrom: #593B2B;
+            --marrom-medio: #76523C;
+            --azul: #18334D;
+            --azul-claro: #294B65;
+            --dourado: #B08A48;
+            --dourado-claro: #D1B477;
+            --bege: #E9DFC9;
+            --creme: #F7F4EC;
+            --branco: #FFFFFF;
+            --texto: #40372F;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--creme);
+            color: var(--texto);
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.85;
+        }
+
+        .estudo-container {
+            width: 100%;
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 30px 22px 70px;
+        }
+
+        .navegacao {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .navegacao a {
+            color: var(--azul);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .navegacao a:hover {
+            color: var(--dourado);
+        }
+
+        .cabecalho-estudo {
+            background: linear-gradient(135deg, var(--azul), var(--marrom-escuro));
+            color: var(--branco);
+            padding: 45px 30px;
+            border-radius: 10px;
+            border-bottom: 5px solid var(--dourado);
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .identificacao {
+            color: var(--dourado-claro);
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+        }
+
+        .numero-tema {
+            font-family: 'Cinzel', serif;
+            font-size: 3.2rem;
+            color: var(--dourado-claro);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .cabecalho-estudo h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.5rem, 4vw, 2.4rem);
+            line-height: 1.4;
+            margin: 0 auto 15px;
+            max-width: 850px;
+        }
+
+        .cabecalho-estudo p {
+            color: var(--bege);
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .conteudo-estudo {
+            background: var(--branco);
+            padding: 35px;
+            margin-top: 28px;
+            border-radius: 9px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+        }
+
+        .conteudo-estudo h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--azul);
+            font-size: 1.45rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--bege);
+        }
+
+        .conteudo-estudo h2:first-child {
+            margin-top: 0;
+        }
+
+        .conteudo-estudo h3 {
+            color: var(--marrom);
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.08rem;
+            margin-top: 25px;
+        }
+
+        .conteudo-estudo p {
+            text-align: justify;
+            margin-bottom: 16px;
+        }
+
+        .versiculo {
+            background: #F2EBDD;
+            border-left: 5px solid var(--dourado);
+            padding: 22px;
+            margin: 25px 0;
+            border-radius: 5px;
+            font-family: 'Libre Baskerville', serif;
+            color: var(--marrom);
+        }
+
+        .versiculo strong {
+            display: block;
+            text-align: right;
+            margin-top: 12px;
+            color: var(--azul);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .caixa-reflexao {
+            background: #EEF2F4;
+            border-left: 5px solid var(--azul);
+            padding: 22px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+
+        .caixa-reflexao h3 {
+            margin-top: 0;
+            color: var(--azul);
+        }
+
+        .caixa-aplicacao {
+            background: #F2EBDD;
+            border-left: 5px solid var(--dourado);
+            padding: 22px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+
+        .caixa-aplicacao h3 {
+            margin-top: 0;
+        }
+
+        .lista-estudo {
+            padding-left: 25px;
+        }
+
+        .lista-estudo li {
+            margin-bottom: 12px;
+        }
+
+        .referencias {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .referencias li {
+            background: #F2EBDD;
+            color: var(--marrom);
+            padding: 9px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .perguntas {
+            background: #F8F6F0;
+            padding: 22px 25px;
+            border-radius: 7px;
+            margin-top: 20px;
+        }
+
+        .perguntas li {
+            margin-bottom: 15px;
+        }
+
+        .navegacao-inferior {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .botao-navegacao {
+            display: inline-block;
+            padding: 13px 24px;
+            border-radius: 5px;
+            background: var(--azul);
+            color: var(--branco);
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .botao-navegacao:hover {
+            background: var(--marrom);
+            transform: translateY(-2px);
+        }
+
+        .rodape-estudo {
+            text-align: center;
+            color: #776B60;
+            font-size: 0.85rem;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 650px) {
+            .conteudo-estudo {
+                padding: 23px 18px;
+            }
+
+            .cabecalho-estudo {
+                padding: 35px 20px;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .navegacao,
+            .navegacao-inferior,
+            .rodape-estudo {
+                display: none;
+            }
+
+            .estudo-container {
+                padding: 0;
+            }
+
+            .conteudo-estudo,
+            .cabecalho-estudo {
+                box-shadow: none;
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="estudo-container">
+
+        <!-- NAVEGAÇÃO SUPERIOR -->
+
+        <nav class="navegacao">
+
+            <a href="apresentacao.html">
+                ← APRESENTAÇÃO DO MÓDULO 02
+            </a>
+
+            <a href="../../../uhbb_psh.html">
+                PÁGINA PRINCIPAL
+            </a>
+
+        </nav>
+
+
+        <!-- CABEÇALHO -->
+
+        <header class="cabecalho-estudo">
+
+            <div class="identificacao">
+                IDENTIDADE MASCULINA CRISTÃ | MÓDULO 02
+            </div>
+
+            <div class="numero-tema">
+                TEMA 01
+            </div>
+
+            <h1>
+                O RELATO BÍBLICO DA CRIAÇÃO DO SER HUMANO
+            </h1>
+
+            <p>
+                A origem da humanidade segundo o testemunho
+                das Escrituras Sagradas.
+            </p>
+
+        </header>
+
+
+        <!-- INTRODUÇÃO -->
+
+        <section class="conteudo-estudo">
+
+            <h2>1. Introdução</h2>
+
+            <p>
+                Uma das perguntas fundamentais da existência humana
+                diz respeito à nossa origem: de onde viemos?
+                Por que existimos? Qual é a nossa relação com o
+                universo e com o próprio Criador?
+            </p>
+
+            <p>
+                A Bíblia começa apresentando Deus como o Criador
+                dos céus e da terra. Antes de apresentar a história
+                dos povos, das famílias ou das nações, o livro de
+                Gênesis estabelece uma verdade fundamental:
+                toda a existência tem sua origem em Deus.
+            </p>
+
+            <p>
+                Dentro desse relato, a criação do ser humano ocupa
+                uma posição especial. A humanidade não aparece
+                como proprietária absoluta da criação, mas como
+                criatura de Deus, dependente dele e responsável
+                diante dele.
+            </p>
+
+            <p>
+                Estudar a criação humana significa, portanto,
+                compreender que nossa existência possui origem,
+                dignidade e propósito.
+            </p>
+
+        </section>
+
+
+        <!-- DEUS COMO CRIADOR -->
+
+        <section class="conteudo-estudo">
+
+            <h2>2. Deus é o Criador de todas as coisas</h2>
+
+            <p>
+                O primeiro capítulo de Gênesis apresenta Deus como
+                aquele que cria e ordena todas as coisas. O universo,
+                a terra, os mares, a vegetação, os astros e os seres
+                vivos são apresentados como resultado da ação
+                criadora divina.
+            </p>
+
+            <div class="versiculo">
+
+                "No princípio, criou Deus os céus e a terra."
+
+                <strong>Gênesis 1:1</strong>
+
+            </div>
+
+            <p>
+                Essa afirmação estabelece o fundamento da visão
+                bíblica da realidade. Deus não é apresentado como
+                parte da criação, mas como seu Criador.
+            </p>
+
+            <p>
+                O apóstolo Paulo reafirma essa compreensão ao ensinar
+                que todas as coisas foram criadas por meio de Cristo
+                e para Cristo, conforme Colossenses 1:16.
+            </p>
+
+            <h3>O que aprendemos?</h3>
+
+            <ul class="lista-estudo">
+
+                <li>
+                    Deus é a origem de toda a criação.
+                </li>
+
+                <li>
+                    A existência humana depende do Criador.
+                </li>
+
+                <li>
+                    A criação possui uma ordem que não foi
+                    estabelecida pelo próprio ser humano.
+                </li>
+
+                <li>
+                    O ser humano deve reconhecer sua condição
+                    de criatura diante de Deus.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- GÊNESIS 1 -->
+
+        <section class="conteudo-estudo">
+
+            <h2>3. A criação do ser humano em Gênesis 1</h2>
+
+            <p>
+                Em Gênesis 1:26-27 encontramos uma declaração
+                central sobre a criação da humanidade.
+                O texto apresenta uma deliberação divina:
+                Deus cria o ser humano à sua imagem e semelhança.
+            </p>
+
+            <div class="versiculo">
+
+                "Também disse Deus: Façamos o homem à nossa imagem,
+                conforme a nossa semelhança..."
+
+                <strong>Gênesis 1:26</strong>
+
+            </div>
+
+            <p>
+                A expressão "homem", nesse contexto, refere-se
+                à humanidade. O versículo seguinte esclarece
+                que Deus criou o ser humano como homem e mulher.
+            </p>
+
+            <p>
+                Isso significa que a dignidade humana não pertence
+                exclusivamente ao sexo masculino. Homem e mulher
+                compartilham a condição de criaturas feitas à
+                imagem de Deus.
+            </p>
+
+            <p>
+                O texto também apresenta uma responsabilidade
+                concedida à humanidade em relação aos demais
+                seres vivos e à terra.
+            </p>
+
+            <h3>Uma criação com dignidade e responsabilidade</h3>
+
+            <p>
+                O ser humano recebe uma posição particular na
+                criação, mas essa posição não significa autonomia
+                absoluta ou autorização para agir de maneira
+                irresponsável.
+            </p>
+
+            <p>
+                A autoridade humana deve ser compreendida à luz
+                da autoridade do próprio Deus. O domínio mencionado
+                em Gênesis deve ser exercido como responsabilidade
+                confiada pelo Criador.
+            </p>
+
+        </section>
+
+
+        <!-- GÊNESIS 2 -->
+
+        <section class="conteudo-estudo">
+
+            <h2>4. A criação do ser humano em Gênesis 2</h2>
+
+            <p>
+                O segundo capítulo de Gênesis apresenta detalhes
+                importantes sobre a formação do homem e sua
+                colocação no jardim do Éden.
+            </p>
+
+            <div class="versiculo">
+
+                "Então, formou o Senhor Deus ao homem do pó da terra
+                e lhe soprou nas narinas o fôlego de vida,
+                e o homem passou a ser alma vivente."
+
+                <strong>Gênesis 2:7</strong>
+
+            </div>
+
+            <p>
+                O texto apresenta duas dimensões importantes
+                da existência humana.
+            </p>
+
+            <h3>4.1. O ser humano e a terra</h3>
+
+            <p>
+                A formação do homem a partir do pó da terra
+                demonstra sua condição de criatura. O ser humano
+                não é independente do mundo material: possui
+                uma existência corporal e está ligado à criação.
+            </p>
+
+            <p>
+                Essa realidade também nos lembra da fragilidade
+                humana. Nossa vida não é ilimitada e não podemos
+                ocupar o lugar que pertence ao Criador.
+            </p>
+
+            <h3>4.2. O sopro de vida</h3>
+
+            <p>
+                O texto afirma que Deus soprou nas narinas do homem
+                o fôlego de vida. A vida humana é apresentada
+                como dádiva divina.
+            </p>
+
+            <p>
+                Não devemos transformar essa descrição em uma
+                explicação científica ou anatômica. O propósito
+                do relato é afirmar que o homem recebeu a vida
+                de Deus e depende dele para existir.
+            </p>
+
+            <h3>4.3. A responsabilidade recebida</h3>
+
+            <p>
+                Gênesis 2:15 informa que Deus colocou o homem
+                no jardim do Éden para cultivá-lo e guardá-lo.
+            </p>
+
+            <p>
+                O trabalho aparece, portanto, antes da entrada
+                do pecado no mundo. Ele faz parte da experiência
+                humana original e está associado à responsabilidade
+                confiada por Deus.
+            </p>
+
+        </section>
+
+
+        <!-- RELAÇÃO ENTRE OS RELATOS -->
+
+        <section class="conteudo-estudo">
+
+            <h2>5. Gênesis 1 e 2: duas perspectivas complementares</h2>
+
+            <p>
+                Os capítulos 1 e 2 de Gênesis apresentam relatos
+                que devem ser estudados em conjunto, respeitando
+                suas respectivas ênfases.
+            </p>
+
+            <p>
+                Gênesis 1 apresenta uma visão ampla da criação,
+                destacando a ação soberana de Deus e a posição
+                da humanidade dentro da ordem criada.
+            </p>
+
+            <p>
+                Gênesis 2 concentra a atenção na formação do homem,
+                no jardim do Éden, nas responsabilidades recebidas
+                e na relação entre o homem e a mulher.
+            </p>
+
+            <p>
+                Assim, os dois capítulos oferecem fundamentos
+                importantes para compreender a origem e a vocação
+                humana.
+            </p>
+
+            <div class="caixa-reflexao">
+
+                <h3>Uma observação importante</h3>
+
+                <p>
+                    Existem diferentes interpretações cristãs
+                    sobre a relação literária entre os relatos
+                    de Gênesis 1 e 2 e sobre aspectos cronológicos
+                    da criação.
+                </p>
+
+                <p>
+                    Nosso compromisso neste estudo é apresentar
+                    com clareza aquilo que o texto bíblico afirma,
+                    distinguindo suas declarações explícitas das
+                    interpretações teológicas desenvolvidas a
+                    partir delas.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- A ORIGEM E O PROPÓSITO -->
+
+        <section class="conteudo-estudo">
+
+            <h2>6. O que a criação nos ensina sobre a existência humana?</h2>
+
+            <p>
+                O relato bíblico da criação não pretende apenas
+                responder de onde veio a humanidade. Ele também
+                estabelece fundamentos para compreendermos
+                nossa existência.
+            </p>
+
+            <h3>6.1. Dependência de Deus</h3>
+
+            <p>
+                O ser humano não é autossuficiente. Sua existência
+                depende do Criador. Reconhecer essa dependência
+                é parte essencial da vida de fé.
+            </p>
+
+            <h3>6.2. Dignidade humana</h3>
+
+            <p>
+                Toda pessoa possui dignidade porque a humanidade
+                foi criada à imagem de Deus. Essa dignidade não
+                depende de riqueza, posição social, capacidade
+                física, idade ou reconhecimento público.
+            </p>
+
+            <h3>6.3. Responsabilidade diante da criação</h3>
+
+            <p>
+                O ser humano recebeu responsabilidades relacionadas
+                ao cuidado e à administração da criação. Essa
+                autoridade deve ser exercida com respeito aos
+                propósitos do Criador.
+            </p>
+
+            <h3>6.4. Propósito e vocação</h3>
+
+            <p>
+                A vida humana não deve ser compreendida apenas
+                como uma busca por interesses individuais.
+                A existência envolve relacionamento com Deus,
+                responsabilidade diante do próximo e serviço.
+            </p>
+
+        </section>
+
+
+        <!-- APLICAÇÃO PRÁTICA -->
+
+        <section class="conteudo-estudo">
+
+            <h2>7. Aplicações para a vida cristã</h2>
+
+            <p>
+                O conhecimento bíblico sobre a criação deve
+                produzir consequências concretas na maneira
+                como vivemos.
+            </p>
+
+            <div class="caixa-aplicacao">
+
+                <h3>Na vida pessoal</h3>
+
+                <p>
+                    Reconhecer que nossa vida pertence a Deus
+                    deve conduzir à humildade, à gratidão
+                    e à responsabilidade.
+                </p>
+
+            </div>
+
+            <div class="caixa-aplicacao">
+
+                <h3>Na família</h3>
+
+                <p>
+                    A dignidade concedida por Deus a cada pessoa
+                    exige respeito, cuidado, amor e responsabilidade
+                    nos relacionamentos familiares.
+                </p>
+
+            </div>
+
+            <div class="caixa-aplicacao">
+
+                <h3>Na sociedade</h3>
+
+                <p>
+                    A compreensão de que todos os seres humanos
+                    possuem dignidade deve orientar nossas atitudes
+                    contra a injustiça, a exploração e o desprezo
+                    pelo próximo.
+                </p>
+
+            </div>
+
+            <div class="caixa-aplicacao">
+
+                <h3>No trabalho e no serviço cristão</h3>
+
+                <p>
+                    O trabalho e as responsabilidades cotidianas
+                    podem ser exercidos como expressões de fidelidade
+                    a Deus e serviço ao próximo.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- REFLEXÃO -->
+
+        <section class="conteudo-estudo">
+
+            <h2>8. Questões para Reflexão</h2>
+
+            <div class="perguntas">
+
+                <ol>
+
+                    <li>
+                        Por que o reconhecimento de Deus como Criador
+                        é fundamental para compreender a existência
+                        humana?
+                    </li>
+
+                    <li>
+                        Qual é a importância de Gênesis 1:27 para
+                        a compreensão da dignidade de homens e mulheres?
+                    </li>
+
+                    <li>
+                        O que a formação do homem a partir do pó
+                        da terra nos ensina sobre nossa condição
+                        de criaturas?
+                    </li>
+
+                    <li>
+                        Por que o trabalho e a responsabilidade
+                        aparecem no relato de Gênesis antes da
+                        entrada do pecado?
+                    </li>
+
+                    <li>
+                        Como o conhecimento bíblico da criação
+                        pode transformar nossa maneira de tratar
+                        as pessoas?
+                    </li>
+
+                </ol>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONCLUSÃO -->
+
+        <section class="conteudo-estudo">
+
+            <h2>9. Conclusão</h2>
+
+            <p>
+                O relato bíblico da criação estabelece fundamentos
+                indispensáveis para a compreensão da identidade
+                humana. A humanidade tem sua origem em Deus,
+                recebe dele a vida e possui dignidade por ter
+                sido criada à sua imagem.
+            </p>
+
+            <p>
+                O ser humano também recebeu responsabilidades
+                diante do Criador, do próximo e da criação.
+                Sua existência não deve ser conduzida pela
+                arrogância ou pela busca de autonomia absoluta,
+                mas pelo reconhecimento de sua condição
+                de criatura.
+            </p>
+
+            <p>
+                Para o homem cristão, compreender essas verdades
+                significa viver com humildade, responsabilidade,
+                gratidão e compromisso com os propósitos de Deus.
+            </p>
+
+            <div class="versiculo">
+
+                "Pois nele vivemos, e nos movemos,
+                e existimos."
+
+                <strong>Atos 17:28</strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- REFERÊNCIAS BÍBLICAS -->
+
+        <section class="conteudo-estudo">
+
+            <h2>Referências Bíblicas para Aprofundamento</h2>
+
+            <ul class="referencias">
+
+                <li>Gênesis 1:1-31</li>
+
+                <li>Gênesis 2:4-25</li>
+
+                <li>Salmo 8</li>
+
+                <li>Salmo 24:1</li>
+
+                <li>Salmo 139:13-16</li>
+
+                <li>Atos 17:24-28</li>
+
+                <li>Colossenses 1:15-20</li>
+
+                <li>Apocalipse 4:11</li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- NAVEGAÇÃO INFERIOR -->
+
+        <nav class="navegacao-inferior">
+
+            <a href="apresentacao.html"
+               class="botao-navegacao">
+
+                ← APRESENTAÇÃO
+
+            </a>
+
+            <a href="tema02.html"
+               class="botao-navegacao">
+
+                PRÓXIMO TEMA →
+
+            </a>
+
+        </nav>
+
+
+        <!-- RODAPÉ -->
+
+        <footer class="rodape-estudo">
+
+            <p>
+                HOMENS SEGUNDO O CORAÇÃO DE DEUS
+            </p>
+
+            <p>
+                Formando homens, fortalecendo famílias e servindo
+                à Igreja de Cristo.
+            </p>
+
+            <p>
+                Módulo 02 — Tema 01
+            </p>
+
+        </footer>
+
+    </main>
+
+</body>
+
+</html>
