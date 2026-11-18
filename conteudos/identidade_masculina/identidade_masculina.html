@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Identidade Masculina Cristã | Homens Segundo o Coração de Deus</title>
+
+    <link rel="stylesheet" href="../../css/uhbb.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #F7F4EC;
+            color: #38271F;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .pagina-modulos {
+            min-height: 100vh;
+        }
+
+        /* CABEÇALHO */
+
+        .cabecalho-modulos {
+            background: linear-gradient(135deg, #38271F, #18334D);
+            color: #F7F4EC;
+            padding: 65px 20px;
+            text-align: center;
+        }
+
+        .cabecalho-modulos .identificacao {
+            color: #D1B477;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .cabecalho-modulos h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(28px, 5vw, 43px);
+            margin: 0 0 20px;
+            color: #E9DFC9;
+        }
+
+        .cabecalho-modulos p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 16px;
+            line-height: 1.9;
+            color: #F7F4EC;
+        }
+
+        .linha-dourada {
+            width: 90px;
+            height: 3px;
+            background: #B08A48;
+            margin: 28px auto;
+        }
+
+        /* INTRODUÇÃO */
+
+        .introducao-modulos {
+            max-width: 1050px;
+            margin: 55px auto 35px;
+            padding: 0 25px;
+            text-align: center;
+        }
+
+        .introducao-modulos h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 25px;
+            color: #593B2B;
+            margin-bottom: 20px;
+        }
+
+        .introducao-modulos p {
+            font-size: 15px;
+            line-height: 1.9;
+            color: #5B5149;
+        }
+
+        /* GRADE DOS MÓDULOS */
+
+        .grade-modulos {
+            max-width: 1200px;
+            margin: 45px auto 75px;
+            padding: 0 25px;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        /* CARTÕES */
+
+        .card-modulo {
+            background: #FFFFFF;
+            border-radius: 10px;
+            overflow: hidden;
+
+            border: 1px solid #DED3BF;
+            box-shadow: 0 5px 18px rgba(56, 39, 31, 0.08);
+
+            display: flex;
+            flex-direction: column;
+
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-modulo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(56, 39, 31, 0.14);
+        }
+
+        .numero-modulo {
+            background: #18334D;
+            color: #D1B477;
+
+            padding: 18px 25px;
+
+            font-family: 'Cinzel', serif;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .conteudo-modulo {
+            padding: 25px;
+
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .conteudo-modulo h3 {
+            font-family: 'Cinzel', serif;
+            color: #593B2B;
+            font-size: 19px;
+            line-height: 1.5;
+            margin: 0 0 15px;
+        }
+
+        .conteudo-modulo p {
+            color: #62574E;
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 22px;
+            flex-grow: 1;
+        }
+
+        /* SITUAÇÃO */
+
+        .situacao {
+            display: inline-block;
+            width: fit-content;
+
+            padding: 7px 12px;
+            border-radius: 4px;
+
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+
+            margin-bottom: 20px;
+        }
+
+        .disponivel {
+            background: #E2EBDD;
+            color: #355B35;
+        }
+
+        .desenvolvimento {
+            background: #F1E8D6;
+            color: #80622D;
+        }
+
+        /* BOTÕES */
+
+        .botao-modulo {
+            display: inline-block;
+            text-align: center;
+
+            background: #593B2B;
+            color: #FFFFFF;
+
+            padding: 13px 18px;
+            border-radius: 5px;
+
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+
+            transition: background 0.3s ease;
+        }
+
+        .botao-modulo:hover {
+            background: #18334D;
+        }
+
+        .botao-indisponivel {
+            display: inline-block;
+            text-align: center;
+
+            background: #E7E1D6;
+            color: #776D62;
+
+            padding: 13px 18px;
+            border-radius: 5px;
+
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        /* RODAPÉ */
+
+        .rodape-modulos {
+            background: #38271F;
+            color: #E9DFC9;
+
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        .rodape-modulos p {
+            font-size: 13px;
+            line-height: 1.8;
+            margin: 8px 0;
+        }
+
+        .rodape-modulos a {
+            color: #D1B477;
+            text-decoration: none;
+        }
+
+        .rodape-modulos a:hover {
+            text-decoration: underline;
+        }
+
+        /* NAVEGAÇÃO */
+
+        .navegacao-final {
+            text-align: center;
+            padding: 0 20px 60px;
+        }
+
+        .navegacao-final a {
+            display: inline-block;
+            padding: 14px 25px;
+
+            border: 1px solid #B08A48;
+            border-radius: 5px;
+
+            color: #593B2B;
+            text-decoration: none;
+
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+
+            transition: all 0.3s ease;
+        }
+
+        .navegacao-final a:hover {
+            background: #593B2B;
+            color: #FFFFFF;
+        }
+
+        /* RESPONSIVIDADE */
+
+        @media (max-width: 750px) {
+
+            .grade-modulos {
+                grid-template-columns: 1fr;
+            }
+
+            .cabecalho-modulos {
+                padding: 50px 20px;
+            }
+
+            .introducao-modulos {
+                margin-top: 40px;
+            }
+
+        }
+
+        /* IMPRESSÃO */
+
+        @media print {
+
+            .navegacao-final {
+                display: none;
+            }
+
+            .card-modulo {
+                break-inside: avoid;
+                box-shadow: none;
+            }
+
+            body {
+                background: #FFFFFF;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="pagina-modulos">
+
+    <!-- CABEÇALHO -->
+
+    <header class="cabecalho-modulos">
+
+        <div class="identificacao">
+            Escola de Formação Cristã Masculina
+        </div>
+
+        <h1>Identidade Masculina Cristã</h1>
+
+        <div class="linha-dourada"></div>
+
+        <p>
+            Uma jornada de formação bíblica e espiritual,
+            fundamentada nas Escrituras Sagradas, para homens
+            que desejam desenvolver um caráter cristão,
+            assumir suas responsabilidades e viver segundo
+            a vontade de Deus.
+        </p>
+
+    </header>
+
+
+    <!-- APRESENTAÇÃO -->
+
+    <section class="introducao-modulos">
+
+        <h2>Programa de Formação</h2>
+
+        <p>
+            Esta área de formação está organizada em sete módulos
+            progressivos. Cada módulo aborda aspectos importantes
+            da identidade, do caráter e das responsabilidades do
+            homem cristão, proporcionando fundamentos bíblicos
+            para sua vida pessoal, familiar, espiritual e social.
+        </p>
+
+        <p>
+            Escolha um dos módulos abaixo para conhecer seu conteúdo
+            e iniciar ou continuar sua jornada de aprendizagem.
+        </p>
+
+    </section>
+
+
+    <!-- MÓDULOS -->
+
+    <main class="grade-modulos">
+
+
+        <!-- MÓDULO 01 -->
+
+        <article class="card-modulo">
+
+            <div class="numero-modulo">
+                MÓDULO 01
+            </div>
+
+            <div class="conteudo-modulo">
+
+                <span class="situacao disponivel">
+                    Disponível
+                </span>
+
+                <h3>
+                    O Homem na Perspectiva das Escrituras
+                </h3>
+
+                <p>
+                    Estudo dos fundamentos bíblicos sobre a existência
+                    humana, a criação, a imagem de Deus, a dignidade
+                    da vida e as responsabilidades do ser humano
+                    diante do Criador.
+                </p>
+
+                <a class="botao-modulo"
+                   href="modulo01/apresentacao.html">
+                    ACESSAR MÓDULO →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- MÓDULO 02 -->
+
+        <article class="card-modulo">
+
+            <div class="numero-modulo">
+                MÓDULO 02
+            </div>
+
+            <div class="conteudo-modulo">
+
+                <span class="situacao disponivel">
+                    Disponível
+                </span>
+
+                <h3>
+                    A Criação e a Identidade Humana
+                </h3>
+
+                <p>
+                    Compreensão da criação do ser humano, sua
+                    constituição, sua dimensão espiritual e relacional,
+                    sua liberdade e seu propósito na criação de Deus.
+                </p>
+
+                <a class="botao-modulo"
+                   href="modulo02/apresentacao.html">
+                    ACESSAR MÓDULO →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- MÓDULO 03 -->
+
+        <article class="card-modulo">
+
+            <div class="numero-modulo">
+                MÓDULO 03
+            </div>
+
+            <div class="conteudo-modulo">
+
+                <span class="situacao disponivel">
+                    Disponível
+                </span>
+
+                <h3>
+                    Masculinidade e Responsabilidade Cristã
+                </h3>
+
+                <p>
+                    Reflexão sobre a masculinidade à luz das Escrituras,
+                    a responsabilidade pessoal, a vida familiar,
+                    a espiritualidade, o trabalho, a ética e o serviço
+                    ao próximo.
+                </p>
+
+                <a class="botao-modulo"
+                   href="modulo03/apresentacao.html">
+                    ACESSAR MÓDULO →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- MÓDULO 04 -->
+
+        <article class="card-modulo">
+
+            <div class="numero-modulo">
+                MÓDULO 04
+            </div>
+
+            <div class="conteudo-modulo">
+
+                <span class="situacao desenvolvimento">
+                    Em desenvolvimento
+                </span>
+
+                <h3>
+                    Caráter, Honra e Integridade
+                </h3>
+
+                <p>
+                    Formação do caráter cristão, compromisso com a
+                    verdade, integridade nas atitudes, honra nos
+                    relacionamentos e coerência entre fé e conduta.
+                </p>
+
+                <span class="botao-indisponivel">
+                    EM BREVE
+                </span>
+
+            </div>
+
+        </article>
+
+
+        <!-- MÓDULO 05 -->
+
+        <article class="card-modulo">
+
+            <div class="numero-modulo">
+                MÓDULO 05
+            </div>
+
+            <div class="conteudo-modulo">
+
+                <span class="situacao desenvolvimento">
+                    Em desenvolvimento
+                </span>
+
+                <h3>
+                    Coragem, Disciplina e Domínio Próprio
+                </h3>
+
+                <p>
+                    Desenvolvimento da firmeza espiritual, da
+                    disciplina pessoal, da perseverança e do
+                    domínio próprio diante dos desafios da vida.
+                </p>
+
+                <span class="botao-indisponivel">
+                    EM BREVE
+                </span>
+
+            </div>
+
+        </article>
+
+
+        <!-- MÓDULO 06 -->
+
+        <article class="card-modulo">
+
+            <div class="numero-modulo">
+                MÓDULO 06
+            </div>
+
+            <div class="conteudo-modulo">
+
+                <span class="situacao desenvolvimento">
+                    Em desenvolvimento
+                </span>
+
+                <h3>
+                    O Exemplo de Jesus Cristo
+                </h3>
+
+                <p>
+                    Estudo de Jesus como referência suprema para
+                    o homem cristão: seu caráter, sua obediência,
+                    sua humildade, seu amor e seu serviço.
+                </p>
+
+                <span class="botao-indisponivel">
+                    EM BREVE
+                </span>
+
+            </div>
+
+        </article>
+
+
+        <!-- MÓDULO 07 -->
+
+        <article class="card-modulo">
+
+            <div class="numero-modulo">
+                MÓDULO 07
+            </div>
+
+            <div class="conteudo-modulo">
+
+                <span class="situacao desenvolvimento">
+                    Em desenvolvimento
+                </span>
+
+                <h3>
+                    O Homem Cristão diante dos Desafios Contemporâneos
+                </h3>
+
+                <p>
+                    Reflexão sobre a vivência da fé cristã no mundo
+                    atual, os desafios culturais, a responsabilidade
+                    social e o testemunho do Evangelho na sociedade.
+                </p>
+
+                <span class="botao-indisponivel">
+                    EM BREVE
+                </span>
+
+            </div>
+
+        </article>
+
+
+    </main>
+
+
+    <!-- NAVEGAÇÃO -->
+
+    <div class="navegacao-final">
+
+        <a href="../../uhbb_psh.html">
+            ← VOLTAR À PÁGINA PRINCIPAL
+        </a>
+
+    </div>
+
+
+    <!-- RODAPÉ -->
+
+    <footer class="rodape-modulos">
+
+        <p>
+            <strong>HOMENS SEGUNDO O CORAÇÃO DE DEUS</strong>
+        </p>
+
+        <p>
+            Formando homens, fortalecendo famílias
+            e servindo à Igreja de Cristo.
+        </p>
+
+        <p>
+            Fundamentados nas Escrituras Sagradas.
+        </p>
+
+        <p>
+            <a href="../../uhbb_psh.html">
+                Página Principal
+            </a>
+        </p>
+
+    </footer>
+
+</div>
+
+</body>
+</html>
