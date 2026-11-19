@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"content="Digitaliza Geral - Plataforma de digitalização e preservação documental.">
+
+    <title>Digitaliza Geral | Scriptorium Digital</title>
+
+<!-- FONTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Text:wght@400;600;700&family=Open+Sans:wght@400;500;600;700&display=swap"  
+    rel="stylesheet">
+
+<!-- FOLHA DE ESTILOS -->
+     <link rel="stylesheet" href="css/digi_geral.css">
+
+</head>
+
+<body>
+
+```
+<!-- ==================================================
+     1. TELA DE LOGIN
+=================================================== -->
+
+<section id="tela-login" class="tela-login">
+
+    <div class="login-container">
+
+        <div class="login-ornamento">❦</div>
+        <div class="login-logo">✥</div>
+
+        <h1>DIGITALIZA GERAL</h1>
+
+        <p class="login-subtitulo">SCRIPTORIUM DIGITAL</p>
+
+        <div class="login-divisor"></div>
+
+        <h2>Portal de Acesso</h2>
+
+        <p class="login-descricao">
+            Entre no nosso espaço de preservação
+            do conhecimento.
+        </p>
+
+        <form id="form-login">
+
+            <div class="campo-login">
+                <label for="usuario">Usuário</label>
+
+                <input
+                    type="text"
+                    id="usuario"
+                    placeholder="Digite seu usuário"
+                    autocomplete="username"
+                    required
+                >
+            </div>
+
+            <div class="campo-login">
+                <label for="senha">Senha</label>
+
+                <input
+                    type="password"
+                    id="senha"
+                    placeholder="Digite sua senha"
+                    autocomplete="current-password"
+                    required
+                >
+            </div>
+
+            <p id="mensagem-login" class="mensagem-login"></p>
+
+            <button type="submit" class="botao-login">
+                ENTRAR NO SCRIPTORIUM
+            </button>
+
+        </form>
+
+        <div class="login-rodape">
+            <span>❧</span>
+
+            <p>
+                O conhecimento preservado
+                atravessa gerações.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     2. PLATAFORMA PRINCIPAL
+=================================================== -->
+
+<div id="plataforma-principal" hidden>
+
+    <!-- CABEÇALHO -->
+
+    <header class="cabecalho">
+
+        <div class="identidade">
+
+            <div class="simbolo-logo">✥</div>
+
+            <div class="titulo-identidade">
+                <h1>DIGITALIZA GERAL</h1>
+
+                <p>
+                    Preservando o conhecimento,
+                    página por página.
+                </p>
+            </div>
+
+        </div>
+
+        <nav class="menu-principal">
+            <a href="#inicio">Início</a>
+            <a href="#ferramentas">Ferramentas</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#ajuda">Ajuda</a>
+        </nav>
+
+        <div class="area-usuario">
+
+            <span id="nome-usuario">Usuário</span>
+
+            <button
+                type="button"
+                onclick="encerrarSessao()"
+                class="botao-sair"
+            >
+                Sair
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+
+    <main>
+
+        <!-- APRESENTAÇÃO -->
+
+        <section class="apresentacao" id="inicio">
+
+            <div class="ornamento">❦</div>
+
+            <h2>Bem-vindo ao nosso Scriptorium Digital</h2>
+
+            <p class="texto-apresentacao">
+                Transforme livros, documentos, revistas
+                e fotografias em arquivos digitais.
+
+                Utilize a câmera do seu celular, notebook
+                ou câmera fotográfica para preservar
+                conhecimentos e histórias.
+            </p>
+
+            <div class="linha-decorativa"></div>
+
+            <p class="frase-destaque">
+                "O conhecimento preservado atravessa gerações."
+            </p>
+
+        </section>
+
+
+        <!-- FERRAMENTAS -->
+
+        <section class="area-ferramentas" id="ferramentas">
+
+            <div class="titulo-secao">
+                <span>✦</span>
+                <h2>Oficina de Digitalização</h2>
+                <span>✦</span>
+            </div>
+
+            <p class="descricao-secao">
+                Escolha uma atividade para iniciar seu trabalho.
+            </p>
+
+            <div class="grade-ferramentas">
+
+                <article class="cartao-ferramenta">
+
+                    <div class="icone-ferramenta">📜</div>
+
+                    <h3>Documentos</h3>
+
+                    <p>
+                        Digitalize cartas, atas, certificados,
+                        manuscritos e documentos diversos.
+                    </p>
+
+                    <button type="button"
+                        onclick="iniciarDigitalizacao('documentos')">
+                        Digitalizar documentos
+                    </button>
+
+                </article>
+
+
+                <article class="cartao-ferramenta">
+
+                    <div class="icone-ferramenta">📚</div>
+
+                    <h3>Livros</h3>
+
+                    <p>
+                        Fotografe páginas de livros e organize
+                        capítulos em documentos digitais.
+                    </p>
+
+                    <button type="button"
+                        onclick="iniciarDigitalizacao('livros')">
+                        Digitalizar livros
+                    </button>
+
+                </article>
+
+
+                <article class="cartao-ferramenta">
+
+                    <div class="icone-ferramenta">📰</div>
+
+                    <h3>Revistas</h3>
+
+                    <p>
+                        Preserve revistas, boletins,
+                        jornais e publicações impressas.
+                    </p>
+
+                    <button type="button"
+                        onclick="iniciarDigitalizacao('revistas')">
+                        Digitalizar revistas
+                    </button>
+
+                </article>
+
+
+                <article class="cartao-ferramenta">
+
+                    <div class="icone-ferramenta">🖼️</div>
+
+                    <h3>Fotografias</h3>
+
+                    <p>
+                        Digitalize fotografias antigas
+                        e preserve registros históricos.
+                    </p>
+
+                    <button type="button"
+                        onclick="iniciarDigitalizacao('fotografias')">
+                        Digitalizar fotografias
+                    </button>
+
+                </article>
+
+
+                <article class="cartao-ferramenta">
+
+                    <div class="icone-ferramenta">📄</div>
+
+                    <h3>Organização de PDF</h3>
+
+                    <p>
+                        Reúna imagens, organize páginas
+                        e prepare documentos em PDF.
+                    </p>
+
+                    <button type="button"
+                        onclick="iniciarDigitalizacao('pdf')">
+                        Organizar documentos
+                    </button>
+
+                </article>
+
+
+                <article class="cartao-ferramenta">
+
+                    <div class="icone-ferramenta">📷</div>
+
+                    <h3>Captura pela Câmera</h3>
+
+                    <p>
+                        Utilize a câmera do seu dispositivo
+                        para capturar imagens diretamente.
+                    </p>
+
+                    <button type="button"
+                        onclick="iniciarDigitalizacao('camera')">
+                        Abrir câmera
+                    </button>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- SOBRE -->
+
+        <section class="sobre-plataforma" id="sobre">
+
+            <div class="ornamento">❦</div>
+
+            <h2>Uma nova maneira de preservar a memória</h2>
+
+            <p>
+                O DIGITALIZA GERAL nasceu com a proposta
+                de tornar a digitalização acessível.
+
+                Sem depender de equipamentos profissionais,
+                utilizando recursos que já temos em nossas mãos.
+            </p>
+
+            <div class="valores">
+
+                <div>
+                    <span>📖</span>
+                    <h3>Preservação</h3>
+                    <p>Proteção da memória documental.</p>
+                </div>
+
+                <div>
+                    <span>⚙️</span>
+                    <h3>Tecnologia</h3>
+                    <p>Ferramentas simples e acessíveis.</p>
+                </div>
+
+                <div>
+                    <span>🏛️</span>
+                    <h3>Conhecimento</h3>
+                    <p>Histórias preservadas para o futuro.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- AJUDA -->
+
+        <section class="ajuda" id="ajuda">
+
+            <h2>Precisa de orientação?</h2>
+
+            <p>
+                Nossa oficina foi projetada para facilitar
+                cada etapa do processo de digitalização.
+            </p>
+
+            <p>
+                Em breve, disponibilizaremos orientações
+                detalhadas para utilização de todas as ferramentas.
+            </p>
+
+        </section>
+
+
+        <!-- ==========================================
+             3. BANCADA DE DIGITALIZAÇÃO
+        =========================================== -->
+
+        <section
+            id="bancada-digitalizacao"
+            class="bancada-digitalizacao"
+            hidden
+        >
+
+            <div class="bancada-cabecalho">
+
+                <button
+                    type="button"
+                    onclick="voltarInicio()"
+                    class="btn-voltar"
+                >
+                    ← Voltar ao início
+                </button>
+
+                <div class="bancada-titulo">
+
+                    <h2 id="titulo-bancada">
+                        Bancada de Digitalização
+                    </h2>
+
+                    <p id="descricao-bancada">
+                        Prepare suas páginas para preservação digital.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="bancada-conteudo">
+
+                <!-- PAINEL DE FERRAMENTAS -->
+
+                <aside class="painel-ferramentas">
+
+                    <h3>Ferramentas de captura</h3>
+
+                    <button type="button" id="btn-ativar-camera">
+                        📷 Ativar câmera
+                    </button>
+
+                    <button
+                        type="button"
+                        id="btn-capturar"
+                        disabled
+                    >
+                        Capturar página
+                    </button>
+
+                    <button
+                        type="button"
+                        id="btn-desligar-camera"
+                        disabled
+                    >
+                        Desligar câmera
+                    </button>
+
+
+                    <hr>
+
+                    <h3>Importar imagem</h3>
+
+                    <label for="input-imagem" class="btn-importar">
+                        📁 Escolher fotografia
+                    </label>
+
+                    <input
+                        type="file"
+                        id="input-imagem"
+                        accept="image/*"
+                        capture="environment"
+                        hidden
+                    >
+
+
+                    <hr>
+
+                    <h3>Ações da página</h3>
+
+                    <button
+                        type="button"
+                        id="btn-adicionar-pagina"
+                        disabled
+                    >
+                        + Adicionar à coleção
+                    </button>
+
+                    <button
+                        type="button"
+                        id="btn-limpar-preview"
+                        disabled
+                    >
+                        Limpar imagem atual
+                    </button>
+
+
+                    <hr>
+
+                    <h3>Tratamento da imagem</h3>
+
+                    <div class="grupo-tratamento">
+
+                        <p>Rotação da página</p>
+
+                        <div class="botoes-rotacao">
+
+                            <button
+                                type="button"
+                                id="btn-girar-esquerda"
+                            >
+                                ↶ Girar
+                            </button>
+
+                            <button
+                                type="button"
+                                id="btn-girar-direita"
+                            >
+                                ↷ Girar
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="grupo-tratamento">
+
+                        <label for="ajuste-brilho">
+                            Brilho
+                        </label>
+
+                        <input
+                            type="range"
+                            id="ajuste-brilho"
+                            min="50"
+                            max="150"
+                            value="100"
+                        >
+
+                    </div>
+
+
+                    <div class="grupo-tratamento">
+
+                        <label for="ajuste-contraste">
+                            Contraste
+                        </label>
+
+                        <input
+                            type="range"
+                            id="ajuste-contraste"
+                            min="50"
+                            max="150"
+                            value="100"
+                        >
+
+                    </div>
+
+
+                    <div class="grupo-tratamento">
+
+                        <label for="filtro-preto-branco">
+
+                            <input
+                                type="checkbox"
+                                id="filtro-preto-branco"
+                            >
+
+                            Preto e branco
+
+                        </label>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="btn-restaurar-ajustes"
+                        disabled
+                    >
+                        Restaurar imagem original
+                    </button>
+
+                </aside>
+
+
+                <!-- ÁREA DE VISUALIZAÇÃO -->
+
+                <section class="area-visualizacao">
+
+                    <h3>Área de preparação</h3>
+
+                    <div class="visor-camera">
+
+                        <video
+                            id="video-camera"
+                            autoplay
+                            playsinline
+                            hidden
+                        ></video>
+
+                        <canvas
+                            id="canvas-captura"
+                            hidden
+                        ></canvas>
+
+                        <div
+                            id="mensagem-visor"
+                            class="mensagem-visor"
+                        >
+                            <span>✥</span>
+
+                            <p>
+                                Aguardando captura ou importação de imagem.
+                            </p>
+                        </div>
+
+                        <img
+                            id="preview-imagem"
+                            alt="Pré-visualização da página"
+                            hidden
+                        >
+
+                    </div>
+
+                    <p
+                        id="status-digitalizacao"
+                        class="status-digitalizacao"
+                    >
+                        Bancada pronta para iniciar.
+                    </p>
+
+                </section>
+
+
+                <!-- COLEÇÃO DE PÁGINAS -->
+
+                <aside class="painel-paginas">
+
+                    <h3>Páginas capturadas</h3>
+
+                    <p class="orientacao-paginas">
+                        As páginas adicionadas aparecerão nesta área.
+                    </p>
+
+                    <div
+                        id="lista-paginas"
+                        class="lista-paginas"
+                    >
+
+                        <div class="colecao-vazia">
+                            <span>▤</span>
+
+                            <p>
+                                Nenhuma página adicionada.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="contador-paginas">
+
+                        Total de páginas:
+
+                        <strong id="contador-paginas">0</strong>
+
+                    </div>
+
+
+                    <!-- EXPORTAÇÃO PDF -->
+
+                    <hr>
+
+                    <div class="exportacao-pdf">
+
+                        <h3>Exportação de documentos</h3>
+
+                        <p>
+                            Salve suas páginas digitalizadas
+                            em formato PDF.
+                        </p>
+
+                        <label for="nome-arquivo-pdf">
+                            Nome do documento
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nome-arquivo-pdf"
+                            value="digitalizacao"
+                            maxlength="80"
+                            placeholder="Digite o nome do arquivo"
+                        >
+
+                        <button
+                            type="button"
+                            id="btn-gerar-pdf"
+                            disabled
+                        >
+                            📄 Gerar PDF completo
+                        </button>
+
+                        <button
+                            type="button"
+                            id="btn-gerar-pdfs-individuais"
+                            disabled
+                        >
+                            📑 Gerar PDFs individuais
+                        </button>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==========================================
+         4. RODAPÉ
+    =========================================== -->
+
+    <footer class="rodape">
+
+        <div class="ornamento">❦</div>
+
+        <h2>DIGITALIZA GERAL</h2>
+
+        <p>
+            Preservando o conhecimento, página por página.
+        </p>
+
+        <p class="direitos">
+            © 2026 - Digitaliza Geral.
+            Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+</div>
+
+
+<!-- ==================================================
+     5. BIBLIOTECAS E JAVASCRIPT
+=================================================== -->
+
+<!-- BIBLIOTECA jsPDF -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js"></script>
+
+<!-- SISTEMA PRINCIPAL -->
+
+<!-- BIBLIOTECA DE GERAÇÃO DE PDF -->
+<script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js"></script>
+
+<!-- SISTEMA DIGITALIZA GERAL -->
+<script src="js/digi_geral.js"></script>
+
+</body>
+
+</html>
