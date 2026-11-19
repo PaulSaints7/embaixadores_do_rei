@@ -1,0 +1,1515 @@
+
+/* ==========================================================
+   DIGITALIZA GERAL
+   SCRIPTORIUM DIGITAL
+   FOLHA DE ESTILOS PRINCIPAL
+   VERSÃO REVISADA E ORGANIZADA
+========================================================== */
+
+
+/* ==========================================================
+   1. IDENTIDADE VISUAL E CONFIGURAÇÕES GERAIS
+========================================================== */
+
+:root {
+    --madeira-escura: #292019;
+    --madeira: #49301F;
+    --mogno: #70452B;
+    --madeira-clara: #A77B50;
+
+    --pergaminho: #E9D9B8;
+    --pergaminho-claro: #F4EAD5;
+    --bege: #D5C19B;
+
+    --dourado: #B39455;
+    --dourado-claro: #D6BD82;
+
+    --texto-escuro: #382719;
+    --texto-claro: #F4EAD5;
+
+    --verde: #526C45;
+    --vermelho: #813B30;
+
+    --sombra-suave: 0 5px 15px rgba(0, 0, 0, 0.18);
+    --sombra-forte: 0 10px 28px rgba(0, 0, 0, 0.30);
+
+    --borda-dourada: 1px solid var(--dourado);
+    --transicao: 0.25s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Open Sans", sans-serif;
+    background-color: var(--madeira-escura);
+    color: var(--texto-escuro);
+
+    background-image: linear-gradient(
+        rgba(41, 32, 25, 0.91),
+        rgba(41, 32, 25, 0.94)
+    );
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible,
+a:focus-visible,
+label:focus-visible {
+    outline: 3px solid var(--dourado);
+    outline-offset: 3px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+
+/* ==========================================================
+   2. TELA DE LOGIN
+========================================================== */
+
+.tela-login {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+
+    background: radial-gradient(
+        circle at center,
+        #765235 0%,
+        #49301F 45%,
+        #241A13 100%
+    );
+}
+
+.login-container {
+    position: relative;
+    width: 100%;
+    max-width: 460px;
+    padding: 45px 42px;
+    text-align: center;
+
+    background: linear-gradient(
+        145deg,
+        var(--pergaminho-claro),
+        var(--pergaminho)
+    );
+
+    border: 8px double var(--dourado);
+    border-radius: 5px;
+
+    box-shadow:
+        0 20px 55px rgba(0, 0, 0, 0.55),
+        inset 0 0 25px rgba(112, 69, 43, 0.12);
+}
+
+.login-ornamento {
+    font-size: 35px;
+    color: var(--mogno);
+    margin-bottom: 12px;
+}
+
+.login-logo {
+    width: 85px;
+    height: 85px;
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 48px;
+    color: var(--dourado-claro);
+
+    background: var(--madeira);
+    border: 3px solid var(--dourado);
+    border-radius: 50%;
+
+    box-shadow: var(--sombra-suave);
+}
+
+.login-container h1 {
+    font-family: "Cinzel", serif;
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--madeira);
+}
+
+.login-subtitulo {
+    font-family: "Cinzel", serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: var(--mogno);
+    margin-top: 8px;
+}
+
+.login-divisor {
+    width: 75%;
+    height: 2px;
+    margin: 25px auto;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--dourado),
+        transparent
+    );
+}
+
+.login-container h2 {
+    font-family: "Cinzel", serif;
+    font-size: 20px;
+    color: var(--madeira);
+    margin-bottom: 12px;
+}
+
+.login-descricao {
+    font-family: "Crimson Text", serif;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 28px;
+    color: #70533B;
+}
+
+
+/* ==========================================================
+   3. CAMPOS DE LOGIN
+========================================================== */
+
+.campo-login {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.campo-login label {
+    display: block;
+    font-family: "Cinzel", serif;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--madeira);
+}
+
+.campo-login input {
+    width: 100%;
+    padding: 13px 15px;
+    font-size: 14px;
+    color: var(--texto-escuro);
+    background: #FFF9ED;
+
+    border: 1px solid #B69B70;
+    border-radius: 4px;
+    outline: none;
+    transition: var(--transicao);
+}
+
+.campo-login input:focus {
+    border-color: var(--mogno);
+    box-shadow: 0 0 0 3px rgba(112, 69, 43, 0.13);
+}
+
+.campo-login input::placeholder {
+    color: #A28A70;
+}
+
+.mensagem-login {
+    min-height: 20px;
+    font-size: 13px;
+    color: #A32F24;
+    margin-bottom: 12px;
+}
+
+
+/* ==========================================================
+   4. BOTÃO DE LOGIN
+========================================================== */
+
+.botao-login {
+    width: 100%;
+    padding: 15px;
+
+    font-family: "Cinzel", serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    color: var(--texto-claro);
+
+    background: linear-gradient(
+        135deg,
+        var(--mogno),
+        var(--madeira)
+    );
+
+    border: 2px solid var(--dourado);
+    border-radius: 4px;
+
+    transition: var(--transicao);
+}
+
+.botao-login:hover {
+    background: linear-gradient(
+        135deg,
+        #8A5B37,
+        #49301F
+    );
+
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-suave);
+}
+
+.login-rodape {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(112, 69, 43, 0.25);
+}
+
+.login-rodape span {
+    font-size: 25px;
+    color: var(--dourado);
+}
+
+.login-rodape p {
+    font-family: "Crimson Text", serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--mogno);
+    margin-top: 8px;
+}
+
+
+/* ==========================================================
+   5. CABEÇALHO DA PLATAFORMA
+========================================================== */
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 22px 5%;
+
+    background: linear-gradient(
+        120deg,
+        #241A13,
+        #49301F,
+        #241A13
+    );
+
+    border-bottom: 3px solid var(--dourado);
+    box-shadow: var(--sombra-forte);
+}
+
+.identidade {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.simbolo-logo {
+    width: 62px;
+    height: 62px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 35px;
+    color: var(--dourado-claro);
+
+    border: 2px solid var(--dourado);
+    border-radius: 50%;
+}
+
+.titulo-identidade h1 {
+    font-family: "Cinzel", serif;
+    font-size: 23px;
+    color: var(--dourado-claro);
+    letter-spacing: 2px;
+}
+
+.titulo-identidade p {
+    font-family: "Crimson Text", serif;
+    font-size: 16px;
+    color: var(--pergaminho);
+}
+
+
+/* ==========================================================
+   6. MENU DE NAVEGAÇÃO
+========================================================== */
+
+.menu-principal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.menu-principal a {
+    font-family: "Cinzel", serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--pergaminho);
+    text-decoration: none;
+    transition: var(--transicao);
+}
+
+.menu-principal a:hover {
+    color: var(--dourado-claro);
+}
+
+.area-usuario {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--pergaminho);
+    font-size: 13px;
+}
+
+.botao-sair {
+    padding: 8px 16px;
+    color: var(--texto-claro);
+    background: var(--mogno);
+    border: 1px solid var(--dourado);
+    border-radius: 3px;
+    transition: var(--transicao);
+}
+
+.botao-sair:hover {
+    background: #8A5B37;
+}
+
+
+/* ==========================================================
+   7. APRESENTAÇÃO
+========================================================== */
+
+.apresentacao {
+    max-width: 1050px;
+    margin: 65px auto;
+    padding: 55px 30px;
+    text-align: center;
+
+    background: var(--pergaminho);
+    border: 5px double var(--dourado);
+
+    box-shadow: var(--sombra-forte);
+}
+
+.ornamento {
+    font-size: 35px;
+    color: var(--mogno);
+    margin-bottom: 15px;
+}
+
+.apresentacao h2 {
+    font-family: "Cinzel", serif;
+    font-size: 30px;
+    color: var(--madeira);
+    margin-bottom: 25px;
+}
+
+.texto-apresentacao {
+    max-width: 800px;
+    margin: auto;
+
+    font-family: "Crimson Text", serif;
+    font-size: 21px;
+    line-height: 1.7;
+    color: #62452E;
+}
+
+.linha-decorativa {
+    width: 180px;
+    height: 2px;
+    margin: 30px auto;
+    background: var(--dourado);
+}
+
+.frase-destaque {
+    font-family: "Crimson Text", serif;
+    font-style: italic;
+    font-size: 19px;
+    color: var(--mogno);
+}
+
+
+/* ==========================================================
+   8. OFICINA DE DIGITALIZAÇÃO
+========================================================== */
+
+.area-ferramentas {
+    padding: 55px 5%;
+    background: #35251A;
+    border-top: 2px solid var(--dourado);
+    border-bottom: 2px solid var(--dourado);
+}
+
+.titulo-secao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.titulo-secao h2 {
+    font-family: "Cinzel", serif;
+    font-size: 27px;
+    color: var(--dourado-claro);
+}
+
+.titulo-secao span {
+    color: var(--dourado);
+    font-size: 23px;
+}
+
+.descricao-secao {
+    text-align: center;
+    font-family: "Crimson Text", serif;
+    font-size: 19px;
+    color: var(--pergaminho);
+    margin-bottom: 45px;
+}
+
+
+/* ==========================================================
+   9. CARTÕES DE FERRAMENTAS
+========================================================== */
+
+.grade-ferramentas {
+    max-width: 1250px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.cartao-ferramenta {
+    padding: 30px 23px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: linear-gradient(
+        145deg,
+        #E9D9B8,
+        #D5C19B
+    );
+
+    border: 3px double var(--dourado);
+    border-radius: 4px;
+
+    box-shadow: var(--sombra-suave);
+    transition: var(--transicao);
+}
+
+.cartao-ferramenta:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-forte);
+}
+
+.icone-ferramenta {
+    font-size: 43px;
+    margin-bottom: 15px;
+}
+
+.cartao-ferramenta h3 {
+    font-family: "Cinzel", serif;
+    font-size: 18px;
+    color: var(--madeira);
+    margin-bottom: 15px;
+}
+
+.cartao-ferramenta p {
+    min-height: 65px;
+    font-family: "Crimson Text", serif;
+    font-size: 17px;
+    line-height: 1.5;
+    color: #62452E;
+    margin-bottom: 20px;
+}
+
+.cartao-ferramenta button {
+    width: 100%;
+    margin-top: auto;
+    padding: 12px 10px;
+
+    font-family: "Cinzel", serif;
+    font-size: 11px;
+    font-weight: 700;
+
+    color: var(--texto-claro);
+    background: linear-gradient(
+        135deg,
+        var(--mogno),
+        var(--madeira)
+    );
+
+    border: 1px solid var(--dourado);
+    border-radius: 4px;
+    transition: var(--transicao);
+}
+
+.cartao-ferramenta button:hover {
+    background: var(--madeira-escura);
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================================
+   10. SOBRE A PLATAFORMA
+========================================================== */
+
+.sobre-plataforma {
+    max-width: 1100px;
+    margin: 65px auto;
+    padding: 50px 35px;
+    text-align: center;
+
+    background: var(--pergaminho);
+    border: 5px double var(--dourado);
+}
+
+.sobre-plataforma h2 {
+    font-family: "Cinzel", serif;
+    font-size: 26px;
+    color: var(--madeira);
+    margin-bottom: 25px;
+}
+
+.sobre-plataforma > p {
+    max-width: 800px;
+    margin: auto;
+
+    font-family: "Crimson Text", serif;
+    font-size: 19px;
+    line-height: 1.7;
+    color: #62452E;
+}
+
+.valores {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 45px;
+}
+
+.valores div {
+    padding: 25px 15px;
+    background: #DCC9A6;
+    border: 1px solid var(--dourado);
+}
+
+.valores span {
+    font-size: 35px;
+}
+
+.valores h3 {
+    font-family: "Cinzel", serif;
+    font-size: 17px;
+    color: var(--madeira);
+    margin: 12px 0;
+}
+
+.valores p {
+    font-family: "Crimson Text", serif;
+    font-size: 17px;
+    color: #62452E;
+}
+
+
+/* ==========================================================
+   11. AJUDA
+========================================================== */
+
+.ajuda {
+    max-width: 950px;
+    margin: 65px auto;
+    padding: 40px 25px;
+    text-align: center;
+    color: var(--pergaminho);
+}
+
+.ajuda h2 {
+    font-family: "Cinzel", serif;
+    font-size: 25px;
+    color: var(--dourado-claro);
+    margin-bottom: 20px;
+}
+
+.ajuda p {
+    font-family: "Crimson Text", serif;
+    font-size: 19px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+
+/* ==========================================================
+   12. BANCADA DE DIGITALIZAÇÃO
+========================================================== */
+
+.bancada-digitalizacao {
+    width: min(96%, 1600px);
+    margin: 35px auto;
+    padding: 30px;
+
+    background: var(--pergaminho-claro);
+    color: var(--texto-escuro);
+
+    border: 5px solid var(--madeira);
+    border-radius: 8px;
+
+    box-shadow: var(--sombra-forte);
+}
+
+.bancada-cabecalho {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+
+    border-bottom: 2px solid var(--dourado);
+}
+
+.bancada-titulo h2 {
+    font-family: "Cinzel", serif;
+    color: var(--madeira-escura);
+    margin-bottom: 6px;
+}
+
+.bancada-titulo p {
+    font-family: "Crimson Text", serif;
+    font-size: 18px;
+}
+
+.btn-voltar {
+    padding: 12px 18px;
+
+    background: linear-gradient(
+        135deg,
+        var(--madeira),
+        var(--madeira-escura)
+    );
+
+    color: var(--texto-claro);
+
+    border: 1px solid var(--dourado);
+    border-radius: 5px;
+
+    font-family: "Cinzel", serif;
+    font-size: 12px;
+    font-weight: bold;
+
+    transition: var(--transicao);
+}
+
+.btn-voltar:hover {
+    background: var(--mogno);
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================================
+   13. ORGANIZAÇÃO DOS PAINÉIS
+========================================================== */
+
+.bancada-conteudo {
+    display: grid;
+
+    grid-template-columns:
+        minmax(210px, 230px)
+        minmax(0, 1fr)
+        minmax(230px, 270px);
+
+    gap: 20px;
+    align-items: start;
+}
+
+.painel-ferramentas,
+.painel-paginas {
+    min-width: 0;
+    min-height: 350px;
+    padding: 18px;
+
+    background: var(--pergaminho);
+    border: 2px solid var(--madeira-clara);
+    border-radius: 7px;
+
+    box-shadow: var(--sombra-suave);
+}
+
+.painel-ferramentas h3,
+.painel-paginas h3,
+.area-visualizacao h3 {
+    font-family: "Cinzel", serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--madeira-escura);
+    margin-bottom: 16px;
+}
+
+.painel-ferramentas hr,
+.painel-paginas hr {
+    border: none;
+    border-top: 1px solid var(--dourado);
+    margin: 20px 0;
+}
+
+
+/* ==========================================================
+   14. BOTÕES PRINCIPAIS DA BANCADA
+========================================================== */
+
+.painel-ferramentas > button {
+    width: 100%;
+    min-height: 42px;
+    padding: 11px 10px;
+    margin-bottom: 10px;
+
+    background: linear-gradient(
+        135deg,
+        var(--madeira),
+        var(--madeira-escura)
+    );
+
+    color: var(--texto-claro);
+
+    border: 1px solid var(--dourado);
+    border-radius: 5px;
+
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+
+    transition: var(--transicao);
+}
+
+.painel-ferramentas > button:hover:not(:disabled) {
+    background: linear-gradient(
+        135deg,
+        #8A5B37,
+        var(--mogno)
+    );
+
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-suave);
+}
+
+.painel-ferramentas > button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.painel-ferramentas > button:disabled {
+    background: #8D806F;
+    border-color: #B4A58E;
+    color: #E8DFD1;
+    opacity: 0.65;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+
+/* ==========================================================
+   15. IMPORTAÇÃO DE IMAGENS
+========================================================== */
+
+.btn-importar {
+    display: block;
+    padding: 12px 8px;
+    margin-bottom: 10px;
+
+    background: linear-gradient(
+        135deg,
+        #627C50,
+        var(--verde)
+    );
+
+    color: white;
+
+    border: 1px solid #788C60;
+    border-radius: 5px;
+
+    text-align: center;
+    cursor: pointer;
+
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+
+    transition: var(--transicao);
+}
+
+.btn-importar:hover {
+    filter: brightness(1.12);
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================================
+   16. ÁREA DE VISUALIZAÇÃO
+========================================================== */
+
+.area-visualizacao {
+    min-width: 0;
+    padding: 20px;
+
+    background: var(--bege);
+    border: 2px solid var(--madeira-clara);
+    border-radius: 7px;
+
+    min-height: 430px;
+
+    box-shadow: var(--sombra-suave);
+}
+
+.visor-camera {
+    position: relative;
+
+    width: 100%;
+    min-height: 320px;
+
+    background: #211B16;
+    border: 5px solid var(--madeira);
+    border-radius: 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.visor-camera video {
+    display: block;
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+.visor-camera img {
+    display: block;
+    max-width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+.mensagem-visor {
+    color: var(--dourado-claro);
+    text-align: center;
+    padding: 30px;
+}
+
+.mensagem-visor span {
+    display: block;
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.mensagem-visor p {
+    font-family: "Crimson Text", serif;
+    font-size: 19px;
+    line-height: 1.5;
+}
+
+.status-digitalizacao {
+    margin-top: 15px;
+    padding: 12px;
+
+    background: var(--pergaminho-claro);
+    border-left: 4px solid var(--dourado);
+    border-radius: 4px;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* ==========================================================
+   17. COLEÇÃO DE PÁGINAS
+========================================================== */
+
+.orientacao-paginas {
+    font-family: "Crimson Text", serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.lista-paginas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.colecao-vazia {
+    padding: 20px 8px;
+    text-align: center;
+    color: #75634C;
+}
+
+.colecao-vazia span {
+    display: block;
+    font-size: 35px;
+    margin-bottom: 8px;
+}
+
+.miniatura-pagina {
+    min-width: 0;
+    padding: 9px;
+
+    background: var(--pergaminho-claro);
+    border: 1px solid var(--dourado);
+    border-radius: 5px;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.10);
+}
+
+.miniatura-pagina img {
+    display: block;
+    width: 100%;
+    height: 120px;
+
+    object-fit: contain;
+    background: #FFFFFF;
+
+    border: 1px solid #D5C6AA;
+}
+
+.miniatura-pagina p {
+    margin-top: 8px;
+    font-size: 12px;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.miniatura-pagina button {
+    width: 100%;
+    margin-top: 8px;
+    padding: 9px;
+
+    background: var(--vermelho);
+    color: white;
+
+    border: 1px solid #9B5548;
+    border-radius: 4px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    transition: var(--transicao);
+}
+
+.miniatura-pagina button:hover {
+    background: #9B493D;
+    transform: translateY(-1px);
+}
+
+.contador-paginas {
+    margin-top: 20px;
+    padding: 12px;
+
+    background: linear-gradient(
+        135deg,
+        var(--madeira),
+        var(--madeira-escura)
+    );
+
+    color: var(--texto-claro);
+
+    text-align: center;
+    border: 1px solid var(--dourado);
+    border-radius: 5px;
+
+    font-size: 13px;
+}
+
+.contador-paginas strong {
+    color: var(--dourado-claro);
+    font-size: 16px;
+}
+
+
+/* ==========================================================
+   18. FERRAMENTAS DE TRATAMENTO DE IMAGENS
+========================================================== */
+
+.grupo-tratamento {
+    margin: 18px 0;
+    padding: 12px;
+
+    background: var(--pergaminho-claro);
+    border: 1px solid var(--dourado);
+    border-radius: 6px;
+}
+
+.grupo-tratamento p {
+    margin-bottom: 10px;
+
+    font-family: "Crimson Text", serif;
+    font-size: 16px;
+    font-weight: bold;
+
+    color: var(--texto-escuro);
+}
+
+.grupo-tratamento label {
+    display: block;
+    margin-bottom: 8px;
+
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+
+    color: var(--texto-escuro);
+}
+
+.botoes-rotacao {
+    display: flex;
+    gap: 8px;
+}
+
+.botoes-rotacao button {
+    flex: 1;
+    padding: 9px 5px;
+
+    background: var(--madeira);
+    color: var(--texto-claro);
+
+    border: 1px solid var(--dourado);
+    border-radius: 5px;
+
+    font-size: 12px;
+    transition: var(--transicao);
+}
+
+.botoes-rotacao button:hover:not(:disabled) {
+    background: var(--mogno);
+    transform: translateY(-1px);
+}
+
+.grupo-tratamento input[type="range"] {
+    width: 100%;
+    accent-color: var(--mogno);
+    cursor: pointer;
+}
+
+.grupo-tratamento input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--verde);
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+#btn-restaurar-ajustes {
+    width: 100%;
+    padding: 11px 8px;
+    margin-top: 10px;
+
+    background: var(--verde);
+    color: white;
+
+    border: 1px solid var(--madeira);
+    border-radius: 5px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    transition: var(--transicao);
+}
+
+#btn-restaurar-ajustes:hover:not(:disabled) {
+    filter: brightness(1.15);
+    transform: translateY(-1px);
+}
+
+#btn-restaurar-ajustes:disabled,
+.botoes-rotacao button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+
+/* ==========================================================
+   19. EXPORTAÇÃO DE DOCUMENTOS PDF
+========================================================== */
+
+.exportacao-pdf {
+    padding: 17px 13px;
+
+    background: linear-gradient(
+        145deg,
+        #F4EAD5,
+        #E4D2AF
+    );
+
+    border: 2px solid var(--dourado);
+    border-radius: 7px;
+
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.10);
+}
+
+.exportacao-pdf h3 {
+    font-family: "Cinzel", serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--madeira);
+    margin-bottom: 10px;
+}
+
+.exportacao-pdf p {
+    font-family: "Crimson Text", serif;
+    font-size: 16px;
+    line-height: 1.45;
+    color: #62452E;
+    margin-bottom: 16px;
+}
+
+.exportacao-pdf label {
+    display: block;
+    margin-bottom: 7px;
+
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--madeira);
+}
+
+.exportacao-pdf input[type="text"] {
+    width: 100%;
+    min-width: 0;
+    padding: 11px 10px;
+    margin-bottom: 13px;
+
+    background: #FFFCF5;
+    color: var(--texto-escuro);
+
+    border: 1px solid #B69B70;
+    border-radius: 4px;
+
+    font-size: 12px;
+    outline: none;
+
+    transition: var(--transicao);
+}
+
+.exportacao-pdf input[type="text"]:focus {
+    border-color: var(--mogno);
+    box-shadow: 0 0 0 3px rgba(112, 69, 43, 0.13);
+}
+
+.exportacao-pdf input[type="text"]::placeholder {
+    color: #A28A70;
+}
+
+.exportacao-pdf button {
+    display: block;
+    width: 100%;
+    min-height: 43px;
+
+    padding: 11px 8px;
+    margin-top: 9px;
+
+    background: linear-gradient(
+        135deg,
+        #80602F,
+        #59401F
+    );
+
+    color: #FFF8E9;
+
+    border: 1px solid #B39455;
+    border-radius: 5px;
+
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.13);
+
+    transition: var(--transicao);
+}
+
+.exportacao-pdf button:hover:not(:disabled) {
+    background: linear-gradient(
+        135deg,
+        #A17A3D,
+        #704F26
+    );
+
+    transform: translateY(-2px);
+    box-shadow: 0 5px 11px rgba(0, 0, 0, 0.20);
+}
+
+.exportacao-pdf button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.exportacao-pdf button:disabled {
+    background: #A99C87;
+    color: #EAE3D7;
+
+    border-color: #C0B49F;
+    box-shadow: none;
+
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+
+/* ==========================================================
+   20. RODAPÉ
+========================================================== */
+
+.rodape {
+    padding: 40px 20px;
+    text-align: center;
+
+    background: #211710;
+    border-top: 3px solid var(--dourado);
+
+    color: var(--pergaminho);
+}
+
+.rodape h2 {
+    font-family: "Cinzel", serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: var(--dourado-claro);
+    margin-bottom: 10px;
+}
+
+.rodape p {
+    font-family: "Crimson Text", serif;
+    font-size: 17px;
+}
+
+.direitos {
+    margin-top: 25px;
+
+    font-family: "Open Sans", sans-serif !important;
+    font-size: 12px !important;
+
+    color: #BCA98C;
+}
+
+
+/* ==========================================================
+   21. RESPONSIVIDADE — TABLETS
+========================================================== */
+
+@media (max-width: 1050px) {
+
+    .grade-ferramentas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .bancada-conteudo {
+        grid-template-columns: 200px minmax(0, 1fr);
+    }
+
+    .painel-paginas {
+        grid-column: 1 / -1;
+    }
+
+    .lista-paginas {
+        display: grid;
+        grid-template-columns: repeat(
+            auto-fill,
+            minmax(120px, 1fr)
+        );
+    }
+
+}
+
+
+/* ==========================================================
+   22. RESPONSIVIDADE — CELULARES
+========================================================== */
+
+@media (max-width: 750px) {
+
+    .cabecalho {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .identidade {
+        flex-direction: column;
+    }
+
+    .menu-principal {
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .area-usuario {
+        justify-content: center;
+    }
+
+    .titulo-identidade h1 {
+        font-size: 20px;
+    }
+
+    .apresentacao h2 {
+        font-size: 23px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .valores {
+        grid-template-columns: 1fr;
+    }
+
+    .bancada-digitalizacao {
+        padding: 15px;
+    }
+
+    .bancada-cabecalho {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .bancada-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .painel-paginas {
+        grid-column: auto;
+    }
+
+    .visor-camera {
+        min-height: 230px;
+    }
+
+    .grupo-tratamento {
+        padding: 14px;
+    }
+
+    .botoes-rotacao button {
+        padding: 12px 5px;
+        font-size: 13px;
+    }
+
+    .grupo-tratamento input[type="range"] {
+        height: 30px;
+    }
+
+    #btn-restaurar-ajustes {
+        padding: 13px;
+        font-size: 13px;
+    }
+
+    .exportacao-pdf {
+        padding: 18px;
+    }
+
+    .exportacao-pdf button {
+        min-height: 46px;
+    }
+
+}
+
+
+/* ==========================================================
+   23. RESPONSIVIDADE — TELAS PEQUENAS
+========================================================== */
+
+@media (max-width: 550px) {
+
+    .login-container {
+        padding: 35px 22px;
+    }
+
+    .login-container h1 {
+        font-size: 22px;
+    }
+
+    .grade-ferramentas {
+        grid-template-columns: 1fr;
+    }
+
+    .apresentacao {
+        margin: 30px 15px;
+        padding: 35px 20px;
+    }
+
+    .texto-apresentacao {
+        font-size: 18px;
+    }
+
+    .sobre-plataforma {
+        margin: 30px 15px;
+        padding: 35px 20px;
+    }
+
+    .sobre-plataforma h2 {
+        font-size: 21px;
+    }
+
+    .titulo-secao {
+        gap: 10px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 18px;
+    }
+
+    .bancada-digitalizacao {
+        width: 96%;
+        padding: 12px;
+        border-width: 3px;
+    }
+
+    .area-visualizacao {
+        padding: 12px;
+    }
+
+    .visor-camera {
+        min-height: 200px;
+    }
+
+    .exportacao-pdf {
+        padding: 14px 11px;
+    }
+
+}
+
+
+/* ==========================================================
+   24. FIM DO ARQUIVO
+   DIGITALIZA GERAL
+========================================================== */
