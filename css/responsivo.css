@@ -1,0 +1,201 @@
+/* =========================================
+   RESPONSIVIDADE
+   Escola Virtual ER — Arte de Acampar
+========================================= */
+
+
+/* TABLETS E NOTEBOOKS MENORES
+========================================= */
+
+@media (max-width: 1024px) {
+
+    .cabecalho {
+        padding: 15px 4%;
+    }
+
+    .grade-modulos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .etapas-metodologia {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+/* CELULARES E TABLETS PEQUENOS
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* CABEÇALHO */
+
+    .cabecalho {
+        position: relative;
+        padding: 12px 5%;
+    }
+
+    .identidade {
+        gap: 10px;
+    }
+
+    .insignia img {
+        max-width: 65px;
+    }
+
+    .identidade-texto h1 {
+        font-size: 17px;
+    }
+
+    .identidade-texto span {
+        font-size: 10px;
+    }
+
+    .identidade-texto p {
+        font-size: 12px;
+    }
+
+
+    /* BOTÃO DO MENU */
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 25px;
+        background: none;
+        border: none;
+        color: var(--branco);
+    }
+
+
+    /* NAVEGAÇÃO */
+
+    .navegacao {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        background: var(--azul-marinho);
+        padding: 10px 5%;
+        z-index: 1000;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.18);
+    }
+
+    .navegacao.menu-aberto {
+        display: flex;
+    }
+
+    .navegacao a {
+        padding: 14px 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+
+    /* BANNER */
+
+    .banner {
+        min-height: 400px;
+        padding: 55px 7%;
+        background-position: center;
+    }
+
+    .banner-conteudo {
+        max-width: 100%;
+    }
+
+    .banner-conteudo h2 {
+        font-size: 34px;
+    }
+
+
+    /* APRESENTAÇÃO */
+
+    .apresentacao,
+    .metodologia,
+    .modulos {
+        padding: 55px 6%;
+    }
+
+    .secao-titulo h2 {
+        font-size: 27px;
+    }
+
+
+    /* MÓDULOS */
+
+    .grade-modulos {
+        grid-template-columns: 1fr;
+    }
+
+    .cartao-modulo {
+        max-width: 500px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+
+    /* METODOLOGIA */
+
+    .etapas-metodologia {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* SEGURANÇA */
+
+    .seguranca {
+        padding: 55px 7%;
+    }
+
+    .seguranca-conteudo h2 {
+        font-size: 27px;
+    }
+
+
+    /* RODAPÉ */
+
+    .rodape {
+        padding: 45px 6%;
+    }
+
+}
+
+
+/* CELULARES PEQUENOS
+========================================= */
+
+@media (max-width: 480px) {
+
+    .identidade-texto h1 {
+        font-size: 14px;
+    }
+
+    .insignia img {
+        max-width: 55px;
+    }
+
+    .banner {
+        min-height: 360px;
+    }
+
+    .banner-conteudo h2 {
+        font-size: 29px;
+    }
+
+    .banner-conteudo p {
+        font-size: 15px;
+    }
+
+    .secao-titulo h2 {
+        font-size: 23px;
+    }
+
+    .etapas-metodologia {
+        grid-template-columns: 1fr;
+    }
+
+}

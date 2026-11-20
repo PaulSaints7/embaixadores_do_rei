@@ -1,0 +1,795 @@
+/* =====================================================
+   ESCOLA VIRTUAL DOS EMBAIXADORES DO REI
+   Projeto: Arte de Acampar
+   Arquivo: acamp_er.css
+   ===================================================== */
+
+
+/* 1. FONTES E VARIÁVEIS */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Open+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+
+    --azul-marinho: #102B49;
+    --azul-medio: #183D61;
+    --azul-complementar: #294F70;
+
+    --dourado: #C5A15B;
+    --dourado-claro: #E0C98F;
+
+    --creme: #F5F3EE;
+    --branco: #FFFFFF;
+
+    --cinza-texto: #596574;
+    --cinza-claro: #E6E8EB;
+
+    --fonte-titulo: 'Cinzel', Georgia, serif;
+    --fonte-texto: 'Open Sans', Arial, sans-serif;
+
+}
+
+
+/* 2. CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 110px;
+}
+
+body {
+    font-family: var(--fonte-texto);
+    background-color: var(--creme);
+    color: var(--azul-marinho);
+    line-height: 1.7;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* 3. CABEÇALHO INSTITUCIONAL */
+
+.cabecalho {
+
+    width: 100%;
+    min-height: 110px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 6%;
+
+    background-color: var(--azul-marinho);
+    color: var(--branco);
+
+    border-bottom: 4px solid var(--dourado);
+
+}
+
+
+/* Identidade */
+
+.identidade {
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+}
+
+.insignia {
+
+    width: 72px;
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.insignia img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+}
+
+.identidade-texto span {
+
+    color: var(--dourado-claro);
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+}
+
+.identidade-texto h1 {
+
+    font-family: var(--fonte-titulo);
+
+    font-size: 1.45rem;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    line-height: 1.4;
+
+}
+
+.identidade-texto p {
+
+    font-size: 0.82rem;
+
+    color: #D8E0E9;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+/* Navegação */
+
+.navegacao {
+
+    display: flex;
+    align-items: center;
+    gap: 28px;
+
+}
+
+.navegacao a {
+
+    font-size: 0.88rem;
+    font-weight: 600;
+
+    color: var(--branco);
+
+    transition: color 0.3s ease;
+
+}
+
+.navegacao a:hover {
+
+    color: var(--dourado-claro);
+
+}
+
+
+/* Botão do menu mobile */
+
+.menu-toggle {
+
+    display: none;
+
+    background: transparent;
+    border: none;
+
+    color: var(--branco);
+
+    font-size: 1.8rem;
+
+    cursor: pointer;
+
+}
+
+
+/* 4. BANNER PRINCIPAL */
+
+/* BANNER PANORÂMICO */
+
+.banner {
+    min-height: 480px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 65px 8%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(16, 43, 73, 0.95) 0%,
+            rgba(16, 43, 73, 0.72) 48%,
+            rgba(16, 43, 73, 0.15) 100%
+        ),
+        url("../imagens/identidade-er/banner-acampamento.jpg");
+
+    background-size: cover;
+    background-position: center 55%;
+    background-repeat: no-repeat;
+
+    color: var(--branco);
+}
+
+.banner-conteudo {
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
+}
+
+.identificador {
+
+    display: inline-block;
+
+    color: var(--dourado-claro);
+
+    font-size: 0.76rem;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+
+}
+
+.banner h2 {
+
+    font-family: var(--fonte-titulo);
+
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+
+    line-height: 1.2;
+
+    margin-bottom: 22px;
+
+}
+
+.banner-conteudo p {
+
+    max-width: 500px;
+
+    font-size: 1.08rem;
+
+    color: #E2E8EF;
+
+    margin-bottom: 32px;
+
+}
+
+
+/* Botão principal */
+
+.botao-principal {
+
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    background-color: var(--dourado);
+
+    color: var(--azul-marinho);
+
+    font-size: 0.85rem;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    border-radius: 4px;
+
+    transition: all 0.3s ease;
+
+}
+
+.botao-principal:hover {
+
+    background-color: var(--dourado-claro);
+
+    transform: translateY(-3px);
+
+}
+
+
+/* Imagem do banner */
+
+.banner-imagem {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 0;
+
+}
+
+.banner-imagem img {
+
+    width: 100%;
+    max-width: 550px;
+
+    max-height: 360px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    border: 4px solid rgba(224, 201, 143, 0.55);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+
+}
+
+
+/* 5. SEÇÕES GERAIS */
+
+.apresentacao,
+.modulos,
+.metodologia {
+
+    padding: 85px 8%;
+
+}
+
+.secao-titulo {
+
+    text-align: center;
+
+    max-width: 760px;
+
+    margin: 0 auto 45px;
+
+}
+
+.secao-titulo span {
+
+    color: var(--dourado);
+
+    font-size: 0.75rem;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+}
+
+.secao-titulo h2 {
+
+    font-family: var(--fonte-titulo);
+
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+
+    line-height: 1.4;
+
+    margin: 12px 0;
+
+}
+
+.secao-titulo p {
+
+    color: var(--cinza-texto);
+
+}
+
+
+/* 6. APRESENTAÇÃO */
+
+.apresentacao {
+
+    background-color: var(--branco);
+
+    text-align: center;
+
+}
+
+.apresentacao > p {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    color: var(--cinza-texto);
+
+    font-size: 1.02rem;
+
+}
+
+
+/* 7. MÓDULOS */
+
+.modulos {
+
+    background-color: var(--creme);
+
+}
+
+.grade-modulos {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 28px;
+
+}
+
+
+/* Cartões */
+
+.cartao-modulo {
+
+    background-color: var(--branco);
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--cinza-claro);
+
+    box-shadow: 0 5px 18px rgba(16, 43, 73, 0.07);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.cartao-modulo:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 12px 28px rgba(16, 43, 73, 0.14);
+
+}
+
+
+/* Imagens dos módulos */
+
+.modulo-imagem {
+
+    height: 195px;
+
+    overflow: hidden;
+
+    background-color: var(--azul-complementar);
+
+}
+
+.modulo-imagem img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+
+}
+
+.cartao-modulo:hover .modulo-imagem img {
+
+    transform: scale(1.05);
+
+}
+
+
+/* Conteúdo dos cartões */
+
+.modulo-conteudo {
+
+    padding: 25px;
+
+}
+
+.modulo-conteudo span {
+
+    display: inline-block;
+
+    color: var(--dourado);
+
+    font-size: 0.72rem;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+
+}
+
+.modulo-conteudo h3 {
+
+    font-family: var(--fonte-titulo);
+
+    font-size: 1.12rem;
+
+    line-height: 1.5;
+
+    margin-bottom: 12px;
+
+}
+
+.modulo-conteudo p {
+
+    color: var(--cinza-texto);
+
+    font-size: 0.9rem;
+
+    min-height: 78px;
+
+    margin-bottom: 20px;
+
+}
+
+.modulo-conteudo a {
+
+    display: inline-block;
+
+    color: var(--azul-medio);
+
+    font-size: 0.86rem;
+    font-weight: 800;
+
+    border-bottom: 2px solid var(--dourado);
+
+    padding-bottom: 4px;
+
+    transition: color 0.3s ease;
+
+}
+
+.modulo-conteudo a:hover {
+
+    color: var(--dourado);
+
+}
+
+
+/* 8. METODOLOGIA */
+
+.metodologia {
+
+    background-color: var(--branco);
+
+}
+
+.etapas-metodologia {
+
+    display: grid;
+
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+
+    gap: 20px;
+
+}
+
+.etapas-metodologia article {
+
+    text-align: center;
+
+    padding: 25px 15px;
+
+    border-top: 3px solid var(--dourado);
+
+    background-color: var(--creme);
+
+    border-radius: 5px;
+
+}
+
+.etapas-metodologia article > span {
+
+    display: inline-flex;
+
+    width: 48px;
+    height: 48px;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background-color: var(--azul-marinho);
+
+    color: var(--dourado-claro);
+
+    font-weight: 800;
+
+    margin-bottom: 15px;
+
+}
+
+.etapas-metodologia h3 {
+
+    font-family: var(--fonte-titulo);
+
+    font-size: 0.95rem;
+
+    margin-bottom: 10px;
+
+}
+
+.etapas-metodologia p {
+
+    color: var(--cinza-texto);
+
+    font-size: 0.82rem;
+
+}
+
+
+/* 9. SEGURANÇA */
+
+.seguranca {
+
+    padding: 65px 8%;
+
+    background-color: var(--azul-complementar);
+
+    color: var(--branco);
+
+    border-left: 8px solid var(--dourado);
+
+}
+
+.seguranca-conteudo {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    text-align: center;
+
+}
+
+.seguranca-conteudo > span {
+
+    color: var(--dourado-claro);
+
+    font-size: 0.75rem;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+}
+
+.seguranca h2 {
+
+    font-family: var(--fonte-titulo);
+
+    font-size: 2rem;
+
+    margin: 12px 0;
+
+}
+
+.seguranca p {
+
+    color: #E3EAF1;
+
+}
+
+
+/* 10. RODAPÉ */
+
+.rodape {
+
+    padding: 55px 8% 20px;
+
+    background-color: var(--azul-marinho);
+
+    color: var(--branco);
+
+}
+
+.rodape-identidade {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+}
+
+.rodape-identidade h2 {
+
+    font-family: var(--fonte-titulo);
+
+    color: var(--dourado-claro);
+
+    font-size: 1.5rem;
+
+}
+
+.rodape-identidade p {
+
+    font-size: 0.85rem;
+
+    color: #D5DFE9;
+
+}
+
+.rodape-informacoes {
+
+    max-width: 600px;
+
+    margin: auto;
+
+    text-align: center;
+
+    color: #D5DFE9;
+
+    font-size: 0.85rem;
+
+}
+
+.rodape-informacoes span {
+
+    display: block;
+
+    color: var(--dourado-claro);
+
+    margin-top: 12px;
+
+}
+
+.rodape-final {
+
+    text-align: center;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+    margin-top: 35px;
+
+    padding-top: 20px;
+
+    color: #B9C7D5;
+
+    font-size: 0.78rem;
+
+}
+
+
+/* 11. ACESSIBILIDADE E INTERAÇÃO */
+
+:focus-visible {
+
+    outline: 3px solid var(--dourado);
+
+    outline-offset: 4px;
+
+}
+
+::selection {
+
+    background-color: var(--dourado-claro);
+
+    color: var(--azul-marinho);
+
+}
+
+
+/* 12. ANIMAÇÕES */
+
+@media (prefers-reduced-motion: no-preference) {
+
+    .cartao-modulo,
+    .botao-principal,
+    .modulo-imagem img,
+    .navegacao a {
+
+        will-change: transform;
+
+    }
+
+}
+
+
+/* FIM DO ARQUIVO */
